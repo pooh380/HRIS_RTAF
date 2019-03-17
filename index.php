@@ -16,20 +16,31 @@
   
     <div id="login" align="center">
         <div id="left">
+        <div id="picLogin">
+                <img  src="./Asset/Images/Login.png" width="750px;" height="500px;">
+            </div>
             <div id="hris">
                 <img  src="./Asset/Images/hris.png" alt="" width="300px;">
             </div>
-            <div id="picLogin">
-                <img  src="./Asset/Images/Login.png" width="750px;" height="500px;">
-            </div>
-        </div>
+        </div> <!-- left -->
         <div id="right">
             <div id="square"></div>
             <p id="txtLogin">เข้าสู่ระบบ</p>
             <br><br>
-            <label id="userName">ชื่อผู้ใช้งาน</label>
-            
-        </div>
+            <div id=loginForm>
+            <form>
+                <div class="form-group">
+                    <label id="userName">ชื่อผู้ใช้งาน: </label>
+                    <input type="text" class="form-control" id="username" aria-describedby="" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label id="pass">รหัสผ่าน: </label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            </div>
+        </div><!-- right -->
     </div>
     
       
