@@ -28,21 +28,23 @@
             <p id="txtLogin">เข้าสู่ระบบ</p>
             <br><br>
             <div id=loginForm>
-            <form>
+            <form action="" method="">
                 <div class="form-group">
-                    <label id="userName">ชื่อผู้ใช้งาน: </label>
-                    <input type="text" class="form-control" id="username" aria-describedby="" placeholder="Enter email">
+                    <label id="usernameForm">ชื่อผู้ใช้งาน: </label>
+                    <input type="text" class="border form-control" id="username" aria-describedby="" placeholder="ชื่อผู้ใช้งาน">
                 </div>
                 <div class="form-group">
-                    <label id="pass">รหัสผ่าน: </label>
-                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <label id="passwordForm">รหัสผ่าน: </label>
+                    <input type="password" class="border form-control" id="password" placeholder="รหัสผ่าน">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn" onclick="login()">เข้าสู่ระบบ</button>
             </form>
             </div>
         </div><!-- right -->
     </div>
     
+
+    <script src="./Controllers/indexController.js"></script>
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

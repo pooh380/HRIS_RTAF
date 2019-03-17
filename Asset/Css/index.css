@@ -59,10 +59,20 @@
         font-size: 0.9em;
         font-weight: bold;
     }
-    #userName {
+    #usernameForm {
         margin-left: -225px;
     }
-    #pass {
+    #passwordForm {
         margin-left: -240px;
+    }
+    .border {
+        border-color: #1a1d52 !important;
+    }
+    .btn {
+        background-color: #1a1d52;
+        color: #fafafa;
+        width: 100%;
+        border-radius: 25px;
+        /* font-size: 0.9em; */
     }
 }
