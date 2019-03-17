@@ -1,19 +1,34 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Organizations</title>
+    <title>Menu</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <style>
+    @import url(../../Asset/Css/thsarabunnew.css);
+
+    /* Desktop Styles */
+    @media (min-width: 1200px) {
+        #menu{
+            width: 350px;
+            height: 1000px;
+            background-color: #1a1d52;
+        }
+    }
+    </style>
+
   </head>
   <body>
 
-    <header>
-      <?php include '../../include/header.php'; ?>
-    </header>
+    <section>
+        <div id="menu" style="display:block;"></div>
+    </section>
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

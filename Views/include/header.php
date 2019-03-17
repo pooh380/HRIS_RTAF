@@ -59,7 +59,7 @@
   <body>
     <header>
         <div id="hamberger">
-            <button type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-primary" onclick="openMenu()">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -73,9 +73,14 @@
                 <i class="fas fa-angle-right"></i>
             </button>
         </div>
-
     </header>
 
+    <script>
+        function openMenu(){
+            //alert("menu");
+            $("#menu").toggle();
+        }
+    </script>
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
