@@ -1,0 +1,16 @@
+♦BG : #FAFAFA
+♦แถบข้าง  : #1A1D52
+♦Hover แถบข้าง  :  #404C69
+♦Active : #2F47A1
+♦สีตารางสลับ  : #F1F4FF
+
+----------
+
+♦TH SarabunPSK
+♦สีฟ้อนต์  : #222233
+♦ขนาดฟ้อนต์ 
+ Head(หัวเรี่อง เช่น ส่วนราชการ/หน่วยงาน/...)     : 45pt/bold
+ button (หัวตาราง-ลำดับที่/รหัส/ชื่อคน/...)     : 30pt/bold
+ Body(พวกแถบเมนูข้าง/)       : 28pt/bold
+ content(ในตาราง)      :28pt/Regular
+ navigation   :20pt/regular
