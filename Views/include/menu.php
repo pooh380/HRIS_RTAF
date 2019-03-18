@@ -18,6 +18,7 @@
 
     /* Desktop Styles */
     @media (min-width: 1200px) {
+<<<<<<< HEAD
         body{
             color: #fafafa;
             font-family: 'THSarabunNew', sans-serif;
@@ -25,9 +26,13 @@
             font-weight: bold;
         }
         #nav{
+=======
+        #menu{
+>>>>>>> 3b992d5441c43d2222ff593bfbd5561b22c9d3b7
             width: 25%;
             height: 1000px;
             background-color: #1a1d52;
+            float:left;
         }
         .list-group-item{
             background-color: #1a1d52 ;
