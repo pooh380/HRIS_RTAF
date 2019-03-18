@@ -35,8 +35,8 @@
 <body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-col="2-columns">
     <!-- fixed-top-->
     <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light navbar-shadow" id='bgHeader'>
-        <div class="navbar-wrapper">
-            <div class="navbar-header">
+        <div class="navbar-wrapper" >
+            <div class="navbar-header" style="background-color: #1A1D52" >
                 <ul class="nav navbar-nav flex-row">
                     <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
                     
@@ -51,10 +51,10 @@
                     </li>
                 </ul>
             </div>
-            <div class="navbar-container content">
-                <div class="collapse navbar-collapse" id="navbar-mobile">
+            <div class="navbar-container content" >
+                <div class="collapse navbar-collapse" id="navbar-mobile" >
                 
-                    <ul class="nav navbar-nav mr-auto float-left">
+                    <ul class="nav navbar-nav mr-auto float-left" >
                         <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
                        
                        
@@ -206,9 +206,10 @@
         </div>
     </nav>
     <!-- ////////////////////////////////////////////////////////////////////////////-->
-    <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true">
-        <div class="main-menu-content">
-            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+    
+    <div class="main-menu  menu-light menu-accordion    menu-shadow " data-scroll-to-active="true" >
+        <div class="main-menu-content" >
+            <ul class="navigation navigation-main bgLeftcolor" style="background-color: #1A1D52; color: #FAFAFA!important;"  data-menu="menu-navigation" >
                 <li class=" nav-item"><a href="index.html"><i class="la la-home"></i><span class="menu-title" data-i18n="nav.dash.main">Dashboard</span><span class="badge badge badge-info badge-pill float-right mr-2">3</span></a>
                     <ul class="menu-content">
                         <li><a class="menu-item" href="dashboard-ecommerce.html" data-i18n="nav.dash.ecommerce">eCommerce</a>

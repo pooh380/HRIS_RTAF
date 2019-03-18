@@ -1,3 +1,6 @@
 #bgHeader {
     background-image: url(../Images/header.jpg);
 }
+.bgLeftcolor{
+    background-color: #1A1D52; color: #FAFAFA!important;
+}
