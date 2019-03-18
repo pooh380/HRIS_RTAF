@@ -78,7 +78,7 @@
     <script>
         function openMenu(){
             //alert("menu");
-            $("#menu").toggle();
+            $("#nav").toggle();
         }
     </script>
     
