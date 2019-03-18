@@ -43,6 +43,9 @@
                     <li class="nav-item">
                         <a class="navbar-brand" href="index.html">
                             <img class="brand-logo" alt="modern admin logo" src="../../app-assets/images/logo/logo.png">
+                            <div>
+                                        <img src="../../Asset/Images/hris.png" alt="hris" width="200" height="45">
+                                    </div>
                             <h3 class="brand-text">Modern Admin</h3>
                         </a>
                     </li>
@@ -53,12 +56,9 @@
             </div>
             <div class="navbar-container content">
                 <div class="collapse navbar-collapse" id="navbar-mobile">
-                
                     <ul class="nav navbar-nav mr-auto float-left">
                         <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
-                       
-                       
-                        <ul class="mega-dropdown-menu dropdown-menu row">
+                            <ul class="mega-dropdown-menu dropdown-menu row">
                                 <li class="col-md-2">
                                     <h6 class="dropdown-menu-header text-uppercase mb-1"><i class="la la-newspaper-o"></i> News</h6>
                                     <div id="mega-menu-carousel-example">
@@ -173,14 +173,13 @@
                             </ul>
                             
                         </li>
-                            <div>
-                                        <img src="../../Asset/Images/hris.png" alt="hris" width="230" height="45" style="margin-top:15px;">
-                                    </div>    
+                            <div class="search-input">
+                                <input class="input" type="text" placeholder="Explore Modern...">
+                            </div>
                             
                         </li>
                         
                     </ul>
-                    
                     
 
                     <ul class="nav navbar-nav float-right">

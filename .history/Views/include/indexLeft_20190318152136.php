@@ -56,13 +56,14 @@
                 
                     <ul class="nav navbar-nav mr-auto float-left">
                         <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
-                       
-                       
-                        <ul class="mega-dropdown-menu dropdown-menu row">
+                            <ul class="mega-dropdown-menu dropdown-menu row">
                                 <li class="col-md-2">
                                     <h6 class="dropdown-menu-header text-uppercase mb-1"><i class="la la-newspaper-o"></i> News</h6>
                                     <div id="mega-menu-carousel-example">
                                         <div>
+                                        <div>
+                                        <img src="../../Asset/Images/hris.png" alt="hris" width="200" height="45">
+                                    </div>
                                             <img class="rounded img-fluid mb-1" src="../../app-assets/images/slider/slider-2.png" alt="First slide"><a class="news-title mb-0" href="#">Poster Frame PSD</a>
                                             <p class="news-content">
                                                 <span class="font-small-2">January 26, 2018</span>
@@ -173,14 +174,13 @@
                             </ul>
                             
                         </li>
-                            <div>
-                                        <img src="../../Asset/Images/hris.png" alt="hris" width="230" height="45" style="margin-top:15px;">
-                                    </div>    
+                            <div class="search-input">
+                                <input class="input" type="text" placeholder="Explore Modern...">
+                            </div>
                             
                         </li>
                         
                     </ul>
-                    
                     
 
                     <ul class="nav navbar-nav float-right">

@@ -174,7 +174,7 @@
                             
                         </li>
                             <div>
-                                        <img src="../../Asset/Images/hris.png" alt="hris" width="230" height="45" style="margin-top:15px;">
+                                        <img src="../../Asset/Images/hris.png" alt="hris" width="200" height="45" style="margin-top:10px;">
                                     </div>    
                             
                         </li>

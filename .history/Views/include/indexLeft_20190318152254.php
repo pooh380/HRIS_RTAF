@@ -56,8 +56,10 @@
                 
                     <ul class="nav navbar-nav mr-auto float-left">
                         <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
-                       
-                       
+                      
+                                        <img src="../../Asset/Images/hris.png" alt="hris" width="200" height="45">
+                                     
+                        
                         <ul class="mega-dropdown-menu dropdown-menu row">
                                 <li class="col-md-2">
                                     <h6 class="dropdown-menu-header text-uppercase mb-1"><i class="la la-newspaper-o"></i> News</h6>
@@ -173,14 +175,13 @@
                             </ul>
                             
                         </li>
-                            <div>
-                                        <img src="../../Asset/Images/hris.png" alt="hris" width="230" height="45" style="margin-top:15px;">
-                                    </div>    
+                            <div class="search-input">
+                                <input class="input" type="text" placeholder="Explore Modern...">
+                            </div>
                             
                         </li>
                         
                     </ul>
-                    
                     
 
                     <ul class="nav navbar-nav float-right">

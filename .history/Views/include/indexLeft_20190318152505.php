@@ -173,14 +173,13 @@
                             </ul>
                             
                         </li>
-                            <div>
-                                        <img src="../../Asset/Images/hris.png" alt="hris" width="230" height="45" style="margin-top:15px;">
-                                    </div>    
+                            <div class="search-input">
+                                <input class="input" type="text" placeholder="Explore Modern...">
+                            </div>
                             
                         </li>
                         
                     </ul>
-                    
                     
 
                     <ul class="nav navbar-nav float-right">
