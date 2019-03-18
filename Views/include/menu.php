@@ -16,9 +16,10 @@
     /* Desktop Styles */
     @media (min-width: 1200px) {
         #menu{
-            width: 350px;
+            width: 25%;
             height: 1000px;
             background-color: #1a1d52;
+            float:left;
         }
     }
     </style>

@@ -27,7 +27,9 @@ function myFunction() {
     )
 }
 
-function getOrganizations() {}
+function getOrganizations() {
+    
+}
 
 
 
