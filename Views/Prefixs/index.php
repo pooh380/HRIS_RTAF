@@ -4,6 +4,7 @@
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
 
+  
   <section>
   <div class="app-content content">
     <div class="content-wrapper">
@@ -103,6 +104,16 @@
     </div>
   </div>
   </section>
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+            console.log("ready");
+            change_autorefreshdiv()
+    });
+    function change_autorefreshdiv(){
+      // $('#prefixPage').addClass('active');
+}   
+  </script>
 
   <!-- footer -->
   <?php include '../include/footer.php'; ?>
