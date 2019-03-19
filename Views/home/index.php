@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!-- header -->
+  <?php include '../include/header.php'; ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+  <!-- menu -->
+  <?php include '../include/menu.php'; ?>
 
-<body>
-    <header>
-        <?php include '../include/header.php'; ?>
-    </header>
-    <section style="">
-
-        <?php include '../include/menu.php'; ?>
-    </section>
+  <section>
     <div class="app-content content">
     <div class="content-wrapper">
       <div class="content-header row">
@@ -69,9 +58,7 @@
       </div>
     </div>
   </div>
-    <footer  style="">
-        <?php include '../include/footer.php'; ?>
-    </footer>
-</body>
+</section>
 
-</html> 
+  <!-- footer -->
+  <?php include '../include/footer.php'; ?>

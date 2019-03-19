@@ -273,7 +273,7 @@ footer.footer-dark {
 
 .main-menu.menu-light .navigation {
     /* background: #FFFFFF; */
-    background-color: #1a1d52;
+    background-color: #0f1733
 }
 
 .main-menu.menu-light .navigation .navigation-header {
@@ -408,7 +408,7 @@ footer.footer-dark {
 
 .main-menu.menu-light .navigation>li ul li>a {
     padding: 8px 18px 8px 54px;
-    background-color: #1a1d52;
+    background-color: #0f1733
 }
 
 .main-menu.menu-light .navigation>li ul .has-sub:not(.open)>ul {
@@ -468,7 +468,7 @@ footer.footer-dark {
 .main-menu.menu-light ul.menu-popout li a {
     /* color: #6B6F82; */
     color: #fafafa;
-    background-color: #1a1d52;
+    background-color: #0f1733
 }
 
 .main-menu.menu-light ul.menu-popout li a span.menu-sub-title {
@@ -482,6 +482,7 @@ footer.footer-dark {
 .main-menu.menu-light ul.menu-popout .open>a {
     /* color: #6B6F82; */
     color: #fafafa;
+    background-color: #2F47A1;
 }
 
 .main-menu.menu-light ul.menu-popout .open>ul {
