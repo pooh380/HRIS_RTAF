@@ -3,7 +3,6 @@
 /* Desktop Styles */
 
 @media (min-width: 1200px) {
-
     body {
         background: url(../Images/BG-TH.jpg)no-repeat center center fixed;
         -webkit-background-size: cover;
@@ -11,7 +10,6 @@
         -o-background-size: cover;
         background-size: cover;
     }
-
     #login {
         margin-top: 5%;
         margin-left: 25%;
@@ -20,19 +18,16 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         border-radius: 25px;
     }
-
     #left {
         position: absolute;
         /* border: 3px solid #adfadf; */
         width: 375px;
     }
-
     #hris {
         left: 40px;
         top: 220px;
         position: absolute;
     }
-
     #right {
         padding-top: 100px;
         width: 300px;
@@ -40,14 +35,12 @@
         margin-left: 420px;
         position: absolute;
     }
-
     #square {
         width: 8px;
         height: 45px;
         background-color: #1a1d52;
         position: absolute;
     }
-
     #txtLogin {
         color: #222233;
         font-size: 30px;
@@ -56,26 +49,21 @@
         font-family: 'THSarabunNew', sans-serif;
         margin-left: -100px;
     }
-
     #loginForm {
         color: #222233;
         font-family: 'THSarabunNew', sans-serif;
         font-size: 0.9em;
         font-weight: bold;
     }
-
     #usernameForm {
         margin-left: -225px;
     }
-
     #passwordForm {
         margin-left: -240px;
     }
-
     .border {
         border-color: #1a1d52 !important;
     }
-
     .btn {
         background-color: #1a1d52;
         color: #fafafa;
@@ -84,83 +72,76 @@
         /* font-size: 0.9em; */
     }
 }
-@media (min-width: 768px ) and (max-width: 1199px) {  body {
-    background: url(../Images/BG-TH.jpg)no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    body {
+        background: url(../Images/BG-TH.jpg)no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    #login {
+        margin-top: 30%;
+        margin-left: 10%;
+        width: 750px;
+        height: 500px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 25px;
+    }
+    #left {
+        position: absolute;
+        /* border: 3px solid #adfadf; */
+        width: 375px;
+    }
+    #hris {
+        left: 40px;
+        top: 220px;
+        position: absolute;
+    }
+    #right {
+        padding-top: 100px;
+        width: 300px;
+        /* border: 3px solid #e0b3d2; */
+        margin-left: 420px;
+        position: absolute;
+    }
+    #square {
+        width: 8px;
+        height: 45px;
+        background-color: #1a1d52;
+        position: absolute;
+    }
+    #txtLogin {
+        color: #222233;
+        font-size: 30px;
+        width: 200px;
+        font-weight: bold;
+        font-family: 'THSarabunNew', sans-serif;
+        margin-left: -100px;
+    }
+    #loginForm {
+        color: #222233;
+        font-family: 'THSarabunNew', sans-serif;
+        font-size: 0.9em;
+        font-weight: bold;
+    }
+    #usernameForm {
+        margin-left: -225px;
+    }
+    #passwordForm {
+        margin-left: -240px;
+    }
+    .border {
+        border-color: #1a1d52 !important;
+    }
+    .btn {
+        background-color: #1a1d52;
+        color: #fafafa;
+        width: 100%;
+        border-radius: 25px;
+        /* font-size: 0.9em; */
+    }
 }
 
-#login {
-    margin-top: 30%;
-    margin-left: 10%;
-    width: 750px;
-    height: 500px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 25px;
-}
-
-#left {
-    position: absolute;
-    /* border: 3px solid #adfadf; */
-    width: 375px;
-}
-
-#hris {
-    left: 40px;
-    top: 220px;
-    position: absolute;
-}
-
-#right {
-    padding-top: 100px;
-    width: 300px;
-    /* border: 3px solid #e0b3d2; */
-    margin-left: 420px;
-    position: absolute;
-}
-
-#square {
-    width: 8px;
-    height: 45px;
-    background-color: #1a1d52;
-    position: absolute;
-}
-
-#txtLogin {
-    color: #222233;
-    font-size: 30px;
-    width: 200px;
-    font-weight: bold;
-    font-family: 'THSarabunNew', sans-serif;
-    margin-left: -100px;
-}
-
-#loginForm {
-    color: #222233;
-    font-family: 'THSarabunNew', sans-serif;
-    font-size: 0.9em;
-    font-weight: bold;
-}
-
-#usernameForm {
-    margin-left: -225px;
-}
-
-#passwordForm {
-    margin-left: -240px;
-}
-
-.border {
-    border-color: #1a1d52 !important;
-}
-
-.btn {
-    background-color: #1a1d52;
-    color: #fafafa;
-    width: 100%;
-    border-radius: 25px;
-    /* font-size: 0.9em; */
-} }
-@media (min-width: 320px) { }
+@media (min-width: 320px) {}

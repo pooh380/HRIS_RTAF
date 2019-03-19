@@ -14,3 +14,9 @@
  Body(พวกแถบเมนูข้าง/)       : 28pt/bold
  content(ในตาราง)      :28pt/Regular
  navigation   :20pt/regular
+
+--------
+
+page vs database
+โครสร้าง เก็บประเภทโครงสร้างทั้งหมด
+org_type_struc เก็บ
