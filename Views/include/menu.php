@@ -144,7 +144,7 @@
             <!-- ระบบงานโอนย้าย -->
             <li class=" nav-item"><a href="#"><i class="la icon-shuffle"></i><span class="menu-title" data-i18n="nav.vertical_nav.main">ระบบงานโอนย้าย</span></a>
                 <ul class="menu-content">
-                    <li><a class="menu-item" href="../Course_government /index.php" data-i18n="nav.navbars.nav_light">หลักสูตรที่ใช้ในการบรรจุเข้ารับราชการ</a>
+                    <li><a class="menu-item" href="../Course_government/index.php" data-i18n="nav.navbars.nav_light">หลักสูตรที่ใช้ในการบรรจุเข้ารับราชการ</a>
                     </li>
 
                 </ul>
