@@ -173,17 +173,10 @@
                         </ul>
 
                         </li>
-<<<<<<< HEAD
                             <div>
                                         <img src="../../Asset/Images/hris.png" alt="hris" width="250" height="45" style="margin-top:15px;">
                                     </div>    
                             
-=======
-                        <div>
-                            <img src="../../Asset/Images/hris.png" alt="hris" width="230" height="45" style="margin-top:15px;">
-                        </div>
-
->>>>>>> 0e15990252323b883de809b811b30fea9a434991
                         </li>
 
                     </ul>
