@@ -416,7 +416,9 @@ footer.footer-dark {
 }
 
 .main-menu.menu-light .navigation>li ul .open>a {
-    color: #6B6F82;
+    /* color: #6B6F82; */
+    color: #fafafa;
+    background-color: #2F47A1;
 }
 
 .main-menu.menu-light .navigation>li ul .open>ul {
