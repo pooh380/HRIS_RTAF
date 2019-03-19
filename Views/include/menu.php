@@ -68,31 +68,31 @@
                             </li>
                             <li><a class="menu-item" href="../prefix_skill/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">อัตราตำแหน่งในโครงสร้างอัตรา</a>
                             </li>
-                            <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">อักษรนำเลข ลชทอ.</a>
+                            <li><a class="menu-item" href="../Suffix_skill/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">อักษรนำเลข ลชทอ.</a>
                             </li>
-                            <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">อักษรตามเลข ลชทอ.</a>
+                            <li><a class="menu-item" href="../employee_group/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">อักษรตามเลข ลชทอ.</a>
                             </li>
-                            <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">กลุ่มพนักงาน</a>
+                            <li><a class="menu-item" href="../position_type_group/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">กลุ่มพนักงาน</a>
                             </li>
-                            <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">ประเภทตำแหน่ง</a>
+                            <li><a class="menu-item" href="../Position_type/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ประเภทตำแหน่ง</a>
                             </li>
-                            <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">เงินเพิ่ม</a>
+                            <li><a class="menu-item" href="../money_types/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">เงินเพิ่ม</a>
                             </li>
-                            <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">ระดับตำแหน่งของลูกจ้างประจำ</a>
+                            <li><a class="menu-item" href="../position_level/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ระดับตำแหน่งของลูกจ้างประจำ</a>
                             </li>
-                            <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">ตำแหน่งของลูกจ้างประจำ</a>
+                            <li><a class="menu-item" href="../position_account_group/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ตำแหน่งของลูกจ้างประจำ</a>
                             </li>
                         </ul>
                     </li>
                     <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">รายงาน</a>
                         <ul class="menu-content">
-                            <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงานสรุปยอดอัตรากำลังพล</a>
+                            <li><a class="menu-item" href="../Personnel_rate/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงานสรุปยอดอัตรากำลังพล</a>
                             </li>
-                            <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงาน อัตรา ทอ.52</a>
+                            <li><a class="menu-item" href="../Rate52/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงาน อัตรา ทอ.52</a>
                             </li>
-                            <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงานบัญชีชื่อตำแหน่ง</a>
+                            <li><a class="menu-item" href="../Account_report/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงานบัญชีชื่อตำแหน่ง</a>
                             </li>
-                            <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงานบัญชีชื่อตำแหน่งในกรณีที่มีตำแหน่งใหม่ทดแทนตำแหน่งเก่า</a>
+                            <li><a class="menu-item" href="../Account_report_newtoold_position/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงานบัญชีชื่อตำแหน่งในกรณีที่มีตำแหน่งใหม่ทดแทนตำแหน่งเก่า</a>
                             </li>
                         </ul>
                     </li>
