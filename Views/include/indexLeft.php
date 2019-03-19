@@ -173,19 +173,19 @@
                         </ul>
 
                         </li>
-                            <div>
-                                        <img src="../../Asset/Images/hris.png" alt="hris" width="250" height="45" style="margin-top:15px;">
-                                    </div>    
-                            
+                        <div>
+                            <img src="../../Asset/Images/hris.png" alt="hris" width="230" height="45" style="margin-top:15px;">
+                        </div>
+
                         </li>
 
                     </ul>
 
 
 
-                    <ul class="nav navbar-nav float-right" >
-                        <li class="dropdown dropdown-user nav-item ">
-                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown" style=" height:50px;background-color: #fafafa; border-radius: 30px; color:#1a1d52; padding-top: 8px;">
+                    <ul class="nav navbar-nav float-right">
+                        <li class="dropdown dropdown-user nav-item">
+                            <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
                                 <span class="mr-1">Hello,
                                     <span class="user-name text-bold-700">John Doe</span>
                                 </span>
@@ -196,7 +196,7 @@
                                 <a class="dropdown-item" href="#"><i class="ft-mail"></i> My Inbox</a>
                                 <a class="dropdown-item" href="#"><i class="ft-check-square"></i> Task</a>
                                 <a class="dropdown-item" href="#"><i class="ft-message-square"></i> Chats</a>
-                                <div class="dropdown-divider"></div><a class="dropdown-item" href="../../index.php"><i class="ft-power"></i> Logout</a>
+                                <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="ft-power"></i> Logout</a>
                             </div>
                         </li>
 
@@ -210,7 +210,7 @@
     <div class="main-menu  menu-light menu-accordion    menu-shadow " data-scroll-to-active="true">
         <div class="main-menu-content">
             <ul class="navigation navigation-main bgLeftcolor" style="background-color: #1A1D52; color: #FAFAFA!important;" data-menu="menu-navigation">
-                <!-- ระบบงานโครงสร้างอัตรากำลังพล -->
+                <!-- ระบบงานโครงสร้างอัตรากำลังพล --->
                 <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">ระบบงานโครงสร้างอัตรากำลังพล</span></a>
                     <ul class="menu-content">
                         <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">ข้อมูลทั่วไป</a>
