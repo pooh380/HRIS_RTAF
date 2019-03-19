@@ -9,7 +9,7 @@
     <div class="content-wrapper">
       <div class="content-header row">
         <div class="content-header-left col-md-6 col-12 mb-2">
-          <h3 class="content-header-title">โครงสร้างอัตรากำลังพล</h3>
+          <h3 class="content-header-title">คำนำหน้า</h3>
         </div>
       </div>
       <div class="content-body">

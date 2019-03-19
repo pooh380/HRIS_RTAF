@@ -6,7 +6,7 @@
                     <ul class="menu-content">
                         <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">ข้อมูลทั่วไป</a>
                             <ul class="menu-content">
-                                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">คำนำหน้า</a>
+                                <li><a class="menu-item" href="../Prefixs/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">คำนำหน้า</a>
                                 </li>
                                 <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">สัญชาติ</a>
                                 </li>
