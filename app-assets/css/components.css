@@ -477,7 +477,8 @@ footer.footer-dark {
 }
 
 .main-menu.menu-light ul.menu-popout .open>a {
-    color: #6B6F82;
+    /* color: #6B6F82; */
+    color: #fafafa;
 }
 
 .main-menu.menu-light ul.menu-popout .open>ul {
