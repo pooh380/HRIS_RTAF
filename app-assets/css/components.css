@@ -272,7 +272,8 @@ footer.footer-dark {
 }
 
 .main-menu.menu-light .navigation {
-    background: #FFFFFF;
+    /* background: #FFFFFF; */
+    background-color: #1a1d52;
 }
 
 .main-menu.menu-light .navigation .navigation-header {
