@@ -7,9 +7,8 @@
   <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
   <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
   <meta name="author" content="PIXINVENT">
-  <title>Select Datatable - Modern Admin - Clean Bootstrap 4 Dashboard HTML Template + Bitcoin
-    Dashboard
-  </title>
+  <title>Styling DataTable - Modern Admin - Clean Bootstrap 4 Dashboard HTML Template +
+    Bitcoin Dashboard</title>
   <link rel="apple-touch-icon" href="../../app-assets/images/ico/apple-icon-120.png">
   <link rel="shortcut icon" type="image/x-icon" href="../../app-assets/images/ico/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
@@ -19,9 +18,6 @@
   <!-- BEGIN VENDOR CSS-->
   <link rel="stylesheet" type="text/css" href="../../app-assets/css/vendors.css">
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/tables/datatable/datatables.min.css">
-  <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/tables/datatable/select.dataTables.min.css">
-  <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/tables/extensions/buttons.dataTables.min.css">
-  <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/tables/datatable/buttons.bootstrap4.min.css">
   <!-- END VENDOR CSS-->
   <!-- BEGIN MODERN CSS-->
   <link rel="stylesheet" type="text/css" href="../../app-assets/css/app.css">
@@ -32,9 +28,9 @@
   <!-- END Page Level CSS-->
   <!-- BEGIN Custom CSS-->
   <link rel="stylesheet" type="text/css" href="../../Asset/css/style.css">
-  <!-- END Custom CSS-->
-
+  
   <link rel="stylesheet" href="../../Asset/Css/indexLeftCSS.css">
+  <!-- END Custom CSS-->
 </head>
 
 <body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu" data-col="2-columns">

@@ -4,22 +4,58 @@
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
 
+  <style>
+    /* ol > li > a {color:#222233;} */
+    .onoffswitch {
+    position: relative; width: 40px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    height: 20px; padding: 0; line-height: 36px;
+    border: 2px solid #E3E3E3; border-radius: 36px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+.onoffswitch-label:before {
+    content: "";
+    display: block; width: 20px; margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 22px;
+    border: 2px solid #E3E3E3; border-radius: 36px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: #49E845;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+   border-color: #49E845;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    right: 0px; 
+}
+  </style>
+
   <section>
   <div class="app-content content">
     <div class="content-wrapper">
       <div class="content-header row">
         <div class="content-header-left col-md-6 col-12 mb-2">
-          <h3 class="content-header-title">คำนำหน้า</h3>
+          <h3 class="content-header-title">หน่วยงาน</h3>
         </div>
       </div>
       <div class="content-body">
-        <!-- Checkbox selection -->
-        <section id="checkbox">
+         <!-- Bootstrap 3 table -->
+         <section id="bootstrap3">
           <div class="row">
             <div class="col-12">
               <div class="card">
-                <!-- <div class="card-header"> -->
-                  <!-- <h4 class="card-title">Checkbox selection</h4> -->
+                <div class="card-header">
+                  <!-- <h4 class="card-title">Bootstrap 3</h4> -->
                   <!-- <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a> -->
                   <!-- <div class="heading-elements">
                     <ul class="list-inline mb-0">
@@ -29,89 +65,63 @@
                       <li><a data-action="close"><i class="ft-x"></i></a></li>
                     </ul>
                   </div> -->
-                <!-- </div> -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item"><a href="#">Library</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                  </nav>
+                </div>
                 <div class="card-content collapse show">
                   <div class="card-body card-dashboard">
                     <p class="card-text"></p>
-                    <table class="table table-striped table-bordered responsive dataex-select-checkbox" style="width:100%;">
+                    <table class="table table-striped table-bordered bootstrap-3 table-">
                       <thead>
-                        <tr>
-                          <th></th>
-                          <th>Name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Salary</th>
+                        <tr align="center">
+                          <th><input type="checkbox" class="checkAll" onclick="toggle(this);" /></th>
+                          <th>ลำดับที่</th>
+                          <th>รหัส</th>
+                          <th>ชื่อ</th>
+                          <th >ใช้งาน</th>
                         </tr>
                       </thead>
-                      <tbody>
+                      <tbody align="center">
                         <tr>
-                          <td></td>
-                          <td>Cara Stevens</td>
-                          <td>Sales Assistant</td>
-                          <td>New York</td>
-                          <td>46</td>
-                          <td>$145,600</td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td>Hermione Butler</td>
-                          <td>Regional Director</td>
-                          <td>London</td>
-                          <td>47</td>
-                          <td>$356,250</td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td>Lael Greer</td>
-                          <td>Systems Administrator</td>
-                          <td>London</td>
-                          <td>21</td>
-                          <td>$103,500</td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td>Jonas Alexander</td>
-                          <td>Developer</td>
-                          <td>San Francisco</td>
-                          <td>30</td>
-                          <td>$86,500</td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td>Shad Decker</td>
-                          <td>Regional Director</td>
+                          <td><input type="checkbox" class="checkAll" /></td>
+                          <td>System Architect</td>
                           <td>Edinburgh</td>
-                          <td>51</td>
-                          <td>$183,000</td>
+                          <td>61</td>
+                          <td align="center">
+                          <div class="onoffswitch">
+                              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                              <label class="onoffswitch-label" for="myonoffswitch"></label>
+                          </div>
+                          </td>
                         </tr>
                         <tr>
-                          <td></td>
-                          <td>Michael Bruce</td>
-                          <td>Javascript Developer</td>
-                          <td>Singapore</td>
-                          <td>29</td>
-                          <td>$183,000</td>
-                        </tr>
-                        <tr>
-                          <td></td>
-                          <td>Donna Snider</td>
-                          <td>Customer Support</td>
-                          <td>New York</td>
-                          <td>27</td>
-                          <td>$112,000</td>
+                          <td><input type="checkbox" class="checkAll"/></td>
+                          <td>Accountant</td>
+                          <td>Tokyo</td>
+                          <td>63</td>
+                          <td align="center">
+                          <div class="onoffswitch">
+                              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                              <label class="onoffswitch-label" for="myonoffswitch"></label>
+                          </div>
+                          </td>
                         </tr>
                       </tbody>
-                      <tfoot>
+                      <!-- <tfoot>
                         <tr>
-                          <th></th>
                           <th>Name</th>
                           <th>Position</th>
                           <th>Office</th>
                           <th>Age</th>
+                          <th>Start date</th>
                           <th>Salary</th>
                         </tr>
-                      </tfoot>
+                      </tfoot> -->
                     </table>
                   </div>
                 </div>
@@ -119,21 +129,12 @@
             </div>
           </div>
         </section>
-        <!-- Checkbox selection -->
+        <!--/ Bootstrap 3 table -->
       </div>
     </div>
   </div>
   </section>
   
-  <!-- datatables -->
-  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-  
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  
-  
-
   <script type="text/javascript">
     $(document).ready(function() {
             console.log("ready");
@@ -142,7 +143,14 @@
 
     function change_autorefreshdiv(){
       // $('#prefixPage').addClass('active');
-}   
+    }   
+    function toggle(source) {
+      var checkboxes = document.querySelectorAll('.checkAll');
+      for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i] != source)
+              checkboxes[i].checked = source.checked;
+      }
+    }
   </script>
 
     

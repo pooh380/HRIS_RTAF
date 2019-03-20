@@ -11,14 +11,6 @@
   <!-- BEGIN VENDOR JS-->
   <!-- BEGIN PAGE VENDOR JS-->
   <script src="../../app-assets/vendors/js/tables/datatable/datatables.min.js" type="text/javascript"></script>
-  <script src="../../app-assets/vendors/js/tables/datatable/dataTables.responsive.min.js"
-  type="text/javascript"></script>
-  <script src="../../app-assets/vendors/js/tables/datatable/dataTables.select.min.js"
-  type="text/javascript"></script>
-  <script src="../../app-assets/vendors/js/tables/datatable/dataTables.buttons.min.js"
-  type="text/javascript"></script>
-  <script src="../../app-assets/vendors/js/tables/datatable/buttons.bootstrap4.min.js"
-  type="text/javascript"></script>
   <!-- END PAGE VENDOR JS-->
   <!-- BEGIN MODERN JS-->
   <script src="../../app-assets/js/core/app-menu.js" type="text/javascript"></script>
@@ -26,7 +18,7 @@
   <script src="../../app-assets/js/scripts/customizer.js" type="text/javascript"></script>
   <!-- END MODERN JS-->
   <!-- BEGIN PAGE LEVEL JS-->
-  <script src="../../app-assets/js/scripts/tables/datatables-extensions/datatable-select.js"
+  <script src="../../app-assets/js/scripts/tables/datatables/datatable-styling.js"
   type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
 </body>
