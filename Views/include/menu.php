@@ -112,7 +112,7 @@
                 </ul>
             </li>
             <!-- ระบบงานวิเคราะห์ความต้องการกำลังพลประจำปี -->
-            <li class=" nav-item"><a href="#"><i class="la icon-graph"></i><span class="menu-title" data-i18n="nav.page_layouts.main">ระบบงานวิเคราะห์ความต้องการกำลังพลประจำปี</span><span class="badge badge badge-pill badge-danger float-right mr-2">New</span></a>
+            <li class=" nav-item"><a href="#"><i class="la la-pie-chart"></i><span class="menu-title" data-i18n="nav.page_layouts.main">ระบบงานวิเคราะห์ความต้องการกำลังพลประจำปี</span><span class="badge badge badge-pill badge-danger float-right mr-2">New</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="../Degrees/index.php" data-i18n="nav.navbars.nav_light">ระดับการศึกษา</a>
                     </li>
@@ -131,7 +131,7 @@
                 </ul>
             </li>
             <!-- ระบบงานแผนบรรจุกำลังพลประจำปี -->
-            <li class=" nav-item"><a href="#"><i class="la icon-notebook"></i><span class="menu-title" data-i18n="nav.navbars.main">ระบบงานแผนบรรจุกำลังพลประจำปี</span></a>
+            <li class=" nav-item"><a href="#"><i class="la la-book"></i><span class="menu-title" data-i18n="nav.navbars.main">ระบบงานแผนบรรจุกำลังพลประจำปี</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="../Propose_approve/index.php">เสนอขอบรรจุกำลังพล/บันทึกผลการอนุมัติ</a>
                     </li>
@@ -142,7 +142,7 @@
                 </ul>
             </li>
             <!-- ระบบงานโอนย้าย -->
-            <li class=" nav-item"><a href="#"><i class="la icon-shuffle"></i><span class="menu-title" data-i18n="nav.vertical_nav.main">ระบบงานโอนย้าย</span></a>
+            <li class=" nav-item"><a href="#"><i class="la la-random"></i><span class="menu-title" data-i18n="nav.vertical_nav.main">ระบบงานโอนย้าย</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="../Course_government/index.php" data-i18n="nav.navbars.nav_light">หลักสูตรที่ใช้ในการบรรจุเข้ารับราชการ</a>
                     </li>
@@ -150,7 +150,7 @@
                 </ul>
             </li>
             <!-- งานประวัติรับราชการ -->
-            <li class=" nav-item"><a href="#"><i class="la ft-users"></i><span class="menu-title" data-i18n="nav.horz_nav.main">งานประวัติรับราชการ</span></a>
+            <li class=" nav-item"><a href="#"><i class="ft-users"></i><span class="menu-title" data-i18n="nav.horz_nav.main">งานประวัติรับราชการ</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงาน</a>
                     </li>
