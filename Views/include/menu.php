@@ -2,7 +2,7 @@
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
             <!-- ระบบงานโครงสร้างอัตรากำลังพล --->
-            <li class=" nav-item"><a href="index.html"><i class="la la-home"></i><span class="menu-title" data-i18n="nav.dash.main">ระบบงานโครงสร้างอัตรากำลังพล</span><span class="badge badge badge-info badge-pill float-right mr-2">3</span></a>
+            <li class=" nav-item"><a href="index.html"><i class="la la-sitemap"></i><span class="menu-title" data-i18n="nav.dash.main">ระบบงานโครงสร้างอัตรากำลังพล</span><span class="badge badge badge-info badge-pill float-right mr-2">3</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">ข้อมูลทั่วไป</a>
                         <ul class="menu-content">
@@ -99,7 +99,7 @@
                 </ul>
             </li>
             <!-- ระบบงานทำเนียบกำลังพล -->
-            <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">ระบบงานทำเนียบกำลังพล</span></a>
+            <li class=" nav-item"><a href="#"><i class="la la-bank"></i><span class="menu-title" data-i18n="nav.templates.main">ระบบงานทำเนียบกำลังพล</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="navbar-light.html" data-i18n="nav.navbars.nav_light">ทำเนียบบรรจุกำลังพล</a>
                     </li>
@@ -112,45 +112,45 @@
                 </ul>
             </li>
             <!-- ระบบงานวิเคราะห์ความต้องการกำลังพลประจำปี -->
-            <li class=" nav-item"><a href="#"><i class="la la-columns"></i><span class="menu-title" data-i18n="nav.page_layouts.main">ระบบงานวิเคราะห์ความต้องการกำลังพลประจำปี</span><span class="badge badge badge-pill badge-danger float-right mr-2">New</span></a>
+            <li class=" nav-item"><a href="#"><i class="la icon-graph"></i><span class="menu-title" data-i18n="nav.page_layouts.main">ระบบงานวิเคราะห์ความต้องการกำลังพลประจำปี</span><span class="badge badge badge-pill badge-danger float-right mr-2">New</span></a>
                 <ul class="menu-content">
-                    <li><a class="menu-item" href="navbar-light.html" data-i18n="nav.navbars.nav_light">ระดับการศึกษา</a>
+                    <li><a class="menu-item" href="../Degrees/index.php" data-i18n="nav.navbars.nav_light">ระดับการศึกษา</a>
                     </li>
-                    <li><a class="menu-item" href="navbar-dark.html" data-i18n="nav.navbars.nav_dark">สาขาวิชา</a>
+                    <li><a class="menu-item" href="../Branches/index.php" data-i18n="nav.navbars.nav_dark">สาขาวิชา</a>
                     </li>
-                    <li><a class="menu-item" href="navbar-semi-dark.html" data-i18n="nav.navbars.nav_semi">ทาง</a>
+                    <li><a class="menu-item" href="../sections/index.php" data-i18n="nav.navbars.nav_semi">ทาง</a>
                     </li>
-                    <li><a class="menu-item" href="navbar-brand-center.html" data-i18n="nav.navbars.nav_brand_center">ประเภทที่ขอบรรจุ</a>
+                    <li><a class="menu-item" href="../type_of_request/index.php" data-i18n="nav.navbars.nav_brand_center">ประเภทที่ขอบรรจุ</a>
                     </li>
-                    <li><a class="menu-item" href="navbar-dark.html" data-i18n="nav.navbars.nav_dark">สาเหตุในการขอบรรจุ</a>
+                    <li><a class="menu-item" href="../Reason_for_request/index.php" data-i18n="nav.navbars.nav_dark">สาเหตุในการขอบรรจุ</a>
                     </li>
-                    <li><a class="menu-item" href="navbar-semi-dark.html" data-i18n="nav.navbars.nav_semi">ผลการพิจารณาวิเคราะห์</a>
+                    <li><a class="menu-item" href="../analysis_result/index.php" data-i18n="nav.navbars.nav_semi">ผลการพิจารณาวิเคราะห์</a>
                     </li>
-                    <li><a class="menu-item" href="navbar-brand-center.html" data-i18n="nav.navbars.nav_brand_center">เสนอขอบรรจุกำลังพล</a>
+                    <li><a class="menu-item" href="../Propose_manpower/index.php" data-i18n="nav.navbars.nav_brand_center">เสนอขอบรรจุกำลังพล</a>
                     </li>
                 </ul>
             </li>
             <!-- ระบบงานแผนบรรจุกำลังพลประจำปี -->
-            <li class=" nav-item"><a href="#"><i class="la la-navicon"></i><span class="menu-title" data-i18n="nav.navbars.main">ระบบงานแผนบรรจุกำลังพลประจำปี</span></a>
+            <li class=" nav-item"><a href="#"><i class="la icon-notebook"></i><span class="menu-title" data-i18n="nav.navbars.main">ระบบงานแผนบรรจุกำลังพลประจำปี</span></a>
                 <ul class="menu-content">
-                    <li><a class="menu-item" href="navbar-light.html" data-i18n="nav.navbars.nav_light">เสนอขอบรรจุกำลังพล/บันทึกผลการอนุมัติ</a>
+                    <li><a class="menu-item" href="../Propose_approve/index.php">เสนอขอบรรจุกำลังพล/บันทึกผลการอนุมัติ</a>
                     </li>
-                    <li><a class="menu-item" href="navbar-dark.html" data-i18n="nav.navbars.nav_dark">ประเภทแผน</a>
+                    <li><a class="menu-item" href="../plan_type/index.php" data-i18n="nav.navbars.nav_dark">ประเภทแผน</a>
                     </li>
-                    <li><a class="menu-item" href="navbar-semi-dark.html" data-i18n="nav.navbars.nav_semi">แผน 5 ปีย้อนหลัง</a>
+                    <li><a class="menu-item" href="../5Plan_later/index.php" data-i18n="nav.navbars.nav_semi">แผน 5 ปีย้อนหลัง</a>
                     </li>
                 </ul>
             </li>
             <!-- ระบบงานโอนย้าย -->
-            <li class=" nav-item"><a href="#"><i class="la la-arrows-v"></i><span class="menu-title" data-i18n="nav.vertical_nav.main">ระบบงานโอนย้าย</span></a>
+            <li class=" nav-item"><a href="#"><i class="la icon-shuffle"></i><span class="menu-title" data-i18n="nav.vertical_nav.main">ระบบงานโอนย้าย</span></a>
                 <ul class="menu-content">
-                    <li><a class="menu-item" href="navbar-light.html" data-i18n="nav.navbars.nav_light">หลักสูตรที่ใช้ในการบรรจุเข้ารับราชการ</a>
+                    <li><a class="menu-item" href="../Course_government/index.php" data-i18n="nav.navbars.nav_light">หลักสูตรที่ใช้ในการบรรจุเข้ารับราชการ</a>
                     </li>
 
                 </ul>
             </li>
             <!-- งานประวัติรับราชการ -->
-            <li class=" nav-item"><a href="#"><i class="la la-arrows-h"></i><span class="menu-title" data-i18n="nav.horz_nav.main">งานประวัติรับราชการ</span></a>
+            <li class=" nav-item"><a href="#"><i class="la ft-users"></i><span class="menu-title" data-i18n="nav.horz_nav.main">งานประวัติรับราชการ</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงาน</a>
                     </li>
@@ -173,7 +173,7 @@
                 </ul>
             </li>
             <!-- งานส่วนกลางสำหรับผู้ดูแลระบบ -->
-            <li class=" nav-item"><a href="#"><i class="la la-header"></i><span class="menu-title" data-i18n="nav.page_headers.main">งานส่วนกลางสำหรับผู้ดูแลระบบ</span></a>
+            <li class=" nav-item"><a href="#"><i class="la ft-user-check"></i><span class="menu-title" data-i18n="nav.page_headers.main">งานส่วนกลางสำหรับผู้ดูแลระบบ</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">ข้อมูลหลัก-งานประวัติรับราชการ</a>
                     </li>
@@ -272,7 +272,7 @@
                 </ul>
             </li>
             <!-- ผู้ใช้งาน -->
-            <li class=" nav-item"><a href="#"><i class="la la-navicon"></i><span class="menu-title" data-i18n="nav.navbars.main">ผู้ใช้งาน</span></a>
+            <li class=" nav-item"><a href="#"><i class="la la-share-alt-square"></i><span class="menu-title" data-i18n="nav.navbars.main">ผู้ใช้งาน</span></a>
             </li>
 
         </ul>
