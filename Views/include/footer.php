@@ -20,6 +20,8 @@
   <!-- BEGIN PAGE LEVEL JS-->
   <script src="../../app-assets/js/scripts/tables/datatables/datatable-styling.js"
   type="text/javascript"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
   <!-- END PAGE LEVEL JS-->
 </body>
 </html>
