@@ -7,7 +7,8 @@
   <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
   <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
   <meta name="author" content="PIXINVENT">
-  <title>HRIS_RTAF</title>
+  <title>Styling DataTable - Modern Admin - Clean Bootstrap 4 Dashboard HTML Template +
+    Bitcoin Dashboard</title>
   <link rel="shortcut icon" type="image/x-icon" href="../../Asset/Images/favicon.png">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
   rel="stylesheet">
@@ -26,7 +27,7 @@
   <!-- END Page Level CSS-->
   <!-- BEGIN Custom CSS-->
   <link rel="stylesheet" type="text/css" href="../../Asset/css/style.css">
-
+  
   <link rel="stylesheet" href="../../Asset/Css/indexLeftCSS.css">
 
   <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
@@ -43,8 +44,11 @@
 
                     <li class="nav-item">
                         <a class="navbar-brand" href="index.html">
-                            <img class="brand-logo" alt="modern admin logo" src="../../Asset/Images/Emblem.png">
-                            <h3 class="brand-text">ระบบงาน</h3>
+                            <img class="brand-logo" alt="modern admin logo" src="../../Asset/Images/Emblem.png" style="float:left;">
+                            <div>
+                            <h3 class="brand-text" style="color:#fecd01;">กองทัพอากาศ</h3> <br>
+                            <h6 class="brand-text" style="color:#fecd01;">Royal Thai Air Force</h6>
+                            </div>
                         </a>
                     </li>
                     <li class="nav-item d-md-none">
