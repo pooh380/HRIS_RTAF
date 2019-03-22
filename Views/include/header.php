@@ -191,9 +191,9 @@
                     <ul class="nav navbar-nav float-right">
                         <li class="dropdown dropdown-user nav-item">
                             <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown" style="background-color: #fafafa;height: 50px; border-radius: 25px; color: #222233; padding-top: 8px;">
-                                <span class="mr-1">Hello,
-                                    <span class="user-name text-bold-700">John Doe</span>
-                                </span>
+                                
+                                    <span class="user-name text-bold-700">พล.อ.อ. นายแพทย์ ดร. ชีโตส</span>
+                                
                                 <span class="avatar avatar-online">
                                     <img src="../../app-assets/images/portrait/small/avatar-s-19.png" alt="avatar"><i></i></span>
                             </a>
