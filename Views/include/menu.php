@@ -101,7 +101,7 @@
             <!-- ระบบงานทำเนียบกำลังพล -->
             <li class=" nav-item"><a href="#"><i class="la la-bank"></i><span class="menu-title" data-i18n="nav.templates.main">ระบบงานทำเนียบกำลังพล</span></a>
                 <ul class="menu-content">
-                    <li><a class="menu-item" href="navbar-light.html" data-i18n="nav.navbars.nav_light">ทำเนียบบรรจุกำลังพล</a>
+                    <li><a class="menu-item" href="../Prefix_skill/index.php" data-i18n="nav.navbars.nav_light">ทำเนียบบรรจุกำลังพล</a>
                     </li>
                     <li><a class="menu-item" href="navbar-dark.html" data-i18n="nav.navbars.nav_dark">รายงานทำเนียบบรรจุกำลังพล</a>
                     </li>

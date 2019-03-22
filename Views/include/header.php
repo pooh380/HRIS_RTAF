@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="../../Asset/Css/indexLeftCSS.css">
 
   <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
+
   <!-- END Custom CSS-->
 </head>
 
