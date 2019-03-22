@@ -4,105 +4,114 @@
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
 
+  <style>
+    /* ol > li > a {color:#222233;} */
+    .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
+    .toggle.ios .toggle-handle { border-radius: 20rem; }
+  </style>
+
   <section>
   <div class="app-content content">
     <div class="content-wrapper">
       <div class="content-header row">
         <div class="content-header-left col-md-6 col-12 mb-2">
-          <h3 class="content-header-title">โครงสร้างอัตรากำลังพล</h3>
+          <h3 class="content-header-title">หน่วยงาน</h3>
         </div>
       </div>
       <div class="content-body">
-        <!-- Description -->
-        <section id="description" class="card">
-          <div class="card-header">
-            <h4 class="card-title">Description</h4>
-          </div>
-          <div class="card-content">
-            <div class="card-body">
-              <div class="card-text">
-                <p>Modern Admin provides flexible navbar component, which allows you
-                  to modify navbar colors, appearance of different types of content,
-                  components placement etc. This page contain all navbar styling
-                  options.
-                </p>
-
-                <div class="table-responsive">
-                  <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th>Classes</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row"><code>.fixed-top</code></th>
-                        <td>To set navbar fixed at top you need to add <code>.fixed-top</code>                          class in navbar <code>&lt;nav&gt;</code> tag. For more
-                          information please check <a href="fixed-top.html" target="_blank">fixed-top.html</a>.</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><code>.fixed-bottom</code></th>
-                        <td>To set navbar fixed at bottom you need to add <code>.fixed-bottom</code>                          class in navbar <code>&lt;nav&gt;</code> tag.</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><code>.navbar-static-top</code></th>
-                        <td>Create a full-width navbar that scrolls away with the page
-                          by adding <code>.navbar-static-top</code>. Unlike the <code>.navbar-fixed-*</code>                          classes, you do not need to change any padding on the <code>body</code>.</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><code>.navbar-brand-center</code></th>
-                        <td>This class allow you to set navbar branding portion at center.
-                          Add <code>.navbar-brand-center</code> class in navbar <code>&lt;nav&gt;</code>                          tag. For more information please check <a href="navbar-brand-center.html"
-                          target="_blank">navbar-brand-center.html</a>. This is optional
-                          class.
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><code>.navbar-light</code></th>
-                        <td> To set navbar light color you need to add <code>.navbar-light</code>                          class in navbar <code>&lt;nav&gt;</code> tag. For more
-                          information please check <a href="navbar-light.html" target="_blank">navbar-light.html</a></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><code>.navbar-dark</code></th>
-                        <td> To set navbar dark color you need to add <code>.navbar-dark</code>                          class in navbar <code>&lt;nav&gt;</code> tag. For more
-                          information please check <a href="navbar-dark.html" target="_blank">navbar-dark.html</a></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><code>.navbar-semi-dark</code></th>
-                        <td> To set navbar semi dark color you need to add <code>.navbar-semi-dark</code>                          class in navbar <code>&lt;nav&gt;</code> tag. For more
-                          information please check <a href="navbar-semi-dark.html"
-                          target="_blank">navbar-semi-dark.html</a></td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><code>.navbar-border</code></th>
-                        <td>You can add navbar border bottom by adding <code>.navbar-border</code>                          class in navbar <code>&lt;nav&gt;</code> tag. This navbar
-                          class is optional.</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><code>.navbar-shadow</code></th>
-                        <td>You can also apply navbar shadow bottom by adding <code>.navbar-shadow</code>                          class in navbar <code>&lt;nav&gt;</code> tag. This navbar
-                          class is optional.</td>
-                      </tr>
-                      <tr>
-                        <th scope="row"><code>.disabled</code></th>
-                        <td>To disabled navbar menu item link, you need to add <code>.disabled</code>                          class in navigation
-                          <code>&lt;li&gt;</code> tag. This navigation class is optional.
-                          Fore more information please check <a href="vertical-disabled-navigation-link.html"
-                          target="_blank">vertical-disabled-navigation-link.html</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
+         <!-- Bootstrap 3 table -->
+         <section id="bootstrap3">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-content collapse show">
+                  <div class="card-body card-dashboard">
+                    <p class="card-text"></p>
+                    <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../home/index.php">ระบบงานโครงสร้่างอัตรากำลังพล</a></li>
+                        <li class="breadcrumb-item"><a href="../home/index.php">โครงสร้าง</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">หน่วยงาน</li>
+                      </ol>
+                    </nav>
+                    <a href="./create.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
+                      <span class="la la-plus-circle" style="color:white; font-weight: bold;font-size: 18px"></span> เพิ่ม
+                    </a>
+                    <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
+                      <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
+                    </a>
+                    <table class="table table-striped table-bordered bootstrap-3 table-">
+                      <thead>
+                        <tr align="center">
+                          <th><input type="checkbox" class="checkAll" onclick="toggle(this);" /></th>
+                          <th>ลำดับที่</th>
+                          <th>รหัส</th>
+                          <th>ชื่อ</th>
+                          <th >ใช้งาน</th>
+                        </tr>
+                      </thead>
+                      <tbody align="center">
+                        <tr>
+                          <td><input type="checkbox" class="checkAll" /></td>
+                          <td>System Architect</td>
+                          <td>Edinburgh</td>
+                          <td>61</td>
+                          <td align="center">
+                            <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox" class="checkAll"/></td>
+                          <td>Accountant</td>
+                          <td>Tokyo</td>
+                          <td>63</td>
+                          <td align="center">
+                            <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                          </td>
+                        </tr>
+                      </tbody>
+                      <!-- <tfoot>
+                        <tr>
+                          <th>Name</th>
+                          <th>Position</th>
+                          <th>Office</th>
+                          <th>Age</th>
+                          <th>Start date</th>
+                          <th>Salary</th>
+                        </tr>
+                      </tfoot> -->
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <!--/ Description -->
+        <!--/ Bootstrap 3 table -->
       </div>
     </div>
   </div>
   </section>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+            console.log("ready");
+            change_autorefreshdiv();
+    });
+
+    function change_autorefreshdiv(){
+      // $('#prefixPage').addClass('active');
+    }   
+    function toggle(source) {
+      var checkboxes = document.querySelectorAll('.checkAll');
+      for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i] != source)
+              checkboxes[i].checked = source.checked;
+      }
+    }
+  </script>
+
+    
 
   <!-- footer -->
   <?php include '../include/footer.php'; ?>
