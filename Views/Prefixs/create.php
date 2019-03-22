@@ -101,7 +101,7 @@
                                                 </div>
                                                 <div class="col-md-12">
                                                     <br>
-                                                    <label class="col-md-1 label-control" for="userinput3">สถานะ</label>
+                                                    <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
                                                     <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
                                                     
                                                   </div>
