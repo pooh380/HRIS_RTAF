@@ -41,7 +41,7 @@
                     <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                       <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
                     </a>
-                    <table class="table table-striped table-borderless table-hover bootstrap-3 table-">
+                    <table class="table table-striped table-borderless table-hover bootstrap-3 ">
                       <thead>
                         <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                           <th><input type="checkbox" class="checkAll" onclick="toggle(this);" /></th>
@@ -93,6 +93,8 @@
     </div>
   </div>
   </section>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
   
   <script type="text/javascript">
     $(document).ready(function() {

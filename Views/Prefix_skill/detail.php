@@ -20,22 +20,17 @@
   <div class="app-content content">
       <div class="content-wrapper">
           <div class="content-header row">
-              <div class="content-header-left col-md-6 col-12">
+              <div class="content-header-left">
                   <div style="width:7px;height:30px;background-color:#1a1d52; float:left; margin-right:10px;"></div>
-                  <h3 class="content-header-title">หน่วยงาน</h3> <br>
+                  <h3 class="content-header-title">รายละเอียดอัตราตำแหน่งโครงสร้าง</h3> <br>
                   <nav aria-label="breadcrumb">
                       <ol class="breadcrumb">
-                          <li class="breadcrumb-item"><a href="../home/index.php">ระบบงานโครงสร้่างอัตรากำลังพล</a></li>
-                          <li class="breadcrumb-item"><a href="../home/index.php">ข้อมูลทั่วไป</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">คำนำหน้า</li>
+                          <li class="breadcrumb-item"><a href="../home/index.php">ระบบงานโครงสร้างอัตรากำลังพล</a></li>
+                          <li class="breadcrumb-item"><a href="../home/index.php">ตำแหน่ง</a></li>
+                          <li class="breadcrumb-item"><a href="../home/index.php">อัตราตำแหน่งโครงสร้าง</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">รายละเอียด</li>
                       </ol>
                   </nav>
-              </div>
-              <div class="content-header-right col-md-6 col-12">
-                  <div class="btn-group float-md-right" role="group" aria-label="Button group with nested dropdown">
-                      <button class="btn btn-info round dropdown-toggle dropdown-menu-right box-shadow-2 px-2" id="btnGroupDrop1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ft-settings icon-left"></i> Settings</button>
-                      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" href="card-bootstrap.html">Cards</a><a class="dropdown-item" href="component-buttons-extended.html">Buttons</a></div>
-                  </div>
               </div>
           </div>
           <div class="content-body">
@@ -45,7 +40,24 @@
                       <div class="" style="width:100%;">
                           <div class="card">
                               <div class="card-content">
+                                <div class="card-header">
+                                    <div class="media">
+                                      <a class="media-left" href="#">
+                                        <img src="../../app-assets/images/portrait/small/avatar-s-13.png" alt="Generic placeholder image"
+                                        style="width: 111px;height: 110px; margin-right:20px;" />
+                                      </a>
+                                      <div class="media-body">
+                                        <div class="media-heading" style="margin-top:5px;"> 
+                                          <h5 style="float:left;">ชื่อตำแหน่ง :&nbsp;</h5> <p>หัวหน้าแผนก</p>
+                                          <h5 style="float:left;">ชื่อตำแหน่ง-สังกัด :&nbsp;</h5> <p>หัวหน้าแผนกวิเคราะห์และพัฒนาระบบ กขพ.สปพ.กพ.ทอ.</p>
+                                          <h5 style="float:left;">เงินเดือนอัตรา :&nbsp;</h5> <p>น.ท.</p>
+                                          <h5 style="float:left;">จำนวน :&nbsp;</h5> <p style="float:left;">1</p> <p>&nbsp;อัตรา</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
                                   <div class="card-body">
+                                   
                                       <ul class="nav nav-tabs nav-top-border no-hover-bg">
                                           <li class="nav-item">
                                               <a class="nav-link active" id="base-tab11" data-toggle="tab" aria-controls="tab11" href="#tab11" aria-expanded="true">เงินเพิ่มประจำตำแหน่ง</a>
@@ -62,7 +74,7 @@
                                               <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                                                   <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
                                               </a>
-                                              <table class="table table-striped table-borderless table-hover bootstrap-3 table-">
+                                              <table class="table table-striped table-borderless table-hover bootstrap-3">
                                                   <thead>
                                                       <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                                                           <th><input type="checkbox" class="checkAll" onclick="toggle(this);" /></th>
@@ -92,66 +104,10 @@
                                                           </td>
                                                       </tr>
                                                   </tbody>
-                                                  <!-- <tfoot>
-                        <tr>
-                          <th>Name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
-                          <th>Salary</th>
-                        </tr>
-                      </tfoot> -->
-                                              </table>
+                                                </table>
                                           </div>
                                           <div class="tab-pane" id="tab12" aria-labelledby="base-tab12">
-                                              <a href="./create.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
-                                                  <span class="la la-plus-circle" style="color:white; font-weight: bold;font-size: 18px"></span> เพิ่ม
-                                              </a>
-                                              <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
-                                                  <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
-                                              </a>
-                                              <table class="table table-striped table-borderless table-hover bootstrap-3 table-">
-                                                  <thead>
-                                                      <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
-                                                          <th><input type="checkbox" class="checkAll" onclick="toggle(this);" /></th>
-                                                          <th>ลำดับที่</th>
-                                                          <th>รหัส</th>
-                                                          <th>ชื่อ</th>
-                                                          <th>ใช้งาน</th>
-                                                      </tr>
-                                                  </thead>
-                                                  <tbody align="center">
-                                                      <tr>
-                                                          <td><input type="checkbox" class="checkAll" /></td>
-                                                          <td>System Architect</td>
-                                                          <td>Edinburgh</td>
-                                                          <td>61</td>
-                                                          <td align="center">
-                                                              <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-                                                          </td>
-                                                      </tr>
-                                                      <tr>
-                                                          <td><input type="checkbox" class="checkAll" /></td>
-                                                          <td>Accountant</td>
-                                                          <td>Tokyo</td>
-                                                          <td>63</td>
-                                                          <td align="center">
-                                                              <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-                                                          </td>
-                                                      </tr>
-                                                  </tbody>
-                                                  <!-- <tfoot>
-                        <tr>
-                          <th>Name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
-                          <th>Salary</th>
-                        </tr>
-                      </tfoot> -->
-                                              </table>
+                                            ข้อมูล ลชทอ
                                           </div>
                                       </div>
                                   </div>
@@ -164,6 +120,9 @@
           </div>
       </div>
   </div>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
+
   <script type="text/javascript">
       $(document).ready(function() {
           console.log("ready");
