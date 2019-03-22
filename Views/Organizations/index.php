@@ -40,9 +40,9 @@
                     <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                       <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
                     </a>
-                    <table class="table table-striped table-bordered bootstrap-3 table-">
+                    <table class="table table-striped table-borderless table-hover bootstrap-3 table-">
                       <thead>
-                        <tr align="center">
+                        <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                           <th><input type="checkbox" class="checkAll" onclick="toggle(this);" /></th>
                           <th>ลำดับที่</th>
                           <th>รหัส</th>

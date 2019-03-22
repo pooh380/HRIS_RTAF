@@ -20,3 +20,6 @@
 page vs database
 โครสร้าง เก็บประเภทโครงสร้างทั้งหมด
 org_type_struc เก็บ
+
+---------
+ปุ่มใช้งาน https://gitbrent.github.io/bootstrap4-toggle/
