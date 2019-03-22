@@ -16,8 +16,17 @@
       <div class="content-header row">
         <div class="content-header-left col-md-6 col-12 mb-2">
           <h3 class="content-header-title">หน่วยงาน</h3>
+        
+                    
         </div>
       </div>
+      <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../home/index.php">ระบบงานโครงสร้่างอัตรากำลังพล</a></li>
+                        <li class="breadcrumb-item"><a href="../home/index.php">โครงสร้าง</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">หน่วยงาน</li>
+                      </ol>
+                    </nav>
       <div class="content-body">
          <!-- Bootstrap 3 table -->
          <section id="bootstrap3">
@@ -27,13 +36,7 @@
                 <div class="card-content collapse show">
                   <div class="card-body card-dashboard">
                     <p class="card-text"></p>
-                    <nav aria-label="breadcrumb">
-                      <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="../home/index.php">ระบบงานโครงสร้่างอัตรากำลังพล</a></li>
-                        <li class="breadcrumb-item"><a href="../home/index.php">โครงสร้าง</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">หน่วยงาน</li>
-                      </ol>
-                    </nav>
+                   
                     <a href="./create.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                       <span class="la la-plus-circle" style="color:white; font-weight: bold;font-size: 18px"></span> เพิ่ม
                     </a>
