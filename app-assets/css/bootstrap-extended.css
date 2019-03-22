@@ -2415,18 +2415,21 @@ select.form-control {
 }
 
 .nav.nav-tabs.nav-top-border .nav-item a {
-    color: #28D094;
+    /* color: #28D094; */
+    color: #0f1733;
 }
 
 .nav.nav-tabs.nav-top-border .nav-item a.nav-link.active {
-    border-top: 3px solid #28D094;
+    /* border-top: 3px solid #28D094; */
+    border-top: 3px solid #0f1733;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    color: #555;
+    color: #0f1733;
 }
 
 .nav.nav-tabs.nav-top-border .nav-item a:hover {
-    color: #0f5039;
+    /* color: #0f5039; */
+    color: #404C69;
 }
 
 .nav.nav-tabs.nav-top-border .nav-item a:hover:not(.active) {
