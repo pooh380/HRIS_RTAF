@@ -39,7 +39,7 @@
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item"><a href="../home/index.php">ระบบงานโครงสร้่างอัตรากำลังพล</a></li>
                       <li class="breadcrumb-item"><a href="../home/index.php">โครงสร้าง</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">คำนำหน้าา</li>
+                      <li class="breadcrumb-item active" aria-current="page">คำนำหน้า</li>
                     </ol>
                   </nav>
                 </div>
