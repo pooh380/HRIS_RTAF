@@ -3,7 +3,8 @@
 
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
-  
+  <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/extensions/sweetalert.css">
+
   <style>
     /* ol > li > a {color:#222233;} */
     .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
@@ -115,15 +116,24 @@
                       </div>
                   </div>
                   <div class="form-actions center" align="center"> 
-                                                <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1">บันทึก</button>
-                                                <button type="button" class="btn btn-danger round btn-min-width mr-1 mb-1">ยกเลิก</button>
+                      
+                                                 <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1">ยกเลิก</button>
+                                                <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="type-success">บันทึก</button>
                                           </div>
               </section>
               <!-- // Basic form layout section end -->
           </div>
       </div>
   </div>
-
+    <!-- BEGIN VENDOR JS-->
+    <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+  <!-- BEGIN VENDOR JS-->
+  <!-- BEGIN PAGE VENDOR JS-->
+  <script src="../../app-assets/vendors/js/extensions/sweetalert.min.js" type="text/javascript"></script>
+  <!-- END PAGE VENDOR JS-->
+  <!-- BEGIN PAGE LEVEL JS-->
+  <script src="../../app-assets/js/scripts/extensions/sweet-alerts.js" type="text/javascript"></script>
+  <!-- END PAGE LEVEL JS-->
 
   <!-- footer -->
   <?php include '../include/footer.php'; ?> 
