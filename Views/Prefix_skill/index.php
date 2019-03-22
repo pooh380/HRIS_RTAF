@@ -21,9 +21,6 @@
           padding: -0.75rem 2rem;
       }
   </style>
-
-
-
   <section>
       <div class="app-content content">
           <div class="content-wrapper">
@@ -76,9 +73,17 @@
                                       <tbody align="center">
                                           <tr>
                                               <td><input type="checkbox" class="checkAll" /></td>
-                                              <td><a><i class="la la-file-text"></i></a>
+                                              <td style="color:#0f1733"><a><i class="la la-file-text"></i></a>
                                                   <a><i class="la a la-money"></i></a>
-                                                  <a><i class="la la-ellipsis-v"></i></a></td>
+                                                  <a class="dropdown">
+                                                      <a data-toggle="dropdown">
+                                                          <i class="la la-ellipsis-v"></i></a>
+                                                      <div class="dropdown-menu">
+                                                          <a class="dropdown-item" href="#"><i class="la la-edit"></i> แก้ไข</a>
+                                                          <a class="dropdown-item" href="#"><i class="la la-trash-o"></i>ลบ</a>
+                                                  </a>
+
+                                              </td>
                                               <td>System Architect</td>
                                               <td>Edinburgh</td>
                                               <td>61</td>
@@ -88,9 +93,17 @@
                                           </tr>
                                           <tr>
                                               <td><input type="checkbox" class="checkAll" /></td>
-                                              <td><a><i class="la la-file-text"></i></a>
+                                              <td style="color:#0f1733"><a><i class="la la-file-text"></i></a>
                                                   <a><i class="la a la-money"></i></a>
-                                                  <a><i class="la la-ellipsis-v"></i></a></td>
+                                                  <a class="dropdown">
+                                                      <a data-toggle="dropdown">
+                                                          <i class="la la-ellipsis-v"></i></a>
+                                                      <div class="dropdown-menu">
+                                                          <a class="dropdown-item" href="#"><i class="la la-edit"></i> แก้ไข</a>
+                                                          <a class="dropdown-item" href="#"><i class="la la-trash-o"></i>ลบ</a>
+                                                  </a>
+
+                                              </td>
                                               <td>Accountant</td>
                                               <td>Tokyo</td>
                                               <td>63</td>
@@ -111,30 +124,23 @@
                   <div class="sidebar">
                       <div class="sidebar-content card d-none d-lg-block">
                           <div class="card-body">
+                            <div style="background-color:#0f1733; color:white; " >
+                            <a>โครงการส่วนราชกาล </a>
+                            <a style="float:right;"><i class="la la-sitemap"></i> </a>
+                            <br>
+                            <a href="./create.php" class="btn btn-sm"style="background-color:#0f1733;color:white;border:white";>
+                                                  <span class="la la-plus-circle" style="color:white; font-weight: bold;font-size: 13px"> เพิ่ม</span>
+                                              </a>
+                            </div>
+                            <div>
+                           
+                            </div>
 
+                         
                               <!-- ---------------------- -->
-                              <div class="dropdown">
-                                  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
-                                      <span class="caret"></span></button>
-                                  <ul class="dropdown-menu">
-                                      <li><a tabindex="-1" href="#">HTML</a></li>
-                                      <li><a tabindex="-1" href="#">CSS</a></li>
-                                      <li class="dropdown-submenu">
-                                          <a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
-                                          <ul class="dropdown-menu">
-                                              <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
-                                              <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
-                                              <li class="dropdown-submenu">
-                                                  <a class="test" href="#">Another dropdown <span class="caret"></span></a>
-                                                  <ul class="dropdown-menu">
-                                                      <li><a href="#">3rd level dropdown</a></li>
-                                                      <li><a href="#">3rd level dropdown</a></li>
-                                                  </ul>
-                                              </li>
-                                          </ul>
-                                      </li>
-                                  </ul>
-                              </div>
+
+                              
+
                               <!-- /Ratings sample -->
 
                           </div>
@@ -143,17 +149,19 @@
               </div>
           </div>
   </section>
-  <style>
-.dropdown-submenu {
-  position: relative;
-}
 
-.dropdown-submenu .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -1px;
-}
-</style>
+
+  <style>
+      .dropdown-submenu {
+          position: relative;
+      }
+
+      .dropdown-submenu .dropdown-menu {
+          top: 0;
+          left: 100%;
+          margin-top: -1px;
+      }
+  </style>
   <script>
       $(document).ready(function() {
           $('.dropdown-submenu a.test').on("click", function(e) {
