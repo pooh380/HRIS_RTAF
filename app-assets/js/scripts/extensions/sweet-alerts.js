@@ -154,19 +154,19 @@ $(document).ready(function(){
 
 	$('#confirm-text').on('click',function(){
 		swal({
-		    title: "Confirm Button Text",
-		    text: "See the confirm button text! Have you noticed the Change?",
+		    title: "ต้องการบันทึกข้อมูล",
+		    text: "กรุณากดปุ่ม ตกลง หรือ ยกเลิก",
 		    icon: "warning",
 		    buttons: {
                 cancel: {
-                    text: "No, cancel plx!",
+                    text: "ยกเลิก",
                     value: null,
                     visible: true,
                     className: "",
                     closeModal: false,
                 },
                 confirm: {
-                    text: "Text Changed!!!",
+                    text: "ตกลง",
                     value: true,
                     visible: true,
                     className: "",
@@ -175,9 +175,9 @@ $(document).ready(function(){
 		    }
 		}).then(isConfirm => {
 		    if (isConfirm) {
-		        swal("Changed!", "Confirm button text was changed!!", "success");
+		        swal("ระบบทำการบันทึกข้อมูล", "สำเร็จ",  "success");
 		    } else {
-		        swal("Cancelled", "It's safe.", "error");
+		        swal("ระบบทำการยกเลิก การรบันทึกข้อมูล", "สำเร็จ", "error");
 		    }
 		});
 	});
