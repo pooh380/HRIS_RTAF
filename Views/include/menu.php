@@ -2,7 +2,7 @@
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
             <!-- ระบบงานโครงสร้างอัตรากำลังพล --->
-            <li class=" nav-item"><a href="index.html"><i class="la la-sitemap"></i><span class="menu-title" data-i18n="nav.dash.main">ระบบงานโครงสร้างอัตรากำลังพล</span><span class="badge badge badge-info badge-pill float-right mr-2">3</span></a>
+            <li class=" nav-item"><a href="index.html"><i class="la la-sitemap"></i><span class="menu-title" data-i18n="nav.dash.main">ระบบงานโครงสร้างอัตรากำลังพล</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">ข้อมูลทั่วไป</a>
                         <ul class="menu-content">
@@ -112,7 +112,7 @@
                 </ul>
             </li>
             <!-- ระบบงานวิเคราะห์ความต้องการกำลังพลประจำปี -->
-            <li class=" nav-item"><a href="#"><i class="la la-pie-chart"></i><span class="menu-title" data-i18n="nav.page_layouts.main">ระบบงานวิเคราะห์ความต้องการกำลังพลประจำปี</span><span class="badge badge badge-pill badge-danger float-right mr-2">New</span></a>
+            <li class=" nav-item"><a href="#"><i class="la la-pie-chart"></i><span class="menu-title" data-i18n="nav.page_layouts.main">ระบบงานวิเคราะห์ความต้องการกำลังพลประจำปี</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="../Degrees/index.php" data-i18n="nav.navbars.nav_light">ระดับการศึกษา</a>
                     </li>
