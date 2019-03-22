@@ -26,16 +26,15 @@
           <div class="content-wrapper">
               <div class="content-header row">
                   <div class="content-header-left col-md-6 col-12 mb-2">
-                      <h3 class="content-header-title">Detached Left Sidebar</h3>
+                      <h3 class="content-header-title">โครงการส่วนราชการ</h3>
                       <div class="row breadcrumbs-top">
                           <div class="breadcrumb-wrapper col-12">
                               <ol class="breadcrumb">
-                                  <li class="breadcrumb-item"><a href="index.html">Home</a>
+                                  <li class="breadcrumb-item"><a href="../home/index.php">ระบบงานโครงสร้างอัตรากำลังพล</a>
                                   </li>
-                                  <li class="breadcrumb-item"><a href="#">Page Layouts</a>
+                                  <li class="breadcrumb-item"><a href="../home/index.php">โครงสร้าง</a>
                                   </li>
-                                  <li class="breadcrumb-item active">Content detached left sidebar
-                                  </li>
+                                  <li class="breadcrumb-item active">โครงการส่วนราชการ</li>
                               </ol>
                           </div>
                       </div>
@@ -74,7 +73,7 @@
                                           <tr>
                                               <td><input type="checkbox" class="checkAll" /></td>
                                               <td style="color:#0f1733"><a><i class="la la-file-text"></i></a>
-                                                  <a><i class="la a la-money"></i></a>
+                                                  <a href="./detail.php" style="color:#0f1733;"><i class="la a la-money"></i></a>
                                                   <a class="dropdown">
                                                       <a data-toggle="dropdown">
                                                           <i class="la la-ellipsis-v"></i></a>
@@ -94,7 +93,7 @@
                                           <tr>
                                               <td><input type="checkbox" class="checkAll" /></td>
                                               <td style="color:#0f1733"><a><i class="la la-file-text"></i></a>
-                                                  <a><i class="la a la-money"></i></a>
+                                                  <a href="./detail.php" style="color:#0f1733;"><i class="la a la-money"></i></a>
                                                   <a class="dropdown">
                                                       <a data-toggle="dropdown">
                                                           <i class="la la-ellipsis-v"></i></a>
@@ -123,31 +122,34 @@
 
                   <div class="sidebar">
                       <div class="sidebar-content card d-none d-lg-block">
+                          <div class="card-header" style="background-color:#0f1733; color:white;">
+                              โครงการส่วนราชการ
+                              <a style="float:right;"><i class="la la-sitemap"></i> </a>
+                          </div>
                           <div class="card-body">
-                            <div style="background-color:#0f1733; color:white; " >
-                            <a>โครงการส่วนราชกาล </a>
-                            <a style="float:right;"><i class="la la-sitemap"></i> </a>
-                            <br>
-                            <a href="./create.php" class="btn btn-sm"style="background-color:#0f1733;color:white;border:white";>
-                                                  <span class="la la-plus-circle" style="color:white; font-weight: bold;font-size: 13px"> เพิ่ม</span>
-                                              </a>
-                            </div>
-                            <div>
-                           
-                            </div>
-
-                         
-                              <!-- ---------------------- -->
-
-                              
-
-                              <!-- /Ratings sample -->
+                              <a href="./create.php" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white" ;>
+                                  <span class="la la-plus-circle" style="color:white; font-weight: bold;font-size: 13px"> เพิ่ม</span>
+                              </a>
+                              <a href="./create.php" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white" ;>
+                                  <span class="la la-plus-circle" style="color:white; font-weight: bold;font-size: 13px"> เพิ่ม</span>
+                              </a>
+                          </div>
+                          <div>
 
                           </div>
+
+
+                          <!-- ---------------------- -->
+
+
+
+                          <!-- /Ratings sample -->
+
                       </div>
                   </div>
               </div>
           </div>
+      </div>
   </section>
 
 
