@@ -57,23 +57,18 @@
                                                   <div class="col-md-6">
                                                           <label class="col-md-4 label-control" for="userinput1">รหัสหน่วยงาน</label>
                                                           <div class="col-md-12">
-                                                          <div class="position-relative has-icon-left">
+                                                          <div class="position-relative ">
                                                               <input type="text" id="userinput1" class="form-control border-primary" placeholder="รหัสหน่วยงาน" name="firstname">
-                                                              <div class="form-control-position">
-                                                              <i class="ft-message-square"></i>
-                                                          </div>
+                                                             
                                                         </div>
                                                   </div>
                                                   </div>
                                                   <div class="col-md-6">
                                                           <label class="col-md-4 label-control" for="userinput2">ชื่อตัวย่อ</label>
                                                           <div class="col-md-12">
-                                                          <div class="position-relative has-icon-left">
+                                                          <div class="position-relative">
                                                               <input type="text" id="userinput2" class="form-control border-primary" placeholder="ชื่อตัวย่อ" name="lastname">
-                                                              <div class="form-control-position">
-                                                              <i class="ft-message-square"></i>
-                                                          </div>
-                                                            </div>
+                                                              </div>
                                                           </div>
                                                   </div>
                                               </div>
@@ -83,11 +78,9 @@
                                               <label class="col-md-4 label-control" for="userinput3">ชื่อหน่วยงาน</label>
                                             
                                               <div class="col-md-12">
-                                                      <div class="position-relative has-icon-left">
+                                                      <div class="position-relative ">
                                                           <input type="text" id="timesheetinput1" class="form-control border-primary" placeholder="ชื่อหน่วยงาน" name="employeename">
-                                                          <div class="form-control-position">
-                                                              <i class="ft-user"></i>
-                                                          </div>
+                                                          
                                                       </div>
                                                   </div>
                                                 
