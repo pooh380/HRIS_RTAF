@@ -15,6 +15,9 @@
       .toggle.ios .toggle-handle {
           border-radius: 20rem;
       }
+      [class*="bs-callout"] .callout-arrow-left:before {
+            right: -5%;
+        }
   </style>
 
   <div class="app-content content">
@@ -40,24 +43,30 @@
                       <div class="" style="width:100%;">
                           <div class="card">
                               <div class="card-content">
-                                <div class="card-header">
-                                    <div class="media">
-                                      <a class="media-left" href="#">
-                                        <img src="../../app-assets/images/portrait/small/avatar-s-13.png" alt="Generic placeholder image"
-                                        style="width: 111px;height: 110px; margin-right:20px;" />
-                                      </a>
-                                      <div class="media-body">
-                                        <div class="media-heading" style="margin-top:5px;"> 
-                                          <h5 style="float:left;">ชื่อตำแหน่ง :&nbsp;</h5> <p>หัวหน้าแผนก</p>
-                                          <h5 style="float:left;">ชื่อตำแหน่ง-สังกัด :&nbsp;</h5> <p>หัวหน้าแผนกวิเคราะห์และพัฒนาระบบ กขพ.สปพ.กพ.ทอ.</p>
-                                          <h5 style="float:left;">เงินเดือนอัตรา :&nbsp;</h5> <p>น.ท.</p>
-                                          <h5 style="float:left;">จำนวน :&nbsp;</h5> <p style="float:left;">1</p> <p>&nbsp;อัตรา</p>
-                                        </div>
+                                  <div class="card-header">
+
+                                      <div class="bs-callout-primary callout-transparent">
+                                          <div class="media align-items-stretch">
+                                              <div class="media-left media-middle bg-primary position-relative callout-arrow-left p-2" style="width:150px;">
+                                                  <i class="la la-user white" style="font-size: 100px; padding-left:6px;"></i>
+                                              </div>
+                                              <div class="media-body p-1">
+                                                  <h5 style="float:left; color:#0f1733;">ชื่อตำแหน่ง :&nbsp;</h5>
+                                                  <p>หัวหน้าแผนก</p>
+                                                  <h5 style="float:left; color:#0f1733;">ชื่อตำแหน่ง-สังกัด :&nbsp;</h5>
+                                                  <p>หัวหน้าแผนกวิเคราะห์และพัฒนาระบบ กขพ.สปพ.กพ.ทอ.</p>
+                                                  <h5 style="float:left; color:#0f1733;">เงินเดือนอัตรา :&nbsp;</h5>
+                                                  <p>น.ท.</p>
+                                                  <h5 style="float:left; color:#0f1733;">จำนวน :&nbsp;</h5>
+                                                  <p style="float:left;">1</p>
+                                                  <p>&nbsp;อัตรา</p>
+                                              </div>
+                                          </div>
                                       </div>
-                                    </div>
+
                                   </div>
                                   <div class="card-body">
-                                   
+
                                       <ul class="nav nav-tabs nav-top-border no-hover-bg">
                                           <li class="nav-item">
                                               <a class="nav-link active" id="base-tab11" data-toggle="tab" aria-controls="tab11" href="#tab11" aria-expanded="true">เงินเพิ่มประจำตำแหน่ง</a>
@@ -104,10 +113,10 @@
                                                           </td>
                                                       </tr>
                                                   </tbody>
-                                                </table>
+                                              </table>
                                           </div>
                                           <div class="tab-pane" id="tab12" aria-labelledby="base-tab12">
-                                            ข้อมูล ลชทอ
+                                              ข้อมูล ลชทอ
                                           </div>
                                       </div>
                                   </div>
@@ -121,7 +130,7 @@
       </div>
   </div>
 
-  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
   <script type="text/javascript">
       $(document).ready(function() {
