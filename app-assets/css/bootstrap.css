@@ -4921,12 +4921,19 @@ tbody.collapse.show {
 }
 
 .list-group-item {
+
     position: relative;
+    display: block;
+    padding: 0.25rem 0.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #EEEEEE;
+    /* position: relative;
     display: block;
     padding: 1.25rem 1.25rem;
     margin-bottom: -1px;
     background-color: #fff;
-    border: 1px solid #E4E7ED;
+    border: 1px solid #E4E7ED; */
 }
 
 .list-group-item:first-child {
