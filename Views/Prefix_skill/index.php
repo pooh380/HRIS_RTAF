@@ -1,24 +1,25 @@
   <!-- header -->
   <?php include '../include/header.php'; ?>
-
-  <title>Drag &amp; Drop Elements - Modern Admin - Clean Bootstrap 4 Dashboard HTML Template
-      + Bitcoin Dashboard</title>
-  <link rel="apple-touch-icon" href="../../app-assets/images/ico/apple-icon-120.png">
-  <link rel="shortcut icon" type="image/x-icon" href="../../app-assets/images/ico/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700" rel="stylesheet">
-  <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet">
   <!-- BEGIN VENDOR CSS-->
   <link rel="stylesheet" type="text/css" href="../../app-assets/css/vendors.css">
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/toggle/switchery.min.css">
+
+  <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/icheck/icheck.css">
+  <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/icheck/custom.css">
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/ui/dragula.min.css">
   <!-- END VENDOR CSS-->
   <!-- BEGIN MODERN CSS-->
   <link rel="stylesheet" type="text/css" href="../../app-assets/css/app.css">
   <!-- END MODERN CSS-->
   <!-- BEGIN Page Level CSS-->
+
+  <!-- BEGIN Page Level CSS-->
+  <!-- END Page Level CSS-->
+
   <link rel="stylesheet" type="text/css" href="../../app-assets/css/core/menu/menu-types/vertical-menu.css">
   <link rel="stylesheet" type="text/css" href="../../app-assets/css/core/colors/palette-gradient.css">
   <link rel="stylesheet" type="text/css" href="../../app-assets/css/plugins/forms/switch.css">
+  <link rel="stylesheet" type="text/css" href="../../app-assets/css/plugins/forms/checkboxes-radios.css">
   <!-- END Page Level CSS-->
   <!-- BEGIN Custom CSS-->
   <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
@@ -91,54 +92,62 @@
 
 
                                       <div class="card-content">
-                                          <div class="card-body">
+                                          <div class="card-body skin-flat">
                                               <!-- <------------------------? -->
                                               <style>
                                                   .vl {
                                                       border-left: 8px solid #0f1733;
                                                       height: 30px;
                                                       float: left;
+                                                      padding-right: 4px;
                                                   }
                                               </style>
 
+
                                               <ul class="list-group">
                                                   <li class="list-group-item">
-                                                  <s class="vl"></s>
-                                                  <span style="font-weight: bold;font-size: 12px;"> กองทัพอากาศ</span>
+                                                      <s class="vl"></s>
+                                                      <span style="font-weight: bold;font-size: 12px;"> กองทัพอากาศ</span>
                                                   </li>
                                               </ul>
-                                              <ul class="list-group" id="list-group-tags">
+                                              <ul class="list-group" id="list-group-tags" align="left">
 
+                                                  <a style="margin-left: 15px; ">
+                                                      <li class="list-group-item">
+                                                          <s class="vl"></s> <input type="checkbox" value="01">
+                                                          <span style="font-weight: bold;font-size: 12px;"> กรมกำลังพล ทหารอากาศ</span>
+                                                      </li>
+                                                  </a>
 
-                                                  <li class="list-group-item">
-                                                      <s class="vl"></s> <input type="checkbox" value="01">
-                                                      <span style="font-weight: bold;font-size: 12px;"> กรมกำลังพล ทหารอากาศ</span>
-                                                  </li>
+                                                  <a style="margin-left: 15px; folat">
+                                                      <li class="list-group-item">
+                                                          <s class="vl"></s> <input type="checkbox" value="01">
+                                                          <span style="font-weight: bold;font-size: 12px;"> ส่วนบังคับบัญชา</span>
+                                                      </li>
+                                                  </a>
 
-                                                  <li class="list-group-item">
-                                                      <s class="vl"></s> <input type="checkbox" value="01">
-                                                      <span style="font-weight: bold;font-size: 12px;"> ส่วนบังคับบัญชา</span>
-                                                  </li>
+                                                  <a style="margin-left: 15px;">
+                                                      <li class="list-group-item">
+                                                          <s class="vl"></s> <input type="checkbox" value="01">
+                                                          <span style="font-weight: bold;font-size: 12px;"> แผนกฎหมาย</span>
+                                                      </li>
+                                                  </a>
 
-                                                  <li class="list-group-item">
-                                                      <s class="vl"></s> <input type="checkbox" value="01">
-                                                      <span style="font-weight: bold;font-size: 12px;"> แผนกฎหมาย</span>
-                                                  </li>
+                                                  <a style="margin-left: 15px;">
+                                                      <li class="list-group-item">
+                                                          <s class="vl"></s> <input type="checkbox" value="01">
+                                                          <span style="font-weight: bold;font-size: 12px;"> สำนักนโยบายบริหารกำลังพล</span>
+                                                      </li>
+                                                  </a>
 
-                                                  <li class="list-group-item">
-                                                      <s class="vl"></s> <input type="checkbox" value="01">
-                                                      <span style="font-weight: bold;font-size: 12px;"> สำนักนโยบายบริหารกำลังพล</span>
-                                                  </li>
                                               </ul>
-
-
+                                              <!-- <div class="skin-flat">
+                                                      divนี้ทำให้ เป็นcheckbox css
+                                              </div> -->
                                               <!-- ----------------------------- -->
                                           </div>
                                       </div>
                                   </div>
-
-
-
                               </div>
                           </div>
                       </div>
@@ -155,10 +164,11 @@
                                       <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                                           <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
                                       </a>
-                                      <table class="table table-striped table-borderless table-hover bootstrap-3 table-">
+                                      <table class="table table-striped  table-borderless table-hover bootstrap-3 table-">
                                           <thead>
+
                                               <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
-                                                  <th><input type="checkbox" class="checkAll" onclick="toggle(this);" /></th>
+                                                  <th> <a class="skin-flat"><input type="checkbox" class="checkAll" onclick="toggle(this);" /> </a></th>
                                                   <th></th>
                                                   <th>ลำดับที่</th>
                                                   <th>รหัส</th>
@@ -167,9 +177,9 @@
 
                                               </tr>
                                           </thead>
-                                          <tbody align="center">
+                                          <tbody align="center ">
                                               <tr>
-                                                  <td><input type="checkbox" class="checkAll" /></td>
+                                                  <td><a class="skin-flat"><input type="checkbox" class="checkAll" /></a></td>
                                                   <td style="color:#0f1733"><a><i class="la la-file-text"></i></a>
                                                       <a href="./detail.php" style="color:#0f1733;"><i class="la a la-money"></i></a>
                                                       <a class="dropdown">
@@ -178,6 +188,7 @@
                                                           <div class="dropdown-menu">
                                                               <a class="dropdown-item" href="#"><i class="la la-edit"></i> แก้ไข</a>
                                                               <a class="dropdown-item" href="#"><i class="la la-trash-o"></i>ลบ</a>
+                                                          </div>
                                                       </a>
 
                                                   </td>
@@ -189,7 +200,7 @@
                                                   </td>
                                               </tr>
                                               <tr>
-                                                  <td><input type="checkbox" class="checkAll" /></td>
+                                                  <td><a class="skin-flat"><input type="checkbox" class="checkAll" /></a></td>
                                                   <td style="color:#0f1733"><a><i class="la la-file-text"></i></a>
                                                       <a href="./detail.php" style="color:#0f1733;"><i class="la a la-money"></i></a>
                                                       <a class="dropdown">
@@ -198,6 +209,7 @@
                                                           <div class="dropdown-menu">
                                                               <a class="dropdown-item" href="#"><i class="la la-edit"></i> แก้ไข</a>
                                                               <a class="dropdown-item" href="#"><i class="la la-trash-o"></i>ลบ</a>
+                                                          </div>
                                                       </a>
 
                                                   </td>
@@ -217,7 +229,6 @@
                   </div>
               </div>
           </div>
-      </div>
       </div>
       </div>
   </section>
@@ -243,8 +254,6 @@
           });
       });
   </script>
-
-
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
@@ -252,12 +261,17 @@
   <script src="../../app-assets/vendors/js/forms/toggle/switchery.min.js" type="text/javascript"></script>
   <script src="../../app-assets/vendors/js/extensions/dragula.min.js" type="text/javascript"></script>
   <!-- END PAGE VENDOR JS-->
+
   <!-- BEGIN MODERN JS-->
   <script src="../../app-assets/js/core/app-menu.js" type="text/javascript"></script>
   <script src="../../app-assets/js/core/app.js" type="text/javascript"></script>
   <script src="../../app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+  <script src="../../app-assets/vendors/js/forms/icheck/icheck.min.js" type="text/javascript"></script>
   <!-- END MODERN JS-->
+
   <!-- BEGIN PAGE LEVEL JS-->
   <script src="../../app-assets/js/scripts/extensions/drag-drop.js" type="text/javascript"></script>
+  <script src="../../app-assets/js/scripts/forms/checkbox-radio.js" type="text/javascript"></script>
+  <script src="../../app-assets/js/scripts/dropdowns/dropdowns.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
   <?php include '../include/footer.php'; ?> 
