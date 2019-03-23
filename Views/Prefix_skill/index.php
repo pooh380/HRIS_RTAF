@@ -1,28 +1,27 @@
   <!-- header -->
   <?php include '../include/header.php'; ?>
+
   <!-- BEGIN VENDOR CSS-->
   <link rel="stylesheet" type="text/css" href="../../app-assets/css/vendors.css">
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/toggle/switchery.min.css">
-
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/icheck/icheck.css">
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/icheck/custom.css">
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/ui/dragula.min.css">
   <!-- END VENDOR CSS-->
+
   <!-- BEGIN MODERN CSS-->
   <link rel="stylesheet" type="text/css" href="../../app-assets/css/app.css">
   <!-- END MODERN CSS-->
-  <!-- BEGIN Page Level CSS-->
 
   <!-- BEGIN Page Level CSS-->
-  <!-- END Page Level CSS-->
-
   <link rel="stylesheet" type="text/css" href="../../app-assets/css/core/menu/menu-types/vertical-menu.css">
   <link rel="stylesheet" type="text/css" href="../../app-assets/css/core/colors/palette-gradient.css">
   <link rel="stylesheet" type="text/css" href="../../app-assets/css/plugins/forms/switch.css">
   <link rel="stylesheet" type="text/css" href="../../app-assets/css/plugins/forms/checkboxes-radios.css">
-  <!-- END Page Level CSS-->
-  <!-- BEGIN Custom CSS-->
   <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+  <!-- END Page Level CSS-->
+  
+
   <!-- END Custom CSS-->
   <?php include '../include/menu.php'; ?>
 
@@ -234,17 +233,6 @@
   </section>
 
 
-  <style>
-      .dropdown-submenu {
-          position: relative;
-      }
-
-      .dropdown-submenu .dropdown-menu {
-          top: 0;
-          left: 100%;
-          margin-top: -1px;
-      }
-  </style>
   <script>
       $(document).ready(function() {
           $('.dropdown-submenu a.test').on("click", function(e) {
@@ -253,8 +241,13 @@
               e.preventDefault();
           });
       });
+
+
+
+      
   </script>
   <!-- BEGIN VENDOR JS-->
+  <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
   <!-- BEGIN PAGE VENDOR JS-->
@@ -274,4 +267,7 @@
   <script src="../../app-assets/js/scripts/forms/checkbox-radio.js" type="text/javascript"></script>
   <script src="../../app-assets/js/scripts/dropdowns/dropdowns.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
+  
+
+
   <?php include '../include/footer.php'; ?> 
