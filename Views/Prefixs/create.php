@@ -6,37 +6,43 @@
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/extensions/sweetalert.css">
 
   <style>
-    /* ol > li > a {color:#222233;} */
-    .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
-    .toggle.ios .toggle-handle { border-radius: 20rem; }
+      /* ol > li > a {color:#222233;} */
+      .toggle.ios,
+      .toggle-on.ios,
+      .toggle-off.ios {
+          border-radius: 20rem;
+      }
+
+      .toggle.ios .toggle-handle {
+          border-radius: 20rem;
+      }
   </style>
   <div class="app-content content">
       <div class="content-wrapper">
           <div class="content-header row">
               <div class="content-header-left col-md-6 col-12 mb-2">
-                  <h3 class="content-header-title">หน่วยงาน</h3>
+                  <h3 class="content-header-title">เพิ่มคำนำหน้า</h3>
                   <div class="row breadcrumbs-top">
-                     
+
                   </div>
               </div>
-             
+
           </div>
           <nav aria-label="breadcrumb">
-                      <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="./index.php">ระบบงานโครงสร้างอัตรากำลังพล</a></li>
-                        <li class="breadcrumb-item"><a href="./">โครงสร้าง</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">เพิ่มข้อมูล</li>
-                      </ol>
-                    </nav>
+              <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="./index.php">ระบบงานโครงสร้างอัตรากำลังพล</a></li>
+                  <li class="breadcrumb-item"><a href="./">ข้อมูลทั่วไป</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">เพิ่มคำนำหน้า</li>
+              </ol>
+          </nav>
           <div class="content-body">
               <!-- Basic form layout section start -->
               <section id="horizontal-form-layouts">
-                  
+
                   <div class="row">
                       <div class="col-md-12">
                           <div class="card">
                               <div class="card-header">
-                                  <h4 class="form-section" id="horz-layout-colored-controls">สร้างหน่วยงาน</h4>
                                   <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                                   <div class="heading-elements">
                                       <ul class="list-inline mb-0">
@@ -55,63 +61,63 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                          <label class="col-md-4 label-control" for="userinput1">รหัสหน่วยงาน</label>
-                                                          <div class="col-md-12">
+                                                      <label class="col-md-6 label-control" for="userinput1">ชื่อเต็มคำนำหน้า</label>
+                                                      <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="userinput1" class="form-control border-primary" placeholder="รหัสหน่วยงาน" name="firstname">
-                                                             
-                                                        </div>
-                                                  </div>
+                                                              <input type="text" id="userinput1" class="form-control border-primary" placeholder="ชื่อเต็มคำนำหน้า" name="fullName">
+
+                                                          </div>
+                                                      </div>
                                                   </div>
                                                   <div class="col-md-6">
-                                                          <label class="col-md-4 label-control" for="userinput2">ชื่อตัวย่อ</label>
-                                                          <div class="col-md-12">
+                                                      <label class="col-md-6 label-control" for="userinput2">ชื่อย่อคำนำหน้า</label>
+                                                      <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="userinput2" class="form-control border-primary" placeholder="ชื่อตัวย่อ" name="lastname">
-                                                              </div>
+                                                              <input type="text" id="userinput2" class="form-control border-primary" placeholder="ชื่อย่อคำนำหน้า" name="initName">
                                                           </div>
+                                                      </div>
                                                   </div>
                                               </div>
                                               <br>
-                                              <div class="row">
-                                              <div class="col-md-12">
-                                              <label class="col-md-4 label-control" for="userinput3">ชื่อหน่วยงาน</label>
-                                            
-                                              <div class="col-md-12">
-                                                      <div class="position-relative ">
-                                                          <input type="text" id="timesheetinput1" class="form-control border-primary" placeholder="ชื่อหน่วยงาน" name="employeename">
-                                                          
+                                              <!-- <div class="row">
+                                                  <div class="col-md-12">
+                                                      <label class="col-md-4 label-control" for="userinput3">ชื่อหน่วยงาน</label>
+
+                                                      <div class="col-md-12">
+                                                          <div class="position-relative ">
+                                                              <input type="text" id="timesheetinput1" class="form-control border-primary" placeholder="ชื่อหน่วยงาน" name="employeename">
+
+                                                          </div>
                                                       </div>
+
                                                   </div>
-                                                
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <br>
-                                                    <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-                                                    <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-                                                    
+                                                  <div class="col-md-12">
+                                                      <br>
+                                                      <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
+                                                      <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+
                                                   </div>
-                                              </div>
-                                             
+                                              </div> -->
+
                                           </div>
-                                        
+
                                       </form>
                                   </div>
                               </div>
                           </div>
                       </div>
                   </div>
-                  <div class="form-actions center" align="center"> 
-                                                 <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                                                <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text">บันทึก</button>
-                                          </div>
+                  <div class="form-actions center" align="center">
+                      <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text">บันทึก</button>
+                  </div>
               </section>
               <!-- // Basic form layout section end -->
           </div>
       </div>
   </div>
-    <!-- BEGIN VENDOR JS-->
-    <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+  <!-- BEGIN VENDOR JS-->
+  <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
   <!-- BEGIN PAGE VENDOR JS-->
   <script src="../../app-assets/vendors/js/extensions/sweetalert.min.js" type="text/javascript"></script>
