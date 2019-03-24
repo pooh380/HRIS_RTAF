@@ -45,6 +45,7 @@
                       <thead>
                         <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                           <th><input type="checkbox" class="checkAll" onclick="toggle(this);" /></th>
+                          <th></th>
                           <th>ลำดับที่</th>
                           <th>รหัส</th>
                           <th>ชื่อ</th>
@@ -54,7 +55,8 @@
                       <tbody align="center">
                         <tr>
                           <td><input type="checkbox" class="checkAll" /></td>
-                          <td>System Architect</td>
+                          <td></td>
+                          <td>1</td>
                           <td>Edinburgh</td>
                           <td>61</td>
                           <td align="center">
@@ -63,7 +65,7 @@
                         </tr>
                         <tr>
                           <td><input type="checkbox" class="checkAll"/></td>
-                          <td>Accountant</td>
+                          <td>2</td>
                           <td>Tokyo</td>
                           <td>63</td>
                           <td align="center">
