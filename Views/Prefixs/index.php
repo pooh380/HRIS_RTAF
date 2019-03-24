@@ -55,7 +55,10 @@
                       <tbody align="center">
                         <tr>
                           <td><input type="checkbox" class="checkAll" /></td>
-                          <td></td>
+                          <td>
+                            <i class="la la-pencil-square-o"></i>
+                            <i class="la la-trash-o"></i>
+                          </td>
                           <td>1</td>
                           <td>Edinburgh</td>
                           <td>61</td>
@@ -65,6 +68,10 @@
                         </tr>
                         <tr>
                           <td><input type="checkbox" class="checkAll"/></td>
+                          <td>
+                            <i class="la la-pencil-square-o"></i>
+                            <i class="la la-trash-o"></i>
+                          </td>
                           <td>2</td>
                           <td>Tokyo</td>
                           <td>63</td>
