@@ -47,15 +47,15 @@
           <div class="content-wrapper">
               <div class="content-header row">
                   <div class="content-header-left col-md-6 col-12 mb-2">
-                      <h3 class="content-header-title">โครงการส่วนราชการ</h3>
+                      <h3 class="content-header-title">อัตราตำแหน่งในโครงสร้างอัตรา</h3>
                       <div class="row breadcrumbs-top">
                           <div class="breadcrumb-wrapper col-12">
                               <ol class="breadcrumb">
                                   <li class="breadcrumb-item"><a href="../home/index.php">ระบบงานโครงสร้างอัตรากำลังพล</a>
                                   </li>
-                                  <li class="breadcrumb-item"><a href="../home/index.php">โครงสร้าง</a>
+                                  <li class="breadcrumb-item"><a href="../home/index.php">ตำแหน่ง</a>
                                   </li>
-                                  <li class="breadcrumb-item active">โครงการส่วนราชการ</li>
+                                  <li class="breadcrumb-item active">อัตราตำแหน่งในโครงสร้างอัตรา</li>
                               </ol>
                           </div>
                       </div>

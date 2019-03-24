@@ -42,7 +42,7 @@
                             </li>
                             <li><a class="menu-item" href="../organization_types/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โครงสร้าง</a>
                             </li>
-                            <li><a class="menu-item" href="../organization_parts/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ส่วนราชกาล</a>
+                            <li><a class="menu-item" href="../organization_parts/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ส่วนราชการ</a>
                             </li>
                             <li><a class="menu-item" href="../organization_levels/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ฐานะหน่วย</a>
                             </li>
@@ -54,13 +54,13 @@
                             </li>
                             <li><a class="menu-item" href="../Sciences/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">สายวิทยาการ</a>
                             </li>
-                            <li><a class="menu-item" href="../organization_list/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โครงสร้างอัตราส่วน ราชการ</a>
+                            <li><a class="menu-item" href="../organization_list/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โครงสร้างอัตราส่วนราชการ</a>
                             </li>
                             <li><a class="menu-item" href="../division_science/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">สังกัด-สายวิทยาการ</a>
                             </li>
                         </ul>
                     </li>
-                    <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">ตำแแหน่ง</a>
+                    <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">ตำแหน่ง</a>
                         <ul class="menu-content">
                             <li><a class="menu-item" href="../Person_types/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ประเภทกำลังพล</a>
                             </li>
