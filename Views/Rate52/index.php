@@ -16,7 +16,7 @@
       <div class="content-header row">
         <div class="content-header-left col-md-6 col-12 mb-2">
           <div style="width:7px;height:30px;background-color:#1a1d52; float:left; margin-right:10px;"></div>
-          <h3 class="content-header-title">หน่วยงาน</h3>
+          <h3 class="content-header-title">รายงาน อัตรา ทอ.52</h3>
         </div>
       </div>
       <div class="content-body">
@@ -31,8 +31,8 @@
                     <nav aria-label="breadcrumb">
                       <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../home/index.php">ระบบงานโครงสร้่างอัตรากำลังพล</a></li>
-                        <li class="breadcrumb-item"><a href="../home/index.php">โครงสร้าง</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">หน่วยงาน</li>
+                        <li class="breadcrumb-item"><a href="../home/index.php">รายงาน</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">รายงาน อัตรา ทอ.52</li>
                       </ol>
                     </nav>
                     <a href="./create.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
