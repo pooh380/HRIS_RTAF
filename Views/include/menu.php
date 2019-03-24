@@ -22,7 +22,7 @@
                             </li>
                             <li><a class="menu-item" href="../salary_rates/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">อัตรา</a>
                             </li>
-                            <li><a class="menu-item" href="../rank_sort/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ลำดับการจัดเรียงยศ</a>
+                            <li><a class="menu-item" href="../Rank_sort/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ลำดับการจัดเรียงยศ</a>
                             </li>
                             <li><a class="menu-item" href="../ranks/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ยศ</a>
                             </li>
