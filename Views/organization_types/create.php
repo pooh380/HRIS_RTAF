@@ -44,7 +44,7 @@
           <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="./index.php">ระบบงานโครงสร้างอัตรากำลังพล</a></li>
-                  <li class="breadcrumb-item"><a href="./">ตำแหน่ง</a></li>
+                  <li class="breadcrumb-item"><a href="./index.php">โครงสร้าง</a></li>
                   <li class="breadcrumb-item active" aria-current="page">เพิ่มอัตราตำแหน่งในโครงสร้างอัตรา</li>
               </ol>
           </nav>
