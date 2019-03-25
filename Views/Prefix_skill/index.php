@@ -248,8 +248,7 @@
       
   </script>
   <!-- BEGIN VENDOR JS-->
-  <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
-  <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+  <!-- <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script> -->
   <!-- BEGIN VENDOR JS-->
   <!-- BEGIN PAGE VENDOR JS-->
   <script src="../../app-assets/vendors/js/forms/toggle/switchery.min.js" type="text/javascript"></script>
