@@ -119,7 +119,7 @@
                                                   <div class="col-md-6">
                                                       <label class="col-md-6 label-control" for="userinput1">วันที่เริ่มต้น</label>
                                                       <div class="input-group col-md-12">
-                                                          <input type='text' class="form-control pickadate-events" placeholder=" _/_/_ " />
+                                                          <input type='text' class="form-control pickadate-limits" placeholder=" _/_/_ " />
                                                           <div class="input-group-append">
                                                               <span class="input-group-text">
                                                                   <span class="la la-calendar-o"></span>
@@ -130,7 +130,7 @@
                                                   <div class="col-md-6">
                                                       <label class="col-md-6 label-control" for="userinput2">วันที่สิ้นสุด</label>
                                                       <div class="input-group col-md-12">
-                                                          <input type='text' class="form-control pickadate-events" placeholder=" _/_/_ " />
+                                                          <input type='text' class="form-control pickadate-limits" placeholder=" _/_/_ " />
                                                           <div class="input-group-append">
                                                               <span class="input-group-text">
                                                                   <span class="la la-calendar-o"></span>
