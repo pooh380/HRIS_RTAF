@@ -56,8 +56,8 @@
                         <tr>
                           <td><input type="checkbox" class="checkAll" /></td>
                           <td>
-                            <i class="la la-pencil-square-o"></i>
-                            <i class="la la-trash-o"></i>
+                          <a href="./edit.php"><i class="la la-pencil-square-o" style="color:#0f1733;"></i></a>
+                            <a href="./delete.php"><i class="la la-trash-o" style="color:#0f1733;"></i></a>
                           </td>
                           <td>1</td>
                           <td>Edinburgh</td>

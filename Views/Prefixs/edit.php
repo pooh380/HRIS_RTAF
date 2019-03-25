@@ -43,7 +43,6 @@
                       <div class="col-md-12">
                           <div class="card">
                               <div class="card-header">
-                                  <h4 class="form-section" id="horz-layout-colored-controls">สร้างหน่วยงาน</h4>
                                   <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                                   <div class="heading-elements">
                                       <ul class="list-inline mb-0">

@@ -6,7 +6,10 @@
       <span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span>
     </p>
   </footer>
-  <!-- BEGIN VENDOR JS-->
+
+
+  
+  <!-- BEGIN VENDOR JS -->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
   <!-- BEGIN PAGE VENDOR JS-->
