@@ -355,20 +355,7 @@
 
                                                       </div>
 
-                                                      <div class="row mt-1">
-                                                          <div class="form-group">
-                                                              <label>Date Limits</label>
-                                                              <div class="input-group">
-                                                                  <div class="input-group-prepend">
-                                                                      <span class="input-group-text">
-                                                                          <span class="la la-calendar-o"></span>
-                                                                      </span>
-                                                                  </div>
-                                                                  <!-- edit เงื่อนไขวัน Date limits ที่ ../../app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js บรรทัด 40 -->
-                                                                  <input type='text' class="form-control pickadate-limits" placeholder="_/_/_" />
-                                                              </div>
-                                                          </div>
-                                                      </div>
+
                                                   </div>
                                               </form>
                                           </div>
@@ -377,7 +364,6 @@
                               </div>
                           </div>
                           <!-- 1 -->
-                          <!-- 2 -->
                           <div class="card">
                               <div class="card-header" style="background-color:#e1e8fc;">
                                   <h5 class="card-title" style="color:#0f1733;">ส่วนที่ 2 การใช้งาน</h5>
@@ -391,40 +377,175 @@
                               </div>
                               <div class="card-content">
                                   <div class="card-body">
-                                      <div class="col-md-12">
-                                          <div class="col-md-6" style="background-color:tomato;">
-                                              ใช้งาน
-                                              <div class="row mt-1">
-                                                  <div class="form-group">
-                                                      <label>Date Limits</label>
-                                                      <div class="input-group">
-                                                          <div class="input-group-prepend">
-                                                              <span class="input-group-text">
-                                                                  <span class="la la-calendar-o"></span>
-                                                              </span>
+                                      <div class="tab-content px-1 pt-1">
+                                          <div role="tabpanel" class="tab-pane active" id="limit" aria-expanded="true" aria-labelledby="base-limit">
+                                              <div class="row">
+                                                  <div class="col-12 col-xl-6 border-right-blue-grey border-right-lighten-4 pr-2 p-0">
+                                                      <div class="row my-2">
+                                                          <div class="col-4">
+                                                              <h5 class="text-bold-500 mb-0">ใช้งาน</h5>
                                                           </div>
-                                                          <!-- edit เงื่อนไขวัน Date limits ที่ ../../app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js บรรทัด 40 -->
-                                                          <input type='text' class="form-control pickadate-limits" placeholder="_/_/_" />
                                                       </div>
+                                                      <form class="form form-horizontal">
+                                                          <div class="form-body">
+                                                              <div class="form-group row">
+                                                                  <div class="col-md-12">
+                                                                      <label class="col-md-12" for="orgName">คำสั่ง</label>
+                                                                      <div class="col-md-10" style="float:left;">
+                                                                          <select class="select2 form-control block" id="orgName" style="width: 100%;">
+                                                                              <!-- border-color: #8c93ee !important; -->
+                                                                              <!-- <optgroup label="Alaskan/Hawaiian Time Zone"> -->
+                                                                              <option value="">เลือกคำสั่ง</option>
+                                                                              <option value="">คำสั่ง2</option>
+                                                                              <!-- <option value="HI">Hawaii</option> -->
+                                                                              <!-- </optgroup> -->
+                                                                          </select>
+                                                                      </div>
+                                                                      <a href="../Organizations/create.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
+                                                                  </div>
+                                                              </div>
+
+                                                              <div class="form-group row">
+                                                                  <div class="col-md-12">
+                                                                      <label class="col-md-12" for="orgName">เลขที่คำสั่ง</label>
+                                                                      <div class="col-md-12">
+                                                                          <div class="position-relative">
+                                                                              <input type="text" id="code" class="form-control border-primary" placeholder="เลขที่คำสั่ง" name="code">
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+
+                                                              <div class="form-group row">
+                                                                  <div class="col-md-12">
+                                                                      <div class="form-group">
+                                                                          <label class="col-md-12" for="orgName">ลง :</label>
+                                                                          <div class="input-group">
+                                                                              <div class="input-group-prepend">
+                                                                                  <span class="input-group-text">
+                                                                                      <span class="la la-calendar-o"></span>
+                                                                                  </span>
+                                                                              </div>
+                                                                              <!-- edit เงื่อนไขวัน Date limits ที่ ../../app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js บรรทัด 40 -->
+                                                                              <input type='text' class="form-control pickadate-limits" placeholder="_/_/_" />
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+
+                                                              <div class="form-group row">
+                                                                  <div class="col-md-12">
+                                                                      <div class="form-group">
+                                                                          <label class="col-md-12" for="orgName">มีผลตั่งแต่ :</label>
+                                                                          <div class="input-group">
+                                                                              <div class="input-group-prepend">
+                                                                                  <span class="input-group-text">
+                                                                                      <span class="la la-calendar-o"></span>
+                                                                                  </span>
+                                                                              </div>
+                                                                              <!-- edit เงื่อนไขวัน Date limits ที่ ../../app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js บรรทัด 40 -->
+                                                                              <input type='text' class="form-control pickadate-limits" placeholder="_/_/_" />
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+
+                                                              </div>
+
+                                                          </div>
+                                                      </form>
+                                                  </div>
+                                                  
+                          <!-- 2 -->
+                                                  <div class="col-12 col-xl-6 pl-2 p-0">
+                                                      <div class="row my-2">
+                                                          <div class="col-4">
+                                                              <h5 class="text-bold-500 mb-0">ยกเลิก</h5>
+                                                          </div>
+                                                      </div>
+                                                      <form class="form form-horizontal">
+                                                          <div class="form-body">
+                                                              <div class="form-group row">
+                                                                  <div class="col-md-12">
+                                                                      <label class="col-md-12" for="orgName">คำสั่ง</label>
+                                                                      <div class="col-md-10" style="float:left;">
+                                                                          <select class="select2 form-control block" id="orgName" style="width: 100%;">
+                                                                              <!-- border-color: #8c93ee !important; -->
+                                                                              <!-- <optgroup label="Alaskan/Hawaiian Time Zone"> -->
+                                                                              <option value="">เลือกคำสั่ง</option>
+                                                                              <option value="">คำสั่ง2</option>
+                                                                              <!-- <option value="HI">Hawaii</option> -->
+                                                                              <!-- </optgroup> -->
+                                                                          </select>
+                                                                      </div>
+                                                                      <a href="../Organizations/create.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
+                                                                  </div>
+                                                              </div>
+
+                                                              <div class="form-group row">
+                                                                  <div class="col-md-12">
+                                                                      <label class="col-md-12" for="orgName">เลขที่คำสั่ง</label>
+                                                                      <div class="col-md-12">
+                                                                          <div class="position-relative">
+                                                                              <input type="text" id="code" class="form-control border-primary" placeholder="เลขที่คำสั่ง" name="code">
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+
+                                                              <div class="form-group row">
+                                                                  <div class="col-md-12">
+                                                                      <div class="form-group">
+                                                                          <label class="col-md-12" for="orgName">ลง :</label>
+                                                                          <div class="input-group">
+                                                                              <div class="input-group-prepend">
+                                                                                  <span class="input-group-text">
+                                                                                      <span class="la la-calendar-o"></span>
+                                                                                  </span>
+                                                                              </div>
+                                                                              <!-- edit เงื่อนไขวัน Date limits ที่ ../../app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js บรรทัด 40 -->
+                                                                              <input type='text' class="form-control pickadate-limits" placeholder="_/_/_" />
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+
+                                                              <div class="form-group row">
+                                                                  <div class="col-md-12">
+                                                                      <div class="form-group">
+                                                                          <label class="col-md-12" for="orgName">มีผลตั่งแต่ :</label>
+                                                                          <div class="input-group">
+                                                                              <div class="input-group-prepend">
+                                                                                  <span class="input-group-text">
+                                                                                      <span class="la la-calendar-o"></span>
+                                                                                  </span>
+                                                                              </div>
+                                                                              <!-- edit เงื่อนไขวัน Date limits ที่ ../../app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js บรรทัด 40 -->
+                                                                              <input type='text' class="form-control pickadate-limits" placeholder="_/_/_" />
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                          </div>
+                                                      </form>
                                                   </div>
                                               </div>
-                                          </div>
-                                          <div class="col-md-6" style="background-color:yellow;">
-                                              ยกเลิก
+                                              <hr>
+                                              <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+
                                           </div>
                                       </div>
                                   </div>
                               </div>
                           </div>
+                          <div class="form-actions center" align="center">
+                              <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                              <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text">บันทึก</button>
+                          </div>
                       </div>
-                      <!-- 2 -->
-
-
-
                   </div>
               </div>
           </div>
-      </div>
+
       </div>
   </section>
 

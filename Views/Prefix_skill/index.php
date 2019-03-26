@@ -23,6 +23,11 @@
   <!-- END Page Level CSS-->
   
 
+  <style>
+    /* ol > li > a {color:#222233;} */
+    .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
+    .toggle.ios .toggle-handle { border-radius: 20rem; }
+  </style>
   <!-- END Custom CSS-->
   <?php include '../include/menu.php'; ?>
 
