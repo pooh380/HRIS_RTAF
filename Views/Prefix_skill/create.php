@@ -338,24 +338,6 @@
                                                               </div>
                                                           </div>
                                                       </div>
-
-                                                      <br>
-                                                      <div class="row">
-                                                          <div class="col-md-12">
-                                                              <label class="col-md-4 label-control" for="userinput2">ชื่อหน่วยงาน</label>
-                                                              <div class="col-md-12">
-                                                                  <div class="position-relative has-icon-left">
-                                                                      <input type="text" id="timesheetinput1" class="form-control border-primary" placeholder="ชื่อหน่วยงาน" name="employeename">
-                                                                      <div class="form-control-position">
-                                                                          <i class="ft-user"></i>
-                                                                      </div>
-                                                                  </div>
-                                                              </div>
-                                                          </div>
-
-                                                      </div>
-
-
                                                   </div>
                                               </form>
                                           </div>
@@ -380,7 +362,7 @@
                                       <div class="tab-content px-1 pt-1">
                                           <div role="tabpanel" class="tab-pane active" id="limit" aria-expanded="true" aria-labelledby="base-limit">
                                               <div class="row">
-                                                  <div class="col-12 col-xl-6 border-right-blue-grey border-right-lighten-4 pr-2 p-0">
+                                                  <div class="col-12 col-xl-6 border-right-blue-grey border-right-lighten-4 pr-2  pl-2 p-0">
                                                       <div class="row my-2">
                                                           <div class="col-4">
                                                               <h5 class="text-bold-500 mb-0">ใช้งาน</h5>
@@ -420,7 +402,7 @@
                                                                   <div class="col-md-12">
                                                                       <div class="form-group">
                                                                           <label class="col-md-12" for="orgName">ลง :</label>
-                                                                          <div class="input-group">
+                                                                          <div class="input-group col-md-12" >
                                                                               <div class="input-group-prepend">
                                                                                   <span class="input-group-text">
                                                                                       <span class="la la-calendar-o"></span>
@@ -437,7 +419,7 @@
                                                                   <div class="col-md-12">
                                                                       <div class="form-group">
                                                                           <label class="col-md-12" for="orgName">มีผลตั่งแต่ :</label>
-                                                                          <div class="input-group">
+                                                                          <div class="input-group col-md-12">
                                                                               <div class="input-group-prepend">
                                                                                   <span class="input-group-text">
                                                                                       <span class="la la-calendar-o"></span>
@@ -454,8 +436,8 @@
                                                           </div>
                                                       </form>
                                                   </div>
-                                                  
-                          <!-- 2 -->
+
+                                                  <!-- 2 -->
                                                   <div class="col-12 col-xl-6 pl-2 p-0">
                                                       <div class="row my-2">
                                                           <div class="col-4">
@@ -496,7 +478,7 @@
                                                                   <div class="col-md-12">
                                                                       <div class="form-group">
                                                                           <label class="col-md-12" for="orgName">ลง :</label>
-                                                                          <div class="input-group">
+                                                                          <div class="input-group col-md-12">
                                                                               <div class="input-group-prepend">
                                                                                   <span class="input-group-text">
                                                                                       <span class="la la-calendar-o"></span>
@@ -513,7 +495,7 @@
                                                                   <div class="col-md-12">
                                                                       <div class="form-group">
                                                                           <label class="col-md-12" for="orgName">มีผลตั่งแต่ :</label>
-                                                                          <div class="input-group">
+                                                                          <div class="input-group col-md-12">
                                                                               <div class="input-group-prepend">
                                                                                   <span class="input-group-text">
                                                                                       <span class="la la-calendar-o"></span>
