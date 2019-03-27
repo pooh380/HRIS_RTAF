@@ -2,7 +2,7 @@
   <?php include '../include/header.php'; ?>
 
   <!-- BEGIN VENDOR CSS-->
-<!--   
+  <!--   
   <link rel="stylesheet" type="text/css" href="../../app-assets/css/vendors.css"> -->
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/toggle/switchery.min.css">
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/icheck/icheck.css">
@@ -21,12 +21,19 @@
   <link rel="stylesheet" type="text/css" href="../../app-assets/css/plugins/forms/checkboxes-radios.css">
   <!-- <link rel="stylesheet" type="text/css" href="../../assets/css/style.css"> -->
   <!-- END Page Level CSS-->
-  
+
 
   <style>
-    /* ol > li > a {color:#222233;} */
-    .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
-    .toggle.ios .toggle-handle { border-radius: 20rem; }
+      /* ol > li > a {color:#222233;} */
+      .toggle.ios,
+      .toggle-on.ios,
+      .toggle-off.ios {
+          border-radius: 20rem;
+      }
+
+      .toggle.ios .toggle-handle {
+          border-radius: 20rem;
+      }
   </style>
   <!-- END Custom CSS-->
   <?php include '../include/menu.php'; ?>
@@ -53,7 +60,7 @@
           <div class="content-wrapper">
               <div class="content-header row">
                   <div class="content-header-left col-md-6 col-12 mb-2">
-                  <div style="width:7px;height:30px;background-color:#1a1d52; float:left; margin-right:10px;"></div>
+                      <div style="width:7px;height:30px;background-color:#1a1d52; float:left; margin-right:10px;"></div>
                       <h3 class="content-header-title">อัตราตำแหน่งในโครงสร้างอัตรา</h3>
                       <div class="row breadcrumbs-top">
                           <div class="breadcrumb-wrapper col-12">
@@ -76,7 +83,7 @@
                               <div class="sidebar-content card d-none d-lg-block">
                                   <div class="card-header" style="background-color:#0f1733; color:white; font-weight: bold;font-size: 18px">
                                       โครงการส่วนราชการ
-                                      <a style="float:right;"><i class="la la-sitemap"></i> </a>
+                                      <i style="float:right;"><i class="la la-sitemap"></i> </i>
                                   </div>
                                   <div class="card-body" align="center">
                                       <a href="#" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white" ;>
@@ -252,10 +259,6 @@
               e.preventDefault();
           });
       });
-
-
-
-      
   </script>
   <!-- BEGIN PAGE VENDOR JS-->
   <script src="../../app-assets/vendors/js/forms/toggle/switchery.min.js" type="text/javascript"></script>
@@ -272,19 +275,18 @@
   <script src="../../app-assets/js/scripts/forms/checkbox-radio.js" type="text/javascript"></script>
   <script src="../../app-assets/js/scripts/dropdowns/dropdowns.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
-  
 
-<!-- ///////////////////////////////footer/////////////////////////////////////////////-->
-<footer class="footer footer-static footer-light navbar-border navbar-shadow">
-    <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
-      <span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2018 <a class="text-bold-800 grey darken-2" href="https://themeforest.net/user/pixinvent/portfolio?ref=pixinvent"
-        target="_blank">PIXINVENT </a>, All rights reserved. </span>
-      <span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span>
-    </p>
+
+  <!-- ///////////////////////////////footer/////////////////////////////////////////////-->
+  <footer class="footer footer-static footer-light navbar-border navbar-shadow">
+      <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
+          <span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2018 <a class="text-bold-800 grey darken-2" href="https://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" target="_blank">PIXINVENT </a>, All rights reserved. </span>
+          <span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span>
+      </p>
   </footer>
 
 
-  
+
   <!-- BEGIN PAGE VENDOR JS-->
   <script src="../../app-assets/vendors/js/tables/datatable/datatables.min.js" type="text/javascript"></script>
   <!-- END PAGE VENDOR JS-->
@@ -294,11 +296,11 @@
   <script src="../../app-assets/js/scripts/customizer.js" type="text/javascript"></script>
   <!-- END MODERN JS-->
   <!-- BEGIN PAGE LEVEL JS-->
-  <script src="../../app-assets/js/scripts/tables/datatables/datatable-styling.js"
-  type="text/javascript"></script>
+  <script src="../../app-assets/js/scripts/tables/datatables/datatable-styling.js" type="text/javascript"></script>
 
   <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
-  
+
   <!-- END PAGE LEVEL JS-->
-</body>
-</html>
+  </body>
+
+  </html> 
