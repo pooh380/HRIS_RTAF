@@ -18,3 +18,5 @@ SELECT id,prefix_code,prefix_name,prefix_abbr_name,is_active FROM prefix;
 SELECT id,prefix_code,prefix_name,prefix_abbr_name,is_active FROM prefix
 
 SELECT id,prefix_name,prefix_abbr_name FROM prefix
+
+SELECT prefix_name,prefix_abbr_name FROM prefix WHERE 1=1 AND (prefix_name Like 'นาย' OR prefix_abbr_name Like 'นาย' )
