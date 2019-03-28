@@ -24,20 +24,19 @@ $totalData=sqlsrv_num_rows($query);
 $totalFilter=$totalData;
 
 //Search
-$sql ="SELECT id,prefix_name,prefix_abbr_name,is_active FROM prefix WHERE 1=1";
+$sql =" SELECT id,prefix_name,prefix_abbr_name,is_active FROM prefix WHERE 1=1 ";
 // if(!empty($request['search']['value'])){
-    $sql.=" AND (prefix_name Like '".$request['search']['value']."%' ";
-    $sql.=" OR prefix_abbr_name Like '".$request['search']['value']."%' )";
+    $sql.=" AND (prefix_name Like 'น%' OR prefix_abbr_name Like 'น%' )";
 // }
 
 echo $sql;
-$query=sqlsrv_query($conn,$sql);
+$query=sqlsrv_query($conn,$sql, $params, $options);
 // if ($query) {
 //     echo "query";
 // }
 $totalData=sqlsrv_num_rows($query);
-// echo "<br>";
-// echo $totalData;
+echo "<br>";
+echo $totalData;
 
 //Order
 // $sql.=" ORDER BY ".$col[$request['order'][0]['column']]."   ".$request['order'][0]['dir']."  LIMIT ".
