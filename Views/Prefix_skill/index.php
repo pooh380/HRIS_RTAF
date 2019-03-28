@@ -86,20 +86,20 @@
                                       <i style="float:right;"><i class="la la-sitemap"></i> </i>
                                   </div>
                                   <div class="card-body" align="center">
-                                      <a href="#" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white" ;>
+                                      <a href="#" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white;margin-top:3px;" ;>
                                           <span class="la la-plus-circle" style="color:white; font-weight: bold;font-size: 13px;margin-top:3px;"> เพิ่ม</span>
                                       </a>
-                                      <a href="#" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white" ;>
+                                      <a href="#" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white;margin-top:3px;" ;>
                                           <span class="ft-trash-2" style="color:white; font-weight: bold;font-size: 13px;margin-top:3px;"> ลบ</span>
                                       </a>
-                                      <a href="#" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white" ;>
+                                      <a href="#" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white;margin-top:3px;" ;>
                                           <span class="ft-copy" style="color:white; font-weight: bold;font-size: 13px;margin-top:3px;"> คัดลอก</span>
                                       </a>
-                                      <a href="#" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white" ;>
-                                          <span class="la la-gavel" style="color:white; font-weight: bold;font-size: 13px;margin-top:3px;"> คำสั่ง</span>
+                                      <a href="#" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white;margin-top:3px;" ;>
+                                          <span class="la la-gavel" style="color:white; font-weight: bold;font-size: 13px;"> คำสั่ง</span>
                                       </a>
-                                      <a href="#" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white" ;>
-                                          <span class="la la-print" style="color:white; font-weight: bold;font-size: 13px;margin-top:3px;">พิมพ์</span>
+                                      <a href="#" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white;margin-top:3px;" ;>
+                                          <span class="la la-print" style="color:white; font-weight: bold;font-size: 13px;">พิมพ์</span>
                                       </a>
 
 
