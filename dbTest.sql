@@ -11,4 +11,10 @@ SELECT table_catalog [database], table_schema [schema], table_name name, table_t
 FROM INFORMATION_SCHEMA.TABLES
 GO
 
-SELECT army_name From army
+SELECT * From prefix
+
+SELECT id,prefix_code,prefix_name,prefix_abbr_name,is_active FROM prefix;
+
+SELECT id,prefix_code,prefix_name,prefix_abbr_name,is_active FROM prefix
+
+SELECT id,prefix_name,prefix_abbr_name FROM prefix

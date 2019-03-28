@@ -41,19 +41,20 @@
                     <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                       <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
                     </a>
-                    <table class="table table-striped table-borderless table-hover bootstrap-3 ">
+                    <table id="prefixsTable" class="table table-striped table-borderless table-hover bootstrap-3">
                       <thead>
                         <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
-                          <th><input type="checkbox" class="checkAll" onclick="toggle(this);" /></th>
-                          <th></th>
+                          <!-- <th><input type="checkbox" class="checkAll" onclick="toggle(this);" /></th> -->
+                          <!-- <th></th> -->
                           <th>ลำดับที่</th>
-                          <th>รหัส</th>
+                          <!-- <th>รหัส</th> -->
                           <th>ชื่อ</th>
+                          <th>ชื่อย่อ</th>
                           <th >ใช้งาน</th>
                         </tr>
                       </thead>
-                      <tbody align="center">
-                        <tr>
+                      <!-- <tbody align="center"> -->
+                        <!-- <tr>
                           <td><input type="checkbox" class="checkAll" /></td>
                           <td>
                           <a href="./edit.php"><i class="la la-pencil-square-o" style="color:#0f1733;"></i></a>
@@ -78,8 +79,8 @@
                           <td align="center">
                             <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
                           </td>
-                        </tr>
-                      </tbody>
+                        </tr> -->
+                      <!-- </tbody> -->
                       <!-- <tfoot>
                         <tr>
                           <th>Name</th>
@@ -104,11 +105,14 @@
   </section>
 
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
+
+  <script src="../../Controllers/prefixsController.js"></script>
   
   <script type="text/javascript">
     $(document).ready(function() {
-            console.log("ready");
+            // console.log("ready");
             change_autorefreshdiv();
+            getPrefixs();
     });
 
     function change_autorefreshdiv(){
@@ -123,7 +127,10 @@
     }
   </script>
 
-    
+
 
   <!-- footer -->
-  <?php include '../include/footer.php'; ?>
+  <?php
+    include "../include/footer.php";
+  ?>
+  

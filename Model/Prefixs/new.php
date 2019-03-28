@@ -24,14 +24,16 @@ $totalData=sqlsrv_num_rows($query);
 $totalFilter=$totalData;
 
 //Search
-$sql ="SELECT * FROM prefix WHERE 1=1";
-if(!empty($request['search']['value'])){
-    $sql.=" AND (prefix_name Like '".$request['search']['value']."%' ";
-    $sql.=" OR prefix_abbr_namege Like '".$request['search']['value']."%' )";
-}
-$query=sqlsrv_query($conn,$sql, $params, $options);
-
-$totalData=sqlsrv_num_rows($query);
+// $sql ="SELECT * FROM prefix WHERE 1=1";
+// if(!empty($request['search']['value'])){
+//     $sql.=" AND (prefix_name Like '".$request['search']['value']."%' ";
+//     $sql.=" OR aprefix_abbr_namege Like '".$request['search']['value']."%' )";
+// }
+// $query=sqlsrv_query($conn,$sql, $params, $options);
+// if ($query) {
+//     echo "query";
+// }
+// $totalData=sqlsrv_num_rows($query);
 // echo "<br>";
 // echo $totalData;
 
