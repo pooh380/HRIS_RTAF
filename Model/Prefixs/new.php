@@ -6,9 +6,10 @@ $request=$_REQUEST;
 $col =array(
     0   =>  'id',
     1   =>  'prefix_name',
-    2   =>  'prefix_abbr_name',
+    2   =>  'prefix_abbrS_name',
     3   =>  'is_active'
-);  //create column like table in database
+);  
+//create column like table in database
 // print_r($col);
 // echo "<br>";
 $params = array();
@@ -24,19 +25,22 @@ $totalData=sqlsrv_num_rows($query);
 $totalFilter=$totalData;
 
 //Search
-$sql =" SELECT id,prefix_name,prefix_abbr_name,is_active FROM prefix WHERE 1=1 ";
+// $sql ="SELECT * FROM prefix WHERE 1=1";
 // if(!empty($request['search']['value'])){
+<<<<<<< HEAD
     $sql.=" AND (prefix_name Like 'm%' OR prefix_abbr_name Like 'm%' )";
+=======
+//     $sql.=" AND (prefix_name Like '".$request['search']['value']."%' ";
+//     $sql.=" OR aprefix_abbr_namege Like '".$request['search']['value']."%' )";
+>>>>>>> 296d31e0b17467cb15295edbe441d01b265636da
 // }
-
-echo $sql;
-$query=sqlsrv_query($conn,$sql, $params, $options);
+// $query=sqlsrv_query($conn,$sql, $params, $options);
 // if ($query) {
 //     echo "query";
 // }
-$totalData=sqlsrv_num_rows($query);
-echo "<br>";
-echo $totalData;
+// $totalData=sqlsrv_num_rows($query);
+// echo "<br>";
+// echo $totalData;
 
 //Order
 // $sql.=" ORDER BY ".$col[$request['order'][0]['column']]."   ".$request['order'][0]['dir']."  LIMIT ".
@@ -57,9 +61,9 @@ while($row=sqlsrv_fetch_array($query)){
     $data[]=$subdata;
 }
 // echo "<br>";
-echo '<pre>';
-print_r($data);
-echo '<pre>';
+// echo '<pre>';
+// print_r($data);
+// echo '<pre>';
 
 $json_data=array(
     "draw"              =>  intval($request['draw']),
@@ -68,6 +72,6 @@ $json_data=array(
     "data"              =>  $data
 );
 
-// echo json_encode($json_data);
+echo json_encode($json_data);
 
 ?>
