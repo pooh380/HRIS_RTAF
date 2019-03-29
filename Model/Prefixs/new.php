@@ -27,8 +27,12 @@ $totalFilter=$totalData;
 //Search
 // $sql ="SELECT * FROM prefix WHERE 1=1";
 // if(!empty($request['search']['value'])){
+<<<<<<< HEAD
+    $sql.=" AND (prefix_name Like 'm%' OR prefix_abbr_name Like 'm%' )";
+=======
 //     $sql.=" AND (prefix_name Like '".$request['search']['value']."%' ";
 //     $sql.=" OR aprefix_abbr_namege Like '".$request['search']['value']."%' )";
+>>>>>>> 296d31e0b17467cb15295edbe441d01b265636da
 // }
 // $query=sqlsrv_query($conn,$sql, $params, $options);
 // if ($query) {

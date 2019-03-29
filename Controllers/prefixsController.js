@@ -3,7 +3,7 @@ function getPrefixs() {
         "processing": true,
         "serverSide": true,
         "ajax": {
-            url: "../../Model/Prefixs/new.php", // json datasource
+            url: "../../Model/Prefixs/prefixModel.php", // json datasource
             dataType: "json",
             type: "post" // method  , by default get
                 // error: function() { // error handling
