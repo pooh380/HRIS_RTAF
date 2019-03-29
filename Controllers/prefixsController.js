@@ -4,6 +4,9 @@ function getPrefixs() {
         "serverSide": true,
         "bPaginate": true,
         "pageLength": 10,
+        order: [
+            [0, "desc"]
+        ],
         "ajax": {
             url: "../../Model/Prefixs/new.php", // json datasource
             dataType: "json",
