@@ -6,10 +6,9 @@ $request=$_REQUEST;
 $col =array(
     0   =>  'id',
     1   =>  'prefix_name',
-    2   =>  'prefix_abbrS_name',
+    2   =>  'prefix_abbr_name',
     3   =>  'is_active'
-);  
-//create column like table in database
+);  //create column like table in database
 // print_r($col);
 // echo "<br>";
 $params = array();
@@ -25,20 +24,16 @@ $totalData=sqlsrv_num_rows($query);
 $totalFilter=$totalData;
 
 //Search
-// $sql ="SELECT * FROM prefix WHERE 1=1";
-// if(!empty($request['search']['value'])){
-<<<<<<< HEAD
-    $sql.=" AND (prefix_name Like 'm%' OR prefix_abbr_name Like 'm%' )";
-=======
-//     $sql.=" AND (prefix_name Like '".$request['search']['value']."%' ";
-//     $sql.=" OR aprefix_abbr_namege Like '".$request['search']['value']."%' )";
->>>>>>> 296d31e0b17467cb15295edbe441d01b265636da
-// }
-// $query=sqlsrv_query($conn,$sql, $params, $options);
+if(!empty($request['search']['value'])){
+    $sql.= " WHERE prefix_name LIKE '".$request['search']['value']."%' ";
+}
+
+// echo $sql;
+$query=sqlsrv_query($conn,$sql, $params, $options);
 // if ($query) {
 //     echo "query";
 // }
-// $totalData=sqlsrv_num_rows($query);
+$totalData=sqlsrv_num_rows($query);
 // echo "<br>";
 // echo $totalData;
 
@@ -46,7 +41,7 @@ $totalFilter=$totalData;
 // $sql.=" ORDER BY ".$col[$request['order'][0]['column']]."   ".$request['order'][0]['dir']."  LIMIT ".
 //     $request['start']."  ,".$request['length']."  ";
 
-// $query=mysqli_query($con,$sql);
+// $query=mysqli_query($con,$sql,$params,$options);
 
 $data=array();
 
