@@ -4,6 +4,51 @@
             <!-- ระบบงานโครงสร้างอัตรากำลังพล --->
             <li class=" nav-item"><a href="index.html"><i class="la la-sitemap"></i><span class="menu-title" data-i18n="nav.dash.main">ระบบงานโครงสร้างอัตรากำลังพล</span></a>
                 <ul class="menu-content">
+                    <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">โครงสร้าง</a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">โครงสร้างอัตรากำลังพล</a>
+                                <ul class="menu-content">
+                                    <li><a class="menu-item" href="../organization_category/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ประเภทโครงสร้าง</a>
+                                    </li>
+                                    <li><a class="menu-item" href="../organization_types/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โครงสร้าง</a>
+                                    </li>
+                                    <li><a class="menu-item" href="../organization_parts/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ส่วนราชการ</a>
+                                    </li>
+                                    <li><a class="menu-item" href="../organization_levels/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ฐานะหน่วย</a>
+                                    </li>
+                                    <li><a class="menu-item" href="../organizations/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">สังกัด</a>
+                                    </li>
+                                    <li><a class="menu-item" href="../organizations_name/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ชื่อหน่วยงาน</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="menu-item" href="../organization_list/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โครงสร้างองค์กร</a>
+                            </li>
+                            <li><a class="menu-item" href="../organization_list/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โปรแกรมจัดการโครงสร้าง</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">ตำแหน่ง</a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" href="../positions/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ชื่อตำแหน่ง</a>
+                            </li>
+                            <li><a class="menu-item" href="../prefix_skill/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">บันทึกกรอบอัตราตำแหน่ง</a>
+
+
+                        </ul>
+                    </li>
+                    <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">รายงาน</a>
+                        <ul class="menu-content">
+                            <li><a class="menu-item" href="../Personnel_rate/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงานสรุปยอดอัตรากำลังพล</a>
+                            </li>
+                            <li><a class="menu-item" href="../Rate52/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงาน อัตรา ทอ.52</a>
+                            </li>
+                            <li><a class="menu-item" href="../Account_report/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงานบัญชีชื่อตำแหน่ง</a>
+                            </li>
+                            <li><a class="menu-item" href="../Account_report_newtoold_position/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงานบัญชีชื่อตำแหน่งในกรณีที่มีตำแหน่งใหม่ทดแทนตำแหน่งเก่า</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">ข้อมูลทั่วไป</a>
                         <ul class="menu-content">
                             <li><a class="menu-item" href="../Prefixs/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">คำนำหน้า</a>
@@ -38,44 +83,37 @@
                             </li>
                             <li><a class="menu-item" href="../Sciences/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">สายวิทยาการ</a>
                             </li>
-                            
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
                             <li><a class="menu-item" href="../division_science/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">สังกัด-สายวิทยาการ</a>
                             </li>
                         </ul>
                     </li>
                     <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">โครงสร้าง</a>
                         <ul class="menu-content">
-                            <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">โครงสร้างอัตรากำลังพล</a>
-                                <ul class="menu-content">
-                                    <li><a class="menu-item" href="../organization_category/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ประเภทโครงสร้าง</a>
-                                    </li>
-                                    <li><a class="menu-item" href="../organization_types/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โครงสร้าง</a>
-                                    </li>
-                                    <li><a class="menu-item" href="../organization_parts/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ส่วนราชการ</a>
-                                    </li>
-                                    <li><a class="menu-item" href="../organization_levels/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ฐานะหน่วย</a>
-                                    </li>
-                                    <li><a class="menu-item" href="../organizations/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">สังกัด</a>
-                                    </li>
-                                    <li><a class="menu-item" href="../organizations_name/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ชื่อหน่วยงาน</a>
-                                    </li>
-                                </ul>
+                            <li><a class="menu-item" href="../organization_category/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ประเภทโครงสร้าง</a>
                             </li>
-                            <li><a class="menu-item" href="../organization_list/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โครงสร้างองค์กร</a>
+                            <li><a class="menu-item" href="../organization_types/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โครงสร้าง</a>
+                            </li>
+                            <li><a class="menu-item" href="../organization_parts/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ส่วนราชการ</a>
+                            </li>
+                            <li><a class="menu-item" href="../organization_levels/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ฐานะหน่วย</a>
+                            </li>
+                            <li><a class="menu-item" href="../organizations/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ชื่อหน่วยงาน</a>
                             </li>
                             <li><a class="menu-item" href="../organization_list/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โปรแกรมจัดการโครงสร้าง</a>
                             </li>
-                           
-                        </ul>
-                    </li>
-                    <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">ตำแหน่ง</a>
-                        <ul class="menu-content">
-
+                            <li><a class="menu-item" href="../organization_list/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โครงสร้างองค์กร</a>
+=======
+>>>>>>> 990361616ad005be3506130dcbaf6b36a47128bc
+                            
+>>>>>>> dbb9d549ff5f11b5ab15e443792791aabce9cf72
+                            <li><a class="menu-item" href="../division_science/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">สังกัด-สายวิทยาการ</a>
+                            </li>
                             <li><a class="menu-item" href="../Person_types/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ประเภทกำลังพล</a>
-                            </li>
-                            <li><a class="menu-item" href="../positions/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ชื่อตำแหน่ง</a>
-                            </li>
-                            <li><a class="menu-item" href="../prefix_skill/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">อัตราตำแหน่งในโครงสร้างอัตรา</a>
                             </li>
                             <li><a class="menu-item" href="../Suffix_skill/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">อักษรนำเลข ลชทอ.</a>
                             </li>
@@ -90,18 +128,6 @@
                             <li><a class="menu-item" href="../position_level/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ระดับตำแหน่งของลูกจ้างประจำ</a>
                             </li>
                             <li><a class="menu-item" href="../position_account_group/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ตำแหน่งของลูกจ้างประจำ</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">รายงาน</a>
-                        <ul class="menu-content">
-                            <li><a class="menu-item" href="../Personnel_rate/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงานสรุปยอดอัตรากำลังพล</a>
-                            </li>
-                            <li><a class="menu-item" href="../Rate52/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงาน อัตรา ทอ.52</a>
-                            </li>
-                            <li><a class="menu-item" href="../Account_report/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงานบัญชีชื่อตำแหน่ง</a>
-                            </li>
-                            <li><a class="menu-item" href="../Account_report_newtoold_position/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงานบัญชีชื่อตำแหน่งในกรณีที่มีตำแหน่งใหม่ทดแทนตำแหน่งเก่า</a>
                             </li>
                         </ul>
                     </li>
