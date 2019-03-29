@@ -6,9 +6,10 @@ $request=$_REQUEST;
 $col =array(
     0   =>  'id',
     1   =>  'prefix_name',
-    2   =>  'prefix_abbr_name',
+    2   =>  'prefix_abbrS_name',
     3   =>  'is_active'
-);  //create column like table in database
+);  
+//create column like table in database
 // print_r($col);
 // echo "<br>";
 $params = array();
@@ -36,10 +37,6 @@ $totalFilter=$totalData;
 // $totalData=sqlsrv_num_rows($query);
 // echo "<br>";
 // echo $totalData;
-$sql = "SELECT prefix_name FROM prefix WHERE prefix_name LIKE 'น%'ORDER BY prefix_name;";
-$query=sqlsrv_query($conn,$sql, $params, $options);
-echo $sql;
-$totalData=sqlsrv_num_rows($query);
 
 //Order
 // $sql.=" ORDER BY ".$col[$request['order'][0]['column']]."   ".$request['order'][0]['dir']."  LIMIT ".
@@ -71,6 +68,6 @@ $json_data=array(
     "data"              =>  $data
 );
 
-// echo json_encode($json_data);
+echo json_encode($json_data);
 
 ?>
