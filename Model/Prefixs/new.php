@@ -26,7 +26,7 @@ $totalFilter=$totalData;
 //Search
 $sql =" SELECT id,prefix_name,prefix_abbr_name,is_active FROM prefix WHERE 1=1 ";
 // if(!empty($request['search']['value'])){
-    $sql.=" AND (prefix_name Like 'น%' OR prefix_abbr_name Like 'น%' )";
+    $sql.=" AND (prefix_name Like 'm%' OR prefix_abbr_name Like 'm%' )";
 // }
 
 echo $sql;

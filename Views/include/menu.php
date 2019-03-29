@@ -34,6 +34,12 @@
                             </li>
                             <li><a class="menu-item" href="../pass_status/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">สาเหตุการปลด/สูญเสีย</a>
                             </li>
+                            <li><a class="menu-item" href="../Unit_leader/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">หัวหน้าสายวิทยาการ</a>
+                            </li>
+                            <li><a class="menu-item" href="../Sciences/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">สายวิทยาการ</a>
+                            </li>
+                            <li><a class="menu-item" href="../division_science/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">สังกัด-สายวิทยาการ</a>
+                            </li>
                         </ul>
                     </li>
                     <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">โครงสร้าง</a>
@@ -46,17 +52,11 @@
                             </li>
                             <li><a class="menu-item" href="../organization_levels/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ฐานะหน่วย</a>
                             </li>
-                            <li><a class="menu-item" href="../organizations/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">สังกัด</a>
+                            <li><a class="menu-item" href="../organizations/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ชื่อหน่วยงาน</a>
                             </li>
-                            <li><a class="menu-item" href="../divisions/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">หน่วยงาน</a>
+                            <li><a class="menu-item" href="../organization_list/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โปรแกรมจัดการโครงสร้าง</a>
                             </li>
-                            <li><a class="menu-item" href="../Unit_leader/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">หัวหน้าสายวิทยาการ</a>
-                            </li>
-                            <li><a class="menu-item" href="../Sciences/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">สายวิทยาการ</a>
-                            </li>
-                            <li><a class="menu-item" href="../organization_list/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โครงสร้างอัตราส่วนราชการ</a>
-                            </li>
-                            <li><a class="menu-item" href="../division_science/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">สังกัด-สายวิทยาการ</a>
+                            <li><a class="menu-item" href="../organization_list/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โครงสร้างองค์กร</a>
                             </li>
                         </ul>
                     </li>
