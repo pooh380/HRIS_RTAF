@@ -66,4 +66,5 @@ $json_data=array(
     "data"              =>  $data
 );
 echo json_encode($json_data);
+
 ?>
