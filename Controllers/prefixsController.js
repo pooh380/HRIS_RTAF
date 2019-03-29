@@ -2,8 +2,10 @@ function getPrefixs() {
     $('#prefixsTable').DataTable({
         "processing": true,
         "serverSide": true,
+        "bPaginate": true,
+        "pageLength": 10,
         "ajax": {
-            url: "../../Model/Prefixs/prefixModel.php", // json datasource
+            url: "../../Model/Prefixs/new.php", // json datasource
             dataType: "json",
             type: "post" // method  , by default get
                 // error: function() { // error handling
