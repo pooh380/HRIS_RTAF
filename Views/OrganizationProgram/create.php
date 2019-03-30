@@ -56,15 +56,15 @@
               <div class="content-header row">
                   <div class="content-header-left col-md-6 col-12 mb-2">
                       <div style="width:7px;height:30px;background-color:#1a1d52; float:left; margin-right:10px;"></div>
-                      <h3 class="content-header-title">เพิ่มอัตราตำแหน่งในโครงสร้างอัตรา</h3>
+                      <h3 class="content-header-title">โปรแกรมจัดการโครงสร้าง</h3>
                       <div class="row breadcrumbs-top">
                           <div class="breadcrumb-wrapper col-12">
                               <ol class="breadcrumb">
                                   <li class="breadcrumb-item"><a href="../home/index.php">ระบบงานโครงสร้างอัตรากำลังพล</a>
                                   </li>
-                                  <li class="breadcrumb-item"><a href="../home/index.php">ตำแหน่ง</a>
+                                  <li class="breadcrumb-item"><a href="./index.php">เลือกโครงสร้าง</a>
                                   </li>
-                                  <li class="breadcrumb-item active">เพิ่มอัตราตำแหน่งในโครงสร้างอัตรา</li>
+                                  <li class="breadcrumb-item active">โปรแกรมจัดการโครงสร้าง</li>
                               </ol>
                           </div>
                       </div>
