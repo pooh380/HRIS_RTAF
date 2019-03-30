@@ -8,7 +8,7 @@ function getPrefixs() {
             [0, "desc"]
         ],
         "ajax": {
-            url: "../../Model/Prefixs/new.php", // json datasource
+            url: "../../Model/Prefixs/GetPrefixs.php", // json datasource
             dataType: "json",
             type: "post" // method  , by default get
                 // error: function() { // error handling
