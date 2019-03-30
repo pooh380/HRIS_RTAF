@@ -1,5 +1,5 @@
-function getOrganization() {
-    $('#Organization').DataTable({
+function getOrganizationLevels() {
+    $('#OrganizationLevels').DataTable({
         "processing": true,
         "serverSide": true,
         "bPaginate": true,
@@ -8,7 +8,7 @@ function getOrganization() {
             [0, "desc"]
         ],
         "ajax": {
-            url: "../../Model/Organization/GetOrganization.php", // json datasource
+            url: "../../Model/OrganizationLevels/GetOrganizationLevels.php", // json datasource
             dataType: "json",
             type: "post"
         }

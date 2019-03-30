@@ -73,7 +73,7 @@
   <script type="text/javascript">
     $(document).ready(function() {
             change_autorefreshdiv();
-            getPrefixs();
+            getOrganizationCategory();
     });
 
     function change_autorefreshdiv(){
