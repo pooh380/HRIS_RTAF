@@ -30,7 +30,7 @@
                     </li>
                     <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">ตำแหน่ง</a>
                         <ul class="menu-content">
-                            <li><a class="menu-item" href="../positions/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ชื่อตำแหน่ง</a>
+                            <li><a class="menu-item" href="../position/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ชื่อตำแหน่ง</a>
                             </li>
                             <li><a class="menu-item" href="../prefix_skill/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">บันทึกกรอบอัตราตำแหน่ง</a>
 
