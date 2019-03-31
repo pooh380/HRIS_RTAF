@@ -29,10 +29,10 @@ $totalFilter=$totalData;
     // $sql.=" OR prefix_abbr_name Like 'm%' ";
 // }
 
-// $sql.= " WHERE prefix_name LIKE '".$request['search']['value']."%' ";
+$sql.= " WHERE prefix_name LIKE '%m%' ";
 
 
-// echo $sql;
+echo $sql;
 $query=sqlsrv_query($conn,$sql,$params,$options);
 $totalData=sqlsrv_num_rows($query);
 //Order
