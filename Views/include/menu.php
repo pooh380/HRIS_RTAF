@@ -12,7 +12,7 @@
                                     </li>
                                     <li><a class="menu-item" href="../organization_types/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โครงสร้าง</a>
                                     </li>
-                                    <li><a class="menu-item" href="../organization_parts/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ส่วนราชการ</a>
+                                    <li><a class="menu-item" href="../organizationparts/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ส่วนราชการ</a>
                                     </li>
                                     <li><a class="menu-item" href="../organization_levels/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ฐานะหน่วย</a>
                                     </li>

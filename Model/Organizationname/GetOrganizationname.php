@@ -13,25 +13,24 @@ $col =array(
     6   =>  'modified_by',
     7   =>  'modified_date'
 ); 
+$sql ="SELECT id,organization_category_code, organization_category_name,is_active, created_by, created_date, modified_by, modified_date FROM organization_category ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
+$query = sqlsrv_query($conn, $sql, $params, $options);
+$totalData = sqlsrv_num_rows($query);
+// echo $totalData;
+$totalFilter = $totalData;
 
-$sql ="SELECT id,organization_category_code, organization_category_name,is_active, created_by, created_date, modified_by, modified_date
-FROM organization_category;";
 
-$query=sqlsrv_query($conn,$sql, $params, $options);
 
-$totalData=sqlsrv_num_rows($query);
 
-$totalFilter=$totalData;
-
-if(!empty($request['search']['value'])){
-    $sql.=" WHERE organization_category_name LIKE '".$request['search']['value']."%' ";
+$sql = "SELECT id,organization_category_code, organization_category_name,is_active, created_by, created_date, modified_by, modified_date FROM organization_category WHERE 1=1 ";
+if (!empty($request['search']['value'])) {
+    $sql .= " AND (organization_category_code Like N'%" . $request['search']['value'] . "%' ";
+    $sql .= " OR nation_name Like N'%" . $request['search']['value'] . "%') ";
+    $query = sqlsrv_query($conn, $sql, $params, $options);
+    $totalData = sqlsrv_num_rows($query);
 }
-
-$query=sqlsrv_query($conn,$sql, $params, $options);
-
-$totalData=sqlsrv_num_rows($query);
 
 
 $data=array();
