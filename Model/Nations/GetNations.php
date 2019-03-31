@@ -6,17 +6,12 @@ require_once "../../config.php";
 $request=$_REQUEST;
 $col =array(
     0   =>  'id',
-    1   =>  'prefix_name',
-    2   =>  'prefix_name',
-    3   =>  'prefix_abbr_name',
-    4   =>  'is_active'
+    1   =>  'nation_code',
+    2   =>  'nation_name',
 );  
 
 //create column like table in database
-$sql ="SELECT id, seq_no, nation_code, nation_name, status, created_by, created_date, update_by, update_date
-FROM general_nation;
-;
-";
+$sql ="SELECT id,nation_code, nation_name FROM general_nation ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query=sqlsrv_query($conn,$sql,$params,$options);
@@ -25,10 +20,9 @@ $totalData=sqlsrv_num_rows($query);
 $totalFilter=$totalData;
 
 //Search
-$sql =" SELECT id, prefix_code, prefix_name, prefix_abbr_name,is_active FROM ganeral_perfix FROM prefix WHERE 1=1 ";
+$sql =" SELECT id, seq_no, nation_code, nation_name FROM general_nation  WHERE 1=1 ";
 if(!empty($request['search']['value'])){
-    $sql.=" AND (prefix_name Like N'%".$request['search']['value']."%' ";
-    $sql.=" OR prefix_abbr_name Like N'%".$request['search']['value']."%') ";
+    $sql.=" AND (nation_name Like N'%".$request['search']['value']."%' ";;
     // $sql.=" AND (prefix_name Like N'%น%' ";
     // $sql.=" OR prefix_abbr_name Like N'%น%') ";
     // echo $sql;
@@ -53,9 +47,7 @@ while($row=sqlsrv_fetch_array($query)){
     $subdata=array();
     $subdata[]=$row[0];
     $subdata[]=$row[1]; 
-    $subdata[]=$row[2]; 
-    $subdata[]=$row[3];   
-    $subdata[]=$row[4];           //create event on click in button edit in cell datatable for display modal dialog           $row[0] is id in table on database
+    $subdata[]=$row[2];           //create event on click in button edit in cell datatable for display modal dialog           $row[0] is id in table on database
     // $subdata[]='<button type="button" id="getEdit" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal" data-id="'.$row[0].'"><i class="glyphicon glyphicon-pencil">&nbsp;</i>Edit</button>
     //             <button type="button" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash">&nbsp;</i>Delete</button>';
     $data[]=$subdata;
