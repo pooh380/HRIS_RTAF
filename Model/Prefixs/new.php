@@ -1,6 +1,7 @@
 <?php
 
 require_once "../../config.php";
+// if($conn){echo "con";}
 
 $request=$_REQUEST;
 $col =array(
@@ -8,40 +9,38 @@ $col =array(
     1   =>  'prefix_name',
     2   =>  'prefix_abbr_name',
     3   =>  'is_active'
-);  //create column like table in database
-// print_r($col);
-// echo "<br>";
+);  
+
+//create column like table in database
+$sql ="SELECT id,prefix_name,prefix_abbr_name,is_active FROM prefix";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
-
-$sql ="SELECT id,prefix_name,prefix_abbr_name,is_active FROM prefix";
-$query=sqlsrv_query($conn,$sql, $params, $options);
-
+$query=sqlsrv_query($conn,$sql,$params,$options);
 $totalData=sqlsrv_num_rows($query);
-
-// echo $totalData."<br>";
-
+// echo $totalData;
 $totalFilter=$totalData;
 
 //Search
-if(!empty($request['search']['value'])){
-    $sql.= " WHERE prefix_name LIKE '".$request['search']['value']."%' ";
-}
+// $sql =" SELECT id,prefix_name,prefix_abbr_name,is_active FROM prefix WHERE 1=1 ";
+// if(!empty($request['search']['value'])){
+    // $sql.=" AND (prefix_name Like '".$request['search']['value']."%' ";
+    // $sql.=" OR prefix_abbr_name Like '".$request['search']['value']."%' ";
+    // $sql.=" AND (prefix_name Like 'm%' ";
+    // $sql.=" OR prefix_abbr_name Like 'm%' ";
+// }
+
+// $sql.= " WHERE prefix_name LIKE '".$request['search']['value']."%' ";
+
 
 // echo $sql;
-$query=sqlsrv_query($conn,$sql, $params, $options);
-// if ($query) {
-//     echo "query";
-// }
+$query=sqlsrv_query($conn,$sql,$params,$options);
 $totalData=sqlsrv_num_rows($query);
-// echo "<br>";
-// echo $totalData;
-
 //Order
-// $sql.=" ORDER BY ".$col[$request['order'][0]['column']]."   ".$request['order'][0]['dir']."  LIMIT ".
+// $sql.=" ORDER BY ".$col[$request['order'][0]['column']]."   ".$request['order'][0]['dir']."  DESC ".
 //     $request['start']."  ,".$request['length']."  ";
-
-// $query=mysqli_query($con,$sql,$params,$options);
+// $query=sqlsrv_query($conn,$sql,$params,$options);
+// echo "<br>".$sql."<br>";
+// if($query){echo "order by";}else{echo "cannnot";}
 
 $data=array();
 
@@ -52,10 +51,10 @@ while($row=sqlsrv_fetch_array($query)){
     $subdata[]=$row[2]; //salary
     $subdata[]=$row[3]; //age           //create event on click in button edit in cell datatable for display modal dialog           $row[0] is id in table on database
     // $subdata[]='<button type="button" id="getEdit" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal" data-id="'.$row[0].'"><i class="glyphicon glyphicon-pencil">&nbsp;</i>Edit</button>
-    //             <a href="index.php?delete='.$row[0].'" onclick="return confirm(\'Are You Sure ?\')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash">&nbsp;</i>Delete</a>';
+    //             <button type="button" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash">&nbsp;</i>Delete</button>';
     $data[]=$subdata;
 }
-// echo "<br>";
+
 // echo '<pre>';
 // print_r($data);
 // echo '<pre>';
@@ -66,7 +65,5 @@ $json_data=array(
     "recordsFiltered"   =>  intval($totalFilter),
     "data"              =>  $data
 );
-
 echo json_encode($json_data);
-
 ?>
