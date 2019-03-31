@@ -42,6 +42,7 @@
                       <thead>
                         <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                           <th>ลำดับที่</th>
+                          <th>รหัสโครงสร้าง</th>
                           <th>ชื่อ</th>
                           <th>สถานะ</th>
                           <th>เริ่ม</th>

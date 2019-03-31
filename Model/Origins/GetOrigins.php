@@ -9,31 +9,25 @@ $col =array(
     2   =>  'origin_name',
     3   =>  'status',
 ); 
+
+$sql ="SELECT id,origin_code, origin_name,status FROM ganeral_origin";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
-
-$sql ="SELECT id,origin_code, origin_name,status
-FROM ganeral_origin";
-
-
-
+$query = sqlsrv_query($conn, $sql, $params, $options);
+$totalData = sqlsrv_num_rows($query);
+// echo $totalData;
+$totalFilter = $totalData;
 
 
-$query=sqlsrv_query($conn,$sql, $params, $options);
-
-$totalData=sqlsrv_num_rows($query);
-
-$totalFilter=$totalData;
 
 
-$sql = "SELECT origin_code,origin_name FROM ganeral_origin  WHERE 1=1 ";
+$sql = "SELECT id,origin_code, origin_name,status FROM ganeral_origin WHERE 1=1 ";
 if (!empty($request['search']['value'])) {
     $sql .= " AND (origin_code Like N'%" . $request['search']['value'] . "%' ";
     $sql .= " OR origin_name Like N'%" . $request['search']['value'] . "%') ";
     $query = sqlsrv_query($conn, $sql, $params, $options);
     $totalData = sqlsrv_num_rows($query);
 }
-
 $data=array();
 
 while($row=sqlsrv_fetch_array($query)){

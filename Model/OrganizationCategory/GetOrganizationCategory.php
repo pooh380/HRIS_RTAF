@@ -10,18 +10,17 @@ $col = array(
     3   =>  'organization_category_abbr_name',
     4   =>  'status',
 );
+
+$sql = "SELECT seq_no,organization_category_code,organization_category_name,organization_category_abbr_name,status FROM organization_category";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
-
-$sql = "SELECT seq_no,organization_category_code,organization_category_name,organization_category_abbr_name,status
-FROM organization_category";
 $query = sqlsrv_query($conn, $sql, $params, $options);
 
 $totalData = sqlsrv_num_rows($query);
 $totalFilter = $totalData;
 
 
-$sql = "SELECT organization_category_name,organization_category_code FROM organization_category  WHERE 1=1 ;";
+$sql = "SELECT seq_no,organization_category_code,organization_category_name,organization_category_abbr_name,status FROM organization_category WHERE 1=1 ";
 if (!empty($request['search']['value'])) {
     $sql .= " AND (organization_category_name Like N'%" . $request['search']['value'] . "%' ";
     $sql .= " OR organization_category_code Like N'%" . $request['search']['value'] . "%') ";

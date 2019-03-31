@@ -11,8 +11,9 @@ $col = array(
 );
 
 //create column like table in database
-$sql = "SELECT id,ReligionName, IsActive FROM ganaral_religion;";
+$sql = "SELECT id,ReligionName, IsActive FROM ganaral_religion ";
 
+$params = array();
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
@@ -22,41 +23,14 @@ $totalFilter = $totalData;
 
 
 
-$sql = "SELECT id,ReligionName FROM ganaral_religion  WHERE 1=1 ";
 
-// $request['search']['value'] = ส;
-
+$sql = "SELECT id,ReligionName, IsActive FROM ganaral_religion  WHERE 1=1 ";
 if (!empty($request['search']['value'])) {
     $sql .= " AND (id Like N'%" . $request['search']['value'] . "%' ";
     $sql .= " OR ReligionName Like N'%" . $request['search']['value'] . "%') ";
-    // $sql.=" AND (organization_part_name Like N'%m%' ";
-    // $sql.=" OR organization_part_abbr_name Like N'%m%') ";
-    // echo $sql;
     $query = sqlsrv_query($conn, $sql, $params, $options);
     $totalData = sqlsrv_num_rows($query);
 }
-
-//Search
-// $sql = " SELECT id, nation_code, nation_name ,status FROM general_nation  WHERE 1=1 ";
-// if (!empty($request['search']['value'])) {
-//     $sql .= " AND (nation_name Like N'%" . $request['search']['value'] . "%' ";;
-//     // $sql.=" AND (prefix_name Like N'%น%' ";
-//     // $sql.=" OR prefix_abbr_name Like N'%น%') ";
-//     // echo $sql;
-//     $query = sqlsrv_query($conn, $sql, $params, $options);
-//     $totalData = sqlsrv_num_rows($query);
-// }
-
-// // $sql.= " WHERE prefix_name LIKE '".$request['search']['value']."%' ";
-
-
-
-//Order
-// $sql.=" ORDER BY ".$col[$request['order'][0]['column']]."   ".$request['order'][0]['dir']."  DESC ".
-//     $request['start']."  ,".$request['length']."  ";
-// $query=sqlsrv_query($conn,$sql,$params,$options);
-// echo "<br>".$sql."<br>";
-// if($query){echo "order by";}else{echo "cannnot";}
 
 $data = array();
 

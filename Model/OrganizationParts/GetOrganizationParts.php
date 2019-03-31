@@ -23,7 +23,6 @@ $totalFilter = $totalData;
 
 //Search
 $sql = " SELECT id, organization_part_code, organization_part_name, organization_part_abbr_name, status FROM organization_part WHERE 1=1 ";
-
 // $request['search']['value'] = ส;
 
 if (!empty($request['search']['value'])) {

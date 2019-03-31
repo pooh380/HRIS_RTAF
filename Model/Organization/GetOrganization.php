@@ -10,11 +10,10 @@ $col = array(
     3   =>  'organization_abbr_name',
     4   =>  'status'
 );
+
+$sql = "SELECT id,organization_code, organization_name, organization_abbr_name, status FROM organization ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
-
-$sql = "SELECT id,organization_code, organization_name, organization_abbr_name, status
-FROM organization;";
 
 $query = sqlsrv_query($conn, $sql, $params, $options);
 
@@ -23,7 +22,7 @@ $totalData = sqlsrv_num_rows($query);
 $totalFilter = $totalData;
 
 
-$sql = "SELECT id,organization_code, organization_name, organization_abbr_name, status FROM ganeral_province  WHERE 1=1 ";
+$sql = "SELECT id,organization_code, organization_name, organization_abbr_name, status FROM organization  WHERE 1=1 ";
 
 // $request['search']['value'] = ส;
 
