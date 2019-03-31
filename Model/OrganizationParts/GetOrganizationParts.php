@@ -22,12 +22,7 @@ $totalData = sqlsrv_num_rows($query);
 $totalFilter = $totalData;
 
 //Search
-<<<<<<< HEAD
-$sql = " SELECT id, organization_part_code, organization_part_name, organization_part_abbr_name, isActive FROM organization_part WHERE 1=1 ";
-
-=======
 $sql = " SELECT id, organization_part_code, organization_part_name, organization_part_abbr_name, status FROM organization_part WHERE 1=1 ";
->>>>>>> 3443c46e603c660b5a6068d1eb7981d6083afcf3
 // $request['search']['value'] = ส;
 
 if (!empty($request['search']['value'])) {
