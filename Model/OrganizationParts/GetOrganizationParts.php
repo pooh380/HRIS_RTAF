@@ -24,14 +24,14 @@ $totalFilter = $totalData;
 //Search
 $sql = " SELECT id, organization_part_code, organization_part_name, organization_part_abbr_name, status FROM organization_part WHERE 1=1 ";
 
-$request['search']['value'] = ส;
+// $request['search']['value'] = ส;
 
 if (!empty($request['search']['value'])) {
     $sql .= " AND (organization_part_name Like N'%" . $request['search']['value'] . "%' ";
     $sql .= " OR organization_part_abbr_name Like N'%" . $request['search']['value'] . "%') ";
     // $sql.=" AND (organization_part_name Like N'%m%' ";
     // $sql.=" OR organization_part_abbr_name Like N'%m%') ";
-    echo $sql;
+    // echo $sql;
     $query = sqlsrv_query($conn, $sql, $params, $options);
     $totalData = sqlsrv_num_rows($query);
 }
@@ -61,9 +61,9 @@ while ($row = sqlsrv_fetch_array($query)) {
     $data[] = $subdata;
 }
 
-echo '<pre>';
-print_r($data);
-echo '<pre>';
+// echo '<pre>';
+// print_r($data);
+// echo '<pre>';
 
 $json_data = array(
     "draw"              =>  intval($request['draw']),

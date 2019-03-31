@@ -41,17 +41,14 @@
                     <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                       <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
                     </a>
-                    <table id="OrganizationLevels" class="table table-striped table-borderless table-hover bootstrap-3 ">
+                    <table id="OrganizationLevels" class="table table-striped table-borderless table-hover bootstrap-3 " style="width:100%">
                       <thead>
                         <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                       
                           <th>ลำดับที่</th>
+                          <th>รหัสหน่วยงาน</th>
                           <th>ชื่อ</th>
                           <th>สถานะ</th>
-                          <th>ผู้สร้าง</th>
-                          <th>เวลาที่สร้าง</th>
-                          <th>ผู้แก้ไข</th>
-                          <th>เวลาที่แก้ไข</th>
                         </tr>
                       </thead>
                       <tbody align="center">
