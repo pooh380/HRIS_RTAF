@@ -3,7 +3,6 @@
 
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
-
   <style>
     /* ol > li > a {color:#222233;} */
     .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
@@ -41,55 +40,19 @@
                     <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                       <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
                     </a>
-                    <table class="table table-striped table-borderless table-hover bootstrap-3 ">
+                    <table id="Origins" class="table table-striped table-borderless table-hover bootstrap-3 " style="width:100%">
                       <thead>
-                        <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
-                          <th><input type="checkbox" class="checkAll" onclick="toggle(this);" /></th>
-                          <th></th>
+                        <tr align="center" style="background-color:#0f1733; color:whitesmoke;" >
+                         
                           <th>ลำดับที่</th>
-                          <th>รหัส</th>
-                          <th>ชื่อ</th>
-                          <th >ใช้งาน</th>
+                          <th>รหัสสัญชาติ</th>
+                          <th>ชื่อสัญชาติ</th>
+                          <th>สถานะ</th>
                         </tr>
                       </thead>
                       <tbody align="center">
-                        <tr>
-                          <td><input type="checkbox" class="checkAll" /></td>
-                          <td>
-                            <a href="./edit.php"><i class="la la-pencil-square-o" style="color:#0f1733;"></i></a>
-                            <a href="./delete.php"><i class="la la-trash-o" style="color:#0f1733;"></i></a>
-                          </td>
-                          <td>1</td>
-                          <td>Edinburgh</td>
-                          <td>61</td>
-                          <td align="center">
-                            <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" class="checkAll"/></td>
-                          <td>
-                            <i class="la la-pencil-square-o"></i>
-                            <i class="la la-trash-o"></i>
-                          </td>
-                          <td>2</td>
-                          <td>Tokyo</td>
-                          <td>63</td>
-                          <td align="center">
-                            <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-                          </td>
-                        </tr>
+                      
                       </tbody>
-                      <!-- <tfoot>
-                        <tr>
-                          <th>Name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
-                          <th>Salary</th>
-                        </tr>
-                      </tfoot> -->
                     </table>
                   </div>
                 </div>
@@ -103,12 +66,14 @@
   </div>
   </section>
 
+  <script src="../../Controllers/originsController.js"></script>
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
-  
+
   <script type="text/javascript">
     $(document).ready(function() {
-            console.log("ready");
+            // console.log("ready");
             change_autorefreshdiv();
+            getOrigins();
     });
 
     function change_autorefreshdiv(){
@@ -123,7 +88,9 @@
     }
   </script>
 
-    
+
 
   <!-- footer -->
-  <?php include '../include/footer.php'; ?>
+  <?php
+    include "../include/footer.php";
+  ?>

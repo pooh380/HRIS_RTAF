@@ -12,7 +12,7 @@ $col =array(
 );  
 
 //create column like table in database
-$sql ="SELECT id,prefix_name,prefix_abbr_name,is_active FROM prefix";
+$sql ="SELECT id,prefix_name,prefix_abbr_name,is_active FROM prefix ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query=sqlsrv_query($conn,$sql,$params,$options);
@@ -63,7 +63,7 @@ $json_data=array(
     "draw"              =>  intval($request['draw']),
     "recordsTotal"      =>  intval($totalData),
     "recordsFiltered"   =>  intval($totalFilter),
-    "data"              =>  $data
+    "data"              =>  $data   
 );
 echo json_encode($json_data);
 

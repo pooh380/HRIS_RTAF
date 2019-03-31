@@ -21,7 +21,7 @@ $totalData = sqlsrv_num_rows($query);
 $totalFilter = $totalData;
 
 
-$sql = "SELECT organization_category_name,organization_category_code FROM organization_category  WHERE 1=1 ";
+$sql = "SELECT organization_category_name,organization_category_code FROM organization_category  WHERE 1=1 ;";
 if (!empty($request['search']['value'])) {
     $sql .= " AND (organization_category_name Like N'%" . $request['search']['value'] . "%' ";
     $sql .= " OR organization_category_code Like N'%" . $request['search']['value'] . "%') ";

@@ -52,44 +52,7 @@
                         </tr>
                       </thead>
                       <tbody align="center">
-                      <!-- <tbody align="center"> -->
-                        <!-- <tr>
-                          <td><input type="checkbox" class="checkAll" /></td>
-                          <td>
-                          <a href="./edit.php"><i class="la la-pencil-square-o" style="color:#0f1733;"></i></a>
-                            <a href="./delete.php"><i class="la la-trash-o" style="color:#0f1733;"></i></a>
-                          </td>
-                          <td>1</td>
-                          <td>Edinburgh</td>
-                          <td>61</td>
-                          <td align="center">
-                            <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-                          </td>
-                        </tr>
-                        <tr>
-                          <td><input type="checkbox" class="checkAll"/></td>
-                          <td>
-                            <i class="la la-pencil-square-o"></i>
-                            <i class="la la-trash-o"></i>
-                          </td>
-                          <td>2</td>
-                          <td>Tokyo</td>
-                          <td>63</td>
-                          <td align="center">
-                            <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-                          </td>
-                        </tr> -->
-                      <!-- </tbody> -->
-                      <!-- <tfoot>
-                        <tr>
-                          <th>Name</th>
-                          <th>Position</th>
-                          <th>Office</th>
-                          <th>Age</th>
-                          <th>Start date</th>
-                          <th>Salary</th>
-                        </tr>
-                      </tfoot> -->
+                      
                       </tbody>
                     </table>
                   </div>
