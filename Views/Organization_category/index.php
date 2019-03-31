@@ -44,11 +44,8 @@
                         <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                           <th>รหัส</th>
                           <th>ชื่อ</th>
+                          <th>ชื่อย่อ</th>
                           <th>สถานะ</th>
-                          <th>ผู้สร้าง</th>
-                          <th>เวลาที่สร้าง</th>
-                          <th>ผู้แก้ไข</th>
-                          <th>เวลาที่แก้ไข</th>
                         </tr>
                       </thead>
                       <tbody align="center">

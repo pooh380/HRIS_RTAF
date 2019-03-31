@@ -4,21 +4,21 @@ require_once "../../config.php";
 
 $request=$_REQUEST;
 $col =array(
-    0   =>  'id',
+    0   =>  'seq_no',
     1   =>  'organization_type_name',
-    2   =>  'is_active',
+    2   =>  'status',
     3   =>  'start_date',
     4   =>  'end_date',
-    5   =>  'created_by',
-    6   =>  'created_date',
-    7   =>  'modified_by',
-    8   =>  'modified_date'
 ); 
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 
-$sql ="SELECT id,organization_type_name,is_active,start_date,end_date,created_by, created_date, modified_by, modified_date
+$sql ="SELECT seq_no, organization_type_name, status,  start_date, end_date
 FROM organization_type;";
+
+
+
+
 
 $query=sqlsrv_query($conn,$sql, $params, $options);
 
@@ -27,7 +27,7 @@ $totalData=sqlsrv_num_rows($query);
 $totalFilter=$totalData;
 
 if(!empty($request['search']['value'])){
-    $sql.=" WHERE organization_category_name LIKE '".$request['search']['value']."%' ";
+    $sql.=" WHERE organization_type_name LIKE '".$request['search']['value']."%' ";
 }
 
 $query=sqlsrv_query($conn,$sql, $params, $options);
@@ -36,15 +36,11 @@ $data=array();
 
 while($row=sqlsrv_fetch_array($query)){
     $subdata=array();
-    $subdata[]=$row[0]; //id
+    $subdata[]=$row[0]; //seq_no
     $subdata[]=$row[1]; //organization_type_name
-    $subdata[]=$row[2]; //is_active
+    $subdata[]=$row[2]; //status
     $subdata[]=$row[3]; //start_date
-    $subdata[]=$row[4]; //end_date
-    $subdata[]=$row[5]; //created_by
-    $subdata[]=$row[6]; //created_date     
-    $subdata[]=$row[7]; //modified_by
-    $subdata[]=$row[8]; //modified_date          
+    $subdata[]=$row[4]; //end_date     
     $data[]=$subdata;
 }
 $json_data=array(
