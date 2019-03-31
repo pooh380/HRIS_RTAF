@@ -78,6 +78,7 @@
       $(document).ready(function() {
           change_autorefreshdiv();
           getOrganizationCategory();
+          
       });
 
       function change_autorefreshdiv() {}
