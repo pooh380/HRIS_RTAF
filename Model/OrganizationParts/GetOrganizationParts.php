@@ -9,11 +9,11 @@ $col = array(
     1   =>  'organization_part_code',
     2   =>  'organization_part_name',
     3   =>  'organization_part_abbr_name',
-    4   =>  'status'
+    4   =>  'isActive'
 );
 
 //create column like table in database
-$sql = " SELECT id, organization_part_code, organization_part_name, organization_part_abbr_name, status FROM organization_part ";
+$sql = " SELECT id, organization_part_code, organization_part_name, organization_part_abbr_name, isActive FROM organization_part ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
@@ -22,7 +22,7 @@ $totalData = sqlsrv_num_rows($query);
 $totalFilter = $totalData;
 
 //Search
-$sql = " SELECT id, organization_part_code, organization_part_name, organization_part_abbr_name, status FROM organization_part WHERE 1=1 ";
+$sql = " SELECT id, organization_part_code, organization_part_name, organization_part_abbr_name, isActive FROM organization_part WHERE 1=1 ";
 // $request['search']['value'] = ส;
 
 if (!empty($request['search']['value'])) {

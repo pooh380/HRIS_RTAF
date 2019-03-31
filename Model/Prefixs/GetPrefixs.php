@@ -9,11 +9,11 @@ $col = array(
     1   =>  'prefix_name',
     2   =>  'prefix_name',
     3   =>  'prefix_abbr_name',
-    4   =>  'is_active'
+    4   =>  'isActive'
 );
 
 //create column like table in database
-$sql = "SELECT id, prefix_code, prefix_name, prefix_abbr_name,is_active FROM ganeral_perfix ";
+$sql = "SELECT id, prefix_code, prefix_name, prefix_abbr_name,isActive FROM ganeral_perfix ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
@@ -22,7 +22,7 @@ $totalData = sqlsrv_num_rows($query);
 $totalFilter = $totalData;
 
 //Search
-$sql = " SELECT id, prefix_code, prefix_name, prefix_abbr_name,is_active FROM ganeral_perfix WHERE 1=1 ";
+$sql = " SELECT id, prefix_code, prefix_name, prefix_abbr_name,isActive FROM ganeral_perfix WHERE 1=1 ";
 if (!empty($request['search']['value'])) {
     $sql .= " AND (prefix_name Like N'%" . $request['search']['value'] . "%' ";
     $sql .= " OR prefix_abbr_name Like N'%" . $request['search']['value'] . "%') ";
