@@ -42,7 +42,6 @@
                     <table id="OrganizationCategory" class="table table-striped table-borderless table-hover bootstrap-3 ">
                       <thead>
                         <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
-                          <th>ลำดับที่</th>
                           <th>รหัส</th>
                           <th>ชื่อ</th>
                           <th>สถานะ</th>
