@@ -22,15 +22,15 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><a class="menu-item" href="../organization_list/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โครงสร้างองค์กร</a>
+                            <li><a class="menu-item" href="../organizationTree/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โครงสร้างองค์กร</a>
                             </li>
-                            <li><a class="menu-item" href="../organization_list/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โปรแกรมจัดการโครงสร้าง</a>
+                            <li><a class="menu-item" href="../organizationProgram/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โปรแกรมจัดการโครงสร้าง</a>
                             </li>
                         </ul>
                     </li>
                     <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">ตำแหน่ง</a>
                         <ul class="menu-content">
-                            <li><a class="menu-item" href="../positions/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ชื่อตำแหน่ง</a>
+                            <li><a class="menu-item" href="../position/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ชื่อตำแหน่ง</a>
                             </li>
                             <li><a class="menu-item" href="../prefix_skill/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">บันทึกกรอบอัตราตำแหน่ง</a>
 
