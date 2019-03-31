@@ -15,7 +15,7 @@
       <div class="content-header row">
         <div class="content-header-left col-md-6 col-12 mb-2">
           <div style="width:7px;height:30px;background-color:#1a1d52; float:left; margin-right:10px;"></div>
-          <h3 class="content-header-title">ส่วนราชกาล</h3>
+          <h3 class="content-header-title">ส่วนราชการ</h3>
         </div>
       </div>
       <div class="content-body">
@@ -30,7 +30,7 @@
                       <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../home/index.php">ระบบงานโครงสร้างอัตรากำลังพล</a></li>
                         <li class="breadcrumb-item"><a href="../home/index.php">โครงสร้าง</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">ส่วนราชกาล</li>
+                        <li class="breadcrumb-item active" aria-current="page">ส่วนราชการ</li>
                       </ol>
                     </nav>
                     <a href="./create.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
@@ -39,11 +39,13 @@
                     <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                       <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
                     </a>
-                    <table id="OrganizationParts" class="table table-striped table-borderless table-hover bootstrap-3 ">
+                    <table id="OrganizationParts" class="table table-striped table-borderless table-hover bootstrap-3 " style="width:100%">
                       <thead>
                         <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                           <th>ลำดับที่</th>
-                          <th>ชื่อ</th>
+                          <th>รหัสหน่วยงาน</th>
+                          <th>ชื่อหน่วยงาน</th>
+                          <th>ชื่อย่อหน่วยงาน</th>
                           <th>สถานะ</th>
                         </tr>
                       </thead>
