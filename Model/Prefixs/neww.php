@@ -26,7 +26,8 @@ $totalRecordwithFilter = $totalRecords;
 ## Search 
 if($searchValue != " "){
 //    $searchQuery = " where  and (prefix_name like '%m%' or prefix_abbr_name like '%m%' ) ";
-    $sql.= " where prefix_name like '%".$searchValue."%' ";
+    $sql.= " where prefix_name like N'%".$searchValue."%' ";
+    // $sql.= " where prefix_name like N'%น%' ";
     // echo $sql;
     $sel = sqlsrv_query($conn,$sql,$params,$options);
     // $records = sqlsrv_fetch_array($sel);
@@ -39,7 +40,7 @@ if($searchValue != " "){
 // $sel = sqlsrv_query($conn,"select id,prefix_name,prefix_abbr_name,is_active from prefix WHERE 1=1 ");
 // $records = sqlsrv_fetch_array($sel);
 
-
+echo $sql;
 
 $data = array();
 

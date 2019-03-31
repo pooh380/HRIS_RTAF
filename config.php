@@ -2,7 +2,7 @@
 <?php
 $serverName = "45.77.249.35"; //serverName\instanceName ถ้าฐานข้อมูลอยู่ในเครื่องเราใช้ localhost 
 $connectionInfo = array(
-    "Database" => "HRIS_RTAF",
+    "Database" => "HRIS",
     "UID" => "sa",
     "PWD" => "1020304050",
     "MultipleActiveResultSets"=>true,

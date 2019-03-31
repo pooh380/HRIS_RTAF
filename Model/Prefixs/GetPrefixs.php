@@ -21,20 +21,21 @@ $totalData=sqlsrv_num_rows($query);
 $totalFilter=$totalData;
 
 //Search
-// $sql =" SELECT id,prefix_name,prefix_abbr_name,is_active FROM prefix WHERE 1=1 ";
-// if(!empty($request['search']['value'])){
-    // $sql.=" AND (prefix_name Like '".$request['search']['value']."%' ";
-    // $sql.=" OR prefix_abbr_name Like '".$request['search']['value']."%' ";
-    // $sql.=" AND (prefix_name Like 'm%' ";
-    // $sql.=" OR prefix_abbr_name Like 'm%' ";
-// }
+$sql =" SELECT id,prefix_name,prefix_abbr_name,is_active FROM prefix WHERE 1=1 ";
+if(!empty($request['search']['value'])){
+    $sql.=" AND (prefix_name Like N'%".$request['search']['value']."%' ";
+    $sql.=" OR prefix_abbr_name Like N'%".$request['search']['value']."%') ";
+    // $sql.=" AND (prefix_name Like N'%น%' ";
+    // $sql.=" OR prefix_abbr_name Like N'%น%') ";
+    // echo $sql;
+    $query=sqlsrv_query($conn,$sql,$params,$options);
+$totalData=sqlsrv_num_rows($query);
+}
 
 // $sql.= " WHERE prefix_name LIKE '".$request['search']['value']."%' ";
 
 
-// echo $sql;
-$query=sqlsrv_query($conn,$sql,$params,$options);
-$totalData=sqlsrv_num_rows($query);
+
 //Order
 // $sql.=" ORDER BY ".$col[$request['order'][0]['column']]."   ".$request['order'][0]['dir']."  DESC ".
 //     $request['start']."  ,".$request['length']."  ";

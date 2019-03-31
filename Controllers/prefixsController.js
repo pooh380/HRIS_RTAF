@@ -1,27 +1,4 @@
 function getPrefixs() {
-<<<<<<< HEAD
-    // $('#prefixsTable').DataTable({
-    //     "processing": true,
-    //     "serverSide": true,
-    //     "bPaginate": true,
-    //     "pageLength": 10,
-    //     order: [
-    //         [0, "desc"]
-    //     ],
-    //     "ajax": {
-    //         url: "../../Model/Prefixs/new.php", // json datasource
-    //         dataType: "json",
-    //         type: "post" // method  , by default get
-    //             // error: function() { // error handling
-    //             // $(".prefixsTable-grid-error").html("");
-    //             // $("#prefixsTable-grid").append('<tbody class="prefixsTable-grid-error"><tr><th colspan="3">No data found in the server</th></tr></tbody>');
-    //             // $("#prefixsTable-grid_processing").css("display", "none");
-    //             // alert("ERROR");
-
-    //         // }
-    //     }
-    // });
-=======
     $('#prefixsTable').DataTable({
         "processing": true,
         "serverSide": true,
@@ -39,20 +16,21 @@ function getPrefixs() {
                 // $("#prefixsTable-grid").append('<tbody class="prefixsTable-grid-error"><tr><th colspan="3">No data found in the server</th></tr></tbody>');
                 // $("#prefixsTable-grid_processing").css("display", "none");
                 // alert("ERROR");
->>>>>>> f1582acff243b6768df3ce3a826e7db9c964d243
-
-    $('#prefixsTable').DataTable({
-        'processing': true,
-        'serverSide': true,
-        'serverMethod': 'post',
-        'ajax': {
-            'url': '../../Model/Prefixs/neww.php'
-        },
-        'columns': [
-            { data: 'id' },
-            { data: 'prefix_name' },
-            { data: 'prefix_abbr_name' },
-            { data: 'is_active' },
-        ]
+        }
     });
+
+    // $('#prefixsTable').DataTable({
+    //     'processing': true,
+    //     'serverSide': true,
+    //     'serverMethod': 'post',
+    //     'ajax': {
+    //         'url': '../../Model/Prefixs/neww.php'
+    //     },
+    //     'columns': [
+    //         { data: 'id' },
+    //         { data: 'prefix_name' },
+    //         { data: 'prefix_abbr_name' },
+    //         { data: 'is_active' },
+    //     ]
+    // });
 }
