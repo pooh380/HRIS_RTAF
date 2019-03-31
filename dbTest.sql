@@ -2,7 +2,7 @@
 SELECT name FROM sys.databases
 GO
 
-use HRIS_RTAF
+use HRIS
 
 SELECT * from information_schema.TABLEs
 
@@ -11,14 +11,4 @@ SELECT table_catalog [database], table_schema [schema], table_name name, table_t
 FROM INFORMATION_SCHEMA.TABLES
 GO
 
-SELECT * From prefix
-
-SELECT id,prefix_code,prefix_name,prefix_abbr_name,is_active FROM prefix;
-
-SELECT id,prefix_code,prefix_name,prefix_abbr_name,is_active FROM prefix
-
-SELECT id,prefix_name,prefix_abbr_name FROM prefix
-
-SELECT prefix_name FROM prefix WHERE 1=1 AND (prefix_name Like '%นาย%' )
-
-select count(id) as prefix from prefix
+SELECT id, seq_no, prefix_code, prefix_name, prefix_abbr_name, is_active FROM ganeral_perfix

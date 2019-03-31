@@ -13,7 +13,10 @@ $col =array(
 );  
 
 //create column like table in database
-$sql ="SELECT id, prefix_code, prefix_name, prefix_abbr_name,is_active FROM ganeral_perfix ";
+$sql ="SELECT id, seq_no, nation_code, nation_name, status, created_by, created_date, update_by, update_date
+FROM general_nation;
+;
+";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query=sqlsrv_query($conn,$sql,$params,$options);
@@ -22,20 +25,20 @@ $totalData=sqlsrv_num_rows($query);
 $totalFilter=$totalData;
 
 //Search
-$sql =" SELECT id, prefix_code, prefix_name, prefix_abbr_name,is_active FROM ganeral_perfix WHERE 1=1 ";
-// if(!empty($request['search']['value'])){
-    // $sql.=" AND (prefix_name Like N'%".$request['search']['value']."%' ";
-    // $sql.=" OR prefix_abbr_name Like N'%".$request['search']['value']."%') ";
-    $sql.=" AND (prefix_name Like N'%น%' ";
-    $sql.=" OR prefix_abbr_name Like N'%น%') ";
-    echo $sql;
+$sql =" SELECT id, prefix_code, prefix_name, prefix_abbr_name,is_active FROM ganeral_perfix FROM prefix WHERE 1=1 ";
+if(!empty($request['search']['value'])){
+    $sql.=" AND (prefix_name Like N'%".$request['search']['value']."%' ";
+    $sql.=" OR prefix_abbr_name Like N'%".$request['search']['value']."%') ";
+    // $sql.=" AND (prefix_name Like N'%น%' ";
+    // $sql.=" OR prefix_abbr_name Like N'%น%') ";
+    // echo $sql;
     $query=sqlsrv_query($conn,$sql,$params,$options);
 $totalData=sqlsrv_num_rows($query);
-// }
+}
 
 // $sql.= " WHERE prefix_name LIKE '".$request['search']['value']."%' ";
 
-// echo $sql;
+echo $sql;
 
 //Order
 // $sql.=" ORDER BY ".$col[$request['order'][0]['column']]."   ".$request['order'][0]['dir']."  DESC ".
@@ -58,9 +61,9 @@ while($row=sqlsrv_fetch_array($query)){
     $data[]=$subdata;
 }
 
-echo '<pre>';
-print_r($data);
-echo '<pre>';
+// echo '<pre>';
+// print_r($data);
+// echo '<pre>';
 
 $json_data=array(
     "draw"              =>  intval($request['draw']),
