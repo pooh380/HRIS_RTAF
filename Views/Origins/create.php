@@ -61,46 +61,32 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput1">ชื่อเต็มเชื้อชาติ</label>
+                                                      <label class="col-md-6 label-control" for="originName">ชื่อเต็มเชื้อชาติ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="userinput1" class="form-control border-primary" placeholder="ชื่อเต็มเชื้อชาติ" name="fullName">
+                                                              <input type="text" id="originName" class="form-control border-primary" placeholder="ชื่อเต็มเชื้อชาติ" name="originName">
 
                                                           </div>
                                                       </div>
                                                   </div>
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput2">ชื่อย่อเชื้อชาติ</label>
+                                                      <label class="col-md-6 label-control" for="originAbbrName">ชื่อย่อเชื้อชาติ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="userinput2" class="form-control border-primary" placeholder="ชื่อย่อเชื้อชาติ" name="initName">
+                                                              <input type="text" id="originAbbrName" class="form-control border-primary" placeholder="ชื่อย่อเชื้อชาติ" name="originAbbrName">
                                                           </div>
                                                       </div>
                                                   </div>
                                               </div>
                                               <br>
-                                              <!-- <div class="row">
-                                                  <div class="col-md-12">
-                                                      <label class="col-md-4 label-control" for="userinput3">ชื่อหน่วยงาน</label>
-
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative ">
-                                                              <input type="text" id="timesheetinput1" class="form-control border-primary" placeholder="ชื่อหน่วยงาน" name="employeename">
-
-                                                          </div>
-                                                      </div>
-
-                                                  </div>
+                                              <div class="row">
                                                   <div class="col-md-12">
                                                       <br>
                                                       <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
                                                       <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-
                                                   </div>
-                                              </div> -->
-
+                                              </div>
                                           </div>
-
                                       </form>
                                   </div>
                               </div>

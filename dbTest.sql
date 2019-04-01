@@ -18,3 +18,5 @@ SELECT id, organization_part_code, organization_part_name, organization_part_abb
 SELECT id, organization_part_code, organization_part_name, organization_part_abbr_name  FROM organization_part WHERE id = 6
 
 SELECT id, organization_part_code, organization_part_name, organization_part_abbr_name, status FROM organization_part WHERE 1=1 AND (organization_part_name Like N'%ส%' OR organization_part_abbr_name Like N'%ส%')
+
+SELECT * from ganeral_origins
