@@ -26,7 +26,7 @@ function insertOrganizationParts() {
     if (checkBox.checked == true) {
         var isActive = "1";
     } else {
-        var b = "0";
+        var isActive = "0";
     }
 
     console.log(organizationPartName + " " + organizationPartAbbrName + " " + isActive);
