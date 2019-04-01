@@ -19,14 +19,14 @@ function getOrganizationParts() {
 
 function insertOrganizationParts() {
 
-    let organizationPartName = $("#organizationPartName").val();
-    let organizationPartAbbrName = $("#organizationPartAbbrName").val();
+    var organizationPartName = $("#organizationPartName").val();
+    var organizationPartAbbrName = $("#organizationPartAbbrName").val();
 
-    let checkBox = document.getElementById("isActive");
+    var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
-        let isActive = "1";
+        var isActive = "1";
     } else {
-        let b = "0";
+        var b = "0";
     }
 
     console.log(organizationPartName + " " + organizationPartAbbrName + " " + isActive);
