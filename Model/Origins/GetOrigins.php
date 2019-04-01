@@ -7,10 +7,10 @@ $col =array(
     0   =>  'id',
     1   =>  'origin_code',
     2   =>  'origin_name',
-    3   =>  'status',
+    3   =>  'isActive',
 ); 
 
-$sql ="SELECT id,origin_code, origin_name,status FROM ganeral_origin";
+$sql ="SELECT id,origin_code, origin_name,isActive FROM ganeral_origin";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
@@ -21,7 +21,7 @@ $totalFilter = $totalData;
 
 
 
-$sql = "SELECT id,origin_code, origin_name,status FROM ganeral_origin WHERE 1=1 ";
+$sql = "SELECT id,origin_code, origin_name,isActive FROM ganeral_origin WHERE 1=1 ";
 if (!empty($request['search']['value'])) {
     $sql .= " AND (origin_code Like N'%" . $request['search']['value'] . "%' ";
     $sql .= " OR origin_name Like N'%" . $request['search']['value'] . "%') ";
@@ -35,7 +35,7 @@ while($row=sqlsrv_fetch_array($query)){
     $subdata[]=$row[0]; //id
     $subdata[]=$row[1]; //origin_code
     $subdata[]=$row[2]; //origin_name
-    $subdata[]=$row[3]; //status    
+    $subdata[]=$row[3]; //isActive    
     $data[]=$subdata;
 }
 $json_data=array(
