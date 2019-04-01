@@ -8,10 +8,10 @@ $col = array(
     1   =>  'organization_code',
     2   =>  'organization_name',
     3   =>  'organization_abbr_name',
-    4   =>  'status'
+    4   =>  'isActive'
 );
 
-$sql = "SELECT id,organization_code, organization_name, organization_abbr_name, status FROM organization ";
+$sql = "SELECT id,organization_code, organization_name, organization_abbr_name, isActive FROM organization ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 
@@ -22,7 +22,7 @@ $totalData = sqlsrv_num_rows($query);
 $totalFilter = $totalData;
 
 
-$sql = "SELECT id,organization_code, organization_name, organization_abbr_name, status FROM organization  WHERE 1=1 ";
+$sql = "SELECT id,organization_code, organization_name, organization_abbr_name, isActive FROM organization  WHERE 1=1 ";
 
 // $request['search']['value'] = ส;
 

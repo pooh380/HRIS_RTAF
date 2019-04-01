@@ -19,7 +19,6 @@ function getOrganizationCategory() {
 function insertOrganizationcategory() {
     var OrganizationcategoryFN = $("#OrganizationcategoryFN").val();
     var OrganizationcategoryIN = $("#OrganizationcategoryIN").val();
-
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
         var isActive = "1";

@@ -61,43 +61,25 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput1">ชื่อเต็มสัญชาติ</label>
+                                                      <label class="col-md-6 label-control" for="NationFN">ชื่อสัญชาติ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="userinput1" class="form-control border-primary" placeholder="ชื่อเต็มสัญชาติ" name="fullName">
+                                                              <input type="text" id="NationFN" class="form-control border-primary" placeholder="ชื่อสัญชาติ" name="fullName">
 
                                                           </div>
                                                       </div>
                                                   </div>
-                                                  <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput2">ชื่อย่อสัญชาติ</label>
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative">
-                                                              <input type="text" id="userinput2" class="form-control border-primary" placeholder="ชื่อย่อสัญชาติ" name="initName">
-                                                          </div>
-                                                      </div>
-                                                  </div>
+                                                 
                                               </div>
                                               <br>
-                                              <!-- <div class="row">
-                                                  <div class="col-md-12">
-                                                      <label class="col-md-4 label-control" for="userinput3">ชื่อหน่วยงาน</label>
-
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative ">
-                                                              <input type="text" id="timesheetinput1" class="form-control border-primary" placeholder="ชื่อหน่วยงาน" name="employeename">
-
-                                                          </div>
-                                                      </div>
-
-                                                  </div>
+                                              <div class="row">
                                                   <div class="col-md-12">
                                                       <br>
                                                       <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-                                                      <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-
+                                                      <input id="isActive" type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                                      <div id="console-event"></div>
                                                   </div>
-                                              </div> -->
+                                              </div>
 
                                           </div>
 
@@ -109,7 +91,7 @@
                   </div>
                   <div class="form-actions center" align="center">
                       <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text">บันทึก</button>
+                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="InsertNations()">บันทึก</button>
                   </div>
               </section>
               <!-- // Basic form layout section end -->
@@ -125,6 +107,6 @@
   <!-- BEGIN PAGE LEVEL JS-->
   <script src="../../app-assets/js/scripts/extensions/sweet-alerts.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
-
+  <script src="../../Controllers/generalNationController.js"></script>
   <!-- footer -->
   <?php include '../include/footer.php'; ?> 

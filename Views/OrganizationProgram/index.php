@@ -49,9 +49,6 @@
                                                         </div>
                                                     </div>
                                                 </fieldset>
-
-
-
                                                 <div class="text-right">
                                                     <!-- <button type="submit" class="btn" onclick="search()" style="background-color:#0f1733;color:white;border:white"><i class="la la-search" style="margin-rifgt:8px"></i> -->
                                                     <button type="submit" class="btn"    onclick="window.location.href='./create.php'" style="background-color:#0f1733;color:white;border:white"><i class="la la-search" style="margin-rifgt:8px"></i> 

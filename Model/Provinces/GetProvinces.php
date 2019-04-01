@@ -9,7 +9,7 @@ $col = array(
     1   =>  'province_code',
     2   =>  'province_name',
     3   =>  'province_abbr_name',
-    4   =>  'status'
+    4   =>  'isActive'
 );
 
 //create column like table in database

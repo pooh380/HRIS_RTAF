@@ -8,11 +8,11 @@ $col = array(
     0   =>  'id',
     1   =>  'nation_code',
     2   =>  'nation_name',
-    3   =>  'status',
+    3   =>  'isActive',
 );
 
 //create column like table in database
-$sql = "SELECT id,nation_code, nation_name,status FROM general_nation ";
+$sql = "SELECT id,nation_code, nation_name,isActive FROM general_nation ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
@@ -23,7 +23,7 @@ $totalFilter = $totalData;
 
 
 
-$sql = "SELECT id,nation_code, nation_name,status FROM general_nation  WHERE 1=1 ";
+$sql = "SELECT id,nation_code, nation_name,isActive FROM general_nation  WHERE 1=1 ";
 if (!empty($request['search']['value'])) {
     $sql .= " AND (nation_code Like N'%" . $request['search']['value'] . "%' ";
     $sql .= " OR nation_name Like N'%" . $request['search']['value'] . "%') ";
