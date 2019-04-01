@@ -61,33 +61,19 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-<<<<<<< HEAD
                                                       <label class="col-md-6 label-control" for="originName">ชื่อเต็มเชื้อชาติ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
                                                               <input type="text" id="originName" class="form-control border-primary" placeholder="ชื่อเต็มเชื้อชาติ" name="originName">
-=======
-                                                      <label class="col-md-6 label-control" for="originsName">ชื่อเชื้อชาติ</label>
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative ">
-                                                              <input type="text" id="originsName" class="form-control border-primary" placeholder="ชื่อเต็มศาสนา" name="fullName">
->>>>>>> 5dab3bacaff59b0ebecd6d47cef025ecae05d121
 
                                                           </div>
                                                       </div>
                                                   </div>
                                                   <div class="col-md-6">
-<<<<<<< HEAD
                                                       <label class="col-md-6 label-control" for="originAbbrName">ชื่อย่อเชื้อชาติ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
                                                               <input type="text" id="originAbbrName" class="form-control border-primary" placeholder="ชื่อย่อเชื้อชาติ" name="originAbbrName">
-=======
-                                                      <label class="col-md-6 label-control" for="originsAbbrName">ชื่อย่อเชื้อชาติ</label>
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative">
-                                                              <input type="text" id="originsAbbrName" class="form-control border-primary" placeholder="ชื่อย่อศาสนา" name="initName">
->>>>>>> 5dab3bacaff59b0ebecd6d47cef025ecae05d121
                                                           </div>
                                                       </div>
                                                   </div>
@@ -97,17 +83,9 @@
                                                   <div class="col-md-12">
                                                       <br>
                                                       <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-<<<<<<< HEAD
                                                       <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
                                                   </div>
                                               </div>
-=======
-                                                      <input id="isActive" type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-                                                      <div id="console-event"></div>
-                                                  </div>
-                                              </div>
-
->>>>>>> 5dab3bacaff59b0ebecd6d47cef025ecae05d121
                                           </div>
                                       </form>
                                   </div>
