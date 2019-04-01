@@ -4,14 +4,14 @@ require_once "../../config.php";
 // if($conn){echo "con";}
 
 if (!empty($_POST)) {
-    $religionsName = $_POST['religionsName'];
+    $NationFN = $_POST['NationFN'];
     $isActive = $_POST['isActive'];
 
-    $sql = " INSERT INTO ganaral_religion
-    (id, seq_no, ReligionCode, ReligionName, IsActive, created_by, cerated_date, update_by, update_date)
-    VALUES( 2, 2, 2, '$religionsName', $isActive, '', '', '', '');
-     ";
-    echo $sql;
+     $sql = " INSERT INTO general_nation
+     (id, seq_no, nation_code, nation_name, IsActive)
+     VALUES(3, 9, '3', '$NationFN', $isActive);";
+     
+    
     if (sqlsrv_query($conn, $sql)) {
         echo "บันทึกสำเร็จ";
 
