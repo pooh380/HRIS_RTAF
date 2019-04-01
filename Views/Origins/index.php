@@ -50,9 +50,7 @@
                           <th>สถานะ</th>
                         </tr>
                       </thead>
-                      <tbody align="center">
-                      
-                      </tbody>
+                      <tbody align="center"> </tbody>
                     </table>
                   </div>
                 </div>
@@ -75,6 +73,7 @@
             change_autorefreshdiv();
             getOrigins();
     });
+
 
     function change_autorefreshdiv(){
       // $('#prefixPage').addClass('active');
