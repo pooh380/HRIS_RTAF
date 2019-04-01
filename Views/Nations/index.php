@@ -44,7 +44,7 @@
                     <table id="GeneralNation" class="table table-striped table-borderless table-hover bootstrap-3 " style="width:100%">
                       <thead>
                         <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
-                      
+                        <th></th>
                           <th>ลำดับที่</th>
                           <th>รหัสหน่วยงาน</th>
                           <th>ชื่อ</th>
@@ -67,8 +67,11 @@
     </div>
   </div>
   </section>
+
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
   
-  <script src="../../Controllers/generalNationController.js"></script>
+  <script src="../../Controllers/nationController.js"></script>
 
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
   

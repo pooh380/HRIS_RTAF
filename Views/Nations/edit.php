@@ -17,6 +17,14 @@
           border-radius: 20rem;
       }
   </style>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script>
+      $(document).ready(function() {
+          getIdForEdit();
+      });
+
+  </script>
+
   <div class="app-content content">
       <div class="content-wrapper">
           <div class="content-header row">
@@ -61,62 +69,55 @@
                                       <form class="form form-horizontal">
                                           <div class="form-body">
                                               <div class="row">
-                                                  <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput1">ชื่อเต็มคำนำหน้า</label>
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative ">
-                                                              <input type="text" id="userinput1" class="form-control border-primary" placeholder="ชื่อเต็มคำนำหน้า" name="fullName">
-
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput2">ชื่อย่อคำนำหน้า</label>
+                                              <div class="col-md-6">
+                                                      <label class="col-md-6 label-control" for="nationCode">รหัสเชื้อชาติ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="userinput2" class="form-control border-primary" placeholder="ชื่อย่อคำนำหน้า" name="initName">
+                                                              <input type="text" id="nationCode" class="form-control border-primary" placeholder="รหัสเชื้อชาติ" name="nationCode" value="">
                                                           </div>
                                                       </div>
                                                   </div>
-                                              </div>
-                                              <br>
-                                              <!-- <div class="row">
-                                                  <div class="col-md-12">
-                                                      <label class="col-md-4 label-control" for="userinput3">ชื่อหน่วยงาน</label>
-
+                                                  <div class="col-md-6">
+                                                      <label class="col-md-6 label-control" for="nationName">ชื่อเต็มเชื้อชาติ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="timesheetinput1" class="form-control border-primary" placeholder="ชื่อหน่วยงาน" name="employeename">
+                                                              <input type="text" id="nationName" class="form-control border-primary" placeholder="ชื่อเต็มเชื้อชาติ" name="nationName" value="">
 
                                                           </div>
                                                       </div>
-
                                                   </div>
+                                                  
+                                                  <input type="hidden" name="id" id="id" value="">
+                                              </div>
+                                              <br>
+                                              <div class="row">
                                                   <div class="col-md-12">
                                                       <br>
                                                       <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-                                                      <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                                      <input id="isActive" type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
 
                                                   </div>
-                                              </div> -->
-
+                                              </div>
+                                              <div class="form-actions center" align="center">
+                                              <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                              <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="UpdateNation()">บันทึก</button>
                                           </div>
-
+                                          </div>
                                       </form>
                                   </div>
                               </div>
                           </div>
                       </div>
                   </div>
-                  <div class="form-actions center" align="center">
-                      <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text">บันทึก</button>
-                  </div>
+
               </section>
               <!-- // Basic form layout section end -->
           </div>
       </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
@@ -127,5 +128,6 @@
   <script src="../../app-assets/js/scripts/extensions/sweet-alerts.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
 
+  <script src="../../Controllers/nationController.js"></script>
   <!-- footer -->
   <?php include '../include/footer.php'; ?> 
