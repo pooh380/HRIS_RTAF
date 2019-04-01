@@ -42,10 +42,10 @@ while($row=sqlsrv_fetch_array($query)){
     $subdata[] = $row[1]; //origin_code
     $subdata[]= $row[2]; //origin_name
     $subdata[]= $row[3]; //origin_abbr_name
-    if($row[4] = 1){
-        $subdata[] = '<i class="la la-toggle-on" style="color: green; font-size:30px; "></i>';
-    }else{
+    if($row[4] !== 1){
         $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
+    }else{
+        $subdata[] = '<i class="la la-toggle-on" style="color: green; font-size:30px; "></i>';
     }//status   
     $data[]=$subdata;
 }

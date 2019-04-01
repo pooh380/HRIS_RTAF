@@ -70,6 +70,7 @@ function getIdForEdit() {
             $("#id").val(data.id);
             $("#nationCode").val(data.nationCode);
             $("#nationName").val(data.nationName);
+            if(){}else{};
             $("#isActive").val(data.IsActive);
             console.log(data);
         },
