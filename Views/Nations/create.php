@@ -69,7 +69,7 @@
                                                           </div>
                                                       </div>
                                                   </div>
-                                                 
+
                                               </div>
                                               <br>
                                               <div class="row">
@@ -80,21 +80,18 @@
                                                       <div id="console-event"></div>
                                                   </div>
                                               </div>
-
+                                              <div class="form-actions center" align="center">
+                                                  <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                                  <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="InsertNations()">บันทึก</button>
+                                              </div>
                                           </div>
-
                                       </form>
                                   </div>
                               </div>
                           </div>
                       </div>
                   </div>
-                  <div class="form-actions center" align="center">
-                      <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="InsertNations()">บันทึก</button>
-                  </div>
-              </section>
-              <!-- // Basic form layout section end -->
+                  < </section> <!-- // Basic form layout section end -->
           </div>
       </div>
   </div>

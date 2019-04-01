@@ -31,7 +31,7 @@ if(isset($originsId)){
         // echo $IsActive;
     }
 
-    $r=array("originName"=>$originName,"originAbbrName"=>$originAbbrName,"IsActive"=>$IsActive);
+    $r=array("id"=>$id,"originName"=>$originName,"originAbbrName"=>$originAbbrName,"IsActive"=>$IsActive);
     print(json_encode($r));
 }
 ?>

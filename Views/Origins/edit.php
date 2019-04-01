@@ -24,41 +24,7 @@
           getIdForEdit();
       });
 
-      function getUrlVars() {
-          var vars = [],
-              hash;
-          var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-          for (var i = 0; i < hashes.length; i++) {
-              hash = hashes[i].split('=');
-              vars.push(hash[0]);
-              vars[hash[0]] = hash[1];
-          }
-          return vars;
-      }
-
-      function getIdForEdit() {
-          var originsId = getUrlVars()["id"];
-          $.ajax({
-              type: "POST",
-              dataType: "json",
-              url: "../../Model/Origins/GetDataEdit.php",
-              data: {
-                  originsId: originsId
-              },
-              success: function(data) {
-                  $("#originName").val(data.originName);
-                  $("#originAbbrName").val(data.originAbbrName);
-                  $("#IsActive").val(data.IsActive);
-                  /console.log(data);
-              },
-              error: function(error) {
-                  alert(error);
-              }
-          });
-      }
   </script>
-
-
 
   <div class="app-content content">
       <div class="content-wrapper">
@@ -120,27 +86,27 @@
                                                           </div>
                                                       </div>
                                                   </div>
-                                                  <input type="hidden" name="originsId" id="originsId">
+                                                  <input type="hidden" name="id" id="id" value="">
                                               </div>
                                               <br>
                                               <div class="row">
                                                   <div class="col-md-12">
                                                       <br>
                                                       <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-                                                      <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                                      <input id="isActive" type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
 
                                                   </div>
                                               </div>
+                                              <div class="form-actions center" align="center">
+                                              <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                              <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="UpdateOrigins()">บันทึก</button>
+                                          </div>
                                           </div>
                                       </form>
                                   </div>
                               </div>
                           </div>
                       </div>
-                  </div>
-                  <div class="form-actions center" align="center">
-                      <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text">บันทึก</button>
                   </div>
               </section>
               <!-- // Basic form layout section end -->

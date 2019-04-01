@@ -5,13 +5,13 @@ require_once "../../config.php";
 $request=$_REQUEST;
 $col =array(
     0   =>  'id',
-    1   =>  'id',
-    2   =>  'origin_code',
-    3   =>  'origin_name',
+    1   =>  'origin_code',
+    2   =>  'origin_name',
+    3   =>  'origin_abbr_name',
     4   =>  'isActive',
 ); 
 
-$sql ="SELECT id,origin_code, origin_name,isActive FROM ganeral_origin";
+$sql ="SELECT id, origin_code, origin_name, origin_abbr_name, isActive FROM ganeral_origin";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
@@ -22,10 +22,10 @@ $totalFilter = $totalData;
 
 
 
-$sql = "SELECT id,origin_code, origin_name,isActive FROM ganeral_origin WHERE 1=1 ";
+$sql = "SELECT id, origin_code, origin_name, origin_abbr_name, isActive FROM ganeral_origin WHERE 1=1 ";
 if (!empty($request['search']['value'])) {
-    $sql .= " AND (origin_code Like N'%" . $request['search']['value'] . "%' ";
-    $sql .= " OR origin_name Like N'%" . $request['search']['value'] . "%') ";
+    $sql .= " AND (origin_name Like N'%" . $request['search']['value'] . "%' ";
+    $sql .= " OR origin_abbr_name Like N'%" . $request['search']['value'] . "%') ";
     $query = sqlsrv_query($conn, $sql, $params, $options);
     $totalData = sqlsrv_num_rows($query);
 }
@@ -37,9 +37,11 @@ while($row=sqlsrv_fetch_array($query)){
     <a href="../../Views/Origins/edit.php?id='.$row[0].'"><i class="la la-pencil-square-o" style="color:#0f1733"; font-size:30px;" id="'.$row[0].'"></i></a>
     <a href=""><i class="la la-trash-o" style="color:#0f1733"; font-size:30px;" id="'.$row[0].'"></i></a>
     ';//id
-    $subdata[] = $row[1]; //id
-    $subdata[] = $row[2]; //origin_code
-    $subdata[]= $row[3]; //origin_name
+    $subdata[] = $row[0]; //id
+    // $subdata[] = $row[1]; //id
+    $subdata[] = $row[1]; //origin_code
+    $subdata[]= $row[2]; //origin_name
+    $subdata[]= $row[3]; //origin_abbr_name
     if($row[4] = 1){
         $subdata[] = '<i class="la la-toggle-on" style="color: green; font-size:30px; "></i>';
     }else{
@@ -53,6 +55,9 @@ $json_data=array(
     "recordsFiltered"   =>  intval($totalFilter),
     "data"              =>  $data
 );
+// echo "<pre>";
+// print_r($data);
+// echo "<pre>";
 
 echo json_encode($json_data);
 
