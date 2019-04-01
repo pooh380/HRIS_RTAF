@@ -17,6 +17,49 @@
           border-radius: 20rem;
       }
   </style>
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script>
+      $(document).ready(function() {
+          getIdForEdit();
+      });
+
+      function getUrlVars() {
+          var vars = [],
+              hash;
+          var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+          for (var i = 0; i < hashes.length; i++) {
+              hash = hashes[i].split('=');
+              vars.push(hash[0]);
+              vars[hash[0]] = hash[1];
+          }
+          return vars;
+      }
+
+      function getIdForEdit() {
+          var originsId = getUrlVars()["id"];
+          $.ajax({
+              type: "POST",
+              dataType: "json",
+              url: "../../Model/Origins/GetDataEdit.php",
+              data: {
+                  originsId: originsId
+              },
+              success: function(data) {
+                  $("#originName").val(data.originName);
+                  $("#originAbbrName").val(data.originAbbrName);
+                  $("#IsActive").val(data.IsActive);
+                  /console.log(data);
+              },
+              error: function(error) {
+                  alert(error);
+              }
+          });
+      }
+  </script>
+
+
+
   <div class="app-content content">
       <div class="content-wrapper">
           <div class="content-header row">
@@ -64,19 +107,20 @@
                                                       <label class="col-md-6 label-control" for="originName">ชื่อเต็มเชื้อชาติ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="originName" class="form-control border-primary" placeholder="ชื่อเต็มเชื้อชาติ" name="originName">
+                                                              <input type="text" id="originName" class="form-control border-primary" placeholder="ชื่อเต็มเชื้อชาติ" name="originName" value="">
 
                                                           </div>
                                                       </div>
                                                   </div>
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput2">ชื่อย่อเชื้อชาติ</label>
+                                                      <label class="col-md-6 label-control" for="originAbbrName">ชื่อย่อเชื้อชาติ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="originAbbrName" class="form-control border-primary" placeholder="ชื่อย่อเชื้อชาติ" name="originAbbrName">
+                                                              <input type="text" id="originAbbrName" class="form-control border-primary" placeholder="ชื่อย่อเชื้อชาติ" name="originAbbrName" value="">
                                                           </div>
                                                       </div>
                                                   </div>
+                                                  <input type="hidden" name="originsId" id="originsId">
                                               </div>
                                               <br>
                                               <div class="row">
@@ -103,6 +147,9 @@
           </div>
       </div>
   </div>
+
+
+
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
@@ -113,7 +160,7 @@
   <script src="../../app-assets/js/scripts/extensions/sweet-alerts.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
 
-  <script src="../../Controllers/originsController"></script>
+  <script src="../../Controllers/originsController.js"></script>
 
   <!-- footer -->
   <?php include '../include/footer.php'; ?> 

@@ -2,8 +2,10 @@ function getOrigins() {
     $('#Origins').DataTable({
         "processing": true,
         "serverSide": true,
-        "bPaginate": true,
-        "pageLength": 10,
+        "Paginate": true,
+        "LengthChange": false,
+        "Filter": false,
+        "Info": false,
         order: [
             [0, "desc"]
         ],
@@ -41,6 +43,7 @@ function insertOrigins() {
         console.log(err);
     });
 }
+
 
 function UpdateOrigins() {
 
