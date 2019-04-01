@@ -9,8 +9,8 @@ if (!empty($_POST)) {
     $isActive = $_POST['isActive'];
 
      $sql = " INSERT INTO organization_category
-    (id, seq_no, organization_category_code, organization_category_name, organization_category_abbr_name, isActive)
-    VALUES(0, 0, '0',  '$OrganizationcategoryFN', '$OrganizationcategoryIN', $isActive);";
+    (  organization_category_name, organization_category_abbr_name, isActive)
+    VALUES( '$OrganizationcategoryFN', '$OrganizationcategoryIN', $isActive);";
     
     if (sqlsrv_query($conn, $sql)) {
         echo "บันทึกสำเร็จ";
