@@ -83,7 +83,7 @@
                                                   <div class="col-md-12">
                                                       <br>
                                                       <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-                                                      <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                                      <input type="checkbox" id="isActive"  checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก"  data-onstyle="success" data-offstyle="danger" data-size="sm">
                                                   </div>
                                               </div>
                                           </div>
@@ -95,7 +95,7 @@
                   </div>
                   <div class="form-actions center" align="center">
                       <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="insertorigins()">บันทึก</button>
+                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="insertOrigins()">บันทึก</button>
                   </div>
               </section>
               <!-- // Basic form layout section end -->

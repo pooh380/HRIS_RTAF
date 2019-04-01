@@ -32,7 +32,11 @@ while($row=sqlsrv_fetch_array($query)){
     $subdata[]=$row[0]; //id
     $subdata[]=$row[1]; //organization_level_code
     $subdata[]=$row[2]; //organization_level_name  
-    $subdata[]=$row[3]; //status    
+    if($row[3] = 1){
+        $subdata[] = '<i class="la la-toggle-on" style="color: green;font-size:30px;"></i>';
+    }else{
+        $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
+    } //status    
     $data[]=$subdata;
 }
 $json_data=array(

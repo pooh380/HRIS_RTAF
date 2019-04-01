@@ -7,23 +7,23 @@ if (!empty($_POST)) {
 
     //     // $originName = "ไทย";
 
-    $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM ganeral_origin; ";
+    // $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM ganeral_origin; ";
 
-    // echo $sqlInsertSeqNoAndCode;
+    // // echo $sqlInsertSeqNoAndCode;
 
-    $querySelect = sqlsrv_query($conn, $sqlInsertSeqNoAndCode);
+    // $querySelect = sqlsrv_query($conn, $sqlInsertSeqNoAndCode);
 
-    $id = "";
-    while ($row = sqlsrv_fetch_array($querySelect)) {
-        $id = $row['maxid'];
-        echo $id;
-    }
+    // $id = "";
+    // while ($row = sqlsrv_fetch_array($querySelect)) {
+    //     $id = $row['maxid'];
+    //     echo $id;
+    // }
 
-    if ($querySelect) {
-        echo "บันทึกสำเร็จ";
-    } else {
-        echo "บันทึกไม่ได้";
-    }
+    // if ($querySelect) {
+    //     echo "บันทึกสำเร็จ";
+    // } else {
+    //     echo "บันทึกไม่ได้";
+    // }
 
     $originName = $_POST['originName'];
     $originAbbrName = $_POST['originAbbrName'];
@@ -34,8 +34,9 @@ if (!empty($_POST)) {
 
 
     $sql = " INSERT INTO ganeral_origin
-    (origin_code, origin_name, origin_abbr_name, IsActive
-    VALUES('$id', '$originName', '$originAbbrName', $isActive);
+    (origin_code, origin_name, origin_abbr_name, IsActive, created_by, cerated_date, update_by, update_date)
+    VALUES('', '$originName', ' $originAbbrName',  $isActive, '', '', '', '');
+    
     ";
     // echo $sql;
 
