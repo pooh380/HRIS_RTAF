@@ -43,7 +43,7 @@
                     <table id="Origins" class="table table-striped table-borderless table-hover bootstrap-3 " style="width:100%">
                       <thead>
                         <tr align="center" style="background-color:#0f1733; color:whitesmoke;" >
-                         
+                          <th></th>
                           <th>ลำดับที่</th>
                           <th>รหัสสัญชาติ</th>
                           <th>ชื่อสัญชาติ</th>

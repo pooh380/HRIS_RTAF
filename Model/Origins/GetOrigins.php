@@ -5,9 +5,10 @@ require_once "../../config.php";
 $request=$_REQUEST;
 $col =array(
     0   =>  'id',
-    1   =>  'origin_code',
-    2   =>  'origin_name',
-    3   =>  'isActive',
+    1   =>  'id',
+    2   =>  'origin_code',
+    3   =>  'origin_name',
+    4   =>  'isActive',
 ); 
 
 $sql ="SELECT id,origin_code, origin_name,isActive FROM ganeral_origin";
@@ -32,11 +33,15 @@ $data=array();
 
 while($row=sqlsrv_fetch_array($query)){
     $subdata=array();
-    $subdata[]=$row[0]; //id
-    $subdata[]=$row[1]; //origin_code
-    $subdata[]=$row[2]; //origin_name
-    if($row[3] = 1){
-        $subdata[] = '<i class="la la-toggle-on" style="color:green; font-size:30px; "></i>';
+    $subdata[] = '
+    <a href="../../Views/Origins/edit.php"><i class="la la-pencil-square-o" style="color:#0f1733"; font-size:30px;" id="'.$row[0].'"></i></a>
+    <a href=""><i class="la la-trash-o" style="color:#0f1733"; font-size:30px;" id="'.$row[0].'"></i></a>
+    ';//id
+    $subdata[] = $row[1]; //id
+    $subdata[] = $row[2]; //origin_code
+    $subdata[]= $row[3]; //origin_name
+    if($row[4] = 1){
+        $subdata[] = '<i class="la la-toggle-on" style="color: green; font-size:30px; "></i>';
     }else{
         $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
     }//status   

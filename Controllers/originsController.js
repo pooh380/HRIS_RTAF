@@ -41,3 +41,7 @@ function insertOrigins() {
         console.log(err);
     });
 }
+
+function UpdateOrigins() {
+
+}
