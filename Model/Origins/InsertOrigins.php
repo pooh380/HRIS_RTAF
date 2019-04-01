@@ -42,9 +42,9 @@ if (!empty($_POST)) {
 
     $queryInsert = sqlsrv_query($conn, $sql);
 
-    if ($queryInsert) {
-        echo "บันทึกสำเร็จ";
-    } else {
-        echo "บันทึกไม่ได้";
-    }
+//     if ($queryInsert) {
+//         echo "บันทึกสำเร็จ";
+//     } else {
+//         echo "บันทึกไม่ได้";
+//     }
 }
