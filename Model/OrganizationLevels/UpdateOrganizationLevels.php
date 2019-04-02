@@ -5,18 +5,18 @@ if($conn){echo "con";}
 
 if (!empty($_POST)) {
 
-    $id = $_POST['id'];
-    $nationCode = $_POST['nationCode'];
-    $nationName = $_POST['nationName'];
+    $orglevelId = $_POST['orglevelId'];
+    $orglevelname = $_POST['orglevelname'];
+    $orglevelAbbrname = $_POST['orglevelAbbrname'];
     $isActive = $_POST['isActive'];
 
     // date_default_timezone_set('Asia/Bangkok');
     // echo date("Y-m-d h:i:sa");
 
 
-    $sql = " UPDATE general_nation
-    SET NationCode='$nationCode', NationName='$nationName', IsActive=$isActive
-    WHERE id=$id;
+    $sql = " UPDATE organization_level
+    SET organization_level_name='$orglevelname', organization_level_abbr_name='$orglevelAbbrname', IsActive=$isActive
+    WHERE id = $orglevelId;
      ";
     echo $sql;
 

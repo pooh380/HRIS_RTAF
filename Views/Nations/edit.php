@@ -17,12 +17,11 @@
           border-radius: 20rem;
       }
   </style>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   <script>
       $(document).ready(function() {
           getIdForEdit();
       });
-
   </script>
 
   <div class="app-content content">
@@ -69,7 +68,7 @@
                                       <form class="form form-horizontal">
                                           <div class="form-body">
                                               <div class="row">
-                                              <div class="col-md-6">
+                                                  <div class="col-md-6">
                                                       <label class="col-md-6 label-control" for="nationCode">รหัสเชื้อชาติ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
@@ -86,7 +85,7 @@
                                                           </div>
                                                       </div>
                                                   </div>
-                                                  
+
                                                   <input type="hidden" name="id" id="id" value="">
                                               </div>
                                               <br>
@@ -99,9 +98,9 @@
                                                   </div>
                                               </div>
                                               <div class="form-actions center" align="center">
-                                              <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                                              <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="UpdateNation()">บันทึก</button>
-                                          </div>
+                                                  <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                                  <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="UpdateNation()">บันทึก</button>
+                                              </div>
                                           </div>
                                       </form>
                                   </div>

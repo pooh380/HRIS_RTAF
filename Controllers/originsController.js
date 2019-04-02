@@ -172,7 +172,7 @@ function deleteOrigins(id) {
             originsId: originsId
         },
         success: function(data) {
-            console.log(data);
+            // console.log(data);
             Swal.fire({
                 type: 'success',
                 title: 'ลบข้อมูลสำเร็จ',
@@ -183,7 +183,7 @@ function deleteOrigins(id) {
         },
         error: function(error) {
             // alert(error);
-            console.log(error);
+            // console.log(error);
             Swal.fire({
                 type: 'error',
                 title: 'ไม่สามารถลบข้อมูลได้',
