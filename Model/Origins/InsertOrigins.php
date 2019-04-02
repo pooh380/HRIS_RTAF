@@ -48,3 +48,4 @@ if (!empty($_POST)) {
         echo "บันทึกไม่ได้";
     }
 }
+sqlsrv_close($conn);

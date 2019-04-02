@@ -62,4 +62,6 @@ $json_data=array(
 
 echo json_encode($json_data);
 
+sqlsrv_close($conn);
+
 ?>

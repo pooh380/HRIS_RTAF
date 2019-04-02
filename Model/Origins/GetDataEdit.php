@@ -34,4 +34,6 @@ if(isset($originsId)){
     $r=array("id"=>$id,"originName"=>$originName,"originAbbrName"=>$originAbbrName,"IsActive"=>$IsActive);
     print(json_encode($r));
 }
+
+sqlsrv_close($conn);
 ?>

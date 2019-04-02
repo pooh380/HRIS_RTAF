@@ -22,6 +22,5 @@ if (!empty($_POST)) {
     } else {
         echo "บันทึกไม่ได้";
     }
-
- 
 }
+sqlsrv_close($conn);
