@@ -32,9 +32,10 @@ function insertOrigins() {
         var isActive = "0";
     }
 
+    console.log(originName + "" + originAbbrName + "" + isActive);
+
     $.ajax({
         type: "POST",
-        dataType: "json",
         url: "../../Model/Origins/InsertOrigins.php",
         data: {
             originName: originName,
@@ -125,28 +126,34 @@ function UpdateOrigins() {
     }
     // console.log(originsId + " " + originName + " " + originAbbrName + " " + isActive);
 
-    $.post("../../Model/Origins/UpdateOrigins.php", {
-        originsId: originsId,
-        originName: originName,
-        originAbbrName: originAbbrName,
-        isActive: isActive
-    }).done(function(data) {
-        // window.location.replace("../page/listUser.php");
-        // console.log(data);
-        Swal.fire({
-            type: 'success',
-            title: 'แก้ไขข้อมูลสำเร็จ',
-            showConfirmButton: false,
-            timer: 2000
-        });
-        setTimeout("window.open('../Origins/index.php', '_self');", 2000);
-    }).fail(function(err) {
-        // console.log(err);
-        Swal.fire({
-            type: 'error',
-            title: 'ไม่สามารถแก้ไขข้อมูลได้',
-            text: 'กรุณาตรวจสอบข้อมูลอีกครั้ง'
-        });
+    $.ajax({
+        type: "POST",
+        url: "../../Model/Origins/UpdateOrigins.php",
+        data: {
+            originsId: originsId,
+            originName: originName,
+            originAbbrName: originAbbrName,
+            isActive: isActive
+        },
+        success: function(data) {
+            console.log(data);
+            Swal.fire({
+                type: 'success',
+                title: 'เพิ่มแก้ไขข้อมูลสำเร็จ',
+                showConfirmButton: false,
+                timer: 2000
+            });
+            setTimeout("window.open('../Origins/index.php', '_self');", 2000);
+        },
+        error: function(error) {
+            // alert(error);
+            console.log(error);
+            Swal.fire({
+                type: 'error',
+                title: 'ไม่สามารถแก้ไขข้อมูลได้',
+                text: 'กรุณาตรวจสอบข้อมูลอีกครั้ง'
+            });
+        }
     });
 }
 // ใช้ ตอน update
@@ -156,26 +163,34 @@ function deleteOrigins(id) {
     // alert(event);
     event.preventDefault();
     var originsId = id;
-    console.log(originsId);
-    $.post("../../Model/Origins/DeleteOrigins.php", {
-        originsId: originsId
-    }).done(function(data) {
-        // window.location.replace("../page/listUser.php");
-        // console.log(data);
-        Swal.fire({
-            type: 'success',
-            title: 'ลบข้อมูลสำเร็จ',
-            showConfirmButton: false,
-            timer: 2000
-        });
-        setTimeout("window.open('../Origins/index.php', '_self');", 2000);
-    }).fail(function(err) {
-        // console.log(err);
-        Swal.fire({
-            type: 'error',
-            title: 'ไม่สามารถลบข้อมูลได้',
-            text: 'กรุณาตรวจสอบข้อมูลอีกครั้ง'
-        });
+    // console.log(originsId);
+
+    $.ajax({
+        type: "POST",
+        url: "../../Model/Origins/DeleteOrigins.php",
+        data: {
+            originsId: originsId
+        },
+        success: function(data) {
+            console.log(data);
+            Swal.fire({
+                type: 'success',
+                title: 'ลบข้อมูลสำเร็จ',
+                showConfirmButton: false,
+                timer: 2000
+            });
+            setTimeout("window.open('../Origins/index.php', '_self');", 2000);
+        },
+        error: function(error) {
+            // alert(error);
+            console.log(error);
+            Swal.fire({
+                type: 'error',
+                title: 'ไม่สามารถลบข้อมูลได้',
+                text: 'กรุณาตรวจสอบข้อมูลอีกครั้ง'
+            });
+        }
     });
+
 }
 // delete

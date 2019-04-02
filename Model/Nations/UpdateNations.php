@@ -1,12 +1,12 @@
 <?php
 
 require_once "../../config.php";
-// if($conn){echo "con";}
+if($conn){echo "con";}
 
 if (!empty($_POST)) {
 
     $id = $_POST['id'];
-    $nationName = $_POST['nationName'];
+    $nationCode = $_POST['nationCode'];
     $nationName = $_POST['nationName'];
     $isActive = $_POST['isActive'];
 
@@ -15,10 +15,10 @@ if (!empty($_POST)) {
 
 
     $sql = " UPDATE general_nation
-    SET nation_code='$nationName', nation_name='$nationName',  IsActive=$isActive
-    WHERE id=$id;
+    SET NationCode='$nationCode', NationName='$nationName', IsActive=$isActive
+    WHERE id=0;
      ";
-    // echo $sql;
+    echo $sql;
 
     $query = sqlsrv_query($conn, $sql);
 

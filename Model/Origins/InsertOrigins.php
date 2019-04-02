@@ -9,7 +9,7 @@ if (!empty($_POST)) {
 
     $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM general_origin; ";
 
-    // echo $sqlInsertSeqNoAndCode;
+    echo $sqlInsertSeqNoAndCode;
 
     $querySelect = sqlsrv_query($conn, $sqlInsertSeqNoAndCode);
 

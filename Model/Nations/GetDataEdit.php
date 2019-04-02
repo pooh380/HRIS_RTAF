@@ -12,7 +12,7 @@ $IsActive = "";
 // echo $originsId ;
 
 if(isset($nationID)){
-    $sql = " SELECT id, nation_code, nation_name, IsActive FROM general_nation where id = $nationID  ";
+    $sql = " SELECT id,NationCode, NationName, IsActive FROM general_nation where id = $nationID  ";
 
     // echo $sql;
 
@@ -22,8 +22,8 @@ if(isset($nationID)){
 
     while ($row = sqlsrv_fetch_array($query)) {
         $id = $row['id'];
-        $nationCode = $row['nation_code'];
-        $nationName = $row['nation_name'];
+        $nationCode = $row['NationCode'];
+        $nationName = $row['NationName'];
         $IsActive = $row['IsActive'];
         // echo $id;
         // echo $originName;
