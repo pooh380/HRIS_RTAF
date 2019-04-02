@@ -4,20 +4,29 @@ require_once "../../config.php";
 // if($conn){echo "con";}
 
 if (!empty($_POST)) {
-    $religionsName = $_POST['religionsName'];
-    $isActive = $_POST['isActive'];
+    $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM ganaral_religion; ";
 
-    $sql = " INSERT INTO ganaral_religion
-    (id, seq_no, ReligionCode, ReligionName, IsActive, created_by, cerated_date, update_by, update_date)
-    VALUES( 2, 2, 2, '$religionsName', $isActive, '', '', '', '');
-     ";
-    echo $sql;
-    if (sqlsrv_query($conn, $sql)) {
-        echo "บันทึกสำเร็จ";
+    echo $sqlInsertSeqNoAndCode;
 
-    } else{
-        echo "บันทึกไม่ได้";
+    $querySelect = sqlsrv_query($conn, $sqlInsertSeqNoAndCode);
+
+    $idNew = "";
+    while ($row = sqlsrv_fetch_array($querySelect)) {
+        $id = $row['maxid'];
+        $idNew = $id + 1;
+
+        $religionsName = $_POST['religionsName'];
+        $isActive = $_POST['isActive'];
+
+        $sql = "INSERT INTO general_religion
+     (ReligionCode, ReligionName, IsActive, CreatedBy, CreatedDate, ModifiedBy, ModifiedDate)
+     VALUES(  $idNew, '$religionsName', $isActive, '', '', '', ''); ";
+        echo $sql;
+        if (sqlsrv_query($conn, $sql)) {
+            echo "บันทึกสำเร็จ";
+        } else {
+            echo "บันทึกไม่ได้";
+        }
     }
 }
-
-?>
+sqlsrv_close($conn);
