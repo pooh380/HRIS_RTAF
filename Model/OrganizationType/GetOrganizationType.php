@@ -12,7 +12,9 @@ $col = array(
     5   =>  'end_date',
 );
 
-$sql = "SELECT id,organization_type_code, organization_type_name, isActive,start_date,end_date FROM organization_type ";
+$sql = "SELECT id, organization_type_code, organization_type_name, organization_type_abbr_name, organization_category_id, start_date, end_date, airforce, multiples_day, current_organization, IsActive, created_by, created_date, update_by, update_date
+FROM organization_type;
+ ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
