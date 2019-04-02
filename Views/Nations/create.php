@@ -104,6 +104,6 @@
   <!-- BEGIN PAGE LEVEL JS-->
   <script src="../../app-assets/js/scripts/extensions/sweet-alerts.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
-  <script src="../../Controllers/generalNationController.js"></script>
+  <script src="../../Controllers/nationController.js"></script>
   <!-- footer -->
   <?php include '../include/footer.php'; ?> 
