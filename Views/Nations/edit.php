@@ -28,7 +28,7 @@
       <div class="content-wrapper">
           <div class="content-header row">
               <div class="content-header-left col-md-6 col-12 mb-2">
-                  <h3 class="content-header-title">แก้สัญขาติ</h3>
+                  <h3 class="content-header-title">แก้สัญชาติ</h3>
                   <div class="row breadcrumbs-top">
 
                   </div>
@@ -39,7 +39,7 @@
               <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="./index.php">ระบบงานโครงสร้างอัตรากำลังพล</a></li>
                   <li class="breadcrumb-item"><a href="./">ข้อมูลทั่วไป</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">แก้สัญขาติ</li>
+                  <li class="breadcrumb-item active" aria-current="page">แก้สัญชาติ</li>
               </ol>
           </nav>
           <div class="content-body">
@@ -68,19 +68,12 @@
                                       <form class="form form-horizontal">
                                           <div class="form-body">
                                               <div class="row">
+                                                
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="nationCode">รหัสเชื้อชาติ</label>
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative">
-                                                              <input type="text" id="nationCode" class="form-control border-primary" placeholder="รหัสเชื้อชาติ" name="nationCode" value="">
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="nationName">ชื่อเต็มเชื้อชาติ</label>
+                                                      <label class="col-md-6 label-control" for="nationName">สัญชาติ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="nationName" class="form-control border-primary" placeholder="ชื่อเต็มเชื้อชาติ" name="nationName" value="">
+                                                              <input type="text" id="nationName" class="form-control border-primary" placeholder="สัญชาติ" name="nationName" value="">
 
                                                           </div>
                                                       </div>
