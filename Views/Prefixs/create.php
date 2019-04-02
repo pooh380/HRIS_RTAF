@@ -61,19 +61,19 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="originName">ชื่อเต็มเชื้อชาติ</label>
+                                                      <label class="col-md-6 label-control" for="PrefixsN">คำนำนหน้า</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="originName" class="form-control border-primary" placeholder="ชื่อเต็มเชื้อชาติ" name="originName">
+                                                              <input type="text" id="PrefixsN" class="form-control border-primary" placeholder="คำนำนหน้า" name="PrefixsN">
 
                                                           </div>
                                                       </div>
                                                   </div>
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="originAbbrName">ชื่อย่อเชื้อชาติ</label>
+                                                      <label class="col-md-6 label-control" for="PrefixsAbrr">ตัวย่อ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="originAbbrName" class="form-control border-primary" placeholder="ชื่อย่อเชื้อชาติ" name="originAbbrName">
+                                                              <input type="text" id="PrefixsAbrr" class="form-control border-primary" placeholder="ตัวย่อ" name="PrefixsAbrr">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -95,7 +95,7 @@
                   </div>
                   <div class="form-actions center" align="center">
                       <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="insertOrigins()">บันทึก</button>
+                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="insertPrefixs()">บันทึก</button>
                   </div>
               </section>
               <!-- // Basic form layout section end -->
