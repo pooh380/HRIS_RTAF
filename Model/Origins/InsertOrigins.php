@@ -7,7 +7,7 @@ if (!empty($_POST)) {
 
     //     // $originName = "ไทย";
 
-    $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM ganeral_origin; ";
+    $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM general_origin; ";
 
     // echo $sqlInsertSeqNoAndCode;
 
@@ -19,11 +19,11 @@ if (!empty($_POST)) {
         $idNew = $id+1;
     }
 
-    // if ($querySelect) {
-    //     echo "บันทึกสำเร็จ";
-    // } else {
-    //     echo "บันทึกไม่ได้";
-    // }
+    if ($querySelect) {
+        echo "บันทึกสำเร็จ";
+    } else {
+        echo "บันทึกไม่ได้";
+    }
 
     $originName = $_POST['originName'];
     $originAbbrName = $_POST['originAbbrName'];
@@ -33,7 +33,7 @@ if (!empty($_POST)) {
     // echo date("Y-m-d h:i:sa");
 
 
-    $sql = " INSERT INTO ganeral_origin
+    $sql = " INSERT INTO general_origin
     (origin_code, origin_name, origin_abbr_name, IsActive, created_by, cerated_date, update_by, update_date)
     VALUES('$idNew', '$originName', ' $originAbbrName',  $isActive, '', '', '', '');
     
@@ -42,9 +42,9 @@ if (!empty($_POST)) {
 
     $queryInsert = sqlsrv_query($conn, $sql);
 
-//     if ($queryInsert) {
-//         echo "บันทึกสำเร็จ";
-//     } else {
-//         echo "บันทึกไม่ได้";
-//     }
+    if ($queryInsert) {
+        echo "บันทึกสำเร็จ";
+    } else {
+        echo "บันทึกไม่ได้";
+    }
 }

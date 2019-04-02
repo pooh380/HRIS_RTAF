@@ -12,7 +12,7 @@ $IsActive = "";
 // echo $originsId ;
 
 if(isset($originsId)){
-    $sql = " SELECT id, origin_name, origin_abbr_name, IsActive FROM ganeral_origin where id = $originsId ";
+    $sql = " SELECT id, origin_name, origin_abbr_name, IsActive FROM general_origin where id = $originsId ";
 
     // echo $sql;
 

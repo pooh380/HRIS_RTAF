@@ -44,7 +44,7 @@
                                           <a href="./create.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                                               <span class="la la-plus-circle" style="color:white; font-weight: bold;font-size: 18px"></span> เพิ่ม
                                           </a>
-                                          <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
+                                          <a href="#" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                                               <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
                                           </a>
                                           <table id="Origins" class="table table-striped table-borderless table-hover bootstrap-3 " style="width:100%">

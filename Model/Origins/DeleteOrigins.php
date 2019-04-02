@@ -12,7 +12,7 @@ if (!empty($_POST)) {
     // echo date("Y-m-d h:i:sa");
 
 
-    $sql = " DELETE FROM ganeral_origin WHERE id=$originsId ";
+    $sql = " DELETE FROM general_origin WHERE id=$originsId ";
     // echo $sql;
 
     $query = sqlsrv_query($conn, $sql);

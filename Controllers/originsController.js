@@ -87,11 +87,20 @@ function getIdForEdit() {
             $("#id").val(data.id);
             $("#originName").val(data.originName);
             $("#originAbbrName").val(data.originAbbrName);
-            $("#IsActive").val(data.IsActive);
+            // console.log(data.IsActive);
+            if (data.IsActive == 0) {
+                // $("#isActive").removeAttr('checked');
+                $("#isActive").bootstrapToggle('disable');
+            } else {
+                // $('#isActive').prop("checked", true);
+                $("#isActive").bootstrapToggle('on');
+            }
+
             // console.log(data);
         },
         error: function(error) {
-            alert(error);
+            // alert(error);
+            console.log(error);
         }
     });
 }
@@ -136,10 +145,11 @@ function UpdateOrigins() {
 // ใช้ ตอน update
 
 // delete
-function deleteOrigins(event) {
+function deleteOrigins(id) {
     // alert(event);
-    var originsId = event;
-    // console.log(originsId);
+    event.preventDefault();
+    var originsId = id;
+    console.log(originsId);
     $.post("../../Model/Origins/DeleteOrigins.php", {
         originsId: originsId
     }).done(function(data) {

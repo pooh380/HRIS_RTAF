@@ -14,7 +14,7 @@ if (!empty($_POST)) {
     // echo date("Y-m-d h:i:sa");
 
 
-    $sql = " UPDATE ganeral_origin
+    $sql = " UPDATE general_origin
     SET origin_name='$originName', origin_abbr_name='$originAbbrName', IsActive=$isActive
     WHERE id=$originsId;
      ";
