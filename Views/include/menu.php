@@ -67,7 +67,7 @@
                             </li>
                             <li><a class="menu-item" href="../salary_rates/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">อัตรา</a>
                             </li>
-                            <li><a class="menu-item" href="../Rank_sort/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ลำดับการจัดเรียงยศ</a>
+                            <li><a class="menu-item" href="../Education/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">หลักสูตรการศึกษา</a>
                             </li>
                             <li><a class="menu-item" href="../ranks/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ยศ</a>
                             </li>
@@ -75,8 +75,7 @@
                             </li>
                             <li><a class="menu-item" href="../militaries/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">จำพวกทหาร</a>
                             </li>
-                            <li><a class="menu-item" href="../Pass_type/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ประเภทการสูญเสีย</a>
-                            </li>
+                           
                             <li><a class="menu-item" href="../pass_status/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">สาเหตุการปลด/สูญเสีย</a>
                             </li>
                             <li><a class="menu-item" href="../Unit_leader/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">หัวหน้าสายวิทยาการ</a>

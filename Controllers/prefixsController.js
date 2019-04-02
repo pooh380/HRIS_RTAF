@@ -10,7 +10,8 @@ function getPrefixs() {
         "ajax": {
             url: "../../Model/Prefixs/GetPrefixs.php", // json datasource
             dataType: "json",
-            type: "post" // method  , by default get
+            type: "post" 
+            // method  , by default get
                 // error: function() { // error handling
                 // $(".prefixsTable-grid-error").html("");
                 // $("#prefixsTable-grid").append('<tbody class="prefixsTable-grid-error"><tr><th colspan="3">No data found in the server</th></tr></tbody>');
