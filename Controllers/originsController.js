@@ -19,9 +19,9 @@ function getOrigins() {
 }
 // getData
 
+
 // insertData
 function insertOrigins() {
-
     var originName = $("#originName").val();
     var originAbbrName = $("#originAbbrName").val();
 
@@ -32,31 +32,38 @@ function insertOrigins() {
         var isActive = "0";
     }
 
-    // console.log(originName + " " + originAbbrName + " " + isActive);
-
-    $.post("../../Model/Origins/InsertOrigins.php", {
-        originName: originName,
-        originAbbrName: originAbbrName,
-        isActive: isActive
-    }).done(function(data) {
-        // console.log(data);
-        Swal.fire({
-            type: 'success',
-            title: 'เพิ่มข้อมูลสำเร็จ',
-            showConfirmButton: false,
-            timer: 2000
-        });
-        setTimeout("window.open('../Origins/index.php', '_self');", 2000);
-    }).fail(function(err) {
-        // console.log(err);
-        Swal.fire({
-            type: 'error',
-            title: 'ไม่สามารถเพิ่มข้อมูลได้',
-            text: 'กรุณาตรวจสอบข้อมูลอีกครั้ง'
-        });
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        url: "../../Model/Origins/InsertOrigins.php",
+        data: {
+            originName: originName,
+            originAbbrName: originAbbrName,
+            isActive: isActive
+        },
+        success: function(data) {
+            console.log(data);
+            Swal.fire({
+                type: 'success',
+                title: 'เพิ่มข้อมูลสำเร็จ',
+                showConfirmButton: false,
+                timer: 2000
+            });
+            setTimeout("window.open('../Origins/index.php', '_self');", 2000);
+        },
+        error: function(error) {
+            // alert(error);
+            console.log(error);
+            Swal.fire({
+                type: 'error',
+                title: 'ไม่สามารถเพิ่มข้อมูลได้',
+                text: 'กรุณาตรวจสอบข้อมูลอีกครั้ง'
+            });
+        }
     });
 }
 // insertData
+
 
 // ใช้ ตอน update
 // getUrlVars  เพื่อนำค่า id จาก url มาใช้ต่อ

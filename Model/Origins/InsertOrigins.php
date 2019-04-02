@@ -19,11 +19,11 @@ if (!empty($_POST)) {
         $idNew = $id+1;
     }
 
-    if ($querySelect) {
-        echo "บันทึกสำเร็จ";
-    } else {
-        echo "บันทึกไม่ได้";
-    }
+    // if ($querySelect) {
+    //     echo "บันทึกสำเร็จ";
+    // } else {
+    //     echo "บันทึกไม่ได้";
+    // }
 
     $originName = $_POST['originName'];
     $originAbbrName = $_POST['originAbbrName'];
