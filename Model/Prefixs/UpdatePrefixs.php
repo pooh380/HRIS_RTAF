@@ -14,11 +14,11 @@ if (!empty($_POST)) {
     // echo date("Y-m-d h:i:sa");
 
 
-    $sql = " UPDATE general_origin
+    $sql = " UPDATE general_perfix
     SET perfix_name='$PrefixsN', perfix_abbr_name='$PrefixsAbrr', IsActive=$isActive
     WHERE id=$PrefixsId;
      ";
-    // echo $sql;
+    echo $sql;
 
     $query = sqlsrv_query($conn, $sql);
 

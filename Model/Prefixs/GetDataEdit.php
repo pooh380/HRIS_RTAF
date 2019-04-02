@@ -5,14 +5,15 @@ require_once "../../config.php";
 // $_POST["originsId"] = 0;
 
 $PrefixsId = $_POST["PrefixsId"];
+// $PrefixsId = 1;
 $id = "";
 $PrefixsN = "";
 $PrefixsAbrr = "";
 $isActive = "";
-// echo $originsId ;
+echo $originsId ;
 
-if(isset($originsId)){
-    $sql = " SELECT id, perfix_name, perfix_abbr_name, isActive FROM general_perfix where id = $PrefixsId ";
+if(isset($PrefixsId)){
+    $sql = " SELECT id, perfix_name, perfix_abbr_name, IsActive FROM general_perfix where id = $PrefixsId ";
 
     // echo $sql;
 
@@ -22,12 +23,12 @@ if(isset($originsId)){
 
     while ($row = sqlsrv_fetch_array($query)) {
         $id = $row['id'];
-        $PrefixsN = $row['PrefixsN'];
-        $PrefixsAbrr = $row['PrefixsAbrr'];
+        $PrefixsN = $row['perfix_name'];
+        $PrefixsAbrr = $row['perfix_abbr_name'];
         $IsActive = $row['IsActive'];
         // echo $id;
-        // echo $originName;
-        // echo $originAbbrName;
+        // echo $PrefixsN;
+        // echo $PrefixsAbrr;
         // echo $IsActive;
     }
 

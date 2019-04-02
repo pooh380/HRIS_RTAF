@@ -17,6 +17,14 @@
           border-radius: 20rem;
       }
   </style>
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script>
+      $(document).ready(function() {
+          getIdForEdit();
+      });
+  </script>
+
   <div class="app-content content">
       <div class="content-wrapper">
           <div class="content-header row">
@@ -61,19 +69,19 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="PrefixsN">ชื่อเต็มเชื้อชาติ</label>
+                                                      <label class="col-md-6 label-control" for="PrefixsN">ชื่อเต็มคำนำหน้า</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="PrefixsN" class="form-control border-primary" placeholder="ชื่อเต็มเชื้อชาติ" name="originName">
+                                                              <input type="text" id="PrefixsN" class="form-control border-primary" placeholder="ชื่อเต็มเชื้อชาติ" name="PrefixsN">
 
                                                           </div>
                                                       </div>
                                                   </div>
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="PrefixsAbrr">ชื่อย่อเชื้อชาติ</label>
+                                                      <label class="col-md-6 label-control" for="PrefixsAbrr">ชื่อย่อคำนำหน้า</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="PrefixsAbrr" class="form-control border-primary" placeholder="ชื่อย่อเชื้อชาติ" name="originAbbrName">
+                                                              <input type="text" id="PrefixsAbrr" class="form-control border-primary" placeholder="ชื่อย่อเชื้อชาติ" name="PrefixsAbrr">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -83,19 +91,20 @@
                                                   <div class="col-md-12">
                                                       <br>
                                                       <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-                                                      <input type="checkbox" id="isActive"  checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก"  data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                                      <input type="checkbox" id="isActive" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
                                                   </div>
                                               </div>
+                                              <div class="form-actions center" align="center">
+                                                  <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                                  <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="UpdatePrefixs()">บันทึก</button>
+                                              </div>
                                           </div>
+                                          <input type="hidden" id="prefixsId" name="prefixsId">
                                       </form>
                                   </div>
                               </div>
                           </div>
                       </div>
-                  </div>
-                  <div class="form-actions center" align="center">
-                      <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="UpdatePrefixs()">บันทึก</button>
                   </div>
               </section>
               <!-- // Basic form layout section end -->
@@ -117,5 +126,5 @@
 
   <script src="../../Controllers/prefixsController.js"></script>
   <!-- footer -->
-  
+
   <?php include '../include/footer.php'; ?> 

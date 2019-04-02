@@ -10,7 +10,7 @@ function getPrefixs() {
         "ajax": {
             url: "../../Model/Prefixs/GetPrefixs.php", // json datasource
             dataType: "json",
-            type: "post" 
+            type: "post"
         }
     });
 }
@@ -72,6 +72,8 @@ function getUrlVars() {
 // getData จาก db เพื่อนำมาใช้มา input value
 function getIdForEdit() {
     var PrefixsId = getUrlVars()["id"];
+    // console.log(PrefixsId);
+
     $.ajax({
         type: "POST",
         dataType: "json",
@@ -80,10 +82,10 @@ function getIdForEdit() {
             PrefixsId: PrefixsId
         },
         success: function(data) {
-            $("#id").val(data.id);
+            $("#prefixsId").val(data.id);
             $("#PrefixsN").val(data.PrefixsN);
             $("#PrefixsAbrr").val(data.PrefixsAbrr);
-            // console.log(data.IsActive);
+            // console.log(data);
             if (data.IsActive == 0) {
                 // $("#isActive").removeAttr('checked');
                 $("#isActive").bootstrapToggle('disable');
@@ -103,7 +105,7 @@ function getIdForEdit() {
 // getData จาก db เพื่อนำมาใช้มา input value
 
 function UpdatePrefixs() {
-    var PrefixsId = $("#id").val();
+    var PrefixsId = $("#prefixsId").val();
     var PrefixsN = $("#PrefixsN").val();
     var PrefixsAbrr = $("#PrefixsAbrr").val();
     var checkBox = document.getElementById("isActive");
@@ -112,7 +114,7 @@ function UpdatePrefixs() {
     } else {
         var isActive = "0";
     }
-    // console.log(originsId + " " + originName + " " + originAbbrName + " " + isActive);
+    console.log(PrefixsId + " " + PrefixsN + " " + PrefixsAbrr + " " + isActive);
 
     $.post("../../Model/Prefixs/UpdatePrefixs.php", {
         PrefixsId: PrefixsId,
