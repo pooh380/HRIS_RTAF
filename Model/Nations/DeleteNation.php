@@ -5,7 +5,7 @@ require_once "../../config.php";
 
 if (!empty($_POST)) {
     // $originsId = 0;
-
+    
     $nationId = $_POST['nationId'];
 
     // date_default_timezone_set('Asia/Bangkok');

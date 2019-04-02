@@ -82,7 +82,7 @@
                                               </div>
                                               <div class="form-actions center" align="center">
                                                   <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                                                  <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="InsertNations()">บันทึก</button>
+                                                  <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="ีsubmit" onclick="InsertNations()">บันทึก</button>
                                               </div>
                                           </div>
                                       </form>
@@ -95,6 +95,9 @@
           </div>
       </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->

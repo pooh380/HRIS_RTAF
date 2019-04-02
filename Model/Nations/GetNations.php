@@ -6,13 +6,13 @@ require_once "../../config.php";
 $request = $_REQUEST;
 $col = array(
     0   =>  'id',
-    1   =>  'nation_code',
-    2   =>  'nation_name',
+    1   =>  'NationCode',
+    2   =>  'NationName',
     3   =>  'isActive',
 );
 
 //create column like table in database
-$sql = "SELECT id,nation_code, nation_name,isActive FROM general_nation ";
+$sql = " SELECT id,NationCode, NationName,IsActive FROM general_nation ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
@@ -23,10 +23,10 @@ $totalFilter = $totalData;
 
 
 
-$sql = "SELECT id,nation_code, nation_name,isActive FROM general_nation  WHERE 1=1 ";
+$sql = "SELECT id,NationCode, NationName,IsActive FROM general_nation  WHERE 1=1 ";
 if (!empty($request['search']['value'])) {
-    $sql .= " AND (nation_code Like N'%" . $request['search']['value'] . "%' ";
-    $sql .= " OR nation_name Like N'%" . $request['search']['value'] . "%') ";
+    $sql .= " AND (NationCode Like N'%" . $request['search']['value'] . "%' ";
+    $sql .= " OR NationName Like N'%" . $request['search']['value'] . "%') ";
     $query = sqlsrv_query($conn, $sql, $params, $options);
     $totalData = sqlsrv_num_rows($query);
 }
@@ -42,7 +42,7 @@ while ($row = sqlsrv_fetch_array($query)) {
     $subdata[] = $row[0];
     $subdata[] = $row[1];
     $subdata[] = $row[2];
-    if($row[3] = "1" ){
+    if($row[3] != "1" ){
         
         $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
        
