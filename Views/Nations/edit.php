@@ -78,7 +78,6 @@
                                                           </div>
                                                       </div>
                                                   </div>
-
                                                   <input type="hidden" name="id" id="id" value="">
                                               </div>
                                               <br>
@@ -107,7 +106,7 @@
           </div>
       </div>
   </div>
-
+  
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
   <!-- BEGIN VENDOR JS-->

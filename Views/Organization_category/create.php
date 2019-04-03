@@ -64,7 +64,7 @@
                                     <label class="col-md-6 label-control" for="OrganizationcategoryFN">ชื่อเต็มประเภทโครงสร้าง</label>
                                     <div class="col-md-12">
                                         <div class="position-relative ">
-                                            <input type="text" id="OrganizationcategoryFN" class="form-control border-primary" placeholder="ชื่อเต็มประเภทโครงสร้าง" name="fullName">
+                                            <input type="text" id="OrganizationcategoryFN" class="form-control border-primary" placeholder="ชื่อเต็มประเภทโครงสร้าง" name="OrganizationcategoryFN">
 
                                         </div>
                                     </div>
@@ -73,7 +73,7 @@
                                     <label class="col-md-6 label-control" for="OrganizationcategoryIN">ชื่อย่อประเภทโครงสร้าง</label>
                                     <div class="col-md-12">
                                         <div class="position-relative">
-                                            <input type="text" id="OrganizationcategoryIN" class="form-control border-primary" placeholder="ชื่อย่อประเภทโครงสร้าง" name="initName">
+                                            <input type="text" id="OrganizationcategoryIN" class="form-control border-primary" placeholder="ชื่อย่อประเภทโครงสร้าง" name="OrganizationcategoryIN">
                                         </div>
                                     </div>
                                 </div>
@@ -113,6 +113,9 @@
     insertOrganizationcategory();
 });
   </script> -->
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
