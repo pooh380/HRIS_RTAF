@@ -81,7 +81,14 @@ function getIdForEdit() {
             $("#id").val(data.id);
             $("#nationCode").val(data.nationCode);
             $("#nationName").val(data.nationName);
-            $("#isActive").val(data.IsActive);
+            if (data.IsActive == 0) {
+                // $("#isActive").removeAttr('checked');
+                $("#isActive").bootstrapToggle('disable');
+            } else {
+                // $('#isActive').prop("checked", true);
+                $("#isActive").bootstrapToggle('on');
+            }
+
             // console.log(data);
         },
         error: function(error) {
@@ -104,7 +111,7 @@ function UpdateNation() {
         var isActive = "0";
     }
 
-    console.log(nationCode + " " + nationName + " " + isActive);
+    // console.log(nationCode + " " + nationName + " " + isActive);
 
     $.post("../../Model/Nations/UpdateNations.php", {
         id: id,
@@ -113,7 +120,7 @@ function UpdateNation() {
         isActive: isActive
     }).done(function(data) {
         // window.location.replace("../page/listUser.php");
-        console.log(data);
+        // console.log(data);
         Swal.fire({
             type: 'success',
             title: 'แก้ไขข้อมูลสำเร็จ',

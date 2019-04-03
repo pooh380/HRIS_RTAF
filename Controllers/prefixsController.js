@@ -114,7 +114,7 @@ function UpdatePrefixs() {
     } else {
         var isActive = "0";
     }
-    console.log(PrefixsId + " " + PrefixsN + " " + PrefixsAbrr + " " + isActive);
+    // console.log(PrefixsId + " " + PrefixsN + " " + PrefixsAbrr + " " + isActive);
 
     $.post("../../Model/Prefixs/UpdatePrefixs.php", {
         PrefixsId: PrefixsId,
@@ -147,7 +147,7 @@ function deletePrefixs(id) {
     // alert(event);
     event.preventDefault();
     var PrefixsId = id;
-    console.log(PrefixsId);
+    // console.log(PrefixsId);
     $.post("../../Model/Prefixs/DeletePrefixs.php", {
         PrefixsId: PrefixsId
     }).done(function(data) {

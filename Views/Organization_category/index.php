@@ -49,17 +49,14 @@
                                           <table id="OrganizationCategory" class="table table-striped table-borderless table-hover bootstrap-3 " style="width:100%">
                                               <thead>
                                                   <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
-                                                  <th></th>
+                                                      <th></th>
                                                       <th>ลำดับที่</th>
-                                                      <th>รหัสหน่วยงาน</th>
-                                                      <th>ชื่อ</th>
-                                                      <th>ชื่อย่อ</th>
+                                                      <th>รหัสโครงสร้าง</th>
+                                                      <th>ชื่อโครงสร้าง</th>
+                                                      <th>ชื่อย่อโครงสร้าง</th>
                                                       <th>สถานะ</th>
                                                   </tr>
-                                              </thead>
-                                              <tbody align="center">
-
-                                              </tbody>
+                                              </thead></tbody>
                                           </table>
                                       </div>
                                   </div>
@@ -71,18 +68,24 @@
           </div>
       </div>
   </section>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
   <script src="../../Controllers/organizationCategoryController.js"></script>
+  
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
+ 
   <script type="text/javascript">
       $(document).ready(function() {
+          // console.log("ready");
           change_autorefreshdiv();
           getOrganizationCategory();
-          
       });
 
-      function change_autorefreshdiv() {}
+
+      function change_autorefreshdiv() {
+          // $('#prefixPage').addClass('active');
+      }
 
       function toggle(source) {
           var checkboxes = document.querySelectorAll('.checkAll');
@@ -97,5 +100,5 @@
 
   <!-- footer -->
   <?php
-  include "../include/footer.php";
-  ?> 
+    include "../include/footer.php";
+    ?> 
