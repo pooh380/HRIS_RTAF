@@ -64,7 +64,7 @@
                                                       <label class="col-md-6 label-control" for="organizationPartName">ชื่อเต็มส่วนราชการ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="organizationPartName" class="form-control border-primary" placeholder="ชื่อเต็มส่วนราชการ" name="fullName">
+                                                              <input type="text" id="organizationPartName" class="form-control border-primary" placeholder="ชื่อเต็มส่วนราชการ" name="organizationPartName">
 
                                                           </div>
                                                       </div>
@@ -73,7 +73,7 @@
                                                       <label class="col-md-6 label-control" for="organizationPartAbbrName">ชื่อย่อส่วนราชการ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="organizationPartAbbrName" class="form-control border-primary" placeholder="ชื่อย่อส่วนราชการ" name="initName">
+                                                              <input type="text" id="organizationPartAbbrName" class="form-control border-primary" placeholder="ชื่อย่อส่วนราชการ" name="organizationPartAbbrName">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -92,7 +92,7 @@
                                                   <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="insertOrganizationParts()">บันทึก</button> -->
 
                                                   <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                                                  <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" name="submit" onclick="insertOrganizationParts()">บันทึก</button>
+                                                  <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="insertOrganizationParts()">บันทึก</button>
 
                                               </div>
                                           </div>
@@ -108,6 +108,9 @@
       </div>
   </div>
   <!-- BEGIN VENDOR JS-->
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
   <!-- BEGIN PAGE VENDOR JS-->

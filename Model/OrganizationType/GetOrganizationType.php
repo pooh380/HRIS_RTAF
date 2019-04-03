@@ -12,9 +12,7 @@ $col = array(
     5   =>  'end_date',
 );
 
-$sql = "SELECT id, organization_type_name, organization_type_abbr_name, organization_category_id, start_date, end_date, airforce, multiples_day, current_organization, IsActive, created_by, created_date, update_by, update_date
-FROM organization_type;
- ";
+$sql = "SELECT id, organization_type_code,  organization_type_name,IsActive , start_date, end_date FROM organization_type ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
@@ -25,7 +23,7 @@ $totalFilter = $totalData;
 
 
 
-$sql = "SELECT id,organization_type_code, organization_type_name, isActive,start_date,end_date FROM organization_type  WHERE 1=1 ";
+$sql = "SELECT id,organization_type_code, organization_type_name, isActive ,start_date,end_date FROM organization_type  WHERE 1=1 ";
 if (!empty($request['search']['value'])) {
     $sql .= " AND (organization_type_code Like N'%" . $request['search']['value'] . "%' ";
     $sql .= " OR organization_type_name Like N'%" . $request['search']['value'] . "%') ";
@@ -44,7 +42,7 @@ while ($row = sqlsrv_fetch_array($query)) {
     $subdata[] = $row[0]; //id
     $subdata[] = $row[1]; //organization_type_code
     $subdata[] = $row[2]; //organization_type_name
-    if ($row[3] != "1") {
+    if ($row[3] !== "1") {
         $subdata[] = '<i class="la la-toggle-on" style="color:green; font-size:30px; "></i>';
     } else {
         $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';

@@ -23,7 +23,6 @@
       $(document).ready(function() {
           getIdForEdit();
       });
-
   </script>
 
   <div class="app-content content">
@@ -85,8 +84,8 @@
                                                               <input type="text" id="originAbbrName" class="form-control border-primary" placeholder="ชื่อย่อเชื้อชาติ" name="originAbbrName" value="">
                                                           </div>
                                                       </div>
+                                                      <input type="hidden" name="id" id="id" value="">
                                                   </div>
-                                                  <input type="hidden" name="id" id="id" value="">
                                               </div>
                                               <br>
                                               <div class="row">
@@ -99,9 +98,9 @@
                                                   </div>
                                               </div>
                                               <div class="form-actions center" align="center">
-                                              <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                                              <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="UpdateOrigins()">บันทึก</button>
-                                          </div>
+                                                  <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                                  <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="UpdateOrigins()">บันทึก</button>
+                                              </div>
                                           </div>
                                       </form>
                                   </div>
