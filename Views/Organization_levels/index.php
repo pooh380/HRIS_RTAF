@@ -47,7 +47,8 @@
                           <th></th>
                           <th>ลำดับที่</th>
                           <th>รหัสหน่วยงาน</th>
-                          <th>ชื่อ</th>
+                          <th>ชื่อเต็มหน่วยงาน</th>
+                          <th>ชื่อย่อหน่วยงาน</th>
                           <th>สถานะ</th>
                         </tr>
                       </thead>
@@ -66,6 +67,8 @@
   </div>
   </section>
   
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
   <script src="../../Controllers/organizationLevelController.js"></script>
 
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>

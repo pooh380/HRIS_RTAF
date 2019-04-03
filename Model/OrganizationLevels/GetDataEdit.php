@@ -12,7 +12,7 @@ $IsActive = "";
 // echo $originsId ;
 
 if(isset($orglevelId)){
-    $sql = " SELECT id, organization_level_code, organization_level_name, IsActive FROM organization_level where id = $orglevelId  ";
+    $sql = " SELECT id, organization_level_name, organization_level_abbr_name, IsActive FROM organization_level where id = $orglevelId  ";
 
     // echo $sql;
 
@@ -22,8 +22,8 @@ if(isset($orglevelId)){
 
     while ($row = sqlsrv_fetch_array($query)) {
         $id = $row['id'];
-        $orglevelname = $row['organization_level_code'];
-        $orglevelAbbrname = $row['organization_level_name'];
+        $orglevelname = $row['organization_level_name'];
+        $orglevelAbbrname = $row['organization_level_abbr_name'];
         $IsActive = $row['IsActive'];
         // echo $id;
         // echo $originName;

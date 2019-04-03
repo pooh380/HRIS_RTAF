@@ -127,7 +127,7 @@ function UpdateOrganizationLevel() {
             console.log(data);
             Swal.fire({
                 type: 'success',
-                title: 'เพิ่มแก้ไขข้อมูลสำเร็จ',
+                title: 'แก้ไขข้อมูลสำเร็จ',
                 showConfirmButton: false,
                 timer: 2000
             });
@@ -154,7 +154,7 @@ function deleteOrganizationLevls(id) {
 
     // console.log("organizationPartsId: " + organizationLevlsId);
 
-    $.post("../../Model/Organization_levels/deleteOrganizationParts.php", {
+    $.post("../../Model/OrganizationLevels/DeleteOrganizationLevels.php", {
         organizationLevlsId: organizationLevlsId
     }).done(function(data) {
         console.log(data);
@@ -164,7 +164,7 @@ function deleteOrganizationLevls(id) {
             showConfirmButton: false,
             timer: 2000
         });
-        setTimeout("window.open('../Origins/index.php', '_self');", 2000);
+        setTimeout("window.open('../Organization_levels/index.php', '_self');", 2000);
     }).fail(function(err) {
         // console.log(err);
         Swal.fire({
