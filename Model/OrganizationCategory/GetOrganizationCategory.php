@@ -32,15 +32,19 @@ $data = array();
 
 while ($row = sqlsrv_fetch_array($query)) {
     $subdata = array();
-    $subdata[] = $row[0]; //seq_no
-    $subdata[] = $row[1]; //organization_category_name
-    $subdata[] = $row[2]; //organization_category_code
-    $subdata[] = $row[3]; //IsActive    
-    if($row[4] = 1){
-        $subdata[] = '<i class="la la-toggle-on" style="color: green;font-size:30px;"></i>';
-    }else{
+    $subdata[] = '
+    <a href="../../Views/organization_category/edit.php?id='.$row[0].'"><i class="la la-pencil-square-o" style="color:#0f1733"; font-size:30px;" id="'.$row[0].'"></i></a>
+    <a href=""><i class="la la-trash-o" style="color:#0f1733"; font-size:30px;" onclick="deleteOrganizationCategory('.$row[0].')" id="'.$row[0].'"></i></a>
+    ';//id
+    $subdata[] = $row[0]; //id
+    $subdata[] = $row[1]; //organization_category_code
+    $subdata[] = $row[2]; //organization_category_name
+    $subdata[] = $row[3]; //organization_category_abbr_name
+    if($row[4] !== 1){
         $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
-    }//status           
+    }else{
+        $subdata[] = '<i class="la la-toggle-on" style="color: green; font-size:30px; "></i>';
+    }//status   
     $data[] = $subdata;
 }
 $json_data = array(

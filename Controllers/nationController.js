@@ -81,7 +81,14 @@ function getIdForEdit() {
             $("#id").val(data.id);
             $("#nationCode").val(data.nationCode);
             $("#nationName").val(data.nationName);
-            $("#isActive").val(data.IsActive);
+            if (data.IsActive == 0) {
+                // $("#isActive").removeAttr('checked');
+                $("#isActive").bootstrapToggle('disable');
+            } else {
+                // $('#isActive').prop("checked", true);
+                $("#isActive").bootstrapToggle('on');
+            }
+
             // console.log(data);
         },
         error: function(error) {
