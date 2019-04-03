@@ -111,7 +111,7 @@ function UpdateNation() {
         var isActive = "0";
     }
 
-    console.log(nationCode + " " + nationName + " " + isActive);
+    // console.log(nationCode + " " + nationName + " " + isActive);
 
     $.post("../../Model/Nations/UpdateNations.php", {
         id: id,
@@ -120,7 +120,7 @@ function UpdateNation() {
         isActive: isActive
     }).done(function(data) {
         // window.location.replace("../page/listUser.php");
-        console.log(data);
+        // console.log(data);
         Swal.fire({
             type: 'success',
             title: 'แก้ไขข้อมูลสำเร็จ',

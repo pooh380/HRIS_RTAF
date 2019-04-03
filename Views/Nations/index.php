@@ -77,7 +77,7 @@
   
   <script type="text/javascript">
     $(document).ready(function() {
-            console.log("ready");
+            // console.log("ready");
             change_autorefreshdiv();
             getGeneralNation();
     });
