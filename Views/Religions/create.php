@@ -64,19 +64,19 @@
                                                       <label class="col-md-6 label-control" for="religionsName">ชื่อเต็มศาสนา</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="religionsName" class="form-control border-primary" placeholder="ชื่อเต็มศาสนา" name="fullName">
+                                                              <input type="text" id="religionsName" class="form-control border-primary" placeholder="ชื่อเต็มศาสนา" name="religionsName">
 
                                                           </div>
                                                       </div>
                                                   </div>
-                                                  <div class="col-md-6">
+                                                  <!-- <div class="col-md-6">
                                                       <label class="col-md-6 label-control" for="religionsAbbrName">ชื่อย่อศาสนา</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="religionsAbbrName" class="form-control border-primary" placeholder="ชื่อย่อศาสนา" name="initName">
+                                                              <input type="text" id="religionsAbbrName" class="form-control border-primary" placeholder="ชื่อย่อศาสนา" name="religionsAbbrName">
                                                           </div>
                                                       </div>
-                                                  </div>
+                                                  </div> -->
                                               </div>
                                               <br>
                                               <div class="row">
@@ -84,27 +84,27 @@
                                                       <br>
                                                       <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
                                                       <input id="isActive" type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-                                                      <div id="console-event"></div>
                                                   </div>
                                               </div>
-
+                                              <div class="form-actions center" align="center">
+                                                  <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                                  <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="insertReligions()">บันทึก</button>
+                                              </div>
                                           </div>
-
                                       </form>
                                   </div>
                               </div>
                           </div>
                       </div>
                   </div>
-                  <div class="form-actions center" align="center">
-                      <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="insertReligions()">บันทึก</button>
-                  </div>
               </section>
               <!-- // Basic form layout section end -->
           </div>
       </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->

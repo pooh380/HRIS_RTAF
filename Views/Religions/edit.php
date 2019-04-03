@@ -17,6 +17,15 @@
           border-radius: 20rem;
       }
   </style>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script>
+      $(document).ready(function() {
+          getIdForEdit();
+      });
+
+  </script>
+
   <div class="app-content content">
       <div class="content-wrapper">
           <div class="content-header row">
@@ -61,61 +70,53 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput1">ชื่อเต็มศาสนา</label>
+                                                      <label class="col-md-6 label-control" for="religionsName">ชื่อเต็มศาสนา</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="userinput1" class="form-control border-primary" placeholder="ชื่อเต็มศาสนา" name="fullName">
+                                                              <input type="text" id="religionsName" class="form-control border-primary" placeholder="ชื่อเต็มศาสนา" name="religionsName">
 
                                                           </div>
                                                       </div>
                                                   </div>
-                                                  <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput2">ชื่อย่อศาสนา</label>
+                                                  <!-- <div class="col-md-6">
+                                                      <label class="col-md-6 label-control" for="religionsAbbrName">ชื่อย่อศาสนา</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="userinput2" class="form-control border-primary" placeholder="ชื่อย่อศาสนา" name="initName">
+                                                              <input type="text" id="religionsAbbrName" class="form-control border-primary" placeholder="ชื่อย่อศาสนา" name="religionsAbbrName">
                                                           </div>
                                                       </div>
-                                                  </div>
+                                                  </div> -->
                                               </div>
                                               <br>
-                                              <!-- <div class="row">
-                                                  <div class="col-md-12">
-                                                      <label class="col-md-4 label-control" for="userinput3">ชื่อหน่วยงาน</label>
-
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative ">
-                                                              <input type="text" id="timesheetinput1" class="form-control border-primary" placeholder="ชื่อหน่วยงาน" name="employeename">
-
-                                                          </div>
-                                                      </div>
-
-                                                  </div>
+                                              <input type="hidden" name="id" id="id" value="">
+                                              <div class="row">
                                                   <div class="col-md-12">
                                                       <br>
                                                       <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-                                                      <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-
+                                                      <input id="isActive" type="checkbox" data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
                                                   </div>
-                                              </div> -->
-
+                                              </div>
+                                              <div class="form-actions center" align="center">
+                                                  <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                                  <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="UpdateReligions()">บันทึก</button>
+                                              </div>
                                           </div>
-
                                       </form>
                                   </div>
                               </div>
                           </div>
                       </div>
                   </div>
-                  <div class="form-actions center" align="center">
-                      <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text">บันทึก</button>
-                  </div>
               </section>
               <!-- // Basic form layout section end -->
           </div>
       </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+  <script src="../../Controllers/ReligionsController.js"></script>
+
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->

@@ -43,7 +43,7 @@ function insertOrigins() {
             isActive: isActive
         },
         success: function(data) {
-            console.log(data);
+            // console.log(data);
             Swal.fire({
                 type: 'success',
                 title: 'เพิ่มข้อมูลสำเร็จ',
@@ -54,7 +54,7 @@ function insertOrigins() {
         },
         error: function(error) {
             // alert(error);
-            console.log(error);
+            // console.log(error);
             Swal.fire({
                 type: 'error',
                 title: 'ไม่สามารถเพิ่มข้อมูลได้',

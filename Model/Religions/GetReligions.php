@@ -11,7 +11,7 @@ $col = array(
 );
 
 
-$sql = "SELECT id,ReligionName, IsActive FROM general_religion ";
+$sql = "SELECT id, ReligionName, IsActive FROM general_religion ";
 
 $params = array();
 $params = array();
@@ -24,7 +24,7 @@ $totalFilter = $totalData;
 
 
 
-$sql = "SELECT id,ReligionName, IsActive FROM general_religion  WHERE 1=1 ";
+$sql = "SELECT id, ReligionName, IsActive FROM general_religion  WHERE 1=1 ";
 if (!empty($request['search']['value'])) {
     $sql .= " AND (id Like N'%" . $request['search']['value'] . "%' ";
     $sql .= " OR ReligionName Like N'%" . $request['search']['value'] . "%') ";
@@ -42,10 +42,12 @@ while ($row = sqlsrv_fetch_array($query)) {
     ';//id
     $subdata[] = $row[0];
     $subdata[] = $row[1];
-    $subdata[] = $row[2];
-    //create event on click in button edit in cell datatable for display modal dialog           $row[0] is id in table on database
-    // $subdata[]='<button type="button" id="getEdit" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal" data-id="'.$row[0].'"><i class="glyphicon glyphicon-pencil">&nbsp;</i>Edit</button>
-    //             <button type="button" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash">&nbsp;</i>Delete</button>';
+    if($row[2] != "1" ){ 
+        $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
+    }else{
+        
+        $subdata[] = '<i class="la la-toggle-on" style="color: green; font-size:30px; "></i>';
+    }//status   
     $data[] = $subdata;
 }
 
