@@ -5,7 +5,7 @@ require_once "../../config.php";
 // $_POST["originsId"] = 0;
 
 $PrefixsId = $_POST["PrefixsId"];
-// $PrefixsId = 1;
+// $PrefixsId = 11;
 $id = "";
 $PrefixsN = "";
 $PrefixsAbrr = "";
@@ -13,7 +13,9 @@ $isActive = "";
 echo $originsId ;
 
 if(isset($PrefixsId)){
-    $sql = " SELECT id, perfix_name, perfix_abbr_name, IsActive FROM general_perfix where id = $PrefixsId ";
+    $sql = " SELECT id, perfix_code, perfix_name, perfix_abbr_name, IsActive
+    FROM general_perfix WHERE id = $PrefixsId
+     ";
 
     // echo $sql;
 
@@ -32,7 +34,7 @@ if(isset($PrefixsId)){
         // echo $IsActive;
     }
 
-    $r=array("id"=>$id,"PrefixsN"=>$PrefixsN,"PrefixsAbrr"=>$PrefixsAbrr,"IsActive"=>$isActive);
+    $r=array("id"=>$id,"PrefixsN"=>$PrefixsN,"PrefixsAbrr"=>$PrefixsAbrr,"IsActive"=>$IsActive);
     print(json_encode($r));
 }
 
