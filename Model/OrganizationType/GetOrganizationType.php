@@ -12,7 +12,7 @@ $col = array(
     5   =>  'end_date',
 );
 
-$sql = "SELECT id, organization_type_code, organization_type_name, organization_type_abbr_name, organization_category_id, start_date, end_date, airforce, multiples_day, current_organization, IsActive, created_by, created_date, update_by, update_date
+$sql = "SELECT id, organization_type_name, organization_type_abbr_name, organization_category_id, start_date, end_date, airforce, multiples_day, current_organization, IsActive, created_by, created_date, update_by, update_date
 FROM organization_type;
  ";
 $params = array();
@@ -37,10 +37,14 @@ $data = array();
 
 while ($row = sqlsrv_fetch_array($query)) {
     $subdata = array();
+    $subdata[] = '
+    <a href="../../Views/OrganizationType/edit.php?id='.$row[0].'"><i class="la la-pencil-square-o" style="color:#0f1733"; font-size:30px;" id="'.$row[0].'"></i></a>
+    <a href=""><i class="la la-trash-o" style="color:#0f1733"; font-size:30px;" onclick="delete ('.$row[0].')" id="'.$row[0].'"></i></a>
+    ';//id
     $subdata[] = $row[0]; //id
     $subdata[] = $row[1]; //organization_type_code
     $subdata[] = $row[2]; //organization_type_name
-    if ($row[3] = 1) {
+    if ($row[3] != "1") {
         $subdata[] = '<i class="la la-toggle-on" style="color:green; font-size:30px; "></i>';
     } else {
         $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
