@@ -49,11 +49,7 @@
                                           <table id="OrganizationCategory" class="table table-striped table-borderless table-hover bootstrap-3 " style="width:100%">
                                               <thead>
                                                   <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
-<<<<<<< HEAD
                                                       <th></th>
-=======
-                                                  <th></th>
->>>>>>> bda6455b011e15c780e30e355add51f28da43c5c
                                                       <th>ลำดับที่</th>
                                                       <th>รหัสโครงสร้าง</th>
                                                       <th>ชื่อโครงสร้าง</th>
