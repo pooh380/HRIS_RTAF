@@ -54,7 +54,8 @@
                                                       <th></th>
                                                       <th>ลำดับที่</th>
                                                       <th>รหัสสังกัด</th>
-                                                      <th>ตัวย่อ</th>
+                                                      <th>ชื่อเต็มสังกัด</th>
+                                                      <th>ชื่อย่อสังกัด</th>
                                                       <th>สังกัด</th>
                                                       <th>สถานะ</th>
                                                   </tr>
@@ -74,13 +75,15 @@
       </div>
   </section>
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
   <script src="../../Controllers/organizationsController.js"></script>
 
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
   <script type="text/javascript">
       $(document).ready(function() {
-          console.log("ready");
+        //   console.log("ready");
           change_autorefreshdiv();
           getOrganization();
       });

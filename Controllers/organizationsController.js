@@ -14,9 +14,42 @@ function getOrganization() {
         }
     });
 }
-function addOrganizationList(){}
-function editOrganizationList(){}
-function deletOrganizationList(){}
 
-// ยังมีในส่วนที่เกี่ยวข้องกับหน้า organizationList ในหน้าอื่นๆ อ้างอื่นจากไฟล์ organizationList
 
+
+// delete
+function deleteOrganizations(id) {
+    // alert(event);
+    event.preventDefault();
+    var orgId = id;
+    // console.log(orgId);
+
+    $.ajax({
+        type: "POST",
+        url: "../../Model/Organization/DeleteOrganization.php",
+        data: {
+            orgId: orgId
+        },
+        success: function(data) {
+            // console.log(data);
+            Swal.fire({
+                type: 'success',
+                title: 'ลบข้อมูลสำเร็จ',
+                showConfirmButton: false,
+                timer: 2000
+            });
+            setTimeout("window.open('../Organizations/index.php', '_self');", 2000);
+        },
+        error: function(error) {
+            // alert(error);
+            // console.log(error);
+            Swal.fire({
+                type: 'error',
+                title: 'ไม่สามารถลบข้อมูลได้',
+                text: 'กรุณาตรวจสอบข้อมูลอีกครั้ง'
+            });
+        }
+    });
+
+}
+// delete
