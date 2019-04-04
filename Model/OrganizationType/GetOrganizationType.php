@@ -36,7 +36,7 @@ $data = array();
 while ($row = sqlsrv_fetch_array($query)) {
     $subdata = array();
     $subdata[] = '
-    <a href="../../Views/OrganizationType/edit.php?id='.$row[0].'"><i class="la la-pencil-square-o" style="color:#0f1733"; font-size:30px;" id="'.$row[0].'"></i></a>
+    <a href="../../Views/organization_types/edit.php?id='.$row[0].'"><i class="la la-pencil-square-o" style="color:#0f1733"; font-size:30px;" id="'.$row[0].'"></i></a>
     <a href=""><i class="la la-trash-o" style="color:#0f1733"; font-size:30px;" onclick="deleteOrganizationType('.$row[0].')" id="'.$row[0].'"></i></a>
     ';//id
     $subdata[] = $row[0]; //id
@@ -47,10 +47,21 @@ while ($row = sqlsrv_fetch_array($query)) {
     } else {
         $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
     } //status   
-    $subdata[] = $row[4]; //start_date   
-    $subdata[] = $row[5]; //end_date   
+    if($row[4] == false){ //start date
+        $subdata[] =  " - "; // กรณีค่าเป็นว่าง
+    } else{
+        $subdata[] = date("d-m-Y", strtotime($row['4'])); //set date format เพื่อที่จะเรื่องออกมาโชว์
+    }
+    
+    if($row[5] == false){  
+        $subdata[] =  " - "; // กรณีค่าเป็นว่าง
+    } else{
+        $subdata[] =  date_format($row[5],"d-m-Y"); //set date format เพื่อที่จะเรื่องออกมาโชว์
+    }
+    
     $data[] = $subdata;
 }
+
 $json_data = array(
     "draw"              =>  intval($request['draw']),
     "recordsTotal"      =>  intval($totalData),
