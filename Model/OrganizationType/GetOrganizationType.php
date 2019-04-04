@@ -7,12 +7,12 @@ $col = array(
     0   =>  'id',
     1   =>  'organization_type_name',
     2   =>  'organization_type_code',
-    3   =>  'isActive',
-    4   =>  'start_date',
-    5   =>  'end_date',
+    3   =>  'start_date',
+    4   =>  'end_date',
+    5   =>  'IsActive',
 );
 
-$sql = "SELECT id, organization_type_code,  organization_type_name,IsActive , start_date, end_date FROM organization_type ";
+$sql = "SELECT id, organization_type_code,  organization_type_name, start_date, end_date ,IsActive FROM organization_type ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
@@ -23,7 +23,7 @@ $totalFilter = $totalData;
 
 
 
-$sql = "SELECT id,organization_type_code, organization_type_name, isActive ,start_date,end_date FROM organization_type  WHERE 1=1 ";
+$sql = "SELECT id,organization_type_code, organization_type_name ,start_date,end_date, isActive FROM organization_type  WHERE 1=1 ";
 if (!empty($request['search']['value'])) {
     $sql .= " AND (organization_type_code Like N'%" . $request['search']['value'] . "%' ";
     $sql .= " OR organization_type_name Like N'%" . $request['search']['value'] . "%') ";
@@ -42,22 +42,24 @@ while ($row = sqlsrv_fetch_array($query)) {
     $subdata[] = $row[0]; //id
     $subdata[] = $row[1]; //organization_type_code
     $subdata[] = $row[2]; //organization_type_name
-    if ($row[3] !== "1") {
-        $subdata[] = '<i class="la la-toggle-on" style="color:green; font-size:30px; "></i>';
-    } else {
-        $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
-    } //status   
-    if($row[4] == false){ //start date
+    
+    if($row[3] == false){ //start date
         $subdata[] =  " - "; // กรณีค่าเป็นว่าง
     } else{
-        $subdata[] = date("d-m-Y", strtotime($row['4'])); //set date format เพื่อที่จะเรื่องออกมาโชว์
+        $subdata[] = date("d-m-Y", strtotime($row['3'])); //set date format เพื่อที่จะเรื่องออกมาโชว์
     }
     
-    if($row[5] == false){  
+    if($row[4] == false){  
         $subdata[] =  " - "; // กรณีค่าเป็นว่าง
     } else{
-        $subdata[] =  date_format($row[5],"d-m-Y"); //set date format เพื่อที่จะเรื่องออกมาโชว์
+        $subdata[] =  date_format($row[4],"d-m-Y"); //set date format เพื่อที่จะเรื่องออกมาโชว์
     }
+
+    if ($row[5] == 0) {
+        $subdata[] = '<i class="la la-toggle-off" style="color:red; font-size:30px; "></i>';
+    } else {
+        $subdata[] = '<i class="la la-toggle-on" style="green: green;font-size:30px;"></i>';
+    } //status   
     
     $data[] = $subdata;
 }
