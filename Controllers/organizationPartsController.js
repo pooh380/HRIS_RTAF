@@ -41,7 +41,7 @@ function insertOrganizationParts() {
             organizationPartAbbrName: organizationPartAbbrName,
             isActive: isActive
         },
-        success: function (data) {
+        success: function(data) {
             console.log(data);
             Swal.fire({
                 type: 'success',
@@ -51,7 +51,7 @@ function insertOrganizationParts() {
             });
             setTimeout("window.open('../OrganizationParts/index.php', '_self');", 2000);
         },
-        error: function (error) {
+        error: function(error) {
             // alert(error);
             console.log(error);
             Swal.fire({
@@ -159,18 +159,29 @@ function UpdateOrganizationParts() {
 }
 // ใช้ ตอน update
 
-function deleteOrganizationParts(event) {
-    var organizationPartsId = event;
-    console.log("organizationPartsId: " + organizationPartsId);
+function deleteOrganizationParts(id) {
+    var organizationPartsId = id;
+    event.preventDefault();
+    // console.log("organizationPartsId: " + organizationPartsId);
 
-    $.post("../../Model/OrganizationParts/deleteOrganizationParts.php", {
+    $.post("../../Model/OrganizationParts/DeleteOrganizationParts.php", {
         organizationPartsId: organizationPartsId
-    }).done(function (data) {
-        // window.location.replace("../page/listProduct.php");
-        //  console.log("delete success");
-        console.log(data);
-    }).fail(function (err) {
+    }).done(function(data) {
+        // console.log(data);
+        Swal.fire({
+            type: 'success',
+            title: 'ลบข้อมูลสำเร็จ',
+            showConfirmButton: false,
+            timer: 2000
+        });
+        setTimeout("window.open('../organizationparts/index.php', '_self');", 2000);
+    }).fail(function(err) {
         //  console.log("delete error");
-        console.log(err);
+        // console.log(err);
+        Swal.fire({
+            type: 'error',
+            title: 'ไม่สามารถลบข้อมูลได้',
+            text: 'กรุณาตรวจสอบข้อมูลอีกครั้ง'
+        });
     });
 }
