@@ -92,7 +92,7 @@
                                                   <div class="col-md-12">
                                                       <br>
                                                       <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-                                                      <input id="isActive" type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                                      <input id="isActive" type="checkbox" data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
                                                       <input type="hidden" name="id" id="id" value="">
                                                   </div>
                                               </div>
