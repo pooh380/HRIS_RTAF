@@ -40,15 +40,17 @@
                     <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                       <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
                     </a>
-                    <table id="degree" class="table table-striped table-borderless table-hover bootstrap-3 ">
+                    <table id="degreeData" class="table table-striped table-borderless table-hover bootstrap-3 " style="idth:100%;">
                       <thead>
                         <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                           <th><input type="checkbox" class="checkAll" onclick="toggle(this);" /></th>
-                          <th></th>
                           <th>ลำดับที่</th>
                           <th>รหัส</th>
-                          <th>ชื่อ</th>
-                          <th >ใช้งาน</th>
+                          <th>ชื่อเต็ม</th>
+                          <th>ชื่อย่อ</th>
+                          <th>DegreeDirectpay</th>
+                          <th>DegreeDirectpay1</th>
+                          <th>ใช้งาน</th>
                         </tr>
                       </thead>
                       <tbody align="center"></tbody>
@@ -73,8 +75,9 @@
   
   <script type="text/javascript">
     $(document).ready(function() {
-            console.log("ready");
+            // console.log("ready");
             change_autorefreshdiv();
+            getDegrees();
     });
 
     function change_autorefreshdiv(){

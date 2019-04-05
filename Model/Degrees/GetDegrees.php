@@ -8,10 +8,12 @@ $col =array(
     1   =>  'DegreeCode',
     2   =>  'DegreeName',
     3   =>  'DegreeAbbrName',
-    4   =>  'isActive',
+    4   =>  'DegreeDirectpay',
+    5   =>  'DegreeDirectpay1',
+    6   =>  'isActive',
 ); 
 
-$sql =" SELECT id, DegreeCode, DegreeName, DegreeAbbrName, IsActive FROM ganeral_degree ";
+$sql =" SELECT id, DegreeCode, DegreeName, DegreeAbbrName, DegreeDirectpay, DegreeDirectpay1, IsActive FROM ganeral_degree ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
@@ -23,7 +25,7 @@ $totalFilter = $totalData;
 
 
 
-$sql = " SELECT id, DegreeCode, DegreeName, DegreeAbbrName, IsActive FROM ganeral_degree WHERE 1=1 ";
+$sql = " SELECT id, DegreeCode, DegreeName, DegreeAbbrName, DegreeDirectpay, DegreeDirectpay1, IsActive FROM ganeral_degree WHERE 1=1 ";
 if (!empty($request['search']['value'])) {
     $sql .= " AND (DegreeName Like N'%" . $request['search']['value'] . "%' ";
     $sql .= " OR DegreeAbbrName Like N'%" . $request['search']['value'] . "%') ";
@@ -40,10 +42,12 @@ while($row=sqlsrv_fetch_array($query)){
     ';//id
     $subdata[] = $row[0]; //id
     // $subdata[] = $row[1]; //id
-    $subdata[] = $row[1]; //origin_code
-    $subdata[]= $row[2]; //origin_name
-    $subdata[]= $row[3]; //origin_abbr_name
-    if($row[4] !== 1){
+    $subdata[] = $row[1]; //DegreeCode
+    $subdata[]= $row[2]; //DegreeName
+    $subdata[]= $row[3]; //DegreeAbbrName
+    $subdata[]= $row[4]; //DegreeDirectpay
+    $subdata[]= $row[5]; //DegreeDirectpay1
+    if($row[6] !== 1){
         $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
     }else{
         $subdata[] = '<i class="la la-toggle-on" style="color: green; font-size:30px; "></i>';
