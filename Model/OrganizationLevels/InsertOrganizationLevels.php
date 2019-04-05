@@ -5,7 +5,7 @@ require_once "../../config.php";
 
 if (!empty($_POST)) {
 
-    $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM general_origin; ";
+    $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM organization_level; ";
 
     echo $sqlInsertSeqNoAndCode;
 

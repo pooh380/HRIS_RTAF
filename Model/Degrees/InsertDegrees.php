@@ -7,7 +7,7 @@ if (!empty($_POST)) {
 
     //     // $originName = "ไทย";
 
-    $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM general_origin; ";
+    $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM ganeral_degree; ";
 
     echo $sqlInsertSeqNoAndCode;
 
