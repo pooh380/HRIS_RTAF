@@ -6,7 +6,7 @@ require_once "../../config.php";
 $request = $_REQUEST;
 $col = array(
     0   =>  'id',
-    1   =>'province_name',
+    1   => 'province_name',
     2   =>  'province_abbr_name',
     3   =>  'IsActive'
 );
@@ -38,16 +38,17 @@ $data = array();
 while ($row = sqlsrv_fetch_array($query)) {
     $subdata = array();
     $subdata[] = '
-    <a href="../../Views/provinces/edit.php?id='.$row[0].'"><i class="la la-pencil-square-o" style="color:#0f1733"; font-size:30px;" id="'.$row[0].'"></i></a>
-    <a href=""><i class="la la-trash-o" style="color:#0f1733"; font-size:30px;" onclick="deleteReligions('.$row[0].')" id="'.$row[0].'"></i></a>
-    ';//id
+    <a href="../../Views/provinces/edit.php?id=' . $row[0] . '"><i class="la la-pencil-square-o" style="color:#0f1733"; font-size:30px;" id="' . $row[0] . '"></i></a>
+    <a href=""><i class="la la-trash-o" style="color:#0f1733"; font-size:30px;" onclick="deleteProvinces(' . $row[0] . ')" id="' . $row[0] . '"></i></a>
+    '; //id
     $subdata[] = $row[0];
     $subdata[] = $row[1];
     $subdata[] = $row[2];
-    $subdata[] = $row[3];
-    //create event on click in button edit in cell datatable for display modal dialog           $row[0] is id in table on database
-    // $subdata[]='<button type="button" id="getEdit" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal" data-id="'.$row[0].'"><i class="glyphicon glyphicon-pencil">&nbsp;</i>Edit</button>
-    //             <button type="button" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash">&nbsp;</i>Delete</button>';
+    if ($row[3] !== 1) {
+        $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
+    } else {
+        $subdata[] = '<i class="la la-toggle-on" style="color: green; font-size:30px; "></i>';
+    } //status   
     $data[] = $subdata;
 }
 
@@ -63,4 +64,4 @@ $json_data = array(
 );
 echo json_encode($json_data);
 sqlsrv_close($conn);
-?>
+ 

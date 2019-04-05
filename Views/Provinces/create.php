@@ -61,61 +61,51 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput1">ชื่อเต็มจังหวัด</label>
+                                                      <label class="col-md-6 label-control" for="provinceName">ชื่อเต็มจังหวัด</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="userinput1" class="form-control border-primary" placeholder="ชื่อเต็มจังหวัด" name="fullName">
+                                                              <input type="text" id="provinceName" class="form-control border-primary" placeholder="ชื่อเต็มจังหวัด" name="provinceName">
 
                                                           </div>
                                                       </div>
                                                   </div>
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput2">ชื่อย่อจังหวัด</label>
+                                                      <label class="col-md-6 label-control" for="provinceAbbrName">ตัวย่อ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="userinput2" class="form-control border-primary" placeholder="ชื่อย่อจังหวัด" name="initName">
+                                                              <input type="text" id="provinceAbbrName" class="form-control border-primary" placeholder="ตัวย่อ" name="provinceAbbrName">
                                                           </div>
                                                       </div>
                                                   </div>
                                               </div>
                                               <br>
-                                              <!-- <div class="row">
-                                                  <div class="col-md-12">
-                                                      <label class="col-md-4 label-control" for="userinput3">ชื่อหน่วยงาน</label>
-
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative ">
-                                                              <input type="text" id="timesheetinput1" class="form-control border-primary" placeholder="ชื่อหน่วยงาน" name="employeename">
-
-                                                          </div>
-                                                      </div>
-
-                                                  </div>
+                                              <div class="row">
                                                   <div class="col-md-12">
                                                       <br>
                                                       <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-                                                      <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-
+                                                      <input type="checkbox" id="isActive" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก"  data-onstyle="success" data-offstyle="danger" data-size="sm">
                                                   </div>
-                                              </div> -->
-
+                                              </div>
                                           </div>
-
                                       </form>
                                   </div>
                               </div>
                           </div>
                       </div>
                   </div>
+                  <hr>
                   <div class="form-actions center" align="center">
                       <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text">บันทึก</button>
+                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="insertProvinces()">บันทึก</button>
                   </div>
               </section>
               <!-- // Basic form layout section end -->
           </div>
       </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
@@ -126,5 +116,6 @@
   <script src="../../app-assets/js/scripts/extensions/sweet-alerts.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
 
+  <script src="../../Controllers/ProvincesController.js"></script>
   <!-- footer -->
   <?php include '../include/footer.php'; ?> 

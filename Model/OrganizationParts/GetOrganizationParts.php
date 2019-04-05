@@ -47,9 +47,7 @@ $col = array(
             $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
         }else{
             $subdata[] = '<i class="la la-toggle-on" style="color: green; font-size:30px; "></i>';
-        }//status          //create event on click in button edit in cell datatable for display modal dialog           $row[0] is id in table on database
-        // $subdata[]='<button type="button" id="getEdit" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal" data-id="'.$row[0].'"><i class="glyphicon glyphicon-pencil">&nbsp;</i>Edit</button>
-        //             <button type="button" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash">&nbsp;</i>Delete</button>';
+        }
         $data[] = $subdata;
     }
 
