@@ -59,6 +59,8 @@
                             </li>
                             <li><a class="menu-item" href="../Religions/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ศาสนา</a>
                             </li>
+                            <li><a class="menu-item" href="../ctltcntry/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ประเทศ</a>
+                            </li>
                             <li><a class="menu-item" href="../provinces/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">จังหวัด</a>
                             </li>
                             <li><a class="menu-item" href="../districts/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">เขต/อำเภอ</a>
