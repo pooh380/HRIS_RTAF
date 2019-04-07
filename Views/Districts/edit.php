@@ -17,11 +17,26 @@
           border-radius: 20rem;
       }
   </style>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+  <script src="../../Controllers/districtController.js"></script>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+      $(document).ready(function() {
+        //   console.log("ready");
+          getIdForEdit();
+      });
+  </script>
+
   <div class="app-content content">
       <div class="content-wrapper">
           <div class="content-header row">
               <div class="content-header-left col-md-6 col-12 mb-2">
-                  <h3 class="content-header-title">แก้ไขเขต/อำเภอ</h3>
+                  <h3 class="content-header-title">เพิ่มเขต/อำเภอ</h3>
                   <div class="row breadcrumbs-top">
 
                   </div>
@@ -32,7 +47,7 @@
               <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="./index.php">ระบบงานโครงสร้างอัตรากำลังพล</a></li>
                   <li class="breadcrumb-item"><a href="./">ข้อมูลทั่วไป</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">แก้ไขเขต/อำเภอ</li>
+                  <li class="breadcrumb-item active" aria-current="page">เพิ่มเขต/อำเภอ</li>
               </ol>
           </nav>
           <div class="content-body">
@@ -61,61 +76,61 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput1">ชื่อเต็มเขต/อำเภอ</label>
+                                                      <label class="col-md-6 label-control" for="districtsName">ชื่อเต็มเขต/อำเภอ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="userinput1" class="form-control border-primary" placeholder="ชื่อเต็มเขต/อำเภอ" name="fullName">
+                                                              <input type="text" id="districtsName" class="form-control border-primary" placeholder="ชื่อเต็มเขต/อำเภอ" name="districtsName">
 
                                                           </div>
                                                       </div>
                                                   </div>
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput2">ชื่อย่อเขต/อำเภอ</label>
+                                                      <label class="col-md-6 label-control" for="districtsAbbrName">ชื่อย่อเขต/อำเภอ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="userinput2" class="form-control border-primary" placeholder="ชื่อย่อเขต/อำเภอ" name="initName">
+                                                              <input type="text" id="districtsAbbrName" class="form-control border-primary" placeholder="ชื่อย่อเขต/อำเภอ" name="districtsAbbrName">
                                                           </div>
                                                       </div>
                                                   </div>
                                               </div>
                                               <br>
-                                              <!-- <div class="row">
-                                                  <div class="col-md-12">
+                                              <div class="row">
+                                                  <!-- <div class="col-md-12">
                                                       <label class="col-md-4 label-control" for="userinput3">ชื่อหน่วยงาน</label>
 
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
                                                               <input type="text" id="timesheetinput1" class="form-control border-primary" placeholder="ชื่อหน่วยงาน" name="employeename">
-
                                                           </div>
                                                       </div>
-
-                                                  </div>
+                                                  </div> -->
                                                   <div class="col-md-12">
                                                       <br>
                                                       <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-                                                      <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-
+                                                      <input id="isActive" type="checkbox" data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                                      <input type="hidden" name="districtsId" id="districtsId" value="">
                                                   </div>
-                                              </div> -->
+                                              </div>
+
+                                              <div class="form-actions center" align="center">
+                                                  <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                                  <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="updateDistricts()">บันทึก</button>
+                                              </div>
 
                                           </div>
-
                                       </form>
                                   </div>
                               </div>
                           </div>
                       </div>
                   </div>
-                  <div class="form-actions center" align="center">
-                      <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text">บันทึก</button>
-                  </div>
               </section>
               <!-- // Basic form layout section end -->
           </div>
       </div>
   </div>
+
+
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
@@ -127,4 +142,4 @@
   <!-- END PAGE LEVEL JS-->
 
   <!-- footer -->
-  <?php include '../include/footer.php'; ?> 
+  <?php include '../include/footer.php'; ?>
