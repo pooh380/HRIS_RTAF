@@ -61,19 +61,19 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="originName">ชื่อเต็มเชื้อชาติ</label>
+                                                      <label class="col-md-6 label-control" for="ctltcntryThName">ชื่อประเทศภาษาไทย</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="originName" class="form-control border-primary" placeholder="ชื่อเต็มเชื้อชาติ" name="originName">
+                                                              <input type="text" id="ctltcntryThName" class="form-control border-primary" placeholder="ชื่อประเทศภาษาไทย" name="ctltcntryThName">
 
                                                           </div>
                                                       </div>
                                                   </div>
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="originAbbrName">ชื่อย่อเชื้อชาติ</label>
+                                                      <label class="col-md-6 label-control" for="ctltcntryEngName">ชื่อประเทศภาษาอังกฤษ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="originAbbrName" class="form-control border-primary" placeholder="ชื่อย่อเชื้อชาติ" name="originAbbrName">
+                                                              <input type="text" id="ctltcntryEngName" class="form-control border-primary" placeholder="ชื่อประเทศภาษาอังกฤษ" name="ctltcntryEngName">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -81,10 +81,13 @@
                                               <br>
                                               <div class="row">
                                                   <div class="col-md-12">
-                                                      <br>
                                                       <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-                                                      <input type="checkbox" id="isActive" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก"  data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                                      <input id="isActive" type="checkbox"  checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
                                                   </div>
+                                              </div>
+                                              <div class="form-actions center" align="center">
+                                                  <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                                  <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="insertCtltcntry()">บันทึก</button>
                                               </div>
                                           </div>
                                       </form>
@@ -92,10 +95,6 @@
                               </div>
                           </div>
                       </div>
-                  </div>
-                  <div class="form-actions center" align="center">
-                      <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="insertOrigins()">บันทึก</button>
                   </div>
               </section>
               <!-- // Basic form layout section end -->
@@ -115,6 +114,6 @@
   <script src="../../app-assets/js/scripts/extensions/sweet-alerts.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
 
-  <script src="../../Controllers/originsController.js"></script>
+  <script src="../../Controllers/ctltcntryController.js"></script>
   <!-- footer -->
-  <?php include '../include/footer.php'; ?> 
+  <?php include '../include/footer.php'; ?>

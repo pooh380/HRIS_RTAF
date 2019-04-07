@@ -5,18 +5,18 @@ require_once "../../config.php";
 
 if (!empty($_POST)) {
 
-    $originsId = $_POST['originsId'];
-    $originName = $_POST['originName'];
-    $originAbbrName = $_POST['originAbbrName'];
+    $ctltcntryId = $_POST['ctltcntryId'];
+    $ctltcntryThName = $_POST['ctltcntryThName'];
+    $ctltcntryEngName = $_POST['ctltcntryEngName'];
     $isActive = $_POST['isActive'];
 
     // date_default_timezone_set('Asia/Bangkok');
     // echo date("Y-m-d h:i:sa");
 
 
-    $sql = " UPDATE general_origin
-    SET origin_name='$originName', origin_abbr_name='$originAbbrName', IsActive=$isActive
-    WHERE id=$originsId;
+    $sql = "UPDATE ctltcntry
+    SET CntryName='$ctltcntryThName', CntryEngName='$ctltcntryEngName', IsActive=$isActive
+    WHERE id=$ctltcntryId;
      ";
     // echo $sql;
 

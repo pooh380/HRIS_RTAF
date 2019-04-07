@@ -7,7 +7,7 @@ if (!empty($_POST)) {
 
     //     // $originName = "ไทย";
 
-    $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM general_origin; ";
+    $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM ctltcntry; ";
 
     echo $sqlInsertSeqNoAndCode;
 
@@ -25,18 +25,17 @@ if (!empty($_POST)) {
     //     echo "บันทึกไม่ได้";
     // }
 
-    $originName = $_POST['originName'];
-    $originAbbrName = $_POST['originAbbrName'];
+    $ctltcntryThName = $_POST['ctltcntryThName'];
+    $ctltcntryEngName = $_POST['ctltcntryEngName'];
     $isActive = $_POST['isActive'];
 
     // date_default_timezone_set('Asia/Bangkok');
     // echo date("Y-m-d h:i:sa");
 
 
-    $sql = " INSERT INTO general_origin
-    (origin_code, origin_name, origin_abbr_name, IsActive, created_by, cerated_date, update_by, update_date)
-    VALUES('$idNew', '$originName', ' $originAbbrName',  $isActive, '', '', '', '');
-    
+    $sql = " INSERT INTO ctltcntry
+    (CntryCode, CntryName, CntryEngName, IsActive)
+    VALUES($idNew, '$ctltcntryThName', '$ctltcntryEngName', $isActive);
     ";
     // echo $sql;
 

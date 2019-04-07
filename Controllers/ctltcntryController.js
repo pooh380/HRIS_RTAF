@@ -21,9 +21,9 @@ function getctltcntry() {
 
 
 // insertData
-function insertctltcntry() {
-    var originName = $("#originName").val();
-    var originAbbrName = $("#originAbbrName").val();
+function insertCtltcntry() {
+    var ctltcntryThName = $("#ctltcntryThName").val();
+    var ctltcntryEngName = $("#ctltcntryEngName").val();
 
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
@@ -32,14 +32,14 @@ function insertctltcntry() {
         var isActive = "0";
     }
 
-    console.log(originName + "" + originAbbrName + "" + isActive);
+    console.log(ctltcntryThName + "" + ctltcntryThName + "" + isActive);
 
     $.ajax({
         type: "POST",
         url: "../../Model/ctltcntry/InsertCtltcntry.php",
         data: {
-            originName: originName,
-            originAbbrName: originAbbrName,
+            ctltcntryThName: ctltcntryThName,
+            ctltcntryEngName: ctltcntryEngName,
             isActive: isActive
         },
         success: function(data) {
@@ -83,18 +83,18 @@ function getUrlVars() {
 
 // getData จาก db เพื่อนำมาใช้มา input value
 function getIdForEdit() {
-    var originsId = getUrlVars()["id"];
+    var ctltcntryId = getUrlVars()["id"];
     $.ajax({
         type: "POST",
         dataType: "json",
-        url: "../../Model/Origins/GetDataEdit.php",
+        url: "../../Model/ctltcntry/GetDataEdit.php",
         data: {
-            originsId: originsId
+            ctltcntryId: ctltcntryId
         },
         success: function(data) {
-            $("#id").val(data.id);
-            $("#originName").val(data.originName);
-            $("#originAbbrName").val(data.originAbbrName);
+            $("#ctltcntryId").val(data.id);
+            $("#ctltcntryThName").val(data.ctltcntryThName);
+            $("#ctltcntryEngName").val(data.ctltcntryEngName);
             // console.log(data.IsActive);
             if (data.IsActive == 0) {
                 // $("#isActive").removeAttr('checked');
@@ -114,25 +114,25 @@ function getIdForEdit() {
 }
 // getData จาก db เพื่อนำมาใช้มา input value
 
-function UpdateOrigins() {
-    var originsId = $("#id").val();
-    var originName = $("#originName").val();
-    var originAbbrName = $("#originAbbrName").val();
+function UpdateCtltcntry() {
+    var ctltcntryId = $("#ctltcntryId").val();
+    var ctltcntryThName = $("#ctltcntryThName").val();
+    var ctltcntryEngName = $("#ctltcntryEngName").val();
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
         var isActive = "1";
     } else {
         var isActive = "0";
     }
-    // console.log(originsId + " " + originName + " " + originAbbrName + " " + isActive);
+    // console.log(origictltcntryIdnsId + " " + ctltcntryThName + " " + ctltcntryEngName + " " + isActive);
 
     $.ajax({
         type: "POST",
-        url: "../../Model/Origins/UpdateOrigins.php",
+        url: "../../Model/ctltcntry/UpdateCtltcntry.php",
         data: {
-            originsId: originsId,
-            originName: originName,
-            originAbbrName: originAbbrName,
+            ctltcntryId: ctltcntryId,
+            ctltcntryThName: ctltcntryThName,
+            ctltcntryEngName: ctltcntryEngName,
             isActive: isActive
         },
         success: function(data) {
@@ -143,11 +143,11 @@ function UpdateOrigins() {
                 showConfirmButton: false,
                 timer: 2000
             });
-            setTimeout("window.open('../Origins/index.php', '_self');", 2000);
+            setTimeout("window.open('../ctltcntry/index.php', '_self');", 2000);
         },
         error: function(error) {
             // alert(error);
-            console.log(error);
+            // console.log(error);
             Swal.fire({
                 type: 'error',
                 title: 'ไม่สามารถแก้ไขข้อมูลได้',
@@ -159,17 +159,17 @@ function UpdateOrigins() {
 // ใช้ ตอน update
 
 // delete
-function deleteOrigins(id) {
+function deleteCtltcntry(id) {
     // alert(event);
     event.preventDefault();
-    var originsId = id;
+    var ctltcntryId = id;
     // console.log(originsId);
 
     $.ajax({
         type: "POST",
-        url: "../../Model/Origins/DeleteOrigins.php",
+        url: "../../Model/ctltcntry/DeleteCtltcntry.php",
         data: {
-            originsId: originsId
+            ctltcntryId: ctltcntryId
         },
         success: function(data) {
             // console.log(data);
@@ -179,7 +179,7 @@ function deleteOrigins(id) {
                 showConfirmButton: false,
                 timer: 2000
             });
-            setTimeout("window.open('../Origins/index.php', '_self');", 2000);
+            setTimeout("window.open('../ctltcntry/index.php', '_self');", 2000);
         },
         error: function(error) {
             // alert(error);

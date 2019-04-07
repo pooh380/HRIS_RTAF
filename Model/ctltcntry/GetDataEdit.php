@@ -4,15 +4,15 @@ require_once "../../config.php";
 
 // $_POST["originsId"] = 0;
 
-$originsId = $_POST["originsId"];
+$ctltcntryId = $_POST["ctltcntryId"];
 $id = "";
-$originName = "";
-$originAbbrName = "";
+$ctltcntryThName = "";
+$ctltcntryEngName = "";
 $IsActive = "";
 // echo $originsId ;
 
-if(isset($originsId)){
-    $sql = " SELECT id, origin_name, origin_abbr_name, IsActive FROM general_origin where id = $originsId ";
+if(isset($ctltcntryId)){
+    $sql = " SELECT id, CntryCode, CntryName, CntryEngName, IsActive FROM ctltcntry where id = $ctltcntryId ";
 
     // echo $sql;
 
@@ -22,8 +22,8 @@ if(isset($originsId)){
 
     while ($row = sqlsrv_fetch_array($query)) {
         $id = $row['id'];
-        $originName = $row['origin_name'];
-        $originAbbrName = $row['origin_abbr_name'];
+        $ctltcntryThName = $row['CntryName'];
+        $ctltcntryEngName = $row['CntryEngName'];
         $IsActive = $row['IsActive'];
         // echo $id;
         // echo $originName;
@@ -31,7 +31,7 @@ if(isset($originsId)){
         // echo $IsActive;
     }
 
-    $r=array("id"=>$id,"originName"=>$originName,"originAbbrName"=>$originAbbrName,"IsActive"=>$IsActive);
+    $r=array("id"=>$id,"ctltcntryThName"=>$ctltcntryThName,"ctltcntryEngName"=>$ctltcntryEngName,"IsActive"=>$IsActive);
     print(json_encode($r));
 }
 
