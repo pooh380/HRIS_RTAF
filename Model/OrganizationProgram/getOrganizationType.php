@@ -4,12 +4,13 @@ require_once "../../config.php";
 
 // $name = $_GET['q'];
 
-
-$sql = "SELECT id, organization_type_name FROM organization_type where organization_type_name  LIKE N'%" . $_GET['q'] . "%' ";
-
-$result = sqlsrv_query($conn, $sql);
-
-
+if (!empty($_GET['q'])) {
+    $sql = "SELECT id, organization_type_name FROM organization_type where organization_type_name  LIKE N'%" . $_GET['q'] . "%' ";
+    $result = sqlsrv_query($conn, $sql);
+} else { 
+    $sql = " SELECT id, organization_type_name FROM organization_type where organization_type_name ";
+    $result = sqlsrv_query($conn, $sql);
+}
 
 while ($row = sqlsrv_fetch_array($result)) {
 
@@ -26,5 +27,6 @@ $json = array(
 
 
 echo json_encode($json);
+
 
 mysqli_close($conn);

@@ -25,8 +25,7 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-        console.log("ready");
-        // getOrganizationType();
+        // console.log("ready");
         $("#organizationType").select2({
               ajax: {
                 url: "../../Model/OrganizationProgram/getOrganizationType.php",/* Url ที่ต้องการส่งค่าไปประมวลผลการค้นข้อมูล*/
@@ -127,7 +126,7 @@
                                                                 <option value="โครงสร้างอัตราทอ.52">หน่วย</option>
                                                                 <option value="โครงสร้างอื่นๆ">โครงสร้างอื่นๆ</option>
                                                             </select>
-                                                        </div> ก
+                                                        </div> 
                                                     </div>
                                                 </fieldset>
                                                 <div class="text-right">

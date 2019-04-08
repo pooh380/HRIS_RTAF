@@ -205,7 +205,7 @@
                                                                   </select>
                                                               </div>
                                                               <div class="col-md-1">
-                                                                  <a href="../organization_types/create.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
+                                                                  <a href="../organizationProgram/createOrganizationCategory.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
                                                               </div>
                                                           </div>
                                                           <div class="col-md-6 mt-1">
@@ -236,7 +236,7 @@
                                                                   </select>
                                                               </div>
                                                               <div class="col-md-1">
-                                                                  <a href="../Organization_parts/create.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
+                                                                  <a href="../organizationProgram/createOrganizationParts.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
                                                               </div>
                                                           </div>
                                                           <div class="col-md-5 mt-1 ml-5">
