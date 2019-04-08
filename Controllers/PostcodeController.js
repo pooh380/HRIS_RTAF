@@ -71,21 +71,20 @@ function getUrlVars() {
 
 // getData จาก db เพื่อนำมาใช้มา input value
 function getIdForEdit() {
-    var rankId = getUrlVars()["id"];
+    var postCodeId = getUrlVars()["id"];
     // console.log(PrefixsId);
 
     $.ajax({
         type: "POST",
         dataType: "json",
-        url: "../../Model/Ranks/GetDataEdit.php",
+        url: "../../Model/Postcodes/GetDataEdit.php",
         data: {
-            rankId: rankId
+            postCodeId: postCodeId
         },
         success: function(data) {
-            $("#rankId").val(data.id);
-            $("#rankcode").val(data.rankcode);
-            $("#rankName").val(data.rankName);
-            $("#rankAbbrName").val(data.rankAbbrName);
+            $("#postCodeId").val(data.id);
+            $("#postCodeNo").val(data.postCodeNo);
+            $("#postCodeName").val(data.postCodeName);
             // console.log(data);
             if (data.IsActive == 0) {
                 // $("#isActive").removeAttr('checked');
@@ -106,10 +105,8 @@ function getIdForEdit() {
 // getData จาก db เพื่อนำมาใช้มา input value
 
 function UpdatePostCodes() {
-    var rankId = $("#rankId").val();
-    var rankcode = $("#rankcode").val();
-    var rankName = $("#rankName").val();
-    var rankAbbrName = $("#rankAbbrName").val();
+    var postCodeNo = $("#postCodeNo").val();
+    var postCodeName = $("#postCodeName").val();
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
         var isActive = "1";
@@ -118,11 +115,9 @@ function UpdatePostCodes() {
     }
     // console.log(PrefixsId + " " + PrefixsN + " " + PrefixsAbrr + " " + isActive);
 
-    $.post("../../Model/Ranks/UpdateRank.php", {
-        rankId: rankId,
-        rankcode: rankcode,
-        rankName: rankName,
-        rankAbbrName: rankAbbrName,
+    $.post("../../Model/Postcodes/UpdatePostcodes.php", {
+        postCodeNo: postCodeNo,
+        postCodeName: postCodeName,
         isActive: isActive
     }).done(function(data) {
         // window.location.replace("../page/listUser.php");
@@ -133,7 +128,7 @@ function UpdatePostCodes() {
             showConfirmButton: false,
             timer: 2000
         });
-        setTimeout("window.open('../Ranks/index.php', '_self');", 2000);
+        setTimeout("window.open('../Postcodes/index.php', '_self');", 2000);
     }).fail(function(err) {
         // console.log(err);
         Swal.fire({
@@ -149,10 +144,10 @@ function UpdatePostCodes() {
 function deletePostCode(id) {
     // alert(event);
     event.preventDefault();
-    var rankId = id;
+    var postCodeId = id;
     // console.log(PrefixsId);
-    $.post("../../Model/Ranks/DeleteRank.php", {
-        rankId: rankId
+    $.post("../../Model/Postcodes/DeletePostcodes.php", {
+        postCodeId: rankId
     }).done(function(data) {
         // window.location.replace("../page/listUser.php");
         // console.log(data);
@@ -162,7 +157,7 @@ function deletePostCode(id) {
             showConfirmButton: false,
             timer: 2000
         });
-        setTimeout("window.open('../Ranks/index.php', '_self');", 2000);
+        setTimeout("window.open('../Postcodes/index.php', '_self');", 2000);
     }).fail(function(err) {
         // console.log(err);
         Swal.fire({

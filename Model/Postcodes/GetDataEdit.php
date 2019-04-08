@@ -4,16 +4,15 @@ require_once "../../config.php";
 
 // $_POST["originsId"] = 0;
 
-$rankId = $_POST["rankId"];
+$postCodeId = $_POST["postCodeId"];
 $id = "";
-$rankcode = "";
-$rankName = "";
-$rankAbbrName = "";
+$postCodeNo = "";
+$postCodeName = "";
 $IsActive = "";
 // echo $originsId ;
 
-if(isset($rankId)){
-    $sql = " SELECT id, RankCode, RankName, RankAbbrName, IsActive FROM general_rankcode where id = $rankId ";
+if(isset($postCodeId)){
+    $sql = " SELECT id, postcode_code, postcode_name, postcode_abbr_name, IsActive FROM postcode; where id = $postCodeId ";
 
     // echo $sql;
 
@@ -23,12 +22,11 @@ if(isset($rankId)){
 
     while ($row = sqlsrv_fetch_array($query)) {
         $id = $row['id'];
-        $rankcode = $row['RankCode'];
-        $rankName = $row['RankName'];
-        $rankAbbrName = $row['RankAbbrName'];
+        $postCodeNo = $row['postcode_code'];
+        $postCodeName = $row['postcode_name'];
         $IsActive = $row['IsActive'];
     }
-    $r=array("id"=>$id,"rankcode"=>$rankcode,"rankName"=>$rankName,"rankAbbrName"=>$rankAbbrName,"IsActive"=>$IsActive);
+    $r=array("id"=>$id,"postCodeNo"=>$postCodeNo,"postCodeName"=>$postCodeName,"IsActive"=>$IsActive);
     print(json_encode($r));
 }
 

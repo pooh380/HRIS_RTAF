@@ -5,20 +5,18 @@ require_once "../../config.php";
 
 if (!empty($_POST)) {
 
-    $rankId = $_POST['rankId'];
-    $rankcode = $_POST['rankcode'];
-    $rankName = $_POST['rankName'];
-    $rankAbbrName = $_POST['rankAbbrName'];
+    $postCodeNo = $_POST['postCodeNo'];
+    $postCodeName = $_POST['postCodeName'];
     $isActive = $_POST['isActive'];
 
     // date_default_timezone_set('Asia/Bangkok');
     // echo date("Y-m-d h:i:sa");
 
 
-    $sql = " UPDATE general_rankcode
-    SET RankCode=$rankcode, RankAbbrName='$rankAbbrName', RankName='$rankName', IsActive=$isActive
-    WHERE id=$rankId;    
-     ";
+    $sql = " UPDATE postcode
+    SET postcode_code='$postCodeNo', postcode_name='$postCodeName'
+    WHERE id=$isActive;
+    ";
     // echo $sql;
 
     $query = sqlsrv_query($conn, $sql);

@@ -6,13 +6,13 @@ require_once "../../config.php";
 if (!empty($_POST)) {
     // $originsId = 0;
 
-    $rankId = $_POST['rankId'];
+    $postCodeId = $_POST['postCodeId'];
 
     // date_default_timezone_set('Asia/Bangkok');
     // echo date("Y-m-d h:i:sa");
 
 
-    $sql = " DELETE FROM general_rankcode WHERE id=$rankId; ";
+    $sql = " DELETE FROM postcode WHERE id=$postCodeId; ";
     // echo $sql;
 
     $query = sqlsrv_query($conn, $sql);
