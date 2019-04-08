@@ -47,14 +47,16 @@
                                           <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                                               <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
                                           </a>
-                                          <table id="Origins" class="table table-striped table-borderless table-hover bootstrap-3 " style="width:100%">
+                                          <table id="educationTable" class="table table-striped table-borderless table-hover bootstrap-3 " style="width:100%">
                                               <thead>
                                                   <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                                                       <th></th>
                                                       <th>ลำดับที่</th>
-                                                      <th>รหัสสัญชาติ</th>
-                                                      <th>ชื่อสัญชาติ</th>
-                                                      <th>ชื่อย่อสัญชาติ</th>
+                                                      <th>EduMainCode</th>
+                                                      <th>EduMainCodeRef</th>
+                                                      <th>CourseName</th>
+                                                      <th>CourseFlag</th>
+                                                      <th>Remark</th>
                                                       <th>สถานะ</th>
                                                   </tr>
                                               </thead>
@@ -75,7 +77,7 @@
   <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
-  <script src="../../Controllers/originsController.js"></script>
+  <script src="../../Controllers/educationController.js"></script>
 
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
@@ -83,7 +85,7 @@
       $(document).ready(function() {
           // console.log("ready");
           change_autorefreshdiv();
-          getOrigins();
+          getEducation();
       });
 
 

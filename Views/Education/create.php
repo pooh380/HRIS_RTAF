@@ -21,7 +21,7 @@
       <div class="content-wrapper">
           <div class="content-header row">
               <div class="content-header-left col-md-6 col-12 mb-2">
-                  <h3 class="content-header-title">เพิ่มเชื้อชาติ</h3>
+                  <h3 class="content-header-title">เพิ่มระดับการศึกษา</h3>
                   <div class="row breadcrumbs-top">
 
                   </div>
@@ -32,7 +32,7 @@
               <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="./index.php">ระบบงานโครงสร้างอัตรากำลังพล</a></li>
                   <li class="breadcrumb-item"><a href="./">ข้อมูลทั่วไป</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">เพิ่มเชื้อชาติ</li>
+                  <li class="breadcrumb-item active" aria-current="page">เพิ่มระดับการศึกษา</li>
               </ol>
           </nav>
           <div class="content-body">
@@ -61,19 +61,44 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="originName">ชื่อเต็มเชื้อชาติ</label>
+                                                      <label class="col-md-6 label-control" for="eduMainCode">EduMainCode</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="originName" class="form-control border-primary" placeholder="ชื่อเต็มเชื้อชาติ" name="originName">
+                                                              <input type="text" id="eduMainCode" class="form-control border-primary" placeholder="EduMainCode" name="eduMainCode">
 
                                                           </div>
                                                       </div>
                                                   </div>
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="originAbbrName">ชื่อย่อเชื้อชาติ</label>
+                                                      <label class="col-md-6 label-control" for="eduMainCodeRef">EduMainCodeRef</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="originAbbrName" class="form-control border-primary" placeholder="ชื่อย่อเชื้อชาติ" name="originAbbrName">
+                                                              <input type="text" id="eduMainCodeRef" class="form-control border-primary" placeholder="EduMainCodeRef" name="eduMainCodeRef">
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-md-6 mt-1">
+                                                      <label class="col-md-6 label-control" for="courseName">CourseName</label>
+                                                      <div class="col-md-12">
+                                                          <div class="position-relative ">
+                                                              <input type="text" id="courseName" class="form-control border-primary" placeholder="CourseName" name="courseName">
+
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-md-6 mt-1">
+                                                      <label class="col-md-6 label-control" for="courseFlag">CourseFlag</label>
+                                                      <div class="col-md-12">
+                                                          <div class="position-relative">
+                                                              <input type="text" id="courseFlag" class="form-control border-primary" placeholder="CourseFlag" name="courseFlag">
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-md-6 mt-1">
+                                                      <label class="col-md-6 label-control" for="remark">Remark</label>
+                                                      <div class="col-md-12">
+                                                          <div class="position-relative">
+                                                              <input type="text" id="remark" class="form-control border-primary" placeholder="Remark" name="remark">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -83,8 +108,13 @@
                                                   <div class="col-md-12">
                                                       <br>
                                                       <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-                                                      <input type="checkbox" id="isActive"  checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก"  data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                                      <input type="checkbox" id="isActive" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
                                                   </div>
+                                              </div>
+
+                                              <div class="form-actions center" align="center">
+                                                  <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                                  <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="insertEducation()">บันทึก</button>
                                               </div>
                                           </div>
                                       </form>
@@ -93,10 +123,6 @@
                           </div>
                       </div>
                   </div>
-                  <div class="form-actions center" align="center">
-                      <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="insertOrigins()">บันทึก</button>
-                  </div>
               </section>
               <!-- // Basic form layout section end -->
           </div>
@@ -104,6 +130,8 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+  <script src="../../Controllers/educationController.js"></script>
 
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
@@ -117,4 +145,4 @@
 
   <script src="../../Controllers/originsController.js"></script>
   <!-- footer -->
-  <?php include '../include/footer.php'; ?> 
+  <?php include '../include/footer.php'; ?>
