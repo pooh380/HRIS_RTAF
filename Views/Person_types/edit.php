@@ -17,22 +17,28 @@
           border-radius: 20rem;
       }
   </style>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script>
+      $(document).ready(function() {
+          getIdForEdit();
+      });
+  </script>
+
   <div class="app-content content">
       <div class="content-wrapper">
           <div class="content-header row">
               <div class="content-header-left col-md-6 col-12 mb-2">
-                  <h3 class="content-header-title">แก้ไขประเภทกำลังพล</h3>
+                  <h3 class="content-header-title">เพิ่มสายวิทยาการ</h3>
                   <div class="row breadcrumbs-top">
-
                   </div>
               </div>
-
           </div>
           <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="./index.php">ระบบงานโครงสร้างอัตรากำลังพล</a></li>
-                  <li class="breadcrumb-item"><a href="./index.php">ตำแหน่ง</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">แก้ไขประเภทกำลังพล</li>
+                  <li class="breadcrumb-item"><a href="./">ตำแหน่ง</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">เพิ่มสายวิทยาการ</li>
               </ol>
           </nav>
           <div class="content-body">
@@ -61,61 +67,60 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput1">ชื่อเต็มประเภทกำลังพล</label>
+                                                      <label class="col-md-12 label-control" for="personTypeName">ชื่อประเภทกำลังพล</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="userinput1" class="form-control border-primary" placeholder="ชื่อเต็มประเภทกำลังพล" name="fullName">
+                                                              <input type="text" id="personTypeName" class="form-control border-primary" placeholder="ชื่อประเภทกำลังพล" name="personTypeName">
 
                                                           </div>
                                                       </div>
                                                   </div>
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput2">ชื่อย่อประเภทกำลังพล</label>
+                                                      <label class="col-md-12 label-control" for="personTypeCond">PersonTypeCond</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="userinput2" class="form-control border-primary" placeholder="ชื่อย่อประเภทกำลังพล" name="initName">
+                                                              <input type="text" id="personTypeCond" class="form-control border-primary" placeholder="PersonTypeCond" name="personTypeCond">
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-md-6 mt-1">
+                                                      <label class="col-md-12 label-control" for="reservesGroup">ReservesGroup</label>
+                                                      <div class="col-md-12">
+                                                          <div class="position-relative">
+                                                              <input type="text" id="reservesGroup" class="form-control border-primary" placeholder="ReservesGroup" name="reservesGroup">
                                                           </div>
                                                       </div>
                                                   </div>
                                               </div>
                                               <br>
-                                              <!-- <div class="row">
-                                                  <div class="col-md-12">
-                                                      <label class="col-md-4 label-control" for="userinput3">ชื่อหน่วยงาน</label>
-
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative ">
-                                                              <input type="text" id="timesheetinput1" class="form-control border-primary" placeholder="ชื่อหน่วยงาน" name="employeename">
-
-                                                          </div>
-                                                      </div>
-
-                                                  </div>
+                                              <div class="row">
                                                   <div class="col-md-12">
                                                       <br>
                                                       <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-                                                      <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-
+                                                      <input id="isActive" type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                                      <input type="hidden" id="personTypesId" name="personTypesId">
                                                   </div>
-                                              </div> -->
-
+                                              </div>
+                                              <div class="form-actions center" align="center">
+                                                  <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                                  <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="UpdatePersonTypes()">บันทึก</button>
+                                              </div>
                                           </div>
-
                                       </form>
                                   </div>
                               </div>
                           </div>
                       </div>
                   </div>
-                  <div class="form-actions center" align="center">
-                      <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text">บันทึก</button>
-                  </div>
+
               </section>
               <!-- // Basic form layout section end -->
           </div>
       </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="../../Controllers/personTypesController.js"></script>
+
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
@@ -127,4 +132,4 @@
   <!-- END PAGE LEVEL JS-->
 
   <!-- footer -->
-  <?php include '../include/footer.php'; ?> 
+  <?php include '../include/footer.php'; ?>
