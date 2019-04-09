@@ -61,7 +61,7 @@
                                                         <div class="form-group col-md-12 mt-1">
                                                             <label id="orgType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ประเภทโครงสร้าง:</label>
                                                             <select name="state" class="select2 form-control">
-                                                                <option value="">กรุณาเลือก</option>
+                                                                <option value="อัตรา ทอ.52">อัตรา ทอ.52</option>
                                                                 <?php
                                                                 $sql = " SELECT id, organization_type_name FROM organization_type; ";
                                                                 $result = sqlsrv_query($conn, $sql);
