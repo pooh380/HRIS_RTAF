@@ -1,7 +1,8 @@
+<!-- connection -->
+<?php require_once "../../config.php"; ?>
+
 <!-- header -->
 <?php include '../include/header.php'; ?>
-
-
 
 <!-- menu -->
 <?php include '../include/menu.php'; ?>
@@ -26,60 +27,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
         // console.log("ready");
-        $("#organizationType").select2({
-              ajax: {
-                url: "../../Model/OrganizationProgram/getOrganizationType.php",/* Url ที่ต้องการส่งค่าไปประมวลผลการค้นข้อมูล*/
-                dataType: 'json',
-                delay: 250,
-                data: function (params) {
-                    
-                  return {
-                    q: params.term, // ค่าที่ส่งไป
-                    page: params.page
-                  };
- 
-                },
-                processResults: function (data, params) {
-                  // parse the results into the format expected by Select2
-                  // since we are using custom formatting functions we do not need to
-                  // alter the remote JSON data, except to indicate that infinite
-                  // scrolling can be used
-                  params.page = params.page || 1;
- 
-                  return {
-                    results: data.items,
-                    pagination: {
-                      more: (params.page * 30) < data.total_count
-                    }
-                  };
-                },
-                cache: true
-              },
-              escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
-              minimumInputLength: 1,
-              templateResult: formatRepo, // omitted for brevity, see the source of this page
-              templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
-            });
- 
-        });
-        
- 
-        function formatRepo (repo) {
-        
-          if (repo.loading) return repo.text;
-          
-          var markup = "<div class='select2-result-repository clearfix'>" +
-            "<div class='select2-result-repository__meta'>" +
-              "<div class='select2-result-repository__title'>" + repo.value + "</div></div></div>";
- 
-          return markup;
-        }
- 
-        
-        function formatRepoSelection (repo) {
-          return repo.value || repo.text;
-        }
-
+    });
 </script>
 
 <script src="../../Controllers/OrganizationProgramController.js"></script>
@@ -110,37 +58,53 @@
                                                 <fieldset class="form-group position-relative">
                                                     <div class="row">
 
-
-                                                        <div class="form-group col-md-12">
-                                                            <label id="orgType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">โครงสร้าง:</label>
-                                                            <select class="select2 form-control block" id="organizationType">
-                                                                <!-- <option value="โครงสร้างอัตราทอ.52">โครงสร้างอัตราทอ.52</option>
-                                                                    <option value="โครงสร้างอื่นๆ">โครงสร้างอื่นๆ</option> -->
-                                                                <option value="">กรุณาเลือกโครงสร้าง</option>
+                                                        <div class="form-group col-md-12 mt-1">
+                                                            <label id="orgType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ประเภทโครงสร้าง:</label>
+                                                            <select name="state" class="select2 form-control">
+                                                                <option value="">กรุณาเลือก</option>
+                                                                <?php
+                                                                $sql = " SELECT id, organization_type_name FROM organization_type; ";
+                                                                $result = sqlsrv_query($conn, $sql);
+                                                                while ($row = sqlsrv_fetch_array($result)) {
+                                                                    echo "<option value='" . $row['id'] . "'>" . $row['organization_type_name'] . "</option>";
+                                                                }
+                                                                ?>
                                                             </select>
                                                         </div>
 
                                                         <div class="form-group col-md-12">
-                                                            <label id="usernameForm" style=" font-weight:bold; font-size: 15px; color:#0f1733;">หน่วย:</label>
+                                                            <label id="orgType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">โครงสร้าง:</label>
+                                                            <select name="state" class="select2 form-control">
+                                                                <option value="">กรุณาเลือก</option>
+                                                                <?php
+                                                                $sql = " SELECT id,organization_category_name FROM organization_category ";
+                                                                $result = sqlsrv_query($conn, $sql);
+                                                                while ($row = sqlsrv_fetch_array($result)) {
+                                                                    echo "<option value='" . $row['id'] . "'>" . $row['organization_category_name'] . "</option>";
+                                                                }
+                                                                ?>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="form-group col-md-12">
+                                                            <label id="usernameForm" style=" font-weight:bold; font-size: 15px; color:#0f1733;">สังกัด:</label>
                                                             <select class="select2 form-control block" id="group">
                                                                 <option value="โครงสร้างอัตราทอ.52">หน่วย</option>
                                                                 <option value="โครงสร้างอื่นๆ">โครงสร้างอื่นๆ</option>
                                                             </select>
-                                                        </div> 
+                                                        </div>
                                                     </div>
                                                 </fieldset>
+
                                                 <div class="text-right">
                                                     <!-- <button type="submit" class="btn" onclick="search()" style="background-color:#0f1733;color:white;border:white"><i class="la la-search" style="margin-rifgt:8px"></i> -->
                                                     <a href="./detail.php">
                                                         <button type="submit" class="btn" style="background-color:#0f1733;color:white;border:white"><i class="la la-search" style="margin-rifgt:8px"></i>
                                                             <span style=" font-weight:bold; font-size: 13px;"> ค้นหา</span></button>
                                                     </a>
-
                                                 </div>
-
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>

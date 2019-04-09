@@ -194,12 +194,12 @@
                                                               </div>
                                                           </div>
                                                           <div class="col-md-5">
-                                                              <label class="col-md-12 label-control" for="orgListCode">ประเภทโครงสร้าง</label>
+                                                              <label class="col-md-12 label-control" for="orgListCode">โครงสร้าง</label> <!-- ดึงมาจากการ search หน้า index -->
                                                               <div class="col-md-12" style="float:left;">
                                                                   <select class="select2 form-control block" id="orgListCode" style="width: 100%;">
                                                                       <!-- border-color: #8c93ee !important; -->
                                                                       <!-- <optgroup label="Alaskan/Hawaiian Time Zone"> -->
-                                                                      <option value="โครงสร้างอัตราเฉพาะกิจ">โครงสร้างอัตราเฉพาะกิจ</option>
+                                                                      <option value="อัตรา ทอ.52">อัตรา ทอ.52</option>
                                                                       <!-- <option value="HI">Hawaii</option> -->
                                                                       <!-- </optgroup> -->
                                                                   </select>
