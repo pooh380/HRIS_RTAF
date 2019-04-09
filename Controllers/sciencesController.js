@@ -95,7 +95,7 @@ function getIdForEdit() {
             // console.log(data);
             if (data.IsActive == 0) {
                 // $("#isActive").removeAttr('checked');
-                $("#isActive").bootstrapToggle('disable');
+                $("#isActive").bootstrapToggle('off');
             } else {
                 // $('#isActive').prop("checked", true);
                 $("#isActive").bootstrapToggle('on');
