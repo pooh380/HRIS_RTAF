@@ -1,19 +1,24 @@
 // getData
 function getDistricts() {
     $('#districtTable').DataTable({
-        "processing": true,
-        "serverSide": true,
-        "Paginate": true,
-        "LengthChange": false,
-        "Filter": false,
-        "Info": false,
-        order: [
-            [0, "desc"]
-        ],
         "ajax": {
             url: "../../Model/Districts/GetDistricts.php", // json datasource
             dataType: "json",
-            type: "post"
+            type: "post",
+            "start": 0,
+            "length": 3,
+            "serverSide": true,
+            "processing": true,
+            "paging": true,
+            "searching": { "regex": true },
+            "lengthMenu": [
+                [10, 25, 50, 100, -1],
+                [10, 25, 50, 100, "All"]
+            ],
+            "pageLength": 10,
+            order: [
+                [0, "desc"]
+            ]
         }
     });
 }
