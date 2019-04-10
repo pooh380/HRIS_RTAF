@@ -7,6 +7,7 @@ function insertOrganizationCategory() {
     } else {
         var isActive = "0";
     }
+
     console.log(OrganizationcategoryFN + " " + OrganizationcategoryIN + " " + isActive);
     // e.preventDefault();
 
@@ -33,6 +34,7 @@ function insertOrganizationParts() {
     } else {
         var isActive = "0";
     }
+
 
     console.log(organizationPartName + " " + organizationPartAbbrName + " " + isActive);
     // e.preventDefault();

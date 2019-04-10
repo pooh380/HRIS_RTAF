@@ -87,10 +87,8 @@ function getUrlVars() {
 // getUrlVars  เพื่อนำค่า id จาก url มาใช้ต่อ
 
 // getData จาก db เพื่อนำมาใช้มา input value
-function getIdForEdit(id) {
-    // var originsId = getUrlVars()["id"];
-    var originsId = id;
-    window.open('http://www.google.com');
+function getIdForEdit() {
+    var originsId = getUrlVars()["id"];
     $.ajax({
         type: "POST",
         dataType: "json",
