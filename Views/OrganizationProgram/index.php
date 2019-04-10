@@ -27,6 +27,8 @@
 <script type="text/javascript">
     $(document).ready(function() {
         // console.log("ready");
+        var a = $('#orgTypeList').val();
+        alert(a);
     });
 </script>
 
@@ -58,41 +60,40 @@
                                                 <fieldset class="form-group position-relative">
                                                     <div class="row">
 
-                                                        <div class="form-group col-md-12 mt-1">
-                                                            <label id="orgType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ประเภทโครงสร้าง:</label>
-                                                            <select name="state" class="select2 form-control">
+
+                                                    <div class="form-group col-md-12 mt-1">
+                                                            <label id="orgType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">โครงสร้าง:</label>
+                                                            <select name="orgTypeList" class="select2 form-control">
                                                                 <option value="อัตรา ทอ.52">อัตรา ทอ.52</option>
                                                                 <?php
                                                                 $sql = " SELECT id, organization_type_name FROM organization_type; ";
                                                                 $result = sqlsrv_query($conn, $sql);
                                                                 while ($row = sqlsrv_fetch_array($result)) {
-                                                                    echo "<option value='" . $row['id'] . "'>" . $row['organization_type_name'] . "</option>";
+                                                                    ?>
+                                                                    <option value="<?php echo $row['id'];  ?>"><?php echo $row['organization_type_name']; ?></option>
+                                                                    <?php
+                                                                    // echo "<option value='" . $row['id'] . "'>" . $row['organization_type_name'] . "</option>";
                                                                 }
+                                                                $sql2=""
                                                                 ?>
                                                             </select>
                                                         </div>
 
-                                                        <div class="form-group col-md-12">
-                                                            <label id="orgType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">โครงสร้าง:</label>
+                                                    <div class="form-group col-md-12">
+                                                            <label id="orgListList" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ฐานะ:</label>
                                                             <select name="state" class="select2 form-control">
                                                                 <option value="">กรุณาเลือก</option>
                                                                 <?php
-                                                                $sql = " SELECT id,organization_category_name FROM organization_category ";
+                                                                $sql = " SELECT id,organization_list_name FROM organization_list" ;
                                                                 $result = sqlsrv_query($conn, $sql);
                                                                 while ($row = sqlsrv_fetch_array($result)) {
-                                                                    echo "<option value='" . $row['id'] . "'>" . $row['organization_category_name'] . "</option>";
+                                                                    echo "<option value='" . $row['id'] . "'>" . $row['organization_list_name'] . "</option>";
                                                                 }
                                                                 ?>
                                                             </select>
                                                         </div>
 
-                                                        <div class="form-group col-md-12">
-                                                            <label id="usernameForm" style=" font-weight:bold; font-size: 15px; color:#0f1733;">สังกัด:</label>
-                                                            <select class="select2 form-control block" id="group">
-                                                                <option value="โครงสร้างอัตราทอ.52">หน่วย</option>
-                                                                <option value="โครงสร้างอื่นๆ">โครงสร้างอื่นๆ</option>
-                                                            </select>
-                                                        </div>
+                                                        
                                                     </div>
                                                 </fieldset>
 

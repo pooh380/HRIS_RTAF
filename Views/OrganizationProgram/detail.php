@@ -204,9 +204,7 @@
                                                                       <!-- </optgroup> -->
                                                                   </select>
                                                               </div>
-                                                              <div class="col-md-1">
-                                                                  <a href="../organizationProgram/createOrganizationCategory.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
-                                                              </div>
+                                                              
                                                           </div>
                                                           <div class="col-md-6 mt-1">
                                                               <label class="col-md-12 label-control" for="orgCode">รหัสสังกัดและหน่วย</label>
