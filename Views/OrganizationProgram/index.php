@@ -22,13 +22,9 @@
 <link rel="stylesheet" type="text/css" href="../../asset/css/style.css">
 <!-- END Custom CSS-->
 
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script> -->
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        // console.log("ready");
-    });
-</script>
+
 
 <script src="../../Controllers/OrganizationProgramController.js"></script>
 
@@ -59,9 +55,10 @@
                                                     <div class="row">
 
                                                         <div class="form-group col-md-12 mt-1">
-                                                            <label id="orgType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ประเภทโครงสร้าง:</label>
-                                                            <select name="state" class="select2 form-control">
-                                                                <option value="อัตรา ทอ.52">อัตรา ทอ.52</option>
+                                                            <label id="orgType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">โครงสร้าง:</label>
+
+                                                            <select name="orgTypeList" id="orgTypeList" class="select2 form-control">
+                                                                <option value="21">อัตรา ทอ. 52</option>
                                                                 <?php
                                                                 $sql = " SELECT id, organization_type_name FROM organization_type; ";
                                                                 $result = sqlsrv_query($conn, $sql);
@@ -72,27 +69,57 @@
                                                             </select>
                                                         </div>
 
-                                                        <div class="form-group col-md-12">
-                                                            <label id="orgType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">โครงสร้าง:</label>
-                                                            <select name="state" class="select2 form-control">
-                                                                <option value="">กรุณาเลือก</option>
-                                                                <?php
-                                                                $sql = " SELECT id,organization_category_name FROM organization_category ";
-                                                                $result = sqlsrv_query($conn, $sql);
-                                                                while ($row = sqlsrv_fetch_array($result)) {
-                                                                    echo "<option value='" . $row['id'] . "'>" . $row['organization_category_name'] . "</option>";
-                                                                }
-                                                                ?>
-                                                            </select>
-                                                        </div>
+                                                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+                                                        <script type="text/javascript">
+                                                            $(document).ready(function() {
+                                                                // console.log("ready");
+                                                                var orgTypeId = $('#orgTypeList :selected').val();
+                                                                // alert(a);
+                                                                $("#orgTypeId").val(orgTypeId);
+                                                                console.log(orgTypeId);
+
+                                                                $.ajax({
+                                                                    type: "POST",
+                                                                    url: "./getOrgListDropDown.php",
+                                                                    data: {
+                                                                        orgTypeId: orgTypeId
+                                                                    },
+                                                                    success: function(data) {
+                                                                        console.log(data);
+                                                                    },
+                                                                    error: function(error) {
+                                                                        console.log(error);
+                                                                    }
+                                                                });
+
+
+                                                            });
+
+                                                            $(function() {
+                                                                $('#orgTypeList').change(function() {
+                                                                    var values = $('#orgTypeList :selected').val();
+                                                                    // alert(values);
+                                                                    $("#orgListId").val(values);
+                                                                });
+                                                            });
+
+                                                            var orgTypeId = $("#orgTypeId").val();
+                                                        </script>
 
                                                         <div class="form-group col-md-12">
-                                                            <label id="usernameForm" style=" font-weight:bold; font-size: 15px; color:#0f1733;">สังกัด:</label>
-                                                            <select class="select2 form-control block" id="group">
-                                                                <option value="โครงสร้างอัตราทอ.52">หน่วย</option>
-                                                                <option value="โครงสร้างอื่นๆ">โครงสร้างอื่นๆ</option>
-                                                            </select>
+                                                            <label id="orgList" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ฐานะหน่วย:</label>
+                                                            <input type="hidden" id="orgTypeId" name="orgTypeId">
+                                                           
+
+                                                            <?php 
+                                                            require_once "./getOrgListDropDown.php";
+                                                            getOrgList();
+                                                            ?>
+
+                                                            
                                                         </div>
+
                                                     </div>
                                                 </fieldset>
 
