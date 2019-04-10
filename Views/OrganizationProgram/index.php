@@ -24,13 +24,7 @@
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        // console.log("ready");
-        var a = $('#orgTypeList').val();
-        alert(a);
-    });
-</script>
+
 
 <script src="../../Controllers/OrganizationProgramController.js"></script>
 
@@ -64,7 +58,7 @@
                                                     <div class="form-group col-md-12 mt-1">
                                                             <label id="orgType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">โครงสร้าง:</label>
                                                             <select name="orgTypeList" class="select2 form-control">
-                                                                <option value="อัตรา ทอ.52">อัตรา ทอ.52</option>
+                                                                <option value="1">อัตรา ทอ.52</option>
                                                                 <?php
                                                                 $sql = " SELECT id, organization_type_name FROM organization_type; ";
                                                                 $result = sqlsrv_query($conn, $sql);
@@ -117,6 +111,19 @@
         </div>
     </div>
 </section>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        // console.log("ready");
+
+        var a =  $('#dropDownId :selected').text();
+        alert(a);
+
+        $("#orgTypeList").change(function (event) {
+            alert("You have Selected  :: "+$(this).val());
+        });
+    });
+</script>
 
 <footer class="footer footer-static footer-light navbar-border navbar-shadow">
     <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
