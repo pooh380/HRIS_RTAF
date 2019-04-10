@@ -1,7 +1,7 @@
 
 <?php
 // $serverName = "45.77.249.35"; //serverName\instanceName ถ้าฐานข้อมูลอยู่ในเครื่องเราใช้ localhost 
-$serverName = "10.243.0.9";
+$serverName = "10.243.0.9/ACERSERVER2/MSSQLSERVER01";
 $connectionInfo = array(
     "Database" => "HRIS",
     "UID" => "sa",
