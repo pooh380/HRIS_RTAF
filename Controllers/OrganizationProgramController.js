@@ -41,9 +41,9 @@ function getDataFromUrl() {
         }
     };
 
-    var tech = getUrlParameter('orgTypeId');
-    var blog = getUrlParameter('orgListId');
-    alert(tech + blog);
+    var orgTypeId = getUrlParameter('orgTypeId');
+    var orgListId = getUrlParameter('orgListId');
+    // alert(tech + blog);
 }
 
 function insertOrganizationCategory() {
