@@ -20,6 +20,7 @@
 <!-- END Page Level CSS-->
 <!-- BEGIN Custom CSS-->
 <link rel="stylesheet" type="text/css" href="../../asset/css/style.css">
+
 <!-- END Custom CSS-->
 
 <!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script> -->
@@ -32,10 +33,14 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
+
+        Swal.fire(
+            'Good job!',
+            'You clicked the button!',
+            'success'
+        );
         // console.log("ready");
         var orgTypeId = $('#orgTypeList :selected').val();
-        // alert(a);
-        $("#orgTypeId").val(orgTypeId);
 
         $.ajax({
             type: "POST",
@@ -55,8 +60,6 @@
         $(function() {
             $('#orgTypeList').change(function() {
                 var orgTypeId = $('#orgTypeList :selected').val();
-                // alert(values);
-                $("#orgTypeId").val(orgTypeId);
 
                 $.ajax({
                     type: "POST",
@@ -122,7 +125,6 @@
 
                                                         <div class="form-group col-md-12">
                                                             <label id="orgList" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ฐานะหน่วย:</label>
-                                                            <input type="text" id="orgTypeId" name="orgTypeId">
                                                             <select id="orgListList" name="orgListList" class="select2 form-control"></select>
                                                         </div>
                                                     </div>

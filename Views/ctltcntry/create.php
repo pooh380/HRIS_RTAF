@@ -5,6 +5,9 @@
   <?php include '../include/menu.php'; ?>
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/extensions/sweetalert.css">
 
+  <link rel="stylesheet" href="../../Asset/Css/sweetalert2.min.css">
+<script src="../../Asset/js/sweetalert2.min.js"></script>
+
   <style>
       /* ol > li > a {color:#222233;} */
       .toggle.ios,

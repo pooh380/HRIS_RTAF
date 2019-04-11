@@ -129,7 +129,6 @@
       </div>
   </div>
 
-
   <script src="../../Controllers/educationController.js"></script>
 
   <!-- BEGIN VENDOR JS-->

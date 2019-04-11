@@ -5,6 +5,8 @@
   <?php include '../include/menu.php'; ?>
 
 
+
+
   <style>
       /* ol > li > a {color:#222233;} */
       .toggle.ios,
@@ -126,7 +128,6 @@
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
   <!-- BEGIN PAGE VENDOR JS-->
-  <script src="../../app-assets/vendors/js/extensions/sweetalert.min.js" type="text/javascript"></script>
   <!-- END PAGE VENDOR JS-->
   <!-- BEGIN PAGE LEVEL JS-->
   <script src="../../app-assets/js/scripts/extensions/sweet-alerts.js" type="text/javascript"></script>

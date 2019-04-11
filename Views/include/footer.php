@@ -8,6 +8,7 @@
   </footer>
 
 
+  <script src="../../Asset/js/sweetalert2.min.js"></script>
   
   <!-- BEGIN VENDOR JS -->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
