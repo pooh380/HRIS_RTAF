@@ -28,6 +28,57 @@
 
 <script src="../../Controllers/OrganizationProgramController.js"></script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        // console.log("ready");
+        var orgTypeId = $('#orgTypeList :selected').val();
+        // alert(a);
+        $("#orgTypeId").val(orgTypeId);
+
+        $.ajax({
+            type: "POST",
+            url: "../../Model/OrganizationProgram/getOrgList.php",
+            data: {
+                orgTypeId: orgTypeId
+            },
+            success: function(data) {
+                // console.log(data);
+                $('#orgListList').html(data);
+            },
+            error: function(error) {
+                // console.log(error);
+            }
+        });
+
+        $(function() {
+            $('#orgTypeList').change(function() {
+                var orgTypeId = $('#orgTypeList :selected').val();
+                // alert(values);
+                $("#orgTypeId").val(orgTypeId);
+
+                $.ajax({
+                    type: "POST",
+                    url: "../../Model/OrganizationProgram/getOrgList.php",
+                    data: {
+                        orgTypeId: orgTypeId
+                    },
+                    success: function(data) {
+                        // console.log(data);
+                        $('#orgListList').html(data);
+                    },
+                    error: function(error) {
+                        // console.log(error);
+                    }
+                });
+
+            });
+        });
+
+    });
+</script>
+
 <section>
     <div class="app-content content">
         <div class="content-wrapper">
@@ -69,57 +120,11 @@
                                                             </select>
                                                         </div>
 
-                                                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-                                                        <script type="text/javascript">
-                                                            $(document).ready(function() {
-                                                                // console.log("ready");
-                                                                var orgTypeId = $('#orgTypeList :selected').val();
-                                                                // alert(a);
-                                                                $("#orgTypeId").val(orgTypeId);
-                                                                console.log(orgTypeId);
-
-                                                                $.ajax({
-                                                                    type: "POST",
-                                                                    url: "./getOrgListDropDown.php",
-                                                                    data: {
-                                                                        orgTypeId: orgTypeId
-                                                                    },
-                                                                    success: function(data) {
-                                                                        console.log(data);
-                                                                    },
-                                                                    error: function(error) {
-                                                                        console.log(error);
-                                                                    }
-                                                                });
-
-
-                                                            });
-
-                                                            $(function() {
-                                                                $('#orgTypeList').change(function() {
-                                                                    var values = $('#orgTypeList :selected').val();
-                                                                    // alert(values);
-                                                                    $("#orgListId").val(values);
-                                                                });
-                                                            });
-
-                                                            var orgTypeId = $("#orgTypeId").val();
-                                                        </script>
-
                                                         <div class="form-group col-md-12">
                                                             <label id="orgList" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ฐานะหน่วย:</label>
-                                                            <input type="hidden" id="orgTypeId" name="orgTypeId">
-                                                           
-
-                                                            <?php 
-                                                            require_once "./getOrgListDropDown.php";
-                                                            getOrgList();
-                                                            ?>
-
-                                                            
+                                                            <input type="text" id="orgTypeId" name="orgTypeId">
+                                                            <select id="orgListList" name="orgListList" class="select2 form-control"></select>
                                                         </div>
-
                                                     </div>
                                                 </fieldset>
 
