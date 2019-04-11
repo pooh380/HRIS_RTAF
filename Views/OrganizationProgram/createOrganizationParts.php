@@ -109,7 +109,6 @@
   </div>
   <!-- BEGIN VENDOR JS-->
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->

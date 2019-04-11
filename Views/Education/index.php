@@ -75,7 +75,6 @@
   </section>
 
   <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
   <script src="../../Controllers/educationController.js"></script>
 
