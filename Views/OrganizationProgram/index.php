@@ -27,8 +27,6 @@
 
 
 
-<script src="../../Controllers/OrganizationProgramController.js"></script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <script type="text/javascript">
@@ -42,6 +40,8 @@
         });
 
         var orgTypeId = $('#orgTypeList :selected').val();
+        $("#orgTypeId").val(orgTypeId);
+
 
         $.ajax({
             type: "POST",
@@ -52,15 +52,21 @@
             success: function(data) {
                 // console.log(data);
                 $('#orgListList').html(data);
+                var orgListId = $('#orgListList :selected').val();
+                $("#orgListId").val(orgListId);
             },
             error: function(error) {
                 // console.log(error);
             }
         });
 
+        var orgListId = $('#orgListList :selected').val();
+        $("#orgListId").val(orgListId);
+
         $(function() {
             $('#orgTypeList').change(function() {
                 var orgTypeId = $('#orgTypeList :selected').val();
+                $("#orgTypeId").val(orgTypeId);
 
                 $.ajax({
                     type: "POST",
@@ -71,11 +77,24 @@
                     success: function(data) {
                         // console.log(data);
                         $('#orgListList').html(data);
+                        var orgListId = $('#orgListList :selected').val();
+                        $("#orgListId").val(orgListId);
                     },
                     error: function(error) {
                         // console.log(error);
                     }
                 });
+
+                var orgListId = $('#orgListList :selected').val();
+                $("#orgListId").val(orgListId);
+
+            });
+        });
+
+        (function() {
+            $('#orgListList').change(function() {
+                var orgListId = $('#orgListList :selected').val();
+                $("#orgListId").val(orgListId);
 
             });
         });
@@ -107,13 +126,13 @@
         vertical-align: middle;
     }
 
-    .modal-body{
-        width:100%
-        height:100%;
+    .modal-body {
+        width: 100% height:100%;
     }
-    .modal-content{
+
+    .modal-content {
         background-color: transparent;
-        border:none;
+        border: none;
     }
 </style>
 
@@ -148,41 +167,43 @@
 
 
                                             <div class="col-lg-6 col-10 ">
-                                                <div class="text-center">
-                                                    <i class="la la-code-fork" style="font-size: 300px; color:#0f1733;"></i>
-                                                </div>
-                                                <fieldset class="form-group position-relative">
-                                                    <div class="row">
-
-                                                        <div class="form-group col-md-12 mt-1">
-                                                            <label id="orgType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">โครงสร้าง:</label>
-
-                                                            <select name="orgTypeList" id="orgTypeList" class="select2 form-control">
-                                                                <option value="21">อัตรา ทอ. 52</option>
-                                                                <?php
-                                                                $sql = " SELECT id, organization_type_name FROM organization_type; ";
-                                                                $result = sqlsrv_query($conn, $sql);
-                                                                while ($row = sqlsrv_fetch_array($result)) {
-                                                                    echo "<option value='" . $row['id'] . "'>" . $row['organization_type_name'] . "</option>";
-                                                                }
-                                                                ?>
-                                                            </select>
-                                                        </div>
-
-                                                        <div class="form-group col-md-12">
-                                                            <label id="orgList" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ฐานะหน่วย:</label>
-                                                            <select id="orgListList" name="orgListList" class="select2 form-control"></select>
-                                                        </div>
+                                                <form action="">
+                                                    <div class="text-center">
+                                                        <i class="la la-code-fork" style="font-size: 300px; color:#0f1733;"></i>
                                                     </div>
-                                                </fieldset>
+                                                    <fieldset class="form-group position-relative">
+                                                        <div class="row">
 
-                                                <div class="text-right">
-                                                    <!-- <button type="submit" class="btn" onclick="search()" style="background-color:#0f1733;color:white;border:white"><i class="la la-search" style="margin-rifgt:8px"></i> -->
-                                                    <a href="./detail.php">
-                                                        <button type="submit" class="btn" style="background-color:#0f1733;color:white;border:white"><i class="la la-search" style="margin-rifgt:8px"></i>
+                                                            <div class="form-group col-md-12 mt-1">
+                                                                <label id="orgType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">โครงสร้าง:</label>
+
+                                                                <select name="orgTypeList" id="orgTypeList" class="select2 form-control">
+                                                                    <option value="21">อัตรา ทอ. 52</option>
+                                                                    <?php
+                                                                    $sql = " SELECT id, organization_type_name FROM organization_type; ";
+                                                                    $result = sqlsrv_query($conn, $sql);
+                                                                    while ($row = sqlsrv_fetch_array($result)) {
+                                                                        echo "<option value='" . $row['id'] . "'>" . $row['organization_type_name'] . "</option>";
+                                                                    }
+                                                                    ?>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="form-group col-md-12">
+                                                                <label id="orgList" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ฐานะหน่วย:</label>
+                                                                <select id="orgListList" name="orgListList" class="select2 form-control"></select>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+
+                                                    <div class="text-right">
+                                                        <!-- <button type="submit" class="btn" onclick="search()" style="background-color:#0f1733;color:white;border:white"><i class="la la-search" style="margin-rifgt:8px"></i> -->
+                                                        <!-- <a href="./detail.php"> -->
+                                                        <button type="button" class="btn" id="submit" style="background-color:#0f1733;color:white;border:white" onclick="getOrg()"><i class="la la-search" style="margin-rifgt:8px"></i>
                                                             <span style=" font-weight:bold; font-size: 13px;"> ค้นหา</span></button>
-                                                    </a>
-                                                </div>
+                                                        <!-- </a> -->
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -203,6 +224,11 @@
         <span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span>
     </p>
 </footer>
+
+
+
+<script src="../../Controllers/OrganizationProgramController.js"></script>
+
 <!-- BEGIN VENDOR JS-->
 <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
 <!-- BEGIN VENDOR JS-->

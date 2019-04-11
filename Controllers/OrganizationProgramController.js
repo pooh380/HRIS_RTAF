@@ -1,3 +1,19 @@
+function getOrg() {
+    var orgTypeId = $('#orgTypeList :selected').val();
+    var orgListId = $('#orgListList :selected').val();
+
+    var a = encodeURIComponent(orgTypeId);
+    var b = encodeURIComponent(orgListId);
+    console.log(a + " " + b)
+
+    var msg = urlencode('aong');
+    var url = urlencode('aong');
+    var link = '../OrganizationProgram/test.php?orgTypeId' + msg + '&url=' + url;
+    console.log(link);
+    // window.open(link); 
+
+}
+
 function insertOrganizationCategory() {
     var OrganizationcategoryFN = $("#OrganizationcategoryFN").val();
     var OrganizationcategoryIN = $("#OrganizationcategoryIN").val();
