@@ -86,6 +86,7 @@
   <script src="../../Controllers/OrganizationProgramController.js"></script>
 
   <script>
+      
       $(document).ready(function() {
           var getUrlParameter = function getUrlParameter(sParam) {
               var sPageURL = window.location.search.substring(1),
@@ -104,11 +105,18 @@
           var orgTypeId = getUrlParameter('orgTypeId');
           var orgListId = getUrlParameter('orgListId');
 
+          
+
+         
+
           $(document).ajaxStart(function() {
               $(".modal").show();
+             
           });
           $(document).ajaxComplete(function() {
               $(".modal").hide();
+              $("#orgTypeId").val(orgTypeId);
+          $("#orgListId").val(orgListId);
           });
 
 
@@ -129,11 +137,21 @@
                   // console.log(error);
               }
           });
+
+        
+
+        
+
       });
 
-      function showDetail(id){
+      function showDetail(id,orgTypeId,orgListId){
               var orgLevelId = id;
-              alert(orgLevelId); 
+             var orgTypeId = $("#orgTypeId").val();
+         var orgListId =  $("#orgListId").val();
+              
+              alert(orgTypeId); 
+              alert(orgListId);
+              alert(orgLevelId);  
           }
 
   </script>
@@ -144,6 +162,9 @@
               <div class="content-header row">
                   <div class="content-header-left col-12 mb-2">
 
+                  <input type="hidden" id="orgTypeId" name="orgTypeId">
+                  
+                  <input type="hidden" id="orgListId" name="orgListId">
 
                       <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                           <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
