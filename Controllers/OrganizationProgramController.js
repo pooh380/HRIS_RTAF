@@ -1,3 +1,4 @@
+    
 function getOrg() {
     var orgTypeId = $('#orgTypeList :selected').val();
     var orgListId = $('#orgListList :selected').val();
