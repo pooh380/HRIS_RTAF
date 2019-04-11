@@ -55,9 +55,9 @@ while ($row = sqlsrv_fetch_array($query)) {
     $data[] = $subdata;
 }
 
-echo '<pre>';
-print_r($data);
-echo '<pre>';
+// echo '<pre>';
+// print_r($data);
+// echo '<pre>';
 
 $json_data = array(
     "draw"              =>  intval($request['draw']),
