@@ -5,6 +5,8 @@
   <?php include '../include/menu.php'; ?>
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/extensions/sweetalert.css">
 
+  
+
   <style>
       /* ol > li > a {color:#222233;} */
       .toggle.ios,
@@ -132,7 +134,6 @@
       </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 

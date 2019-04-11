@@ -112,8 +112,6 @@
     insertOrganizationcategory();
 });
   </script> -->
-  
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>

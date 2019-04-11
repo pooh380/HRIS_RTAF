@@ -18,7 +18,8 @@
       }
   </style>
 
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<link rel="stylesheet" href="../../Asset/Css/sweetalert2.min.css">
+<script src="../../Asset/js/sweetalert2.min.js"></script>
 
   <script src="../../Controllers/degreeController.js"></script>
 

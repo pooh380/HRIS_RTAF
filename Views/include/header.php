@@ -32,6 +32,9 @@
     <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="../../Asset/Css/custom.css">
+
+    <link rel="stylesheet" href="../../Asset/Css/sweetalert2.min.css">
+
     
     <!-- for-test byAong -->
     

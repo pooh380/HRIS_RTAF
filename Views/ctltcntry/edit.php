@@ -4,6 +4,8 @@
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/extensions/sweetalert.css">
+
+  
       <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
 
   <style>
@@ -19,7 +21,6 @@
       }
   </style>
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
 <script src="../../Controllers/ctltcntryController.js"></script>
 
