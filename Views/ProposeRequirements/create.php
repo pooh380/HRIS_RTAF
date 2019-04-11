@@ -60,59 +60,55 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-12 label-control" for="userinput1">ชื่อเต็มสาเหตุในการขอบรรจุ</label>
+                                                      <label class="col-md-12 label-control" for="userinput1">ตำแหน่ง</label>
                                                       <div class="col-md-12">
-                                                          <div class="position-relative ">
-                                                              <input type="text" id="userinput1" class="form-control border-primary" placeholder="ชื่อเต็มสาเหตุในการขอบรรจุ" name="fullName">
+                                                          <select class="form-control" id="selectOpt">
+                                                              <option>Select Option</option>
+                                                              <option>Option 1</option>
+                                                              <option>Option 2</option>
+                                                              <option>Option 3</option>
+                                                              <option>Option 4</option>
+                                                              <option>Option 5</option>
+                                                          </select>
 
-                                                          </div>
                                                       </div>
                                                   </div>
                                                   <div class="col-md-6">
-                                                      <label class="col-md-12 label-control" for="userinput2">ชื่อย่อสาเหตุในการขอบรรจุ</label>
+                                                      <label class="col-md-12 label-control" for="userinput2">จำนวน</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="userinput2" class="form-control border-primary" placeholder="ชื่อย่อสาเหตุในการขอบรรจุ" name="initName">
+                                                              <input type="number" id="userinput2" class="form-control border-primary" placeholder="จำนวน" name="initName">
                                                           </div>
                                                       </div>
                                                   </div>
                                               </div>
                                               <br>
-                                              <!-- <div class="row">
-                                                  <div class="col-md-12">
-                                                      <label class="col-md-4 label-control" for="userinput3">ชื่อหน่วยงาน</label>
+                                              <div class="col-md-12">
+                                                  <label class="col-md-12 label-control" for="userinput3">รายละเอียดการขอบรรจุ</label>
 
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative ">
-                                                              <input type="text" id="timesheetinput1" class="form-control border-primary" placeholder="ชื่อหน่วยงาน" name="employeename">
+                                                  <fieldset class="form-group">
+                                                      <textarea class="form-control" id="descTextarea" rows="3" placeholder="กรุณากรอกรายละเอียดคำร้อง"></textarea>
+                                                  </fieldset>
 
-                                                          </div>
-                                                      </div>
-
-                                                  </div>
-                                                  <div class="col-md-12">
-                                                      <br>
-                                                      <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-                                                      <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-
-                                                  </div>
-                                              </div> -->
-
+                                              </div>
                                           </div>
-                                      </form>
+                                          <br>
                                   </div>
+                                  </form>
                               </div>
                           </div>
                       </div>
                   </div>
-                  <div class="form-actions center" align="center">
-                      <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text">บันทึก</button>
-                  </div>
-              </section>
-              <!-- // Basic form layout section end -->
           </div>
+          <div class="form-actions center" align="center">
+              <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text">บันทึก</button>
+              <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+
+          </div>
+          </section>
+          <!-- // Basic form layout section end -->
       </div>
+  </div>
   </div>
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
@@ -125,4 +121,4 @@
   <!-- END PAGE LEVEL JS-->
 
   <!-- footer -->
-  <?php include '../include/footer.php'; ?> 
+  <?php include '../include/footer.php'; ?>

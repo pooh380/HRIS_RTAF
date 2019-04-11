@@ -23,14 +23,16 @@
         <div class="content-header row">
           <div class="content-header-left col-md-6 col-12 mb-2">
             <div style="width:7px;height:30px;background-color:#1a1d52; float:left; margin-right:10px;"></div>
-            <h3 class="content-header-title">งานเสนอความต้องการบรรจุกำลังพล</h3>
+            <h3 class="content-header-title">คำร้อง</h3>
           </div>
 
         </div>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="./index.php">ระบบงานวิเคราะห์ความต้องการกำลังพลประจำปี</a></li>
-            <li class="breadcrumb-item active" aria-current="page">งานเสนอความต้องการบรรจุกำลังพล</li>
+            
+            <li class="breadcrumb-item"><a href="./index.php">งานเสนอความต้องการบรรจุกำลังพล</a></li>
+            <li class="breadcrumb-item active" aria-current="page">คำร้อง</li>
           </ol>
         </nav>
         <div class="content-body">
@@ -45,23 +47,7 @@
 
                     <div class="card-body card-dashboard">
 
-                      <ul class="nav nav-tabs nav-top-border no-hover-bg" style="float:left;">
-                        <li class="nav-item">
-                          <a class="nav-link active" id="base-tab11" data-toggle="tab" aria-controls="tab11" href="#tab11" aria-expanded="true">ตำแหน่งภายใน</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" id="base-tab12" data-toggle="tab" aria-controls="tab12" href="#tab12" aria-expanded="false">สมาชิก</a>
-                        </li>
-                      </ul>
-                      <div align="right">
-                          <a href="./create.php" class="btn btn-social btn-min-width mb-1 btn-sm" style="background-color:#0f1733 ;  color:white;">
-                            <span class="la la-user-plus" style="color:white; font-weight: bold;font-size: 18px"></span> คำขอบรรจุ
-                          </a>
-
-                          <a href="./member.php" class="btn btn-social btn-min-width mb-1 btn-sm" style="background-color:#0f1733;margin-left: 5px; color:white;">
-                            <span class="la la-clipboard" style="color:white; font-weight: bold;font-size: 18px"></span> คำร้อง
-                          </a>
-                        </div>
+                  
 
 
                       <div class="tab-content pt-1">
@@ -69,28 +55,22 @@
                         <div role="tabpanel" class="tab-pane active" id="tab11" aria-expanded="true" aria-labelledby="base-tab11" >
                           <table class="table table-striped table-borderless table-hover bootstrap-3" style="width:100%">
                             <thead >
-                              <h3>โรงเรียนการบิน</h3>
                               <tr align="center" style="background-color:#0f1733; color:whitesmoke;" >
                                 <th>ลำดับที่</th>
                                 <th>ตำแหน่ง</th>
                                 <th>จำนวนบรรจุ</th>
-                                <th>จำนวนเต็มบรรจุ</th>
+                                <th>คำอธิบาย</th>
+                                <th>สถานะ</th>
                               </tr>
                             </thead>
                             <tbody align="center">
+                          
                               <tr>
-                                <td>1t</td>
-                                <td>ช่างอากาศ</td>
-                                <td>5</td>
-                                <td>61</td>
-                             
-                              </tr>
-                              <tr>
-                                <td>2</td>
+                                <td>1</td>
                                 <td>ฝ่ายเทคนิค</td>
                                 <td>20</td>
-                                <td>63</td>
-                               
+                                <td>ต้องการผู้ช่วยซ่อมแซม เครื่องยนต์ยานบิน</td>
+                                <td></td>
                               </tr>
                             </tbody>
                           </table>
