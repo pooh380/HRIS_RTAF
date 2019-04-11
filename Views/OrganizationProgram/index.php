@@ -34,12 +34,13 @@
 <script type="text/javascript">
     $(document).ready(function() {
 
-        Swal.fire(
-            'Good job!',
-            'You clicked the button!',
-            'success'
-        );
-        // console.log("ready");
+        $(document).ajaxStart(function() {
+            $(".modal").show();
+        });
+        $(document).ajaxComplete(function() {
+            $(".modal").hide();
+        });
+
         var orgTypeId = $('#orgTypeList :selected').val();
 
         $.ajax({
@@ -82,6 +83,40 @@
     });
 </script>
 
+<style>
+    .modal {
+        text-align: center;
+        padding: 0 !important;
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+    }
+
+    .modal:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+
+    .modal-dialog {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    .modal-body{
+        width:100%
+        height:100%;
+    }
+    .modal-content{
+        background-color: transparent;
+        border:none;
+    }
+</style>
+
 <section>
     <div class="app-content content">
         <div class="content-wrapper">
@@ -100,11 +135,22 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body card-dashboard">
                                         <div class="col-12 d-flex align-items-center justify-content-center">
+
+                                            <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-body">
+                                                            <img src="https://media0.giphy.com/media/sqajHVw58WRLW/giphy.gif" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
                                             <div class="col-lg-6 col-10 ">
                                                 <div class="text-center">
                                                     <i class="la la-code-fork" style="font-size: 300px; color:#0f1733;"></i>
                                                 </div>
-
                                                 <fieldset class="form-group position-relative">
                                                     <div class="row">
 
