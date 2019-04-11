@@ -44,10 +44,41 @@
       .toggle.ios .toggle-handle {
           border-radius: 20rem;
       }
-  </style>
-  <style>
+
       .table td {
           padding: -0.75rem 2rem;
+      }
+
+      .modal {
+          text-align: center;
+          padding: 0 !important;
+          background-color: rgb(0, 0, 0);
+          /* Fallback color */
+          background-color: rgba(0, 0, 20, 0.4);
+          /* Black w/ opacity */
+      }
+
+      .modal:before {
+          content: '';
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+          margin-right: -4px;
+      }
+
+      .modal-dialog {
+          display: inline-block;
+          text-align: left;
+          vertical-align: middle;
+      }
+
+      .modal-body {
+          width: 100% height:100%;
+      }
+
+      .modal-content {
+          background-color: transparent;
+          border: none;
       }
   </style>
 
@@ -56,8 +87,55 @@
 
   <script>
       $(document).ready(function() {
-          getDataFromUrl();
+          var getUrlParameter = function getUrlParameter(sParam) {
+              var sPageURL = window.location.search.substring(1),
+                  sURLVariables = sPageURL.split('&'),
+                  sParameterName,
+                  i;
+
+              for (i = 0; i < sURLVariables.length; i++) {
+                  sParameterName = sURLVariables[i].split('=');
+
+                  if (sParameterName[0] === sParam) {
+                      return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                  }
+              }
+          };
+          var orgTypeId = getUrlParameter('orgTypeId');
+          var orgListId = getUrlParameter('orgListId');
+
+          $(document).ajaxStart(function() {
+              $(".modal").show();
+          });
+          $(document).ajaxComplete(function() {
+              $(".modal").hide();
+          });
+
+
+          $.ajax({
+              type: "POST",
+              url: "../../Model/OrganizationProgram/getDetailValue.php",
+              data: {
+                  orgTypeId: orgTypeId,
+                  orgListId: orgListId
+              },
+              success: function(data) {
+                  // console.log(data);
+                  $('#list-group-tags').html(data);
+                  var orgListId = $('#orgListList :selected').val();
+                  $("#orgListId").val(orgListId);
+              },
+              error: function(error) {
+                  // console.log(error);
+              }
+          });
       });
+
+      function showDetail(id){
+              var orgLevelId = id;
+              alert(orgLevelId); 
+          }
+
   </script>
 
   <section>
@@ -65,6 +143,20 @@
           <div class="content-wrapper">
               <div class="content-header row">
                   <div class="content-header-left col-12 mb-2">
+
+
+                      <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                  <div class="modal-body">
+                                      <img src="../../Asset/Images/gif-To-not-Bg-Th.gif" style="width:90%" alt="">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+
+
                       <div style="width:7px;height:30px;background-color:#1a1d52; float:left; margin-right:10px;"></div>
                       <h3 class="content-header-title">โปรแกรมจัดการโครงสร้าง</h3>
                       <div class="row breadcrumbs-top">
@@ -130,33 +222,6 @@
                                               </ul>
                                               <ul class="list-group" id="list-group-tags" align="left">
 
-                                                  <a style="margin-left: 15px; ">
-                                                      <li class="list-group-item">
-                                                          <s class="vl"></s> <input type="checkbox" value="01">
-                                                          <span style="font-weight: bold;font-size: 12px;"> กรมกำลังพล ทหารอากาศ</span>
-                                                      </li>
-                                                  </a>
-
-                                                  <a style="margin-left: 15px; folat">
-                                                      <li class="list-group-item">
-                                                          <s class="vl"></s> <input type="checkbox" value="01">
-                                                          <span style="font-weight: bold;font-size: 12px;"> ส่วนบังคับบัญชา</span>
-                                                      </li>
-                                                  </a>
-
-                                                  <a style="margin-left: 15px;">
-                                                      <li class="list-group-item">
-                                                          <s class="vl"></s> <input type="checkbox" value="01">
-                                                          <span style="font-weight: bold;font-size: 12px;"> แผนกฎหมาย</span>
-                                                      </li>
-                                                  </a>
-
-                                                  <a style="margin-left: 15px;">
-                                                      <li class="list-group-item">
-                                                          <s class="vl"></s> <input type="checkbox" value="01">
-                                                          <span style="font-weight: bold;font-size: 12px;"> สำนักนโยบายบริหารกำลังพล</span>
-                                                      </li>
-                                                  </a>
 
                                               </ul>
                                               <!-- <div class="skin-flat">

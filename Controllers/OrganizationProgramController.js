@@ -1,4 +1,6 @@
     
+
+   
 function getOrg() {
     var orgTypeId = $('#orgTypeList :selected').val();
     var orgListId = $('#orgListList :selected').val();
@@ -25,26 +27,6 @@ function getOrg() {
     // alert(orgTypeId + " " + orgListId);
 }
 
-function getDataFromUrl() {
-    var getUrlParameter = function getUrlParameter(sParam) {
-        var sPageURL = window.location.search.substring(1),
-            sURLVariables = sPageURL.split('&'),
-            sParameterName,
-            i;
-
-        for (i = 0; i < sURLVariables.length; i++) {
-            sParameterName = sURLVariables[i].split('=');
-
-            if (sParameterName[0] === sParam) {
-                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-            }
-        }
-    };
-
-    var orgTypeId = getUrlParameter('orgTypeId');
-    var orgListId = getUrlParameter('orgListId');
-    // alert(tech + blog);
-}
 
 function insertOrganizationCategory() {
     var OrganizationcategoryFN = $("#OrganizationcategoryFN").val();
