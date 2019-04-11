@@ -12,8 +12,9 @@ $col = array(
 );
 
 //create column like table in database
-$sql = "SELECT id, perfix_name, perfix_abbr_name, IsActive
-FROM general_perfix";
+$sql = "SELECT id, perfix_name, perfix_abbr_name
+FROM general_perfix;
+";
 
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);

@@ -4,7 +4,6 @@
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/extensions/sweetalert.css">
-
   <style>
       /* ol > li > a {color:#222233;} */
       .toggle.ios,
@@ -12,7 +11,6 @@
       .toggle-off.ios {
           border-radius: 20rem;
       }
-
       .toggle.ios .toggle-handle {
           border-radius: 20rem;
       }
