@@ -12,7 +12,7 @@ $col = array(
 );
 
 //create column like table in database
-$sql = "SELECT id, perfix_name, perfix_abbr_name
+$sql = "SELECT id, perfix_name, perfix_abbr_name,IsActive
 FROM general_perfix;
 ";
 
@@ -55,9 +55,9 @@ while ($row = sqlsrv_fetch_array($query)) {
     $data[] = $subdata;
 }
 
-// echo '<pre>';
-// print_r($data);
-// echo '<pre>';
+echo '<pre>';
+print_r($data);
+echo '<pre>';
 
 $json_data = array(
     "draw"              =>  intval($request['draw']),
