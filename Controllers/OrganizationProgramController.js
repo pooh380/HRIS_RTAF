@@ -2,16 +2,47 @@ function getOrg() {
     var orgTypeId = $('#orgTypeList :selected').val();
     var orgListId = $('#orgListList :selected').val();
 
-    var a = encodeURIComponent(orgTypeId);
-    var b = encodeURIComponent(orgListId);
-    console.log(a + " " + b)
 
-    var msg = urlencode('aong');
-    var url = urlencode('aong');
-    var link = '../OrganizationProgram/test.php?orgTypeId' + msg + '&url=' + url;
-    console.log(link);
-    // window.open(link); 
 
+    $.post("../OrganizationProgram/detail.php", {
+        orgTypeId: orgTypeId,
+        orgListId: orgListId
+
+    }).done(function(data) {
+        // console.log(data);
+        window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgListId=" + orgListId;
+
+    }).fail(function(err) {
+        // console.log(error);
+    });
+
+    // var url = "./detail.php?orgTypeId=" + orgTypeIdEn;
+    // console.log(url);
+    // $(location).attr('href', url);
+
+
+    // alert(orgTypeId + " " + orgListId);
+}
+
+function getDataFromUrl() {
+    var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = window.location.search.substring(1),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
+    };
+
+    var tech = getUrlParameter('orgTypeId');
+    var blog = getUrlParameter('orgListId');
+    alert(tech + blog);
 }
 
 function insertOrganizationCategory() {

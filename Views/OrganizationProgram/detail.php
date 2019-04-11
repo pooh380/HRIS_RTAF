@@ -50,6 +50,16 @@
           padding: -0.75rem 2rem;
       }
   </style>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="../../Controllers/OrganizationProgramController.js"></script>
+
+  <script>
+      $(document).ready(function() {
+          getDataFromUrl();
+      });
+  </script>
+
   <section>
       <div class="app-content content">
           <div class="content-wrapper">
@@ -402,7 +412,7 @@
                                                                   <div class="col-md-12">
                                                                       <div class="form-group">
                                                                           <label class="col-md-12" for="orgName">ลง :</label>
-                                                                          <div class="input-group col-md-12" >
+                                                                          <div class="input-group col-md-12">
                                                                               <div class="input-group-prepend">
                                                                                   <span class="input-group-text">
                                                                                       <span class="la la-calendar-o"></span>
@@ -601,4 +611,4 @@
   <!-- END PAGE LEVEL JS-->
   </body>
 
-  </html> 
+  </html>
