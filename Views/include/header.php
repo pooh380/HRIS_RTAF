@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="../../Asset/Css/custom.css">
 
     <link rel="stylesheet" href="../../Asset/Css/sweetalert2.min.css">
+    <script src="../../Asset/js/sweetalert2.min.js"></script>
+  
 
     
     <!-- for-test byAong -->

@@ -21,8 +21,6 @@
 <!-- BEGIN Custom CSS-->
 <link rel="stylesheet" type="text/css" href="../../asset/css/style.css">
 
-<link rel="stylesheet" href="../../Asset/Css/sweetalert2.min.css">
-<script src="../../Asset/js/sweetalert2.min.js"></script>
 <!-- END Custom CSS-->
 
 <!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script> -->
