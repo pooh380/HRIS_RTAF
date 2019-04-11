@@ -10,7 +10,7 @@ $orgListId = isset($_POST['orgListId']) ? $_POST['orgListId'] : "";
 // $orgTypeId = 21;
 // $orgListId = 49;
 
-$sql = " SELECT  organization_level.id, organization_level.organization_level_name FROM organization_list INNER JOIN organization_level ON organization_list.organization_level_id = organization_level.id INNER JOIN organization_type ON organization_list.organization_type_id = organization_type.id  WHERE organization_type_id ='$orgTypeId' AND organization_list.id = '$orgListId'; ";
+$sql = " SELECT  organization_level.id, organization_level.organization_level_name FROM organization_list LEFT JOIN organization_level ON organization_list.organization_level_id = organization_level.id LEFT JOIN organization_type ON organization_list.organization_type_id = organization_type.id  WHERE organization_type_id ='$orgTypeId' AND organization_list.id = '$orgListId'; ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);

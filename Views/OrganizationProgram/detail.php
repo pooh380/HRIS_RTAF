@@ -138,9 +138,6 @@
               }
           });
 
-        
-
-        
 
       });
 
@@ -289,7 +286,7 @@
                                                                   </div>
                                                               </div>
                                                           </div>
-                                                          <div class="col-md-5">
+                                                          <div class="col-md-6">
                                                               <label class="col-md-12 label-control" for="orgListCode">โครงสร้าง</label> <!-- ดึงมาจากการ search หน้า index -->
                                                               <div class="col-md-12" style="float:left;">
                                                                   <select class="select2 form-control block" id="orgListCode" style="width: 100%;">
@@ -300,9 +297,9 @@
                                                                       <!-- </optgroup> -->
                                                                   </select>
                                                               </div>
-                                                              <div class="col-md-1">
+                                                              <!-- <div class="col-md-1">
                                                                   <a href="../organizationProgram/createOrganizationCategory.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
-                                                              </div>
+                                                              </div> -->
                                                           </div>
                                                           <div class="col-md-6 mt-1">
                                                               <label class="col-md-12 label-control" for="orgCode">รหัสสังกัดและหน่วย</label>
@@ -320,7 +317,7 @@
                                                                   </div>
                                                               </div>
                                                           </div>
-                                                          <div class="col-md-5 mt-1">
+                                                          <div class="col-md-6 mt-1">
                                                               <label class="col-md-12 label-control" for="orgPartName">ชื่อส่วนราชการ</label>
                                                               <div class="col-md-12" style="float:left;">
                                                                   <select class="select2 form-control block" id="orgPartName" style="width: 100%;">
@@ -331,11 +328,11 @@
                                                                       <!-- </optgroup> -->
                                                                   </select>
                                                               </div>
-                                                              <div class="col-md-1">
+                                                              <!-- <div class="col-md-1">
                                                                   <a href="../organizationProgram/createOrganizationParts.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
-                                                              </div>
+                                                              </div> -->
                                                           </div>
-                                                          <div class="col-md-5 mt-1 ml-5">
+                                                          <div class="col-md-6 mt-1 ml-6">
                                                               <label class="col-md-12 label-control" for="orgName">ชื่อสังกัด</label>
                                                               <div class="col-md-12" style="float:left;">
                                                                   <select class="select2 form-control block" id="orgName" style="width: 100%;">
@@ -346,9 +343,9 @@
                                                                       <!-- </optgroup> -->
                                                                   </select>
                                                               </div>
-                                                              <div class="col-md-1">
+                                                              <!-- <div class="col-md-1">
                                                                   <a href="../Organizations/create.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
-                                                              </div>
+                                                              </div> -->
                                                           </div>
                                                           <div class="col-md-6 mt-1">
                                                               <label class="col-md-12 label-control" for="dropdown1">ฐานะของหน่วย/สังกัด</label>
@@ -362,7 +359,7 @@
                                                                   </select>
                                                               </div>
                                                           </div>
-                                                          <div class="col-md-5 mt-1">
+                                                          <div class="col-md-6 mt-1">
                                                               <label class="col-md-12 label-control" for="divisionsName">ชื่อหน่วย</label>
                                                               <div class="col-md-12" style="float:left;">
                                                                   <select class="select2 form-control block" id="divisionsName" style="width: 100%;">
@@ -373,9 +370,9 @@
                                                                       <!-- </optgroup> -->
                                                                   </select>
                                                               </div>
-                                                              <div class="col-md-1">
+                                                              <!-- <div class="col-md-1">
                                                                   <a href="../Organizations/create.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
-                                                              </div>
+                                                              </div> -->
                                                           </div>
                                                           <div class="col-md-6 mt-1">
                                                               <label class="col-md-12 label-control" for="input1">ชื่อย่อ</label>
