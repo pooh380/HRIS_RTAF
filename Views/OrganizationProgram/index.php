@@ -140,7 +140,7 @@
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-body">
-                                                            <img src="https://media0.giphy.com/media/sqajHVw58WRLW/giphy.gif" alt="">
+                                                            <img src="../../Asset/Images/gif-To-not-Bg-Th.gif" style="width:90%" alt="">
                                                         </div>
                                                     </div>
                                                 </div>

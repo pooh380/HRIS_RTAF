@@ -63,7 +63,7 @@
                                                       <label class="col-md-12 label-control" for="userinput1">ตำแหน่ง</label>
                                                       <div class="col-md-12">
                                                           <select class="form-control" id="selectOpt">
-                                                              <option>Select Option</option>
+                                                              <option  value="">กรุณาเลือกตำแหน่ง</option>
                                                               <option>Option 1</option>
                                                               <option>Option 2</option>
                                                               <option>Option 3</option>
@@ -77,7 +77,7 @@
                                                       <label class="col-md-12 label-control" for="userinput2">จำนวน</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="number" id="userinput2" class="form-control border-primary" placeholder="จำนวน" name="initName">
+                                                              <input type="number" id="userinput2" max="30" class="form-control border-primary" placeholder="จำนวน" name="initName">
                                                           </div>
                                                       </div>
                                                   </div>
