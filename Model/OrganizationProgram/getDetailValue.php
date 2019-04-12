@@ -12,9 +12,9 @@ $orgId = isset($_POST['orgId']) ? $_POST['orgId'] : "";
 // $orgListId = 49;
 
 // $sql = " SELECT  organization_level.id, organization_level.organization_level_name FROM organization_list INNER JOIN organization_level ON organization_list.organization_level_id = organization_level.id INNER JOIN organization_type ON organization_list.organization_type_id = organization_type.id  WHERE organization_type_id ='$orgTypeId' AND organization_list.id = '$orgListId'; ";
-$sql = " SELECT organization_type_id,organization_list.id,organization_list_name,organization_id, organization_level_id
+$sql = " SELECT TOP(10) organization_type_id,organization_list.id,organization_list_name,organization_id, organization_level_id
 FROM organization_list
-WHERE organization_list.organization_type_id = $orgTypeId AND organization_list.organization_id like '%00$orgId'
+WHERE organization_list.organization_type_id = $orgTypeId AND organization_list.organization_id like '%00$orgId' 
 ORDER BY organization_level_id ASC ;";
 
 $params = array();
