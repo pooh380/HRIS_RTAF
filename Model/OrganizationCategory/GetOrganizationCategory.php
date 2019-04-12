@@ -1,5 +1,6 @@
 <?php
 
+
 error_reporting(E_ALL & ~E_NOTICE);
 
 require_once "../../config.php";
@@ -13,7 +14,7 @@ $col = array(
     4   =>  'IsActive',
 );
 
-$sql = "SELECT id,organization_category_code,organization_category_name,organization_category_abbr_name,IsActive FROM organization_category";
+$sql = "SELECT  id,organization_category_code,organization_category_name,organization_category_abbr_name,IsActive FROM organization_category";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
