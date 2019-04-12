@@ -86,7 +86,6 @@
   <script src="../../Controllers/OrganizationProgramController.js"></script>
 
   <script>
-      
       $(document).ready(function() {
           var getUrlParameter = function getUrlParameter(sParam) {
               var sPageURL = window.location.search.substring(1),
@@ -103,20 +102,18 @@
               }
           };
           var orgTypeId = getUrlParameter('orgTypeId');
-          var orgListId = getUrlParameter('orgListId');
-
-          
-
-         
+          //   var orgListId = getUrlParameter('orgListId');
+          var orgId = getUrlParameter('orgId');
 
           $(document).ajaxStart(function() {
               $(".modal").show();
-             
+
           });
           $(document).ajaxComplete(function() {
               $(".modal").hide();
               $("#orgTypeId").val(orgTypeId);
-          $("#orgListId").val(orgListId);
+              //   $("#orgListId").val(orgListId);
+              $("#orgListId").val(orgId);
           });
 
 
@@ -125,7 +122,8 @@
               url: "../../Model/OrganizationProgram/getDetailValue.php",
               data: {
                   orgTypeId: orgTypeId,
-                  orgListId: orgListId
+                  //   orgListId: orgListId
+                  orgId: orgId
               },
               success: function(data) {
                   // console.log(data);
@@ -138,22 +136,21 @@
               }
           });
 
-        
 
-        
+
+
 
       });
 
-      function showDetail(id,orgTypeId,orgListId){
-              var orgLevelId = id;
-             var orgTypeId = $("#orgTypeId").val();
-         var orgListId =  $("#orgListId").val();
-              
-              alert(orgTypeId); 
-              alert(orgListId);
-              alert(orgLevelId);  
-          }
+      function showDetail(id, orgTypeId, orgListId) {
+          var orgLevelId = id;
+          var orgTypeId = $("#orgTypeId").val();
+          var orgListId = $("#orgListId").val();
 
+          alert(orgTypeId);
+          alert(orgListId);
+          alert(orgLevelId);
+      }
   </script>
 
   <section>
@@ -162,9 +159,9 @@
               <div class="content-header row">
                   <div class="content-header-left col-12 mb-2">
 
-                  <input type="hidden" id="orgTypeId" name="orgTypeId">
-                  
-                  <input type="hidden" id="orgListId" name="orgListId">
+                      <input type="hidden" id="orgTypeId" name="orgTypeId">
+
+                      <input type="hidden" id="orgListId" name="orgListId">
 
                       <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                           <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
