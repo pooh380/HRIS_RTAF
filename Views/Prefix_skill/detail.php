@@ -20,7 +20,7 @@
   <link rel="stylesheet" type="text/css" href="../../app-assets/css/plugins/forms/checkboxes-radios.css">
   <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
   <!-- END Page Level CSS-->
-  
+
 
   <!-- END Custom CSS-->
   <?php include '../include/menu.php'; ?>
@@ -42,6 +42,65 @@
           padding: -0.75rem 2rem;
       }
   </style>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="../../Controllers/prefixSkillController.js"></script>
+
+  <script>
+      $(document).ready(function() {
+          var getUrlParameter = function getUrlParameter(sParam) {
+              var sPageURL = window.location.search.substring(1),
+                  sURLVariables = sPageURL.split('&'),
+                  sParameterName,
+                  i;
+
+              for (i = 0; i < sURLVariables.length; i++) {
+                  sParameterName = sURLVariables[i].split('=');
+
+                  if (sParameterName[0] === sParam) {
+                      return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                  }
+              }
+          };
+          var orgTypeId = getUrlParameter('orgTypeId');
+          //   var orgListId = getUrlParameter('orgListId');
+          var orgId = getUrlParameter('orgId');
+          var personTypeId = getUrlParameter('personTypeId');
+
+          $(document).ajaxStart(function() {
+              $(".modal").show();
+
+          });
+          $(document).ajaxComplete(function() {
+              $(".modal").hide();
+              $("#orgTypeId").val(orgTypeId);
+              $("#orgId").val(orgId);
+              //   $("#orgListId").val(orgId);
+              $("#personTypeId").val(personTypeId);
+          });
+
+
+          $.ajax({
+              type: "POST",
+              url: "../../Model/PrefixSkill/getDetailValue.php",
+              data: {
+                  orgTypeId: orgTypeId,
+
+                  orgId: orgId
+              },
+              success: function(data) {
+                  // console.log(data);
+                  $('#list-group-tags').html(data);
+                  var orgListId = $('#orgListList :selected').val();
+                  $("#orgListId").val(orgListId);
+              },
+              error: function(error) {
+                  // console.log(error);
+              }
+          });
+      });
+  </script>
+
   <section>
       <div class="app-content content">
           <div class="content-wrapper">
@@ -51,16 +110,19 @@
                       <div class="row breadcrumbs-top">
                           <div class="breadcrumb-wrapper col-12">
                               <ol class="breadcrumb">
-                                  <li class="breadcrumb-item"><a href="../home/index.php">ระบบงานโครงสร้างอัตรากำลังพล</a>
+                                  <li class="breadcrumb-item"><a href="../home/index.php">ระบบงานทำเนียบ</a>
                                   </li>
-                                  <li class="breadcrumb-item"><a href="../home/index.php">โครงสร้าง</a>
+                                  <li class="breadcrumb-item"><a href="../home/index.php">ทำเนียบบรรจุกำลังพล</a>
                                   </li>
-                                  <li class="breadcrumb-item active">โครงการส่วนราชการ</li>
+                                  <li class="breadcrumb-item active">บันทึกกรอบอัตราตำแหน่ง</li>
                               </ol>
                           </div>
                       </div>
                   </div>
               </div>
+              <input type="hidden" name="orgTypeId" id="orgTypeId">
+              <input type="hidden" name="orgId" id="orgId">
+              <input type="hidden" name="personTypeId" id="personTypeId">
               <div class="container-fluid">
                   <div class="row">
                       <div class="col-lg-4">
@@ -109,41 +171,7 @@
                                                       <span style="font-weight: bold;font-size: 12px;"> กองทัพอากาศ</span>
                                                   </li>
                                               </ul>
-                                              <ul class="list-group" id="list-group-tags" align="left">
-
-                                                  <a style="margin-left: 15px; ">
-                                                      <li class="list-group-item">
-                                                          <s class="vl"></s> <input type="checkbox" value="01">
-                                                          <span style="font-weight: bold;font-size: 12px;"> กรมกำลังพล ทหารอากาศ</span>
-                                                      </li>
-                                                  </a>
-
-                                                  <a style="margin-left: 15px; folat">
-                                                      <li class="list-group-item">
-                                                          <s class="vl"></s> <input type="checkbox" value="01">
-                                                          <span style="font-weight: bold;font-size: 12px;"> ส่วนบังคับบัญชา</span>
-                                                      </li>
-                                                  </a>
-
-                                                  <a style="margin-left: 15px;">
-                                                      <li class="list-group-item">
-                                                          <s class="vl"></s> <input type="checkbox" value="01">
-                                                          <span style="font-weight: bold;font-size: 12px;"> แผนกฎหมาย</span>
-                                                      </li>
-                                                  </a>
-
-                                                  <a style="margin-left: 15px;">
-                                                      <li class="list-group-item">
-                                                          <s class="vl"></s> <input type="checkbox" value="01">
-                                                          <span style="font-weight: bold;font-size: 12px;"> สำนักนโยบายบริหารกำลังพล</span>
-                                                      </li>
-                                                  </a>
-
-                                              </ul>
-                                              <!-- <div class="skin-flat">
-                                                      divนี้ทำให้ เป็นcheckbox css
-                                              </div> -->
-                                              <!-- ----------------------------- -->
+                                              <ul class="list-group" id="list-group-tags" align="left"></ul>
                                           </div>
                                       </div>
                                   </div>
@@ -163,63 +191,18 @@
                                       <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                                           <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
                                       </a>
-                                      <table class="table table-striped  table-borderless table-hover bootstrap-3 table-">
+                                      <table id="prefixSkillTable" class="table table-striped  table-borderless table-hover bootstrap-3 table-" style="width:100%">
                                           <thead>
 
                                               <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                                                   <th> <a class="skin-flat"><input type="checkbox" class="checkAll" onclick="toggle(this);" /> </a></th>
-                                                  <th></th>
                                                   <th>ลำดับที่</th>
-                                                  <th>รหัส</th>
                                                   <th>ชื่อ</th>
                                                   <th>ใช้งาน</th>
 
                                               </tr>
                                           </thead>
-                                          <tbody align="center ">
-                                              <tr>
-                                                  <td><a class="skin-flat"><input type="checkbox" class="checkAll" /></a></td>
-                                                  <td style="color:#0f1733"><a><i class="la la-file-text"></i></a>
-                                                      <a href="./money.php" style="color:#0f1733;"><i class="la a la-money"></i></a>
-                                                      <a class="dropdown">
-                                                          <a data-toggle="dropdown">
-                                                              <i class="la la-ellipsis-v"></i></a>
-                                                          <div class="dropdown-menu">
-                                                              <a class="dropdown-item" href="#"><i class="la la-edit"></i> แก้ไข</a>
-                                                              <a class="dropdown-item" href="#"><i class="la la-trash-o"></i>ลบ</a>
-                                                          </div>
-                                                      </a>
-
-                                                  </td>
-                                                  <td>System Architect</td>
-                                                  <td>Edinburgh</td>
-                                                  <td>61</td>
-                                                  <td align="center">
-                                                      <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-                                                  </td>
-                                              </tr>
-                                              <tr>
-                                                  <td><a class="skin-flat"><input type="checkbox" class="checkAll" /></a></td>
-                                                  <td style="color:#0f1733"><a><i class="la la-file-text"></i></a>
-                                                      <a href="./money.php" style="color:#0f1733;"><i class="la a la-money"></i></a>
-                                                      <a class="dropdown">
-                                                          <a data-toggle="dropdown">
-                                                              <i class="la la-ellipsis-v"></i></a>
-                                                          <div class="dropdown-menu">
-                                                              <a class="dropdown-item" href="#"><i class="la la-edit"></i> แก้ไข</a>
-                                                              <a class="dropdown-item" href="#"><i class="la la-trash-o"></i>ลบ</a>
-                                                          </div>
-                                                      </a>
-
-                                                  </td>
-                                                  <td>Accountant</td>
-                                                  <td>Tokyo</td>
-                                                  <td>63</td>
-                                                  <td align="center">
-                                                      <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-                                                  </td>
-                                              </tr>
-                                          </tbody>
+                                          <tbody align="center "> </tbody>
                                       </table>
                                   </div>
                               </div>
@@ -241,10 +224,6 @@
               e.preventDefault();
           });
       });
-
-
-
-      
   </script>
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
@@ -267,7 +246,7 @@
   <script src="../../app-assets/js/scripts/forms/checkbox-radio.js" type="text/javascript"></script>
   <script src="../../app-assets/js/scripts/dropdowns/dropdowns.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
-  
 
 
-  <?php include '../include/footer.php'; ?> 
+
+  <?php include '../include/footer.php'; ?>

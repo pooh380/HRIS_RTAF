@@ -1,5 +1,5 @@
 function getPrefixs() {
-    $('#prefixsTable').DataTable({
+    $('#prefixSkillTable').DataTable({
         "ajax": {
             url: "../../Model/Prefixs/GetPrefixs.php", // json datasource
             dataType: "json",

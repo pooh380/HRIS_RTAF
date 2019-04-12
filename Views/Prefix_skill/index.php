@@ -151,7 +151,7 @@
             <div class="content-header row">
                 <div class="content-header-left col-md-6 col-12 mb-2">
                     <div style="width:7px;height:30px;background-color:#1a1d52; float:left; margin-right:10px;"></div>
-                    <h3 class="content-header-title">โปรแกรมจัดการโครงสร้าง</h3>
+                    <h3 class="content-header-title">บันทึกกรอบอัตราตำแหน่ง</h3>
                 </div>
             </div>
             <div class="content-body">
@@ -178,7 +178,7 @@
                                             <div class="col-lg-6 col-10 ">
                                                 <form action="">
                                                     <div class="text-center">
-                                                        <i class="la la-code-fork" style="font-size: 300px; color:#0f1733;"></i>
+                                                        <i class="la la-code-fork" style="font-size: 300px; color:#FF5722;"></i>
                                                     </div>
                                                     <fieldset class="form-group position-relative">
                                                         <div class="row">
@@ -222,7 +222,7 @@
                                                                 <label id="personType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ประเภทกำลังพล:</label>
 
                                                                 <select name="personTypeList" id="personTypeList" class="select2 form-control">
-                                                                    <option value="">กรุณาเลือก</option>
+                                                                    <option value="1">สัญญาบัตร</option>
                                                                     <?php
                                                                     $sql = " SELECT id, PersonTypeName FROM person_type; ";
                                                                     $result = sqlsrv_query($conn, $sql);

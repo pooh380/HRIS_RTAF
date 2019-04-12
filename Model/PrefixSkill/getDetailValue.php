@@ -14,8 +14,8 @@ $orgId = isset($_POST['orgId']) ? $_POST['orgId'] : "";
 // $sql = " SELECT  organization_level.id, organization_level.organization_level_name FROM organization_list INNER JOIN organization_level ON organization_list.organization_level_id = organization_level.id INNER JOIN organization_type ON organization_list.organization_type_id = organization_type.id  WHERE organization_type_id ='$orgTypeId' AND organization_list.id = '$orgListId'; ";
 $sql = " SELECT  organization_type_id,organization_list.id,organization_list_name,organization_id, organization_level_id
 FROM organization_list
-WHERE organization_list.organization_type_id = $orgTypeId AND organization_list.organization_id like '%00$orgId' and id = 87; 
--- ORDER BY organization_level_id ASC ;";
+WHERE organization_list.organization_type_id = $orgTypeId AND organization_list.organization_id like '%00$orgId'  AND organization_list.id = 87
+ORDER BY organization_level_id ASC ;";
 
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
