@@ -1,5 +1,8 @@
 <?php
 
+
+error_reporting(E_ALL & ~E_NOTICE);
+
 require_once "../../config.php";
 
 $request = $_REQUEST;
@@ -13,7 +16,7 @@ $col = array(
 );
 
 $sql = " SELECT id, organization_type_code, organization_type_name, start_date, end_date, IsActive, created_by, created_date, update_by, update_date
-FROM organization_type;
+FROM organization_type ;
  ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
@@ -32,12 +35,6 @@ if (!empty($request['search']['value'])) {
     $totalData = sqlsrv_num_rows($query);
 }
 
-//Order
-// $sql .= " ORDER BY " . $col[$request['order'][0]['column']] . "   " . $request['order'][0]['dir'] . "  DESC " .
-//     $request['start'] . "  ," . $request['length'] . "  ";
-//     $query = sqlsrv_query($conn, $sql, $params, $options);
-//     if($query){echo "ccc";}else{echo "nnn";};
-
 
 // echo $sql;
 $data = array();
@@ -54,7 +51,7 @@ while ($row = sqlsrv_fetch_array($query)) {
     if ($row[3] == false) { //start date
         $subdata[] =  " - "; // กรณีค่าเป็นว่าง
     } else {
-        $subdata[] = date("d-m-Y", strtotime($row['4'])); //set date format เพื่อที่จะเรื่องออกมาโชว์
+        $subdata[] = date("d-m-Y", strtotime($row['3'])); //set date format เพื่อที่จะเรื่องออกมาโชว์
     }
 
     if ($row[4] == false) {
