@@ -25,6 +25,43 @@
         // alert(orgTypeId + " " + orgListId);
     }
 
+    function showDetail(id) {
+        var orgLevelId = id;
+        var orgTypeId = $("#orgTypeId").val();
+        var orgListId = $("#orgListId").val();
+      
+        alert(orgTypeId);
+        alert(orgListId);
+        alert(orgLevelId);
+
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "../../Model/OrganizationProgram/getTemplateValue.php",
+            data: {
+                orgLevelId: orgLevelId,
+                orgTypeId: orgTypeId,
+                orgListId: orgListId
+            },
+            success: function(data) {
+                $("#code").val(data.id);
+                $("#orglistCode").val(data.orglistCode);
+                $("#divisionID").val(data.divisionID);
+                $("#orgListAbbr").val(data.orgListAbbr); 
+                $("#orgListLong").val(data.orgListLong); 
+                $("#orgListAbbrLong").val(data.orgListAbbrLong); 
+                $("#orgListAbbrLongAbbr").val(data.orgListAbbrLongAbbr); 
+
+                
+                
+                // console.log(data);
+            },
+            error: function(error) {
+                // alert(error);
+                console.log(error);
+            }
+        });
+    }
 
     function insertOrganizationCategory() {
         var OrganizationcategoryFN = $("#OrganizationcategoryFN").val();

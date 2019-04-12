@@ -27,10 +27,10 @@ if ($rows > 0) {
     while ($result = sqlsrv_fetch_array($query)) { ?>
 
         <a style="margin-left: 15px; ">
-            <li class="list-group-item" onclick="showDetail(<?php echo $result['id'] ;?>)">
+            <li class="list-group-item" >
                 <s class="vl"></s> <input type="checkbox" value="01">
                 <!-- <span style="font-weight: bold;font-size: 12px;" ><?php echo $result['organization_level_name'] ;?></span> -->
-                <span style="font-weight: bold;font-size: 12px;" ><?php echo $result['organization_list_name'] ; echo $result['organization_level_id'] ;?></span>
+                <span style="font-weight: bold;font-size: 12px;" onclick="showDetail(<?php echo $result['id'] ;?>)" ><?php echo $result['organization_list_name'] ; echo $result['organization_level_id'] ;?></span>
             </li>
         </a>
 
