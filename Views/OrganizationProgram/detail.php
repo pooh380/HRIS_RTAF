@@ -269,7 +269,7 @@
                                                               <label class="col-md-12 label-control" for="code">รหัสโครงการส่วนราชการ</label>
                                                               <div class="col-md-12">
                                                                   <div class="position-relative">
-                                                                      <input type="text" disabled id="code" class="form-control border-primary" placeholder="รหัสโครงการส่วนราชการ" name="code">
+                                                                      <input type="text" disabled id="code" class="form-control" placeholder="รหัสโครงการส่วนราชการ" name="code">
                                                                   </div>
                                                               </div>
                                                           </div>
@@ -292,7 +292,7 @@
                                                               <label class="col-md-12 label-control" for="orglistCode">รหัสสังกัดและหน่วย</label>
                                                               <div class="col-md-12">
                                                                   <div class="position-relative">
-                                                                      <input type="text" disabled id="orglistCode" class="form-control border-primary" placeholder="รหัสสังกัดและหน่วย" name="orglistCode">
+                                                                      <input type="text" disabled id="orglistCode" class="form-control " placeholder="รหัสสังกัดและหน่วย" name="orglistCode">
                                                                   </div>
                                                               </div>
                                                           </div>
@@ -300,7 +300,7 @@
                                                               <label class="col-md-12 label-control" for="divisionID">ลำดับสังกัด/หน่วยใน Tree</label>
                                                               <div class="col-md-12">
                                                                   <div class="position-relative">
-                                                                      <input type="text" disabled id="divisionID" class="form-control border-primary" placeholder="ลำดับสังกัด/หน่วยใน Tree" name="divisionID">
+                                                                      <input type="text" disabled id="divisionID" class="form-control " placeholder="ลำดับสังกัด/หน่วยใน Tree" name="divisionID">
                                                                   </div>
                                                               </div>
                                                           </div>
@@ -351,7 +351,7 @@
                                                               <label class="col-md-12 label-control" for="orgListAbbr">ชื่อย่อ</label>
                                                               <div class="col-md-12">
                                                                   <div class="position-relative">
-                                                                      <input type="text " disabled id="orgListAbbr" class="form-control border-primary" placeholder="ศปร." name="orgListAbbr">
+                                                                      <input type="text " disabled id="orgListAbbr" class="form-control " placeholder="ศปร." name="orgListAbbr">
                                                                   </div>
                                                               </div>
                                                           </div>
@@ -359,7 +359,7 @@
                                                               <label class="col-md-12 label-control" for="orgListLong">ชื่อหน่วย/สังกัด</label>
                                                               <div class="col-md-12">
                                                                   <div class="position-relative">
-                                                                      <input type="text" disabled id="orgListLong" class="form-control border-primary" placeholder="ชื่อหน่วย/สังกัด" name="orgListLong">
+                                                                      <input type="text" disabled id="orgListLong" class="form-control " placeholder="ชื่อหน่วย/สังกัด" name="orgListLong">
                                                                   </div>
                                                               </div>
                                                           </div>
@@ -367,7 +367,7 @@
                                                               <label class="col-md-12 label-control" for="orgListAbbrLong">ชื่อย่อหน่วย/สังกัด</label>
                                                               <div class="col-md-12">
                                                                   <div class="position-relative">
-                                                                      <input type="text" disabled id="orgListAbbrLong" class="form-control border-primary" placeholder="ชื่อย่อหน่วย/สังกัด" name="orgListAbbrLong">
+                                                                      <input type="text" disabled id="orgListAbbrLong" class="form-control " placeholder="ชื่อย่อหน่วย/สังกัด" name="orgListAbbrLong">
                                                                   </div>
                                                               </div>
                                                           </div>
@@ -375,7 +375,7 @@
                                                               <label class="col-md-12 label-control" for="orgListAbbrLongAbbr">ชื่อกึ่งย่อหน่วย/สังกัด</label>
                                                               <div class="col-md-12">
                                                                   <div class="position-relative">
-                                                                      <input type="text" disabled id="orgListAbbrLongAbbr" class="form-control border-primary" placeholder="ชื่อกึ่งย่อหน่วย/สังกัด" name="orgListAbbrLongAbbr">
+                                                                      <input type="text" disabled id="orgListAbbrLongAbbr" class="form-control " placeholder="ชื่อกึ่งย่อหน่วย/สังกัด" name="orgListAbbrLongAbbr">
                                                                   </div>
                                                               </div>
                                                           </div>
@@ -439,7 +439,7 @@
                                                               <div class="form-group row">
                                                                   <div class="col-md-12">
                                                                       <label class="col-md-12" for="orgName">คำสั่ง</label>
-                                                                      <div class="col-md-10" style="float:left;">
+                                                                      <div class="col-md-12" style="float:left;">
                                                                           <select class="select2 form-control block" id="orgName" style="width: 100%;">
                                                                               <!-- border-color: #8c93ee !important; -->
                                                                               <!-- <optgroup label="Alaskan/Hawaiian Time Zone"> -->
@@ -449,7 +449,7 @@
                                                                               <!-- </optgroup> -->
                                                                           </select>
                                                                       </div>
-                                                                      <a href="../Organizations/create.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
+                                                                      <!-- <a href="../Organizations/create.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a> -->
                                                                   </div>
                                                               </div>
 
@@ -458,7 +458,7 @@
                                                                       <label class="col-md-12" for="orgName">เลขที่คำสั่ง</label>
                                                                       <div class="col-md-12">
                                                                           <div class="position-relative">
-                                                                              <input type="text" id="code" class="form-control border-primary" placeholder="เลขที่คำสั่ง" name="code">
+                                                                              <input type="text" id="code" class="form-control " placeholder="เลขที่คำสั่ง" name="code">
                                                                           </div>
                                                                       </div>
                                                                   </div>
@@ -515,7 +515,7 @@
                                                               <div class="form-group row">
                                                                   <div class="col-md-12">
                                                                       <label class="col-md-12" for="orgName">คำสั่ง</label>
-                                                                      <div class="col-md-10" style="float:left;">
+                                                                      <div class="col-md-12" style="float:left;">
                                                                           <select class="select2 form-control block" id="orgName" style="width: 100%;">
                                                                               <!-- border-color: #8c93ee !important; -->
                                                                               <!-- <optgroup label="Alaskan/Hawaiian Time Zone"> -->
@@ -525,7 +525,7 @@
                                                                               <!-- </optgroup> -->
                                                                           </select>
                                                                       </div>
-                                                                      <a href="../Organizations/create.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
+                                                                      <!-- <a href="../Organizations/create.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a> -->
                                                                   </div>
                                                               </div>
 
@@ -534,7 +534,7 @@
                                                                       <label class="col-md-12" for="orgName">เลขที่คำสั่ง</label>
                                                                       <div class="col-md-12">
                                                                           <div class="position-relative">
-                                                                              <input type="text" id="code" class="form-control border-primary" placeholder="เลขที่คำสั่ง" name="code">
+                                                                              <input type="text" id="code" class="form-control " placeholder="เลขที่คำสั่ง" name="code">
                                                                           </div>
                                                                       </div>
                                                                   </div>
@@ -579,15 +579,10 @@
                                               </div>
                                               <hr>
                                               <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-
                                           </div>
                                       </div>
                                   </div>
                               </div>
-                          </div>
-                          <div class="form-actions center" align="center">
-                              <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                              <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text">บันทึก</button>
                           </div>
                       </div>
                   </div>
