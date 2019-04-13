@@ -117,7 +117,7 @@
               },
               success: function(data) {
                   // console.log(data);
-                  $('#list-group-tags').appdata(data);
+                  $('#list-group-tags').append(data);
                   var orgListId = $('#orgListList :selected').val();
                   $("#orgListId").val(orgListId);
               },
@@ -156,9 +156,10 @@
                   </div>
               </div>
 
-              <input type="text" name="orgTypeId" id="orgTypeId">
-              <input type="text" name="orgListId" id="orgListId">
-              <input type="text" name="personTypeId" id="personTypeId">
+              <input type="hidden" name="orgTypeId" id="orgTypeId">
+              <input type="hidden" name="orgListId" id="orgListId">
+              <input type="hidden" name="personTypeId" id="personTypeId">
+
               <div class="container-fluid">
                   <div class="row">
                       <div class="col-lg-4">
@@ -210,11 +211,12 @@
                                               <ul class="list-group" id="list-group-tags" align="left">
                                               <a style="margin-left: 15px; ">
                                                       <li class="list-group-item">
-                                                        <s class="vl"></s>
-                                                          <span style="font-weight: bold;font-size: 12px;" onclick="showDetail()"> &nbsp;กรมกำลังพลทาหารอากศ 0</span>
+                                                          <s class="vl"></s>
+                                                          <!-- <span style="font-weight: bold;font-size: 12px;" ><?php echo $result['division_name']; ?></span> -->
+                                                          <span style="font-weight: bold;font-size: 12px;" onclick="showDetail()"> &nbsp; กรมกำลังพลทาหารอากศ 0</span>
                                                       </li>
                                                   </a>
-                                              </ul>
+                                                  
                                           </div>
                                       </div>
                                   </div>
