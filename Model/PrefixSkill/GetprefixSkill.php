@@ -63,9 +63,9 @@ $data=array();
 while($row=sqlsrv_fetch_array($query)){
     $subdata=array();
     $subdata[] = '
-    <a href=""><i class="la la-file-text"></i></a>
-    <a href="./money.php?personId="'.$row[0].'" style="color:#0f1733;"><i class="la a la-money"></i></a>
-    <a class="dropdown">
+    <a href=""><i class="la la-file-text"></i></a>'.
+    '<a href="./money.php?personId='.$row[0].'"><i class="la la-money" style="color:#0f1733;"></i></a>'.
+    '<a class="dropdown">
         <a data-toggle="dropdown">
             <i class="la la-ellipsis-v"></i></a>
         <div class="dropdown-menu">
