@@ -120,10 +120,24 @@
                                                             </select>
                                                         </div>
 
+<<<<<<< HEAD:Views/OrganizationProgram/index.php
                                                         <div class="form-group col-md-12">
                                                             <label id="orgList" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ฐานะหน่วย:</label>
                                                             <input type="hidden" id="orgTypeId" name="orgTypeId">
                                                             <select id="orgListList" name="orgListList" class="select2 form-control"></select>
+=======
+                                                                <select name="orgList" id="orgList" class="select2 form-control">
+                                                                    <option value="4">กพ.ทอ.</option>
+                                                                    <?php
+                                                                    $sql = " SELECT id, organization_name FROM organization; ";
+                                                                    $result = sqlsrv_query($conn, $sql);
+                                                                    while ($row = sqlsrv_fetch_array($result)) {
+                                                                        echo "<option value='" . $row['id'] . "'>" . $row['organization_name'] . "</option>";
+                                                                    }
+                                                                    ?>
+                                                                </select>
+                                                            </div>
+>>>>>>> 4edef4ae67e3d7692c95b1b473825fb187f495d9:Views/OrganizationProgram/indexBackup.php
                                                         </div>
                                                     </div>
                                                 </fieldset>
