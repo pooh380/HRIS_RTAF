@@ -95,7 +95,7 @@
           };
           var orgTypeId = getUrlParameter('orgTypeId');
           //   var orgListId = getUrlParameter('orgListId');
-          var orgId = getUrlParameter('orgId');
+          var orgListId = getUrlParameter('orgListId');
           var personTypeId = getUrlParameter('personTypeId');
 
           $(document).ajaxStart(function() {
@@ -105,19 +105,15 @@
           $(document).ajaxComplete(function() {
               $(".modal").hide();
               $("#orgTypeId").val(orgTypeId);
-              $("#orgId").val(orgId);
-              //   $("#orgListId").val(orgId);
+              $("#orgListId").val(orgListId);
               $("#personTypeId").val(personTypeId);
           });
-
-
           $.ajax({
               type: "POST",
               url: "../../Model/PrefixSkill/getDetailValue.php",
               data: {
                   orgTypeId: orgTypeId,
-
-                  orgId: orgId
+                  orgListId:orgListId
               },
               success: function(data) {
                   // console.log(data);
@@ -160,9 +156,9 @@
                   </div>
               </div>
 
-              <input type="hidden" name="orgTypeId" id="orgTypeId">
-              <input type="hidden" name="orgId" id="orgId">
-              <input type="hidden" name="personTypeId" id="personTypeId">
+              <input type="text" name="orgTypeId" id="orgTypeId">
+              <input type="text" name="orgListId" id="orgListId">
+              <input type="text" name="personTypeId" id="personTypeId">
               <div class="container-fluid">
                   <div class="row">
                       <div class="col-lg-4">
