@@ -1,17 +1,19 @@
     function getOrg() {
         var orgTypeId = $('#orgTypeList :selected').val();
-        // var orgListId = $('#orgListList :selected').val();
-        var orgId = $('#orgList :selected').val();
+        var orgListId = $('#orgListList :selected').val();
+        // var orgId = $('#orgList :selected').val();
+
+        // alert("orgListId: " + orgTypeId + " " + "orgListId: " + orgListId);
 
         $.post("../OrganizationProgram/detail.php", {
             orgTypeId: orgTypeId,
-            // orgListId: orgListId
-            orgId: orgId,
+            orgListId: orgListId
+                // orgId: orgId,
 
         }).done(function(data) {
             // console.log(data);
-            // window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgListId=" + orgListId;
-            window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgId=" + orgId;
+            window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgListId=" + orgListId;
+            // window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgId=" + orgId;
 
         }).fail(function(err) {
             // console.log(error);
@@ -29,7 +31,7 @@
         var orgLevelId = id;
         var orgTypeId = $("#orgTypeId").val();
         var orgListId = $("#orgListId").val();
-      
+
         // alert(orgTypeId);
         // alert(orgListId);
         // alert(orgLevelId);
@@ -47,15 +49,15 @@
                 $("#code").val(data.id);
                 $("#orglistCode").val(data.orglistCode);
                 $("#divisionID").val(data.divisionID);
-                $("#orgListAbbr").val(data.orgListAbbr); 
-                $("#orgListLong").val(data.orgListLong); 
-                $("#orgListAbbrLong").val(data.orgListAbbrLong); 
-                $("#orgListAbbrLongAbbr").val(data.orgListAbbrLongAbbr); 
+                $("#orgListAbbr").val(data.orgListAbbr);
+                $("#orgListLong").val(data.orgListLong);
+                $("#orgListAbbrLong").val(data.orgListAbbrLong);
+                $("#orgListAbbrLongAbbr").val(data.orgListAbbrLongAbbr);
                 // $("#orgTypeList").html(data.value);
-                $('#orgTypeList').append('<option value="'+data.orgType+'" selected="selected">'+data.orgType+'</option>');
-                $('#orgListName').append('<option value="'+data.orgListName+'" selected="selected">'+data.orgListName+'</option>');
-                $('#orgPartName').append('<option value="'+data.orgPartName+'" selected="selected">'+data.orgPartName+'</option>');
-                $('#orgaLevelName').append('<option value="'+data.orgaLevelName+'" selected="selected">'+data.orgaLevelName+'</option>');
+                $('#orgTypeList').append('<option value="' + data.orgType + '" selected="selected">' + data.orgType + '</option>');
+                $('#orgListName').append('<option value="' + data.orgListName + '" selected="selected">' + data.orgListName + '</option>');
+                $('#orgPartName').append('<option value="' + data.orgPartName + '" selected="selected">' + data.orgPartName + '</option>');
+                $('#orgaLevelName').append('<option value="' + data.orgaLevelName + '" selected="selected">' + data.orgaLevelName + '</option>');
                 // console.log(data);
             },
             error: function(error) {

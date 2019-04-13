@@ -43,6 +43,7 @@
         $("#orgTypeId").val(orgTypeId);
 
 
+
         $.ajax({
             type: "POST",
             url: "../../Model/OrganizationProgram/getOrgList.php",
@@ -108,7 +109,7 @@
         padding: 0 !important;
         background-color: rgb(0, 0, 0);
         /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 20, 0.4);
         /* Black w/ opacity */
     }
 
@@ -142,7 +143,7 @@
             <div class="content-header row">
                 <div class="content-header-left col-md-6 col-12 mb-2">
                     <div style="width:7px;height:30px;background-color:#1a1d52; float:left; margin-right:10px;"></div>
-                    <h3 class="content-header-title">โปรแกรมจัดการโครงสร้าง</h3>
+                    <h3 class="content-header-title">บันทึกกรอบอัตราตำแหน่ง</h3>
                 </div>
             </div>
             <div class="content-body">
@@ -156,7 +157,7 @@
                                         <div class="col-12 d-flex align-items-center justify-content-center">
 
                                             <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog" role="document">
+                                                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-body">
                                                             <img src="../../Asset/Images/gif-To-not-Bg-Th.gif" style="width:90%" alt="">
@@ -169,7 +170,7 @@
                                             <div class="col-lg-6 col-10 ">
                                                 <form action="">
                                                     <div class="text-center">
-                                                        <i class="la la-code-fork" style="font-size: 300px; color:#0f1733;"></i>
+                                                        <i class="la la-code-fork" style="font-size: 300px; color:#FF5722;"></i>
                                                     </div>
                                                     <fieldset class="form-group position-relative">
                                                         <div class="row">
@@ -193,13 +194,32 @@
                                                                 <label id="orgList" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ฐานะหน่วย:</label>
                                                                 <select id="orgListList" name="orgListList" class="select2 form-control"></select>
                                                             </div>
+
+                                                            
+
+                                                            <div class="form-group col-md-12 mt-1">
+                                                                <label id="personType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ประเภทกำลังพล:</label>
+
+                                                                <select name="personTypeList" id="personTypeList" class="select2 form-control">
+                                                                    <option value="1">สัญญาบัตร</option>
+                                                                    <?php
+                                                                    $sql = " SELECT id, PersonTypeName FROM person_type; ";
+                                                                    $result = sqlsrv_query($conn, $sql);
+                                                                    while ($row = sqlsrv_fetch_array($result)) {
+                                                                        echo "<option value='" . $row['id'] . "'>" . $row['PersonTypeName'] . "</option>";
+                                                                    }
+                                                                    ?>
+                                                                </select>
+                                                            </div>
+
+
                                                         </div>
                                                     </fieldset>
 
                                                     <div class="text-right">
                                                         <!-- <button type="submit" class="btn" onclick="search()" style="background-color:#0f1733;color:white;border:white"><i class="la la-search" style="margin-rifgt:8px"></i> -->
                                                         <!-- <a href="./detail.php"> -->
-                                                        <button type="button" class="btn" id="submit" style="background-color:#0f1733;color:white;border:white" onclick="getOrg()"><i class="la la-search" style="margin-rifgt:8px"></i>
+                                                        <button type="button" class="btn" id="submit" style="background-color:#0f1733;color:white;border:white" onclick="getPosition()"><i class="la la-search" style="margin-rifgt:8px"></i>
                                                             <span style=" font-weight:bold; font-size: 13px;"> ค้นหา</span></button>
                                                         <!-- </a> -->
                                                     </div>
@@ -227,7 +247,7 @@
 
 
 
-<script src="../../Controllers/OrganizationProgramController.js"></script>
+<script src="../../Controllers/prefixSkillController.js"></script>
 
 <!-- BEGIN VENDOR JS-->
 <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>

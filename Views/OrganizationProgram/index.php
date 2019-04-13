@@ -131,7 +131,7 @@
                                                 <div class="text-right">
                                                     <!-- <button type="submit" class="btn" onclick="search()" style="background-color:#0f1733;color:white;border:white"><i class="la la-search" style="margin-rifgt:8px"></i> -->
                                                     <a href="./detail.php">
-                                                        <button type="submit" class="btn" style="background-color:#0f1733;color:white;border:white" onclick="showDetail(id)"><i class="la la-search" style="margin-rifgt:8px"></i>
+                                                        <button type="submit" class="btn" style="background-color:#0f1733;color:white;border:white" onclick="getOrg()"><i class="la la-search" style="margin-rifgt:8px"></i>
                                                             <span style=" font-weight:bold; font-size: 13px;"> ค้นหา</span></button>
                                                     </a>
                                                 </div>
