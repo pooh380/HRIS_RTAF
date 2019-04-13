@@ -29,13 +29,12 @@ $col =array(
 
 $orgTypeId = $_POST['orgTypeId'];
 $orgListId = $_POST['orgListId'];
-$orgId = $_POST['orgId'];
 $personTypeId = $_POST['personTypeId'];
 
 
 // echo $orgTypeId . $orglId . $orgListId . $personTypeId;
 
-$sql =" SELECT TOP(5) id , organization_position_semi_abbr_name,is_Active FROM organization_position where  organization_type_id = $orgTypeId AND organization_id = $orgId AND organization_list_id = $orgListId AND person_type_id = $personTypeId ;";
+$sql =" SELECT TOP(5) id , organization_position_semi_abbr_name,is_Active FROM organization_position where  organization_type_id = $orgTypeId AND organization_list_id = $orgListId ;";
 // echo $sql;
 
 $params = array();
@@ -85,7 +84,7 @@ while($row=sqlsrv_fetch_array($query)){
 }
 
 $json_data=array(
-    "draw"              =>  intval($request['draw']),
+    "draw"              =>  intval($request ['draw']),
     "recordsTotal"      =>  intval($totalData),
     "recordsFiltered"   =>  intval($totalFilter),
     "data"              =>  $data

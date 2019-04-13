@@ -33,13 +33,11 @@ function getPosition() {
 function showDetail(id) {
     var orgListId = id;
     var orgTypeId = $("#orgTypeId").val();
-    var orgId = $("#orgId").val();
     var personTypeId = $("#personTypeId").val();
 
-    // alert("orgLevelId"+orgLevelId);
-    // alert("orgTypeId"+orgTypeId);
-    // alert("orgListId"+orgListId);
-    // alert("personTypeId"+personTypeId);
+    alert("orgTypeId"+orgTypeId);
+    alert("orgListId"+orgListId);
+    alert("personTypeId"+personTypeId);
 
     $('#prefixSkillTable').DataTable({
         "ajax": {
@@ -49,7 +47,6 @@ function showDetail(id) {
             "data": {
                 orgListId: orgListId,
                 orgTypeId: orgTypeId,
-                orgId: orgId,
                 personTypeId: personTypeId
             }
         },
