@@ -205,6 +205,13 @@
 
                                                                 <select name="orgList" id="orgList" class="select2 form-control">
                                                                     <option value="4">กพ.ทอ.</option>
+                                                                    <?php
+                                                                    $sql = " SELECT id, organization_name FROM organization; ";
+                                                                    $result = sqlsrv_query($conn, $sql);
+                                                                    while ($row = sqlsrv_fetch_array($result)) {
+                                                                        echo "<option value='" . $row['id'] . "'>" . $row['organization_name'] . "</option>";
+                                                                    }
+                                                                    ?>
                                                                 </select>
                                                             </div>
                                                         </div>
