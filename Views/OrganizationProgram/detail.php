@@ -49,37 +49,6 @@
           padding: -0.75rem 2rem;
       }
 
-      .modal {
-          text-align: center;
-          padding: 0 !important;
-          background-color: rgb(0, 0, 0);
-          /* Fallback color */
-          background-color: rgba(0, 0, 20, 0.4);
-          /* Black w/ opacity */
-      }
-
-      .modal:before {
-          content: '';
-          display: inline-block;
-          height: 100%;
-          vertical-align: middle;
-          margin-right: -4px;
-      }
-
-      .modal-dialog {
-          display: inline-block;
-          text-align: left;
-          vertical-align: middle;
-      }
-
-      .modal-body {
-          width: 100% height:100%;
-      }
-
-      .modal-content {
-          background-color: transparent;
-          border: none;
-      }
   </style>
 
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -87,6 +56,14 @@
 
   <script>
       $(document).ready(function() {
+
+        $(document).ajaxStart(function() {
+            $(".modal").show();
+        });
+        $(document).ajaxComplete(function() {
+            $(".modal").hide();
+        });
+
           var getUrlParameter = function getUrlParameter(sParam) {
               var sPageURL = window.location.search.substring(1),
                   sURLVariables = sPageURL.split('&'),
@@ -179,6 +156,8 @@
                   <div class="row">
                       <div class="col-lg-4">
                           <div class="content-body">
+
+                          <?php include_once '../include/modelOnload.php' ?>
                               <!-- Description -->
                               <div class="sidebar-content card d-none d-lg-block">
                                   <div class="card-header" style="background-color:#0f1733; color:white; font-weight: bold;font-size: 18px">
@@ -583,7 +562,7 @@
                                                   </div>
                                               </div>
                                               <hr>
-                                              <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                              <input id="isActive" type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
                                           </div>
                                       </div>
                                   </div>

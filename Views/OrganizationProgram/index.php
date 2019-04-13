@@ -32,6 +32,14 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
+
+        $(document).ajaxStart(function() {
+            $(".modal").show();
+        });
+        $(document).ajaxComplete(function() {
+            $(".modal").hide();
+        });
+
         // console.log("ready");
         var orgTypeId = $('#orgTypeList :selected').val();
         // alert(a);
@@ -89,6 +97,8 @@
                 </div>
             </div>
             <div class="content-body">
+
+            <?php include_once '../include/modelOnload.php' ?>
                 <!-- Bootstrap 3 table -->
                 <section id="bootstrap3">
                     <div class="row">

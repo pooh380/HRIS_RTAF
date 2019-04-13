@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(0);
 
 require_once "../../config.php";
 // if($conn){echo "con";}

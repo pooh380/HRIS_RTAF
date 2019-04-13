@@ -3,6 +3,8 @@
 
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
+
+  
   <style>
       /* ol > li > a {color:#222233;} */
       .toggle.ios,
@@ -16,6 +18,43 @@
       }
   </style>
 
+<script src="../../Controllers/prefixsController.js"></script>
+  <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+
+
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+      $(document).ready(function() {
+
+        $(document).ajaxStart(function() {
+            $(".modal").show();
+        });
+        $(document).ajaxComplete(function() {
+            $(".modal").hide();
+        });
+        
+        //   console.log("ready");
+          change_autorefreshdiv();
+          getPrefixs();
+      });
+
+      
+
+      function change_autorefreshdiv() {
+          // $('#prefixPage').addClass('active');
+      }
+
+      function toggle(source) {
+          var checkboxes = document.querySelectorAll('.checkAll');
+          for (var i = 0; i < checkboxes.length; i++) {
+              if (checkboxes[i] != source)
+                  checkboxes[i].checked = source.checked;
+          }
+      }
+  </script>
+
+
   <section>
       <div class="app-content content">
           <div class="content-wrapper">
@@ -27,6 +66,7 @@
               </div>
               <div class="content-body">
                   <!-- Bootstrap 3 table -->
+                  <?php include_once '../include/modelOnload.php' ?>
                   <section id="bootstrap3">
                       <div class="row">
                           <div class="col-12">
@@ -68,39 +108,6 @@
                       </div>
               </div>
   </section>
-  <!--/ Bootstrap 3 table -->
-  </div>
-  </div>
-  </div>
-  </section>
-
-  <script src="../../Controllers/prefixsController.js"></script>
-  <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
-
-
-  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-
-  <script type="text/javascript">
-      $(document).ready(function() {
-        //   console.log("ready");
-          change_autorefreshdiv();
-          getPrefixs();
-      });
-
-      function change_autorefreshdiv() {
-          // $('#prefixPage').addClass('active');
-      }
-
-      function toggle(source) {
-          var checkboxes = document.querySelectorAll('.checkAll');
-          for (var i = 0; i < checkboxes.length; i++) {
-              if (checkboxes[i] != source)
-                  checkboxes[i].checked = source.checked;
-          }
-      }
-  </script>
-
-
 
   <!-- footer -->
   <?php include '../include/footer.php'; ?> 
