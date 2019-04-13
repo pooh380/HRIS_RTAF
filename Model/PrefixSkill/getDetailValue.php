@@ -12,7 +12,6 @@ FROM organization_struc
 JOIN  division ON organization_struc.division_id = division.id
 where ORG_PATH LIKE N'0/$orgListId' AND ORG_TYPE_PK = $orgTypeId;";
 
-echo "$sql";
 
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
