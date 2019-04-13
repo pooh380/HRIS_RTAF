@@ -30,11 +30,13 @@ $col =array(
 $orgTypeId = $_POST['orgTypeId'];
 $orgListId = $_POST['orgListId'];
 $personTypeId = $_POST['personTypeId'];
+$orgParentId = $_POST['orgParentId'];
+
 
 
 // echo $orgTypeId . $orglId . $orgListId . $personTypeId;
 
-$sql =" SELECT TOP(5) id , organization_position_semi_abbr_name,is_Active FROM organization_position where  organization_type_id = $orgTypeId AND organization_list_id = $orgListId ;";
+$sql =" SELECT TOP(5) id , organization_position_semi_abbr_name,is_Active FROM organization_position where  organization_list_id = $orgListId;";
 // echo $sql;
 
 $params = array();
@@ -48,7 +50,7 @@ $totalFilter = $totalData;
 
 
 
-$sql = " SELECT TOP(5) id , organization_position_semi_abbr_name,is_Active FROM organization_position where  organization_type_id = $orgTypeId AND organization_id = $orgId AND organization_list_id = $orgListId AND person_type_id = $personTypeId  ";
+$sql = " SELECT TOP(5) id , organization_position_semi_abbr_name,is_Active FROM organization_position where organization_list_id = $orgListId ";
 if (!empty($request['search']['value'])) {
     $sql .= " AND (organization_position_semi_abbr_name Like N'%" . $request['search']['value'] . "%' ";
     $sql .= " OR organization_position_semi_abbr_name Like N'%" . $request['search']['value'] . "%') ";

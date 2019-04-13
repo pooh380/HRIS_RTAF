@@ -26,7 +26,7 @@ if ($rows > 0) {
             <li class="list-group-item" >
                 <s class="vl"></s> <input type="checkbox" value="<?php echo $result['division_id'] ;?>">
                 <!-- <span style="font-weight: bold;font-size: 12px;" ><?php echo $result['division_name'] ;?></span> -->
-                <span style="font-weight: bold;font-size: 12px;" onclick="showDetail(<?php echo $result['division_id'] ;?>)" ><?php echo $result['division_name'] ; echo $result['ORG_LEVEL'] ;?></span>
+                <span style="font-weight: bold;font-size: 12px;" onclick="showDetail(<?php echo $result['id'] ;?>)" ><?php echo $result['division_name'] ; echo $result['ORG_LEVEL'] ;?></span>
             </li>
         </a>
         

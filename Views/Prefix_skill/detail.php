@@ -107,7 +107,9 @@
               $("#orgTypeId").val(orgTypeId);
               $("#orgListId").val(orgListId);
               $("#personTypeId").val(personTypeId);
+              $("#orgParentId").val(orgListId);
           });
+
           $.ajax({
               type: "POST",
               url: "../../Model/PrefixSkill/getDetailValue.php",
@@ -159,6 +161,7 @@
               <input type="hidden" name="orgTypeId" id="orgTypeId">
               <input type="hidden" name="orgListId" id="orgListId">
               <input type="hidden" name="personTypeId" id="personTypeId">
+              <input type="hidden" name="orgParentId" id="orgParentId">
 
               <div class="container-fluid">
                   <div class="row">

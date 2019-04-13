@@ -14,7 +14,7 @@ $sql = " SELECT  *  , organization_type.organization_type_name,organization_part
  JOIN  organization_type ON organization_list.organization_type_id = organization_type.id 
  JOIN  organization_part on organization_list.organization_part_id = organization_part.id
  JOIN  organization_level on organization_list.organization_level_id = organization_level.id
-WHERE organization_list.division_id = $orgLevelId; ";
+WHERE organization_list.division_id = $orgLevelId and organization_parent_id = $orgListId; ";
 
 $query = sqlsrv_query($conn, $sql);
 

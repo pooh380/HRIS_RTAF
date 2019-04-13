@@ -34,10 +34,12 @@ function showDetail(id) {
     var orgListId = id;
     var orgTypeId = $("#orgTypeId").val();
     var personTypeId = $("#personTypeId").val();
+    var orgParentId = $("#orgParentId").val();
 
-    alert("orgTypeId"+orgTypeId);
-    alert("orgListId"+orgListId);
-    alert("personTypeId"+personTypeId);
+    alert("orgTypeId" + orgTypeId);
+    alert("orgListId" + orgListId);
+    alert("personTypeId" + personTypeId);
+    alert("orgParentId" + orgParentId);
 
     $('#prefixSkillTable').DataTable({
         "ajax": {
@@ -47,7 +49,8 @@ function showDetail(id) {
             "data": {
                 orgListId: orgListId,
                 orgTypeId: orgTypeId,
-                personTypeId: personTypeId
+                personTypeId: personTypeId,
+                orgParentId: orgParentId
             }
         },
         "start": 0,
