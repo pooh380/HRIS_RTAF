@@ -36,39 +36,42 @@ function showDetail(id) {
     var personTypeId = $("#personTypeId").val();
     var orgParentId = $("#orgParentId").val();
 
-    alert("orgTypeId" + orgTypeId);
-    alert("orgListId" + orgListId);
-    alert("personTypeId" + personTypeId);
-    alert("orgParentId" + orgParentId);
+    // alert("orgTypeId" + orgTypeId);
+    // alert("orgListId" + orgListId);
+    // alert("personTypeId" + personTypeId);
+    // alert("orgParentId" + orgParentId);
 
     $('#prefixSkillTable').DataTable({
-        "ajax": {
-            "url": "../../Model/PrefixSkill/GetprefixSkill.php", // json datasource
-            "dataType": "json",
-            "type": "post",
-            "data": {
+
+        ajax: {
+            url: "../../Model/PrefixSkill/GetprefixSkill.php", // json datasource
+            dataType: "json",
+            type: "post",
+            data: {
                 orgListId: orgListId,
                 orgTypeId: orgTypeId,
                 personTypeId: personTypeId,
                 orgParentId: orgParentId
+            },
+            start: 0,
+            length: 3,
+            serverSide: true,
+            processing: true,
+            paging: true,
+            searching: true,
+            lengthMenu: [
+                [10, 25, 50, 100, -1],
+                [10, 25, 50, 100, "All"]
+            ],
+            pageLength: 10,
+            order: [
+                [0, "desc"]
+            ],
+            oLanguage: {
+                "sEmptyTable": "ไม่มีข้อมูลนี้ในตาราง"
             }
         },
-        "start": 0,
-        "length": 3,
-        "serverSide": true,
-        "processing": true,
-        "paging": true,
-        "destroy": true,
-        "searching": true,
-        "lengthMenu": [
-            [10, 25, 50, 100, -1],
-            [10, 25, 50, 100, "All"]
-        ],
-        "pageLength": 10,
-        order: [
-            [0, "desc"]
-        ]
-
+        destroy: true
     });
 }
 

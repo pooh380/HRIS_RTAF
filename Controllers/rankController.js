@@ -17,7 +17,10 @@ function getRank() {
             "pageLength": 10,
             order: [
                 [0, "desc"]
-            ]
+            ],
+            "oLanguage": {
+                "sEmptyTable": "ไม่มีข้อมูลนี้ในตาราง"
+            }
         }
     });
 }

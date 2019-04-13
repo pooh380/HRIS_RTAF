@@ -115,7 +115,7 @@
               url: "../../Model/PrefixSkill/getDetailValue.php",
               data: {
                   orgTypeId: orgTypeId,
-                  orgListId:orgListId
+                  orgListId: orgListId
               },
               success: function(data) {
                   // console.log(data);
@@ -127,6 +127,12 @@
                   // console.log(error);
               }
           });
+
+          $('#prefixSkillTable').dataTable({
+                "oLanguage": {
+                    "sEmptyTable": "ไม่มีข้อมูลนี้ในตาราง"
+                }
+            });
       });
   </script>
   <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -212,14 +218,14 @@
                                                   </li>
                                               </ul>
                                               <ul class="list-group" id="list-group-tags" align="left">
-                                              <a style="margin-left: 15px; ">
+                                                  <a style="margin-left: 15px; ">
                                                       <li class="list-group-item">
                                                           <s class="vl"></s>
                                                           <!-- <span style="font-weight: bold;font-size: 12px;" ><?php echo $result['division_name']; ?></span> -->
                                                           <span style="font-weight: bold;font-size: 12px;" onclick="showDetail()"> &nbsp; กรมกำลังพลทาหารอากศ 0</span>
                                                       </li>
                                                   </a>
-                                                  
+
                                           </div>
                                       </div>
                                   </div>
@@ -246,6 +252,7 @@
                                                   <th> <a class="skin-flat"><input type="checkbox" class="checkAll" onclick="toggle(this);" /> </a></th>
                                                   <th>ลำดับที่</th>
                                                   <th>ชื่อ</th>
+                                                  <th>อัตราเงินเดือน</th>
                                                   <th>ใช้งาน</th>
 
                                               </tr>
