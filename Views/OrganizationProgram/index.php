@@ -20,34 +20,22 @@
 <!-- END Page Level CSS-->
 <!-- BEGIN Custom CSS-->
 <link rel="stylesheet" type="text/css" href="../../asset/css/style.css">
-
 <!-- END Custom CSS-->
 
 <!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script> -->
 
 
 
+<script src="../../Controllers/OrganizationProgramController.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function() {
-
-        $(document).ajaxStart(function() {
-            $(".modal").show();
-        });
-        $(document).ajaxComplete(function() {
-            $(".modal").hide();
-        });
-
-
-// ------------------------------------
-        // var orgTypeId = $('#orgTypeList :selected').val();
-        // $("#orgTypeId").val(orgTypeId);
-
-        // var orgList = $('#orgList :selected').val();
-        // $("#orgList").val(orgList);
-
-// --------------------------------------------------
+        // console.log("ready");
+        var orgTypeId = $('#orgTypeList :selected').val();
+        // alert(a);
+        $("#orgTypeId").val(orgTypeId);
 
         $.ajax({
             type: "POST",
@@ -58,20 +46,16 @@
             success: function(data) {
                 // console.log(data);
                 $('#orgListList').html(data);
-                var orgListId = $('#orgListList :selected').val();
-                $("#orgListId").val(orgListId);
             },
             error: function(error) {
                 // console.log(error);
             }
         });
 
-        var orgListId = $('#orgListList :selected').val();
-        $("#orgListId").val(orgListId);
-
         $(function() {
             $('#orgTypeList').change(function() {
                 var orgTypeId = $('#orgTypeList :selected').val();
+                // alert(values);
                 $("#orgTypeId").val(orgTypeId);
 
                 $.ajax({
@@ -83,64 +67,17 @@
                     success: function(data) {
                         // console.log(data);
                         $('#orgListList').html(data);
-                        var orgListId = $('#orgListList :selected').val();
-                        $("#orgListId").val(orgListId);
                     },
                     error: function(error) {
                         // console.log(error);
                     }
                 });
 
-                var orgListId = $('#orgListList :selected').val();
-                $("#orgListId").val(orgListId);
-
-            });
-        });
-
-        (function() {
-            $('#orgListList').change(function() {
-                var orgListId = $('#orgListList :selected').val();
-                $("#orgListId").val(orgListId);
-
             });
         });
 
     });
 </script>
-
-<style>
-    .modal {
-        text-align: center;
-        padding: 0 !important;
-        background-color: rgb(0, 0, 0);
-        /* Fallback color */
-        background-color: rgba(0, 0, 20, 0.4);
-        /* Black w/ opacity */
-    }
-
-    .modal:before {
-        content: '';
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-        margin-right: -4px;
-    }
-
-    .modal-dialog {
-        display: inline-block;
-        text-align: left;
-        vertical-align: middle;
-    }
-
-    .modal-body {
-        width: 100% height:100%;
-    }
-
-    .modal-content {
-        background-color: transparent;
-        border: none;
-    }
-</style>
 
 <section>
     <div class="app-content content">
@@ -160,64 +97,44 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body card-dashboard">
                                         <div class="col-12 d-flex align-items-center justify-content-center">
-
-                                            <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-body">
-                                                            <img src="../../Asset/Images/gif-To-not-Bg-Th.gif" style="width:90%" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
                                             <div class="col-lg-6 col-10 ">
-                                                <form action="">
-                                                    <div class="text-center">
-                                                        <i class="la la-code-fork" style="font-size: 300px; color:#0f1733;"></i>
-                                                    </div>
-                                                    <fieldset class="form-group position-relative">
-                                                        <div class="row">
+                                                <div class="text-center">
+                                                    <i class="la la-code-fork" style="font-size: 300px; color:#0f1733;"></i>
+                                                </div>
 
-                                                            <div class="form-group col-md-12 mt-1">
-                                                                <label id="orgType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">โครงสร้าง:</label>
+                                                <fieldset class="form-group position-relative">
+                                                    <div class="row">
 
-                                                                <select name="orgTypeList" id="orgTypeList" class="select2 form-control">
-                                                                    <option value="21">อัตรา ทอ. 52</option>
-                                                                    <?php
-                                                                    $sql = " SELECT id, organization_type_name FROM organization_type; ";
-                                                                    $result = sqlsrv_query($conn, $sql);
-                                                                    while ($row = sqlsrv_fetch_array($result)) {
-                                                                        echo "<option value='" . $row['id'] . "'>" . $row['organization_type_name'] . "</option>";
-                                                                    }
-                                                                    ?>
-                                                                </select>
-                                                            </div>
+                                                        <div class="form-group col-md-12 mt-1">
+                                                            <label id="orgType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">โครงสร้าง:</label>
 
-                                                            <!-- <div class="form-group col-md-12">
-                                                                <label id="orgList" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ฐานะหน่วย:</label>
-                                                                <select id="orgListList" name="orgListList" class="select2 form-control"></select>
-                                                            </div> -->
-
-                                                            <div class="form-group col-md-12 mt-1">
-                                                                <label id="organization" style=" font-weight:bold; font-size: 15px; color:#0f1733;">หน่วยงาน:</label>
-
-                                                                <select name="orgList" id="orgList" class="select2 form-control">
-                                                                    <option value="4">กพ.ทอ.</option>
-                                                                </select>
-                                                            </div>
+                                                            <select name="orgTypeList" id="orgTypeList" class="select2 form-control">
+                                                                <option value="21">อัตรา ทอ. 52</option>
+                                                                <?php
+                                                                $sql = " SELECT id, organization_type_name FROM organization_type; ";
+                                                                $result = sqlsrv_query($conn, $sql);
+                                                                while ($row = sqlsrv_fetch_array($result)) {
+                                                                    echo "<option value='" . $row['id'] . "'>" . $row['organization_type_name'] . "</option>";
+                                                                }
+                                                                ?>
+                                                            </select>
                                                         </div>
-                                                    </fieldset>
 
-                                                    <div class="text-right">
-                                                        <!-- <button type="submit" class="btn" onclick="search()" style="background-color:#0f1733;color:white;border:white"><i class="la la-search" style="margin-rifgt:8px"></i> -->
-                                                        <!-- <a href="./detail.php"> -->
-                                                        <button type="button" class="btn" id="submit" style="background-color:#0f1733;color:white;border:white" onclick="getOrg()"><i class="la la-search" style="margin-rifgt:8px"></i>
-                                                            <span style=" font-weight:bold; font-size: 13px;"> ค้นหา</span></button>
-                                                        <!-- </a> -->
+                                                        <div class="form-group col-md-12">
+                                                            <label id="orgList" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ฐานะหน่วย:</label>
+                                                            <input type="hidden" id="orgTypeId" name="orgTypeId">
+                                                            <select id="orgListList" name="orgListList" class="select2 form-control"></select>
+                                                        </div>
                                                     </div>
-                                                </form>
+                                                </fieldset>
+
+                                                <div class="text-right">
+                                                    <!-- <button type="submit" class="btn" onclick="search()" style="background-color:#0f1733;color:white;border:white"><i class="la la-search" style="margin-rifgt:8px"></i> -->
+                                                    <a href="./detail.php">
+                                                        <button type="submit" class="btn" style="background-color:#0f1733;color:white;border:white" onclick="showDetail(id)"><i class="la la-search" style="margin-rifgt:8px"></i>
+                                                            <span style=" font-weight:bold; font-size: 13px;"> ค้นหา</span></button>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -238,11 +155,6 @@
         <span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span>
     </p>
 </footer>
-
-
-
-<script src="../../Controllers/OrganizationProgramController.js"></script>
-
 <!-- BEGIN VENDOR JS-->
 <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
 <!-- BEGIN VENDOR JS-->
