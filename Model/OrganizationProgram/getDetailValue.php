@@ -5,17 +5,13 @@ require_once "../../config.php";
 
 $orgTypeId = isset($_POST['orgTypeId']) ? $_POST['orgTypeId'] : "";
 // $orgListId = isset($_POST['orgListId']) ? $_POST['orgListId'] : "";
-$orgId = isset($_POST['orgId']) ? $_POST['orgId'] : "";
+$orgListId = isset($_POST['orgListId']) ? $_POST['orgListId'] : "";
 
+$sql = " SELECT TOP(2)  division_id,division.division_name, organization_struc.id , ORG_PATH , ORG_LEVEL
+FROM organization_struc
+JOIN  division ON organization_struc.division_id = division.id
+where ORG_PATH LIKE N'0/$orgListId' AND ORG_TYPE_PK = $orgTypeId;";
 
-// $orgTypeId = 21;
-// $orgListId = 49;
-
-// $sql = " SELECT  organization_level.id, organization_level.organization_level_name FROM organization_list INNER JOIN organization_level ON organization_list.organization_level_id = organization_level.id INNER JOIN organization_type ON organization_list.organization_type_id = organization_type.id  WHERE organization_type_id ='$orgTypeId' AND organization_list.id = '$orgListId'; ";
-$sql = " SELECT  organization_type_id,organization_list.id,organization_list_name,organization_id, organization_level_id
-FROM organization_list
-WHERE organization_list.organization_type_id = $orgTypeId AND organization_list.organization_id like '%00$orgId' and id = 87; 
--- ORDER BY organization_level_id ASC ;";
 
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
@@ -28,9 +24,9 @@ if ($rows > 0) {
 
         <a style="margin-left: 15px; ">
             <li class="list-group-item" >
-                <s class="vl"></s> <input type="checkbox" value="01">
-                <!-- <span style="font-weight: bold;font-size: 12px;" ><?php echo $result['organization_level_name'] ;?></span> -->
-                <span style="font-weight: bold;font-size: 12px;" onclick="showDetail(<?php echo $result['id'] ;?>)" ><?php echo $result['organization_list_name'] ; echo $result['organization_level_id'] ;?></span>
+                <s class="vl"></s> <input type="checkbox" value="<?php echo $result['division_id'] ;?>">
+                <!-- <span style="font-weight: bold;font-size: 12px;" ><?php echo $result['division_name'] ;?></span> -->
+                <span style="font-weight: bold;font-size: 12px;" onclick="showDetail(<?php echo $result['division_id'] ;?>)" ><?php echo $result['division_name'] ; echo $result['ORG_LEVEL'] ;?></span>
             </li>
         </a>
 
@@ -39,5 +35,6 @@ if ($rows > 0) {
 } else {
     echo "ไม่มีฐานะหน่วยในโครงสร้าง";
 }
+
 
 ?>

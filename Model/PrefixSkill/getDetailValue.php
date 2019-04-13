@@ -24,13 +24,12 @@ if ($rows > 0) {
 
         <a style="margin-left: 15px; ">
             <li class="list-group-item" >
-                <s class="vl"></s> <input type="checkbox" value="01">
+                <s class="vl"></s> <input type="checkbox" value="<?php echo $result['division_id'] ;?>">
                 <!-- <span style="font-weight: bold;font-size: 12px;" ><?php echo $result['division_name'] ;?></span> -->
                 <span style="font-weight: bold;font-size: 12px;" onclick="showDetail(<?php echo $result['division_id'] ;?>)" ><?php echo $result['division_name'] ; echo $result['ORG_LEVEL'] ;?></span>
             </li>
         </a>
-
-
+        
     <?php }
 } else {
     echo "ไม่มีฐานะหน่วยในโครงสร้าง";

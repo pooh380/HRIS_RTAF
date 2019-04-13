@@ -117,7 +117,7 @@
               },
               success: function(data) {
                   // console.log(data);
-                  $('#list-group-tags').html(data);
+                  $('#list-group-tags').appdata(data);
                   var orgListId = $('#orgListList :selected').val();
                   $("#orgListId").val(orgListId);
               },
@@ -207,7 +207,14 @@
                                                       <span style="font-weight: bold;font-size: 12px;"> กองทัพอากาศ</span>
                                                   </li>
                                               </ul>
-                                              <ul class="list-group" id="list-group-tags" align="left"></ul>
+                                              <ul class="list-group" id="list-group-tags" align="left">
+                                              <a style="margin-left: 15px; ">
+                                                      <li class="list-group-item">
+                                                        <s class="vl"></s>
+                                                          <span style="font-weight: bold;font-size: 12px;" onclick="showDetail()"> &nbsp;กรมกำลังพลทาหารอากศ 0</span>
+                                                      </li>
+                                                  </a>
+                                              </ul>
                                           </div>
                                       </div>
                                   </div>

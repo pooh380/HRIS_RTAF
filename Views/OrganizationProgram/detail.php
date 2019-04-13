@@ -103,7 +103,7 @@
           };
           var orgTypeId = getUrlParameter('orgTypeId');
           //   var orgListId = getUrlParameter('orgListId');
-          var orgId = getUrlParameter('orgId');
+          var orgListId = getUrlParameter('orgListId');
 
           $(document).ajaxStart(function() {
               $(".modal").show();
@@ -113,7 +113,7 @@
               $(".modal").hide();
               $("#orgTypeId").val(orgTypeId);
               //   $("#orgListId").val(orgListId);
-              $("#orgListId").val(orgId);
+              $("#orgListId").val(orgListId);
           });
 
 
@@ -122,12 +122,12 @@
               url: "../../Model/OrganizationProgram/getDetailValue.php",
               data: {
                   orgTypeId: orgTypeId,
-                //   orgListId: orgListId
-                orgId: orgId
+                  //   orgListId: orgListId
+                  orgListId: orgListId
               },
               success: function(data) {
                   // console.log(data);
-                  $('#list-group-tags').html(data);
+                  $('#list-group-tags').append(data);
                   var orgListId = $('#orgListList :selected').val();
                   $("#orgListId").val(orgListId);
               },
@@ -136,8 +136,6 @@
               }
           });
       });
-
-      
   </script>
 
   <section>
@@ -227,7 +225,14 @@
                                               </ul>
                                               <ul class="list-group" id="list-group-tags" align="left">
 
-
+                                                  <a style="margin-left: 15px; ">
+                                                      <li class="list-group-item">
+                                                          <s class="vl"></s>
+                                                          <!-- <span style="font-weight: bold;font-size: 12px;" ><?php echo $result['division_name']; ?></span> -->
+                                                          <span style="font-weight: bold;font-size: 12px;" onclick="showDetail()"> &nbsp; กรมกำลังพลทาหารอากศ 0</span>
+                                                      </li>
+                                                  </a>
+                                                  
                                               </ul>
                                               <!-- <div class="skin-flat">
                                                       divนี้ทำให้ เป็นcheckbox css
@@ -318,7 +323,7 @@
                                                               <label class="col-md-12 label-control" for="orgName">ชื่อสังกัด</label>
                                                               <div class="col-md-12" style="float:left;">
                                                                   <select class="select2 form-control block" disabled id="orgName" style="width: 100%;">
-                                                                   
+
                                                                   </select>
                                                               </div>
                                                               <!-- <div class="col-md-1">
