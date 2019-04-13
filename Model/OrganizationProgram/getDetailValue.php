@@ -2,6 +2,8 @@
 
 require_once "../../config.php";
 
+error_reporting(0);
+
 
 $orgTypeId = isset($_POST['orgTypeId']) ? $_POST['orgTypeId'] : "";
 // $orgListId = isset($_POST['orgListId']) ? $_POST['orgListId'] : "";
