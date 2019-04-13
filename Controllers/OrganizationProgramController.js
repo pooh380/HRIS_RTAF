@@ -32,9 +32,9 @@
         var orgTypeId = $("#orgTypeId").val();
         var orgListId = $("#orgListId").val();
 
-        // alert(orgTypeId);
-        // alert(orgListId);
-        // alert(orgLevelId);
+        alert(orgTypeId);
+        alert(orgListId);
+        alert(orgLevelId);
 
         $.ajax({
             type: "POST",
