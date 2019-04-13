@@ -6,7 +6,7 @@ function getPosition() {
 
     var personTypeList = $('#personTypeList :selected').val();
 
-    alert(orgTypeId + orgListId + personTypeList);
+    // alert(orgTypeId + orgListId + personTypeList);
 
     $.post("../OrganizationProgram/detail.php", {
         orgTypeId: orgTypeId,
@@ -15,7 +15,7 @@ function getPosition() {
 
     }).done(function(data) {
         // console.log(data);
-        // window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgListId=" + orgListId;
+        window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgListId=" + orgListId;
         // window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgId=" + orgId +"&personTypeId="+personTypeList;
 
     }).fail(function(err) {
