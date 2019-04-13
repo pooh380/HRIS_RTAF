@@ -1,6 +1,6 @@
   <!-- header -->
   <?php include '../include/header.php'; ?>
-
+  <link rel="stylesheet" type="text/css" href="../../Asset/Css/modelOnload.css">
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
   <style>
@@ -14,8 +14,10 @@
       .toggle.ios .toggle-handle {
           border-radius: 20rem;
       }
-  </style>
+    
+</style>
 
+<?php include_once '../../modelOnload.php' ?>
   <section>
       <div class="app-content content">
           <div class="content-wrapper">
@@ -76,6 +78,12 @@
 
   <script type="text/javascript">
       $(document).ready(function() {
+        $(document).ajaxStart(function() {
+            $(".modal").show();
+        });
+        $(document).ajaxComplete(function() {
+            $(".modal").hide();
+        });
           change_autorefreshdiv();
           getOrganizationParts();
       });

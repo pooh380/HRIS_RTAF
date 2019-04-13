@@ -1,6 +1,7 @@
   <!-- header -->
   <?php include '../include/header.php'; ?>
 
+  <link rel="stylesheet" type="text/css" href="../../Asset/Css/modelOnload.css">
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
 
@@ -8,8 +9,11 @@
     /* ol > li > a {color:#222233;} */
     .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
     .toggle.ios .toggle-handle { border-radius: 20rem; }
+
+    
   </style>
 
+<?php include_once '../../modelOnload.php' ?>
   <section>
   <div class="app-content content">
     <div class="content-wrapper">
@@ -73,7 +77,14 @@
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
   
   <script type="text/javascript">
-    $(document).ready(function() {
+    $(document).ready(function() { 
+      
+      $(document).ajaxStart(function() {
+            $(".modal").show();
+        });
+        $(document).ajaxComplete(function() {
+            $(".modal").hide();
+        });
             // console.log("ready");
             // change_autorefreshdiv();
             getOrganizationLevels();
