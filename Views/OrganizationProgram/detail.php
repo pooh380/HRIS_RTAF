@@ -165,9 +165,9 @@
                                       <a style="float:right;"><i class="la la-sitemap"></i> </a>
                                   </div>
                                   <div class="card-body" align="center">
-                                      <a href="./create.php" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white" ;>
+                                      <button class="btn btn-sm" style="background-color:#0f1733;color:white;border:white;" onclick="create()" >
                                           <span class="la la-plus-circle" style="color:white; font-weight: bold;font-size: 13px;margin-top:3px;"> เพิ่ม</span>
-                                      </a>
+                                      </button>
                                       <a href="#" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white" ;>
                                           <span class="ft-trash-2" style="color:white; font-weight: bold;font-size: 13px;margin-top:3px;"> ลบ</span>
                                       </a>

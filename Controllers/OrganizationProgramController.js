@@ -67,6 +67,80 @@
         });
     }
 
+    function insertProgram(){
+       
+
+var orgListName = $('#orgListName :selected').val();//ชื่อหน่วย
+var orgPartName = $('#orgPartName :selected').val();//ชื่อหน่วยส่วนบัญชาการ
+var orgaLevelName = $('#orgaLevelName :selected').val();//ฐานะหน่วยสังกัด
+var orgTypeList = $("#orgTypeList :selected").val();//โครงสร้าง
+var orgListId = $("#orgListId").val();
+var divisionID = $("#divisionID").val();//ลำดับสังกัด/หน่วยใน Tree
+var orgListAbbr = $("#orgListAbbr").val();
+var orgListAbbrLong = $("#orgListAbbrLong").val();//ชื่อย่อหน่วย/สังกัด
+var orgListAbbrLongAbbr = $("#orgListAbbrLongAbbr").val();//ชื่อกึ่งย่อหน่วย/สังกัด
+var provincesName = $("#provincesName").val();
+var districtsName = $("#districtsName").val();
+
+ 
+alert("orgListName"+orgListName+"orgPartName"+orgPartName+"orgaLevelName"+orgaLevelName+"orgTypeList"+orgTypeList+"orgListId"+orgListId
++"divisionID"+divisionID+"orgListAbbr"+orgListAbbr+"orgListAbbrLong"+orgListAbbrLong+"orgListAbbrLongAbbr"+orgListAbbrLongAbbr+
+"provincesName"+provincesName+"districtsName"+districtsName);
+
+        // $.ajax({
+        //     type: "POST",
+        //     url: "../../Model/OrganizationProgram/programCreate.php",
+        //     data: {
+        //         orgTypeId: orgTypeId,
+        //         //   orgListId: orgListId
+        //         orgListId : orgListId,
+        //         orgTypeList :orgTypeList,
+        //         divisionID : divisionID,
+        //         orgPartName : orgPartName,
+        //         orgaLevelName : orgaLevelName,
+        //         orgListName : orgListName,
+        //         orgListAbbr : orgListAbbr,
+        //         orgListAbbrLong : orgListAbbrLong,
+        //         orgListAbbrLongAbbr : orgListAbbrLongAbbr,
+        //         provincesName : provincesName,
+        //         districtsName : districtsName,
+
+        //     },
+        //     success: function(data) {
+        //         // console.log(data);
+        //         $('#list-group-tags').append(data);
+        //         var orgListId = $('#orgListList :selected').val();
+        //         $("#orgListId").val(orgListId);
+        //     },
+        //     error: function(error) {
+        //         // console.log(error);
+        //     }
+        // });
+
+    }
+
+    function create(){
+        var orgTypeId = $("#orgTypeId").val();
+        var orgListId = $("#orgListId").val();
+    
+        // alert("orgTypeId"+orgTypeId+"orgListId"+orgListId);
+        // alert("create");
+        
+        $.post("../OrganizationProgram/create.php", {
+            orgTypeId: orgTypeId,
+            orgListId: orgListId
+                // orgId: orgId,
+
+        }).done(function(data) {
+            // console.log(data);
+            window.location.href = "./create.php?orgTypeId=" + orgTypeId + "&orgListId=" + orgListId;
+            // window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgId=" + orgId;
+
+        }).fail(function(err) {
+            // console.log(error);
+        });
+    }
+
     function insertOrganizationCategory() {
         var OrganizationcategoryFN = $("#OrganizationcategoryFN").val();
         var OrganizationcategoryIN = $("#OrganizationcategoryIN").val();
