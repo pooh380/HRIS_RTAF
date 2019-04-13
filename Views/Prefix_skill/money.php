@@ -51,15 +51,16 @@
                                                   <i class="la la-user white" style="font-size: 100px; padding-left:6px;"></i>
                                               </div>
                                               <div class="media-body p-1">
-                                                  <h5 style="float:left; color:#0f1733;">ชื่อตำแหน่ง :&nbsp;</h5>
-                                                  <p>หัวหน้าแผนก</p>
-                                                  <h5 style="float:left; color:#0f1733;">ชื่อตำแหน่ง-สังกัด :&nbsp;</h5>
-                                                  <p>หัวหน้าแผนกวิเคราะห์และพัฒนาระบบ กขพ.สปพ.กพ.ทอ.</p>
-                                                  <h5 style="float:left; color:#0f1733;">เงินเดือนอัตรา :&nbsp;</h5>
-                                                  <p>น.ท.</p>
-                                                  <h5 style="float:left; color:#0f1733;">จำนวน :&nbsp;</h5>
-                                                  <p style="float:left;">1</p>
-                                                  <p>&nbsp;อัตรา</p>
+                                                  <h5 style="color:#0f1733;">ชื่อตำแหน่ง :&nbsp;
+                                                  <span id="orgPositionName"></span></h5>
+                                                  <h5 style="color:#0f1733;">ชื่อตำแหน่ง-สังกัด :&nbsp;
+                                                  <span id="orgPositionSemiAbbrName"></span></h5>
+                                                  <h5 style="color:#0f1733;">เงินเดือนอัตรา :&nbsp;
+                                                  <span id="saralyRateAbbrName"></span></h5>
+                                                  <h5 style="color:#0f1733;">จำนวน :&nbsp;
+                                                  <span style=" " >1</span>
+                                                   <!-- <p style="float:left;" id="qquota"></p> -->
+                                                  <span>&nbsp;อัตรา</span></h5>
                                               </div>
                                           </div>
                                       </div>
@@ -129,12 +130,15 @@
           </div>
       </div>
   </div>
+  
+  <script src="../../Controllers/MoneyController.js"></script>
 
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
   <script type="text/javascript">
       $(document).ready(function() {
           console.log("ready");
+          getMoney();
           change_autorefreshdiv();
       });
 
