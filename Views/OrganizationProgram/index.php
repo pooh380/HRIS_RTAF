@@ -32,75 +32,78 @@
 <script type="text/javascript">
     $(document).ready(function() {
 
-        // $(document).ajaxStart(function() {
-        //     $(".modal").show();
-        // });
-        // $(document).ajaxComplete(function() {
-        //     $(".modal").hide();
-        // });
-
-        var orgTypeId = $('#orgTypeList :selected').val();
-        $("#orgTypeId").val(orgTypeId);
-
-        var orgList = $('#orgList :selected').val();
-        $("#orgList").val(orgList);
+        $(document).ajaxStart(function() {
+            $(".modal").show();
+        });
+        $(document).ajaxComplete(function() {
+            $(".modal").hide();
+        });
 
 
-        // $.ajax({
-        //     type: "POST",
-        //     url: "../../Model/OrganizationProgram/getOrgList.php",
-        //     data: {
-        //         orgTypeId: orgTypeId
-        //     },
-        //     success: function(data) {
-        //         // console.log(data);
-        //         $('#orgListList').html(data);
-        //         var orgListId = $('#orgListList :selected').val();
-        //         $("#orgListId").val(orgListId);
-        //     },
-        //     error: function(error) {
-        //         // console.log(error);
-        //     }
-        // });
+// ------------------------------------
+        // var orgTypeId = $('#orgTypeList :selected').val();
+        // $("#orgTypeId").val(orgTypeId);
 
-        // var orgListId = $('#orgListList :selected').val();
-        // $("#orgListId").val(orgListId);
+        // var orgList = $('#orgList :selected').val();
+        // $("#orgList").val(orgList);
 
-        // $(function() {
-        //     $('#orgTypeList').change(function() {
-        //         var orgTypeId = $('#orgTypeList :selected').val();
-        //         $("#orgTypeId").val(orgTypeId);
+// --------------------------------------------------
 
-        //         $.ajax({
-        //             type: "POST",
-        //             url: "../../Model/OrganizationProgram/getOrgList.php",
-        //             data: {
-        //                 orgTypeId: orgTypeId
-        //             },
-        //             success: function(data) {
-        //                 // console.log(data);
-        //                 $('#orgListList').html(data);
-        //                 var orgListId = $('#orgListList :selected').val();
-        //                 $("#orgListId").val(orgListId);
-        //             },
-        //             error: function(error) {
-        //                 // console.log(error);
-        //             }
-        //         });
+        $.ajax({
+            type: "POST",
+            url: "../../Model/OrganizationProgram/getOrgList.php",
+            data: {
+                orgTypeId: orgTypeId
+            },
+            success: function(data) {
+                // console.log(data);
+                $('#orgListList').html(data);
+                var orgListId = $('#orgListList :selected').val();
+                $("#orgListId").val(orgListId);
+            },
+            error: function(error) {
+                // console.log(error);
+            }
+        });
 
-        //         var orgListId = $('#orgListList :selected').val();
-        //         $("#orgListId").val(orgListId);
+        var orgListId = $('#orgListList :selected').val();
+        $("#orgListId").val(orgListId);
 
-        //     });
-        // });
+        $(function() {
+            $('#orgTypeList').change(function() {
+                var orgTypeId = $('#orgTypeList :selected').val();
+                $("#orgTypeId").val(orgTypeId);
 
-        // (function() {
-        //     $('#orgListList').change(function() {
-        //         var orgListId = $('#orgListList :selected').val();
-        //         $("#orgListId").val(orgListId);
+                $.ajax({
+                    type: "POST",
+                    url: "../../Model/OrganizationProgram/getOrgList.php",
+                    data: {
+                        orgTypeId: orgTypeId
+                    },
+                    success: function(data) {
+                        // console.log(data);
+                        $('#orgListList').html(data);
+                        var orgListId = $('#orgListList :selected').val();
+                        $("#orgListId").val(orgListId);
+                    },
+                    error: function(error) {
+                        // console.log(error);
+                    }
+                });
 
-        //     });
-        // });
+                var orgListId = $('#orgListList :selected').val();
+                $("#orgListId").val(orgListId);
+
+            });
+        });
+
+        (function() {
+            $('#orgListList').change(function() {
+                var orgListId = $('#orgListList :selected').val();
+                $("#orgListId").val(orgListId);
+
+            });
+        });
 
     });
 </script>
@@ -202,13 +205,6 @@
 
                                                                 <select name="orgList" id="orgList" class="select2 form-control">
                                                                     <option value="4">กพ.ทอ.</option>
-                                                                    <?php
-                                                                    $sql = " SELECT id, organization_name FROM organization; ";
-                                                                    $result = sqlsrv_query($conn, $sql);
-                                                                    while ($row = sqlsrv_fetch_array($result)) {
-                                                                        echo "<option value='" . $row['id'] . "'>" . $row['organization_name'] . "</option>";
-                                                                    }
-                                                                    ?>
                                                                 </select>
                                                             </div>
                                                         </div>

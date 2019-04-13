@@ -32,12 +32,12 @@
 <script type="text/javascript">
     $(document).ready(function() {
 
-        // $(document).ajaxStart(function() {
-        //     $(".modal").show();
-        // });
-        // $(document).ajaxComplete(function() {
-        //     $(".modal").hide();
-        // });
+        $(document).ajaxStart(function() {
+            $(".modal").show();
+        });
+        $(document).ajaxComplete(function() {
+            $(".modal").hide();
+        });
 
         // var orgTypeId = $('#orgTypeList :selected').val();
         // $("#orgTypeId").val(orgTypeId);
