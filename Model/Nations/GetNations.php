@@ -2,6 +2,7 @@
 
 require_once "../../config.php";
 // if($conn){echo "con";}
+error_reporting(0);
 
 $request = $_REQUEST;
 $col = array(

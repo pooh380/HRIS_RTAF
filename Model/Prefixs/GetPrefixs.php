@@ -18,6 +18,7 @@ $sql = "SELECT id, perfix_name, perfix_abbr_name,IsActive
 FROM general_perfix;
 ";
 
+
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
