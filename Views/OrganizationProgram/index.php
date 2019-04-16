@@ -131,7 +131,7 @@
                                                         </div>
 
                                                         <div class="form-group col-md-12">
-                                                            <label id="orgList" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ฐานะหน่วย:</label>
+                                                            <label id="orgList" style=" font-weight:bold; font-size: 15px; color:#0f1733;">สังกัด:</label>
                                                             <input type="hidden" id="orgTypeId" name="orgTypeId">
                                                             <select id="orgListList" name="orgListList" class="select2 form-control"></select>
                                                         </div>
@@ -140,10 +140,8 @@
 
                                                 <div class="text-right">
                                                     <!-- <button type="submit" class="btn" onclick="search()" style="background-color:#0f1733;color:white;border:white"><i class="la la-search" style="margin-rifgt:8px"></i> -->
-                                                    <a href="./detail.php">
                                                         <button type="submit" class="btn" style="background-color:#0f1733;color:white;border:white" onclick="getOrg()"><i class="la la-search" style="margin-rifgt:8px"></i>
                                                             <span style=" font-weight:bold; font-size: 13px;"> ค้นหา</span></button>
-                                                    </a>
                                                 </div>
                                             </div>
                                         </div>

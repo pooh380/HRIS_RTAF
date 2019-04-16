@@ -105,6 +105,7 @@
           //   var orgListId = getUrlParameter('orgListId');
           var orgListId = getUrlParameter('orgListId');
 
+
           $(document).ajaxStart(function() {
               $(".modal").show();
 
@@ -152,6 +153,7 @@
                   $('#orgTypeList').append('<option value="' + data.orgType + '" selected="selected">' + data.orgType + '</option>');
                   $('#orgPartName').append('<option value="' + data.orgPartName + '" selected="selected">' + data.orgPartName + '</option>');
                   $('#orgaLevelName').append('<option value="' + data.orgaLevelName + '" selected="selected">' + data.orgaLevelName + '</option>');
+                  $('#divisionAbbrName').append('<option value="' + data.divisionAbbrName + '" selected="selected">' + data.divisionAbbrName + '</option>');
               },
               error: function(error) {
                   // alert(error);

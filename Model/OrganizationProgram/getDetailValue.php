@@ -16,7 +16,7 @@ $orgListId = isset($_POST['orgListId']) ? $_POST['orgListId'] : "";
 $sql = " SELECT division_id,division.division_name, organization_struc.id , ORG_PATH , ORG_LEV_PK , ORG_LEVEL
 FROM organization_struc
 JOIN  division ON organization_struc.division_id = division.id
-where ORG_PATH LIKE N'0/$orgListId%' AND ORG_TYPE_PK = $orgTypeId AND ORG_LEV_PK=34" ;
+where ORG_PATH LIKE N'0/$orgListId%' AND ORG_TYPE_PK = $orgTypeId;";
 
 
 $params = array();
