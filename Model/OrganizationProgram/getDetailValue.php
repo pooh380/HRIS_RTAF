@@ -8,10 +8,15 @@ $orgTypeId = isset($_POST['orgTypeId']) ? $_POST['orgTypeId'] : "";
 // $orgListId = isset($_POST['orgListId']) ? $_POST['orgListId'] : "";
 $orgListId = isset($_POST['orgListId']) ? $_POST['orgListId'] : "";
 
-$sql = " SELECT TOP(2)  division_id,division.division_name, organization_struc.id , ORG_PATH , ORG_LEVEL
+// $sql = " SELECT division_id,division.division_name, organization_struc.id , ORG_PATH , ORG_LEVEL
+// FROM organization_struc
+// JOIN  division ON organization_struc.division_id = division.id
+// where ORG_PATH LIKE N'0/$orgListId%' AND ORG_TYPE_PK = $orgTypeId;";
+
+$sql = " SELECT division_id,division.division_name, organization_struc.id , ORG_PATH , ORG_LEV_PK , ORG_LEVEL
 FROM organization_struc
 JOIN  division ON organization_struc.division_id = division.id
-where ORG_PATH LIKE N'0/$orgListId' AND ORG_TYPE_PK = $orgTypeId;";
+where ORG_PATH LIKE N'0/$orgListId%' AND ORG_TYPE_PK = $orgTypeId";
 
 
 $params = array();
@@ -27,7 +32,8 @@ if ($rows > 0) {
             <li class="list-group-item" >
                 <s class="vl"></s> <input type="checkbox" value="<?php echo $result['division_id'] ;?>">
                 <!-- <span style="font-weight: bold;font-size: 12px;" ><?php echo $result['division_name'] ;?></span> -->
-                <span style="font-weight: bold;font-size: 12px;" onclick="showDetail(<?php echo $result['division_id'] ;?>)" ><?php echo $result['division_name'] ; echo $result['ORG_LEVEL'] ;?></span>
+                <span style="font-weight: bold;font-size: 12px;" onclick="showDetail(<?php echo $result['division_id'] ;?>,<?php echo $result['ORG_LEV_PK'] ;?>,<?php echo $result['id'] ;?>)" >
+                <?php echo $result['division_name'] ; echo " ";echo $result['ORG_LEV_PK'] ;?></span>
             </li>
         </a>
 
