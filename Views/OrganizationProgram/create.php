@@ -152,8 +152,6 @@
                   $('#orgTypeList').append('<option value="' + data.orgType + '" selected="selected">' + data.orgType + '</option>');
                   $('#orgPartName').append('<option value="' + data.orgPartName + '" selected="selected">' + data.orgPartName + '</option>');
                   $('#orgaLevelName').append('<option value="' + data.orgaLevelName + '" selected="selected">' + data.orgaLevelName + '</option>');
-
-
               },
               error: function(error) {
                   // alert(error);
@@ -185,9 +183,6 @@
                               </div>
                           </div>
                       </div>
-
-
-
                       <div style="width:7px;height:30px;background-color:#1a1d52; float:left; margin-right:10px;"></div>
                       <h3 class="content-header-title">โปรแกรมจัดการโครงสร้าง</h3>
                       <div class="row breadcrumbs-top">
@@ -329,15 +324,15 @@
                                                                   </div>
                                                               </div>
                                                           </div> -->
-                                                          <div class="col-md-6 mt-1">
+                                                          <!-- <div class="col-md-6 mt-1">
                                                               <label class="col-md-12 label-control" for="divisionID">ลำดับสังกัด/หน่วยใน Tree</label>
                                                               <div class="col-md-12">
                                                                   <div class="position-relative">
                                                                       <input type="text" id="divisionID" class="form-control " placeholder="ลำดับสังกัด/หน่วยใน Tree" name="divisionID">
                                                                   </div>
                                                               </div>
-                                                          </div>
-                                                          <div class="col-md-6 mt-1">
+                                                          </div> -->
+                                                          <div class="col-md-6">
                                                               <label class="col-md-12 label-control" for="orgPartName">ชื่อส่วนราชการ</label>
                                                               <div class="col-md-12" style="float:left;">
                                                                   <select class="select2 form-control block" id="orgPartName" style="width: 100%;">
@@ -368,13 +363,9 @@
                                                           <div class="col-md-6 mt-1">
                                                               <label class="col-md-12 label-control" for="orgListName">ชื่อหน่วย</label>
                                                               <div class="col-md-12" style="float:left;">
-                                                                  <select class="select2 form-control block" id="orgListName" style="width: 100%;">
-                                                                      <!-- border-color: #8c93ee !important; -->
-                                                                      <!-- <optgroup label="Alaskan/Hawaiian Time Zone"> -->
-                                                                      <!-- <option value="">เลือกหน่วย</option> -->
-                                                                      <!-- <option value="HI">Hawaii</option> -->
-                                                                      <!-- </optgroup> -->
-                                                                  </select>
+                                                              <div class="position-relative">
+                                                                      <input type="text " id="orgListAbbr" class="form-control " placeholder="ศปร." name="orgListName">
+                                                                  </div>
                                                               </div>
                                                               <!-- <div class="col-md-1">
                                                                   <a href="../Organizations/create.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>

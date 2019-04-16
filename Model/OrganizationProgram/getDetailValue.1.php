@@ -26,10 +26,9 @@ $query = sqlsrv_query($conn, $sql, $params, $options);
 $rows = sqlsrv_num_rows($query);
 
 if ($rows > 0) {
-
     while ($result = sqlsrv_fetch_array($query)) { ?>
 
-        <a style="margin-left: 15px; ">
+        <a style="margin-left: 15px;   ">
             <li class="list-group-item" >
                 <s class="vl"></s> <input type="checkbox" value="<?php echo $result['division_id'] ;?>">
                 <!-- <span style="font-weight: bold;font-size: 12px;" ><?php echo $result['division_name'] ;?></span> -->

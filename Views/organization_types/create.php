@@ -1,6 +1,4 @@
-  <!-- connection -->
-  <?php require_once "../../config.php"; ?>
-
+<?php require_once '../../config.php'?>
   <!-- header -->
   <?php include '../include/header.php'; ?>
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/selects/select2.min.css">

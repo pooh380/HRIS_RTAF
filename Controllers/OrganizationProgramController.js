@@ -175,15 +175,12 @@
 
         var organizationPartName = $("#organizationPartName").val();
         var organizationPartAbbrName = $("#organizationPartAbbrName").val();
-
         var checkBox = document.getElementById("isActive");
         if (checkBox.checked == true) {
             var isActive = "1";
         } else {
             var isActive = "0";
         }
-
-
         console.log(organizationPartName + " " + organizationPartAbbrName + " " + isActive);
         // e.preventDefault();
         $.ajax({
