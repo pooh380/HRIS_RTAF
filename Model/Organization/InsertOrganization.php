@@ -23,13 +23,12 @@ if (!empty($_POST)) {
     $orgAbbrname = $_POST['orgAbbrname'];
     $isActive = $_POST['isActive'];
 
-    $sql = " INSERT INTO organization
-    (seq_no, organization_code, organization_name, organization_abbr_name, airforce, is_active, created_by, created_date, modified_by, modified_date)
-    VALUES($idNew, '$idNew', '$orgname', '$orgAbbrname', 0, $isActive, '', '', '', '');";
+    $sql = " insert into organization (organization_code, organization_name, organization_abbr_name, airforce, IsActive)
+    values ($idNew, '$orgname', ' $orgAbbrname','','$isActive');";
     
-    echo $sql;
+    // echo $sql;
     if (sqlsrv_query($conn, $sql)) {
-        echo "บันทึกสำเร็จ";
+        // echo "บันทึกสำเร็จ";
 
     } else{
         echo "บันทึกไม่ได้";
