@@ -24,6 +24,43 @@ function getOrganization() {
 }
 
 
+function insertOrganization() {
+
+    var orgname = $("#orgname").val();
+    var orgAbbrname = $("#orgAbbrname").val();
+    var checkBox = document.getElementById("isActive");
+    if (checkBox.checked == true) {
+        var isActive = "1";
+    } else {
+        var isActive = "0";
+    }
+
+    // console.log(orglevelname + " " + orglevelAbbrname + " " + isActive);
+    // e.preventDefault();
+
+    $.post("../../Model/Organization/InsertOrganization.php", {
+        orgname: orgname,
+        orgAbbrname: orgAbbrname,
+        isActive: isActive
+    }).done(function(data) {
+        // console.log(data);
+        Swal.fire({
+            type: 'success',
+            title: 'เพิ่มข้อมูลสำเร็จ',
+            showConfirmButton: false,
+            timer: 2000
+        });
+        setTimeout("window.open('../Organizations/index.php', '_self');", 2000);
+    }).fail(function(err) {
+        // console.log(err);
+        Swal.fire({
+            type: 'error',
+            title: 'ไม่สามารถเพิ่มข้อมูลได้',
+            text: 'กรุณาตรวจสอบข้อมูลอีกครั้ง'
+        })
+    });
+}
+
 // delete
 function deleteOrganizations(id) {
     // alert(event);

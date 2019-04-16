@@ -79,18 +79,6 @@
                                                   <div class="col-md-6">
                                                       <label class="col-md-6 label-control" for="userinput1">ประเภทโครงสร้าง</label>
                                                       <div class="col-md-12">
-<<<<<<< HEAD
-                                                      <select name="orgTypeList" id="orgTypeList" class="select2 form-control">
-                                                                    <option value="21">อัตรา ทอ. 52</option>
-                                                                    <?php
-                                                                    $sql = " SELECT  FROM organization_type; ";
-                                                                    $result = sqlsrv_query($conn, $sql);
-                                                                    while ($row = sqlsrv_fetch_array($result)) {
-                                                                        echo "<option value='" . $row['id'] . "'>" . $row['organization_type_name'] . "</option>";
-                                                                    }
-                                                                    ?>
-                                                                </select>
-=======
                                                           <select name="orgTypeList" id="orgCategoryName" class="select2 form-control">
                                                               <option value="">กรุณาเลือกประเภทโครงสร้าง</option>
                                                               <?php
@@ -101,7 +89,6 @@
                                                                 }
                                                                 ?>
                                                           </select>
->>>>>>> a61d0fb5b823c73ed0959fa37a847f075d13458b
                                                       </div>
                                                   </div>
                                                   <div class="col-md-6">
