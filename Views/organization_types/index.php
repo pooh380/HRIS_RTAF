@@ -47,7 +47,7 @@
                       <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                         <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
                       </a>
-                      <table id="OrganizationType" class="table table-striped table-borderless table-hover bootstrap-3 " style="width=100%;">
+                      <table id="OrganizationType" class="table table-striped table-borderless table-hover bootstrap-3 " style="width:100%;">
                         <thead>
                           <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                             <th></th>

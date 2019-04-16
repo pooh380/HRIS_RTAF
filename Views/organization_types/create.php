@@ -79,9 +79,9 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput1">ประเภทโครงสร้าง</label>
+                                                      <label class="col-md-6 label-control" for="orgCategoryName">ประเภทโครงสร้าง</label>
                                                       <div class="col-md-12">
-                                                          <select name="orgTypeList" id="orgCategoryName" class="select2 form-control">
+                                                          <select name="orgCategoryName" id="orgCategoryName" class="select2 form-control">
                                                               <option value="">กรุณาเลือกประเภทโครงสร้าง</option>
                                                               <?php
                                                                 $sql = " SELECT id, organization_category_name FROM organization_category; ";
@@ -93,7 +93,7 @@
                                                           </select>
                                                       </div>
                                                   </div>
-                                                  <div class="col-md-6">
+                                                  <!-- <div class="col-md-6">
                                                       <label class="col-md-4 label-control" for="userinput1">รหัสโครงสร้าง</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative has-icon-left">
@@ -103,12 +103,25 @@
                                                               </div>
                                                           </div>
                                                       </div>
+                                                  </div> -->
+
+                                                  <div class="col-md-6">
+                                                      <label class="col-md-4 label-control" for="orgTypeName">ชื่อหน่วยงาน</label>
+
+                                                      <div class="col-md-12">
+                                                          <div class="position-relative has-icon-left">
+                                                              <input type="text" id="orgTypeName" name="orgTypeName" class="form-control border-primary" placeholder="ชื่อหน่วยงาน" name="employeename">
+                                                              <div class="form-control-position">
+                                                                  <i class="ft-user"></i>
+                                                              </div>
+                                                          </div>
+                                                      </div>
                                                   </div>
                                               </div>
 
                                               <br>
                                               <div class="row">
-                                                  <div class="col-md-12">
+                                                  <!-- <div class="col-md-12">
                                                       <label class="col-md-4 label-control" for="userinput2">ชื่อหน่วยงาน</label>
 
                                                       <div class="col-md-12">
@@ -119,31 +132,31 @@
                                                               </div>
                                                           </div>
                                                       </div>
-                                                  </div>
+                                                  </div> -->
 
                                               </div>
 
                                               <div class="row mt-1">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput1">วันที่เริ่มต้น</label>
+                                                      <label class="col-md-6 label-control" for="startDate">วันที่เริ่มต้น</label>
                                                       <div class="input-group col-md-12">
-                                                          <input type='text' class="form-control pickadate-limits" placeholder=" _/_/_ " />
                                                           <div class="input-group-append">
                                                               <span class="input-group-text">
                                                                   <span class="la la-calendar-o"></span>
                                                               </span>
                                                           </div>
+                                                          <input type='text' id="startDate" name="startDate" class="form-control pickadate-limits" placeholder=" _/_/_ " />
                                                       </div>
                                                   </div>
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput2">วันที่สิ้นสุด</label>
+                                                      <label class="col-md-6 label-control" for="endDate">วันที่สิ้นสุด</label>
                                                       <div class="input-group col-md-12">
-                                                          <input type='text' class="form-control pickadate-limits" placeholder=" _/_/_ " />
                                                           <div class="input-group-append">
                                                               <span class="input-group-text">
                                                                   <span class="la la-calendar-o"></span>
                                                               </span>
                                                           </div>
+                                                          <input type='text' id="endDate" name="endDate" class="form-control pickadate-limits" placeholder=" _/_/_ " />
                                                       </div>
                                                   </div>
                                               </div>
@@ -152,23 +165,27 @@
                                           <div class="col-sm-12 mt-1">
                                               <fieldset class="checkboxsas">
                                                   <label>
-                                                      <input type="checkbox" value="">&nbsp;โครงสร้างของ ทอ.
+                                                      <input id="airForce" type="checkbox" value="1">&nbsp;โครงสร้างของ ทอ.
                                                   </label>
                                               </fieldset>
                                               <fieldset class="checkbox">
                                                   <label>
-                                                      <input type="checkbox" value="">&nbsp;ได้รับวันทวีคูณ
+                                                      <input id="multiplesDay" type="checkbox" value="1">&nbsp;ได้รับวันทวีคูณ
                                                   </label>
                                               </fieldset>
                                               <fieldset class="checkbox">
                                                   <label>
-                                                      <input type="checkbox" value="">&nbsp;โครงสร้างปัจจุบัน
+                                                      <input id="currentOrg" type="checkbox" value="1">&nbsp;โครงสร้างปัจจุบัน
                                                   </label>
                                               </fieldset>
                                               <div>
                                                   <label class="label-control" for="userinput3">สถานะ</label>
-                                                  <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                                  <input id="isActive" type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
                                               </div>
+                                          </div>
+                                          <div class="form-actions center" align="center">
+                                              <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                              <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="insertOrgType()">บันทึก</button>
                                           </div>
                                       </form>
                                   </div>
@@ -176,24 +193,17 @@
                           </div>
                       </div>
                   </div>
-                  <div class="form-actions center" align="center">
-
-                      <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="type-success">บันทึก</button>
-                  </div>
               </section>
               <!-- // Basic form layout section end -->
           </div>
       </div>
   </div>
+
+  <script src="../../Controllers/organizationTypeController.js"></script>
+
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
-  <!-- BEGIN PAGE VENDOR JS-->
-  <script src="../../app-assets/vendors/js/extensions/sweetalert.min.js" type="text/javascript"></script>
-  <!-- END PAGE VENDOR JS-->
-  <!-- BEGIN PAGE LEVEL JS-->
-  <script src="../../app-assets/js/scripts/extensions/sweet-alerts.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
 
   <!-- select2 -->
