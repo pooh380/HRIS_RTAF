@@ -21,7 +21,7 @@
       <div class="content-wrapper">
           <div class="content-header row">
               <div class="content-header-left col-md-6 col-12 mb-2">
-                  <h3 class="content-header-title">เพิ่มโครงสร้างอัตราส่วนราชการ</h3>
+                  <h3 class="content-header-title">เพิ่มชื่อหน่วยงาน</h3>
                   <div class="row breadcrumbs-top">
 
                   </div>
@@ -32,7 +32,7 @@
               <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="./index.php">ระบบงานโครงสร้างอัตรากำลังพล</a></li>
                   <li class="breadcrumb-item"><a href="./index.php">โครงสร้าง</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">เพิ่มโครงสร้างอัตราส่วนราชการ</li>
+                  <li class="breadcrumb-item active" aria-current="page">เพิ่มชื่อหน่วยงาน</li>
               </ol>
           </nav>
           <div class="content-body">

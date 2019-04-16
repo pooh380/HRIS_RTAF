@@ -1,6 +1,6 @@
 function getOrganization() {
     $('#Organization').DataTable({
-        
+
         "ajax": {
             url: "../../Model/Organization/GetOrganization.php", // json datasource
             dataType: "json",
