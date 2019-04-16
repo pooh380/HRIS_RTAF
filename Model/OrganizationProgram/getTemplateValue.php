@@ -1,6 +1,7 @@
 <?php
 
 require_once "../../config.php";
+require_once "../../Controllers/API/dateformat.php";
 
 
 $orgTypeId = isset($_POST['orgTypeId']) ? $_POST['orgTypeId'] : "";
@@ -9,10 +10,11 @@ $orgLevelId = isset($_POST['orgLevelId']) ? $_POST['orgLevelId'] : "";
 $divisionId = isset($_POST['divisionId']) ? $_POST['divisionId'] : "";
 $orgStucId = isset($_POST['orgStucId']) ? $_POST['orgStucId'] : "";
 
-// $divisionId = 340028;
+// $divisionId = 350546;
 // $orgTypeId = 21;
 // $orgListId = 49;
 // $orgLevelId = 34;
+// $orgStucId = 218745;
 
 
 // $sql = " SELECT  *  , organization_type.organization_type_name,organization_part.organization_part_name,organization_level.organization_level_name
@@ -32,6 +34,8 @@ WHERE organization_list.division_id = $divisionId AND organization_list.id = $or
 
 $query = sqlsrv_query($conn, $sql);
 
+// echo $sql;
+
 // if($query){ echo "query";}else{echo "not query";}
 
 while ($row = sqlsrv_fetch_array($query)) {
@@ -49,7 +53,8 @@ while ($row = sqlsrv_fetch_array($query)) {
     $orgaLevelName = $row['organization_level_name'];
 
     //date
-    $startDate = thai_date($row['CreatedDate'],"d/m/Y");
+    $date = date_format($row['CreatedDate'],"d/m/Y");
+    $startDate = thai_date_short($date);
 
 }
 // SELECT    organization_list_long_abbr_name, organization_type_id, organization_part_id, organization_parent_id, organization_level_id, organization_id, district_id, province_id, used_command_id, used_doc_number, used_doc_date, used_eff_date, cancelled_command_id, cancelled_doc_number, cancelled_doc_date, cancelled_eff_date, [904], is_active, created_by, created_date, modified_by, modified_date
