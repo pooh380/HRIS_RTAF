@@ -27,14 +27,15 @@
         // alert(orgTypeId + " " + orgListId);
     }
 
-    function showDetail(id) {
-        var orgLevelId = id;
+    function showDetail(divisionId, orgLevelId, orgStucId) {
         var orgTypeId = $("#orgTypeId").val();
         var orgListId = $("#orgListId").val();
 
-        alert(orgTypeId);
-        alert(orgListId);
-        alert(orgLevelId);
+        // alert("orgTypeId" + " " + orgTypeId);
+        // alert("orgListId" + " " + orgListId);
+        // alert("divisionId" + " " + divisionId);
+        // alert("orgLevelId" + " " + orgLevelId);
+        // alert("orgStucId" + " " + orgStucId);
 
         $.ajax({
             type: "POST",
@@ -43,7 +44,9 @@
             data: {
                 orgLevelId: orgLevelId,
                 orgTypeId: orgTypeId,
-                orgListId: orgListId
+                orgListId: orgListId,
+                divisionId: divisionId,
+                orgStucId: orgStucId
             },
             success: function(data) {
                 $("#code").val(data.id);
@@ -53,11 +56,13 @@
                 $("#orgListLong").val(data.orgListLong);
                 $("#orgListAbbrLong").val(data.orgListAbbrLong);
                 $("#orgListAbbrLongAbbr").val(data.orgListAbbrLongAbbr);
-                // $("#orgTypeList").html(data.value);
+                $("#startDate").val(data.startDate);
                 $('#orgTypeList').append('<option value="' + data.orgType + '" selected="selected">' + data.orgType + '</option>');
                 $('#orgListName').append('<option value="' + data.orgListName + '" selected="selected">' + data.orgListName + '</option>');
                 $('#orgPartName').append('<option value="' + data.orgPartName + '" selected="selected">' + data.orgPartName + '</option>');
                 $('#orgaLevelName').append('<option value="' + data.orgaLevelName + '" selected="selected">' + data.orgaLevelName + '</option>');
+                $('#divisionAbbrName').append('<option value="' + data.divisionAbbrName + '" selected="selected">' + data.divisionAbbrName + '</option>');
+
                 // console.log(data);
             },
             error: function(error) {
@@ -67,25 +72,25 @@
         });
     }
 
-    function insertProgram(){
-       
+    function insertProgram() {
 
-var orgListName = $('#orgListName :selected').val();//ชื่อหน่วย
-var orgPartName = $('#orgPartName :selected').val();//ชื่อหน่วยส่วนบัญชาการ
-var orgaLevelName = $('#orgaLevelName :selected').val();//ฐานะหน่วยสังกัด
-var orgTypeList = $("#orgTypeList :selected").val();//โครงสร้าง
-var orgListId = $("#orgListId").val();
-var divisionID = $("#divisionID").val();//ลำดับสังกัด/หน่วยใน Tree
-var orgListAbbr = $("#orgListAbbr").val();
-var orgListAbbrLong = $("#orgListAbbrLong").val();//ชื่อย่อหน่วย/สังกัด
-var orgListAbbrLongAbbr = $("#orgListAbbrLongAbbr").val();//ชื่อกึ่งย่อหน่วย/สังกัด
-var provincesName = $("#provincesName").val();
-var districtsName = $("#districtsName").val();
 
- 
-alert("orgListName"+orgListName+"orgPartName"+orgPartName+"orgaLevelName"+orgaLevelName+"orgTypeList"+orgTypeList+"orgListId"+orgListId
-+"divisionID"+divisionID+"orgListAbbr"+orgListAbbr+"orgListAbbrLong"+orgListAbbrLong+"orgListAbbrLongAbbr"+orgListAbbrLongAbbr+
-"provincesName"+provincesName+"districtsName"+districtsName);
+        var orgListName = $('#orgListName :selected').val(); //ชื่อหน่วย
+        var orgPartName = $('#orgPartName :selected').val(); //ชื่อหน่วยส่วนบัญชาการ
+        var orgaLevelName = $('#orgaLevelName :selected').val(); //ฐานะหน่วยสังกัด
+        var orgTypeList = $("#orgTypeList :selected").val(); //โครงสร้าง
+        var orgListId = $("#orgListId").val();
+        var divisionID = $("#divisionID").val(); //ลำดับสังกัด/หน่วยใน Tree
+        var orgListAbbr = $("#orgListAbbr").val();
+        var orgListAbbrLong = $("#orgListAbbrLong").val(); //ชื่อย่อหน่วย/สังกัด
+        var orgListAbbrLongAbbr = $("#orgListAbbrLongAbbr").val(); //ชื่อกึ่งย่อหน่วย/สังกัด
+        var provincesName = $("#provincesName").val();
+        var districtsName = $("#districtsName").val();
+
+
+        alert("orgListName" + orgListName + "orgPartName" + orgPartName + "orgaLevelName" + orgaLevelName + "orgTypeList" + orgTypeList + "orgListId" + orgListId +
+            "divisionID" + divisionID + "orgListAbbr" + orgListAbbr + "orgListAbbrLong" + orgListAbbrLong + "orgListAbbrLongAbbr" + orgListAbbrLongAbbr +
+            "provincesName" + provincesName + "districtsName" + districtsName);
 
         // $.ajax({
         //     type: "POST",
@@ -119,13 +124,13 @@ alert("orgListName"+orgListName+"orgPartName"+orgPartName+"orgaLevelName"+orgaLe
 
     }
 
-    function create(){
+    function create() {
         var orgTypeId = $("#orgTypeId").val();
         var orgListId = $("#orgListId").val();
-    
+
         // alert("orgTypeId"+orgTypeId+"orgListId"+orgListId);
         // alert("create");
-        
+
         $.post("../OrganizationProgram/create.php", {
             orgTypeId: orgTypeId,
             orgListId: orgListId

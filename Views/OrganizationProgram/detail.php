@@ -121,9 +121,9 @@
               <div class="content-header row">
                   <div class="content-header-left col-12 mb-2">
 
-                      <input type="hidden" id="orgTypeId" name="orgTypeId">
+                      <input type="test" id="orgTypeId" name="orgTypeId">
 
-                      <input type="hidden" id="orgListId" name="orgListId">
+                      <input type="test" id="orgListId" name="orgListId">
 
                       <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                           <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -261,11 +261,7 @@
                                                               <label class="col-md-12 label-control" for="orgTypeList">โครงสร้าง</label> <!-- ดึงมาจากการ search หน้า index -->
                                                               <div class="col-md-12" style="float:left;">
                                                                   <select class="select2 form-control block" disabled id="orgTypeList" style="width: 100%;">
-                                                                      <!-- border-color: #8c93ee !important; -->
-                                                                      <!-- <optgroup label="Alaskan/Hawaiian Time Zone"> -->
-                                                                      <!-- <option value="อัตรา ทอ.52">อัตรา ทอ.52</option> -->
-                                                                      <!-- <option value="HI">Hawaii</option> -->
-                                                                      <!-- </optgroup> -->
+                                                                      <option value="อัตรา ทอ.52">อัตรา ทอ.52</option>
                                                                   </select>
                                                               </div>
                                                               <!-- <div class="col-md-1">
@@ -299,9 +295,9 @@
                                                               </div> -->
                                                           </div>
                                                           <div class="col-md-6 mt-1">
-                                                              <label class="col-md-12 label-control" for="orgName">ชื่อสังกัด</label>
+                                                              <label class="col-md-12 label-control" for="divisionAbbrName">ชื่อสังกัด</label>
                                                               <div class="col-md-12" style="float:left;">
-                                                                  <select class="select2 form-control block" disabled id="orgName" style="width: 100%;">
+                                                                  <select class="select2 form-control block" disabled id="divisionAbbrName" style="width: 100%;">
 
                                                                   </select>
                                                               </div>
@@ -468,7 +464,7 @@
                                                               <div class="form-group row">
                                                                   <div class="col-md-12">
                                                                       <div class="form-group">
-                                                                          <label class="col-md-12" for="orgName">มีผลตั่งแต่ :</label>
+                                                                          <label class="col-md-12" for="startDate">มีผลตั่งแต่ :</label>
                                                                           <div class="input-group col-md-12">
                                                                               <div class="input-group-prepend">
                                                                                   <span class="input-group-text">
@@ -476,7 +472,7 @@
                                                                                   </span>
                                                                               </div>
                                                                               <!-- edit เงื่อนไขวัน Date limits ที่ ../../app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js บรรทัด 40 -->
-                                                                              <input type='text' class="form-control pickadate-limits" placeholder="_/_/_" />
+                                                                              <input type='text' id="startDate" disabled name="startDate" class="form-control pickadate-limits" placeholder="_/_/_" />
                                                                           </div>
                                                                       </div>
                                                                   </div>
