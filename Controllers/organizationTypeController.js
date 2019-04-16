@@ -79,7 +79,7 @@ function insertOrgType() {
                 showConfirmButton: false,
                 timer: 2000
             });
-            // setTimeout("window.open('../organization_types/index.php', '_self');", 2000);
+            setTimeout("window.open('../organization_types/index.php', '_self');", 2000);
         },
         error: function(error) {
             // alert(error);
@@ -111,18 +111,20 @@ function getUrlVars() {
 
 // getData จาก db เพื่อนำมาใช้มา input value
 function getIdForEdit() {
-    var passTypeId = getUrlVars()["id"];
+    var orgTypeId = getUrlVars()["id"];
     $.ajax({
         type: "POST",
         dataType: "json",
-        url: "../../Model/PassType/GetDataEdit.php",
+        url: "../../Model/OrganizationType/GetDataEdit.php",
         data: {
-            passTypeId: passTypeId
+            orgTypeId: orgTypeId
         },
         success: function(data) {
-            $("#passTypeId").val(data.id);
-            $("#passTypeName").val(data.passTypeName);
-            $("#passTypeAbbrName").val(data.passTypeAbbrName);
+            $("#orgTypeId").val(data.OrgTypeId);
+            $('#orgCategoryName').append('<option value="' + data.orgCategoryId + '" selected="selected">' + data.orgCategoryName + '</option>');
+            $("#orgTypeName").val(data.orgTypeName);
+            // $("#passTypeName").val(data.passTypeName);
+            // $("#passTypeAbbrName").val(data.passTypeAbbrName);
             // console.log(data.IsActive);
             if (data.IsActive == 0) {
                 // $("#isActive").removeAttr('checked');
@@ -142,23 +144,51 @@ function getIdForEdit() {
 }
 // getData จาก db เพื่อนำมาใช้มา input value
 
-function UpdatePassType() {
-    var passTypeId = $("#passTypeId").val();
-    var passTypeName = $("#passTypeName").val();
-    var passTypeAbbrName = $("#passTypeAbbrName").val();
+function UpdateOrgType() {
+    var orgTypeId = $("#orgTypeId").val();
+    var orgCategoryName = $('#orgCategoryName :selected').val();
+    var orgTypeName = $("#orgTypeName").val();
+    var startDate = $("#startDate").val();
+    var endDate = $("#endDate").val();
+
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
         var isActive = "1";
     } else {
         var isActive = "0";
     }
-    // console.log(passTypeId + " " + passTypeName + " " + passTypeAbbrName + " " + isActive);
 
-    $.post("../../Model/PassType/UpdatePassType.php", {
-        passTypeId: passTypeId,
-        passTypeName: passTypeName,
-        passTypeAbbrName: passTypeAbbrName,
-        isActive: isActive
+    var checkBox = document.getElementById("airForce");
+    if (checkBox.checked == "") {
+        var airForce = "0";
+    } else {
+        var airForce = "1";
+    }
+
+    var checkBox = document.getElementById("multiplesDay");
+    if (checkBox.checked == "") {
+        var multiplesDay = "0";
+    } else {
+        var multiplesDay = "1";
+    }
+    var checkBox = document.getElementById("currentOrg");
+    if (checkBox.checked == "") {
+        var currentOrg = "0";
+    } else {
+        var currentOrg = "1";
+    }
+
+
+    $.post("../../Model/OrganizationType/UpdateOrganizationType.php", {
+        orgTypeId: orgTypeId,
+        orgCategoryName: orgCategoryName,
+        orgTypeName: orgTypeName,
+        startDate: startDate,
+        endDate: endDate,
+        isActive: isActive,
+        airForce: airForce,
+        multiplesDay: multiplesDay,
+        currentOrg: currentOrg
     }).done(function(data) {
         // window.location.replace("../page/listUser.php");
         // console.log(data);
@@ -168,7 +198,7 @@ function UpdatePassType() {
             showConfirmButton: false,
             timer: 2000
         });
-        setTimeout("window.open('../Pass_Type/index.php', '_self');", 2000);
+        setTimeout("window.open('../organization_types/index.php', '_self');", 2000);
     }).fail(function(err) {
         // console.log(err);
         Swal.fire({
@@ -180,13 +210,13 @@ function UpdatePassType() {
 }
 
 // delete
-function deletePassType(id) {
+function deleteOrgType(id) {
     // alert(event);
     event.preventDefault();
-    var passTypeId = id;
+    var orgTypeId = id;
     // console.log(PrefixsId);
-    $.post("../../Model/PassType/DeletePassType.php", {
-        passTypeId: passTypeId
+    $.post("../../Model/OrganizationType/DeleteOrganizationType.php", {
+        orgTypeId: orgTypeId
     }).done(function(data) {
         // window.location.replace("../page/listUser.php");
         // console.log(data);

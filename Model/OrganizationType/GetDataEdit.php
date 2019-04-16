@@ -4,28 +4,33 @@ error_reporting(0);
 
 require_once "../../config.php";
 
-// $_POST["originsId"] = 0;
+// $orgTypeId = $_POST["orgTypeId"] = 25;
 
-$originsId = $_POST["originsId"];
+$orgTypeId = $_POST["orgTypeId"];
 $id = "";
 $originName = "";
 $originAbbrName = "";
 $IsActive = "";
 // echo $originsId ;
 
-if(isset($originsId)){
-    $sql = " SELECT id, origin_name, origin_abbr_name, IsActive FROM general_origin where id = $originsId ";
+if(isset($orgTypeId)){
+    $sql = " SELECT organization_type.id as OrgTypeId, organization_type_code, organization_type_name, organization_type_abbr_name, organization_category_id,organization_category.organization_category_name
+    FROM organization_type 
+    JOIN organization_category 
+    ON organization_type.organization_category_id = organization_category.id
+    where organization_type.id = $orgTypeId; ";
 
-    // echo $sql;
+    // echo $sql."<br>";
 
     $query = sqlsrv_query($conn, $sql);
 
     // if($query){ echo "query";}else{echo "not query";}
 
     while ($row = sqlsrv_fetch_array($query)) {
-        $id = $row['id'];
-        $originName = $row['origin_name'];
-        $originAbbrName = $row['origin_abbr_name'];
+        $OrgTypeId = $row['OrgTypeId'];
+        $orgTypeName = $row['organization_type_name'];
+        $orgCategoryId = $row['organization_category_id'];
+        $orgCategoryName = $row['organization_category_name'];
         $IsActive = $row['IsActive'];
         // echo $id;
         // echo $originName;
@@ -33,7 +38,7 @@ if(isset($originsId)){
         // echo $IsActive;
     }
 
-    $r=array("id"=>$id,"originName"=>$originName,"originAbbrName"=>$originAbbrName,"IsActive"=>$IsActive);
+    $r=array("OrgTypeId"=>$OrgTypeId,"orgTypeName"=>$orgTypeName,"orgCategoryId"=>$orgCategoryId,"orgCategoryName"=>$orgCategoryName,"IsActive"=>$IsActive);
     print(json_encode($r));
 }
 

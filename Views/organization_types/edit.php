@@ -1,3 +1,4 @@
+<?php require_once '../../config.php'?>
   <!-- header -->
   <?php include '../include/header.php'; ?>
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/selects/select2.min.css">
@@ -10,6 +11,9 @@
 
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/icheck/icheck.css">
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/icheck/custom.css">
+
+  <link rel="stylesheet" type="text/css" href="../../app-assets/css/plugins/forms/checkboxes-radios.css">
+
 
 
   <!-- menu -->
@@ -28,12 +32,21 @@
           border-radius: 20rem;
       }
   </style>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        getIdForEdit();
+    });
+</script>
+
   <div class="app-content content">
       <div class="content-wrapper">
           <div class="content-header row">
               <div class="content-header-left col-md-6 col-12 mb-2">
                   <div style="width:7px;height:30px;background-color:#1a1d52; float:left; margin-right:10px;"></div>
-                  <h3 class="content-header-title">แก้ไขอัตราตำแหน่งในโครงสร้างอัตรา</h3>
+                  <h3 class="content-header-title">เพิ่มอัตราตำแหน่งในโครงสร้างอัตรา</h3>
                   <div class="row breadcrumbs-top">
 
                   </div>
@@ -44,7 +57,7 @@
               <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="./index.php">ระบบงานโครงสร้างอัตรากำลังพล</a></li>
                   <li class="breadcrumb-item"><a href="./index.php">โครงสร้าง</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">แก้ไขอัตราตำแหน่งในโครงสร้างอัตรา</li>
+                  <li class="breadcrumb-item active" aria-current="page">เพิ่มอัตราตำแหน่งในโครงสร้างอัตรา</li>
               </ol>
           </nav>
           <div class="content-body">
@@ -73,18 +86,21 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput1">ประเภทโครงสร้าง</label>
+                                                      <label class="col-md-6 label-control" for="orgCategoryName">ประเภทโครงสร้าง</label>
                                                       <div class="col-md-12">
-                                                          <select class="select2 form-control block" id="responsive_single" style="width: 100%;">
-                                                              <!-- border-color: #8c93ee !important; -->
-                                                              <!-- <optgroup label="Alaskan/Hawaiian Time Zone"> -->
-                                                              <option value="โครงสร้างอัตราเฉพาะกิจ">โครงสร้างอัตราเฉพาะกิจ</option>
-                                                              <!-- <option value="HI">Hawaii</option> -->
-                                                              <!-- </optgroup> -->
+                                                          <select name="orgCategoryName" id="orgCategoryName" class="select2 form-control">
+                                                              <option value="">กรุณาเลือกประเภทโครงสร้าง</option>
+                                                              <?php
+                                                                $sql = " SELECT id, organization_category_name FROM organization_category; ";
+                                                                $result = sqlsrv_query($conn, $sql);
+                                                                while ($row = sqlsrv_fetch_array($result)) {
+                                                                    echo "<option value='" . $row['id'] . "'>" . $row['organization_category_name'] . "</option>";
+                                                                }
+                                                                ?>
                                                           </select>
                                                       </div>
                                                   </div>
-                                                  <div class="col-md-6">
+                                                  <!-- <div class="col-md-6">
                                                       <label class="col-md-4 label-control" for="userinput1">รหัสโครงสร้าง</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative has-icon-left">
@@ -94,12 +110,25 @@
                                                               </div>
                                                           </div>
                                                       </div>
+                                                  </div> -->
+
+                                                  <div class="col-md-6">
+                                                      <label class="col-md-4 label-control" for="orgTypeName">ชื่อหน่วยงาน</label>
+
+                                                      <div class="col-md-12">
+                                                          <div class="position-relative has-icon-left">
+                                                              <input type="text" id="orgTypeName" name="orgTypeName" class="form-control border-primary" placeholder="ชื่อหน่วยงาน" name="employeename">
+                                                              <div class="form-control-position">
+                                                                  <i class="ft-user"></i>
+                                                              </div>
+                                                          </div>
+                                                      </div>
                                                   </div>
                                               </div>
 
                                               <br>
                                               <div class="row">
-                                                  <div class="col-md-12">
+                                                  <!-- <div class="col-md-12">
                                                       <label class="col-md-4 label-control" for="userinput2">ชื่อหน่วยงาน</label>
 
                                                       <div class="col-md-12">
@@ -110,81 +139,79 @@
                                                               </div>
                                                           </div>
                                                       </div>
-                                                  </div>
+                                                  </div> -->
 
                                               </div>
 
                                               <div class="row mt-1">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput1">วันที่เริ่มต้น</label>
+                                                      <label class="col-md-6 label-control" for="startDate">วันที่เริ่มต้น</label>
                                                       <div class="input-group col-md-12">
-                                                          <input type='text' class="form-control pickadate-events" placeholder=" _/_/_ " />
                                                           <div class="input-group-append">
                                                               <span class="input-group-text">
                                                                   <span class="la la-calendar-o"></span>
                                                               </span>
                                                           </div>
+                                                          <input type='text' id="startDate" name="startDate" class="form-control pickadate-limits" placeholder=" _/_/_ " />
                                                       </div>
                                                   </div>
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput2">วันที่สิ้นสุด</label>
+                                                      <label class="col-md-6 label-control" for="endDate">วันที่สิ้นสุด</label>
                                                       <div class="input-group col-md-12">
-                                                          <input type='text' class="form-control pickadate-events" placeholder=" _/_/_ " />
                                                           <div class="input-group-append">
                                                               <span class="input-group-text">
                                                                   <span class="la la-calendar-o"></span>
                                                               </span>
                                                           </div>
+                                                          <input type='text' id="endDate" name="endDate" class="form-control pickadate-limits" placeholder=" _/_/_ " />
                                                       </div>
                                                   </div>
                                               </div>
                                           </div>
 
                                           <div class="col-sm-12 mt-1">
-                                            <fieldset class="checkboxsas">
-                                                <label>
-                                                    <input type="checkbox" value="">&nbsp;โครงสร้างของ ทอ.
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="">&nbsp;ได้รับวันทวีคูณ
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="">&nbsp;โครงสร้างปัจจุบัน
-                                                </label>
-                                            </fieldset>
-                                          <div>
-                                              <label class="label-control" for="userinput3">สถานะ</label>
-                                              <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                              <fieldset class="checkboxsas">
+                                                  <label>
+                                                      <input id="airForce" type="checkbox" value="1">&nbsp;โครงสร้างของ ทอ.
+                                                  </label>
+                                              </fieldset>
+                                              <fieldset class="checkbox">
+                                                  <label>
+                                                      <input id="multiplesDay" type="checkbox" value="1">&nbsp;ได้รับวันทวีคูณ
+                                                  </label>
+                                              </fieldset>
+                                              <fieldset class="checkbox">
+                                                  <label>
+                                                      <input id="currentOrg" type="checkbox" value="1">&nbsp;โครงสร้างปัจจุบัน
+                                                  </label>
+                                              </fieldset>
+                                              <div>
+                                                  <label class="label-control" for="userinput3">สถานะ</label>
+                                                  <input id="isActive" type="checkbox" data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                                  <input type="hidden" id="orgTypeId" name="orgTypeId">
+                                              </div>
                                           </div>
+                                          <div class="form-actions center" align="center">
+                                              <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                              <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="UpdateOrgType()">บันทึก</button>
+                                          </div>
+                                      </form>
                                   </div>
-                                  </form>
                               </div>
                           </div>
                       </div>
                   </div>
+              </section>
+              <!-- // Basic form layout section end -->
           </div>
-          <div class="form-actions center" align="center">
-
-              <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1">ยกเลิก</button>
-              <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="type-success">บันทึก</button>
-          </div>
-          </section>
-          <!-- // Basic form layout section end -->
       </div>
   </div>
-  </div>
+
+  <script src="../../Controllers/organizationTypeController.js"></script>
+
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
-  <!-- BEGIN PAGE VENDOR JS-->
-  <script src="../../app-assets/vendors/js/extensions/sweetalert.min.js" type="text/javascript"></script>
-  <!-- END PAGE VENDOR JS-->
-  <!-- BEGIN PAGE LEVEL JS-->
-  <script src="../../app-assets/js/scripts/extensions/sweet-alerts.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
 
   <!-- select2 -->
@@ -204,4 +231,4 @@
   <script src="../../app-assets/js/scripts/forms/checkbox-radio.js" type="text/javascript"></script>
 
   <!-- footer -->
-  <?php include '../include/footer.php'; ?> 
+  <?php include '../include/footer.php'; ?>
