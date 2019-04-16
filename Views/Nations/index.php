@@ -9,6 +9,7 @@
     .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
     .toggle.ios .toggle-handle { border-radius: 20rem; }
   </style>
+ <?php include_once '../include/modelOnload.php' ?>
 
   <section>
   <div class="app-content content">
@@ -78,6 +79,12 @@
   <script type="text/javascript">
     $(document).ready(function() {
             // console.log("ready");
+            $(document).ajaxStart(function() {
+            $(".modal").show();
+        });
+        $(document).ajaxComplete(function() {
+            $(".modal").hide();
+        });
             change_autorefreshdiv();
             getGeneralNation();
     });

@@ -1,12 +1,12 @@
 <?php
-
+error_reporting(0);
 require_once "../../config.php";
 // if($conn){echo "con";}
 
 $request = $_REQUEST;
 $col = array(
     0   =>  'id',
-    1   =>'ReligionName',
+    1   => 'ReligionName',
     2   =>  'IsActive',
 );
 
@@ -37,17 +37,17 @@ $data = array();
 while ($row = sqlsrv_fetch_array($query)) {
     $subdata = array();
     $subdata[] = '
-    <a href="../../Views/Religions/edit.php?id='.$row[0].'"><i class="la la-pencil-square-o" style="color:#0f1733"; font-size:30px;" id="'.$row[0].'"></i></a>
-    <a href=""><i class="la la-trash-o" style="color:#0f1733"; font-size:30px;" onclick="deleteReligions('.$row[0].')" id="'.$row[0].'"></i></a>
-    ';//id
+    <a href="../../Views/Religions/edit.php?id=' . $row[0] . '"><i class="la la-pencil-square-o" style="color:#0f1733"; font-size:30px;" id="' . $row[0] . '"></i></a>
+    <a href=""><i class="la la-trash-o" style="color:#0f1733"; font-size:30px;" onclick="deleteReligions(' . $row[0] . ')" id="' . $row[0] . '"></i></a>
+    '; //id
     $subdata[] = $row[0];
     $subdata[] = $row[1];
-    if($row[2] != "1" ){ 
+    if ($row[2] != "1") {
         $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
-    }else{
-        
+    } else {
+
         $subdata[] = '<i class="la la-toggle-on" style="color: green; font-size:30px; "></i>';
-    }//status   
+    } //status   
     $data[] = $subdata;
 }
 

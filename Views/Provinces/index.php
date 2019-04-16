@@ -4,6 +4,7 @@
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
 
+  <?php include_once '../include/modelOnload.php' ?>
   <style>
       /* ol > li > a {color:#222233;} */
       .toggle.ios,
@@ -80,6 +81,12 @@
 
   <script type="text/javascript">
       $(document).ready(function() {
+        $(document).ajaxStart(function() {
+            $(".modal").show();
+        });
+        $(document).ajaxComplete(function() {
+            $(".modal").hide();
+        });
           // console.log("ready");
           change_autorefreshdiv();
           getProvinces();

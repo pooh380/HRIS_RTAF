@@ -15,7 +15,7 @@
           border-radius: 20rem;
       }
   </style>
-
+ <?php include_once '../include/modelOnload.php' ?>
   <section>
       <div class="app-content content">
           <div class="content-wrapper">
@@ -82,6 +82,12 @@
 
   <script type="text/javascript">
       $(document).ready(function() {
+        $(document).ajaxStart(function() {
+            $(".modal").show();
+        });
+        $(document).ajaxComplete(function() {
+            $(".modal").hide();
+        });
           // console.log("ready");
           change_autorefreshdiv();
           getEducation();
