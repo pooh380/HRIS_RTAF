@@ -15,9 +15,10 @@
       .toggle.ios .toggle-handle {
           border-radius: 20rem;
       }
+
       [class*="bs-callout"] .callout-arrow-left:before {
-            right: -5%;
-        }
+          right: -5%;
+      }
   </style>
 
   <div class="app-content content">
@@ -52,15 +53,15 @@
                                               </div>
                                               <div class="media-body p-1">
                                                   <h5 style="color:#0f1733;">ชื่อตำแหน่ง :&nbsp;
-                                                  <span id="orgPositionName"></span></h5>
+                                                      <span id="orgPositionName"></span></h5>
                                                   <h5 style="color:#0f1733;">ชื่อตำแหน่ง-สังกัด :&nbsp;
-                                                  <span id="orgPositionSemiAbbrName"></span></h5>
+                                                      <span id="orgPositionSemiAbbrName"></span></h5>
                                                   <h5 style="color:#0f1733;">เงินเดือนอัตรา :&nbsp;
-                                                  <span id="saralyRateAbbrName"></span></h5>
+                                                      <span id="saralyRateAbbrName"></span></h5>
                                                   <h5 style="color:#0f1733;">จำนวน :&nbsp;
-                                                  <span style=" " >1</span>
-                                                   <!-- <p style="float:left;" id="qquota"></p> -->
-                                                  <span>&nbsp;อัตรา</span></h5>
+                                                      <span style=" ">1</span>
+                                                      <!-- <p style="float:left;" id="qquota"></p> -->
+                                                      <span>&nbsp;อัตรา</span></h5>
                                               </div>
                                           </div>
                                       </div>
@@ -89,48 +90,78 @@
                                                       <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                                                           <th><input type="checkbox" class="checkAll" onclick="toggle(this);" /></th>
                                                           <th>ลำดับที่</th>
-                                                          <th>รหัส</th>
-                                                          <th>ชื่อ</th>
-                                                          <th>ใช้งาน</th>
+                                                          <th>ชื่อเงินเพิ่ม</th>
+                                                          <th>จำนวนเงิน</th>
+                                                          <th>ค่าตอบแทน</th>
                                                       </tr>
                                                   </thead>
                                                   <tbody align="center">
                                                       <tr>
                                                           <td><input type="checkbox" class="checkAll" /></td>
-                                                          <td>System Architect</td>
-                                                          <td>Edinburgh</td>
-                                                          <td>61</td>
-                                                          <td align="center">
-                                                              <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-                                                          </td>
+                                                          <td>1</td>
+                                                          <td>เงินเพิ่มวิชาชีพเฉพาะ</td>
+                                                          <td>3,500</td>
+                                                          <td></td>
+
                                                       </tr>
                                                       <tr>
                                                           <td><input type="checkbox" class="checkAll" /></td>
-                                                          <td>Accountant</td>
-                                                          <td>Tokyo</td>
-                                                          <td>63</td>
-                                                          <td align="center">
-                                                              <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-                                                          </td>
+                                                          <td>2</td>
+                                                          <td>เงินเพิ่มการอบรม</td>
+                                                          <td>2,500</td>
+                                                          <td></td>
+
                                                       </tr>
                                                   </tbody>
                                               </table>
                                           </div>
                                           <div class="tab-pane" id="tab12" aria-labelledby="base-tab12">
-                                              ข้อมูล ลชทอ
-                                          </div>
+                                              <table class="table table-striped table-borderless table-hover bootstrap-3" style="width:100%">
+                                              <a href="./create.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
+                                                  <span class="la la-plus-circle" style="margin-right: 5px;color:white; font-weight: bold;font-size: 18px"></span> เพิ่ม
+                                              </a>  
+                                              <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
+                                                  <span class="la la-trash-o" style="margin-right: 5px; color:white; font-weight: bold;font-size: 18px"></span> ลบ
+                                              </a>
+                                                  <thead>
+                                                  <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
+                                                          <th><input type="checkbox" class="checkAll" onclick="toggle(this);" /></th>
+                                                          <th>ลำดับที่</th>
+                                                          <th>เลขหมายราชงาน/ลชทอ.</th>
+                                                          <th>เหล่า</th>
+                                                      </tr>
+                                                  </thead>
+                                                  <tbody align="center">
+                                                      <tr>
+                                                          
+                                                      <td><input type="checkbox" class="checkAll" /></td>
+                                                          <td>1</td>
+                                                          <td>7315</td>
+                                                          <td></td>
+                                                      </tr>
+                                                      <tr>
+                                                          
+                                                      <td><input type="checkbox" class="checkAll" /></td>
+                                                          <td>2</td>
+                                                          <td>2715</td>
+                                                          <td></td>
+
+                                                      </tr>
+                                                  </tbody>
+                                              </table>
                                       </div>
                                   </div>
                               </div>
                           </div>
                       </div>
                   </div>
-              </section>
-              <!-- Basic badge Input end -->
           </div>
+          </section>
+          <!-- Basic badge Input end -->
       </div>
   </div>
-  
+  </div>
+
   <script src="../../Controllers/MoneyController.js"></script>
 
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -158,4 +189,4 @@
 
 
   <!-- footer -->
-  <?php include '../include/footer.php'; ?> 
+  <?php include '../include/footer.php'; ?>
