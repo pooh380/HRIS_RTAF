@@ -1,6 +1,5 @@
   <!-- header -->
   <?php include '../include/header.php'; ?>
-  <link rel="stylesheet" type="text/css" href="../../Asset/Css/modelOnload.css">
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
   <style>
@@ -18,7 +17,7 @@
   </style>
 
   
-<?php include_once '../../modelOnload.php' ?>
+<?php include_once '../include/modelOnload.php' ?>
   <section>
     <div class="app-content content">
       <div class="content-wrapper">
