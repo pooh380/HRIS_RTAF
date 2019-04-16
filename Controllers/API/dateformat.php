@@ -1,4 +1,7 @@
 <?php
+
+error_reporting(0);
+
 $thai_day_arr=array("อาทิตย์","จันทร์","อังคาร","พุธ","พฤหัสบดี","ศุกร์","เสาร์");   
 $thai_month_arr=array(   
     "0"=>"",   
