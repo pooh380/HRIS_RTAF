@@ -79,6 +79,7 @@
                                                   <div class="col-md-6">
                                                       <label class="col-md-6 label-control" for="userinput1">ประเภทโครงสร้าง</label>
                                                       <div class="col-md-12">
+<<<<<<< HEAD
                                                       <select name="orgTypeList" id="orgTypeList" class="select2 form-control">
                                                                     <option value="21">อัตรา ทอ. 52</option>
                                                                     <?php
@@ -89,6 +90,18 @@
                                                                     }
                                                                     ?>
                                                                 </select>
+=======
+                                                          <select name="orgTypeList" id="orgCategoryName" class="select2 form-control">
+                                                              <option value="">กรุณาเลือกประเภทโครงสร้าง</option>
+                                                              <?php
+                                                                $sql = " SELECT id, organization_category_name FROM organization_category; ";
+                                                                $result = sqlsrv_query($conn, $sql);
+                                                                while ($row = sqlsrv_fetch_array($result)) {
+                                                                    echo "<option value='" . $row['id'] . "'>" . $row['organization_category_name'] . "</option>";
+                                                                }
+                                                                ?>
+                                                          </select>
+>>>>>>> a61d0fb5b823c73ed0959fa37a847f075d13458b
                                                       </div>
                                                   </div>
                                                   <div class="col-md-6">
@@ -148,41 +161,41 @@
                                           </div>
 
                                           <div class="col-sm-12 mt-1">
-                                            <fieldset class="checkboxsas">
-                                                <label>
-                                                    <input type="checkbox" value="">&nbsp;โครงสร้างของ ทอ.
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="">&nbsp;ได้รับวันทวีคูณ
-                                                </label>
-                                            </fieldset>
-                                            <fieldset class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="">&nbsp;โครงสร้างปัจจุบัน
-                                                </label>
-                                            </fieldset>
-                                          <div>
-                                              <label class="label-control" for="userinput3">สถานะ</label>
-                                              <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                              <fieldset class="checkboxsas">
+                                                  <label>
+                                                      <input type="checkbox" value="">&nbsp;โครงสร้างของ ทอ.
+                                                  </label>
+                                              </fieldset>
+                                              <fieldset class="checkbox">
+                                                  <label>
+                                                      <input type="checkbox" value="">&nbsp;ได้รับวันทวีคูณ
+                                                  </label>
+                                              </fieldset>
+                                              <fieldset class="checkbox">
+                                                  <label>
+                                                      <input type="checkbox" value="">&nbsp;โครงสร้างปัจจุบัน
+                                                  </label>
+                                              </fieldset>
+                                              <div>
+                                                  <label class="label-control" for="userinput3">สถานะ</label>
+                                                  <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                              </div>
                                           </div>
+                                      </form>
                                   </div>
-                                  </form>
                               </div>
                           </div>
                       </div>
                   </div>
-          </div>
-          <div class="form-actions center" align="center">
+                  <div class="form-actions center" align="center">
 
-              <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1">ยกเลิก</button>
-              <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="type-success">บันทึก</button>
+                      <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1">ยกเลิก</button>
+                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="type-success">บันทึก</button>
+                  </div>
+              </section>
+              <!-- // Basic form layout section end -->
           </div>
-          </section>
-          <!-- // Basic form layout section end -->
       </div>
-  </div>
   </div>
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
@@ -211,4 +224,4 @@
   <script src="../../app-assets/js/scripts/forms/checkbox-radio.js" type="text/javascript"></script>
 
   <!-- footer -->
-  <?php include '../include/footer.php'; ?> 
+  <?php include '../include/footer.php'; ?>
