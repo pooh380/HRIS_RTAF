@@ -1,3 +1,4 @@
+<?php require_once '../../config.php'?>
   <!-- header -->
   <?php include '../include/header.php'; ?>
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/selects/select2.min.css">
@@ -78,13 +79,16 @@
                                                   <div class="col-md-6">
                                                       <label class="col-md-6 label-control" for="userinput1">ประเภทโครงสร้าง</label>
                                                       <div class="col-md-12">
-                                                          <select class="select2 form-control block" id="responsive_single" style="width: 100%;">
-                                                              <!-- border-color: #8c93ee !important; -->
-                                                              <!-- <optgroup label="Alaskan/Hawaiian Time Zone"> -->
-                                                              <option value="โครงสร้างอัตราเฉพาะกิจ">โครงสร้างอัตราเฉพาะกิจ</option>
-                                                              <!-- <option value="HI">Hawaii</option> -->
-                                                              <!-- </optgroup> -->
-                                                          </select>
+                                                      <select name="orgTypeList" id="orgTypeList" class="select2 form-control">
+                                                                    <option value="21">อัตรา ทอ. 52</option>
+                                                                    <?php
+                                                                    $sql = " SELECT  FROM organization_type; ";
+                                                                    $result = sqlsrv_query($conn, $sql);
+                                                                    while ($row = sqlsrv_fetch_array($result)) {
+                                                                        echo "<option value='" . $row['id'] . "'>" . $row['organization_type_name'] . "</option>";
+                                                                    }
+                                                                    ?>
+                                                                </select>
                                                       </div>
                                                   </div>
                                                   <div class="col-md-6">
