@@ -8,7 +8,7 @@
 // "UID" => "sa",
 // "PWD" => "1020304050",
 // "MultipleActiveResultSets"=>true,
-// "CharacterSet"  => 'UTF-8'
+// "CharacterSet"  => 'UTF-8');
 
 $serverName = "10.243.0.9\MSSQLSERVER01";
 $connectionInfo = array(
@@ -23,13 +23,20 @@ $conn = sqlsrv_connect($serverName, $connectionInfo,);
 
 if ($conn) {
     // echo "Connection established.<br />";
-} else {
-    echo "Connection could not be established"."<br />";
-    // die(print_r(sqlsrv_errors(), tdrue));
     echo "<pre>";
     echo $serverName." ";
     echo "<pre>";
     print_r($connectionInfo);
     echo "<pre>";
+} else {
+    echo "Connection could not be established"."<br />";
+    echo "<pre>";
+    echo $serverName." ";
+    echo "<pre>";
+    print_r($connectionInfo);
+    echo "<pre>";
+    die(print_r(sqlsrv_errors(), tdrue));
+    echo "<pre>";
+
 }
 ?>
