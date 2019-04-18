@@ -1,3 +1,4 @@
+<?php require_once "../../config.php"; ?>
   <!-- header -->
   <?php include '../include/header.php'; ?>
 
@@ -77,6 +78,28 @@
                                                           </div>
                                                       </div>
                                                   </div>
+                                           
+                                                  <div class="col-md-12 mt-1"> 
+                                                  <label class="col-md-6 label-control" for="orgAbbrname">โครงสร้าง:</label>
+                                                      <div class="col-md-12">
+                                                          <div class="position-relative">
+                                                              <select name="orgTypeList" id="orgTypeList" class="select2 form-control">
+                                                          <option value="21">อัตรา ทอ. 52</option>
+                                                          <?php
+                                                            $sql = " SELECT id, organization_type_name FROM organization_type; ";
+                                                            $result = sqlsrv_query($conn, $sql);
+                                                            while ($row = sqlsrv_fetch_array($result)) {
+                                                                echo "<option value='" . $row['id'] . "'>" . $row['organization_type_name'] . "</option>";
+                                                            }
+                                                            ?>
+                                                      </select></div>
+                                                      </div>
+                                                  </div>
+                                                 
+                                                     
+
+                                                      
+                                                  </div>
                                               </div>
                                               <br>
                                               <div class="row">
@@ -116,4 +139,4 @@
 
   <script src="../../Controllers/organizationsController.js"></script>
   <!-- footer -->
-  <?php include '../include/footer.php'; ?> 
+  <?php include '../include/footer.php'; ?>

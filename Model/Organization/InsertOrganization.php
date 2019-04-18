@@ -22,17 +22,30 @@ if (!empty($_POST)) {
     $orgname = $_POST['orgname'];
     $orgAbbrname = $_POST['orgAbbrname'];
     $isActive = $_POST['isActive'];
+    $orgTypeList = $_POST['orgTypeList'];
 
     $sql = " insert into organization (organization_code, organization_name, organization_abbr_name, airforce, IsActive)
     values ($idNew, '$orgname', ' $orgAbbrname','','$isActive');";
     
+    
     // echo $sql;
     if (sqlsrv_query($conn, $sql)) {
-        // echo "บันทึกสำเร็จ";
+
+        $sql2 ="
+        INSERT INTO org_id_index
+                   (org_id
+                   ,org_id_list1
+                   ,[org_id_list2)
+             VALUES
+                   (
+                   ,,>
+                   ,,>)
+        GO
+        
+        
+         ";
 
     } else{
         echo "บันทึกไม่ได้";
     }
 }
-
-?>
