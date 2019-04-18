@@ -41,6 +41,7 @@ function insertOrganization() {
     $.post("../../Model/Organization/InsertOrganization.php", {
         orgname: orgname,
         orgAbbrname: orgAbbrname,
+        orgTypeList:orgTypeList,
         isActive: isActive
     }).done(function(data) {
         // console.log(data);

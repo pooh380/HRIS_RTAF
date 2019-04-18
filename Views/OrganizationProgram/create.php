@@ -148,7 +148,6 @@
                   orgListId: orgListId
               },
               success: function(data) {
-
                   $('#orgListName').append('<option value="' + data.orgListLong + '" selected="selected">' + data.orgListLong + '</option>');
                   $('#orgTypeList').append('<option value="' + data.orgType + '" selected="selected">' + data.orgType + '</option>');
                   $('#orgPartName').append('<option value="' + data.orgPartName + '" selected="selected">' + data.orgPartName + '</option>');
