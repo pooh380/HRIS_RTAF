@@ -60,31 +60,14 @@
                                       </div> -->
                                       <form class="form form-horizontal">
                                           <div class="form-body">
-                                              <div class="row">
-                                                  <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="orgname">ชื่อเต็มสังกัด</label>
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative ">
-                                                              <input type="text" id="orgname" class="form-control border-primary" placeholder="ชื่อเต็มเชื้อชาติ" name="orgname">
-
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="orgAbbrname">ชื่อย่อสังกัด</label>
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative">
-                                                              <input type="text" id="orgAbbrname" class="form-control border-primary" placeholder="ชื่อย่อเชื้อชาติ" name="orgAbbrname">
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                           
-                                                  <div class="col-md-12 mt-1"> 
+                                              <div class="row"> 
+                                                  
+                                              <div class="col-md-12 "> 
                                                   <label class="col-md-6 label-control" for="orgAbbrname">โครงสร้าง:</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
                                                               <select name="orgTypeList" id="orgTypeList" class="select2 form-control">
-                                                          <option value="21">อัตรา ทอ. 52</option>
+                                                          <option value="21">กรุณาเลือก โครงสร้าง</option>
                                                           <?php
                                                             $sql = " SELECT id, organization_type_name FROM organization_type; ";
                                                             $result = sqlsrv_query($conn, $sql);
@@ -95,10 +78,23 @@
                                                       </select></div>
                                                       </div>
                                                   </div>
-                                                 
-                                                     
+                                                  <div class="col-md-6 mt-1">
+                                                      <label class="col-md-6 label-control" for="orgname">ชื่อเต็มสังกัด</label>
+                                                      <div class="col-md-12">
+                                                          <div class="position-relative ">
+                                                              <input type="text" id="orgname" class="form-control border-primary" placeholder="ชื่อเต็มสังกัด" name="orgname">
 
-                                                      
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-md-6 mt-1">
+                                                      <label class="col-md-6 label-control" for="orgAbbrname">ชื่อย่อสังกัด</label>
+                                                      <div class="col-md-12">
+                                                          <div class="position-relative">
+                                                              <input type="text" id="orgAbbrname" class="form-control border-primary" placeholder="ชื่อย่อเชื้อชาติ" name="orgAbbrname">
+                                                          </div>
+                                                      </div>
+                                                  </div>
                                                   </div>
                                               </div>
                                               <br>
