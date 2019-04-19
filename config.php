@@ -23,12 +23,12 @@ $connectionInfo = array(
 $conn = sqlsrv_connect($serverName, $connectionInfo,);
 
 if ($conn) {
-    echo "Connection established.<br />";
-	 echo "<pre>";
-    echo $serverName." ";
-    echo "<pre>";
-    print_r($connectionInfo);
-    echo "<pre>";
+    // echo "Connection established.<br />";
+	//  echo "<pre>";
+    // echo $serverName." ";
+    // echo "<pre>";
+    // print_r($connectionInfo);
+    // echo "<pre>";
 } else {
     echo "Connection could not be established"."<br />";
     echo "<pre>";
