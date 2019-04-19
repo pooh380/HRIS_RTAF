@@ -104,11 +104,11 @@
                                                   </div> -->
 
                                                   <div class="col-md-6">
-                                                      <label class="col-md-4 label-control" for="orgTypeName">ชื่อหน่วยงาน</label>
+                                                      <label class="col-md-4 label-control" for="orgTypeName">ชื่อโครงสร้าง</label>
 
                                                       <div class="col-md-12">
                                                           <div class="position-relative has-icon-left">
-                                                              <input type="text" id="orgTypeName" name="orgTypeName" class="form-control border-primary" placeholder="ชื่อหน่วยงาน" name="employeename">
+                                                              <input type="text" id="orgTypeName" name="orgTypeName" class="form-control border-primary" placeholder="ชื่อโครงสร้าง" name="employeename">
                                                               <div class="form-control-position">
                                                                   <i class="ft-user"></i>
                                                               </div>
@@ -163,7 +163,7 @@
                                           <div class="col-sm-12 mt-1">
                                               <fieldset class="checkboxsas">
                                                   <label>
-                                                      <input id="airForce" type="checkbox" value="1">&nbsp;โครงสร้างของ ทอ.
+                                                      <input id="airForce" checked type="checkbox" value="1">&nbsp;โครงสร้างของ ทอ.
                                                   </label>
                                               </fieldset>
                                               <fieldset class="checkbox">
