@@ -29,6 +29,8 @@ function insertOrganization() {
     var orgname = $("#orgname").val();
     var orgAbbrname = $("#orgAbbrname").val();
     var checkBox = document.getElementById("isActive");
+    
+    var orgTypeList = $('#orgTypeList :selected').val();
     if (checkBox.checked == true) {
         var isActive = "1";
     } else {
@@ -37,6 +39,7 @@ function insertOrganization() {
 
     // console.log(orglevelname + " " + orglevelAbbrname + " " + isActive);
     // e.preventDefault();
+    // alert (orgTypeList);
 
     $.post("../../Model/Organization/InsertOrganization.php", {
         orgname: orgname,
@@ -51,7 +54,7 @@ function insertOrganization() {
             showConfirmButton: false,
             timer: 2000
         });
-        setTimeout("window.open('../Organizations/index.php', '_self');", 2000);
+        // setTimeout("window.open('../Organizations/index.php', '_self');", 2000);
     }).fail(function(err) {
         // console.log(err);
         Swal.fire({
