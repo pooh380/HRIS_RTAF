@@ -3,10 +3,10 @@
         var orgListId = $('#orgListList :selected').val();
         // var orgId = $('#orgList :selected').val();
 
-        alert("เอา OrganizationTypeId: " + orgTypeId + " ช่องโครงสร้างและ OrganizationListId: " + orgListId + "ช่องสังกัดไปหาโครงสร้างส่วนราชการว่ามีส่วนไหนบ้างที่มี OrganizationTypeId และ OrganizationListId ใน Table organization_struc");
-        alert(" SQL ในการนำไปค้นหาโครงสร้างส่วนราชการ: SELECT division_id,division.division_name, organization_struc.id , ORG_PATH , ORG_LEV_PK , ORG_LEVEL" +
-            "FROM organization_struc JOIN  division ON organization_struc.division_id = division.id" +
-            "where ORG_PATH LIKE N'0/OrganizationListId%' AND ORG_TYPE_PK = OrganizationTypeId;");
+        // alert("เอา OrganizationTypeId: " + orgTypeId + " ช่องโครงสร้างและ OrganizationListId: " + orgListId + "ช่องสังกัดไปหาโครงสร้างส่วนราชการว่ามีส่วนไหนบ้างที่มี OrganizationTypeId และ OrganizationListId ใน Table organization_struc");
+        // alert(" SQL ในการนำไปค้นหาโครงสร้างส่วนราชการ: SELECT division_id,division.division_name, organization_struc.id , ORG_PATH , ORG_LEV_PK , ORG_LEVEL" +
+        //     "FROM organization_struc JOIN  division ON organization_struc.division_id = division.id" +
+        //     "where ORG_PATH LIKE N'0/OrganizationListId%' AND ORG_TYPE_PK = OrganizationTypeId;");
 
         $.post("../OrganizationProgram/detail.php", {
             orgTypeId: orgTypeId,
@@ -34,14 +34,14 @@
         var orgTypeId = $("#orgTypeId").val();
         var orgListId = $("#orgListId").val();
 
-        alert("นำค่า divisionId: " + divisionId + " OrganizationLevelId: " + orgLevelId + " OrganizationStucId: " + orgStucId + " นำไปค้นหาใน OrganizationList เพื่อที่จะนำไปโชว์ค่าขวา");
-        alert(" SQL ที่นำค่าไปค้นหา: SELECT * , organization_type.organization_type_name,organization_part.organization_part_name,organization_level.organization_level_name , organization_id , division.division_abbr_name" +
-            " FROM  organization_list" +
-            " JOIN  organization_type ON organization_list.organization_type_id = organization_type.id" +
-            " JOIN  organization_part on organization_list.organization_part_id = organization_part.id" +
-            " JOIN  organization_level on organization_list.organization_level_id = organization_level.id" +
-            " JOIN  division on organization_list.organization_id = division.id" +
-            " WHERE organization_list.division_id = divisionId AND organization_list.id = OrganizationStucId;");
+        // alert("นำค่า divisionId: " + divisionId + " OrganizationLevelId: " + orgLevelId + " OrganizationStucId: " + orgStucId + " นำไปค้นหาใน OrganizationList เพื่อที่จะนำไปโชว์ค่าขวา");
+        // alert(" SQL ที่นำค่าไปค้นหา: SELECT * , organization_type.organization_type_name,organization_part.organization_part_name,organization_level.organization_level_name , organization_id , division.division_abbr_name" +
+        //     " FROM  organization_list" +
+        //     " JOIN  organization_type ON organization_list.organization_type_id = organization_type.id" +
+        //     " JOIN  organization_part on organization_list.organization_part_id = organization_part.id" +
+        //     " JOIN  organization_level on organization_list.organization_level_id = organization_level.id" +
+        //     " JOIN  division on organization_list.organization_id = division.id" +
+        //     " WHERE organization_list.division_id = divisionId AND organization_list.id = OrganizationStucId;");
 
 
         $.ajax({
@@ -95,9 +95,9 @@
         var districtsName = $("#districtsName").val();
 
 
-        alert("orgListName" + orgListName + "orgPartName" + orgPartName + "orgaLevelName" + orgaLevelName + "orgTypeList" + orgTypeList + "orgListId" + orgListId +
-            "divisionID" + divisionID + "orgListAbbr" + orgListAbbr + "orgListAbbrLong" + orgListAbbrLong + "orgListAbbrLongAbbr" + orgListAbbrLongAbbr +
-            "provincesName" + provincesName + "districtsName" + districtsName);
+        // alert("orgListName" + orgListName + "orgPartName" + orgPartName + "orgaLevelName" + orgaLevelName + "orgTypeList" + orgTypeList + "orgListId" + orgListId +
+        //     "divisionID" + divisionID + "orgListAbbr" + orgListAbbr + "orgListAbbrLong" + orgListAbbrLong + "orgListAbbrLongAbbr" + orgListAbbrLongAbbr +
+        //     "provincesName" + provincesName + "districtsName" + districtsName);
 
         // $.ajax({
         //     type: "POST",

@@ -41,7 +41,13 @@ function insertOrganizationCategory() {
         OrganizationcategoryIN: OrganizationcategoryIN,
         isActive: isActive
     }).done(function(data) {
-        // window.location.replace("../page/listUser.php");
+        Swal.fire({
+            type: 'success',
+            title: 'เพิ่มข้อมูลสำเร็จ',
+            showConfirmButton: false,
+            timer: 2000
+        });
+        setTimeout("window.open('../organization_category/index.php', '_self');", 2000);
         console.log(data);
     }).fail(function(err) {
         console.log(err);
