@@ -8,9 +8,10 @@
 // "UID" => "sa",
 // "PWD" => "1020304050",
 // "MultipleActiveResultSets"=>true,
-// "CharacterSet"  => 'UTF-8');
+// "CharacterSet"  => 'UTF-8'
+// );
 
-$serverName = "10.243.0.9\MSSQLSERVER01";
+$serverName = "10.243.0.9";
 $connectionInfo = array(
     "Database" => "HRIS",
     "UID" => "sa",
@@ -22,8 +23,8 @@ $connectionInfo = array(
 $conn = sqlsrv_connect($serverName, $connectionInfo,);
 
 if ($conn) {
-    // echo "Connection established.<br />";
-    echo "<pre>";
+    echo "Connection established.<br />";
+	 echo "<pre>";
     echo $serverName." ";
     echo "<pre>";
     print_r($connectionInfo);
@@ -37,6 +38,5 @@ if ($conn) {
     echo "<pre>";
     die(print_r(sqlsrv_errors(), tdrue));
     echo "<pre>";
-
 }
 ?>
