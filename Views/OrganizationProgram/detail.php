@@ -145,7 +145,7 @@
                                   <li class="breadcrumb-item"><a href="../home/index.php">ระบบงานโครงสร้างอัตรากำลังพล</a>
                                   </li>
                                   <li class="breadcrumb-item"><a href="./index.php">เลือกโครงสร้าง</a>
-                                  </li>55555
+                                  </li>
                                   <li class="breadcrumb-item active">โปรแกรมจัดการโครงสร้าง</li>
                               </ol>
                           </div>
@@ -336,7 +336,7 @@
                                                               </div>
                                                           </div>
                                                           <div class="col-md-6 mt-1">
-                                                              <label class="col-md-12 label-control" for="orgListLong">ชื่อหน่วย/สั...งกัด</label>
+                                                              <label class="col-md-12 label-control" for="orgListLong">ชื่อหน่วย/สังกัด</label>
                                                               <div class="col-md-12">
                                                                   <div class="position-relative">
                                                                       <input type="text" disabled id="orgListLong" class="form-control " placeholder="ชื่อหน่วย/สังกัด" name="orgListLong">
