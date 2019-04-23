@@ -24,7 +24,7 @@
               <div class="content-header row">
                   <div class="content-header-left col-md-6 col-12 mb-2">
                       <div style="width:7px;height:30px;background-color:#1a1d52; float:left; margin-right:10px;"></div>
-                      <h3 class="content-header-title">ส่วนราชการอ๋อง</h3>
+                      <h3 class="content-header-title">ส่วนราชการแพ็ค</h3>
                   </div>
               </div>
               <div class="content-body">
