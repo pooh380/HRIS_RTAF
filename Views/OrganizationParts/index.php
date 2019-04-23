@@ -35,7 +35,7 @@
                                   <div class="card-content collapse show">
                                       <div class="card-body card-dashboard">
                                           <p class="card-text"></p>
-                                          <nav aria-label="breadcrumb">
+                                          <nav aria-label="breadcrumb">5555
                                               <ol class="breadcrumb">
                                                   <li class="breadcrumb-item"><a href="../home/index.php">ระบบงานโครงสร้างอัตรากำลังพล</a></li>
                                                   <li class="breadcrumb-item"><a href="../home/index.php">โครงสร้าง</a></li>
