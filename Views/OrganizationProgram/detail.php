@@ -336,7 +336,7 @@
                                                               </div>
                                                           </div>
                                                           <div class="col-md-6 mt-1">
-                                                              <label class="col-md-12 label-control" for="orgListLong">ชื่อหน่วย/สังกัด</label>
+                                                              <label class="col-md-12 label-control" for="orgListLong">ชื่อหน่วย/สั...งกัด</label>
                                                               <div class="col-md-12">
                                                                   <div class="position-relative">
                                                                       <input type="text" disabled id="orgListLong" class="form-control " placeholder="ชื่อหน่วย/สังกัด" name="orgListLong">
