@@ -12,7 +12,7 @@ $col = array(
     2   =>  'OrgTypeActive',
 );
 
-$sql = " SELECT OrgTypeId, OrgTypName, OrgTypeActive, OrgTypeCreateBy, OrgTypeCreateDate, OrgTypeUpdateBy, OrgTypeUpdateDate
+$sql = " SELECT OrgTypeId, OrgTypeName, OrgTypeActive, OrgTypeCreateBy, OrgTypeCreateDate, OrgTypeUpdateBy, OrgTypeUpdateDate
 FROM OrgGroupType; ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);

@@ -61,22 +61,22 @@
                         <div class="form-body">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label class="col-md-6 label-control" for="OrganizationcategoryFN">ชื่อเต็มประเภทโครงสร้าง</label>
+                                    <label class="col-md-6 label-control" for="orgGroupTypeName">ชื่อเต็มประเภทโครงสร้าง</label>
                                     <div class="col-md-12">
                                         <div class="position-relative ">
-                                            <input type="text" id="OrganizationcategoryFN" class="form-control border-primary" placeholder="ชื่อเต็มประเภทโครงสร้าง" name="OrganizationcategoryFN">
+                                            <input type="text" id="orgGroupTypeName" class="form-control border-primary" placeholder="ชื่อเต็มประเภทโครงสร้าง" name="orgGroupTypeName">
 
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <label class="col-md-6 label-control" for="OrganizationcategoryIN">ชื่อย่อประเภทโครงสร้าง</label>
                                     <div class="col-md-12">
                                         <div class="position-relative">
                                             <input type="text" id="OrganizationcategoryIN" class="form-control border-primary" placeholder="ชื่อย่อประเภทโครงสร้าง" name="OrganizationcategoryIN">
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <br>
                             <div class="row">
@@ -91,7 +91,7 @@
                                 <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="insertOrganizationParts()">บันทึก</button> -->
 
                                 <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                                <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" name="submit" onclick="insertOrganizationCategory()">บันทึก</button>
+                                <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" name="submit" onclick="insertOrganizationGroupType()">บันทึก</button>
 
                             </div>
                         </div>
@@ -124,6 +124,6 @@
   <script src="../../app-assets/js/scripts/extensions/sweet-alerts.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
 
-  <script src="../../Controllers/OrganizationcategoryController.js"></script>
+  <script src="../../Controllers/organizationGroupTypeController.js"></script>
   <!-- footer -->
   <?php include '../include/footer.php'; ?> 

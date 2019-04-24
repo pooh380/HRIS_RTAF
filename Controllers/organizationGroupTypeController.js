@@ -23,9 +23,9 @@ function getOrganizationGroupType() {
 }
 
 
-function insertOrganizationCategory() {
-    var OrganizationcategoryFN = $("#OrganizationcategoryFN").val();
-    var OrganizationcategoryIN = $("#OrganizationcategoryIN").val();
+function insertOrganizationGroupType() {
+    var orgGroupTypeName = $("#orgGroupTypeName").val();
+    // var OrganizationcategoryIN = $("#OrganizationcategoryIN").val();
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
         var isActive = "1";
@@ -33,12 +33,11 @@ function insertOrganizationCategory() {
         var isActive = "0";
     }
 
-    console.log(OrganizationcategoryFN + " " + OrganizationcategoryIN + " " + isActive);
     // e.preventDefault();
 
-    $.post("../../Model/OrganizationCategory/InsertOrganizationCategory.php", {
-        OrganizationcategoryFN: OrganizationcategoryFN,
-        OrganizationcategoryIN: OrganizationcategoryIN,
+    $.post("../../Model/OrganizationGroupType/InsertOrganizationGroupType.php", {
+        orgGroupTypeName: orgGroupTypeName,
+        // OrganizationcategoryIN: OrganizationcategoryIN,
         isActive: isActive
     }).done(function(data) {
         Swal.fire({
@@ -47,10 +46,10 @@ function insertOrganizationCategory() {
             showConfirmButton: false,
             timer: 2000
         });
-        setTimeout("window.open('../organization_category/index.php', '_self');", 2000);
-        console.log(data);
+        setTimeout("window.open('../organizationGroupType/index.php', '_self');", 2000);
+        // console.log(data);
     }).fail(function(err) {
-        console.log(err);
+        // console.log(err);
     });
 }
 
