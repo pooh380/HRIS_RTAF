@@ -87,7 +87,7 @@
         });
 
       change_autorefreshdiv();
-      getOrganizationGroupType();
+      getOrganizationType();
     });
 
     function change_autorefreshdiv() {}

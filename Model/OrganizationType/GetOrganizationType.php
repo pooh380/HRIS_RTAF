@@ -12,7 +12,7 @@ $col = array(
     2   =>  'OrgTypeActive',
 );
 
-$sql = " SELECT OrgTypeId, OrgTypName, OrgTypeActive, OrgTypeCreateBy, OrgTypeCreateDate, OrgTypeUpdateBy, OrgTypeUpdateDate
+$sql = " SELECT OrgTypeId, OrgTypeName, OrgTypeCreateBy, OrgTypeCreateDate, OrgTypeUpdateBy, OrgTypeUpdateDate
 FROM OrgType; ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
@@ -22,16 +22,16 @@ $totalData = sqlsrv_num_rows($query);
 $totalFilter = $totalData;
 
 
-$sql = " SELECT OrgTypeId, OrgTypName, OrgTypeActive, OrgTypeCreateBy, OrgTypeCreateDate, OrgTypeUpdateBy, OrgTypeUpdateDate
+$sql = " SELECT OrgTypeId, OrgTypeName, OrgTypeCreateBy, OrgTypeCreateDate, OrgTypeUpdateBy, OrgTypeUpdateDate
 FROM OrgType WHERE 1=1 ";
 if (!empty($request['search']['value'])) {
-    $sql .= " AND (OrgTypName Like N'%" . $request['search']['value'] . "%'); ";
+    $sql .= " AND (OrgTypeName Like N'%" . $request['search']['value'] . "%'); ";
     $query = sqlsrv_query($conn, $sql, $params, $options);
     $totalData = sqlsrv_num_rows($query);
 }
 
 
-echo $sql;
+// echo $sql;
 $data = array();
 
 while ($row = sqlsrv_fetch_array($query)) {
@@ -40,6 +40,7 @@ while ($row = sqlsrv_fetch_array($query)) {
     <a href="../../Views/organization_types/edit.php?id=' . $row[0] . '"><i class="la la-pencil-square-o" style="color:#0f1733"; font-size:30px;" id="' . $row[0] . '"></i></a>
     <a href=""><i class="la la-trash-o" style="color:#0f1733"; font-size:30px;" onclick="deleteOrgType(' . $row[0] . ')" id="' . $row[0] . '"></i></a>
     '; //id
+    $subdata[] = $row[0]; 
     $subdata[] = $row[0]; 
     $subdata[] = $row[1]; 
     if ($row[3] !== 1) {
