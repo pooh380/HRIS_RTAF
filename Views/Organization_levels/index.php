@@ -1,7 +1,6 @@
   <!-- header -->
   <?php include '../include/header.php'; ?>
-
-  <link rel="stylesheet" type="text/css" href="../../Asset/Css/modelOnload.css">
+  
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
 
@@ -9,10 +8,10 @@
     /* ol > li > a {color:#222233;} */
     .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
     .toggle.ios .toggle-handle { border-radius: 20rem; }
-
-    
   </style>
- <?php include_once '../include/modelOnload.php' ?>
+
+<?php include_once '../include/modelOnload.php' ?>
+
   <section>
   <div class="app-content content">
     <div class="content-wrapper">

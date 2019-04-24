@@ -68,24 +68,24 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="orglevelname">ชื่อเต็มฐานะหน่วย</label>
+                                                      <label class="col-md-6 label-control" for="orgLevelName">ชื่อเต็มฐานะหน่วย</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="orglevelname" class="form-control border-primary" placeholder="ชื่อเต็มเชื้อชาติ" name="orglevelname">
+                                                              <input type="text" id="orgLevelName" class="form-control border-primary" placeholder="ชื่อเต็มเชื้อชาติ" name="orgLevelName">
                                                           </div>
                                                       </div>
                                                   </div>
-                                                  <div class="col-md-6">
+                                                  <!-- <div class="col-md-6">
                                                       <label class="col-md-6 label-control" for="orglevelAbbrname">ชื่อย่อฐานะหน่วย</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
                                                               <input type="text" id="orglevelAbbrname" class="form-control border-primary" placeholder="ชื่อย่อเชื้อชาติ" name="orglevelAbbrname">
                                                           </div>
                                                       </div>
-                                                  </div>
+                                                  </div> -->
                                               </div>
                                               <br>
-                                              <input type="hidden" id="id" name="id">
+                                              <input type="hidden" id="orgLevelId" name="orgLevelId">
                                               <div class="row">
                                                   <div class="col-md-12">
                                                       <br>

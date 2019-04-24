@@ -6,15 +6,16 @@ require_once "../../config.php";
 
 // $_POST["originsId"] = 0;
 
-$orglevelId = $_POST["orglevelId"];
+$orgLevelId = $_POST["orgLevelId"];
 $id = "";
-$orglevelname = "";
-$orglevelAbbrname = "";
+$orgLevelName = "";
+// $orglevelAbbrname = "";
 $IsActive = "";
 // echo $originsId ;
 
-if(isset($orglevelId)){
-    $sql = " SELECT id, organization_level_name, organization_level_abbr_name, IsActive FROM organization_level where id = $orglevelId  ";
+if(isset($orgLevelId)){
+    $sql = " SELECT OrgLevelId, OrgLevelName, OrgLevelActive, OrgLevelOrder, OrgLevelCreateBy, OrgLevelCreateDate, OrgLevelUpdateBy, OrgLevelUpdateDate
+    FROM OrgLevel where OrgLevelId = $orgLevelId;  ";
 
     // echo $sql;
 
@@ -23,17 +24,17 @@ if(isset($orglevelId)){
     // if($query){ echo "query";}else{echo "not query";}
 
     while ($row = sqlsrv_fetch_array($query)) {
-        $id = $row['id'];
-        $orglevelname = $row['organization_level_name'];
-        $orglevelAbbrname = $row['organization_level_abbr_name'];
-        $IsActive = $row['IsActive'];
+        $orgLevelId = $row['OrgLevelId'];
+        $orgLevelName = $row['OrgLevelName'];
+        // $orglevelAbbrname = $row['organization_level_abbr_name'];
+        $IsActive = $row['OrgLevelActive'];
         // echo $id;
         // echo $originName;
         // echo $originAbbrName;
         // echo $IsActive;
     }
 
-    $r=array("id"=>$id,"orglevelname"=>$orglevelname,"orglevelAbbrname"=>$orglevelAbbrname,"IsActive"=>$IsActive);
+    $r=array("orgLevelId"=>$orgLevelId,"orgLevelName"=>$orgLevelName,"IsActive"=>$IsActive);
     print(json_encode($r));
 }
 ?>

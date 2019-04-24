@@ -7,25 +7,25 @@ require_once "../../config.php";
 
 if (!empty($_POST)) {
 
-    $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM organization_level; ";
+    // $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM organization_level; ";
 
-    echo $sqlInsertSeqNoAndCode;
+    // echo $sqlInsertSeqNoAndCode;
 
-    $querySelect = sqlsrv_query($conn, $sqlInsertSeqNoAndCode);
+    // $querySelect = sqlsrv_query($conn, $sqlInsertSeqNoAndCode);
 
-    $idNew = "";
-    while ($row = sqlsrv_fetch_array($querySelect)) {
-        $id = $row['maxid'];
-        $idNew = $id+1;
-    }
+    // $idNew = "";
+    // while ($row = sqlsrv_fetch_array($querySelect)) {
+    //     $id = $row['maxid'];
+    //     $idNew = $id+1;
+    // }
 
-    $orglevelname = $_POST['orglevelname'];
-    $orglevelAbbrname = $_POST['orglevelAbbrname'];
+    $orgLevelName = $_POST['orgLevelName'];
+    // $orglevelAbbrname = $_POST['orglevelAbbrname'];
     $isActive = $_POST['isActive'];
 
-    $sql = " INSERT INTO organization_level
-    (organization_level_code, organization_level_name, organization_level_abbr_name, IsActive, created_by, created_date, update_by, update_date)
-    VALUES('$idNew', '$orglevelname', '$orglevelAbbrname', $isActive, '', '', '', '');";
+    $sql = " INSERT INTO OrgLevel
+    (OrgLevelName, OrgLevelActive, OrgLevelCreateBy, OrgLevelCreateDate, OrgLevelUpdateBy, OrgLevelUpdateDate)
+    VALUES('$orgLevelName', $isActive, '', '', '', ''); ";
     echo $sql;
     if (sqlsrv_query($conn, $sql)) {
         echo "บันทึกสำเร็จ";

@@ -24,8 +24,8 @@ function getOrganizationLevels() {
 
 function insertOrganizationLevel() {
 
-    var orglevelname = $("#orglevelname").val();
-    var orglevelAbbrname = $("#orglevelAbbrname").val();
+    var orgLevelName = $("#orgLevelName").val();
+    // var orglevelAbbrname = $("#orglevelAbbrname").val();
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
         var isActive = "1";
@@ -37,8 +37,8 @@ function insertOrganizationLevel() {
     // e.preventDefault();
 
     $.post("../../Model/OrganizationLevels/InsertOrganizationLevels.php", {
-        orglevelname: orglevelname,
-        orglevelAbbrname: orglevelAbbrname,
+        orgLevelName: orgLevelName,
+        // orglevelAbbrname: orglevelAbbrname,
         isActive: isActive
     }).done(function(data) {
         // console.log(data);
@@ -76,7 +76,7 @@ function getUrlVars() {
 
 // getData จาก db เพื่อนำมาใช้มา input value
 function getIdForEdit() {
-    var orglevelId = getUrlVars()["id"];
+    var orgLevelId = getUrlVars()["id"];
     // console.log(orglevelId);
 
     $.ajax({
@@ -84,12 +84,12 @@ function getIdForEdit() {
         dataType: "json",
         url: "../../Model/OrganizationLevels/GetDataEdit.php",
         data: {
-            orglevelId: orglevelId
+            orgLevelId: orgLevelId
         },
         success: function(data) {
-            $("#id").val(data.id);
-            $("#orglevelname").val(data.orglevelname);
-            $("#orglevelAbbrname").val(data.orglevelAbbrname);
+            $("#orgLevelId").val(data.orgLevelId);
+            $("#orgLevelName").val(data.orgLevelName);
+            // $("#orglevelAbbrname").val(data.orglevelAbbrname);
             // console.log(data.IsActive);
             if (data.IsActive == 0) {
                 // $("#isActive").removeAttr('checked');
@@ -110,9 +110,9 @@ function getIdForEdit() {
 // getData จาก db เพื่อนำมาใช้มา input value
 
 function UpdateOrganizationLevel() {
-    var orglevelId = $("#id").val();
-    var orglevelname = $("#orglevelname").val();
-    var orglevelAbbrname = $("#orglevelAbbrname").val();
+    var orgLevelId = $("#orgLevelId").val();
+    var orgLevelName = $("#orgLevelName").val();
+    // var orglevelAbbrname = $("#orglevelAbbrname").val();
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
         var isActive = "1";
@@ -125,9 +125,9 @@ function UpdateOrganizationLevel() {
         type: "POST",
         url: "../../Model/OrganizationLevels/UpdateOrganizationLevels.php",
         data: {
-            orglevelId: orglevelId,
-            orglevelname: orglevelname,
-            orglevelAbbrname: orglevelAbbrname,
+            orgLevelId: orgLevelId,
+            orgLevelName: orgLevelName,
+            // orglevelAbbrname: orglevelAbbrname,
             isActive: isActive
         },
         success: function(data) {
@@ -156,13 +156,13 @@ function UpdateOrganizationLevel() {
 
 
 function deleteOrganizationLevls(id) {
-    var organizationLevlsId = id;
-    event.preventDefault();
+    var orgLevlsId = id;
+    // event.preventDefault();
 
     // console.log("organizationPartsId: " + organizationLevlsId);
 
     $.post("../../Model/OrganizationLevels/DeleteOrganizationLevels.php", {
-        organizationLevlsId: organizationLevlsId
+        orgLevlsId: orgLevlsId
     }).done(function(data) {
         console.log(data);
         Swal.fire({
