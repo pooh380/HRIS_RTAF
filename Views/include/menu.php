@@ -8,7 +8,7 @@
                         <ul class="menu-content">
                             <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">โครงสร้างอัตรากำลังพล</a>
                                 <ul class="menu-content">
-                                    <li><a class="menu-item" href="../organization_category/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ประเภทโครงสร้าง</a>
+                                    <li><a class="menu-item" href="../organizationGroupType/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ประเภทโครงสร้าง</a>
                                     </li>
                                     <li><a class="menu-item" href="../organization_types/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โครงสร้าง</a>
                                     </li>

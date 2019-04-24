@@ -1,7 +1,7 @@
-function getOrganizationCategory() {
-    $('#OrganizationCategory').DataTable({
+function getOrganizationGroupType() {
+    $('#OrganizationGroupType').DataTable({
         "ajax": {
-            url: "../../Model/OrganizationCategory/GetOrganizationCategory.php", // json datasource
+            url: "../../Model/OrganizationGroupType/GetOrganizationGroupType.php", // json datasource
             dataType: "json",
             type: "post",
             "start": 0,
