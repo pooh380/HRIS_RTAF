@@ -16,8 +16,6 @@
                                     </li>
                                     <li><a class="menu-item" href="../organization_levels/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ฐานะหน่วย</a>
                                     </li>
-                                    <li><a class="menu-item" href="../organizations/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">สังกัด</a>
-                                    </li>
                                     <li><a class="menu-item" href="../organizations_name/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ชื่อหน่วยงาน</a>
                                     </li>
                                 </ul>
