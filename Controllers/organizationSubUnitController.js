@@ -1,7 +1,7 @@
-function getOrganizationLevels() {
+function getOrganizationSubUnit() {
     $('#OrganizationLevels').DataTable({
         "ajax": {
-            url: "../../Model/OrganizationLevels/GetOrganizationLevels.php", // json datasource
+            url: "../../Model/OrganizationSubUnit/GetOrganizationsSubUnit.php", // json datasource
             dataType: "json",
             type: "post",
             "start": 0,
@@ -22,7 +22,7 @@ function getOrganizationLevels() {
     });
 }
 
-function insertOrganizationLevel() {
+function insertOrganizationSubUnit() {
 
     var orglevelname = $("#orglevelname").val();
     var orglevelAbbrname = $("#orglevelAbbrname").val();
@@ -109,7 +109,7 @@ function getIdForEdit() {
 }
 // getData จาก db เพื่อนำมาใช้มา input value
 
-function UpdateOrganizationLevel() {
+function UpdateOrganizationSubUnit() {
     var orglevelId = $("#id").val();
     var orglevelname = $("#orglevelname").val();
     var orglevelAbbrname = $("#orglevelAbbrname").val();
@@ -155,7 +155,7 @@ function UpdateOrganizationLevel() {
 
 
 
-function deleteOrganizationLevls(id) {
+function deleteOrganizationSubUnit(id) {
     var organizationLevlsId = id;
     event.preventDefault();
 
