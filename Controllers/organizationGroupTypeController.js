@@ -1,7 +1,7 @@
-function getOrganizationLevels() {
-    $('#OrganizationLevels').DataTable({
+function getOrganizationGroupType() {
+    $('#OrganizationGroupType').DataTable({
         "ajax": {
-            url: "../../Model/OrganizationLevels/GetOrganizationLevels.php", // json datasource
+            url: "../../Model/OrganizationGroupType/GetOrganizationGroupType.php", // json datasource
             dataType: "json",
             type: "post",
             "start": 0,
@@ -22,10 +22,10 @@ function getOrganizationLevels() {
     });
 }
 
-function insertOrganizationLevel() {
 
-    var orglevelname = $("#orglevelname").val();
-    var orglevelAbbrname = $("#orglevelAbbrname").val();
+function insertOrganizationGroupType() {
+    var orgGroupTypeName = $("#orgGroupTypeName").val();
+    // var OrganizationcategoryIN = $("#OrganizationcategoryIN").val();
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
         var isActive = "1";
@@ -33,29 +33,23 @@ function insertOrganizationLevel() {
         var isActive = "0";
     }
 
-    // console.log(orglevelname + " " + orglevelAbbrname + " " + isActive);
     // e.preventDefault();
 
-    $.post("../../Model/OrganizationLevels/InsertOrganizationLevels.php", {
-        orglevelname: orglevelname,
-        orglevelAbbrname: orglevelAbbrname,
+    $.post("../../Model/OrganizationGroupType/InsertOrganizationGroupType.php", {
+        orgGroupTypeName: orgGroupTypeName,
+        // OrganizationcategoryIN: OrganizationcategoryIN,
         isActive: isActive
     }).done(function(data) {
-        // console.log(data);
         Swal.fire({
             type: 'success',
             title: 'เพิ่มข้อมูลสำเร็จ',
             showConfirmButton: false,
             timer: 2000
         });
-        setTimeout("window.open('../Organization_levels/index.php', '_self');", 2000);
+        setTimeout("window.open('../organizationGroupType/index.php', '_self');", 2000);
+        // console.log(data);
     }).fail(function(err) {
         // console.log(err);
-        Swal.fire({
-            type: 'error',
-            title: 'ไม่สามารถเพิ่มข้อมูลได้',
-            text: 'กรุณาตรวจสอบข้อมูลอีกครั้ง'
-        })
     });
 }
 
@@ -76,24 +70,23 @@ function getUrlVars() {
 
 // getData จาก db เพื่อนำมาใช้มา input value
 function getIdForEdit() {
-    var orglevelId = getUrlVars()["id"];
-    // console.log(orglevelId);
+    var orgCategoryId = getUrlVars()["id"];
+    console.log(orgCategoryId);
 
     $.ajax({
         type: "POST",
         dataType: "json",
-        url: "../../Model/OrganizationLevels/GetDataEdit.php",
+        url: "../../Model/organizationCategory/GetDataEdit.php",
         data: {
-            orglevelId: orglevelId
+            orgCategoryId: orgCategoryId
         },
         success: function(data) {
             $("#id").val(data.id);
-            $("#orglevelname").val(data.orglevelname);
-            $("#orglevelAbbrname").val(data.orglevelAbbrname);
-            // console.log(data.IsActive);
+            $("#orgCategoryName").val(data.orgCategoryName);
+            $("#orgCategoryAbrrName").val(data.orgCategoryAbbrName);
             if (data.IsActive == 0) {
                 // $("#isActive").removeAttr('checked');
-                $("#isActive").bootstrapToggle('disable');
+                $("#isActive").bootstrapToggle('off');
             } else {
                 // $('#isActive').prop("checked", true);
                 $("#isActive").bootstrapToggle('on');
@@ -102,43 +95,42 @@ function getIdForEdit() {
             // console.log(data);
         },
         error: function(error) {
-            // alert(error);
             // console.log(error);
         }
     });
 }
 // getData จาก db เพื่อนำมาใช้มา input value
 
-function UpdateOrganizationLevel() {
-    var orglevelId = $("#id").val();
-    var orglevelname = $("#orglevelname").val();
-    var orglevelAbbrname = $("#orglevelAbbrname").val();
+function UpdateOrganizationCategory() {
+    var orgCategoryId = $("#id").val();
+    var orgCategoryName = $("#orgCategoryName").val();
+    var orgCategoryAbbrName = $("#orgCategoryAbbrName").val();
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
         var isActive = "1";
     } else {
         var isActive = "0";
     }
-    // console.log(orglevelId + " " + orglevelname + " " + orglevelAbbrname + " " + isActive);
+    // console.log(originsId + " " + originName + " " + originAbbrName + " " + isActive);
 
     $.ajax({
         type: "POST",
-        url: "../../Model/OrganizationLevels/UpdateOrganizationLevels.php",
+        url: "../../Model/organizationCategory/UpdateOrganizationCategory.php",
         data: {
-            orglevelId: orglevelId,
-            orglevelname: orglevelname,
-            orglevelAbbrname: orglevelAbbrname,
+            orgCategoryId: orgCategoryId,
+            orgCategoryName: orgCategoryName,
+            orgCategoryAbbrName: orgCategoryAbbrName,
             isActive: isActive
         },
         success: function(data) {
             console.log(data);
             Swal.fire({
                 type: 'success',
-                title: 'แก้ไขข้อมูลสำเร็จ',
+                title: 'เพิ่มแก้ไขข้อมูลสำเร็จ',
                 showConfirmButton: false,
                 timer: 2000
             });
-            setTimeout("window.open('../Organization_levels/index.php', '_self');", 2000);
+            setTimeout("window.open('../organization_category/index.php', '_self');", 2000);
         },
         error: function(error) {
             // alert(error);
@@ -153,31 +145,37 @@ function UpdateOrganizationLevel() {
 }
 // ใช้ ตอน update
 
-
-
-function deleteOrganizationLevls(id) {
-    var organizationLevlsId = id;
+// delete
+function deleteOrganizationCategory(id) {
+    // alert(event);
     event.preventDefault();
+    var orgCategoryId = id;
+    // console.log(orgCategoryId);
 
-    // console.log("organizationPartsId: " + organizationLevlsId);
-
-    $.post("../../Model/OrganizationLevels/DeleteOrganizationLevels.php", {
-        organizationLevlsId: organizationLevlsId
-    }).done(function(data) {
-        console.log(data);
-        Swal.fire({
-            type: 'success',
-            title: 'ลบข้อมูลสำเร็จ',
-            showConfirmButton: false,
-            timer: 2000
-        });
-        setTimeout("window.open('../Organization_levels/index.php', '_self');", 2000);
-    }).fail(function(err) {
-        // console.log(err);
-        Swal.fire({
-            type: 'error',
-            title: 'ไม่สามารถลบข้อมูลได้',
-            text: 'กรุณาตรวจสอบข้อมูลอีกครั้ง'
-        });
+    $.ajax({
+        type: "POST",
+        url: "../../Model/OrganizationCategory/DeleteOrganizationCategory.php",
+        data: {
+            orgCategoryId: orgCategoryId
+        },
+        success: function(data) {
+            // console.log(data);
+            Swal.fire({
+                type: 'success',
+                title: 'ลบข้อมูลสำเร็จ',
+                showConfirmButton: false,
+                timer: 2000
+            });
+            setTimeout("window.open('../organization_category/index.php', '_self');", 2000);
+        },
+        error: function(error) {
+            // alert(error);
+            // console.log(error);
+            Swal.fire({
+                type: 'error',
+                title: 'ไม่สามารถลบข้อมูลได้',
+                text: 'กรุณาตรวจสอบข้อมูลอีกครั้ง'
+            });
+        }
     });
 }

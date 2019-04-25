@@ -134,7 +134,7 @@
                                                         </div>
 
                                                         <div class="form-group col-md-12">
-                                                            <label id="orgList" style=" font-weight:bold; font-size: 15px; color:#0f1733;">สังกัด:</label>
+                                                            <label id="orgList" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ชื่อหน่วยงาน:</label>
                                                             <input type="hidden" id="orgTypeId" name="orgTypeId">
                                                             <select id="orgListList" name="orgListList" class="select2 form-control"></select>
                                                         </div>

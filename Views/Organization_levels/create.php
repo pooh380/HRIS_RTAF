@@ -61,28 +61,28 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="orglevelname">ชื่อเต็มฐานะหน่วย</label>
+                                                      <label class="col-md-6 label-control" for="orgLevelName">ชื่อเต็มฐานะหน่วย</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="orglevelname" class="form-control border-primary" placeholder="ชื่อเต็มเชื้อชาติ" name="orglevelname">
+                                                              <input type="text" id="orgLevelName" class="form-control border-primary" placeholder="ชื่อเต็มฐานะหน่วย" name="orgLevelName">
 
                                                           </div>
                                                       </div>
                                                   </div>
-                                                  <div class="col-md-6">
+                                                  <!-- <div class="col-md-6">
                                                       <label class="col-md-6 label-control" for="orglevelAbbrname">ชื่อย่อฐานะหน่วย</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
                                                               <input type="text" id="orglevelAbbrname" class="form-control border-primary" placeholder="ชื่อย่อเชื้อชาติ" name="orglevelAbbrname">
                                                           </div>
                                                       </div>
-                                                  </div>
+                                                  </div> -->
                                               </div>
                                               <br>
                                               <div class="row">
                                                   <div class="col-md-12">
                                                       <br>
-                                                      <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
+                                                      <label class="col-md-1 label-control" for="isActive" style="padding-right:0px;">สถานะ</label>
                                                       <input type="checkbox" id="isActive" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
                                                   </div>
                                               </div>

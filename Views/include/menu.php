@@ -8,7 +8,7 @@
                         <ul class="menu-content">
                             <li><a class="menu-item" href="#" data-i18n="nav.page_layouts.3_columns.main">โครงสร้างอัตรากำลังพล</a>
                                 <ul class="menu-content">
-                                    <li><a class="menu-item" href="../organization_category/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ประเภทโครงสร้าง</a>
+                                    <li><a class="menu-item" href="../organizationGroupType/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ประเภทโครงสร้าง</a>
                                     </li>
                                     <li><a class="menu-item" href="../organization_types/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">โครงสร้าง</a>
                                     </li>
@@ -16,9 +16,7 @@
                                     </li>
                                     <li><a class="menu-item" href="../organization_levels/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ฐานะหน่วย</a>
                                     </li>
-                                    <li><a class="menu-item" href="../organizations/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">สังกัด</a>
-                                    </li>
-                                    <li><a class="menu-item" href="../organizations_name/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ชื่อหน่วยงาน</a>
+                                    <li><a class="menu-item" href="../OrganizationsSubUnit/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ชื่อหน่วยงาน</a>
                                     </li>
                                 </ul>
                             </li>

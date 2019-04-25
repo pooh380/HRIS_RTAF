@@ -50,17 +50,18 @@
                                           <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                                               <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
                                           </a>
-                                          <table id="OrganizationCategory" class="table table-striped table-borderless table-hover bootstrap-3 " style="width:100%">
+                                          <table id="OrganizationGroupType" class="table table-striped table-borderless table-hover bootstrap-3 " style="width:100%">
                                               <thead>
                                                   <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                                                       <th></th>
                                                       <th>ลำดับที่</th>
                                                       <th>รหัสโครงสร้าง</th>
                                                       <th>ชื่อโครงสร้าง</th>
-                                                      <th>ชื่อย่อโครงสร้าง</th>
                                                       <th>สถานะ</th>
                                                   </tr>
-                                              </thead></tbody>
+                                              </thead>
+                                              <tbody align="center" >
+                                            </tbody>
                                           </table>
                                       </div>
                                   </div>
@@ -73,7 +74,7 @@
       </div>
   </section>
 
-  <script src="../../Controllers/organizationCategoryController.js"></script>
+  <script src="../../Controllers/organizationGroupTypeController.js"></script>
   
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
@@ -89,7 +90,7 @@
             $(".modal").hide();
         });
           change_autorefreshdiv();
-          getOrganizationCategory();
+          getOrganizationGroupType() ;
       });
 
 

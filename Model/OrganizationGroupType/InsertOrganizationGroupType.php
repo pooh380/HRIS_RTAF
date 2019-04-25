@@ -7,9 +7,9 @@ require_once "../../config.php";
 
 if (!empty($_POST)) {
 
-    // $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM organization_level; ";
+    // $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM organization_category; ";
 
-    // echo $sqlInsertSeqNoAndCode;
+    // // echo $sqlInsertSeqNoAndCode;
 
     // $querySelect = sqlsrv_query($conn, $sqlInsertSeqNoAndCode);
 
@@ -19,14 +19,14 @@ if (!empty($_POST)) {
     //     $idNew = $id+1;
     // }
 
-    $orgLevelName = $_POST['orgLevelName'];
-    // $orglevelAbbrname = $_POST['orglevelAbbrname'];
+    $orgGroupTypeName = $_POST['orgGroupTypeName'];
+    // $OrganizationcategoryIN = $_POST['OrganizationcategoryIN'];
     $isActive = $_POST['isActive'];
-
-    $sql = " INSERT INTO OrgLevel
-    (OrgLevelName, OrgLevelActive, OrgLevelCreateBy, OrgLevelCreateDate, OrgLevelUpdateBy, OrgLevelUpdateDate)
-    VALUES('$orgLevelName', $isActive, '', '', '', ''); ";
-    echo $sql;
+     $sql =" INSERT INTO OrgGroupType
+     (OrgTypeName, OrgTypeActive, OrgTypeCreateBy, OrgTypeCreateDate, OrgTypeUpdateBy, OrgTypeUpdateDate)
+     VALUES('$orgGroupTypeName', $isActive, '', '', '', ''); ";
+    
+    
     if (sqlsrv_query($conn, $sql)) {
         echo "บันทึกสำเร็จ";
 

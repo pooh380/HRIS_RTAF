@@ -8,15 +8,14 @@ require_once "../../config.php";
 
 $request = $_REQUEST;
 $col = array(
-    0   =>  'id',
-    1   =>  'organization_part_code',
-    2   =>  'organization_part_name',
-    3   =>  'organization_part_abbr_name',
-    4   =>  'isActive'
+    0   =>  'OrgPartId',
+    1   =>  'OrgPartName',
+    2   =>  'OrgPartActive',
 );
 
     //create column like table in database
-    $sql = " SELECT id, organization_part_code, organization_part_name, organization_part_abbr_name, IsActive FROM organization_part ";
+    $sql = " SELECT OrgPartId, OrgPartName, OrgPartActive, OrgPartCreateBy, OrgPartCreateDate, OrgPartUpdateBy, OrgPartUpdateDate
+    FROM OrgPart; ";
     $params = array();
     $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
     $query = sqlsrv_query($conn, $sql, $params, $options);
@@ -27,10 +26,10 @@ $col = array(
 
 
 
-    $sql = " SELECT id, organization_part_code, organization_part_name, organization_part_abbr_name, IsActive FROM organization_part  WHERE 1=1 ";
+    $sql = " SELECT OrgPartId, OrgPartName, OrgPartActive, OrgPartCreateBy, OrgPartCreateDate, OrgPartUpdateBy, OrgPartUpdateDate
+    FROM OrgPart  WHERE 1=1 ";
     if (!empty($request['search']['value'])) {
-        $sql .= " AND (organization_part_name Like N'%" . $request['search']['value'] . "%' ";
-        $sql .= " OR organization_part_abbr_name Like N'%" . $request['search']['value'] . "%') ";
+        $sql .= " AND (OrgPartName Like N'%" . $request['search']['value']. "%'); ";
         $query = sqlsrv_query($conn, $sql, $params, $options);
         $totalData = sqlsrv_num_rows($query);
     }
@@ -43,10 +42,9 @@ $col = array(
         <a href=""><i class="la la-trash-o" style="color:#0f1733"; font-size:30px;" onclick="deleteOrganizationParts('.$row[0].')" id="'.$row[0].'"></i></a>
         ';//id
         $subdata[] = $row[0];
+        $subdata[] = $row[0];
         $subdata[] = $row[1];
-        $subdata[] = $row[2];
-        $subdata[] = $row[3];
-        if($row[4] !== 1){
+        if($row[2] !== 1){
             $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
         }else{
             $subdata[] = '<i class="la la-toggle-on" style="color: green; font-size:30px; "></i>';
