@@ -26,7 +26,7 @@
                   <div class="content-header-left col-12 mb-2">
                       <div style="width:7px;height:30px;background-color:#1a1d52; float:left; margin-right:10px;"></div>
                       <h3 class="content-header-title">ข้อมูลประวัติราชการ</h3>
-                      
+
                       <div class="search-container">
                           <form action="/action_page.php">
                               <input type="text" placeholder="Search.." name="search">
@@ -46,24 +46,27 @@
                                       <div class="card-body card-dashboard">
 
                                           <nav aria-label="breadcrumb">
-                                              <ol class="breadcrumb">
-                                                  <li class="breadcrumb-item">ข้อมูลตำแหน่ง</a></li>
-                                                  <li class="breadcrumb-item active" aria-current="page">
-                                                      ข้อมูลประวัติราชการ</li>
-
+                                          <ol class="breadcrumb">
+                                                  <li class="breadcrumb-item"><a href="../home/index.php">งานประวัติรับราชการ</a></li>
+                                                  <li class="breadcrumb-item active" aria-current="page">ข้อมูลตำแหน่ง</li>
+                                               
+                                            
                                               </ol>
                                           </nav>
-
-                                          <div class="profiletree"
-                                              style="background-color:#0f1733; color:whitesmoke;padding:1%;width: 100%;">
-                                              <div class="name">พล.อ.เลย์รสสาหร่าย สองถุง &nbsp; &nbsp; &nbsp;
-                                                  หมายเลขประจำตัว&nbsp;&nbsp;332124562455
-
-                                                  <ul class="list-inline mb-0" style="margin-left:1100px">
-                                                      <li><a data-action="collapse"><i class="ft-minus"></i></a>
-                                                      </li>
-                                                  </ul>
-
+                                          <div id="how-to" class="card">
+                                              <div class="card-header" style="background-color:#0f1733;padding:1.0rem 1.0rem">
+                                                  <h4 class="card-title">
+                                                      <font color="White">พล.อ.เลย์รสสาหร่าย สองถุง หมายเลขประจำตัว 332124562455
+                                                  </h4>
+                                                  </font>
+                                                  <a class="heading-elements-toggle"><i
+                                                          class="la la-ellipsis-v font-medium-3"></i></a>
+                                                  <div class="heading-elements">
+                                                      <ul class="list-inline mb-0">
+                                                          <li><a data-action="collapse"><i class="ft-minus"></i></a>
+                                                          </li>
+                                                      </ul>
+                                                  </div>
                                               </div>
                                           </div>
                                           <div>
@@ -91,19 +94,9 @@
                                               <div class="profile_head"
                                                   style="background-color:#FFE4C4;height: auto;width: 100%;margin-left:0px;padding:1%;">
                                                   <h3>ประวัติข้าราชการ</h3>
-                                              
+
                                                   <br>
-                                                  <!-- <div class="card-header">
-                <h4 class="card-title">How to use starter kit ?</h4>
-                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
-                <div class="heading-elements">
-                    <ul class="list-inline mb-0">
-                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
-                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
-                        <li><a data-action="close"><i class="ft-x"></i></a></li>
-                    </ul>
-                </div>
-            </div> -->
+                                                 
                                                   <div class="w3-bar">
                                                       <a href="#"
                                                           class="w3-bar-item w3-button w3-hover-none w3-border-white w3-bottombar w3-hover-border-blue w3-hover-text-blue">
@@ -131,21 +124,10 @@
                                                           บุตร-ธิดา</a>
                                                   </div>
                                                   <br>
-                                                  <div id="how-to" class="card">
-            <div class="card-header">
-                <h4 class="card-title">พล.อ.เลย์รสสาหร่าย สองถุง     หมายเลขประจำตัว  332124562455</h4>
-                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
-                <div class="heading-elements">
-                    <ul class="list-inline mb-0">
-                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
-                        
-                    </ul>
-                </div>
-            </div>
+
                                               </div>
                                           </div>
                                       </div>
-                                  </div>
                   </section>
                   <!--/ Bootstrap 3 table -->
               </div>

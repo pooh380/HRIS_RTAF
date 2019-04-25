@@ -1,19 +1,18 @@
 <?php
 
-error_reporting(0);
 
 require_once "../../config.php";
 
-$orgCategoryId = $_POST["orgCategoryId"];
+$orgGroupTypeId = $_POST["orgGroupTypeId"];
 
 $id = "";
-$orgCategoryName = "";
-$orgCategoryAbbrName = "";
+$orgGroupTypeName = "";
 $IsActive = "";
 // echo $originsId ;
 
-if(isset($orgCategoryId)){
-    $sql = " SELECT id, organization_category_name, organization_category_abbr_name, IsActive FROM organization_category where id = $orgCategoryId ";
+if(isset($orgGroupTypeId)){
+    $sql = "SELECT OrgTypeId, OrgTypeName, OrgTypeActive, OrgTypeCreateBy, OrgTypeCreateDate, OrgTypeUpdateBy, OrgTypeUpdateDate
+    FROM OrgGroupType where OrgTypeId = $orgGroupTypeId ; ";
 
     // echo $sql;
 
@@ -22,17 +21,17 @@ if(isset($orgCategoryId)){
     // if($query){ echo "query";}else{echo "not query";}
 
     while ($row = sqlsrv_fetch_array($query)) {
-        $id = $row['id'];
-        $orgCategoryName = $row['organization_category_name'];
-        $orgCategoryAbbrName = $row['organization_category_abbr_name'];
-        $IsActive = $row['IsActive'];
+        $id = $row['OrgTypeId'];
+        $orgGroupTypeName = $row['OrgTypeName'];
+        $IsActive = $row['OrgTypeActive'];
         // echo $id;
         // echo $originName;
         // echo $originAbbrName;
         // echo $IsActive;
     }
 
-    $r=array("id"=>$id,"orgCategoryName"=>$orgCategoryName,"orgCategoryAbbrName"=>$orgCategoryAbbrName,"IsActive"=>$IsActive);
+    $r=array("id"=>$id,"orgGroupTypeName"=>$orgGroupTypeName,"IsActive"=>$IsActive);
+    //"ค่า$ในนี้"=>ค่า$ในController,
     print(json_encode($r));
 }
 

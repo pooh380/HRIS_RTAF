@@ -13,7 +13,7 @@ function getOrganizationGroupType() {
             "lengthMenu": [
                 [10, 25, 50, 100, -1],
                 [10, 25, 50, 100, "All"]
-            ],
+            ],  
             "pageLength": 10,
             order: [
                 [0, "desc"]
@@ -70,20 +70,19 @@ function getUrlVars() {
 
 // getData จาก db เพื่อนำมาใช้มา input value
 function getIdForEdit() {
-    var orgCategoryId = getUrlVars()["id"];
-    console.log(orgCategoryId);
+    var orgGroupTypeId = getUrlVars()["id"];
+    console.log(orgGroupTypeId);
 
     $.ajax({
         type: "POST",
         dataType: "json",
-        url: "../../Model/organizationCategory/GetDataEdit.php",
+        url: "../../Model/OrganizationGroupType/GetDataEdit.php",
         data: {
-            orgCategoryId: orgCategoryId
+            orgGroupTypeId: orgGroupTypeId
         },
         success: function(data) {
             $("#id").val(data.id);
-            $("#orgCategoryName").val(data.orgCategoryName);
-            $("#orgCategoryAbrrName").val(data.orgCategoryAbbrName);
+            $("#orgGroupTypeName").val(data.orgGroupTypeName);
             if (data.IsActive == 0) {
                 // $("#isActive").removeAttr('checked');
                 $("#isActive").bootstrapToggle('off');
@@ -101,25 +100,23 @@ function getIdForEdit() {
 }
 // getData จาก db เพื่อนำมาใช้มา input value
 
-function UpdateOrganizationCategory() {
-    var orgCategoryId = $("#id").val();
-    var orgCategoryName = $("#orgCategoryName").val();
-    var orgCategoryAbbrName = $("#orgCategoryAbbrName").val();
+function UpdateorganizationGroupType() {
+    var id = $("#id").val();
+    var orgGroupTypeName = $("#orgGroupTypeName").val();
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
         var isActive = "1";
     } else {
         var isActive = "0";
-    }
+    }   
     // console.log(originsId + " " + originName + " " + originAbbrName + " " + isActive);
 
     $.ajax({
         type: "POST",
-        url: "../../Model/organizationCategory/UpdateOrganizationCategory.php",
+        url: "../../Model/OrganizationGroupType/UpdateOrganizationGroupType.php",
         data: {
-            orgCategoryId: orgCategoryId,
-            orgCategoryName: orgCategoryName,
-            orgCategoryAbbrName: orgCategoryAbbrName,
+            id: id,
+            orgGroupTypeName: orgGroupTypeName,
             isActive: isActive
         },
         success: function(data) {
@@ -130,7 +127,7 @@ function UpdateOrganizationCategory() {
                 showConfirmButton: false,
                 timer: 2000
             });
-            setTimeout("window.open('../organization_category/index.php', '_self');", 2000);
+            // setTimeout("window.open('../OrganizationGroupType/index.php', '_self');", 2000);
         },
         error: function(error) {
             // alert(error);
@@ -146,17 +143,17 @@ function UpdateOrganizationCategory() {
 // ใช้ ตอน update
 
 // delete
-function deleteOrganizationCategory(id) {
+function DeleteOrganizationGroupType(id) {
     // alert(event);
     event.preventDefault();
-    var orgCategoryId = id;
+    var id = id;
     // console.log(orgCategoryId);
 
     $.ajax({
         type: "POST",
-        url: "../../Model/OrganizationCategory/DeleteOrganizationCategory.php",
+        url: "../../Model/OrganizationGroupType/DeleteOrganizationGroupType.php",
         data: {
-            orgCategoryId: orgCategoryId
+            id: id
         },
         success: function(data) {
             // console.log(data);
@@ -166,7 +163,7 @@ function deleteOrganizationCategory(id) {
                 showConfirmButton: false,
                 timer: 2000
             });
-            setTimeout("window.open('../organization_category/index.php', '_self');", 2000);
+             setTimeout("window.open('../OrganizationGroupType/index.php', '_self');", 2000);
         },
         error: function(error) {
             // alert(error);
