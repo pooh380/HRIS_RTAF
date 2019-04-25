@@ -60,25 +60,24 @@
                                       <form class="form form-horizontal">
                                           <div class="form-body">
                                               <div class="row">
-                                                  <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="organizationPartName">ชื่อเต็มส่วนราชการ</label>
+                                                  <div class="col-md-12">
+                                                      <label class="col-md-12 label-control" for="OrgPartName">ชื่อเต็มส่วนราชการ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="organizationPartName" class="form-control border-primary" placeholder="ชื่อเต็มส่วนราชการ" name="organizationPartName">
+                                                              <input type="text" id="OrgPartName" class="form-control border-primary" placeholder="ชื่อเต็มส่วนราชการ" name="OrgPartName">
 
                                                           </div>
                                                       </div>
                                                   </div>
-                                                  <div class="col-md-6">
+                                                  <!-- <div class="col-md-6">
                                                       <label class="col-md-6 label-control" for="organizationPartAbbrName">ชื่อย่อส่วนราชการ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
                                                               <input type="text" id="organizationPartAbbrName" class="form-control border-primary" placeholder="ชื่อย่อส่วนราชการ" name="organizationPartAbbrName">
                                                           </div>
                                                       </div>
-                                                  </div>
+                                                  </div> -->
                                               </div>
-                                              <br>
                                               <div class="row">
                                                   <div class="col-md-12">
                                                       <br>

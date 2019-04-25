@@ -24,12 +24,9 @@ function getOrganizationParts() {
 }
 
 
-
 function insertOrganizationParts() {
 
-    var organizationPartName = $("#organizationPartName").val();
-    var organizationPartAbbrName = $("#organizationPartAbbrName").val();
-
+    var OrgPartName = $("#OrgPartName").val();
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
         var isActive = "1";
@@ -38,14 +35,13 @@ function insertOrganizationParts() {
     }
 
 
-    console.log(organizationPartName + " " + organizationPartAbbrName + " " + isActive);
+    console.log(OrgPartName + " " + isActive);
     // e.preventDefault();
     $.ajax({
         type: "POST",
         url: "../../Model/OrganizationParts/InsertOrganizationParts.php",
         data: {
-            organizationPartName: organizationPartName,
-            organizationPartAbbrName: organizationPartAbbrName,
+            OrgPartName: OrgPartName,
             isActive: isActive
         },
         success: function(data) {
@@ -56,7 +52,7 @@ function insertOrganizationParts() {
                 showConfirmButton: false,
                 timer: 2000
             });
-            setTimeout("window.open('../OrganizationParts/index.php', '_self');", 2000);
+            // setTimeout("window.open('../OrganizationParts/index.php', '_self');", 2000);
         },
         error: function(error) {
             // alert(error);
@@ -88,19 +84,17 @@ function getUrlVars() {
 
 // getData จาก db เพื่อนำมาใช้มา input value
 function getIdForEdit() {
-    var OrganizationPartsId = getUrlVars()["id"];
-
+    var id = getUrlVars()["id"];
     $.ajax({
         type: "POST",
         dataType: "json",
         url: "../../Model/OrganizationParts/GetDataEdit.php",
         data: {
-            OrganizationPartsId: OrganizationPartsId
+            id: id,
         },
         success: function(data) {
             $("#id").val(data.id);
-            $("#organizationPartName").val(data.OrganizationPartsName);
-            $("#organizationPartAbbrName").val(data.OrganizationPartsAbbrName);
+            $("#OrgPartName").val(data.OrgPartName);
             // console.log(data.IsActive);
             if (data.IsActive == 0) {
                 // $("#isActive").removeAttr('checked');
@@ -124,8 +118,7 @@ function getIdForEdit() {
 
 function UpdateOrganizationParts() {
     var OrganizationPartsId = $("#OrganizationPartsId").val();
-    var OrganizationPartsName = $("#OrganizationPartsName").val();
-    var organizationPartAbbrName = $("#organizationPartAbbrName").val();
+    var OrgTypeName = $("#OrgTypeName").val();
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
         var isActive = "1";
@@ -139,8 +132,7 @@ function UpdateOrganizationParts() {
         url: "../../Model/OrganizationParts/UpdateOrganizationParts.php",
         data: {
             OrganizationPartsId: OrganizationPartsId,
-            OrganizationPartsName: OrganizationPartsName,
-            organizationPartAbbrName: organizationPartAbbrName,
+            OrgTypeName: OrgTypeName,
             isActive: isActive
         },
         success: function(data) {

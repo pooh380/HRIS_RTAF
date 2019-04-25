@@ -1,32 +1,32 @@
 <?php
 
-error_reporting(0);
-
 require_once "../../config.php";
 // if($conn){echo "con";}
 
 if (!empty($_POST)) {
 
 
-    $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM organization_part; ";
+    // $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM OrgPart; ";
 
-    echo $sqlInsertSeqNoAndCode;
+    // echo $sqlInsertSeqNoAndCode;
 
-    $querySelect = sqlsrv_query($conn, $sqlInsertSeqNoAndCode);
+    // $querySelect = sqlsrv_query($conn, $sqlInsertSeqNoAndCode);
 
-    $idNew = "";
-    while ($row = sqlsrv_fetch_array($querySelect)) {
-        $id = $row['maxid'];
-        $idNew = $id + 1;
-    }
+    // $idNew = "";
+    // while ($row = sqlsrv_fetch_array($querySelect)) {
+    //     $id = $row['maxid'];
+    //     $idNew = $id + 1;
+    // }
 
-    $organizationPartName = $_POST['organizationPartName'];
-    $organizationPartAbbrName = $_POST['organizationPartAbbrName'];
+    $OrgPartName = $_POST['OrgPartName'];
     $isActive = $_POST['isActive'];
 
-    $sql = " INSERT INTO organization_part
-    (organization_part_code, organization_part_name, organization_part_abbr_name, IsActive, created_by, created_date, update_by, update_date)
-    VALUES('$idNew', '$organizationPartName', '$organizationPartAbbrName', $isActive, 0, '', 0, '') ";
+    $sql = " INSERT INTO OrgPart
+    (OrgPartName, OrgPartActive, OrgPartCreateBy, OrgPartCreateDate, OrgPartUpdateBy, OrgPartUpdateDate)
+    VALUES('$OrgPartName', $isActive, 0, '', 0, '');";
+
+
+
 
     $queryInsert = sqlsrv_query($conn, $sql);
 
