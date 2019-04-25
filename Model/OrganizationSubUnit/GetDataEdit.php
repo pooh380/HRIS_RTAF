@@ -17,7 +17,7 @@ if(isset($OrgSubUnitId)){
     FROM OrgSubUnit
     where OrgSubUnitId = $OrgSubUnitId ; ";
 
-    echo $sql;
+    // echo $sql;
 
     $query = sqlsrv_query($conn, $sql);
 

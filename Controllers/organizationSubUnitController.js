@@ -91,10 +91,10 @@ function getIdForEdit() {
         },
         success: function(data) {
             $("#id").val(data.id);
-            ("#OrgSubUnitName").val(data.OrgSubUnitName);
-            ("#OrgSubUnitAbbr").val(data.OrgSubUnitAbbr);
-            ("#OrgSubUnitSemiAbbr").val(data.OrgSubUnitSemiAbbr);
-            ("#OrgSubUnitActive").val(data.OrgSubUnitActive);
+            $("#OrgSubUnitName").val(data.OrgSubUnitName);
+            $("#OrgSubUnitAbbr").val(data.OrgSubUnitAbbr);
+            $("#OrgSubUnitSemiAbbr").val(data.OrgSubUnitSemiAbbr);
+            $("#isActive").val(data.OrgSubUnitActive);
 
             // console.log(data.IsActive);
             if (data.IsActive == 0) {
@@ -116,22 +116,28 @@ function getIdForEdit() {
 // getData จาก db เพื่อนำมาใช้มา input value
 
 function UpdateOrganizationSubUnit() {
-    var OrgSubUnitId = $("#id").val();
+    var id = $("#id").val();
+    var OrgSubUnitName = $("#OrgSubUnitName").val();
     var OrgSubUnitAbbr = $("#OrgSubUnitAbbr").val();
     var OrgSubUnitSemiAbbr = $("#OrgSubUnitSemiAbbr").val();
+    var isActive = $("#isActive").val();
+  
+    
+
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
         var isActive = "1";
     } else {
         var isActive = "0";
     }
-    console.log(OrgSubUnitId + " " + OrgSubUnitAbbr + " " + OrgSubUnitSemiAbbr + " " + isActive);
+    console.log(id + " " + OrgSubUnitName + " " + OrgSubUnitAbbr + " " + OrgSubUnitSemiAbbr + " " + isActive);
 
     $.ajax({
         type: "POST",
-        url: "../../Model/OrganizationsSubUnit/UpdateOrganizationSubUnit.php",
+        url: "../../Model/OrganizationSubUnit/UpdateOrganizationSubUnit.php",
         data: {
-            OrgSubUnitId: OrgSubUnitId,
+            id: id,
+            OrgSubUnitName : OrgSubUnitName,
             OrgSubUnitAbbr: OrgSubUnitAbbr,
             OrgSubUnitSemiAbbr: OrgSubUnitSemiAbbr,
             isActive: isActive
@@ -144,7 +150,7 @@ function UpdateOrganizationSubUnit() {
                 showConfirmButton: false,
                 timer: 2000
             });
-            setTimeout("window.open('../Organization_levels/index.php', '_self');", 2000);
+            setTimeout("window.open('../OrganizationsSubUnit/index.php', '_self');", 2000);
         },
         error: function(error) {
             // alert(error);
@@ -161,14 +167,14 @@ function UpdateOrganizationSubUnit() {
 
 
 
-function deleteOrganizationSubUnit(id) {
-    var organizationLevlsId = id;
+function DeleteOrganizationSubUnit(id) {
+    var id = id;
     event.preventDefault();
 
     // console.log("organizationPartsId: " + organizationLevlsId);
 
-    $.post("../../Model/OrganizationsSubUnit/DeleteOrganizationSubUnit.php", {
-        organizationLevlsId: organizationLevlsId
+    $.post("../../Model/OrganizationSubUnit/DeleteOrganizationSubUnit.php", {
+        id: id
     }).done(function(data) {
         console.log(data);
         Swal.fire({
@@ -177,7 +183,7 @@ function deleteOrganizationSubUnit(id) {
             showConfirmButton: false,
             timer: 2000
         });
-        setTimeout("window.open('../Organization_levels/index.php', '_self');", 2000);
+        setTimeout("window.open('../OrganizationsSubUnit/index.php', '_self');", 2000);
     }).fail(function(err) {
         // console.log(err);
         Swal.fire({
