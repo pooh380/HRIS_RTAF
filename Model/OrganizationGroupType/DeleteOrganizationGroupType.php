@@ -14,9 +14,11 @@ if (!empty($_POST)) {
     // echo date("Y-m-d h:i:sa");
 
 
-    $sql = " DELETE FROM OrgGroupType WHERE OrgGroupTypeId=$id ";
+    $sql = "DELETE FROM OrgType
+    WHERE OrgTypeId=$id ";
     echo $sql;
 
+    
     $query = sqlsrv_query($conn, $sql);
 
     if ($query) {

@@ -213,10 +213,10 @@ function UpdateOrgType() {
 function deleteOrgType(id) {
     // alert(event);
     event.preventDefault();
-    var orgTypeId = id;
+    var id = id;
     // console.log(PrefixsId);
-    $.post("../../Model/OrganizationType/DeleteOrganizationType.php", {
-        orgTypeId: orgTypeId
+    $.post("../../Model/organizationtype/DeleteOrganizationType.php", {
+        id: id
     }).done(function(data) {
         // window.location.replace("../page/listUser.php");
         // console.log(data);
@@ -226,7 +226,7 @@ function deleteOrgType(id) {
             showConfirmButton: false,
             timer: 2000
         });
-        setTimeout("window.open('../Pass_Type/index.php', '_self');", 2000);
+        setTimeout("window.open('../organization_types/index.php', '_self');", 2000);
     }).fail(function(err) {
         // console.log(err);
         Swal.fire({
