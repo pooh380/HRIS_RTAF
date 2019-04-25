@@ -44,8 +44,8 @@ $data=array();
 while($row=sqlsrv_fetch_array($query)){
     $subdata=array();
     $subdata[] = '
-    <a href="../../Views/Organization_levels/edit.php?id='.$row[0].'"><i class="la la-pencil-square-o" style="color:#0f1733"; font-size:30px;" id="'.$row[0].'"></i></a>
-    <a href=""><i class="la la-trash-o" style="color:#0f1733"; font-size:30px;" onclick="deleteOrganizationLevls('.$row[0].')" id="'.$row[0].'"></i></a>
+    <a href="../../Views/OrganizationsSubUnit/edit.php?id='.$row[0].'"><i class="la la-pencil-square-o" style="color:#0f1733"; font-size:30px;" id="'.$row[0].'"></i></a>
+    <a href=""><i class="la la-trash-o" style="color:#0f1733"; font-size:30px;" onclick="deleteOrganizationsSubUnit('.$row[0].')" id="'.$row[0].'"></i></a>
     ';//id
     $subdata[]=$row[0]; 
     $subdata[]=$row[1]; //OrgSubUnitName

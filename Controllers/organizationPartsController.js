@@ -115,22 +115,22 @@ function getIdForEdit() {
 // getData จาก db เพื่อนำมาใช้มา input value
 
 function UpdateOrganizationParts() {
-    var OrganizationPartsId = $("#OrganizationPartsId").val();
-    var OrgTypeName = $("#OrgTypeName").val();
+    var id = $("#id").val();
+    var OrgPartName = $("#OrgPartName").val();
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
         var isActive = "1";
     } else {
         var isActive = "0";
     }
-    // console.log(originsId + " " + originName + " " + originAbbrName + " " + isActive);
+    // console.log(id + " " + OrgPartName + " " + isActive);
 
     $.ajax({
         type: "POST",
         url: "../../Model/OrganizationParts/UpdateOrganizationParts.php",
         data: {
-            OrganizationPartsId: OrganizationPartsId,
-            OrgTypeName: OrgTypeName,
+            id: id,
+            OrgPartName: OrgPartName,
             isActive: isActive
         },
         success: function(data) {

@@ -7,20 +7,18 @@ require_once "../../config.php";
 
 if (!empty($_POST)) {
 
-    $OrganizationPartsId = $_POST['OrganizationPartsId'];
-    $OrganizationPartsName = $_POST['OrganizationPartsName'];
-    $OrganizationPartsAbbrName = $_POST['OrganizationPartsAbbrName'];
+    $id = $_POST['id'];
+    $OrgPartName = $_POST['OrgPartName'];
     $isActive = $_POST['isActive'];
 
     // date_default_timezone_set('Asia/Bangkok');
     // echo date("Y-m-d h:i:sa");
 
 
-    $sql = " UPDATE organization_part
-    SET organization_part_name='$OrganizationPartsName', organization_part_abbr_name='$OrganizationPartsAbbrName', IsActive=$isActive
-    WHERE id=$OrganizationPartsId;
-     ";
-    // echo $sql;
+    $sql = " UPDATE OrgPart
+    SET  OrgPartName='$OrgPartName', OrgPartActive=$isActive 
+     where OrgPartId=$id ";
+    echo $sql;
 
     
 

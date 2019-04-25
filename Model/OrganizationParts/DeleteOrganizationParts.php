@@ -13,8 +13,7 @@ if (!empty($_POST)) {
     // date_default_timezone_set('Asia/Bangkok');
     // echo date("Y-m-d h:i:sa");
 
-
-    $sql = " DELETE FROM organization_part WHERE id=$organizationPartsId ";
+    $sql = " DELETE FROM OrgPart WHERE OrgPartId = $organizationPartsId ";
     // echo $sql;
 
     $query = sqlsrv_query($conn, $sql);

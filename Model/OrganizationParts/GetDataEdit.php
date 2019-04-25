@@ -11,22 +11,19 @@ $IsActive = "";
 // echo $OrgPartID ;
 
 if(isset($id)){
-    $sql = " SELECT OrgPartId, OrgPartName, OrgPartActive, OrgPartCreateBy, OrgPartCreateDate, OrgPartUpdateBy, OrgPartUpdateDate
+    $sql = " SELECT OrgPartId, OrgPartName, OrgPartActive
     FROM OrgPart
     where OrgPartId = $id ;";
     // echo $sql;
     $query = sqlsrv_query($conn, $sql);
 
-    if($query){ echo "query";}else{echo "not query";}
+    // if($query){ echo "query";}else{echo "not query";}
 
     while ($row = sqlsrv_fetch_array($query)) {
         $id = $row['OrgPartId'];
         $OrgPartName = $row['OrgPartName'];
         $IsActive = $row['OrgPartActive'];
-        // echo $id;
-        // echo $originName;
-        // echo $originAbbrName;
-        // echo $IsActive;
+     
     }
 
     $r=array("id"=>$id,"OrgPartName"=>$OrgPartName,"IsActive"=>$IsActive);
