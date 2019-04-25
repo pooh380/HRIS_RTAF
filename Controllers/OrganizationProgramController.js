@@ -55,19 +55,27 @@
                 orgLevelId: orgLevelId
             },
             success: function(data) {
-                $("#code").val(data.id);
-                $("#orglistCode").val(data.orglistCode);
-                $("#divisionID").val(data.divisionID);
-                $("#orgListAbbr").val(data.orgListAbbr);
-                $("#orgListLong").val(data.orgListLong);
-                $("#orgListAbbrLong").val(data.orgListAbbrLong);
-                $("#orgListAbbrLongAbbr").val(data.orgListAbbrLongAbbr);
-                $("#startDate").val(data.startDate);
-                $('#orgTypeList').append('<option value="' + data.orgType + '" selected="selected">' + data.orgType + '</option>');
-                $('#orgListName').append('<option value="' + data.orgListName + '" selected="selected">' + data.orgListName + '</option>');
-                $('#orgPartName').append('<option value="' + data.orgPartName + '" selected="selected">' + data.orgPartName + '</option>');
-                $('#orgaLevelName').append('<option value="' + data.orgaLevelName + '" selected="selected">' + data.orgaLevelName + '</option>');
-                $('#divisionAbbrName').append('<option value="' + data.divisionAbbrName + '" selected="selected">' + data.divisionAbbrName + '</option>');
+                $("#orgStrucId").val(data.orgStrucId);
+                $('#orgTypeName').append('<option value="' + data.orgTypeId + '" selected="selected">' + data.orgTypeName + '</option>');
+                $("#orgSubUnitId").val(data.orgSubUnitId);
+                $('#orgPartName').append('<option value="' + data.orgPartId + '" selected="selected">' + data.orgPartName + '</option>');
+                // $("#orgPartName").val(data.orgPartName);
+                $('#orgLevelName').append('<option value="' + data.orgLevelId + '" selected="selected">' + data.orgLevelName + '</option>');
+                $("#orgSubUnitName").val(data.orgSubUnitName);
+
+
+
+                // $("#orglistCode").val(data.orgLevelName);
+                // $("#divisionID").val(data.orgPartName);
+                // $("#orgListAbbr").val(data.orgGroupTypeName);
+                // $("#orgListLong").val(data.orgTypeName);
+                // $("#orgListAbbrLong").val(data.orgSubUnitName);
+                // $("#orgListAbbrLongAbbr").val(data.orgStrucMain);
+                // $("#startDate").val(data.orgStrucSubMain);
+                // $('#orgTypeList').append('<option value="' + data.orgStrucPath + '" selected="selected">' + data.orgStrucPath + '</option>');
+                // $('#orgListName').append('<option value="' + data.orgStrucName + '" selected="selected">' + data.orgStrucName + '</option>');
+                // $('#orgPartName').append('<option value="' + data.orgPartName + '" selected="selected">' + data.orgPartName + '</option>');
+                // $('#orgaLevelName').append('<option value="' + data.orgStrucActive + '" selected="selected">' + data.orgStrucActive + '</option>');
 
                 // console.log(data);
             },
