@@ -82,10 +82,10 @@
                                                           <select name="orgCategoryName" id="orgCategoryName" class="select2 form-control">
                                                               <option value="">กรุณาเลือกประเภทโครงสร้าง</option>
                                                               <?php
-                                                                $sql = " SELECT id, organization_category_name FROM organization_category; ";
+                                                                $sql = " SELECT OrgTypeId, OrgTypeName FROM OrgGroupType; ";
                                                                 $result = sqlsrv_query($conn, $sql);
                                                                 while ($row = sqlsrv_fetch_array($result)) {
-                                                                    echo "<option value='" . $row['id'] . "'>" . $row['organization_category_name'] . "</option>";
+                                                                    echo "<option value='" . $row['OrgTypeId'] . "'>" . $row['OrgTypeName'] . "</option>";
                                                                 }
                                                                 ?>
                                                           </select>
