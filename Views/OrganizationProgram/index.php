@@ -42,7 +42,6 @@
 
         // console.log("ready");
         var orgTypeId = $('#orgTypeList :selected').val();
-        // alert(a);
         $("#orgTypeId").val(orgTypeId);
 
         // alert("(ALERT: input 1) ช่องโครงสร้าง -> OrganizationTypeId: "+orgTypeId+" เอา "+orgTypeId+ " ไปหาใน Organization List เพื่อให้ได้ dropdown ช่องสังกัด");
@@ -66,7 +65,6 @@
         $(function() {
             $('#orgTypeList').change(function() {
                 var orgTypeId = $('#orgTypeList :selected').val();
-                // alert(values);
                 $("#orgTypeId").val(orgTypeId);
 
                 $.ajax({
