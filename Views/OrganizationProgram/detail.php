@@ -79,8 +79,7 @@
               }
           };
           var orgTypeId = getUrlParameter('orgTypeId');
-          //   var orgListId = getUrlParameter('orgListId');
-          var orgListId = getUrlParameter('orgListId');
+          var orgStrucId = getUrlParameter('orgStrucId');
 
           $(document).ajaxStart(function() {
               $(".modal").show();
@@ -90,7 +89,7 @@
               $(".modal").hide();
               $("#orgTypeId").val(orgTypeId);
               //   $("#orgListId").val(orgListId);
-              $("#orgListId").val(orgListId);
+              $("#orgStrucId").val(orgStrucId);
           });
 
 
@@ -99,14 +98,13 @@
               url: "../../Model/OrganizationProgram/getDetailValue.php",
               data: {
                   orgTypeId: orgTypeId,
-                  //   orgListId: orgListId
-                  orgListId: orgListId
+                  orgStrucId: orgStrucId
               },
               success: function(data) {
                   // console.log(data);
                   $('#list-group-tags').append(data);
-                  var orgListId = $('#orgListList :selected').val();
-                  $("#orgListId").val(orgListId);
+                  var orgStrucId = $('#orgListList :selected').val();
+                  $("#orgStrucId").val(orgStrucId);
               },
               error: function(error) {
                   // console.log(error);
@@ -121,9 +119,9 @@
               <div class="content-header row">
                   <div class="content-header-left col-12 mb-2">
 
-                      <input type="hidden" id="orgTypeId" name="orgTypeId">
+                      <input type="text" id="orgTypeId" name="orgTypeId">
 
-                      <input type="hidden" id="orgListId" name="orgListId">
+                      <input type="text" id="orgStrucId" name="orgStrucId">
 
                       <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                           <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -196,22 +194,21 @@
                                               </style>
 
 
-                                              <ul class="list-group">
+                                              <!-- <ul class="list-group">
                                                   <li class="list-group-item">
                                                       <s class="vl"></s>
                                                       <span style="font-weight: bold;font-size: 12px;"> กองทัพอากาศ</span>
                                                   </li>
                                               </ul>
+                                               -->
                                               <ul class="list-group" id="list-group-tags" align="left">
-
                                                   <a style="margin-left: 15px; ">
                                                       <li class="list-group-item">
-                                                          <s class="vl"></s>
+                                                          <!-- <s class="vl"></s> -->
                                                           <!-- <span style="font-weight: bold;font-size: 12px;" ><?php echo $result['division_name']; ?></span> -->
-                                                          <span style="font-weight: bold;font-size: 12px;" onclick="showDetail()"> &nbsp; กรมกำลังพลทาหารอากศ 0</span>
+                                                          <!-- <span style="font-weight: bold;font-size: 12px;" onclick="showDetail()"> &nbsp; กรมกำลังพลทาหารอากศ 0</span> -->
                                                       </li>
                                                   </a>
-                                                  
                                               </ul>
                                               <!-- <div class="skin-flat">
                                                       divนี้ทำให้ เป็นcheckbox css

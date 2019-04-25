@@ -1,6 +1,6 @@
     function getOrg() {
         var orgTypeId = $('#orgTypeList :selected').val();
-        var orgListId = $('#orgListList :selected').val();
+        var orgStrucId = $('#orgListList :selected').val();
         // var orgId = $('#orgList :selected').val();
 
         // alert("เอา OrganizationTypeId: " + orgTypeId + " ช่องโครงสร้างและ OrganizationListId: " + orgListId + "ช่องสังกัดไปหาโครงสร้างส่วนราชการว่ามีส่วนไหนบ้างที่มี OrganizationTypeId และ OrganizationListId ใน Table organization_struc");
@@ -10,12 +10,12 @@
 
         $.post("../OrganizationProgram/detail.php", {
             orgTypeId: orgTypeId,
-            orgListId: orgListId
+            orgStrucId: orgStrucId
                 // orgId: orgId,
 
         }).done(function(data) {
             // console.log(data);
-            window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgListId=" + orgListId;
+            window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgStrucId=" + orgStrucId;
             // window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgId=" + orgId;
 
         }).fail(function(err) {
@@ -30,9 +30,11 @@
         // alert(orgTypeId + " " + orgListId);
     }
 
-    function showDetail(divisionId, orgLevelId, orgStucId) {
-        var orgTypeId = $("#orgTypeId").val();
-        var orgListId = $("#orgListId").val();
+    function showDetail(orgStucId, orgLevelId) {
+
+        alert("orgStucId:" + orgStucId + " orgLevelId:" + orgLevelId);
+        // var orgTypeId = $("#orgTypeId").val();
+        // var orgListId = $("#orgListId").val();
 
         // alert("นำค่า divisionId: " + divisionId + " OrganizationLevelId: " + orgLevelId + " OrganizationStucId: " + orgStucId + " นำไปค้นหาใน OrganizationList เพื่อที่จะนำไปโชว์ค่าขวา");
         // alert(" SQL ที่นำค่าไปค้นหา: SELECT * , organization_type.organization_type_name,organization_part.organization_part_name,organization_level.organization_level_name , organization_id , division.division_abbr_name" +
@@ -49,11 +51,8 @@
             dataType: "json",
             url: "../../Model/OrganizationProgram/getTemplateValue.php",
             data: {
-                orgLevelId: orgLevelId,
-                orgTypeId: orgTypeId,
-                orgListId: orgListId,
-                divisionId: divisionId,
-                orgStucId: orgStucId
+                orgStucId: orgStucId,
+                orgLevelId: orgLevelId
             },
             success: function(data) {
                 $("#code").val(data.id);

@@ -6,17 +6,15 @@ require_once "../../config.php";
 
 $orgTypeId = isset($_POST['orgTypeId']) ? $_POST['orgTypeId'] : "";
 // $orgListId = isset($_POST['orgListId']) ? $_POST['orgListId'] : "";
-$orgListId = isset($_POST['orgListId']) ? $_POST['orgListId'] : "";
+$orgStrucId = isset($_POST['orgStrucId']) ? $_POST['orgStrucId'] : "";
 
-// $sql = " SELECT division_id,division.division_name, organization_struc.id , ORG_PATH , ORG_LEVEL
+// $sql = " SELECT division_id,division.division_name, organization_struc.id , ORG_PATH , ORG_LEV_PK , ORG_LEVEL
 // FROM organization_struc
 // JOIN  division ON organization_struc.division_id = division.id
 // where ORG_PATH LIKE N'0/$orgListId%' AND ORG_TYPE_PK = $orgTypeId;";
 
-$sql = " SELECT division_id,division.division_name, organization_struc.id , ORG_PATH , ORG_LEV_PK , ORG_LEVEL
-FROM organization_struc
-JOIN  division ON organization_struc.division_id = division.id
-where ORG_PATH LIKE N'0/$orgListId%' AND ORG_TYPE_PK = $orgTypeId;";
+$sql = " SELECT OrgStrucId, OrgLevelId, OrgPartId, OrgGroupTypeId, OrgTypeId, OrgStrucMain, OrgStrucSubMain, OrgStrucName, OrgStrucActive
+FROM OrgStruc; ";
 
 
 $params = array();
@@ -31,10 +29,9 @@ if ($rows > 0) {
 
         <a style="margin-left: 15px; ">
             <li class="list-group-item" >
-                <s class="vl"></s> <input type="checkbox" value="<?php echo $result['division_id'] ;?>">
-                <!-- <span style="font-weight: bold;font-size: 12px;" ><?php echo $result['division_name'] ;?></span> -->
-                <span style="font-weight: bold;font-size: 12px;" onclick="showDetail(<?php echo $result['division_id'] ;?>,<?php echo $result['ORG_LEV_PK'] ;?>,<?php echo $result['id'] ;?>)" >
-                <?php echo $result['division_name'] ; echo " ";echo $result['ORG_LEV_PK'] ;?></span>
+                <s class="vl"></s> <input type="checkbox" value="<?php echo $result['OrgStrucId'] ;?>">
+                <span style="font-weight: bold;font-size: 12px;" onclick="showDetail(<?php echo $result['OrgStrucId'] ;?>,<?php echo $result['OrgLevelId'] ;?>)" >
+                <?php echo $result['OrgStrucName'] ; echo " ";echo $result['OrgLevelId'] ;?></span>
             </li>
         </a>
 
