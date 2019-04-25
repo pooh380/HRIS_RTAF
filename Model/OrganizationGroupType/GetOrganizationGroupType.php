@@ -7,31 +7,31 @@ require_once "../../config.php";
 
 $request = $_REQUEST;
 $col = array(
-    0   =>  'OrgTypeId',
-    1   =>  'OrgTypName',
-    2   =>  'OrgTypeActive',
+    0   =>  'OrgGroupTypeId',
+    1   =>  'OrgGroupTypeName',
+    2   =>  'OrgGroupTypeActive',
 );
 
-$sql = " SELECT OrgTypeId, OrgTypeName, OrgTypeActive, OrgTypeCreateBy, OrgTypeCreateDate, OrgTypeUpdateBy, OrgTypeUpdateDate
-FROM OrgGroupType; ";
+$sql = " SELECT OrgGroupTypeId, OrgGroupTypeName, OrgGroupTypeActive, OrgGroupTypeCreateBy, OrgGroupTypeCreateDate, OrgGroupTypeUpdateBy, OrgGroupTypeUpdateDate
+FROM OrgGroupType ;";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
-
 $totalData = sqlsrv_num_rows($query);
 $totalFilter = $totalData;
 
 
-$sql = " SELECT OrgTypeId, OrgTypName, OrgTypeActive, OrgTypeCreateBy, OrgTypeCreateDate, OrgTypeUpdateBy, OrgTypeUpdateDate
-FROM OrgGroupType WHERE 1=1 ";
+$sql = "SELECT OrgGroupTypeId, OrgGroupTypeName, OrgGroupTypeActive, OrgGroupTypeCreateBy, OrgGroupTypeCreateDate, OrgGroupTypeUpdateBy, OrgGroupTypeUpdateDate
+FROM OrgGroupType WHERE 1=1 ;";
+// echo $sql;
 if (!empty($request['search']['value'])) {
-    $sql .= " AND (OrgTypName Like N'%" . $request['search']['value'] . "%'); ";
+    $sql .= " AND (OrgGroupTypeName Like N'%" . $request['search']['value'] . "%'); ";
     $query = sqlsrv_query($conn, $sql, $params, $options);
     $totalData = sqlsrv_num_rows($query);
 }
 
-
 // echo $sql;
+
 $data = array();
 
 while ($row = sqlsrv_fetch_array($query)) {

@@ -8,6 +8,7 @@ require_once "../../config.php";
 if (!empty($_POST)) {
 
     $id = $_POST['id'];
+    // echo $id;
     $orgGroupTypeName = $_POST['orgGroupTypeName'];
     $isActive = $_POST['isActive'];
 
@@ -16,10 +17,10 @@ if (!empty($_POST)) {
 
 
     $sql = " UPDATE OrgGroupType
-    SET  OrgTypeName=' $orgGroupTypeName', OrgTypeActive= $isActive
-    WHERE OrgTypeId=$id ;";
-    // echo $sql;
-
+    SET  OrgGroupTypeName=' $orgGroupTypeName', OrgGroupTypeActive= $isActive
+    WHERE OrgGroupTypeId= $id ;";
+    echo $sql;
+   
     $query = sqlsrv_query($conn, $sql);
 
     if ($query) {

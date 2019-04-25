@@ -127,7 +127,7 @@ function UpdateorganizationGroupType() {
                 showConfirmButton: false,
                 timer: 2000
             });
-            // setTimeout("window.open('../OrganizationGroupType/index.php', '_self');", 2000);
+            setTimeout("window.open('../OrganizationGroupType/index.php', '_self');", 2000);
         },
         error: function(error) {
             // alert(error);

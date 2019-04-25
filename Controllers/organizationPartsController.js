@@ -23,9 +23,7 @@ function getOrganizationParts() {
     });
 }
 
-
 function insertOrganizationParts() {
-
     var OrgPartName = $("#OrgPartName").val();
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {

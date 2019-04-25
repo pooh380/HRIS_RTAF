@@ -14,9 +14,7 @@ if(isset($id)){
     $sql = " SELECT OrgPartId, OrgPartName, OrgPartActive, OrgPartCreateBy, OrgPartCreateDate, OrgPartUpdateBy, OrgPartUpdateDate
     FROM OrgPart
     where OrgPartId = $id ;";
-
     // echo $sql;
-
     $query = sqlsrv_query($conn, $sql);
 
     if($query){ echo "query";}else{echo "not query";}

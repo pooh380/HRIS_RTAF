@@ -22,6 +22,8 @@ if (!empty($_POST)) {
      ";
     // echo $sql;
 
+    
+
     $query = sqlsrv_query($conn, $sql);
 
     if ($query) {
