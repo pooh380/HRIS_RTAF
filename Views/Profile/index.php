@@ -50,7 +50,6 @@
                                                   <li class="breadcrumb-item">ข้อมูลตำแหน่ง</a></li>
                                                   <li class="breadcrumb-item active" aria-current="page">
                                                       ข้อมูลประวัติราชการ</li>
-
                                               </ol>
                                           </nav>
 
@@ -89,7 +88,7 @@
                                               </div>
                                               <!--/ profile -->
                                               <div class="profile_head"
-                                                  style="background-color:#FFE4C4;height: auto;width: 100%;margin-left:0px;padding:1%;">
+                                                  style="height: auto;width: 100%;margin-left:0px;padding:1%;">
                                                   <h3>ประวัติข้าราชการ</h3>
                                               
                                                   <br>
@@ -132,8 +131,8 @@
                                                   </div>
                                                   <br>
                                                   <div id="how-to" class="card">
-            <div class="card-header" style="">
-                <h4 class="card-title">พล.อ.เลย์รสสาหร่าย สองถุง     หมายเลขประจำตัว  332124562455</h4>
+            <div class="card-header" style="background-color:#f4f5fa;color:whitesmoke;">
+                <h4 class="card-title">พล.อ.เลย์รสสาหร่าย สองถุง     หมายเลขประจำตัว 332124562455</h4>
                 <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                 <div class="heading-elements">
                     <ul class="list-inline mb-0">
