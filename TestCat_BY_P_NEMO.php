@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>nestedSortable jQuery Plugin</title>
-    <meta content="Demo page of the nestedSortable jQuery Plugin" name=
-    "description">
-    <meta content="Manuele J Sarfatti" name="author">
-    <style type="text/css">
+	<meta charset="utf-8">
+	<title>nestedSortable jQuery Plugin</title>
+	<meta content="Demo page of the nestedSortable jQuery Plugin" name="description">
+	<meta content="Manuele J Sarfatti" name="author">
+	<style type="text/css">
 		html {
 			background-color: #eee;
 		}
-		
+
 		body {
 			-webkit-border-radius: 10px;
 			-moz-border-radius: 10px;
@@ -26,56 +26,59 @@
 			-mox-box-shadow: 1px 1px 8px #444;
 			-webkit-box-shadow: 1px -1px 8px #444;
 		}
-		
-		a,a:visited {
+
+		a,
+		a:visited {
 			color: #4183C4;
 			text-decoration: none;
 		}
-		
+
 		a:hover {
 			text-decoration: underline;
 		}
-		
-		pre,code {
+
+		pre,
+		code {
 			font-size: 12px;
 		}
-		
+
 		pre {
 			width: 100%;
 			overflow: auto;
 		}
-		
+
 		small {
 			font-size: 90%;
 		}
-		
+
 		small code {
 			font-size: 11px;
 		}
-		
+
 		.placeholder {
 			outline: 1px dashed #4183C4;
 		}
-		
+
 		.mjs-nestedSortable-error {
 			background: #fbe3e4;
 			border-color: transparent;
 		}
-		
+
 		#tree {
 			width: 550px;
 			margin: 0;
 		}
-		
+
 		ol {
 			max-width: 450px;
 			padding-left: 25px;
 		}
-		
-		ol.sortable,ol.sortable ol {
+
+		ol.sortable,
+		ol.sortable ol {
 			list-style-type: none;
 		}
-		
+
 		.sortable li div {
 			border: 1px solid #d4d4d4;
 			-webkit-border-radius: 3px;
@@ -86,54 +89,55 @@
 			margin: 0;
 			padding: 3px;
 		}
-		
+
 		li.mjs-nestedSortable-collapsed.mjs-nestedSortable-hovering div {
 			border-color: #999;
 		}
-		
-		.disclose, .expandEditor {
+
+		.disclose,
+		.expandEditor {
 			cursor: pointer;
 			width: 20px;
 			display: none;
 		}
-		
-		.sortable li.mjs-nestedSortable-collapsed > ol {
+
+		.sortable li.mjs-nestedSortable-collapsed>ol {
 			display: none;
 		}
-		
-		.sortable li.mjs-nestedSortable-branch > div > .disclose {
+
+		.sortable li.mjs-nestedSortable-branch>div>.disclose {
 			display: inline-block;
 		}
-		
+
 		.sortable span.ui-icon {
 			display: inline-block;
 			margin: 0;
 			padding: 0;
 		}
-		
+
 		.menuDiv {
 			background: #EBEBEB;
 		}
-		
+
 		.menuEdit {
 			background: #FFF;
 		}
-		
+
 		.itemTitle {
 			vertical-align: middle;
 			cursor: pointer;
 		}
-		
+
 		.deleteMenu {
 			float: right;
 			cursor: pointer;
 		}
-		
+
 		h1 {
 			font-size: 2em;
 			margin-bottom: 0;
 		}
-		
+
 		h2 {
 			font-size: 1.2em;
 			font-weight: 400;
@@ -141,49 +145,53 @@
 			margin-top: .2em;
 			margin-bottom: 1.5em;
 		}
-		
+
 		h3 {
 			font-size: 1em;
 			margin: 1em 0 .3em;
 		}
-		
-		p,ol,ul,pre,form {
+
+		p,
+		ol,
+		ul,
+		pre,
+		form {
 			margin-top: 0;
 			margin-bottom: 1em;
 		}
-		
+
 		dl {
 			margin: 0;
 		}
-		
+
 		dd {
 			margin: 0;
 			padding: 0 0 0 1.5em;
 		}
-		
+
 		code {
 			background: #e5e5e5;
 		}
-		
+
 		input {
 			vertical-align: text-bottom;
 		}
-		
+
 		.notice {
 			color: #c33;
 		}
-    </style>
+	</style>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
 	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="jquery.mjs.nestedSortable.js"></script>
-	
+	<script type="text/javascript" src="./Asset/js/jquery.mjs.nestedSortable.js"></script>
+
 	<script>
-		$().ready(function(){
+		$().ready(function() {
 			var ns = $('ol.sortable').nestedSortable({
 				forcePlaceholderSize: true,
 				handle: 'div',
-				helper:	'clone',
+				helper: 'clone',
 				items: 'li',
 				opacity: .6,
 				placeholder: 'placeholder',
@@ -195,166 +203,195 @@
 				isTree: true,
 				expandOnHover: 700,
 				startCollapsed: false,
-				change: function(){
+				change: function() {
 					console.log('Relocated item');
 				}
 			});
-			
-			$('.expandEditor').attr('title','Click to show/hide item editor');
-			$('.disclose').attr('title','Click to show/hide children');
+
+			$('.expandEditor').attr('title', 'Click to show/hide item editor');
+			$('.disclose').attr('title', 'Click to show/hide children');
 			$('.deleteMenu').attr('title', 'Click to delete item.');
-		
+
 			$('.disclose').on('click', function() {
 				$(this).closest('li').toggleClass('mjs-nestedSortable-collapsed').toggleClass('mjs-nestedSortable-expanded');
 				$(this).toggleClass('ui-icon-plusthick').toggleClass('ui-icon-minusthick');
 			});
-			
-			$('.expandEditor, .itemTitle').click(function(){
+
+			$('.expandEditor, .itemTitle').click(function() {
 				var id = $(this).attr('data-id');
-				$('#menuEdit'+id).toggle();
+				$('#menuEdit' + id).toggle();
 				$(this).toggleClass('ui-icon-triangle-1-n').toggleClass('ui-icon-triangle-1-s');
 			});
-			
-			$('.deleteMenu').click(function(){
+
+			$('.deleteMenu').click(function() {
 				var id = $(this).attr('data-id');
-				$('#menuItem_'+id).remove();
+				$('#menuItem_' + id).remove();
 			});
-				
-			$('#serialize').click(function(){
+
+			$('#serialize').click(function() {
 				serialized = $('ol.sortable').nestedSortable('serialize');
-				$('#serializeOutput').text(serialized+'\n\n');
+				$('#serializeOutput').text(serialized + '\n\n');
 			})
-	
-			$('#toHierarchy').click(function(e){
-				hiered = $('ol.sortable').nestedSortable('toHierarchy', {startDepthCount: 0});
+
+			$('#toHierarchy').click(function(e) {
+				hiered = $('ol.sortable').nestedSortable('toHierarchy', {
+					startDepthCount: 0
+				});
 				hiered = dump(hiered);
 				(typeof($('#toHierarchyOutput')[0].textContent) != 'undefined') ?
-				$('#toHierarchyOutput')[0].textContent = hiered : $('#toHierarchyOutput')[0].innerText = hiered;
+				$('#toHierarchyOutput')[0].textContent = hiered: $('#toHierarchyOutput')[0].innerText = hiered;
 			})
-	
-			$('#toArray').click(function(e){
-				arraied = $('ol.sortable').nestedSortable('toArray', {startDepthCount: 0});
+
+			$('#toArray').click(function(e) {
+				arraied = $('ol.sortable').nestedSortable('toArray', {
+					startDepthCount: 0
+				});
 				arraied = dump(arraied);
 				(typeof($('#toArrayOutput')[0].textContent) != 'undefined') ?
-				$('#toArrayOutput')[0].textContent = arraied : $('#toArrayOutput')[0].innerText = arraied;
+				$('#toArrayOutput')[0].textContent = arraied: $('#toArrayOutput')[0].innerText = arraied;
 			});
-		});			
-	
-		function dump(arr,level) {
+		});
+
+		function dump(arr, level) {
 			var dumped_text = "";
-			if(!level) level = 0;
-	
+			if (!level) level = 0;
+
 			//The padding given at the beginning of the line.
 			var level_padding = "";
-			for(var j=0;j<level+1;j++) level_padding += "    ";
-	
-			if(typeof(arr) == 'object') { //Array/Hashes/Objects
-				for(var item in arr) {
+			for (var j = 0; j < level + 1; j++) level_padding += "    ";
+
+			if (typeof(arr) == 'object') { //Array/Hashes/Objects
+				for (var item in arr) {
 					var value = arr[item];
-	
-					if(typeof(value) == 'object') { //If it is an array,
+
+					if (typeof(value) == 'object') { //If it is an array,
 						dumped_text += level_padding + "'" + item + "' ...\n";
-						dumped_text += dump(value,level+1);
+						dumped_text += dump(value, level + 1);
 					} else {
 						dumped_text += level_padding + "'" + item + "' => \"" + value + "\"\n";
 					}
 				}
 			} else { //Strings/Chars/Numbers etc.
-				dumped_text = "===>"+arr+"<===("+typeof(arr)+")";
+				dumped_text = "===>" + arr + "<===(" + typeof(arr) + ")";
 			}
 			return dumped_text;
 		}
-		
+
 
 		$(function() {
-			$('#add').on('click',function(){
+			$('#add').on('click', function() {
 				//alert($('#demo').find('li').first().html());
 				var uname = $('#unitname').val();
 				//alert(uname)
-				if(uname!=''){
-			var htmi = '<li class="mjs-nestedSortable-leaf" id="menuItem_1" style="display: list-item;"><div class="menuDiv"><span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick"><span></span></span><span title="Click to show/hide item editor" class="expandEditor ui-icon ui-icon-triangle-1-n" data-id="7"><span></span></span><span><span class="itemTitle" data-id="7">f</span><span title="Click to delete item." class="deleteMenu ui-icon ui-icon-closethick" data-id="1"><span></span></span></span><div class="menuEdit hidden" id="menuEdit1">'+uname+'</div></div></li>';
-				$('#demo ol:first').prepend(htmi);
+				if (uname != '') {
+					var htmi = '<li class="mjs-nestedSortable-leaf" id="menuItem_1" style="display: list-item;"><div class="menuDiv"><span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick"><span></span></span><span title="Click to show/hide item editor" class="expandEditor ui-icon ui-icon-triangle-1-n" data-id="7"><span></span></span><span><span class="itemTitle" data-id="7">f</span><span title="Click to delete item." class="deleteMenu ui-icon ui-icon-closethick" data-id="1"><span></span></span></span><div class="menuEdit hidden" id="menuEdit1">' + uname + '</div></div></li>';
+					$('#demo ol:first').prepend(htmi);
 				}
 			})
 		});
-		
 	</script>
 </head>
 
 <body>
-    <header>
-        <h1>จัดการโครงสร้าง</h1>
-    </header>
+	<header>
+		<h1>จัดการโครงสร้าง</h1>
+	</header>
 
-    <section>
+	<!-- <section>
         <p>
           <label for="unitname">Text Field:</label>
           <input type="text" name="unitname" id="unitname">
           <input type="button" name="add" id="add" value="เพิ่มข้อมูล">
         </p>
-    </section><!-- END section -->
+	</section> -->
+	<!-- END section -->
 
-    <section id="demo">
+	<?php
+	require_once './config.php';
+	?>
+
+	<section id="demo">
 		<ol class="sortable ui-sortable mjs-nestedSortable-branch mjs-nestedSortable-expanded">
-<!--
-			
-		  <li style="display: list-item;" class="mjs-nestedSortable-leaf" id="menuItem_3">
-					<div class="menuDiv">
-						<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick">
-				<span></span>
 
-						</span>
-						<span title="Click to show/hide item editor" data-id="3" class="expandEditor ui-icon ui-icon-triangle-1-n">
-				<span></span>
+			<?php
 
-						</span>
-						<span>
-				<span data-id="3" class="itemTitle">f</span>
+			$sql = " SELECT OrgStrucId, OrgLevelId, OrgPartId, OrgGroupTypeId, OrgTypeId, OrgStrucMain, OrgStrucSubMain, OrgStrucName, OrgStrucActive FROM OrgStruc; ";
 
-						<span title="Click to delete item." data-id="7" class="deleteMenu ui-icon ui-icon-closethick">
-				<span></span>
+			$params = array();
+			$options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
+			$query = sqlsrv_query($conn, $sql, $params, $options);
 
-						</span>
-						</span>
-						<div id="menuEdit7" class="menuEdit hidden">
-							<p>
-								Content or form, or nothing here. Whatever you want.
-							</p>
+			$rows = sqlsrv_num_rows($query);
+
+			if ($rows > 0) {
+
+				while ($result = sqlsrv_fetch_array($query)) { ?>
+
+					<!-- <a style="margin-left: 15px; ">
+							<li class="list-group-item" >
+								<s class="vl"></s> <input type="checkbox" value="<?php echo $result['OrgStrucId']; ?>">
+								<span style="font-weight: bold;font-size: 12px;" onclick="showDetail(<?php echo $result['OrgStrucId']; ?>,<?php echo $result['OrgLevelId']; ?>)" >
+								<?php echo $result['OrgStrucName'];
+								echo " ";
+								echo $result['OrgLevelId']; ?></span>
+							</li>
+						</a> -->
+
+					<li style="display: list-item;" class="mjs-nestedSortable-leaf" id="menuItem_3">
+						<div class="menuDiv">
+							<!-- <span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick">
+								<span></span>
+
+							</span>
+							<span title="Click to show/hide item editor" data-id="3" class="expandEditor ui-icon ui-icon-triangle-1-n">
+								<span></span>
+
+							</span>
+							<span>
+								<span data-id="3" class="itemTitle">f</span>
+
+								<span title="Click to delete item." data-id="7" class="deleteMenu ui-icon ui-icon-closethick">
+									<span></span>
+
+								</span>
+							</span> -->
+							<div id="menuEdit7" class="menuEdit hidden">
+								<p>
+									<?php echo $result['OrgStrucName'];
+									echo " ";
+									echo $result['OrgLevelId']; ?></span>
+								</p>
+							</div>
 						</div>
-					</div>
-		  </li>-->
-      </ol>
-		   </li>
-	   </ol>
+						
+					</li>
 
-        <h3>Try the custom methods:</h3>
 
-        <p><br>
-        <input id="serialize" name="serialize" type="submit" value=
-        "Serialize"></p>
-        <pre id="serializeOutput">
+				<?php }
+		} else {
+			echo "ไม่มีฐานะหน่วยในโครงสร้าง";
+		}
+
+
+		?>
+		</ol>
+		</li>
+		</ol>
+
+		<h3>Try the custom methods:</h3>
+
+		<p><br>
+			<input id="serialize" name="serialize" type="submit" value="Serialize"></p>
+		<pre id="serializeOutput">
 		</pre>
 
-        <p><input id="toArray" name="toArray" type="submit" value=
-        "To array"></p>
-        <pre id="toArrayOutput">
+		<p><input id="toArray" name="toArray" type="submit" value="To array"></p>
+		<pre id="toArrayOutput">
 		</pre>
 
-        <p><input id="toHierarchy" name="toHierarchy" type="submit" value=
-        "To hierarchy"></p>
-        <pre id="toHierarchyOutput">
+		<p><input id="toHierarchy" name="toHierarchy" type="submit" value="To hierarchy"></p>
+		<pre id="toHierarchyOutput">
 		</pre>
-
-        <p><em>Note: This demo has the <code>maxLevels</code> option set to '4'.</em></p>
-    </section><!-- END #demo -->
-
-    <section id="license">
-        <h4>License</h4>
-
-        <p>This work is licensed under the MIT License.<br>
-        Which means you can do pretty much whatever you want with it.</p>
-
-        <p>&copy; 2010&dash;2014 Manuele J Sarfatti</p>
-    </section><!-- END #documentation -->
 </body>
+
 </html>

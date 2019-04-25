@@ -223,6 +223,8 @@
                       <!-- ---------------------- -->
                       <!-- /Ratings sample -->
 
+                     
+
                       <!-- 1 -->
                       <div class="col-lg-8">
                           <div class="card-header mb-1" style="background-color:#0f1733; color:white; font-weight: bold;font-size: 18px">
