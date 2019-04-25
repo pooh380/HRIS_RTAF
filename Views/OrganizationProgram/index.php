@@ -122,12 +122,11 @@
                                                             <label id="orgType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">โครงสร้าง:</label>
 
                                                             <select name="orgTypeList" id="orgTypeList" class="select2 form-control">
-                                                                <option value="21">อัตรา ทอ. 52</option>
                                                                 <?php
-                                                                $sql = " SELECT id, organization_type_name FROM organization_type; ";
+                                                                $sql = " SELECT OrgTypeId, OrgTypeName FROM OrgType; ";
                                                                 $result = sqlsrv_query($conn, $sql);
                                                                 while ($row = sqlsrv_fetch_array($result)) {
-                                                                    echo "<option value='" . $row['id'] . "'>" . $row['organization_type_name'] . "</option>";
+                                                                    echo "<option value='" . $row['OrgTypeId'] . "'>" . $row['OrgTypeName'] ." ".$row['OrgTypeId'] . "</option>";
                                                                 }
                                                                 ?>
                                                             </select>
@@ -138,6 +137,7 @@
                                                             <input type="hidden" id="orgTypeId" name="orgTypeId">
                                                             <select id="orgListList" name="orgListList" class="select2 form-control"></select>
                                                         </div>
+
                                                     </div>
                                                 </fieldset>
 
