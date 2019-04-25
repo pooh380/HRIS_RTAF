@@ -130,6 +130,7 @@
         -moz-animation-delay: -1.25s;
         -o-animation-delay: -1.25s;
         animation-delay: -1.25s;
+        
     }
     .la-ball-spin-fade>div:nth-child(3) {
         top: 50%;
@@ -342,3 +343,4 @@
 }
 
 @media (min-width: 320px) {}
+

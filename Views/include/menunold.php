@@ -162,7 +162,7 @@
                     </li>
                     <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">แบบประวัติข้าราชการ</a>
                     </li>
-                    <li><a class="menu-item" href="../Now/Now.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ข้อมูลตำแหน่ง</a>
+                    <li><a class="menu-item" href="/Views/Profile.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ข้อมูลตำแหน่ง</a>
                     </li>
                     <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงานบัญชีรายชื่อข้าราชการสูญเสีย</a>
                     </li>
