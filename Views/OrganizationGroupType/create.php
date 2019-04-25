@@ -60,7 +60,7 @@
                     <form class="form form-horizontal">
                         <div class="form-body">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <label class="col-md-6 label-control" for="orgGroupTypeName">ชื่อเต็มประเภทโครงสร้าง</label>
                                     <div class="col-md-12">
                                         <div class="position-relative ">

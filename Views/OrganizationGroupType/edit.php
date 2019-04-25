@@ -21,7 +21,7 @@
   <script>
       $(document).ready(function() {
           getIdForEdit();
-        //   console.log("ready");
+          //   console.log("ready");
       });
   </script>
 
@@ -68,36 +68,34 @@
                                       <form class="form form-horizontal">
                                           <div class="form-body">
                                               <div class="row">
-                                                  <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="orgCategoryName">ชื่อเต็มประเภทโครงสร้าง</label>
+                                                  <div class="col-md-12">
+                                                      <label class="col-md-6 label-control" for="orgGroupTypeName">ชื่อเต็มประเภทโครงสร้าง</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="orgCategoryName" class="form-control border-primary" placeholder="ชื่อเต็มประเภทโครงสร้าง" name="orgCategoryName">
+                                                              <input type="text" id="orgGroupTypeName" class="form-control border-primary" placeholder="ชื่อเต็มประเภทโครงสร้าง" name="orgGroupTypeName">
 
                                                           </div>
                                                       </div>
                                                   </div>
-                                                  <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="orgCategoryAbbrName">ชื่อย่อประเภทโครงสร้าง</label>
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative">
-                                                              <input type="text" id="orgCategoryAbbrName" class="form-control border-primary" placeholder="ชื่อย่อประเภทโครงสร้าง" name="orgCategoryAbbrName">
-                                                          </div>
-                                                      </div>
-                                                  </div>
+
                                               </div>
-                                              <input type="hidden" name="id" id="id" value="">
                                               <br>
                                               <div class="row">
                                                   <div class="col-md-12">
                                                       <br>
                                                       <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-                                                      <input id="isActive" type="checkbox" data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                                      <input id="isActive" type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
                                                   </div>
                                               </div>
                                               <div class="form-actions center" align="center">
+                                                  
+                                              <!-- <input type="text" name="id" id="id" value=""> -->
+                                                  <!-- <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="insertOrganizationParts()">บันทึก</button> -->
+
                                                   <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                                                  <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="UpdateOrganizationCategory()">บันทึก</button>
+                                                  <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" name="submit" onclick="UpdateorganizationGroupType()">บันทึก</button>
+
                                               </div>
                                           </div>
                                       </form>
@@ -112,6 +110,8 @@
       </div>
   </div>
   
+  <script src="../../Controllers/organizationGroupTypeController.js"></script>
+
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
@@ -122,7 +122,6 @@
   <script src="../../app-assets/js/scripts/extensions/sweet-alerts.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
 
-  <script src="../../Controllers/organizationCategoryController.js"></script>
 
   <!-- footer -->
-  <?php include '../include/footer.php'; ?> 
+  <?php include '../include/footer.php'; ?>
