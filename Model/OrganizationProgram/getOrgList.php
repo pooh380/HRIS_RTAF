@@ -5,7 +5,7 @@ require_once "../../config.php";
 $orgTypeId = isset($_POST['orgTypeId']) ? $_POST['orgTypeId'] : "";
 
 $sql = " SELECT OrgStrucId, OrgLevelId, OrgPartId, OrgGroupTypeId, OrgTypeId, OrgStrucMain, OrgStrucSubMain, OrgStrucName, OrgStrucActive
-FROM OrgStruc WHERE OrgTypeId = $orgTypeId and OrgStrucActive = 1 ";
+FROM OrgStruc WHERE OrgTypeId = $orgTypeId AND OrgLevelId = 2 AND OrgStrucActive = 1 ";
 
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
