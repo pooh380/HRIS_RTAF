@@ -51,7 +51,7 @@ while ($row = sqlsrv_fetch_array($query)) {
     }
 
     if ($row[3]) {
-        $subdata[] = "วันที่";
+        $subdata[] = "$row[3]";
     } else {
         $subdata[] = "ไม่กำหนด";
     } //status   

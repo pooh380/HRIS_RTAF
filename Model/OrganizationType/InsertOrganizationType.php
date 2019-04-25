@@ -7,21 +7,19 @@ require_once "../../config.php";
 
 if (!empty($_POST)) {
 
-    $orgCategoryName = $_POST['orgCategoryName'];
-    $orgTypeName = $_POST['orgTypeName'];
+    $OrgGroupTypeId = $_POST['OrgGroupTypeId'];
+    $OrgTypeName = $_POST['OrgTypeName'];
+
     $startDate = $_POST['startDate'];
-    $endDate = $_POST['isActendDateive'];
-    $isActive = $_POST['isActive'];
+    $endDate = $_POST['endDate'];
+    
     $airForce = $_POST['airForce'];
     $multiplesDay = $_POST['multiplesDay'];
     $currentOrg = $_POST['currentOrg'];
+    $isActive = $_POST['isActive'];
+    $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM OrgType; ";
 
-
-
-    
-    $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM organization_type; ";
-
-    // echo $sqlInsertSeqNoAndCode;
+    echo $sqlInsertSeqNoAndCode;
 
     $querySelect = sqlsrv_query($conn, $sqlInsertSeqNoAndCode);
 
@@ -31,9 +29,11 @@ if (!empty($_POST)) {
         $idNew = $id+1;
     }
 
-    $sql="INSERT INTO organization_type
-    (organization_type_code, organization_type_name, organization_type_abbr_name, organization_category_id, airforce, multiples_day, current_organization, IsActive, created_by, created_date, update_by, update_date)
-    VALUES('$idNew', '$orgTypeName', '', $orgCategoryName, '$airForce', '$multiplesDay', '$currentOrg', $isActive, 0, '', 0, '');
+    $sql="INSERT INTO OrgType
+    (OrgGroupTypeId, OrgTypeName, OrgTypeStartDate, OrgTypeEndDate, OrgTypeAirforce, OrgTypeMultiMoney,
+     OrgTypeCurrentDay, OrgTypeCreateBy, OrgTypeCreateDate, OrgTypeUpdateBy, OrgTypeUpdateDate, OrgTypeActive)
+    VALUES($OrgGroupTypeId, '$OrgTypeName', '$startDate', '$endDate', $airForce
+    , $multiplesDay , $currentOrg, 0, '', 0, '',  $isActive);
     ";
     
     echo $sql;

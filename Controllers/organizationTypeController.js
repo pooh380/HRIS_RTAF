@@ -25,8 +25,8 @@ function getOrganizationType() {
 // insertData
 function insertOrgType() {
 
-    var orgCategoryName = $('#orgCategoryName :selected').val();
-    var orgTypeName = $("#orgTypeName").val();
+    var OrgGroupTypeId = $('#OrgGroupTypeId :selected').val();
+    var OrgTypeName = $("#OrgTypeName").val();
     var startDate = $("#startDate").val();
     var endDate = $("#endDate").val();
 
@@ -61,8 +61,8 @@ function insertOrgType() {
         type: "POST",
         url: "../../Model/OrganizationType/InsertOrganizationType.php",
         data: {
-            orgCategoryName: orgCategoryName,
-            orgTypeName: orgTypeName,
+            OrgGroupTypeId: OrgGroupTypeId,
+            OrgTypeName: OrgTypeName,
             startDate: startDate,
             endDate: endDate,
             isActive: isActive,
@@ -79,7 +79,7 @@ function insertOrgType() {
                 showConfirmButton: false,
                 timer: 2000
             });
-            setTimeout("window.open('../organization_types/index.php', '_self');", 2000);
+            // setTimeout("window.open('../organization_types/index.php', '_self');", 2000);
         },
         error: function(error) {
             // alert(error);
