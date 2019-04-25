@@ -32,7 +32,7 @@ if (!empty($request['search']['value'])) {
     $totalData = sqlsrv_num_rows($query);
 }
 
-echo $sql;
+// echo $sql;
 $data = array();
 
 while ($row = sqlsrv_fetch_array($query)) {
@@ -44,19 +44,17 @@ while ($row = sqlsrv_fetch_array($query)) {
     $subdata[] = $row[0]; 
     $subdata[] = $row[0]; 
     $subdata[] = $row[1]; 
-    if ($row[2] !== ' ') {
-        $subdata[] = "วันที่";
+    if ($row[2]) {
+        $subdata[] = $row[2];
     } else {
         $subdata[] = "ไม่กำหนด";
     }
-    $data[] = $subdata;
 
     if ($row[3]) {
         $subdata[] = "วันที่";
     } else {
         $subdata[] = "ไม่กำหนด";
     } //status   
-    $data[] = $subdata;
 
     if ($row[4] !== 1) {
         $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
@@ -65,6 +63,12 @@ while ($row = sqlsrv_fetch_array($query)) {
     } //status   
     $data[] = $subdata;
 }
+
+// echo"<pre>";
+// print_r($data);
+// echo"<pre>";
+
+
 $json_data = array(
     "draw"              =>  intval($request['draw']),
     "recordsTotal"      =>  intval($totalData),
