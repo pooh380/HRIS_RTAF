@@ -117,7 +117,7 @@
       }
     }
      $(function() {
-            $('#orgTypeList').change(function() {
+            $('#OrgLevelId').change(function() {
                 var OrgLevelId = $('#OrgLevelId :selected').val();
                 $("#OrgLevelId").val(OrgLevelId);
 

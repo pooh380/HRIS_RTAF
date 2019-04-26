@@ -5,8 +5,8 @@ error_reporting(0);
 require_once "../../config.php";
 
 
-// $OrgLevelId = isset($_POST['OrgLevelId']) ? $_POST['OrgLevelId'] : "";
-
+$OrgLevelId = isset($_POST['OrgLevelId']) ? $_POST['OrgLevelId'] : "";
+ 
 $request=$_REQUEST;
 $col =array(
     0   =>  'OrgSubUnitId',
