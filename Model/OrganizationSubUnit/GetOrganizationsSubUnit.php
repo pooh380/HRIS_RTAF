@@ -4,6 +4,9 @@ error_reporting(0);
 
 require_once "../../config.php";
 
+
+$orgTypeId = isset($_POST['orgTypeId']) ? $_POST['orgTypeId'] : "";
+
 $request=$_REQUEST;
 $col =array(
     0   =>  'OrgSubUnitId',
@@ -11,10 +14,7 @@ $col =array(
     2   =>  'OrgSubUnitAbbr',
     3   =>  'OrgSubUnitSemiAbbr',
     4   =>  'OrgSubUnitActive',
-    // 5   =>  'OrgSubUnitCreateBy',
-    // 6   =>  'OrgSubUnitCreateDate',
-    // 7   =>  'OrgSubUnitUpdateBy',
-    // 8   =>  'OrgSubUnitUpdateDate',
+  
 ); 
 $sql =" SELECT OrgSubUnitId, OrgSubUnitName, OrgSubUnitAbbr, OrgSubUnitSemiAbbr, OrgSubUnitActive, OrgSubUnitCreateBy, OrgSubUnitCreateDate, OrgSubUnitUpdateBy, OrgSubUnitUpdateDate
 FROM OrgSubUnit; ";

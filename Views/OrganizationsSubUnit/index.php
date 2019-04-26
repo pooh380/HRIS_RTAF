@@ -30,7 +30,6 @@
         </div>
         <div class="content-body">
           <!-- Bootstrap 3 table -->
-
           <section id="bootstrap3">
             <div class="row">
               <div class="col-12">
@@ -118,6 +117,28 @@
           checkboxes[i].checked = source.checked;
       }
     }
+     $(function() {
+            $('#orgTypeList').change(function() {
+                var OrgGroupTypeId = $('#OrgGroupTypeId :selected').val();
+                $("#OrgGroupTypeId").val(OrgGroupTypeId);
+
+                $.ajax({
+                    type: "POST",
+                    url: "../../Model/OrganizationSubUnit/GetOrganizationsSubUnit.php",
+                    data: {
+                      OrgGroupTypeId: OrgGroupTypeId
+                    },
+                    success: function(data) {
+                        // console.log(data);
+                        $('#orgListList').html(data);
+                    },
+                    error: function(error) {
+                        // console.log(error);
+                    }
+                });
+
+            });
+        });
   </script>
 
 
