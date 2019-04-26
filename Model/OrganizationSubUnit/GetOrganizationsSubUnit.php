@@ -25,7 +25,7 @@ $totalData = sqlsrv_num_rows($query);
 // echo $totalData;
 $totalFilter = $totalData;
 
-$sql = "SELECT OrgSubUnitId, OrgSubUnitName, OrgSubUnitAbbr, OrgSubUnitSemiAbbr, OrgSubUnitActive, OrgSubUnitCreateBy, OrgSubUnitCreateDate, OrgSubUnitUpdateBy, OrgSubUnitUpdateDate
+$sql = "SELECT OrgSubUnitId, OrgSubUnitName , OrgSubUnitAbbr, OrgSubUnitSemiAbbr, OrgSubUnitActive, OrgSubUnitCreateBy, OrgSubUnitCreateDate, OrgSubUnitUpdateBy, OrgSubUnitUpdateDate
 FROM OrgSubUnit WHERE 1=1 ";
 
 if (!empty($request['search']['value'])) {

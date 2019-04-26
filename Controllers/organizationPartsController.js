@@ -50,7 +50,7 @@ function insertOrganizationParts() {
                 showConfirmButton: false,
                 timer: 2000
             });
-            // setTimeout("window.open('../OrganizationParts/index.php', '_self');", 2000);
+            setTimeout("window.open('../OrganizationParts/index.php', '_self');", 2000);
         },
         error: function(error) {
             // alert(error);
