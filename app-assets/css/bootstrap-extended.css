@@ -611,6 +611,7 @@ select.form-control {
     font-family: 'feather';
     content: "\e982";
     transition: all 300ms linear 0s;
+    color: #000;
 }
 
 .collapse-icon a[data-toggle="collapse"]:before {
@@ -621,6 +622,7 @@ select.form-control {
     font-family: 'feather';
     content: "\e99d";
     transition: all 300ms linear 0s;
+    color: #000;
 }
 
 .collapse-icon.left a {

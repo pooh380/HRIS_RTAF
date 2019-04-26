@@ -1112,7 +1112,7 @@ input:focus ~ .bg-success {
   color: #28D094 !important; }
 
 .bg-success {
-  background-color: #28D094 !important; }
+  background-color: #F2F5FB !important; }
   .bg-success .card-header, .bg-success .card-footer {
     background-color: transparent; }
   .bg-success.bg-glow {
@@ -1811,7 +1811,7 @@ input:focus ~ .bg-info {
   color: #1E9FF2 !important; }
 
 .bg-info {
-  background-color: #1E9FF2 !important; }
+  background-color: #F2F5FB !important; }
   .bg-info .card-header, .bg-info .card-footer {
     background-color: transparent; }
   .bg-info.bg-glow {
@@ -3209,7 +3209,7 @@ input:focus ~ .bg-danger {
   color: #FF4961 !important; }
 
 .bg-danger {
-  background-color: #FF4961 !important; }
+  background-color: #F2F5FB !important; }
   .bg-danger .card-header, .bg-danger .card-footer {
     background-color: transparent; }
   .bg-danger.bg-glow {
