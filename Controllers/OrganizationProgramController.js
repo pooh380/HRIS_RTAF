@@ -55,13 +55,20 @@
                 orgLevelId: orgLevelId
             },
             success: function(data) {
+
+                console.log(data);
+
                 $("#orgStrucId").val(data.orgStrucId);
                 $('#orgTypeName').append('<option value="' + data.orgTypeId + '" selected="selected">' + data.orgTypeName + '</option>');
                 $("#orgSubUnitId").val(data.orgSubUnitId);
                 $('#orgPartName').append('<option value="' + data.orgPartId + '" selected="selected">' + data.orgPartName + '</option>');
                 // $("#orgPartName").val(data.orgPartName);
+                // 
+                $('#divisionAbbrName').append('<option value="" selected="selected">' + data.array0 + '</option>');
                 $('#orgLevelName').append('<option value="' + data.orgLevelId + '" selected="selected">' + data.orgLevelName + '</option>');
                 $("#orgSubUnitName").val(data.orgSubUnitName);
+                $("#orgStrucLong").val(data.orgStrucLong);
+
 
 
 
