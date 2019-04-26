@@ -5,7 +5,7 @@ error_reporting(0);
 require_once "../../config.php";
 
 
-$orgTypeId = isset($_POST['orgTypeId']) ? $_POST['orgTypeId'] : "";
+// $OrgLevelId = isset($_POST['OrgLevelId']) ? $_POST['OrgLevelId'] : "";
 
 $request=$_REQUEST;
 $col =array(
@@ -25,15 +25,14 @@ $totalData = sqlsrv_num_rows($query);
 // echo $totalData;
 $totalFilter = $totalData;
 
-
-
-
 $sql = "SELECT OrgSubUnitId, OrgSubUnitName, OrgSubUnitAbbr, OrgSubUnitSemiAbbr, OrgSubUnitActive, OrgSubUnitCreateBy, OrgSubUnitCreateDate, OrgSubUnitUpdateBy, OrgSubUnitUpdateDate
 FROM OrgSubUnit WHERE 1=1 ";
+
 if (!empty($request['search']['value'])) {
     $sql .= " AND (OrgSubUnitName Like N'%" . $request['search']['value'] . "%' ";
     $sql .= " OR OrgSubUnitAbbr Like N'%" . $request['search']['value'] . "%' ";
     $sql .= " OR OrgSubUnitSemiAbbr Like N'%" . $request['search']['value'] . "%') ";
+    //หากเลือกselect2 ต้อง เพิ่มor ใน นี้ด้วย
     $query = sqlsrv_query($conn, $sql, $params, $options);
     $totalData = sqlsrv_num_rows($query);
 }

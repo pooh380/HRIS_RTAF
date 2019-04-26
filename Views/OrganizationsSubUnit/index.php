@@ -4,8 +4,9 @@
 
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
-  <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/selects/select2.min.css">
-  <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/extensions/sweetalert.css">
+<!-- BEGIN SELECT2 CSS-->
+<link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/selects/select2.min.css">
+<!-- END SELECT2 CSS-->
   <style>
     /* ol > li > a {color:#222233;} */
     .toggle.ios,
@@ -13,7 +14,6 @@
     .toggle-off.ios {
       border-radius: 20rem;
     }
-
     .toggle.ios .toggle-handle {
       border-radius: 20rem;
     }
@@ -45,25 +45,24 @@
                         </ol>
                       </nav>
 
-                      <!-- +- -->
                       <a href="./create.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                         <span class="la la-plus-circle" style="color:white; font-weight: bold;font-size: 18px"></span> เพิ่ม
                       </a>
                       <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                         <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
                       </a>
-                      <div class="col-md-6 float-md-right" >
-                        <select name="OrgGroupTypeId" id="OrgGroupTypeId" class="select2 form-control ">
+                      <a class="col-md-4 float-md-right" >
+                        <select name="OrgLevelId" id="OrgLevelId" class="select2 form-control ">
                           <option value="">กรุณาเลือกประเภทโครงสร้าง</option>
                           <?php
-                          $sql = " SELECT OrgGroupTypeId, OrgGroupTypeName FROM OrgGroupType    ; ";
+                          $sql = " SELECT OrgLevelId, OrgLevelName FROM OrgLevel    ; ";
                           $result = sqlsrv_query($conn, $sql);
                           while ($row = sqlsrv_fetch_array($result)) {
-                            echo "<option value='" . $row['OrgGroupTypeId'] . "'>" . $row['OrgGroupTypeName'] . "</option>";
+                            echo "<option value='" . $row['OrgLevelId'] . "'>" . $row['OrgLevelName'] . "</option>";
                           }
                           ?>
                         </select>
-                      </div>
+                        </a>
 
                       <table id="OrganizationLevels" class="table table-striped table-borderless table-hover bootstrap-3 " style="width:100%;">
                         <thead>
@@ -119,14 +118,14 @@
     }
      $(function() {
             $('#orgTypeList').change(function() {
-                var OrgGroupTypeId = $('#OrgGroupTypeId :selected').val();
-                $("#OrgGroupTypeId").val(OrgGroupTypeId);
+                var OrgLevelId = $('#OrgLevelId :selected').val();
+                $("#OrgLevelId").val(OrgLevelId);
 
                 $.ajax({
                     type: "POST",
                     url: "../../Model/OrganizationSubUnit/GetOrganizationsSubUnit.php",
                     data: {
-                      OrgGroupTypeId: OrgGroupTypeId
+                      OrgLevelId: OrgLevelId
                     },
                     success: function(data) {
                         // console.log(data);
@@ -141,7 +140,10 @@
         });
   </script>
 
-
+<!-- SELECT2 -->
+<script src="../../app-assets/vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>
+<script src="../../app-assets/js/scripts/forms/select/form-select2.js" type="text/javascript"></script>
+<!-- SELECT2 -->
 
   <!-- footer -->
   <?php include '../include/footer.php'; ?>
