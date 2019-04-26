@@ -79,8 +79,7 @@
               }
           };
           var orgTypeId = getUrlParameter('orgTypeId');
-          //   var orgListId = getUrlParameter('orgListId');
-          var orgListId = getUrlParameter('orgListId');
+          var orgStrucId = getUrlParameter('orgStrucId');
 
           $(document).ajaxStart(function() {
               $(".modal").show();
@@ -90,7 +89,7 @@
               $(".modal").hide();
               $("#orgTypeId").val(orgTypeId);
               //   $("#orgListId").val(orgListId);
-              $("#orgListId").val(orgListId);
+              $("#orgStrucId").val(orgStrucId);
           });
 
 
@@ -99,14 +98,13 @@
               url: "../../Model/OrganizationProgram/getDetailValue.php",
               data: {
                   orgTypeId: orgTypeId,
-                  //   orgListId: orgListId
-                  orgListId: orgListId
+                  orgStrucId: orgStrucId
               },
               success: function(data) {
                   // console.log(data);
                   $('#list-group-tags').append(data);
-                  var orgListId = $('#orgListList :selected').val();
-                  $("#orgListId").val(orgListId);
+                  var orgStrucId = $('#orgListList :selected').val();
+                  $("#orgStrucId").val(orgStrucId);
               },
               error: function(error) {
                   // console.log(error);
@@ -121,9 +119,9 @@
               <div class="content-header row">
                   <div class="content-header-left col-12 mb-2">
 
-                      <input type="hidden" id="orgTypeId" name="orgTypeId">
+                      <input type="text" id="orgTypeId" name="orgTypeId">
 
-                      <input type="hidden" id="orgListId" name="orgListId">
+                      <input type="text" id="orgStrucId" name="orgStrucId">
 
                       <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                           <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -196,22 +194,21 @@
                                               </style>
 
 
-                                              <ul class="list-group">
+                                              <!-- <ul class="list-group">
                                                   <li class="list-group-item">
                                                       <s class="vl"></s>
                                                       <span style="font-weight: bold;font-size: 12px;"> กองทัพอากาศ</span>
                                                   </li>
                                               </ul>
+                                               -->
                                               <ul class="list-group" id="list-group-tags" align="left">
-
                                                   <a style="margin-left: 15px; ">
                                                       <li class="list-group-item">
-                                                          <s class="vl"></s>
+                                                          <!-- <s class="vl"></s> -->
                                                           <!-- <span style="font-weight: bold;font-size: 12px;" ><?php echo $result['division_name']; ?></span> -->
-                                                          <span style="font-weight: bold;font-size: 12px;" onclick="showDetail()"> &nbsp; กรมกำลังพลทาหารอากศ 0</span>
+                                                          <!-- <span style="font-weight: bold;font-size: 12px;" onclick="showDetail()"> &nbsp; กรมกำลังพลทาหารอากศ 0</span> -->
                                                       </li>
                                                   </a>
-                                                  
                                               </ul>
                                               <!-- <div class="skin-flat">
                                                       divนี้ทำให้ เป็นcheckbox css
@@ -225,6 +222,8 @@
                       </div>
                       <!-- ---------------------- -->
                       <!-- /Ratings sample -->
+
+                     
 
                       <!-- 1 -->
                       <div class="col-lg-8">
@@ -250,29 +249,27 @@
                                                   <div class="form-body">
                                                       <div class="row">
                                                           <div class="col-md-6">
-                                                              <label class="col-md-12 label-control" for="code">รหัสโครงการส่วนราชการ</label>
+                                                              <label class="col-md-12 label-control" for="orgSubUnitId">รหัสโครงการส่วนราชการ</label>
                                                               <div class="col-md-12">
                                                                   <div class="position-relative">
-                                                                      <input type="text" disabled id="code" class="form-control" placeholder="รหัสโครงการส่วนราชการ" name="code">
+                                                                      <input type="text" disabled id="orgSubUnitId" class="form-control" placeholder="รหัสโครงการส่วนราชการ" name="orgSubUnitId">
                                                                   </div>
                                                               </div>
                                                           </div>
                                                           <div class="col-md-6">
-                                                              <label class="col-md-12 label-control" for="orgTypeList">โครงสร้าง</label> <!-- ดึงมาจากการ search หน้า index -->
+                                                              <label class="col-md-12 label-control" for="orgTypeName">โครงสร้าง</label> <!-- ดึงมาจากการ search หน้า index -->
                                                               <div class="col-md-12" style="float:left;">
-                                                                  <select class="select2 form-control block" disabled id="orgTypeList" style="width: 100%;">
-                                                                      <option value="อัตรา ทอ.52">อัตรา ทอ.52</option>
-                                                                  </select>
+                                                                  <select class="select2 form-control block" disabled id="orgTypeName" style="width: 100%;"></select>
                                                               </div>
                                                               <!-- <div class="col-md-1">
                                                                   <a href="../organizationProgram/createOrganizationCategory.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
                                                               </div> -->
                                                           </div>
                                                           <div class="col-md-6 mt-1">
-                                                              <label class="col-md-12 label-control" for="orglistCode">รหัสสังกัดและหน่วย</label>
+                                                              <label class="col-md-12 label-control" for="">รหัสสังกัดและหน่วย</label>
                                                               <div class="col-md-12">
                                                                   <div class="position-relative">
-                                                                      <input type="text" disabled id="orglistCode" class="form-control " placeholder="รหัสสังกัดและหน่วย" name="orglistCode">
+                                                                      <input type="text" disabled id="" class="form-control " placeholder="รหัสสังกัดและหน่วย" name="">
                                                                   </div>
                                                               </div>
                                                           </div>
@@ -287,8 +284,7 @@
                                                           <div class="col-md-6 mt-1">
                                                               <label class="col-md-12 label-control" for="orgPartName">ชื่อส่วนราชการ</label>
                                                               <div class="col-md-12" style="float:left;">
-                                                                  <select class="select2 form-control block" disabled id="orgPartName" style="width: 100%;">
-                                                                  </select>
+                                                                  <select class="select2 form-control block" disabled id="orgPartName" style="width: 100%;"></select>
                                                               </div>
                                                               <!-- <div class="col-md-1">
                                                                   <a href="../organizationProgram/createOrganizationParts.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
@@ -297,31 +293,22 @@
                                                           <div class="col-md-6 mt-1">
                                                               <label class="col-md-12 label-control" for="divisionAbbrName">ชื่อสังกัด</label>
                                                               <div class="col-md-12" style="float:left;">
-                                                                  <select class="select2 form-control block" disabled id="divisionAbbrName" style="width: 100%;">
-
-                                                                  </select>
+                                                                  <select class="select2 form-control block" disabled id="divisionAbbrName" style="width: 100%;"></select>
                                                               </div>
                                                               <!-- <div class="col-md-1">
                                                                   <a href="../Organizations/create.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
                                                               </div> -->
                                                           </div>
                                                           <div class="col-md-6 mt-1">
-                                                              <label class="col-md-12 label-control" for="orgaLevelName">ฐานะของหน่วย/สังกัด</label>
+                                                              <label class="col-md-12 label-control" for="orgLevelName">ฐานะของหน่วย/สังกัด</label>
                                                               <div class="col-md-12" style="float:left;">
-                                                                  <select class="select2 form-control block" disabled id="orgaLevelName" style="width: 100%;">
-                                                                  </select>
+                                                                  <select class="select2 form-control block" disabled id="orgLevelName" style="width: 100%;"></select>
                                                               </div>
                                                           </div>
                                                           <div class="col-md-6 mt-1">
-                                                              <label class="col-md-12 label-control" for="orgListName">ชื่อหน่วย</label>
+                                                              <label class="col-md-12 label-control" for="orgSubUnitName">ชื่อหน่วย</label>
                                                               <div class="col-md-12" style="float:left;">
-                                                                  <select class="select2 form-control block" disabled id="orgListName" style="width: 100%;">
-                                                                      <!-- border-color: #8c93ee !important; -->
-                                                                      <!-- <optgroup label="Alaskan/Hawaiian Time Zone"> -->
-                                                                      <!-- <option value="">เลือกหน่วย</option> -->
-                                                                      <!-- <option value="HI">Hawaii</option> -->
-                                                                      <!-- </optgroup> -->
-                                                                  </select>
+                                                                <input type="text" disabled id="orgSubUnitName" class="form-control " placeholder="ชื่อหน่วย" name="orgSubUnitName">
                                                               </div>
                                                               <!-- <div class="col-md-1">
                                                                   <a href="../Organizations/create.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
@@ -336,7 +323,7 @@
                                                               </div>
                                                           </div>
                                                           <div class="col-md-6 mt-1">
-                                                              <label class="col-md-12 label-control" for="orgListLong">ชื่อหน่วย/สังกัด</label>
+                                                              <label class="col-md-12 label-control" for="orgListLong">ชื่อเต็มหน่วย/สังกัด</label>
                                                               <div class="col-md-12">
                                                                   <div class="position-relative">
                                                                       <input type="text" disabled id="orgListLong" class="form-control " placeholder="ชื่อหน่วย/สังกัด" name="orgListLong">

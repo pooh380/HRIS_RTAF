@@ -25,8 +25,8 @@ function getOrganizationType() {
 // insertData
 function insertOrgType() {
 
-    var orgCategoryName = $('#orgCategoryName :selected').val();
-    var orgTypeName = $("#orgTypeName").val();
+    var OrgGroupTypeId = $('#OrgGroupTypeId :selected').val();
+    var OrgTypeName = $("#OrgTypeName").val();
     var startDate = $("#startDate").val();
     var endDate = $("#endDate").val();
 
@@ -61,8 +61,8 @@ function insertOrgType() {
         type: "POST",
         url: "../../Model/OrganizationType/InsertOrganizationType.php",
         data: {
-            orgCategoryName: orgCategoryName,
-            orgTypeName: orgTypeName,
+            OrgGroupTypeId: OrgGroupTypeId,
+            OrgTypeName: OrgTypeName,
             startDate: startDate,
             endDate: endDate,
             isActive: isActive,
@@ -213,10 +213,10 @@ function UpdateOrgType() {
 function deleteOrgType(id) {
     // alert(event);
     event.preventDefault();
-    var orgTypeId = id;
+    var id = id;
     // console.log(PrefixsId);
-    $.post("../../Model/OrganizationType/DeleteOrganizationType.php", {
-        orgTypeId: orgTypeId
+    $.post("../../Model/organizationtype/DeleteOrganizationType.php", {
+        id: id
     }).done(function(data) {
         // window.location.replace("../page/listUser.php");
         // console.log(data);
@@ -226,7 +226,7 @@ function deleteOrgType(id) {
             showConfirmButton: false,
             timer: 2000
         });
-        setTimeout("window.open('../Pass_Type/index.php', '_self');", 2000);
+        setTimeout("window.open('../organization_types/index.php', '_self');", 2000);
     }).fail(function(err) {
         // console.log(err);
         Swal.fire({

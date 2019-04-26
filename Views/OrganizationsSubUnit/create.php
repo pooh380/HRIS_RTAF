@@ -60,44 +60,40 @@
                                       <form class="form form-horizontal">
                                           <div class="form-body">
                                               <div class="row">
-                                                  <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput1">ชื่อเต็มโครงสร้างอัตราส่วนราชการ</label>
+                                                  <div class="col-md-12 ">
+                                                      <label class="col-md-6 label-control" for="OrgSubUnitName">ชื่อเต็มหน่วยงาน</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="userinput1" class="form-control border-primary" placeholder="ชื่อเต็มโครงสร้างอัตราส่วนราชการ" name="fullName">
+                                                              <input type="text" id="OrgSubUnitName" class="form-control border-primary" placeholder="ชื่อเต็มโครงสร้างอัตราส่วนราชการ" name="OrgSubUnitName">
 
                                                           </div>
                                                       </div>
                                                   </div>
-                                                  <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput2">ชื่อย่อโครงสร้างอัตราส่วนราชการ</label>
+                                                  <div class="col-md-6 mt-1">
+                                                      <label class="col-md-6 label-control" for="OrgSubUnitAbbr">ชื่อย่อหน่วยงาน</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="userinput2" class="form-control border-primary" placeholder="ชื่อย่อหัวหน้าสายวิชาการ" name="initName">
+                                                              <input type="text" id="OrgSubUnitAbbr" class="form-control border-primary" placeholder="ชื่อย่อหัวหน้าสายวิชาการ" name="OrgSubUnitAbbr">
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-md-6 mt-1">
+                                                      <label class="col-md-6 label-control" for="OrgSubUnitSemiAbbr">ชื่อกึ่งหน่วยงาน</label>
+                                                      <div class="col-md-12">
+                                                          <div class="position-relative">
+                                                              <input type="text" id="OrgSubUnitSemiAbbr" class="form-control border-primary" placeholder="ชื่อย่อหัวหน้าสายวิชาการ" name="OrgSubUnitSemiAbbr">
                                                           </div>
                                                       </div>
                                                   </div>
                                               </div>
                                               <br>
-                                              <!-- <div class="row">
-                                                  <div class="col-md-12">
-                                                      <label class="col-md-4 label-control" for="userinput3">ชื่อหน่วยงาน</label>
-
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative ">
-                                                              <input type="text" id="timesheetinput1" class="form-control border-primary" placeholder="ชื่อหน่วยงาน" name="employeename">
-
-                                                          </div>
-                                                      </div>
-
-                                                  </div>
+                                              <div class="row">
                                                   <div class="col-md-12">
                                                       <br>
-                                                      <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-                                                      <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-
+                                                      <label class="col-md-1 label-control" for="" style="padding-right:0px;">สถานะ</label>
+                                                      <input id="isActive" type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
                                                   </div>
-                                              </div> -->
+                                              </div>
 
                                           </div>
                                       </form>
@@ -108,13 +104,15 @@
                   </div>
                   <div class="form-actions center" align="center">
                       <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text">บันทึก</button>
+                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text"  onclick="insertOrganizationSubUnit()">บันทึก</button>
                   </div>
               </section>
               <!-- // Basic form layout section end -->
           </div>
       </div>
   </div>
+  
+  <script src="../../Controllers/organizationSubUnitController.js"></script>
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
@@ -124,6 +122,5 @@
   <!-- BEGIN PAGE LEVEL JS-->
   <script src="../../app-assets/js/scripts/extensions/sweet-alerts.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
-
   <!-- footer -->
-  <?php include '../include/footer.php'; ?> 
+  <?php include '../include/footer.php'; ?>

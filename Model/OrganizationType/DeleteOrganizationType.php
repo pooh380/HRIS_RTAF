@@ -8,13 +8,13 @@ require_once "../../config.php";
 if (!empty($_POST)) {
     // $originsId = 0;
 
-    $orgTypeId = $_POST['orgTypeId'];
+    $id = $_POST['id'];
 
     // date_default_timezone_set('Asia/Bangkok');
     // echo date("Y-m-d h:i:sa");
 
 
-    $sql = " DELETE FROM organization_type WHERE id=$orgTypeId ";
+    $sql = " DELETE FROM OrgType WHERE OrgTypeId=$id ";
     // echo $sql;
 
     $query = sqlsrv_query($conn, $sql);

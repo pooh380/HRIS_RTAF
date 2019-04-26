@@ -24,21 +24,23 @@ function getOrganizationSubUnit() {
 
 function insertOrganizationSubUnit() {
 
-    var orglevelname = $("#orglevelname").val();
-    var orglevelAbbrname = $("#orglevelAbbrname").val();
+    var OrgSubUnitName = $("#OrgSubUnitName").val();
+    var OrgSubUnitAbbr = $("#OrgSubUnitAbbr").val();
+    var OrgSubUnitSemiAbbr = $("#OrgSubUnitSemiAbbr").val();
+    var isActive = $("#isActive").val();
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
         var isActive = "1";
     } else {
         var isActive = "0";
     }
-
-    // console.log(orglevelname + " " + orglevelAbbrname + " " + isActive);
+    // console.log(OrgSubUnitName + " " + OrgSubUnitAbbr + " " + OrgSubUnitSemiAbbr + " " + isActive);
     // e.preventDefault();
 
-    $.post("../../Model/OrganizationLevels/InsertOrganizationLevels.php", {
-        orglevelname: orglevelname,
-        orglevelAbbrname: orglevelAbbrname,
+    $.post("../../Model/OrganizationSubUnit/InsertOrganizationSubUnit.php", {
+        OrgSubUnitName: OrgSubUnitName,
+        OrgSubUnitAbbr: OrgSubUnitAbbr,
+        OrgSubUnitSemiAbbr: OrgSubUnitSemiAbbr,
         isActive: isActive
     }).done(function(data) {
         // console.log(data);
@@ -48,7 +50,7 @@ function insertOrganizationSubUnit() {
             showConfirmButton: false,
             timer: 2000
         });
-        setTimeout("window.open('../Organization_levels/index.php', '_self');", 2000);
+        setTimeout("window.open('../OrganizationsSubUnit/index.php', '_self');", 2000);
     }).fail(function(err) {
         // console.log(err);
         Swal.fire({
@@ -76,20 +78,24 @@ function getUrlVars() {
 
 // getData จาก db เพื่อนำมาใช้มา input value
 function getIdForEdit() {
-    var orglevelId = getUrlVars()["id"];
+    var OrgSubUnitId = getUrlVars()["id"];
     // console.log(orglevelId);
 
     $.ajax({
         type: "POST",
         dataType: "json",
-        url: "../../Model/OrganizationLevels/GetDataEdit.php",
+        url: "../../Model/OrganizationSubUnit/GetDataEdit.php",
         data: {
-            orglevelId: orglevelId
+            OrgSubUnitId:OrgSubUnitId,
+         
         },
         success: function(data) {
             $("#id").val(data.id);
-            $("#orglevelname").val(data.orglevelname);
-            $("#orglevelAbbrname").val(data.orglevelAbbrname);
+            $("#OrgSubUnitName").val(data.OrgSubUnitName);
+            $("#OrgSubUnitAbbr").val(data.OrgSubUnitAbbr);
+            $("#OrgSubUnitSemiAbbr").val(data.OrgSubUnitSemiAbbr);
+            $("#isActive").val(data.OrgSubUnitActive);
+
             // console.log(data.IsActive);
             if (data.IsActive == 0) {
                 // $("#isActive").removeAttr('checked');
@@ -110,24 +116,30 @@ function getIdForEdit() {
 // getData จาก db เพื่อนำมาใช้มา input value
 
 function UpdateOrganizationSubUnit() {
-    var orglevelId = $("#id").val();
-    var orglevelname = $("#orglevelname").val();
-    var orglevelAbbrname = $("#orglevelAbbrname").val();
+    var id = $("#id").val();
+    var OrgSubUnitName = $("#OrgSubUnitName").val();
+    var OrgSubUnitAbbr = $("#OrgSubUnitAbbr").val();
+    var OrgSubUnitSemiAbbr = $("#OrgSubUnitSemiAbbr").val();
+    var isActive = $("#isActive").val();
+  
+    
+
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
         var isActive = "1";
     } else {
         var isActive = "0";
     }
-    // console.log(orglevelId + " " + orglevelname + " " + orglevelAbbrname + " " + isActive);
+    console.log(id + " " + OrgSubUnitName + " " + OrgSubUnitAbbr + " " + OrgSubUnitSemiAbbr + " " + isActive);
 
     $.ajax({
         type: "POST",
-        url: "../../Model/OrganizationLevels/UpdateOrganizationLevels.php",
+        url: "../../Model/OrganizationSubUnit/UpdateOrganizationSubUnit.php",
         data: {
-            orglevelId: orglevelId,
-            orglevelname: orglevelname,
-            orglevelAbbrname: orglevelAbbrname,
+            id: id,
+            OrgSubUnitName : OrgSubUnitName,
+            OrgSubUnitAbbr: OrgSubUnitAbbr,
+            OrgSubUnitSemiAbbr: OrgSubUnitSemiAbbr,
             isActive: isActive
         },
         success: function(data) {
@@ -138,7 +150,7 @@ function UpdateOrganizationSubUnit() {
                 showConfirmButton: false,
                 timer: 2000
             });
-            setTimeout("window.open('../Organization_levels/index.php', '_self');", 2000);
+            setTimeout("window.open('../OrganizationsSubUnit/index.php', '_self');", 2000);
         },
         error: function(error) {
             // alert(error);
@@ -155,14 +167,14 @@ function UpdateOrganizationSubUnit() {
 
 
 
-function deleteOrganizationSubUnit(id) {
-    var organizationLevlsId = id;
+function DeleteOrganizationSubUnit(id) {
+    var id = id;
     event.preventDefault();
 
     // console.log("organizationPartsId: " + organizationLevlsId);
 
-    $.post("../../Model/OrganizationLevels/DeleteOrganizationLevels.php", {
-        organizationLevlsId: organizationLevlsId
+    $.post("../../Model/OrganizationSubUnit/DeleteOrganizationSubUnit.php", {
+        id: id
     }).done(function(data) {
         console.log(data);
         Swal.fire({
@@ -171,7 +183,7 @@ function deleteOrganizationSubUnit(id) {
             showConfirmButton: false,
             timer: 2000
         });
-        setTimeout("window.open('../Organization_levels/index.php', '_self');", 2000);
+        setTimeout("window.open('../OrganizationsSubUnit/index.php', '_self');", 2000);
     }).fail(function(err) {
         // console.log(err);
         Swal.fire({

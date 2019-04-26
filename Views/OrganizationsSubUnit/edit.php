@@ -17,11 +17,19 @@
           border-radius: 20rem;
       }
   </style>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script>
+      $(document).ready(function() {
+          getIdForEdit();
+          //   console.log("ready");
+      });
+  </script>
+
   <div class="app-content content">
       <div class="content-wrapper">
           <div class="content-header row">
               <div class="content-header-left col-md-6 col-12 mb-2">
-                  <h3 class="content-header-title">แก้ไขชื่อหน่วยงาน</h3>
+                  <h3 class="content-header-title">แก้ไขประเภทโครงสร้าง</h3>
                   <div class="row breadcrumbs-top">
 
                   </div>
@@ -32,7 +40,7 @@
               <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="./index.php">ระบบงานโครงสร้างอัตรากำลังพล</a></li>
                   <li class="breadcrumb-item"><a href="./index.php">โครงสร้าง</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">แก้ไขชื่อหน่วยงาน</li>
+                  <li class="breadcrumb-item active" aria-current="page">แก้ไขประเภทโครงสร้าง</li>
               </ol>
           </nav>
           <div class="content-body">
@@ -58,64 +66,67 @@
                                           <p>คำโปรย</p>
                                       </div> -->
                                       <form class="form form-horizontal">
-                                          <div class="form-body">
-                                              <div class="row">
-                                                  <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput1">ชื่อเต็มโครงสร้างอัตราส่วนราชการ</label>
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative ">
-                                                              <input type="text" id="userinput1" class="form-control border-primary" placeholder="ชื่อเต็มโครงสร้างอัตราส่วนราชการ" name="fullName">
+                                          <div class="row">
+                                              <div class="col-md-12 ">
+                                                  <label class="col-md-6 label-control" for="OrgSubUnitName">ชื่อเต็มหน่วยงาน</label>
+                                                  <div class="col-md-12">
+                                                      <div class="position-relative ">
+                                                          <input type="text" id="OrgSubUnitName" class="form-control border-primary" placeholder="ชื่อเต็มโครงสร้างอัตราส่วนราชการ" name="OrgSubUnitName">
 
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="userinput2">ชื่อย่อหัวหน้าสายวิชาการ</label>
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative">
-                                                              <input type="text" id="userinput2" class="form-control border-primary" placeholder="ชื่อย่อโครงสร้างอัตราส่วนราชการ" name="initName">
-                                                          </div>
                                                       </div>
                                                   </div>
                                               </div>
-                                              <br>
-                                              <!-- <div class="row">
+                                              <div class="col-md-6 mt-1">
+                                                  <label class="col-md-6 label-control" for="OrgSubUnitAbbr">ชื่อย่อหน่วยงาน</label>
                                                   <div class="col-md-12">
-                                                      <label class="col-md-4 label-control" for="userinput3">ชื่อหน่วยงาน</label>
-
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative ">
-                                                              <input type="text" id="timesheetinput1" class="form-control border-primary" placeholder="ชื่อหน่วยงาน" name="employeename">
-
-                                                          </div>
+                                                      <div class="position-relative">
+                                                          <input type="text" id="OrgSubUnitAbbr" class="form-control border-primary" placeholder="ชื่อย่อหัวหน้าสายวิชาการ" name="OrgSubUnitAbbr">
                                                       </div>
-
                                                   </div>
+                                              </div>
+                                              <div class="col-md-6 mt-1">
+                                                  <label class="col-md-6 label-control" for="OrgSubUnitSemiAbbr">ชื่อกึ่งหน่วยงาน</label>
                                                   <div class="col-md-12">
-                                                      <br>
-                                                      <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-                                                      <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
-
+                                                      <div class="position-relative">
+                                                          <input type="text" id="OrgSubUnitSemiAbbr" class="form-control border-primary" placeholder="ชื่อย่อหัวหน้าสายวิชาการ" name="OrgSubUnitSemiAbbr">
+                                                      </div>
                                                   </div>
-                                              </div> -->
+                                              </div>
+                                          </div>
+                                          <br>
+                                          <div class="row">
+                                              <div class="col-md-12">
+                                                  <br>
+                                                  <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
+                                                  <input id="isActive" type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                              </div>
+                                          </div>
+                                          <div class="form-actions center" align="center">
+
+                                              <input type="text" name="id" id="id" value="">
+
+                                              <!-- <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="insertOrganizationParts()">บันทึก</button> -->
+
+                                              <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                              <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" name="submit" onclick="UpdateOrganizationSubUnit()">บันทึก</button>
 
                                           </div>
-
-                                      </form>
                                   </div>
+                                  </form>
                               </div>
                           </div>
                       </div>
                   </div>
-                  <div class="form-actions center" align="center">
-                      <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text">บันทึก</button>
-                  </div>
-              </section>
-              <!-- // Basic form layout section end -->
           </div>
+          </section>
+          <!-- // Basic form layout section end -->
       </div>
   </div>
+  </div>
+  <input type="hidden" name="id" id="id" value="">
+  <script src="../../Controllers/organizationSubUnitController.js"></script>
+
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
@@ -126,5 +137,6 @@
   <script src="../../app-assets/js/scripts/extensions/sweet-alerts.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
 
+
   <!-- footer -->
-  <?php include '../include/footer.php'; ?> 
+  <?php include '../include/footer.php'; ?>

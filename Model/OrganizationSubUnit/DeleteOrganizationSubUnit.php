@@ -8,12 +8,14 @@ require_once "../../config.php";
 if (!empty($_POST)) {
     // $originsId = 0;
 
-    $organizationPartsId = $_POST['organizationPartsId'];
+    $id = $_POST['id'];
 
     // date_default_timezone_set('Asia/Bangkok');
     // echo date("Y-m-d h:i:sa");
+    
 
-    $sql = " DELETE FROM OrgPart WHERE OrgPartId = $organizationPartsId ";
+    $sql = " DELETE FROM OrgSubUnit
+    WHERE OrgSubUnitId=$id ";
     // echo $sql;
 
     $query = sqlsrv_query($conn, $sql);

@@ -8,13 +8,13 @@ require_once "../../config.php";
 $request = $_REQUEST;
 $col = array(
     0   =>  'OrgTypeId',
-    1   =>  'OrgTypName',
+    1   =>  'OrgTypeName',
     2   =>  'OrgTypeStartDate',
     3   =>  'OrgTypeEndDate',
     4   =>  'OrgTypeActive',
 );
 
-$sql = " SELECT OrgTypeId, OrgTypeName, OrgTypeStartDate, OrgTypeEndDate, OrgTypeAirforce, OrgTypeMultiMoney, OrgTypeCurrentDay, OrgTypeActive
+$sql = " SELECT OrgTypeId, OrgTypeName, OrgTypeStartDate, OrgTypeEndDate, OrgTypeActive , OrgTypeAirforce, OrgTypeMultiMoney, OrgTypeCurrentDay
 FROM OrgType; ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
@@ -24,14 +24,13 @@ $totalData = sqlsrv_num_rows($query);
 $totalFilter = $totalData;
 
 
-$sql = " SELECT OrgTypeId, OrgTypeName, OrgTypeStartDate, OrgTypeEndDate, OrgTypeAirforce, OrgTypeMultiMoney, OrgTypeCurrentDay, OrgTypeActive
+$sql = " SELECT OrgTypeId, OrgTypeName, OrgTypeStartDate, OrgTypeEndDate, OrgTypeActive , OrgTypeAirforce, OrgTypeMultiMoney, OrgTypeCurrentDay
 FROM OrgType WHERE 1=1 ";
 if (!empty($request['search']['value'])) {
     $sql .= " AND (OrgTypeName Like N'%" . $request['search']['value'] . "%'); ";
     $query = sqlsrv_query($conn, $sql, $params, $options);
     $totalData = sqlsrv_num_rows($query);
 }
-
 
 // echo $sql;
 $data = array();
@@ -45,8 +44,18 @@ while ($row = sqlsrv_fetch_array($query)) {
     $subdata[] = $row[0]; 
     $subdata[] = $row[0]; 
     $subdata[] = $row[1]; 
-    $subdata[] = $row[2]; 
-    $subdata[] = $row[3]; 
+    if ($row[2]) {
+        $subdata[] = $row[2];
+    } else {
+        $subdata[] = "ไม่กำหนด";
+    }
+
+    if ($row[3]) {
+        $subdata[] = "$row[3]";
+    } else {
+        $subdata[] = "ไม่กำหนด";
+    } //status   
+
     if ($row[4] !== 1) {
         $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
     } else {
@@ -54,6 +63,12 @@ while ($row = sqlsrv_fetch_array($query)) {
     } //status   
     $data[] = $subdata;
 }
+
+// echo"<pre>";
+// print_r($data);
+// echo"<pre>";
+
+
 $json_data = array(
     "draw"              =>  intval($request['draw']),
     "recordsTotal"      =>  intval($totalData),

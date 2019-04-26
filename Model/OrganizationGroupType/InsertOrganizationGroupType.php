@@ -23,7 +23,7 @@ if (!empty($_POST)) {
     // $OrganizationcategoryIN = $_POST['OrganizationcategoryIN'];
     $isActive = $_POST['isActive'];
      $sql =" INSERT INTO OrgGroupType
-     (OrgTypeName, OrgTypeActive, OrgTypeCreateBy, OrgTypeCreateDate, OrgTypeUpdateBy, OrgTypeUpdateDate)
+     (OrgGroupTypeName, OrgGroupTypeActive, OrgGroupTypeCreateBy, OrgGroupTypeCreateDate, OrgGroupTypeUpdateBy, OrgGroupTypeUpdateDate)     
      VALUES('$orgGroupTypeName', $isActive, '', '', '', ''); ";
     
     

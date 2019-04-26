@@ -1,41 +1,32 @@
 <?php
 
-error_reporting(0);
 
 require_once "../../config.php";
 
 // $_POST["originsId"] = 0;
 
-$OrganizationPartsId = $_POST["OrganizationPartsId"];
-
-
-$id = "";
-$OrganizationPartsName = "";
-$OrganizationPartsAbbrName = "";
+$id = $_POST["id"];
+$OrgPartName = "";
 $IsActive = "";
-// echo $originsId ;
+// echo $OrgPartID ;
 
-if(isset($OrganizationPartsId)){
-    $sql = " SELECT id, organization_part_name, organization_part_abbr_name, IsActive FROM organization_part where id = $OrganizationPartsId ";
-
+if(isset($id)){
+    $sql = " SELECT OrgPartId, OrgPartName, OrgPartActive
+    FROM OrgPart
+    where OrgPartId = $id ;";
     // echo $sql;
-
     $query = sqlsrv_query($conn, $sql);
 
     // if($query){ echo "query";}else{echo "not query";}
 
     while ($row = sqlsrv_fetch_array($query)) {
-        $id = $row['id'];
-        $OrganizationPartsName = $row['organization_part_name'];
-        $OrganizationPartsAbbrName = $row['organization_part_abbr_name'];
-        $IsActive = $row['IsActive'];
-        // echo $id;
-        // echo $originName;
-        // echo $originAbbrName;
-        // echo $IsActive;
+        $id = $row['OrgPartId'];
+        $OrgPartName = $row['OrgPartName'];
+        $IsActive = $row['OrgPartActive'];
+     
     }
 
-    $r=array("id"=>$id,"OrganizationPartsName"=>$OrganizationPartsName,"OrganizationPartsAbbrName"=>$OrganizationPartsAbbrName,"IsActive"=>$IsActive);
+    $r=array("id"=>$id,"OrgPartName"=>$OrgPartName,"IsActive"=>$IsActive);
     print(json_encode($r));
 }
 

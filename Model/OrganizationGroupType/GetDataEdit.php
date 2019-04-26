@@ -11,8 +11,9 @@ $IsActive = "";
 // echo $originsId ;
 
 if(isset($orgGroupTypeId)){
-    $sql = "SELECT OrgTypeId, OrgTypeName, OrgTypeActive, OrgTypeCreateBy, OrgTypeCreateDate, OrgTypeUpdateBy, OrgTypeUpdateDate
-    FROM OrgGroupType where OrgTypeId = $orgGroupTypeId ; ";
+    $sql = "SELECT OrgGroupTypeId, OrgGroupTypeName, OrgGroupTypeActive, OrgGroupTypeCreateBy, OrgGroupTypeCreateDate, OrgGroupTypeUpdateBy, OrgGroupTypeUpdateDate
+    FROM OrgGroupType
+     where OrgGroupTypeId = $orgGroupTypeId ; ";
 
     // echo $sql;
 
@@ -21,9 +22,9 @@ if(isset($orgGroupTypeId)){
     // if($query){ echo "query";}else{echo "not query";}
 
     while ($row = sqlsrv_fetch_array($query)) {
-        $id = $row['OrgTypeId'];
-        $orgGroupTypeName = $row['OrgTypeName'];
-        $IsActive = $row['OrgTypeActive'];
+        $id = $row['OrgGroupTypeId'];
+        $orgGroupTypeName = $row['OrgGroupTypeName'];
+        $IsActive = $row['OrgGroupTypeActive'];
         // echo $id;
         // echo $originName;
         // echo $originAbbrName;

@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(0);
+
 
 require_once "../../config.php";
 // if($conn){echo "con";}
@@ -8,20 +8,24 @@ require_once "../../config.php";
 if (!empty($_POST)) {
 
     $id = $_POST['id'];
-    $OrgPartName = $_POST['OrgPartName'];
+    // echo $id;
+    $OrgSubUnitName = $_POST['OrgSubUnitName'];
+    $OrgSubUnitAbbr = $_POST['OrgSubUnitAbbr'];
+    $OrgSubUnitSemiAbbr = $_POST['OrgSubUnitSemiAbbr'];
     $isActive = $_POST['isActive'];
-
     // date_default_timezone_set('Asia/Bangkok');
     // echo date("Y-m-d h:i:sa");
 
 
-    $sql = " UPDATE OrgPart
-    SET  OrgPartName='$OrgPartName', OrgPartActive=$isActive 
-     where OrgPartId=$id ";
-    echo $sql;
+    $sql = "UPDATE OrgSubUnit
+    SET  OrgSubUnitName='$OrgSubUnitName', OrgSubUnitAbbr='$OrgSubUnitAbbr', OrgSubUnitSemiAbbr='$OrgSubUnitSemiAbbr', OrgSubUnitActive=$isActive
+    where OrgSubUnitId = $id;
+    ";
 
     
+    // echo $sql;
 
+   
     $query = sqlsrv_query($conn, $sql);
 
     if ($query) {

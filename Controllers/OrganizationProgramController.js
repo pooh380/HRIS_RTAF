@@ -1,6 +1,6 @@
     function getOrg() {
         var orgTypeId = $('#orgTypeList :selected').val();
-        var orgListId = $('#orgListList :selected').val();
+        var orgStrucId = $('#orgListList :selected').val();
         // var orgId = $('#orgList :selected').val();
 
         // alert("เอา OrganizationTypeId: " + orgTypeId + " ช่องโครงสร้างและ OrganizationListId: " + orgListId + "ช่องสังกัดไปหาโครงสร้างส่วนราชการว่ามีส่วนไหนบ้างที่มี OrganizationTypeId และ OrganizationListId ใน Table organization_struc");
@@ -10,12 +10,12 @@
 
         $.post("../OrganizationProgram/detail.php", {
             orgTypeId: orgTypeId,
-            orgListId: orgListId
+            orgStrucId: orgStrucId
                 // orgId: orgId,
 
         }).done(function(data) {
             // console.log(data);
-            window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgListId=" + orgListId;
+            window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgStrucId=" + orgStrucId;
             // window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgId=" + orgId;
 
         }).fail(function(err) {
@@ -30,9 +30,11 @@
         // alert(orgTypeId + " " + orgListId);
     }
 
-    function showDetail(divisionId, orgLevelId, orgStucId) {
-        var orgTypeId = $("#orgTypeId").val();
-        var orgListId = $("#orgListId").val();
+    function showDetail(orgStucId, orgLevelId) {
+
+        alert("orgStucId:" + orgStucId + " orgLevelId:" + orgLevelId);
+        // var orgTypeId = $("#orgTypeId").val();
+        // var orgListId = $("#orgListId").val();
 
         // alert("นำค่า divisionId: " + divisionId + " OrganizationLevelId: " + orgLevelId + " OrganizationStucId: " + orgStucId + " นำไปค้นหาใน OrganizationList เพื่อที่จะนำไปโชว์ค่าขวา");
         // alert(" SQL ที่นำค่าไปค้นหา: SELECT * , organization_type.organization_type_name,organization_part.organization_part_name,organization_level.organization_level_name , organization_id , division.division_abbr_name" +
@@ -49,26 +51,31 @@
             dataType: "json",
             url: "../../Model/OrganizationProgram/getTemplateValue.php",
             data: {
-                orgLevelId: orgLevelId,
-                orgTypeId: orgTypeId,
-                orgListId: orgListId,
-                divisionId: divisionId,
-                orgStucId: orgStucId
+                orgStucId: orgStucId,
+                orgLevelId: orgLevelId
             },
             success: function(data) {
-                $("#code").val(data.id);
-                $("#orglistCode").val(data.orglistCode);
-                $("#divisionID").val(data.divisionID);
-                $("#orgListAbbr").val(data.orgListAbbr);
-                $("#orgListLong").val(data.orgListLong);
-                $("#orgListAbbrLong").val(data.orgListAbbrLong);
-                $("#orgListAbbrLongAbbr").val(data.orgListAbbrLongAbbr);
-                $("#startDate").val(data.startDate);
-                $('#orgTypeList').append('<option value="' + data.orgType + '" selected="selected">' + data.orgType + '</option>');
-                $('#orgListName').append('<option value="' + data.orgListName + '" selected="selected">' + data.orgListName + '</option>');
-                $('#orgPartName').append('<option value="' + data.orgPartName + '" selected="selected">' + data.orgPartName + '</option>');
-                $('#orgaLevelName').append('<option value="' + data.orgaLevelName + '" selected="selected">' + data.orgaLevelName + '</option>');
-                $('#divisionAbbrName').append('<option value="' + data.divisionAbbrName + '" selected="selected">' + data.divisionAbbrName + '</option>');
+                $("#orgStrucId").val(data.orgStrucId);
+                $('#orgTypeName').append('<option value="' + data.orgTypeId + '" selected="selected">' + data.orgTypeName + '</option>');
+                $("#orgSubUnitId").val(data.orgSubUnitId);
+                $('#orgPartName').append('<option value="' + data.orgPartId + '" selected="selected">' + data.orgPartName + '</option>');
+                // $("#orgPartName").val(data.orgPartName);
+                $('#orgLevelName').append('<option value="' + data.orgLevelId + '" selected="selected">' + data.orgLevelName + '</option>');
+                $("#orgSubUnitName").val(data.orgSubUnitName);
+
+
+
+                // $("#orglistCode").val(data.orgLevelName);
+                // $("#divisionID").val(data.orgPartName);
+                // $("#orgListAbbr").val(data.orgGroupTypeName);
+                // $("#orgListLong").val(data.orgTypeName);
+                // $("#orgListAbbrLong").val(data.orgSubUnitName);
+                // $("#orgListAbbrLongAbbr").val(data.orgStrucMain);
+                // $("#startDate").val(data.orgStrucSubMain);
+                // $('#orgTypeList').append('<option value="' + data.orgStrucPath + '" selected="selected">' + data.orgStrucPath + '</option>');
+                // $('#orgListName').append('<option value="' + data.orgStrucName + '" selected="selected">' + data.orgStrucName + '</option>');
+                // $('#orgPartName').append('<option value="' + data.orgPartName + '" selected="selected">' + data.orgPartName + '</option>');
+                // $('#orgaLevelName').append('<option value="' + data.orgStrucActive + '" selected="selected">' + data.orgStrucActive + '</option>');
 
                 // console.log(data);
             },

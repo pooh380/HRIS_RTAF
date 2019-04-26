@@ -77,15 +77,15 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="orgCategoryName">ประเภทโครงสร้าง</label>
+                                                      <label class="col-md-6 label-control" for="OrgGroupTypeId">ประเภทโครงสร้าง</label>
                                                       <div class="col-md-12">
-                                                          <select name="orgCategoryName" id="orgCategoryName" class="select2 form-control">
+                                                          <select name="OrgGroupTypeId" id="OrgGroupTypeId" class="select2 form-control">
                                                               <option value="">กรุณาเลือกประเภทโครงสร้าง</option>
                                                               <?php
-                                                                $sql = " SELECT id, organization_category_name FROM organization_category; ";
+                                                                $sql = " SELECT OrgGroupTypeId, OrgGroupTypeName FROM OrgGroupType; ";
                                                                 $result = sqlsrv_query($conn, $sql);
                                                                 while ($row = sqlsrv_fetch_array($result)) {
-                                                                    echo "<option value='" . $row['id'] . "'>" . $row['organization_category_name'] . "</option>";
+                                                                    echo "<option value='" . $row['OrgGroupTypeId'] . "'>" . $row['OrgGroupTypeName'] . "</option>";
                                                                 }
                                                                 ?>
                                                           </select>
@@ -104,11 +104,11 @@
                                                   </div> -->
 
                                                   <div class="col-md-6">
-                                                      <label class="col-md-4 label-control" for="orgTypeName">ชื่อโครงสร้าง</label>
+                                                      <label class="col-md-4 label-control" for="OrgTypeName">ชื่อโครงสร้าง</label>
 
                                                       <div class="col-md-12">
                                                           <div class="position-relative has-icon-left">
-                                                              <input type="text" id="orgTypeName" name="orgTypeName" class="form-control border-primary" placeholder="ชื่อโครงสร้าง" name="employeename">
+                                                              <input type="text" id="OrgTypeName" name="OrgTypeName" class="form-control border-primary" placeholder="ชื่อโครงสร้าง" name="employeename">
                                                               <div class="form-control-position">
                                                                   <i class="ft-user"></i>
                                                               </div>

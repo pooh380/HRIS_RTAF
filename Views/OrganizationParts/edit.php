@@ -18,7 +18,7 @@
       }
   </style>
 
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   <script>
       $(document).ready(function() {
           getIdForEdit();
@@ -68,32 +68,22 @@
                                           <div class="form-body">
                                               <div class="row">
                                                   <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="organizationPartName">ชื่อเต็มส่วนราชการ</label>
+                                                      <label class="col-md-6 label-control" for="OrgPartName">ชื่อส่วนราชการ</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="organizationPartName" class="form-control border-primary" placeholder="ชื่อเต็มส่วนราชการ" name="organizationPartName" value="">
+                                                              <input type="text" id="OrgPartName" class="form-control border-primary" placeholder="ชื่อส่วนราชการ" name="OrgPartName" value="">
 
                                                           </div>
                                                       </div>
                                                   </div>
-                                                  <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="organizationPartAbbrName">ชื่อย่อส่วนราชการ</label>
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative">
-                                                              <input type="text" id="organizationPartAbbrName" class="form-control border-primary" placeholder="ชื่อย่อส่วนราชการ" name="organizationPartAbbrName" value="">
-                                                          </div>
-                                                      </div>
-                                                      <input type="hidden" name="id" id="id" value="">
-                                                  </div>
                                               </div>
-                                              <br>
                                               <div class="row">
                                                   <div class="col-md-12">
                                                       <br>
                                                       <label class="col-md-1 label-control" for="userinput3" style="padding-right:0px;">สถานะ</label>
-                                                      <input id="isActive" type="checkbox" data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                                      <input id="isActive" type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
                                                       <!-- <input id="isActive" type="checkbox"> -->
-
+                                                      <input type="hidden" name="id" id="id" value="">
                                                   </div>
                                               </div>
                                               <div class="form-actions center" align="center">
@@ -125,4 +115,4 @@
 
   <script src="../../Controllers/organizationPartsController.js"></script>
   <!-- footer -->
-  <?php include '../include/footer.php'; ?> 
+  <?php include '../include/footer.php'; ?>
