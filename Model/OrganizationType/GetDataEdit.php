@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(0);
+// error_reporting(0);
 
 require_once "../../config.php";
 
@@ -8,9 +8,9 @@ require_once "../../config.php";
 
 $orgTypeId = $_POST["orgTypeId"];
 $id = "";
-$originName = "";
-$originAbbrName = "";
-$IsActive = "";
+// $originName = "";
+// $originAbbrName = "";
+// $IsActive = "";
 // echo $originsId ;
 
 if(isset($orgTypeId)){
@@ -28,10 +28,10 @@ if(isset($orgTypeId)){
 
     while ($row = sqlsrv_fetch_array($query)) {
         $OrgTypeId = $row['OrgTypeId'];
-        $orgTypeName = $row['organization_type_name'];
-        $orgCategoryId = $row['organization_category_id'];
-        $orgCategoryName = $row['organization_category_name'];
-        $IsActive = $row['IsActive'];
+        // $orgTypeName = $row['organization_type_name'];
+        // $orgCategoryId = $row['organization_category_id'];
+        // $orgCategoryName = $row['organization_category_name'];
+        // $IsActive = $row['IsActive'];
         // echo $id;
         // echo $originName;
         // echo $originAbbrName;

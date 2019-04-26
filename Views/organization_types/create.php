@@ -19,7 +19,6 @@
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
 
-
   <style>
       /* ol > li > a {color:#222233;} */
       .toggle.ios,
@@ -82,7 +81,7 @@
                                                           <select name="OrgGroupTypeId" id="OrgGroupTypeId" class="select2 form-control">
                                                               <option value="">กรุณาเลือกประเภทโครงสร้าง</option>
                                                               <?php
-                                                                $sql = " SELECT OrgGroupTypeId, OrgGroupTypeName FROM OrgGroupType; ";
+                                                                $sql = " SELECT OrgGroupTypeId, OrgGroupTypeName FROM OrgGroupType WHERE   ; ";
                                                                 $result = sqlsrv_query($conn, $sql);
                                                                 while ($row = sqlsrv_fetch_array($result)) {
                                                                     echo "<option value='" . $row['OrgGroupTypeId'] . "'>" . $row['OrgGroupTypeName'] . "</option>";
