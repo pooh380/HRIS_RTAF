@@ -4,9 +4,9 @@
 
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
-<!-- BEGIN SELECT2 CSS-->
-<link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/selects/select2.min.css">
-<!-- END SELECT2 CSS-->
+  <!-- BEGIN SELECT2 CSS-->
+  <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/selects/select2.min.css">
+  <!-- END SELECT2 CSS-->
   <style>
     /* ol > li > a {color:#222233;} */
     .toggle.ios,
@@ -14,10 +14,52 @@
     .toggle-off.ios {
       border-radius: 20rem;
     }
+
     .toggle.ios .toggle-handle {
       border-radius: 20rem;
     }
   </style>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+      change_autorefreshdiv();
+
+      $(document).ajaxStart(function() {
+            $(".modal").show();
+        });
+        $(document).ajaxComplete(function() {
+            $(".modal").hide();
+        });
+
+      var orgLevId = $('#orgLevelList :selected').val();
+      getOrganizationSubUnit(orgLevId);
+      
+      $('#orgLevelList').on('change', function() {
+        var orgLevId = "";
+        var orgLevId = $('#orgLevelList :selected').val();
+        getOrganizationSubUnit(orgLevId);
+      });
+
+
+    });
+
+
+
+    function change_autorefreshdiv() {
+      // $('#prefixPage').addClass('active');
+    }
+
+    function toggle(source) {
+      var checkboxes = document.querySelectorAll('.checkAll');
+      for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i] != source)
+          checkboxes[i].checked = source.checked;
+      }
+    }
+  </script>
 
   <section>
     <div class="app-content content">
@@ -29,7 +71,7 @@
           </div>
         </div>
         <div class="content-body">
-          <!-- Bootstrap 3 table -->
+        <?php include_once '../include/modelOnload.php' ?>
           <section id="bootstrap3">
             <div class="row">
               <div class="col-12">
@@ -51,18 +93,18 @@
                       <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                         <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
                       </a>
-                      <a class="col-md-4 float-md-right" >
-                        <select name="OrgLevelId" id="OrgLevelId" class="select2 form-control ">
-                          <option value="">กรุณาเลือกประเภทโครงสร้าง</option>
+                      <a class="col-md-4 float-md-right">
+                        <select name="orgLevelList" id="orgLevelList" class="select2 form-control">
+                          <!-- <option value="">กรุณาเลือกประเภทโครงสร้าง</option> -->
                           <?php
-                          $sql = " SELECT OrgLevelId, OrgLevelName FROM OrgLevel    ; ";
+                          $sql = " SELECT OrgLevelId, OrgLevelName FROM OrgLevel; ";
                           $result = sqlsrv_query($conn, $sql);
                           while ($row = sqlsrv_fetch_array($result)) {
                             echo "<option value='" . $row['OrgLevelId'] . "'>" . $row['OrgLevelName'] . "</option>";
                           }
                           ?>
                         </select>
-                        </a>
+                      </a>
 
                       <table id="OrganizationLevels" class="table table-striped table-borderless table-hover bootstrap-3 " style="width:100%;">
                         <thead>
@@ -74,6 +116,7 @@
                             <th>ชื่อย่อหน่วยงาน</th>
                             <th>ชื่อกึ่งหน่วยงาน</th>
                             <th>สถานะ</th>
+                            
                           </tr>
                         </thead>
                         <tbody align="center">
@@ -91,59 +134,31 @@
     </div>
   </section>
 
-
-  <script src="../../app-assets/vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>
-  <script src="../../app-assets/js/scripts/forms/select/form-select2.js" type="text/javascript"></script>
-  <script src="../../Controllers/organizationSubUnitController.js"></script>
-
-  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      console.log("ready");
-      change_autorefreshdiv();
-      getOrganizationSubUnit();
-    });
-
-    function change_autorefreshdiv() {
-      // $('#prefixPage').addClass('active');
-    }
-
-    function toggle(source) {
-      var checkboxes = document.querySelectorAll('.checkAll');
-      for (var i = 0; i < checkboxes.length; i++) {
-        if (checkboxes[i] != source)
-          checkboxes[i].checked = source.checked;
-      }
-    }
-     $(function() {
-            $('#OrgLevelId').change(function() {
-                var OrgLevelId = $('#OrgLevelId :selected').val();
-                $("#OrgLevelId").val(OrgLevelId);
-
-                $.ajax({
-                    type: "POST",
-                    url: "../../Model/OrganizationSubUnit/GetOrganizationsSubUnit.php",
-                    data: {
-                      OrgLevelId: OrgLevelId
-                    },
-                    success: function(data) {
-                        // console.log(data);
-                        $('#orgListList').html(data);
-                    },
-                    error: function(error) {
-                        // console.log(error);
-                    }
-                });
-
-            });
-        });
-  </script>
-
-<!-- SELECT2 -->
+  <footer class="footer footer-static footer-light navbar-border navbar-shadow">
+    <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
+        <span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2018 <a class="text-bold-800 grey darken-2" href="https://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" target="_blank">PIXINVENT </a>, All rights reserved. </span>
+        <span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span>
+    </p>
+</footer>
+<!-- BEGIN VENDOR JS-->
+<script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+<!-- BEGIN VENDOR JS-->
+<!-- BEGIN PAGE VENDOR JS-->
 <script src="../../app-assets/vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>
+<!-- END PAGE VENDOR JS-->
+<!-- BEGIN MODERN JS-->
+<script src="../../app-assets/js/core/app-menu.js" type="text/javascript"></script>
+<script src="../../app-assets/js/core/app.js" type="text/javascript"></script>
+<script src="../../app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+<!-- END MODERN JS-->
+<!-- BEGIN PAGE LEVEL JS-->
 <script src="../../app-assets/js/scripts/forms/select/form-select2.js" type="text/javascript"></script>
-<!-- SELECT2 -->
+<!-- END PAGE LEVEL JS-->
+<script src="../../app-assets/js/scripts/tables/datatables/datatable-styling.js" type="text/javascript"></script>
+<script src="../../app-assets/vendors/js/tables/datatable/datatables.min.js" type="text/javascript"></script>
 
-  <!-- footer -->
-  <?php include '../include/footer.php'; ?>
+<script src="../../Controllers/organizationSubUnitController.js"></script>
+
+</body>
+
+</html>

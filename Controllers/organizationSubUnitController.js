@@ -1,24 +1,30 @@
-function getOrganizationSubUnit() {
+function getOrganizationSubUnit(orgLevId) {
+
     $('#OrganizationLevels').DataTable({
         "ajax": {
             url: "../../Model/OrganizationSubUnit/GetOrganizationsSubUnit.php", // json datasource
             dataType: "json",
+            data: { orgLevId: orgLevId },
             type: "post",
-            "start": 0,
-            "length": 3,
-            "serverSide": true,
-            "processing": true,
-            "paging": true,
-            "searching": { "regex": true },
-            "lengthMenu": [
+            start: 0,
+            length: 3,
+            serverSide: true,
+            processing: true,
+            paging: true,
+            searching: true,
+            lengthMenu: [
                 [10, 25, 50, 100, -1],
                 [10, 25, 50, 100, "All"]
             ],
-            "pageLength": 10,
+            pageLength: 10,
             order: [
                 [0, "desc"]
-            ]
-        }
+            ],
+            oLanguage: {
+                "sEmptyTable": "ไม่มีข้อมูลนี้ในตาราง"
+            }
+        },
+        destroy: true
     });
 }
 
@@ -86,8 +92,8 @@ function getIdForEdit() {
         dataType: "json",
         url: "../../Model/OrganizationSubUnit/GetDataEdit.php",
         data: {
-            OrgSubUnitId:OrgSubUnitId,
-         
+            OrgSubUnitId: OrgSubUnitId,
+
         },
         success: function(data) {
             $("#id").val(data.id);
@@ -121,8 +127,8 @@ function UpdateOrganizationSubUnit() {
     var OrgSubUnitAbbr = $("#OrgSubUnitAbbr").val();
     var OrgSubUnitSemiAbbr = $("#OrgSubUnitSemiAbbr").val();
     var isActive = $("#isActive").val();
-  
-    
+
+
 
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
@@ -137,7 +143,7 @@ function UpdateOrganizationSubUnit() {
         url: "../../Model/OrganizationSubUnit/UpdateOrganizationSubUnit.php",
         data: {
             id: id,
-            OrgSubUnitName : OrgSubUnitName,
+            OrgSubUnitName: OrgSubUnitName,
             OrgSubUnitAbbr: OrgSubUnitAbbr,
             OrgSubUnitSemiAbbr: OrgSubUnitSemiAbbr,
             isActive: isActive
