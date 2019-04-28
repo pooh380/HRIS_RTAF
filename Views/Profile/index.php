@@ -525,13 +525,26 @@
                                    
                                     <div
                                         class="col-lg-6 col-md-12">
+
+
+                                        <div
+                                                    class="card-body ">
+                                                    วันออกบัตร : 
+                                                    <input type='text' class="form-control pickadate-disable-weekday" placeholder="Disable days of the week"
+                          />
+                          <div class="input-group-append">
+                            <span class="input-group-text">
+                              <span class="la la-calendar-o"></span>
+                            </span>
+                          </div>
+                                                </div>
                                        
                                            
                                             <div
                                                 class="card-block">
                                                
                                                 <div class="form-group">
-                        <label>Disable days of the week</label>
+                      
                         <div class="input-group">
                           <input type='text' class="form-control pickadate-disable-weekday" placeholder="Disable days of the week"
                           />
@@ -541,12 +554,9 @@
                             </span>
                           </div>
                         </div>
-                        <small class="text-muted">Disable certain days of the week, such as all Saturdays (7th
-                          day of week) and Sundays (1st day of week), by passing
-                          an integer between 1 and 7</small>
+                       
                       </div>
-                      <label for="dateofbirth">Date Of Birth</label>
-<input type="date" name="dateofbirth" id="dateofbirth">
+                      
                       </div>
                                                 <div
                                                     class="card-body ">
