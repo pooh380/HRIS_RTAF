@@ -4,6 +4,7 @@
 error_reporting(0);
 
 require_once "../../config.php";
+require_once "../../Controllers/API/dateformat.php";
 
 $request = $_REQUEST;
 $col = array(
@@ -14,8 +15,7 @@ $col = array(
     4   =>  'OrgTypeActive',
 );
 
-$sql = " SELECT OrgTypeId, OrgTypeName, OrgTypeStartDate, OrgTypeEndDate, OrgTypeActive , OrgTypeAirforce, OrgTypeMultiMoney, OrgTypeCurrentDay
-FROM OrgType; ";
+$sql = " SELECT OrgTypeId, OrgTypeName, OrgTypeStartDate, OrgTypeEndDate, OrgTypeActive FROM OrgType; ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
@@ -24,8 +24,7 @@ $totalData = sqlsrv_num_rows($query);
 $totalFilter = $totalData;
 
 
-$sql = " SELECT OrgTypeId, OrgTypeName, OrgTypeStartDate, OrgTypeEndDate, OrgTypeActive , OrgTypeAirforce, OrgTypeMultiMoney, OrgTypeCurrentDay
-FROM OrgType WHERE 1=1 ";
+$sql = " SELECT OrgTypeId, OrgTypeName, OrgTypeStartDate, OrgTypeEndDate, OrgTypeActive FROM OrgType WHERE 1=1 ";
 if (!empty($request['search']['value'])) {
     $sql .= " AND (OrgTypeName Like N'%" . $request['search']['value'] . "%'); ";
     $query = sqlsrv_query($conn, $sql, $params, $options);
@@ -45,13 +44,13 @@ while ($row = sqlsrv_fetch_array($query)) {
     $subdata[] = $row[0]; 
     $subdata[] = $row[1]; 
     if ($row[2]) {
-        $subdata[] = $row[2];
+        $subdata[] = dateThai($row[2]);
     } else {
         $subdata[] = "ไม่กำหนด";
     }
 
     if ($row[3]) {
-        $subdata[] = "$row[3]";
+        $subdata[] = dateThai($row[3]);
     } else {
         $subdata[] = "ไม่กำหนด";
     } //status   
@@ -61,6 +60,11 @@ while ($row = sqlsrv_fetch_array($query)) {
     } else {
         $subdata[] = '<i class="la la-toggle-on" style="color: green; font-size:30px; "></i>';
     } //status   
+    // if ($row[4] !== 1) {
+    //     $subdata[] = 'ใช้งาน';
+    // } else {
+    //     $subdata[] = 'ยกเลิก';
+    // } //status   
     $data[] = $subdata;
 }
 

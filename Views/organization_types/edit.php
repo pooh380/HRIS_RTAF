@@ -36,15 +36,16 @@
         getIdForEdit();
     });
 </script>
+
+
+
 <div class="app-content content">
     <div class="content-wrapper">
         <div class="content-header row">
             <div class="content-header-left col-md-6 col-12 mb-2">
                 <div style="width:7px;height:30px;background-color:#1a1d52; float:left; margin-right:10px;"></div>
                 <h3 class="content-header-title">เพิ่มอัตราตำแหน่งในโครงสร้างอัตรา</h3>
-                <div class="row breadcrumbs-top">
-
-                </div>
+                <input type="text" name="orgTypeId" id="orgTypeId" value="">
             </div>
 
         </div>
@@ -81,12 +82,12 @@
                                         <div class="form-body">
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label class="col-md-6 label-control" for="OrgGroupTypeId">ประเภทโครงสร้าง</label>
+                                                    <label class="col-md-6 label-control" for="orgGroupTypeId">ประเภทโครงสร้าง</label>
                                                     <div class="col-md-12">
-                                                        <select name="OrgGroupTypeId" id="OrgGroupTypeId" class="select2 form-control">
+                                                        <select name="orgGroupTypeId" id="orgGroupTypeId" class="select2 form-control">
                                                             <option value="">กรุณาเลือกประเภทโครงสร้าง</option>
                                                             <?php
-                                                            $sql = " SELECT OrgGroupTypeId, OrgGroupTypeName, FROM OrgGroupType WHERE OrgGroupTypeId = 4   ; ";
+                                                            $sql = " SELECT OrgGroupTypeId, OrgGroupTypeName FROM OrgGroupType; ";
                                                             $result = sqlsrv_query($conn, $sql);
                                                             while ($row = sqlsrv_fetch_array($result)) {
                                                                 echo "<option value='" . $row['OrgGroupTypeId'] . "'>" . $row['OrgGroupTypeName'] . "</option>";
@@ -97,11 +98,11 @@
                                                 </div>
 
                                                 <div class="col-md-6">
-                                                    <label class="col-md-4 label-control" for="OrgTypeName">ชื่อโครงสร้าง</label>
+                                                    <label class="col-md-4 label-control" for="orgTypeName">ชื่อโครงสร้าง</label>
 
                                                     <div class="col-md-12">
                                                         <div class="position-relative has-icon-left">
-                                                            <input type="text" id="OrgTypeName" name="OrgTypeName" class="form-control border-primary" placeholder="ชื่อโครงสร้าง" name="employeename">
+                                                            <input type="text" id="orgTypeName" name="orgTypeName" class="form-control border-primary" placeholder="ชื่อโครงสร้าง">
                                                             <div class="form-control-position">
                                                                 <i class="ft-user"></i>
                                                             </div>
@@ -152,13 +153,10 @@
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <input type="text" name="id" id="id" value="">
-
                                         <div class="col-sm-12 mt-1">
                                             <fieldset class="checkboxsas">
                                                 <label>
-                                                    <input id="airForce" checked type="checkbox" value="1">&nbsp;โครงสร้างของ ทอ.
+                                                    <input id="airForce" type="checkbox" value="1">&nbsp;โครงสร้างของ ทอ.
                                                 </label>
                                             </fieldset>
                                             <fieldset class="checkbox">
@@ -178,7 +176,7 @@
                                         </div>
                                         <div class="form-actions center" align="center">
                                             <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                                            <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="insertOrgType()">บันทึก</button>
+                                            <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" onclick="UpdateOrgType()">บันทึก</button>
                                         </div>
                                     </form>
                                 </div>

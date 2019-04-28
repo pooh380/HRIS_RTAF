@@ -1,24 +1,17 @@
 <?php
 
-// error_reporting(0);
+error_reporting(0);
 
 require_once "../../config.php";
-
-// $orgTypeId = $_POST["orgTypeId"] = 25;
+require_once "../../Controllers/API/dateformat.php";
 
 $orgTypeId = $_POST["orgTypeId"];
-$id = "";
-// $originName = "";
-// $originAbbrName = "";
-// $IsActive = "";
-// echo $originsId ;
 
 if(isset($orgTypeId)){
-    $sql = " SELECT organization_type.id as OrgTypeId, organization_type_code, organization_type_name, organization_type_abbr_name, organization_category_id,organization_category.organization_category_name
-    FROM organization_type 
-    JOIN organization_category 
-    ON organization_type.organization_category_id = organization_category.id
-    where organization_type.id = $orgTypeId; ";
+    $sql = " SELECT OrgTypeId, OrgGroupType.OrgGroupTypeId, OrgGroupTypeName, OrgTypeName, OrgTypeStartDate, OrgTypeEndDate, OrgTypeAirforce, OrgTypeMultiMoney, OrgTypeCurrentDay, OrgTypeActive, OrgTypeCreateBy, OrgTypeCreateDate, OrgTypeUpdateBy, OrgTypeUpdateDate
+    FROM OrgType
+    JOIN OrgGroupType
+    ON OrgType.OrgGroupTypeId = OrgGroupType.OrgGroupTypeId where OrgTypeId = $orgTypeId; ";
 
     // echo $sql."<br>";
 
@@ -27,18 +20,23 @@ if(isset($orgTypeId)){
     // if($query){ echo "query";}else{echo "not query";}
 
     while ($row = sqlsrv_fetch_array($query)) {
-        $OrgTypeId = $row['OrgTypeId'];
-        // $orgTypeName = $row['organization_type_name'];
-        // $orgCategoryId = $row['organization_category_id'];
-        // $orgCategoryName = $row['organization_category_name'];
-        // $IsActive = $row['IsActive'];
-        // echo $id;
-        // echo $originName;
-        // echo $originAbbrName;
-        // echo $IsActive;
+        $orgTypeId = $row['OrgTypeId'];
+        $orgGroupTypeId = $row['OrgGroupTypeId'];
+        $orgGroupTypeName = $row['OrgGroupTypeName'];
+        $orgTypeName = $row['OrgTypeName'];
+        $orgTypeStartDate = dateThai($row['OrgTypeStartDate']);
+        $orgTypeEndDate = dateThai($row['OrgTypeEndDate']);
+        $orgTypeAirforce = $row['OrgTypeAirforce'];
+        $orgTypeMultiMoney = $row['OrgTypeMultiMoney'];
+        $orgTypeCurrentDay = $row['OrgTypeCurrentDay'];
+        
+        $IsActive = $row['IsActive'];
     }
 
-    $r=array("OrgTypeId"=>$OrgTypeId,"orgTypeName"=>$orgTypeName,"orgCategoryId"=>$orgCategoryId,"orgCategoryName"=>$orgCategoryName,"IsActive"=>$IsActive);
+
+
+    $r=array("orgTypeId"=>$orgTypeId,"orgGroupTypeId"=>$orgGroupTypeId,"orgGroupTypeName"=>$orgGroupTypeName,"orgTypeName"=>$orgTypeName,"orgTypeStartDate"=>$orgTypeStartDate,"orgTypeEndDate"=>$orgTypeEndDate,"orgTypeAirforce"=>$orgTypeAirforce,
+    "orgTypeMultiMoney"=>$orgTypeMultiMoney,"orgTypeCurrentDay"=>$orgTypeCurrentDay,"IsActive"=>$IsActive);
     print(json_encode($r));
 }
 

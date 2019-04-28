@@ -120,12 +120,36 @@ function getIdForEdit() {
             orgTypeId: orgTypeId
         },
         success: function(data) {
-            $("#orgTypeId").val(data.OrgTypeId);
-            $('#orgCategoryName').append('<option value="' + data.orgCategoryId + '" selected="selected">' + data.orgCategoryName + '</option>');
+            $("#orgTypeId").val(data.orgTypeId);
+            $('#orgGroupTypeId').append('<option value="' + data.orgGroupTypeId + '" selected="selected">' + data.orgGroupTypeName + '</option>');
             $("#orgTypeName").val(data.orgTypeName);
-            // $("#passTypeName").val(data.passTypeName);
-            // $("#passTypeAbbrName").val(data.passTypeAbbrName);
-            // console.log(data.IsActive);
+            $("#startDate").val(data.orgTypeStartDate);
+            $("#endDate").val(data.orgTypeEndDate);
+
+            if (data.orgTypeAirforce == 1) {
+                // $("#isActive").removeAttr('checked');
+                $("#airForce").prop('checked', true);
+            } else {
+                // $('#isActive').prop("checked", true);
+                $("#airForce").prop('checked', false);
+            }
+
+            if (data.orgTypeMultiMoney == 1) {
+                // $("#isActive").removeAttr('checked');
+                $("#multiplesDay").prop('checked', true);
+            } else {
+                // $('#isActive').prop("checked", true);
+                $("#multiplesDay").prop('checked', false);
+            }
+
+            if (data.orgTypeCurrentDay == 1) {
+                // $("#isActive").removeAttr('checked');
+                $("#currentOrg").prop('checked', true);
+            } else {
+                // $('#isActive').prop("checked", true);
+                $("#currentOrg").prop('checked', false);
+            }
+
             if (data.IsActive == 0) {
                 // $("#isActive").removeAttr('checked');
                 $("#isActive").bootstrapToggle('off');
@@ -146,7 +170,7 @@ function getIdForEdit() {
 
 function UpdateOrgType() {
     var orgTypeId = $("#orgTypeId").val();
-    var orgCategoryName = $('#orgCategoryName :selected').val();
+    var orgGroupTypeId = $('#orgGroupTypeId :selected').val();
     var orgTypeName = $("#orgTypeName").val();
     var startDate = $("#startDate").val();
     var endDate = $("#endDate").val();
@@ -178,27 +202,29 @@ function UpdateOrgType() {
         var currentOrg = "1";
     }
 
+    // alert(orgTypeId + orgGroupTypeId + orgTypeName + startDate + endDate + airForce + multiplesDay + currentOrg + isActive);
+
 
     $.post("../../Model/OrganizationType/UpdateOrganizationType.php", {
         orgTypeId: orgTypeId,
-        orgCategoryName: orgCategoryName,
+        orgGroupTypeId: orgGroupTypeId,
         orgTypeName: orgTypeName,
-        startDate: startDate,
-        endDate: endDate,
+        // startDate: startDate,
+        // endDate: endDate,
         isActive: isActive,
         airForce: airForce,
         multiplesDay: multiplesDay,
         currentOrg: currentOrg
     }).done(function(data) {
-        // window.location.replace("../page/listUser.php");
-        // console.log(data);
+        window.location.replace("../page/listUser.php");
+        console.log(data);
         Swal.fire({
             type: 'success',
             title: 'แก้ไขข้อมูลสำเร็จ',
             showConfirmButton: false,
             timer: 2000
         });
-        setTimeout("window.open('../organization_types/index.php', '_self');", 2000);
+        // setTimeout("window.open('../organization_types/index.php', '_self');", 2000);
     }).fail(function(err) {
         // console.log(err);
         Swal.fire({

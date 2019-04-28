@@ -8,10 +8,10 @@ require_once "../../config.php";
 if (!empty($_POST)) {
 
     $orgTypeId = $_POST['orgTypeId'];
-    $orgCategoryName = $_POST['orgCategoryName'];
+    $orgGroupTypeId = $_POST['orgGroupTypeId'];
     $orgTypeName = $_POST['orgTypeName'];
-    $startDate = $_POST['startDate'];
-    $endDate = $_POST['isActendDateive'];
+    // $startDate = $_POST['startDate'];
+    // $endDate = $_POST['endDate'];
     $isActive = $_POST['isActive'];
     $airForce = $_POST['airForce'];
     $multiplesDay = $_POST['multiplesDay'];
@@ -21,11 +21,9 @@ if (!empty($_POST)) {
     // date_default_timezone_set('Asia/Bangkok');
     // echo date("Y-m-d h:i:sa");
 
-
-    $sql = " UPDATE organization_type
-    SET organization_type_name='$orgTypeName', organization_category_id=$$orgCategoryName, airforce='$airForce', multiples_day='$multiplesDay', current_organization='$currentOrg', IsActive=$isActive
-    WHERE id=$orgTypeId; ";
-    // echo $sql;
+    $sql = " UPDATE OrgType
+    SET OrgGroupTypeId=$orgGroupTypeId, OrgTypeName='$orgTypeName', OrgTypeAirforce=$airForce, OrgTypeMultiMoney=$multiplesDay, OrgTypeCurrentDay=$currentOrg, OrgTypeActive=$isActive   
+    WHERE OrgTypeId=$orgTypeId; ";
 
     $query = sqlsrv_query($conn, $sql);
 
