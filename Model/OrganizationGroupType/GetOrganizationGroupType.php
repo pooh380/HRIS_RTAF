@@ -12,8 +12,7 @@ $col = array(
     2   =>  'OrgGroupTypeActive',
 );
 
-$sql = " SELECT OrgGroupTypeId, OrgGroupTypeName, OrgGroupTypeActive, OrgGroupTypeCreateBy, OrgGroupTypeCreateDate, OrgGroupTypeUpdateBy, OrgGroupTypeUpdateDate
-FROM OrgGroupType ;";
+$sql = " SELECT OrgGroupTypeId, OrgGroupTypeName, OrgGroupTypeActive, OrgGroupTypeCreateBy, OrgGroupTypeCreateDate, OrgGroupTypeUpdateBy, OrgGroupTypeUpdateDate FROM OrgGroupType; ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
@@ -21,8 +20,7 @@ $totalData = sqlsrv_num_rows($query);
 $totalFilter = $totalData;
 
 
-$sql = "SELECT OrgGroupTypeId, OrgGroupTypeName, OrgGroupTypeActive, OrgGroupTypeCreateBy, OrgGroupTypeCreateDate, OrgGroupTypeUpdateBy, OrgGroupTypeUpdateDate
-FROM OrgGroupType WHERE 1=1 ;";
+$sql = " SELECT OrgGroupTypeId, OrgGroupTypeName, OrgGroupTypeActive, OrgGroupTypeCreateBy, OrgGroupTypeCreateDate, OrgGroupTypeUpdateBy, OrgGroupTypeUpdateDate FROM OrgGroupType WHERE 1=1 ;";
 // echo $sql;
 if (!empty($request['search']['value'])) {
     $sql .= " AND (OrgGroupTypeName Like N'%" . $request['search']['value'] . "%'); ";
