@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- select2 -->
+  <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/selects/select2.min.css">
   <section>
       <div class="app-content content">
           <div class="content-wrapper">
@@ -74,9 +76,6 @@
                                                   </div>
                                               </div>
                                           </div> <!-- card -->
-
-
-
 
 
                                           <div>
@@ -149,233 +148,454 @@
                                                                   aria-controls="tab12" href="#tab12"
                                                                   aria-expanded="false">บุตร-ธิดา</a>
                                                           </li>
-                                                          <li class="nav-item">
-                                                              <a class="nav-link disabled">Disabled</a>
-                                                          </li>
+                                                        
                                                       </ul>
 
 
-
-                                                      <div class="card-content">
-                                                          <div class="card-body">
-
-
-                                                              <div class="tab-content px-1 pt-1">
-                                                                  <div role="tabpanel" class="tab-pane active"
-                                                                      id="tab11" aria-expanded="true"
-                                                                      aria-labelledby="base-tab11">
-
-                                                                      <div
-                                                                          class="card collapse-icon accordion-icon-rotate active">
-                                                                          <div id="headingCollapse31"
-                                                                              class="card-header bg-success">
-                                                                              <a data-toggle="collapse"
-                                                                                  href="#collapse31"
-                                                                                  aria-expanded="true"
-                                                                                  aria-controls="collapse31"
-                                                                                  class="card-title lead white">
-                                                                                  <h6>ส่วนที่1
-                                                                                      ข้อมูลบุคคล(ประวัติข้าราชการ)</h6>
-                                                                              </a>
-                                                                          </div>
-                                                                          <div id="collapse31" role="tabpanel"
-                                                                              aria-labelledby="headingCollapse31"
-                                                                              class="card-collapse collapse show"
-                                                                              aria-expanded="true">
-                                                                              <div class="card-content">
-                                                                                  <div class="card-body">
-                                                                                  <div class="row match-height">
-                                                                                      <div class="col-lg-6 col-md-12">
-                                                                                          <div class="card">
-                                                                                              <div class="card-header">
-                                                                                                  <label
-                                                                                                      class="card-title"
-                                                                                                      for="DefaultSelect">ประเพศกำลังพล</label>
-                                                                                              </div>
-                                                                                              <div class="card-block">
-                                                                                                  <div
-                                                                                                      class="card-body">
-                                                                                                      <fieldset
-                                                                                                          class="form-group position-relative">
-                                                                                                          <select
-                                                                                                              class="form-control"
-                                                                                                              id="DefaultSelect">
-                                                                                                              <option
-                                                                                                                  selected>
-                                                                                                                  Default
-                                                                                                                  select
-                                                                                                                  options
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="1">
-                                                                                                                  One
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="2">
-                                                                                                                  Two
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="3">
-                                                                                                                  Three
-                                                                                                              </option>
-                                                                                                          </select>
-                                                                                                      </fieldset>
-                                                                                                  </div>
-                                                                                              </div>
-                                                                                          </div>
-                                                                                      </div>
-
-                                                                                      <div class="col-lg-6 col-md-12">
-                                                                                          <div class="card">
-                                                                                              <div class="card-header">
-                                                                                                  <label
-                                                                                                      class="card-title"
-                                                                                                      for="DefaultSelect">ประเพศกำลังพล</label>
-                                                                                              </div>
-                                                                                              <div class="card-block">
-                                                                                                  <div
-                                                                                                      class="card-body">
-                                                                                                      <fieldset
-                                                                                                          class="form-group position-relative">
-                                                                                                          <select
-                                                                                                              class="form-control"
-                                                                                                              id="DefaultSelect">
-                                                                                                              <option
-                                                                                                                  selected>
-                                                                                                                  Default
-                                                                                                                  select
-                                                                                                                  options
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="1">
-                                                                                                                  One
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="2">
-                                                                                                                  Two
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="3">
-                                                                                                                  Three
-                                                                                                              </option>
-                                                                                                          </select>
-                                                                                                      </fieldset>
-                                                                                                  </div>
-                                                                                              </div>
-                                                                                          </div>
-                                                                                      </div>
-                                                                                      </div>
-                                                                                      
-
-                                                                                      
-                                                                                  </div>
-                                                                              </div>
-                                                                          </div>
-                                                                          <div id="headingCollapse32"
-                                                                              class="card-header bg-danger ">
-                                                                              <a data-toggle="collapse"
-                                                                                  href="#collapse32"
-                                                                                  aria-expanded="false"
-                                                                                  aria-controls="collapse32"
-                                                                                  class="card-title lead white collapsed">
-                                                                                  <h6>ส่วนที่2
-                                                                                      ข้อมูลบุคคล(ประวัติข้าราชการ)</h6>
-                                                                              </a>
-                                                                          </div>
-                                                                          <div id="collapse32" role="tabpanel"
-                                                                              aria-labelledby="headingCollapse32"
-                                                                              class="card-collapse collapse show"
-                                                                              aria-expanded="false">
-                                                                              <div class="card-content">
-                                                                                  <div class="card-body">
-                                                                                      Sugar plum bear claw oat cake
-                                                                                      chocolate jelly tiramisu dessert
-                                                                                      pie. Tiramisu macaroon
-                                                                                      muffin jelly marshmallow cake.
-                                                                                      Pastry oat cake chupa chups.
-                                                                                      Caramels marshmallow carrot cake
-                                                                                      topping donut sesame snaps
-                                                                                      toffee tootsie roll. Lollipop
-                                                                                      sweet jelly beans oat cake biscuit
-                                                                                      pastry chocolate cake. Cupcake
-                                                                                      chocolate biscuit lemon drops
-                                                                                      cotton candy mชarshmallow oat cake
-                                                                                      donut. Croissant chocolate
-                                                                                      cake oat cake brownie topping
-                                                                                      carrot cake jelly beans. Dessert
-                                                                                      gingerbread marshmallow pudding
-                                                                                      donut lemon drops cake. Cake
-                                                                                      topping gummi bears cake.
-                                                                                  </div>
-                                                                              </div>
-                                                                          </div>
-                                                                          <div id="headingCollapse33"
-                                                                              class="card-header bg-info">
-                                                                              <a data-toggle="collapse"
-                                                                                  href="#collapse33"
-                                                                                  aria-expanded="false"
-                                                                                  aria-controls="collapse33"
-                                                                                  class="card-title lead white collapsed">
-                                                                                  <h6>ส่วนที่3
-                                                                                      ข้อมูลบุคคล(ประวัติข้าราชการ)</h6>
-                                                                              </a>
-                                                                          </div>
-                                                                          <div id="collapse33" role="tabpanel"
-                                                                              aria-labelledby="headingCollapse33"
-                                                                              class="card-collapse collapse show"
-                                                                              aria-expanded="false">
-                                                                              <div class="card-content">
-                                                                                  <div class="card-body">
-                                                                                      Candy cupcake sugar plum oat cake
-                                                                                      wafer marzipan jujubes lollipop
-                                                                                      macaroon. Cake
-                                                                                      dragée jujubes donut chocolate bar
-                                                                                      chocolate cake cupcake chocolate
-                                                                                      topping. Dessert jelly beans
-                                                                                      toffee muffin tiramisu sesame
-                                                                                      snaps brownie. Cake halvah pastry
-                                                                                      soufflé oat cake candy candy
-                                                                                      canes. Lemon drops gummies
-                                                                                      gingerbread toffee. Tart jelly
-                                                                                      candy
-                                                                                      pastry. Pastry cake jelly beans
-                                                                                      carrot cake marzipan lollipop
-                                                                                      muffin. Soufflé jujubes cupcake.
-                                                                                      Powder danish candy carrot
-                                                                                      cake pastry. Tart marshmallow
-                                                                                      caramels cake macaroon gummies
-                                                                                      lollipop.
-                                                                                  </div>
-                                                                              </div>
-                                                                          </div>
-
-                                                                      </div>
-                                                                  </div>
-                                                                  <div class="tab-pane active" id="tab12"
-                                                                      aria-labelledby="base-tab12">
-                                                                      <p>Sugar plum tootsie roll biscuit caramels.
-                                                                          Liquorice brownie
-                                                                          pastry cotton candy oat cake fruitcake jelly
-                                                                          chupa chups.
-                                                                          Pudding caramels pastry powder cake soufflé
-                                                                          wafer caramels.
-                                                                          Jelly-o pie cupcake.</p>
-                                                                  </div>
-                                                                  <div class="tab-pane" id="tab13"
-                                                                      aria-labelledby="base-tab13">
-                                                                      <p>Biscuit ice cream halvah candy canes bear claw
-                                                                          ice cream
-                                                                          cake chocolate bar donut. Toffee cotton candy
-                                                                          liquorice.
-                                                                          Oat cake lemon drops gingerbread dessert
-                                                                          caramels. Sweet
-                                                                          dessert jujubes powder sweet sesame snaps.</p>
-                                                                  </div>
-                                                              </div>
-                                                          </div>
                                                       </div>
 
 
+
+                                                      <div class="container">
+
+<div class="card-content">
+    <div class="card-body">
+
+
+        <div class="tab-content px-1 pt-1">
+            <div role="tabpanel" class="tab-pane active"
+                id="tab11" aria-expanded="true"
+                aria-labelledby="base-tab11">
+
+                <div
+                    class="card collapse-icon accordion-icon-rotate active">
+                    <div id="headingCollapse31"
+                        class="card-header bg-success">
+                        <a data-toggle="collapse"
+                            href="#collapse31"
+                            aria-expanded="true"
+                            aria-controls="collapse31"
+                            class="card-title lead white">
+                            <h6><U>ส่วนที่ 1</U>
+                                ข้อมูลบุคคล(ประวัติข้าราชการ)</h6>
+                        </a>
+                    </div>
+                    <div id="collapse31" role="tabpanel"
+                        aria-labelledby="headingCollapse31"
+                        class="card-collapse collapse show"
+                        aria-expanded="true">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="row match-height">
+                                    <div
+                                        class="col-lg-6 col-md-12">
+                                       
+                                           
+                                            <div
+                                                class="card-block">
+                                                <div
+                                                    class="card-body ">
+                                                    ประเภทกำลังพล : 
+                                                    <select class="select2 form-control" style="width: 100%;">
+<optgroup label="สัญญาบัตร">
+<option value="AK">จอมพลอากาศ</option>
+<option value="HI">พลอากาศเอก/พล.อ.อ.</option>
+<option value="HI">พลอากาศโท/พล.อ.ท.</option>
+<option value="HI">พลอากาศตรี/พล.อ.ต.</option>
+<option value="HI">พลอากาศจัตวา/พล.อ.จ.(ยกเลิกแล้ว)</option>
+<option value="HI">นาวาอากาศเอก/น.อ.</option>
+<option value="HI">นาวาอากาศโท/น.ท.</option>
+<option value="HI">นาวาอากาศตรี/น.ต.</option>
+<option value="HI">เรืออากาศเอก/ร.อ.</option>
+<option value="HI">เรืออากาศโท/ร.ท.</option>
+<option value="HI">เรืออากาศตรี/ร.ต.</option>
+</optgroup>
+<optgroup label="ชั้นประทวน">
+<option value="CA">พันจ่าอากาศเอก พิเศษ/พ.อ.อ.(พ.)	</option>
+<option value="NV">พันจ่าอากาศเอก/พ.อ.อ.</option>
+<option value="OR">พันจ่าอากาศโท/พ.อ.ท</option>
+<option value="WA">พันจ่าอากาศตรี/พ.อ.ต</option>
+<option value="NV">จ่าอากาศเอก/จ.อ.</option>
+<option value="OR">จ่าอากาศโท/จ.ท.</option>
+<option value="WA">จ่าอากาศตรี/จ.ต.</option>
+<option value="WA">	พลทหาร/พลฯ</option>
+</optgroup>
+
+
+</select>
+
+                                                </div>
+                                                <div
+                                                    class="card-body ">
+                                                    ยศ : 
+                                                    <select class="select2 form-control" style="width: 100%;">
+<optgroup label="สัญญาบัตร">
+<option value="AK">จอมพลอากาศ</option>
+<option value="HI">พลอากาศเอก/พล.อ.อ.</option>
+<option value="HI">พลอากาศโท/พล.อ.ท.</option>
+<option value="HI">พลอากาศตรี/พล.อ.ต.</option>
+<option value="HI">พลอากาศจัตวา/พล.อ.จ.(ยกเลิกแล้ว)</option>
+<option value="HI">นาวาอากาศเอก/น.อ.</option>
+<option value="HI">นาวาอากาศโท/น.ท.</option>
+<option value="HI">นาวาอากาศตรี/น.ต.</option>
+<option value="HI">เรืออากาศเอก/ร.อ.</option>
+<option value="HI">เรืออากาศโท/ร.ท.</option>
+<option value="HI">เรืออากาศตรี/ร.ต.</option>
+</optgroup>
+<optgroup label="ชั้นประทวน">
+<option value="CA">พันจ่าอากาศเอก พิเศษ/พ.อ.อ.(พ.)	</option>
+<option value="NV">พันจ่าอากาศเอก/พ.อ.อ.</option>
+<option value="OR">พันจ่าอากาศโท/พ.อ.ท</option>
+<option value="WA">พันจ่าอากาศตรี/พ.อ.ต</option>
+<option value="NV">จ่าอากาศเอก/จ.อ.</option>
+<option value="OR">จ่าอากาศโท/จ.ท.</option>
+<option value="WA">จ่าอากาศตรี/จ.ต.</option>
+<option value="WA">	พลทหาร/พลฯ</option>
+</optgroup>
+
+
+</select>
+
+                                                </div>
+
+
+                                                <div
+                                                    class="card-body ">
+                                                    เพศ : 
+                                                    <div class="card-content">
+                  <div class="card-body">
+                    <div class="d-inline-block custom-control custom-radio mr-1">
+                      <input type="radio" class="custom-control-input" name="colorRadio" id="radio1">
+                      <label class="custom-control-label" for="radio1">เพศชาย</label>
+                    </div>
+                    <div class="d-inline-block custom-control custom-radio mr-1">
+                      <input type="radio" class="custom-control-input" name="colorRadio" id="radio2" checked>
+                      <label class="custom-control-label" for="radio2" checked>เพศหญิง</label>
+                    </div>
+                   
+                  </div>
+                </div>
+                   
+
+                                                </div>
+                                               
+
+<div
+                                                    class="card-body ">
+                                                    ชื่อ(ภาษาไทย) : 
+                                                    <input class="input form-control" style="width: 100%;" placeholder="เลย์ ">
+                                                </div>
+                                                <div
+                                                    class="card-body ">
+                                                    ชื่อ(ภาษาอังกฤษ) : 
+                                                    <input class="input form-control" style="width: 100%;" placeholder="Lays  ">
+                                                </div>
+                                            </div>
+                                            
+                                       
+                                    </div>
+                                    <div
+                                        class="col-lg-6 col-md-12">
+                                       
+                                           
+                                            <div
+                                                class="card-block">
+                                                <div
+                                                    class="card-body ">
+                                                    หมายเลขประจำตัวราชการ : 
+                                                    <input class="input form-control" style="width: 100%;" placeholder="1111111111">
+                                                </div>
+                                                <div
+                                                    class="card-body ">
+                                                    ยศก่อนสูญเสีย : 
+                                                    <select class="select2 form-control" style="width: 100%;">
+                                                    <optgroup label="สัญญาบัตร">
+<option value="AK">จอมพลอากาศ</option>
+<option value="HI">พลอากาศเอก/พล.อ.อ.</option>
+<option value="HI">พลอากาศโท/พล.อ.ท.</option>
+<option value="HI">พลอากาศตรี/พล.อ.ต.</option>
+<option value="HI">พลอากาศจัตวา/พล.อ.จ.(ยกเลิกแล้ว)</option>
+<option value="HI">นาวาอากาศเอก/น.อ.</option>
+<option value="HI">นาวาอากาศโท/น.ท.</option>
+<option value="HI">นาวาอากาศตรี/น.ต.</option>
+<option value="HI">เรืออากาศเอก/ร.อ.</option>
+<option value="HI">เรืออากาศโท/ร.ท.</option>
+<option value="HI">เรืออากาศตรี/ร.ต.</option>
+</optgroup>
+<optgroup label="ชั้นประทวน">
+<option value="CA">พันจ่าอากาศเอก พิเศษ/พ.อ.อ.(พ.)	</option>
+<option value="NV">พันจ่าอากาศเอก/พ.อ.อ.</option>
+<option value="OR">พันจ่าอากาศโท/พ.อ.ท</option>
+<option value="WA">พันจ่าอากาศตรี/พ.อ.ต</option>
+<option value="NV">จ่าอากาศเอก/จ.อ.</option>
+<option value="OR">จ่าอากาศโท/จ.ท.</option>
+<option value="WA">จ่าอากาศตรี/จ.ต.</option>
+<option value="WA">	พลทหาร/พลฯ</option>
+
+</select>
+
+                                                </div>
+                                                <div
+                                                    class="card-body ">
+                                                    คำนำหน้าชื่อ : 
+                                                    <select class="select2 form-control" style="width: 100%;">
+                                                    <optgroup label="สัญญาบัตร">
+<option value="AK">จอมพลอากาศ</option>
+<option value="HI">พลอากาศเอก/พล.อ.อ.</option>
+<option value="HI">พลอากาศโท/พล.อ.ท.</option>
+<option value="HI">พลอากาศตรี/พล.อ.ต.</option>
+<option value="HI">พลอากาศจัตวา/พล.อ.จ.(ยกเลิกแล้ว)</option>
+<option value="HI">นาวาอากาศเอก/น.อ.</option>
+<option value="HI">นาวาอากาศโท/น.ท.</option>
+<option value="HI">นาวาอากาศตรี/น.ต.</option>
+<option value="HI">เรืออากาศเอก/ร.อ.</option>
+<option value="HI">เรืออากาศโท/ร.ท.</option>
+<option value="HI">เรืออากาศตรี/ร.ต.</option>
+</optgroup>
+<optgroup label="ชั้นประทวน">
+<option value="CA">พันจ่าอากาศเอก พิเศษ/พ.อ.อ.(พ.)	</option>
+<option value="NV">พันจ่าอากาศเอก/พ.อ.อ.</option>
+<option value="OR">พันจ่าอากาศโท/พ.อ.ท</option>
+<option value="WA">พันจ่าอากาศตรี/พ.อ.ต</option>
+<option value="NV">จ่าอากาศเอก/จ.อ.</option>
+<option value="OR">จ่าอากาศโท/จ.ท.</option>
+<option value="WA">จ่าอากาศตรี/จ.ต.</option>
+<option value="WA">	พลทหาร/พลฯ</option>
+
+</select>
+
+                                                </div>
+                                                <div
+                                                    class="card-body ">
+                                                    นามสกุล(ภาษาไทย) : 
+                                                    <input class="input form-control" style="width: 100%;" placeholder="เลย์รสสาหร่าย ">
+                                                </div>
+                                                <div
+                                                    class="card-body ">
+                                                    นามสกุล(อังกฤษ) : 
+                                                    <input class="input form-control" style="width: 100%;" placeholder="Nori Seaweed ">
+                                                </div>
+                                            </div>
+                                       
+                                    </div>
+                                  
+
+
+                                    
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                  
+               
+                   
+                  
+
+                </div>
+            </div>
+         
+            <div class="tab-pane" id="tab13"
+                aria-labelledby="base-tab13">
+                <p>Biscuit ice cream halvah candy canes bear claw
+                    ice cream
+                    cake chocolate bar donut. Toffee cotton candy
+                    liquorice.
+                    Oat cake lemon drops gingerbread dessert
+                    caramels. Sweet
+                    dessert jujubes powder sweet sesame snaps.</p>
+            </div>
+        </div>
+
+        <div class="tab-content px-1 pt-1">
+            <div role="tabpanel" class="tab-pane active"
+                id="tab11" aria-expanded="true"
+                aria-labelledby="base-tab11">
+
+                <div
+                    class="card collapse-icon accordion-icon-rotate active">
+                    <div id="headingCollapse31"
+                        class="card-header bg-success">
+                        <a data-toggle="collapse"
+                            href="#collapse31"
+                            aria-expanded="true"
+                            aria-controls="collapse31"
+                            class="card-title lead white">
+                            <h6><U>ส่วนที่ 2</U>
+                                ข้อมูลบุคคล(ประวัติข้าราชการ)</h6>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                                                <div
+                                                    class="card-body ">
+                                                    ประเภทแฟ้ม : 
+                                                    <div class="card-content">
+                  <div class="card-body">
+                    <div class="d-inline-block custom-control custom-radio mr-1">
+                      <input type="radio" class="custom-control-input" name="colorRadio" id="radio1">
+                      <label class="custom-control-label" for="radio1">แผ่น</label>
+                    </div>
+                    <div class="d-inline-block custom-control custom-radio mr-1">
+                      <input type="radio" class="custom-control-input" name="colorRadio" id="radio2" checked>
+                      <label class="custom-control-label" for="radio2" checked>เล่ม</label>
+                    </div>
+                    <div class="d-inline-block custom-control custom-radio mr-1">
+                      <input type="radio" class="custom-control-input" name="colorRadio" id="radio3" checked>
+                      <label class="custom-control-label" for="radio3" checked>ชุดบรรจุกล่อง</label>
+                    </div>
+                    <div class="d-inline-block custom-control custom-radio mr-1">
+                      <input type="radio" class="custom-control-input" name="colorRadio" id="radio4" checked>
+                      <label class="custom-control-label" for="radio4" checked>เล่ม(ปกสีฟ้า)</label>
+                    </div>
+                    <div class="d-inline-block custom-control custom-radio mr-1">
+                      <input type="radio" class="custom-control-input" name="colorRadio" id="radio5" checked>
+                      <label class="custom-control-label" for="radio5" checked>ไม่ระบุ</label>
+                    </div>
+                   
+                  </div>
+                </div>
+                   
+
+                                                </div>
+                                               
+</div>
+                    <div id="collapse31" role="tabpanel"
+                        aria-labelledby="headingCollapse31"
+                        class="card-collapse collapse show"
+                        aria-expanded="true">
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div class="row match-height">
+                                    
+
+                              
+<div
+                                        class="col-md-3">
+<div
+                                                    class="card-body ">
+                                                    หมายเลขแฟ้มประวัติ : 
+                                                    <input class="input form-control" style="width: 100%;" placeholder="123456798 ">
+                                                </div>
+                                               
+</div>
+<div
+                                        class="col-md-3">
+<div
+                                                    class="card-body ">
+                                                    หมายเลขแฟ้มประวัติใหม่ : 
+                                                    <input class="input form-control" style="width: 100%;" placeholder="123456789 ">
+                                                </div>
+                                              
+</div>
+                                <div
+                                        class="col-lg-6 col-md-12">
+                                       
+                                           
+                                            <div
+                                                class="card-block">
+                                                <div
+                                                    class="card-body ">
+                                                    เลขที่ประจำตัว : 
+                                                    <input class="input form-control" style="width: 100%;" placeholder="1111111111">
+                                                </div>
+
+
+                                                
+
+                                            </div>
+                                            
+                                       
+                                    </div>
+                                       
+                                           
+                                            
+                                            
+
+
+ 
+
+                                               
+                                           
+
+                                            
+                                   
+                                    <div
+                                        class="col-lg-6 col-md-12">
+                                       
+                                           
+                                            <div
+                                                class="card-block">
+                                               
+                                                <div class="form-group">
+                        <label>Disable days of the week</label>
+                        <div class="input-group">
+                          <input type='text' class="form-control pickadate-disable-weekday" placeholder="Disable days of the week"
+                          />
+                          <div class="input-group-append">
+                            <span class="input-group-text">
+                              <span class="la la-calendar-o"></span>
+                            </span>
+                          </div>
+                        </div>
+                        <small class="text-muted">Disable certain days of the week, such as all Saturdays (7th
+                          day of week) and Sundays (1st day of week), by passing
+                          an integer between 1 and 7</small>
+                      </div>
+                      <label for="dateofbirth">Date Of Birth</label>
+<input type="date" name="dateofbirth" id="dateofbirth">
+                      </div>
+                                                <div
+                                                    class="card-body ">
+                                                    นามสกุล(ภาษาไทย) : 
+                                                    <input class="input form-control" style="width: 100%;" placeholder="เลย์รสสาหร่าย ">
+                                                </div>
+                                                <div
+                                                    class="card-body ">
+                                                    นามสกุล(อังกฤษ) : 
+                                                    <input class="input form-control" style="width: 100%;" placeholder="Nori Seaweed ">
+                                                </div>
+                                            </div>
+                                       
+                                    </div>
+                                  
+
+
+                                    
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                  
+               
+                   
+                  
+
+                </div>
+            </div>
+         
+            <div class="tab-pane" id="tab13"
+                aria-labelledby="base-tab13">
+                <p>Biscuit ice cream halvah candy canes bear claw
+                    ice cream
+                    cake chocolate bar donut. Toffee cotton candy
+                    liquorice.
+                    Oat cake lemon drops gingerbread dessert
+                    caramels. Sweet
+                    dessert jujubes powder sweet sesame snaps.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 
 
 
@@ -398,7 +618,7 @@
   <script src=" http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous">
   </script>
-
+ <script src="../app-assets/vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>
   <script type="text/javascript">
 $(document).ready(function() {
     console.log("ready");
@@ -417,8 +637,35 @@ function toggle(source) {
     }
 }
   </script>
-
-
-
+ 
+  <!-- select2 -->
+  <script src="../../app-assets/vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>
+  <script src="../../app-assets/js/scripts/forms/select/form-select2.js" type="text/javascript"></script>
+    <!-- select2 -->
+    
   <!-- footer -->
   <?php include '../include/footer.php'; ?>
+
+
+
+
+
+
+  <div
+                                        class="col-md-3">
+<div
+                                                    class="card-body ">
+                                                    หมายเลขแฟ้มประวัติ : 
+                                                    <input class="input form-control" style="width: 100%;" placeholder="เลย์ ">
+                                                </div>
+                                               
+</div>
+<div
+                                        class="col-md-3">
+<div
+                                                    class="card-body ">
+                                                    หมายเลขแฟ้มประวัติใหม่ : 
+                                                    <input class="input form-control" style="width: 100%;" placeholder="เลย์ ">
+                                                </div>
+                                              
+</div>
