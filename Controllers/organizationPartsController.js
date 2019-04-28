@@ -137,7 +137,7 @@ function UpdateOrganizationParts() {
             console.log(data);
             Swal.fire({
                 type: 'success',
-                title: 'เพิ่มแก้ไขข้อมูลสำเร็จ',
+                title: 'แก้ไขข้อมูลสำเร็จ',
                 showConfirmButton: false,
                 timer: 2000
             });
