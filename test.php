@@ -1,7 +1,7 @@
 <?php
 
-require_once "../../config.php";
-require_once "../../Controllers/API/dateformat.php";
+require_once "./config.php";
+// require_once "../../Controllers/API/dateformat.php";
 
 // $orgStucId = isset($_POST['orgStucId']) ? $_POST['orgStucId'] : "";
 // $orgLevelId = isset($_POST['orgLevelId']) ? $_POST['orgLevelId'] : "";
