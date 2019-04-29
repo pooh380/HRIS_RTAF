@@ -296,7 +296,7 @@
 
     <section id="demo">
 		<ol class="sortable ui-sortable mjs-nestedSortable-branch mjs-nestedSortable-expanded">
-<!--
+
 			
 		  <li style="display: list-item;" class="mjs-nestedSortable-leaf" id="menuItem_3">
 					<div class="menuDiv">
@@ -322,7 +322,7 @@
 							</p>
 						</div>
 					</div>
-		  </li>-->
+		  </li>
       </ol>
 		   </li>
 	   </ol>
