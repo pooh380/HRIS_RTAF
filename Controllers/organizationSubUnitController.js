@@ -1,6 +1,19 @@
 function getOrganizationSubUnit(orgLevId) {
 
     $('#OrganizationLevels').DataTable({
+        "language": {
+            "lengthMenu": "เลือกจำนวน _MENU_ จำนวน",
+            "zeroRecords": "ไม่มีข้อมูลนี้ในตาราง",
+            "info": "กำลงแสดงข้อมูล _PAGE_ จาก _PAGES_",
+            "infoEmpty": "ไม่มีข้อมูลนี้ในตาราง",
+            // "infoFiltered": "(กกกกกก from _MAX_ total records)"
+            "paginate": {
+                "previous": "ก่อนหน้า",
+                "next": "ถัดไป"
+            },
+            "search": "ค้นหา: ",
+            "searchPlaceholder": "ค้นหา"
+        },
         "ajax": {
             url: "../../Model/OrganizationSubUnit/GetOrganizationsSubUnit.php", // json datasource
             dataType: "json",
@@ -19,10 +32,7 @@ function getOrganizationSubUnit(orgLevId) {
             pageLength: 10,
             order: [
                 [0, "desc"]
-            ],
-            oLanguage: {
-                "sEmptyTable": "ไม่มีข้อมูลนี้ในตาราง"
-            }
+            ]
         },
         destroy: true
     });
