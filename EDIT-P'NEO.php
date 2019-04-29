@@ -310,7 +310,11 @@
 	<?php
 	require_once './config.php';
 	?>
+
+	
+
 			<?php
+
 			$sql = " SELECT OrgStrucId, OrgLevelId, OrgPartId, OrgGroupTypeId, OrgTypeId, OrgStrucMain, OrgStrucSubMain, OrgStrucName, OrgStrucActive FROM OrgStruc; ";
 
 			$params = array();
@@ -326,45 +330,6 @@
 					$category['parent_cats'][$result['OrgStrucMain']][] = $result['OrgStrucId'];
 
 					?>
-
-
-
-					<!-- <a style="margin-left: 15px; ">
-									<li class="list-group-item" >
-										<s class="vl"></s> <input type="checkbox" value="<?php echo $result['OrgStrucId']; ?>">
-										<span style="font-weight: bold;font-size: 12px;" onclick="showDetail(<?php echo $result['OrgStrucId']; ?>,<?php echo $result['OrgLevelId']; ?>)" >
-										<?php echo $result['OrgStrucName'];
-										echo " ";
-										echo $result['OrgLevelId']; ?></span>
-									</li>
-								</a> -->
-
-					<!-- <li style="display: list-item;" class="mjs-nestedSortable-leaf" id="menuItem_3">
-								<div class="menuDiv"> -->
-					<!-- <span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick">
-										<span></span>
-
-									</span>
-									<span title="Click to show/hide item editor" data-id="3" class="expandEditor ui-icon ui-icon-triangle-1-n">
-										<span></span>
-
-									</span>
-									<span>
-										<span data-id="3" class="itemTitle">f</span>
-
-										<span title="Click to delete item." data-id="7" class="deleteMenu ui-icon ui-icon-closethick">
-											<span></span>
-
-										</span>
-									</span> -->
-					<!-- <div id="menuEdit7" class="menuEdit hidden">
-										<p>
-											</span>
-										</p>
-									</div>
-								</div>
-						
-							</li> -->
 				<?php	}
 				print_r($category);
 			// 
@@ -376,7 +341,7 @@
 					$html .= "<ol>\n";
 					foreach ($category['parent_cats'][$parent] as $cat_id) {
 							if (!isset($category['parent_cats'][$cat_id])) {
-									$html .= "<div><li style='display: list-item;' class='mjs-nestedSortable-leaf' id='menuItem_".$cat_id."'><div><a href='".$cat_id."'>" . $category['categories'][$cat_id]['OrgStrucName'] . "</a></div></li> \n";
+									$html .= "<li style='display: list-item;' class='mjs-nestedSortable-leaf' id='menuItem_".$cat_id."'><div ><a href='".$cat_id."'>" . $category['categories'][$cat_id]['OrgStrucName'] . "</a></div></li> \n";
 								}
 							if (isset($category['parent_cats'][$cat_id])) {
 									$html .= "<li style='display: list-item;' class='mjs-nestedSortable-leaf' id='menuItem_".$cat_id."'>" . $category['categories'][$cat_id]['OrgStrucName'] . " \n";
