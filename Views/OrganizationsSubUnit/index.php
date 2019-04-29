@@ -87,14 +87,15 @@
                         </ol>
                       </nav>
 
-                      <a href="./create.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
+                      <!-- <a href="./create.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                         <span class="la la-plus-circle" style="color:white; font-weight: bold;font-size: 18px"></span> เพิ่ม
                       </a>
                       <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                         <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
-                      </a>
-                      <a class="col-md-4 float-md-right">
-                        <select name="orgLevelList" id="orgLevelList" class="select2 form-control">
+                      </a> -->
+
+                      <a class="col-md-12" >
+                        <select name="orgLevelList" id="orgLevelList" class="select2 form-control" style="width:100% !important;">
                           <!-- <option value="">กรุณาเลือกประเภทโครงสร้าง</option> -->
                           <?php
                           $sql = " SELECT OrgLevelId, OrgLevelName FROM OrgLevel; ";
@@ -104,8 +105,9 @@
                           }
                           ?>
                         </select>
-                      </a>
+                      </a><br/> <br/>
 
+                     
                       <table id="OrganizationLevels" class="table table-striped table-borderless table-hover bootstrap-3 " style="width:100%;">
                         <thead>
                           <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
