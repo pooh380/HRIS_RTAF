@@ -1,5 +1,5 @@
 <!-- connection -->
-<?php require_once "../../config.php"; ?>
+<?php require_once "../../config2.php"; ?>
 
 <!-- header -->
 <?php include '../include/header.php'; ?>
@@ -120,7 +120,7 @@
 
                                                             <select name="orgTypeList" id="orgTypeList" class="select2 form-control">
                                                                 <?php
-                                                                $sql = " SELECT OrgTypeId, OrgTypeName FROM OrgType; ";
+                                                                $sql = " SELECT OrgTypeId, OrgGroupTypeId, OrgTypeName, OrgTypeActive FROM OrgType WHERE OrgTypeActive = 1; ";
                                                                 $result = sqlsrv_query($conn, $sql);
                                                                 while ($row = sqlsrv_fetch_array($result)) {
                                                                     echo "<option value='" . $row['OrgTypeId'] . "'>" . $row['OrgTypeName'] ." ".$row['OrgTypeId'] . "</option>";

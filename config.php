@@ -12,7 +12,7 @@
 
 $serverName = "10.243.0.9";
 $connectionInfo = array(
-    "Database" => "HRIS",
+    "Database" => "HRIS_NEW",
     "UID" => "sa",
     "PWD" => "2123121254",
     "MultipleActiveResultSets" => true,
