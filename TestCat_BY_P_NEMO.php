@@ -377,8 +377,8 @@
 					foreach ($category['parent_cats'][$parent] as $cat_id) {
 							if (!isset($category['parent_cats'][$cat_id])) {
 									$html .= "<div>";
-									$html .= "<li style='display: list-item;' class='mjs-nestedSortable-leaf' id='menuItem_".$cat_id."'></div>";
-									$html .= "<div>><a href='".$cat_id."'>" . $category['categories'][$cat_id]['OrgStrucName'] . "</a></div></li> \n";
+									$html .= "<li style='display: list-item;' class='mjs-nestedSortable-leaf' id='menuItem_".$cat_id."'>";
+									$html .= "<a href='".$cat_id."'>" . $category['categories'][$cat_id]['OrgStrucName'] . "</a></div></li> \n";
 								}
 							if (isset($category['parent_cats'][$cat_id])) {
 									$html .= "<li style='display: list-item;' class='mjs-nestedSortable-leaf' id='menuItem_".$cat_id."'>";
