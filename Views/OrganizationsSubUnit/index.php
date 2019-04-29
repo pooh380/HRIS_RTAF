@@ -87,12 +87,12 @@
                         </ol>
                       </nav>
 
-                      <!-- <a href="./create.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
+                      <a href="./create.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                         <span class="la la-plus-circle" style="color:white; font-weight: bold;font-size: 18px"></span> เพิ่ม
                       </a>
                       <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                         <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
-                      </a> -->
+                      </a>
 
                       <a class="col-md-12" >
                         <select name="orgLevelList" id="orgLevelList" class="select2 form-control" style="width:100% !important;">

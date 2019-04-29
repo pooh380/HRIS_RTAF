@@ -181,7 +181,8 @@
 			color: #c33;
 		}
 	</style>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
 	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="./Asset/js/jquery.mjs.nestedSortable.js"></script>
@@ -358,8 +359,11 @@
 							<div id="menuEdit7" class="menuEdit hidden">
 								<p>
 									<?php echo $result['OrgStrucName'];
+									// echo " ";
+									// echo $result['OrgLevelId'];
 									echo " ";
-									echo $result['OrgLevelId']; ?></span>
+									echo $result['OrgStrucId']; ?>
+									
 								</p>
 							</div>
 						</div>
