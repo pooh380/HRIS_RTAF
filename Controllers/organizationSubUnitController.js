@@ -1,10 +1,10 @@
-function getOrganizationSubUnit(orgLevId) {
-
+function getOrganizationSubUnit() {
     $('#OrganizationLevels').DataTable({
         "language": {
             "lengthMenu": "เลือกจำนวน _MENU_ จำนวน",
             "zeroRecords": "ไม่มีข้อมูลนี้ในตาราง",
-            "info": "กำลงแสดงข้อมูล _PAGE_ จาก _PAGES_",
+            "info": "กำลังแสดงข้อมูลหน้าที่ _START_ จากทั้งหมด _END_ หน้า ",
+
             "infoEmpty": "ไม่มีข้อมูลนี้ในตาราง",
             // "infoFiltered": "(กกกกกก from _MAX_ total records)"
             "paginate": {
@@ -17,45 +17,27 @@ function getOrganizationSubUnit(orgLevId) {
         "ajax": {
             url: "../../Model/OrganizationSubUnit/GetOrganizationsSubUnit.php", // json datasource
             dataType: "json",
-            data: { orgLevId: orgLevId },
             type: "post",
-            start: 0,
-            length: 3,
-            serverSide: true,
-            processing: true,
-            paging: true,
-            searching: true,
-            lengthMenu: [
+            "start": 0,
+            "length": 3,
+            "serverSide": true,
+            "processing": true,
+            "paging": true,
+            "searching": { "regex": true },
+            "lengthMenu": [
                 [10, 25, 50, 100, -1],
                 [10, 25, 50, 100, "All"]
             ],
-            pageLength: 10,
+            "pageLength": 10,
             order: [
                 [0, "desc"]
             ]
-        },
-        destroy: true
-    });
-}
-
-function getOrgTypeList() {
-
-    $.ajax({
-        type: "POST",
-        url: "../../Model/OrganizationSubUnit/GetOrgTypeList.php",
-        success: function(data) {
-            // console.log(data);
-            $('#OrgLevelList').html(data);
-        },
-        error: function(error) {
-            // console.log(error);
         }
     });
 }
 
 function insertOrganizationSubUnit() {
 
-    var OrgLevelList = $("#OrgLevelList :selected").val();
     var OrgSubUnitName = $("#OrgSubUnitName").val();
     var OrgSubUnitAbbr = $("#OrgSubUnitAbbr").val();
     var OrgSubUnitSemiAbbr = $("#OrgSubUnitSemiAbbr").val();
@@ -66,31 +48,31 @@ function insertOrganizationSubUnit() {
     } else {
         var isActive = "0";
     }
-    console.log(OrgLevelList + " " + OrgSubUnitName + " " + OrgSubUnitAbbr + " " + OrgSubUnitSemiAbbr + " " + isActive);
+    // console.log(OrgSubUnitName + " " + OrgSubUnitAbbr + " " + OrgSubUnitSemiAbbr + " " + isActive);
     // e.preventDefault();
 
-    // $.post("../../Model/OrganizationSubUnit/InsertOrganizationSubUnit.php", {
-    //     OrgSubUnitName: OrgSubUnitName,
-    //     OrgSubUnitAbbr: OrgSubUnitAbbr,
-    //     OrgSubUnitSemiAbbr: OrgSubUnitSemiAbbr,
-    //     isActive: isActive
-    // }).done(function(data) {
-    //     // console.log(data);
-    //     Swal.fire({
-    //         type: 'success',
-    //         title: 'เพิ่มข้อมูลสำเร็จ',
-    //         showConfirmButton: false,
-    //         timer: 2000
-    //     });
-    //     setTimeout("window.open('../OrganizationsSubUnit/index.php', '_self');", 2000);
-    // }).fail(function(err) {
-    //     // console.log(err);
-    //     Swal.fire({
-    //         type: 'error',
-    //         title: 'ไม่สามารถเพิ่มข้อมูลได้',
-    //         text: 'กรุณาตรวจสอบข้อมูลอีกครั้ง'
-    //     })
-    // });
+    $.post("../../Model/OrganizationSubUnit/InsertOrganizationSubUnit.php", {
+        OrgSubUnitName: OrgSubUnitName,
+        OrgSubUnitAbbr: OrgSubUnitAbbr,
+        OrgSubUnitSemiAbbr: OrgSubUnitSemiAbbr,
+        isActive: isActive
+    }).done(function(data) {
+        // console.log(data);
+        Swal.fire({
+            type: 'success',
+            title: 'เพิ่มข้อมูลสำเร็จ',
+            showConfirmButton: false,
+            timer: 2000
+        });
+        setTimeout("window.open('../OrganizationsSubUnit/index.php', '_self');", 2000);
+    }).fail(function(err) {
+        // console.log(err);
+        Swal.fire({
+            type: 'error',
+            title: 'ไม่สามารถเพิ่มข้อมูลได้',
+            text: 'กรุณาตรวจสอบข้อมูลอีกครั้ง'
+        })
+    });
 }
 
 // ใช้ ตอน update

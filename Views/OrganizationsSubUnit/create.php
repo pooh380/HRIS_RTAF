@@ -18,16 +18,8 @@
       }
   </style>
 
-<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
- 
 <script src="../../Controllers/organizationSubUnitController.js"></script>
 
-<script type="text/javascript">
-
-  $(document).ready(function() {
-    getOrgTypeList();
-  });
-</script>
 
   <div class="app-content content">
       <div class="content-wrapper">
@@ -72,28 +64,20 @@
                                       <form class="form form-horizontal">
                                           <div class="form-body">
                                               <div class="row">
-
-                                              <div class="col-md-6">
-                                                      <label class="col-md-6 label-control" for="OrgLevelList">ฐานะหน่วย</label>
-                                                      <div class="col-md-12">
-                                                          <select name="OrgLevelList" id="OrgLevelList" class="select2 form-control"></select>
-                                                      </div>
-                                                  </div>
-
                                                   <div class="col-md-6 ">
                                                       <label class="col-md-6 label-control" for="OrgSubUnitName">ชื่อเต็มหน่วยงาน</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="OrgSubUnitName" class="form-control border-primary" placeholder="ชื่อเต็มโครงสร้างอัตราส่วนราชการ" name="OrgSubUnitName">
+                                                              <input type="text" id="OrgSubUnitName" class="form-control border-primary" placeholder="ชื่อเต็มหน่วยงาน" name="OrgSubUnitName">
 
                                                           </div>
                                                       </div>
                                                   </div>
-                                                  <div class="col-md-6 mt-1">
+                                                  <div class="col-md-6">
                                                       <label class="col-md-6 label-control" for="OrgSubUnitAbbr">ชื่อย่อหน่วยงาน</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="OrgSubUnitAbbr" class="form-control border-primary" placeholder="ชื่อย่อหัวหน้าสายวิชาการ" name="OrgSubUnitAbbr">
+                                                              <input type="text" id="OrgSubUnitAbbr" class="form-control border-primary" placeholder="ชื่อย่อหน่วยงาน" name="OrgSubUnitAbbr">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -101,7 +85,7 @@
                                                       <label class="col-md-6 label-control" for="OrgSubUnitSemiAbbr">ชื่อกึ่งหน่วยงาน</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="OrgSubUnitSemiAbbr" class="form-control border-primary" placeholder="ชื่อย่อหัวหน้าสายวิชาการ" name="OrgSubUnitSemiAbbr">
+                                                              <input type="text" id="OrgSubUnitSemiAbbr" class="form-control border-primary" placeholder="ชื่อกึ่งหน่วยงาน" name="OrgSubUnitSemiAbbr">
                                                           </div>
                                                       </div>
                                                   </div>

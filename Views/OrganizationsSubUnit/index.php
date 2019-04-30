@@ -27,23 +27,8 @@
     $(document).ready(function() {
       change_autorefreshdiv();
 
-      $(document).ajaxStart(function() {
-            $(".modal").show();
-        });
-        $(document).ajaxComplete(function() {
-            $(".modal").hide();
-        });
-
-      var orgLevId = $('#orgLevelList :selected').val();
-      getOrganizationSubUnit(orgLevId);
+      getOrganizationSubUnit();
       
-      $('#orgLevelList').on('change', function() {
-        var orgLevId = "";
-        var orgLevId = $('#orgLevelList :selected').val();
-        getOrganizationSubUnit(orgLevId);
-      });
-
-
     });
 
 
@@ -93,20 +78,6 @@
                       <a href="./delete.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
                         <span class="la la-trash-o" style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
                       </a>
-
-                      <a class="col-md-12" >
-                        <select name="orgLevelList" id="orgLevelList" class="select2 form-control" style="width:100% !important;">
-                          <!-- <option value="">กรุณาเลือกประเภทโครงสร้าง</option> -->
-                          <?php
-                          $sql = " SELECT OrgLevelId, OrgLevelName FROM OrgLevel; ";
-                          $result = sqlsrv_query($conn, $sql);
-                          while ($row = sqlsrv_fetch_array($result)) {
-                            echo "<option value='" . $row['OrgLevelId'] . "'>" . $row['OrgLevelName'] . "</option>";
-                          }
-                          ?>
-                        </select>
-                      </a><br/> <br/>
-
                      
                       <table id="OrganizationLevels" class="table table-striped table-borderless table-hover bootstrap-3 " style="width:100%;">
                         <thead>

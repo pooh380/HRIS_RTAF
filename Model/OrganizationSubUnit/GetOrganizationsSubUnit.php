@@ -3,23 +3,21 @@
 error_reporting(0);
 
 // require_once "../../config.php";
-require_once "../../config2.php";
-
-
-$orgLevelId = isset($_POST['orgLevId']) ? $_POST['orgLevId'] : "";
+require_once "../../config.php";
  
 $request=$_REQUEST;
 $col =array(
-    0   =>  'Org'.$orgLevelId.'Id',
-    1   =>  'Org'.$orgLevelId.'Name',
-    2   =>  'Org'.$orgLevelId.'Abbr',
-    3   =>  'Org'.$orgLevelId.'SemiAbbr',
-    4   =>  'Org'.$orgLevelId.'Active',
+    0   =>  'OrgSubUnitId',
+    1   =>  'OrgSubUnitName',
+    2   =>  'OrgSubUnitAbbr',
+    3   =>  'OrgSubUnitSemiAbbr',
+    4   =>  'OrgSubUnitActive',
   
 ); 
 
 
-$sql = " SELECT Org".$orgLevelId."Id, Org".$orgLevelId."Name, Org".$orgLevelId."Abbr, Org".$orgLevelId."SemiAbbr, Org".$orgLevelId."Active FROM Org".$orgLevelId." ORDER BY Org".$orgLevelId."Id OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY; "; 
+$sql = " SELECT OrgSubUnitId, OrgSubUnitName, OrgSubUnitAbbr, OrgSubUnitSemiAbbr, OrgSubUnitActive
+FROM OrgSubUnit ORDER BY OrgSubUnitId OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY; "; 
 // echo $sql;
 
 $params = array();
@@ -29,12 +27,12 @@ $totalData = sqlsrv_num_rows($query);
 // echo $totalData;
 $totalFilter = $totalData;
 
-$sql = " SELECT Org".$orgLevelId."Id, Org".$orgLevelId."Name, Org".$orgLevelId."Abbr, Org".$orgLevelId."SemiAbbr, Org".$orgLevelId."Active FROM Org".$orgLevelId." WHERE 1=1 ";
+$sql = " SELECT OrgSubUnitId, OrgSubUnitName, OrgSubUnitAbbr, OrgSubUnitSemiAbbr, OrgSubUnitActive FROM OrgSubUnit WHERE 1=1 ";
 
 if (!empty($request['search']['value'])) {
-    $sql .= " AND (Org".$orgLevelId."Name Like N'%" . $request['search']['value'] . "%' ";
-    $sql .= " OR Org".$orgLevelId."AbbrLike N'%" . $request['search']['value'] . "%' ";
-    $sql .= " OR Org".$orgLevelId."SemiAbbr Like N'%" . $request['search']['value'] . "%') ";
+    $sql .= " AND (OrgSubUnitName Like N'%" . $request['search']['value'] . "%' ";
+    $sql .= " OR OrgSubUnitAbbr Like N'%" . $request['search']['value'] . "%' ";
+    $sql .= " OR OrgSubUnitSemiAbbrLike N'%" . $request['search']['value'] . "%') ";
     //หากเลือกselect2 ต้อง เพิ่มor ใน นี้ด้วย
     $query = sqlsrv_query($conn, $sql, $params, $options);
     $totalData = sqlsrv_num_rows($query);
