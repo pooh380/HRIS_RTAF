@@ -1,23 +1,4 @@
 <style type="text/css">
-	html {
-		background-color: #eee;
-	}
-
-	body {
-		-webkit-border-radius: 10px;
-		-moz-border-radius: 10px;
-		border-radius: 10px;
-		color: #444;
-		background-color: #fff;
-		font-size: 13px;
-		font-family: Freesans, sans-serif;
-		padding: 2em 4em;
-		width: 860px;
-		margin: 15px auto;
-		box-shadow: 1px 1px 8px #444;
-		-mox-box-shadow: 1px 1px 8px #444;
-		-webkit-box-shadow: 1px -1px 8px #444;
-	}
 
 	a,
 	a:visited {
@@ -174,13 +155,12 @@
 	}
 </style>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
-<script type="text/javascript" src="./Asset/js/jquery.mjs.nestedSortable.js"></script>
-
+<script type="text/javascript" src="../../Asset/js/jquery.mjs.nestedSortable.js"></script> 
 <script>
-	$().ready(function() {
+	$(document).ready(function() {
 		var ns = $('ol.sortable').nestedSortable({
 			forcePlaceholderSize: true,
 			handle: 'div',
@@ -191,7 +171,7 @@
 			revert: 250,
 			tabSize: 25,
 			tolerance: 'pointer',
-			toleranceElement: 'div',
+			toleranceElement: '> div',
 			//maxLevels: 4,
 			isTree: true,
 			expandOnHover: 700,
@@ -318,7 +298,7 @@
 <!-- END section -->
 
 <?php
-require_once './config.php';
+require_once '../../config.php';
 ?>
 <?php
 $sql = " SELECT OrgStrucId, OrgLevelId, OrgPartId, OrgGroupTypeId, OrgTypeId, OrgStrucMain, OrgStrucSubMain, OrgStrucName, OrgStrucActive FROM OrgStruc; ";
@@ -354,8 +334,9 @@ function getCategories($parent, $category, $csui = true)
 				$html .= " <li class='mjs-nestedSortable-leaf' id='menuItem_" . $cat_id . "'>";
 				$html .= "<div class='menuDiv'>";
 				$html .= '<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick"></span>';
-				$html .= '<span title="Click to show/hide item editor" data-id="' . $cat_id . '" class="expandEditor ui-icon ui-icon-triangle-1-n"></span>';
-				$html .= '<span data-id="' . $cat_id . '" class="itemTitle"></span>';
+				$html .= '<span title="Click to show/hide item editor" data-id="' . $cat_id . '" class="expandEditor ui-icon ui-icon-triangle-1-n valueHirarchy"name="valueHirarchy"></span>';
+                $html .= '<input type="checkbox" name="'. $cat_id . '" value="'. $cat_id . '">';
+                $html .= '<span data-id="' . $cat_id . '" class="itemTitle"></span>';
 				$html .= '<span title="Click to delete item." data-id="' . $cat_id . '" class="deleteMenu ui-icon ui-icon-closethick"></span>';
 				$html .= "<a href='" . $cat_id . "'>" . $category['categories'][$cat_id]['OrgStrucName'] . $cat_id . "----</a>  ";
 				$html .= "</div>";
@@ -363,7 +344,7 @@ function getCategories($parent, $category, $csui = true)
 			}
 			if (isset($category['parent_cats'][$cat_id])) {
 				$html .= "<li style='display: list-item;' class='mjs-nestedSortable-branch mjs-nestedSortable-expanded' id='menuItem_" . $cat_id . "'>";
-				$html .= "<div class='menuDiv'> " . $category['categories'][$cat_id]['OrgStrucName'];
+                $html .= "<div class='menuDiv'> <input type='checkbox'  class='valueHirarchy' name='valueHirarchy' value='". $cat_id . "'>" . $category['categories'][$cat_id]['OrgStrucName'];
 				$html .= '<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick"></span>';
 				$html .= '<span title="Click to show/hide item editor" data-id="' . $cat_id . '" class="expandEditor ui-icon ui-icon-triangle-1-n"></span>';
 				$html .= '<span data-id="' . $cat_id . '" class="itemTitle"></span>';
@@ -385,4 +366,3 @@ function getCategories($parent, $category, $csui = true)
 	//echo  getCategories(0, 1);
 	?>
 </section>
-

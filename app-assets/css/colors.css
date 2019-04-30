@@ -447,8 +447,8 @@ input:focus ~ .bg-primary {
         }
       } */
 .btn-primary {
-  border-color: #535BE2 !important;
-  background-color: #666EE8 !important;
+  border-color: #0f1733 !important;
+  background-color: #0f1733 !important;
   color: #FFFFFF; }
   .btn-primary:hover {
     border-color: #5E66E5 !important;

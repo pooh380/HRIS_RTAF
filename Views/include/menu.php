@@ -158,26 +158,23 @@
             </ul>
         </li>
         <!-- งานประวัติรับราชการ -->
-        <li class=" nav-item"><a href="#"><i class="ft-users"></i><span class="menu-title" data-i18n="nav.horz_nav.main">งานประวัติรับราชการ</span></a>
+        <li class=" nav-item"><a href="#"><i class="ft-users"></i><span class="menu-title" data-i18n="nav.horz_nav.main">งานประวัติข้าราชการ</span></a>
             <ul class="menu-content">
-                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงาน</a>
+                <li><a class="menu-item" href="/Hris/Views/Profile/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ประวัติข้าราชการ</a>
                 </li>
-                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายการตรวจสอบเพื่อลงสมุดประวัติข้าราชการ</a>
+                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">ภูมิลำเนา</a>
                 </li>
-                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงานบัญชีรายชื่อข้าราชการตามเดือนเกิด</a>
+                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">การศึกษา/ความรู้/ความชำนาญ</a>
                 </li>
-                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงานวันทวีคูณ</a>
+                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">ตำแหน่ง/เครื่องราชอิสริยาภรณ์</a>
                 </li>
-                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">แบบประวัติข้าราชการ</a>
+                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">ค่าตอบแทนและเงินเดือน</a>
                 </li>
-                <li><a class="menu-item" href="/Hris/Views/Profile/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ข้อมูลตำแหน่ง</a>
+                <li><a class="menu-item" href="/Hris/Views/Profile/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ความประพฤติ</a>
                 </li>
-                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงานบัญชีรายชื่อข้าราชการสูญเสีย</a>
+                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">สูญเสีย</a>
                 </li>
-                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">ข้อมูลเงินเดือน/บำเน็จ</a>
-                </li>
-                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">รายงานสรุปการออกคำสั่งบรรจุ</a>
-                </li>
+
             </ul>
         </li>
         <!-- งานส่วนกลางสำหรับผู้ดูแลระบบ -->

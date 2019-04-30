@@ -184,6 +184,35 @@
 
     }
 
+    function create() {
+        var orgTypeId = $("#orgTypeId").val();
+        var orgListId = $("#orgListId").val();
+        var valueHi = [];
+        $.each($("input[name='valueHirarchy']:checked"), function() {
+            valueHi.push($(this).val());
+        });
+
+        alert("orgTypeId" + orgTypeId + "orgListId" + orgListId);
+        alert("create");
+
+        $.post("../OrganizationProgram/create.php", {
+            orgTypeId: orgTypeId,
+            orgListId: orgListId
+                // orgId: orgId,
+
+        }).done(function(data) {
+            // console.log(data);
+            window.location.href = "./create.php?orgTypeId=" + orgTypeId + "&orgListId=" + orgListId + "&OrgStrucMain=" + valueHi;
+            // window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgId=" + orgId;
+
+        }).fail(function(err) {
+            // console.log(error);
+        });
+
+
+    }
+
+
     function insertOrganizationCategory() {
         var OrganizationcategoryFN = $("#OrganizationcategoryFN").val();
         var OrganizationcategoryIN = $("#OrganizationcategoryIN").val();
