@@ -189,7 +189,7 @@
                     showConfirmButton: false,
                     timer: 2000
                 });
-                // setTimeout("window.open('../organizationProgram/index.php', '_self');", 2000);
+                setTimeout("window.open('../organizationProgram/index.php', '_self');", 2000);
             },
             error: function(error) {
                 // console.log(error);
