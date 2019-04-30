@@ -44,7 +44,8 @@ html body .content .content-wrapper .content-header-title {
 }
 
 html body .la {
-    font-size: 1.4rem;
+    font-size: 1.9rem;
+    color:#FFF;
 }
 
 html body[data-col="1-column"]:not(.vertical-content-menu) .content,
@@ -4947,8 +4948,15 @@ input[type="month"].form-control {
 .select2-container--default .select2-selection--single {
     height: 40px !important;
     padding: 5px;
-    border-color: #D9D9D9 !important;
+    border-color: #D9D9D9 !important;  
 }
+
+/* .select2-container--classic .select2-selection--single,
+.select2-container--default .select2-selection--single {
+    height: 40px !important;
+    padding: 5px;
+    border-color: #ff0000 !important;  
+} */
 
 .select2-container--classic .select2-selection--single .select2-selection__rendered i,
 .select2-container--default .select2-selection--single .select2-selection__rendered i {
