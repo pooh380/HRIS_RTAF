@@ -48,7 +48,6 @@
       .table td {
           padding: -0.75rem 2rem;
       }
-
   </style>
 
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -57,12 +56,12 @@
   <script>
       $(document).ready(function() {
 
-        $(document).ajaxStart(function() {
-            $(".modal").show();
-        });
-        $(document).ajaxComplete(function() {
-            $(".modal").hide();
-        });
+          $(document).ajaxStart(function() {
+              $(".modal").show();
+          });
+          $(document).ajaxComplete(function() {
+              $(".modal").hide();
+          });
 
           var getUrlParameter = function getUrlParameter(sParam) {
               var sPageURL = window.location.search.substring(1),
@@ -88,8 +87,8 @@
           $(document).ajaxComplete(function() {
               $(".modal").hide();
               $("#orgTypeId").val(orgTypeId);
-              //   $("#orgListId").val(orgListId);
               $("#orgStrucId").val(orgStrucId);
+              //   $("#orgStrucId").val(orgStrucId);
           });
 
 
@@ -155,7 +154,7 @@
                       <div class="col-lg-4">
                           <div class="content-body">
 
-                          <?php include_once '../include/modelOnload.php' ?>
+                              <?php include_once '../include/modelOnload.php' ?>
                               <!-- Description -->
                               <div class="sidebar-content card d-none d-lg-block">
                                   <div class="card-header" style="background-color:#0f1733; color:white; font-weight: bold;font-size: 18px">
@@ -163,7 +162,7 @@
                                       <a style="float:right;"><i class="la la-sitemap"></i> </a>
                                   </div>
                                   <div class="card-body" align="center">
-                                      <button class="btn btn-sm" style="background-color:#0f1733;color:white;border:white;" onclick="create()" >
+                                      <button class="btn btn-sm" style="background-color:#0f1733;color:white;border:white;" onclick="create()">
                                           <span class="la la-plus-circle" style="color:white; font-weight: bold;font-size: 13px;margin-top:3px;"> เพิ่ม</span>
                                       </button>
                                       <a href="#" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white" ;>
@@ -223,7 +222,7 @@
                       <!-- ---------------------- -->
                       <!-- /Ratings sample -->
 
-                     
+
 
                       <!-- 1 -->
                       <div class="col-lg-8">
@@ -308,7 +307,7 @@
                                                           <div class="col-md-6 mt-1">
                                                               <label class="col-md-12 label-control" for="orgSubUnitName">ชื่อหน่วย</label>
                                                               <div class="col-md-12" style="float:left;">
-                                                                <input type="text" disabled id="orgSubUnitName" class="form-control " placeholder="ชื่อหน่วย" name="orgSubUnitName">
+                                                                  <input type="text" disabled id="orgSubUnitName" class="form-control " placeholder="ชื่อหน่วย" name="orgSubUnitName">
                                                               </div>
                                                               <!-- <div class="col-md-1">
                                                                   <a href="../Organizations/create.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>

@@ -15,8 +15,8 @@
 
         }).done(function(data) {
             // console.log(data);
+            // window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgStrucId=" + orgStrucId;
             window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgStrucId=" + orgStrucId;
-            // window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgId=" + orgId;
 
         }).fail(function(err) {
             // console.log(error);
@@ -93,25 +93,64 @@
         });
     }
 
+    function create() {
+        var orgTypeId = $("#orgTypeId").val();
+        var orgStrucId = $("#orgStrucId").val();
+
+        // alert("orgTypeId"+orgTypeId+"orgListId"+orgListId);
+        // alert("create");
+
+        $.post("../OrganizationProgram/create.php", {
+            orgTypeId: orgTypeId,
+            orgStrucId: orgStrucId
+                // orgId: orgId,
+
+        }).done(function(data) {
+            // console.log(data);
+            window.location.href = "./create.php?orgTypeId=" + orgTypeId + "&orgStrucId=" + orgStrucId;
+            // window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgId=" + orgId;
+
+        }).fail(function(err) {
+            // console.log(error);
+        });
+    }
+
+    function getSubUnit(orgStrucId) {
+        $.post("../../Model/OrganizationProgram/getSubUnit.php", {
+            orgStrucId: orgStrucId
+        }).done(function(data) {
+            $('#orgSubUnitNameList').html(data);
+
+        }).fail(function(err) {
+            // console.log(error);
+        });
+    }
+
+
+
     function insertProgram() {
 
 
-        var orgListName = $('#orgListName :selected').val(); //ชื่อหน่วย
-        var orgPartName = $('#orgPartName :selected').val(); //ชื่อหน่วยส่วนบัญชาการ
-        var orgaLevelName = $('#orgaLevelName :selected').val(); //ฐานะหน่วยสังกัด
-        var orgTypeList = $("#orgTypeList :selected").val(); //โครงสร้าง
-        var orgListId = $("#orgListId").val();
-        var divisionID = $("#divisionID").val(); //ลำดับสังกัด/หน่วยใน Tree
-        var orgListAbbr = $("#orgListAbbr").val();
-        var orgListAbbrLong = $("#orgListAbbrLong").val(); //ชื่อย่อหน่วย/สังกัด
-        var orgListAbbrLongAbbr = $("#orgListAbbrLongAbbr").val(); //ชื่อกึ่งย่อหน่วย/สังกัด
-        var provincesName = $("#provincesName").val();
-        var districtsName = $("#districtsName").val();
+        var orgTypeList = $('#orgTypeList :selected').val();
+        var orgPartName = $('#orgPartName :selected').val();
+        var orgaLevelId = $('#orgaLevelName :selected').val();
+        var orgSubUnitNameList = $('#orgSubUnitNameList :selected').val();
+        var orgListAbbr = $("#orgListAbbr :selected").val();
+        var orgListName = $("#orgListName").val();
+        var orgListLong = $("#orgListLong").val();
+        var orgListAbbrLong = $("#orgListAbbrLong").val();
+        var orgListAbbrLongAbbr = $("#orgListAbbrLongAbbr").val();
+
+        var orgStrucMain = $("#orgStrucMain").val();
+        // var orgListAbbrLongAbbr = $("#orgListAbbrLongAbbr").val(); //ชื่อกึ่งย่อหน่วย/สังกัด
+        // var provincesName = $("#provincesName").val();
+        // var districtsName = $("#districtsName").val();
 
 
-        // alert("orgListName" + orgListName + "orgPartName" + orgPartName + "orgaLevelName" + orgaLevelName + "orgTypeList" + orgTypeList + "orgListId" + orgListId +
-        //     "divisionID" + divisionID + "orgListAbbr" + orgListAbbr + "orgListAbbrLong" + orgListAbbrLong + "orgListAbbrLongAbbr" + orgListAbbrLongAbbr +
-        //     "provincesName" + provincesName + "districtsName" + districtsName);
+        alert("orgTypeListId: " + orgTypeList + " orgPartId: " + orgPartName + " orgaLevelName: " + orgaLevelId +
+            " orgSubUnitNameId: " + orgSubUnitNameList + " orgListName: " + orgListName + " orgListAbbr: " + orgListAbbr +
+            " orgListLong: " + orgListLong + " orgListAbbrLong: " + orgListAbbrLong +
+            " orgListAbbrLongAbbr: " + orgListAbbrLongAbbr + " orgStrucMain: " + orgStrucMain);
 
         // $.ajax({
         //     type: "POST",
@@ -143,28 +182,6 @@
         //     }
         // });
 
-    }
-
-    function create() {
-        var orgTypeId = $("#orgTypeId").val();
-        var orgListId = $("#orgListId").val();
-
-        // alert("orgTypeId"+orgTypeId+"orgListId"+orgListId);
-        // alert("create");
-
-        $.post("../OrganizationProgram/create.php", {
-            orgTypeId: orgTypeId,
-            orgListId: orgListId
-                // orgId: orgId,
-
-        }).done(function(data) {
-            // console.log(data);
-            window.location.href = "./create.php?orgTypeId=" + orgTypeId + "&orgListId=" + orgListId;
-            // window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgId=" + orgId;
-
-        }).fail(function(err) {
-            // console.log(error);
-        });
     }
 
     function insertOrganizationCategory() {
