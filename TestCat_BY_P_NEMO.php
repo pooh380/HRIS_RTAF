@@ -204,15 +204,30 @@
 				isTree: true,
 				expandOnHover: 700,
 				startCollapsed: false,
-				stop: function() {
-					var items = $(this).find('li[id^="menuItem"]').eq(1).html();
-					alert(items);
-					$.post( "test2.php", { name: "John", time: items })
-					.done(function( data ) {
-						alert( "Data Loaded: " + data );
-					});
+				update: function() {
+					/*	var items = $(this).find('li').attr('id');
+						// alert(items);
+						$.post( "test2.php", { name: "John", time: items })
+						.done(function( data ) {
+							alert( "Data Loaded: " + data );
+						});*/
 					//Boy = $('ol.sortable').nestedSortable('Boy');
 					//$('#serializeOutput').text(Boy + '\n\n');
+
+					list = $(this).nestedSortable('toHierarchy', {
+						startDepthCount: 0
+					});
+					$.post(
+						'test2.php', {
+							update_sql: 'ok',
+							list: list
+						},
+						function(data) {
+							//$("#result").hide().html(data).fadeIn('slow')
+							alert(data);
+						}
+					);
+
 				}
 			});
 
@@ -331,49 +346,10 @@
 		while ($result = sqlsrv_fetch_array($query)) {
 			$category['categories'][$result['OrgStrucId']] = $result;
 			$category['parent_cats'][$result['OrgStrucMain']][] = $result['OrgStrucId'];
-
 			?>
 
-
-
-			<!-- <a style="margin-left: 15px; ">
-											<li class="list-group-item" >
-												<s class="vl"></s> <input type="checkbox" value="<?php echo $result['OrgStrucId']; ?>">
-												<span style="font-weight: bold;font-size: 12px;" onclick="showDetail(<?php echo $result['OrgStrucId']; ?>,<?php echo $result['OrgLevelId']; ?>)" >
-												<?php echo $result['OrgStrucName'];
-												echo " ";
-												echo $result['OrgLevelId']; ?></span>
-											</li>
-										</a> -->
-
-			<!-- <li style="display: list-item;" class="mjs-nestedSortable-leaf" id="menuItem_3">
-										<div class="menuDiv"> -->
-			<!-- <span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick">
-												<span></span>
-
-											</span>
-											<span title="Click to show/hide item editor" data-id="3" class="expandEditor ui-icon ui-icon-triangle-1-n">
-												<span></span>
-
-											</span>
-											<span>
-												<span data-id="3" class="itemTitle">f</span>
-
-												<span title="Click to delete item." data-id="7" class="deleteMenu ui-icon ui-icon-closethick">
-													<span></span>
-
-												</span>
-											</span> -->
-			<!-- <div id="menuEdit7" class="menuEdit hidden">
-												<p>
-													</span>
-												</p>
-											</div>
-										</div>
-						
-									</li> -->
 		<?php	}
-		echo "<pre>";
+	echo "<pre>";
 	print_r($category);
 	echo "<pre>";
 	// 
@@ -387,11 +363,11 @@ function getCategories($parent, $category)
 			if (!isset($category['parent_cats'][$cat_id])) {
 				$html .= " <li style='display: list-item;' class='mjs-nestedSortable-leaf' id='menuItem_" . $cat_id . "'>";
 				$html .= "<div class='menuDiv'>";
-				$html .= "<a href='" . $cat_id . "'>" . $category['categories'][$cat_id]['OrgStrucName'] . "</a></div></li> \n";
+				$html .= "<a href='" . $cat_id . "'>" . $category['categories'][$cat_id]['OrgStrucName'] . "</a></div></li> \n ";
 			}
 			if (isset($category['parent_cats'][$cat_id])) {
-				$html .= "<li style='display: list-item;' class='mjs-nestedSortable-leaf' id='menuItem_" . $cat_id . "'><div class='menuDiv'>";
-				$html .= " " . $category['categories'][$cat_id]['OrgStrucName'] . " \n";
+				$html .= "<li style='display: list-item;' class='mjs-nestedSortable-leaf' id='menuItem_" . $cat_id . "'>";
+				$html .= "<div class='menuDiv'> " . $category['categories'][$cat_id]['OrgStrucName'] . "</div> \n";
 				$html .= getCategories($cat_id, $category);
 				$html .= "</li> \n";
 			}
@@ -428,7 +404,13 @@ function getCategories($parent, $category)
 
 // -------ถูกต้อง--------
 ?>
-
+	<section id="demo">
+		<ol class="sortable ui-sortable mjs-nestedSortable-branch mjs-nestedSortable-expanded">
+			<?php echo getCategories(0, $category);
+			//echo  getCategories(0, 1);
+			?>
+		</ol>
+	</section>
 
 	<h3>Try the custom methods:</h3>
 
@@ -445,104 +427,7 @@ function getCategories($parent, $category)
 	<pre id="toHierarchyOutput">
 		</pre>
 
-	<section id="demo">
-		<ol class="sortable ui-sortable mjs-nestedSortable-branch mjs-nestedSortable-expanded">
-			<?php echo getCategories(0, $category);
-			//echo  getCategories(0, 1);
-			?>
-		</ol>
-	</section>
+
 </body>
 
 </html>
-
-/////////////////////////////////sample
-<li style="display: list-item;" class="mjs-nestedSortable-branch mjs-nestedSortable-expanded" id="menuItem_2">
-	<div class="menuDiv">
-		<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick">
-			<span></span>
-		</span>
-		<span title="Click to show/hide item editor" data-id="2" class="expandEditor ui-icon ui-icon-triangle-1-n">
-			<span></span>
-		</span>
-		<span>
-			<span data-id="2" class="itemTitle">a</span>
-			<span title="Click to delete item." data-id="2" class="deleteMenu ui-icon ui-icon-closethick">
-				<span></span>
-			</span>
-		</span>
-		<div id="menuEdit2" class="menuEdit hidden">
-			<p>
-				Content or form, or nothing here. Whatever you want.
-			</p>
-		</div>
-	</div>
-	<ol>
-		<li style="display: list-item;" class="mjs-nestedSortable-branch mjs-nestedSortable-expanded" id="menuItem_4">
-			<div class="menuDiv">
-				<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick">
-					<span></span>
-				</span>
-				<span title="Click to show/hide item editor" data-id="4" class="expandEditor ui-icon ui-icon-triangle-1-n">
-					<span></span>
-				</span>
-				<span>
-					<span data-id="4" class="itemTitle">c</span>
-					<span title="Click to delete item." data-id="4" class="deleteMenu ui-icon ui-icon-closethick">
-						<span></span>
-					</span>
-				</span>
-				<div id="menuEdit4" class="menuEdit hidden">
-					<p>
-						Content or form, or nothing here. Whatever you want.
-					</p>
-				</div>
-			</div>
-			<ol>
-				<li class="mjs-nestedSortable-leaf" id="menuItem_6">
-					<div class="menuDiv">
-						<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick">
-							<span></span>
-						</span>
-						<span title="Click to show/hide item editor" data-id="6" class="expandEditor ui-icon ui-icon-triangle-1-n">
-							<span></span>
-						</span>
-						<span>
-							<span data-id="6" class="itemTitle">e</span>
-							<span title="Click to delete item." data-id="6" class="deleteMenu ui-icon ui-icon-closethick">
-								<span></span>
-							</span>
-						</span>
-						<div id="menuEdit6" class="menuEdit hidden">
-							<p>
-								Content or form, or nothing here. Whatever you want.
-							</p>
-						</div>
-					</div>
-				</li>
-			</ol>
-		</li>
-		<li style="display: list-item;" class="mjs-nestedSortable-leaf" id="menuItem_5">
-			<div class="menuDiv">
-				<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick">
-					<span></span>
-				</span>
-				<span title="Click to show/hide item editor" data-id="5" class="expandEditor ui-icon ui-icon-triangle-1-n">
-					<span></span>
-				</span>
-				<span>
-					<span data-id="5" class="itemTitle">d</span>
-					<span title="Click to delete item." data-id="5" class="deleteMenu ui-icon ui-icon-closethick">
-						<span></span>
-					</span>
-				</span>
-				<div id="menuEdit5" class="menuEdit hidden">
-					<p>
-						Content or form, or nothing here. Whatever you want.
-					</p>
-				</div>
-			</div>
-		</li>
-	</ol>
-</li>
-/////////////////////////////////
