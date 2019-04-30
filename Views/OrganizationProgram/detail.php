@@ -113,8 +113,6 @@
       });
   </script>
 
-  
-
   <section>
       <div class="app-content content">
           <div class="content-wrapper">
@@ -180,12 +178,15 @@
                                       <a href="#" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white" ;>
                                           <span class="la la-print" style="color:white; font-weight: bold;font-size: 13px;margin-top:3px;">พิมพ์</span>
                                       </a>
+                                      <a href="testHi.php" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white" ;>
+                                          <span class="la la-print" style="color:white; font-weight: bold;font-size: 13px;margin-top:3px;">แก้ไขโครงสร้าง</span>
+                                      </a>
 
 
 
                                       <div class="card-content">
                                           <div class="card-body skin-flat">
-                                              <?php require_once './Hirage.php';?>
+                                              <?php require_once './Hirage.php'; ?>
                                           </div>
                                       </div>
                                   </div>
@@ -532,7 +533,19 @@
   </section>
 
 
-  <!-- BEGIN VENDOR JS -->
+
+
+
+  <!-- ///////////////////////////////footer/////////////////////////////////////////////-->
+  <footer class="footer footer-static footer-light navbar-border navbar-shadow">
+      <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
+          <span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2018 <a class="text-bold-800 grey darken-2" href="https://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" target="_blank">PIXINVENT </a>, All rights reserved. </span>
+          <span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span>
+      </p>
+  </footer>
+
+
+    <!-- BEGIN VENDOR JS -->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
 
@@ -560,17 +573,6 @@
   <script src="../../app-assets/js/scripts/forms/checkbox-radio.js" type="text/javascript"></script>
   <script src="../../app-assets/js/scripts/dropdowns/dropdowns.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
-
-
-  <!-- ///////////////////////////////footer/////////////////////////////////////////////-->
-  <footer class="footer footer-static footer-light navbar-border navbar-shadow">
-      <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
-          <span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2018 <a class="text-bold-800 grey darken-2" href="https://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" target="_blank">PIXINVENT </a>, All rights reserved. </span>
-          <span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span>
-      </p>
-  </footer>
-
-
 
   <!-- BEGIN PAGE VENDOR JS-->
   <script src="../../app-assets/vendors/js/tables/datatable/datatables.min.js" type="text/javascript"></script>
