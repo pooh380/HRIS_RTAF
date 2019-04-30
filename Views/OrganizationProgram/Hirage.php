@@ -1,5 +1,5 @@
 <style type="text/css">
-	html {
+	/* html {
 		background-color: #eee;
 	}
 
@@ -17,7 +17,7 @@
 		box-shadow: 1px 1px 8px #444;
 		-mox-box-shadow: 1px 1px 8px #444;
 		-webkit-box-shadow: 1px -1px 8px #444;
-	}
+	} */
 
 	a,
 	a:visited {
@@ -174,13 +174,14 @@
 	}
 </style>
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
-<script type="text/javascript" src="./Asset/js/jquery.mjs.nestedSortable.js"></script>
+<script type="text/javascript" src="../../Asset/js/jquery.mjs.nestedSortable"></script>
 
 <script>
-	$().ready(function() {
+	// $().ready(function() {
 		var ns = $('ol.sortable').nestedSortable({
 			forcePlaceholderSize: true,
 			handle: 'div',
@@ -217,6 +218,7 @@
 					function(data) {
 						$("#serializeOutput").hide().html(data).fadeIn('slow')
 						//alert(data);
+                        
 					}
 				);
 
@@ -318,7 +320,7 @@
 <!-- END section -->
 
 <?php
-require_once './config.php';
+require_once '../../config.php';
 ?>
 <?php
 $sql = " SELECT OrgStrucId, OrgLevelId, OrgPartId, OrgGroupTypeId, OrgTypeId, OrgStrucMain, OrgStrucSubMain, OrgStrucName, OrgStrucActive FROM OrgStruc; ";
@@ -354,10 +356,10 @@ function getCategories($parent, $category, $csui = true)
 				$html .= " <li class='mjs-nestedSortable-leaf' id='menuItem_" . $cat_id . "'>";
 				$html .= "<div class='menuDiv'>";
 				$html .= '<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick"></span>';
-				$html .= '<span title="Click to show/hide item editor" data-id="' . $cat_id . '" class="expandEditor ui-icon ui-icon-triangle-1-n"></span>';
+				$html .= '<span title="Click to show/hide item editor" data-id="' . $cat_id . '" class="expandEditor ui-icon ui-icon-triangle-1-n" ></span>';
 				$html .= '<span data-id="' . $cat_id . '" class="itemTitle"></span>';
-				$html .= '<span title="Click to delete item." data-id="' . $cat_id . '" class="deleteMenu ui-icon ui-icon-closethick"></span>';
-				$html .= "<a href='" . $cat_id . "'>" . $category['categories'][$cat_id]['OrgStrucName'] . $cat_id . "----</a>  ";
+				$html .= '<span title="Click to delete item." data-id="' . $cat_id . '" class="deleteMenu ui-icon ui-icon-closethick" onclick="ByAong()"></span>';
+				$html .= "<a href='" . $cat_id . "'>" . $category['categories'][$cat_id]['OrgStrucName'] . $cat_id . "</a>  ";
 				$html .= "</div>";
 				$html .= "</li> ";
 			}
@@ -386,3 +388,9 @@ function getCategories($parent, $category, $csui = true)
 	?>
 </section>
 
+<script>
+function ByAong(){
+alert("5556");
+
+}
+    </script>

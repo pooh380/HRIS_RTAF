@@ -113,6 +113,8 @@
       });
   </script>
 
+  
+
   <section>
       <div class="app-content content">
           <div class="content-wrapper">
@@ -183,37 +185,7 @@
 
                                       <div class="card-content">
                                           <div class="card-body skin-flat">
-                                              <!-- <------------------------? -->
-                                              <style>
-                                                  .vl {
-                                                      border-left: 8px solid #0f1733;
-                                                      height: 30px;
-                                                      float: left;
-                                                      padding-right: 4px;
-                                                  }
-                                              </style>
-
-
-                                              <!-- <ul class="list-group">
-                                                  <li class="list-group-item">
-                                                      <s class="vl"></s>
-                                                      <span style="font-weight: bold;font-size: 12px;"> กองทัพอากาศ</span>
-                                                  </li>
-                                              </ul>
-                                               -->
-                                              <ul class="list-group" id="list-group-tags" align="left">
-                                                  <a style="margin-left: 15px; ">
-                                                      <li class="list-group-item">
-                                                          <!-- <s class="vl"></s> -->
-                                                          <!-- <span style="font-weight: bold;font-size: 12px;" ><?php echo $result['division_name']; ?></span> -->
-                                                          <!-- <span style="font-weight: bold;font-size: 12px;" onclick="showDetail()"> &nbsp; กรมกำลังพลทาหารอากศ 0</span> -->
-                                                      </li>
-                                                  </a>
-                                              </ul>
-                                              <!-- <div class="skin-flat">
-                                                      divนี้ทำให้ เป็นcheckbox css
-                                              </div> -->
-                                              <!-- ----------------------------- -->
+                                              <?php require_once './Hirage.php';?>
                                           </div>
                                       </div>
                                   </div>
