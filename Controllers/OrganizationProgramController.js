@@ -177,6 +177,7 @@
     function insertOrganizationCategory() {
         var OrganizationcategoryFN = $("#OrganizationcategoryFN").val();
         var OrganizationcategoryIN = $("#OrganizationcategoryIN").val();
+        var orgStrucMain = $("#orgStrucMain").val();
         var checkBox = document.getElementById("isActive");
         if (checkBox.checked == true) {
             var isActive = "1";

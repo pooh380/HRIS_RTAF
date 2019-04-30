@@ -104,6 +104,10 @@
           var orgTypeId = getUrlParameter('orgTypeId');
           //   var orgListId = getUrlParameter('orgListId');
           var orgListId = getUrlParameter('orgListId');
+          var orgStrucMain = getUrlParameter('OrgStrucMain');
+
+          $('#orgStrucMain').val(orgStrucMain);
+          
 
 
           $(document).ajaxStart(function() {
@@ -171,9 +175,9 @@
               <div class="content-header row">
                   <div class="content-header-left col-12 mb-2">
 
-                      <input type="hidden" id="orgTypeId" name="orgTypeId">
-
-                      <input type="hidden" id="orgListId" name="orgListId">
+                      <input type="text" id="orgTypeId" name="orgTypeId">
+                      <input type="text" id="orgListId" name="orgListId">
+                      <input type="text" id="orgStrucMain" name="orgStrucMain">
 
                       <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                           <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -230,38 +234,7 @@
 
                                       <div class="card-content">
                                           <div class="card-body skin-flat">
-                                              <!-- <------------------------? -->
-                                              <style>
-                                                  .vl {
-                                                      border-left: 8px solid #0f1733;
-                                                      height: 30px;
-                                                      float: left;
-                                                      padding-right: 4px;
-                                                  }
-                                              </style>
-
-
-                                              <!-- <ul class="list-group">
-                                                  <li class="list-group-item">
-                                                      <s class="vl"></s>
-                                                      <span style="font-weight: bold;font-size: 12px;"> กองทัพอากาศ</span>
-                                                  </li>
-                                              </ul> -->
-                                              <ul class="list-group" id="list-group-tags" align="left">
-
-                                                  <!-- <a style="margin-left: 15px; ">
-                                                      <li class="list-group-item">
-                                                          <s class="vl"></s> -->
-                                                          <!-- <span style="font-weight: bold;font-size: 12px;" ><?php echo $result['division_name']; ?></span> -->
-                                                          <!-- <span style="font-weight: bold;font-size: 12px;" onclick="showDetail()"> &nbsp; กรมกำลังพลทาหารอากศ 0</span>
-                                                      </li>
-                                                  </a> -->
-
-                                              </ul>
-                                              <!-- <div class="skin-flat">
-                                                      divนี้ทำให้ เป็นcheckbox css
-                                              </div> -->
-                                              <!-- ----------------------------- -->
+                                             <?php require_once './Hirage.php';?>
                                           </div>
                                       </div>
                                   </div>
