@@ -1,5 +1,5 @@
 <!-- connection -->
-<?php require_once "../../config2.php"; ?>
+<?php require_once "../../config.php"; ?>
 
 <!-- header -->
 <?php include '../include/header.php'; ?>
