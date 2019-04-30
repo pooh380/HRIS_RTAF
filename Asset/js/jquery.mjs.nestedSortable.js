@@ -692,7 +692,39 @@
 			return str.join("&");
 
 		},
+		Boy: function(options) {
 
+			var o = $.extend({}, this.options, options),
+				items = this._getItemsAsjQuery(o && o.connected),
+				str = [];
+
+			$(items).each(function() {
+				var res = ($(o.item || this).attr(o.attribute || "id") || "")
+						.match(o.expression || (/(.+)[-=_](.+)/)),
+					pid = ($(o.item || this).parent(o.listType)
+						.parent(o.items)
+						.attr(o.attribute || "id") || "")
+						.match(o.expression || (/(.+)[-=_](.+)/));
+
+				if (res) {
+					str.push(
+						(
+							(o.key || res[1]) +
+							"[" +
+							(o.key && o.expression ? res[1] : res[2]) + "]"
+						) +
+						"=" +
+						(pid ? (o.key && o.expression ? pid[1] : pid[2]) : o.rootID));
+				}
+			});
+
+			if (!str.length && o.key) {
+				str.push(o.key + "=");
+			}
+	
+			return str.join("&");
+
+		},
 		toHierarchy: function(options) {
 
 			var o = $.extend({}, this.options, options),

@@ -1,5 +1,19 @@
 function getOrganizationGroupType() {
     $('#OrganizationGroupType').DataTable({
+        "language": {
+            "lengthMenu": "เลือกจำนวน _MENU_ จำนวน",
+            "zeroRecords": "ไม่มีข้อมูลนี้ในตาราง",
+            "info": "กำลังแสดงข้อมูลหน้าที่ _START_ จากทั้งหมด _END_ หน้า ",
+
+            "infoEmpty": "ไม่มีข้อมูลนี้ในตาราง",
+            // "infoFiltered": "(กกกกกก from _MAX_ total records)"
+            "paginate": {
+                "previous": "ก่อนหน้า",
+                "next": "ถัดไป"
+            },
+            "search": "ค้นหา: ",
+            "searchPlaceholder": "ค้นหา"
+        },
         "ajax": {
             url: "../../Model/OrganizationGroupType/GetOrganizationGroupType.php", // json datasource
             dataType: "json",
@@ -13,7 +27,7 @@ function getOrganizationGroupType() {
             "lengthMenu": [
                 [10, 25, 50, 100, -1],
                 [10, 25, 50, 100, "All"]
-            ],  
+            ],
             "pageLength": 10,
             order: [
                 [0, "desc"]
@@ -108,7 +122,7 @@ function UpdateorganizationGroupType() {
         var isActive = "1";
     } else {
         var isActive = "0";
-    }   
+    }
     // console.log(originsId + " " + originName + " " + originAbbrName + " " + isActive);
 
     $.ajax({
@@ -163,7 +177,7 @@ function DeleteOrganizationGroupType(id) {
                 showConfirmButton: false,
                 timer: 2000
             });
-             setTimeout("window.open('../OrganizationGroupType/index.php', '_self');", 2000);
+            setTimeout("window.open('../OrganizationGroupType/index.php', '_self');", 2000);
         },
         error: function(error) {
             // alert(error);

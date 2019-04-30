@@ -11,7 +11,7 @@ $col = array(
     2   =>  'province_abbr_name',
     3   =>  'IsActive'
 );
-$sql = " SELECT TOP (20) id, province_name, province_abbr_name, IsActive FROM general_province  ORDER BY id OFFSET 10 ROWS FETCH NEXT 10 ROWS ONLY ";
+$sql = " SELECT TOP (20) id, province_name, province_abbr_name, IsActive FROM general_province  ORDER BY id OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY ";
 
 $params = array();
 $params = array();

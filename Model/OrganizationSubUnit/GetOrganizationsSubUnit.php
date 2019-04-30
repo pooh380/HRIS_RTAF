@@ -2,10 +2,8 @@
 
 error_reporting(0);
 
+// require_once "../../config.php";
 require_once "../../config.php";
-
-
-$OrgLevelId = isset($_POST['OrgLevelId']) ? $_POST['OrgLevelId'] : "";
  
 $request=$_REQUEST;
 $col =array(
@@ -16,8 +14,12 @@ $col =array(
     4   =>  'OrgSubUnitActive',
   
 ); 
-$sql =" SELECT OrgSubUnitId, OrgSubUnitName, OrgSubUnitAbbr, OrgSubUnitSemiAbbr, OrgSubUnitActive, OrgSubUnitCreateBy, OrgSubUnitCreateDate, OrgSubUnitUpdateBy, OrgSubUnitUpdateDate
-FROM OrgSubUnit; ";
+
+
+$sql = " SELECT OrgSubUnitId, OrgSubUnitName, OrgSubUnitAbbr, OrgSubUnitSemiAbbr, OrgSubUnitActive
+FROM OrgSubUnit ORDER BY OrgSubUnitId OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY; "; 
+// echo $sql;
+
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
@@ -25,13 +27,12 @@ $totalData = sqlsrv_num_rows($query);
 // echo $totalData;
 $totalFilter = $totalData;
 
-$sql = "SELECT OrgSubUnitId, OrgSubUnitName , OrgSubUnitAbbr, OrgSubUnitSemiAbbr, OrgSubUnitActive, OrgSubUnitCreateBy, OrgSubUnitCreateDate, OrgSubUnitUpdateBy, OrgSubUnitUpdateDate
-FROM OrgSubUnit WHERE 1=1 ";
+$sql = " SELECT OrgSubUnitId, OrgSubUnitName, OrgSubUnitAbbr, OrgSubUnitSemiAbbr, OrgSubUnitActive FROM OrgSubUnit WHERE 1=1 ";
 
 if (!empty($request['search']['value'])) {
     $sql .= " AND (OrgSubUnitName Like N'%" . $request['search']['value'] . "%' ";
     $sql .= " OR OrgSubUnitAbbr Like N'%" . $request['search']['value'] . "%' ";
-    $sql .= " OR OrgSubUnitSemiAbbr Like N'%" . $request['search']['value'] . "%') ";
+    $sql .= " OR OrgSubUnitSemiAbbrLike N'%" . $request['search']['value'] . "%') ";
     //หากเลือกselect2 ต้อง เพิ่มor ใน นี้ด้วย
     $query = sqlsrv_query($conn, $sql, $params, $options);
     $totalData = sqlsrv_num_rows($query);
@@ -49,7 +50,7 @@ while($row=sqlsrv_fetch_array($query)){
     $subdata[]=$row[0]; 
     $subdata[]=$row[1]; //OrgSubUnitName
     $subdata[]=$row[2]; //OrgSubUnitAbbr
-    $subdata[]=$row[3]; //OrgSubUnitSemiAbbr   
+    $subdata[]=$row[3]; //OrgSubUnitSemiAbbr 
     if($row[4] != 1){
         $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
     }else{
@@ -71,3 +72,6 @@ $json_data=array(
 echo json_encode($json_data);
 
 ?>
+
+
+

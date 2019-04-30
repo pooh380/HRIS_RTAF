@@ -1,5 +1,19 @@
 function getOrganizationLevels() {
     $('#OrganizationLevels').DataTable({
+        "language": {
+            "lengthMenu": "เลือกจำนวน _MENU_ จำนวน",
+            "zeroRecords": "ไม่มีข้อมูลนี้ในตาราง",
+            "info": "กำลังแสดงข้อมูลหน้าที่ _START_ จากทั้งหมด _END_ หน้า ",
+
+            "infoEmpty": "ไม่มีข้อมูลนี้ในตาราง",
+            // "infoFiltered": "(กกกกกก from _MAX_ total records)"
+            "paginate": {
+                "previous": "ก่อนหน้า",
+                "next": "ถัดไป"
+            },
+            "search": "ค้นหา: ",
+            "searchPlaceholder": "ค้นหา"
+        },
         "ajax": {
             url: "../../Model/OrganizationLevels/GetOrganizationLevels.php", // json datasource
             dataType: "json",

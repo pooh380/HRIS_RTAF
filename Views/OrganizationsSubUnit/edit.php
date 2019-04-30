@@ -103,7 +103,7 @@
                                           </div>
                                           <div class="form-actions center" align="center">
 
-                                              <input type="text" name="id" id="id" value="">
+                                              <input type="hidden" name="id" id="id" value="">
 
                                               <!-- <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
                                 <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="insertOrganizationParts()">บันทึก</button> -->

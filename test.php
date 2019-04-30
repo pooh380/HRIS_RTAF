@@ -1,7 +1,7 @@
 <?php
 
-require_once "../../config.php";
-require_once "../../Controllers/API/dateformat.php";
+require_once "./config.php";
+// require_once "../../Controllers/API/dateformat.php";
 
 // $orgStucId = isset($_POST['orgStucId']) ? $_POST['orgStucId'] : "";
 // $orgLevelId = isset($_POST['orgLevelId']) ? $_POST['orgLevelId'] : "";
@@ -36,10 +36,10 @@ while ($row = sqlsrv_fetch_array($query)) {
     $orgStrucName = $row['OrgStrucName'];
     $orgStrucActive = $row['OrgStrucActive'];
 }
-echo "<Br>";
-echo "orgPath: " . $orgStrucPath;
-echo " OrgStrucName: " . $orgStrucName;
-echo "<Br>";
+// echo "<Br>";
+// echo "orgPath: " . $orgStrucPath;
+// echo " OrgStrucName: " . $orgStrucName;
+// echo "<Br>";
 
 // original string 
 $str = $orgStrucPath;
@@ -59,9 +59,9 @@ while ($token !== false) {
     array_push($resultArray, $b);
 }
 
-echo "<pre>";
-print_r($resultArray);
-echo "<pre>";
+// echo "<pre>";
+// print_r($resultArray);
+// echo "<pre>";
 
 
 $sql1 = " SELECT OrgStrucId, OrgStruc.OrgLevelId, OrgLevelName, OrgStruc.OrgSubUnitId, OrgPartName, OrgGroupTypeName, OrgTypeName, OrgSubUnitName, OrgSubUnitName, OrgStrucMain, OrgStrucSubMain, OrgStrucName, OrgStrucActive
@@ -88,45 +88,45 @@ while ($row = sqlsrv_fetch_array($query1)) {
 
 
 krsort($array);
-echo "<pre>";
-print_r($array[0]);
-$array0 = $array[0];
-echo "<pre>";
-print_r($array[1]);
-$array1 = $array[1];
-echo "<pre>";
-print_r($array[2]);
-$array2 = $array[2];
-echo "<pre>";
-print_r($array[3]);
-$array3 = $array[3];
-echo "<pre>";
+// echo "<pre>";
+// print_r($array[0]);
+// $array0 = $array[0];
+// echo "<pre>";
+// print_r($array[1]);
+// $array1 = $array[1];
+// echo "<pre>";
+// print_r($array[2]);
+// $array2 = $array[2];
+// echo "<pre>";
+// print_r($array[3]);
+// $array3 = $array[3];
+// echo "<pre>";
 
 
 
 foreach ($array as $k => $value) {
-    $val .= $value . " ";
+    $val .= $value . " " .$k. " " ;
     echo "<pre>";
     echo $val;
 }
 
 
 
-$r = array(
-    "orgStrucId" => $orgStrucId, "orgSubUnitId" => $orgSubUnitId, "orgLevelName" => $orgLevelName, "orgPartName" => $orgPartName, "orgGroupTypeName" => $orgGroupTypeName, "orgTypeName" => $orgTypeName,
-    "array0" => $array0, "array1" => $array1, "array2" => $array2, "array3" => $array3, "val" => $val,
-    "orgSubUnitName" => $orgSubUnitName, "orgStrucMain" => $orgStrucMain, "orgStrucSubMain" => $orgStrucSubMain, "orgStrucSubMain" => $orgStrucSubMain,
-    "orgStrucPath" => $orgStrucPath, "orgStrucName" => $orgStrucName, "orgStrucActive" => $orgStrucActive
-);
+// $r = array(
+//     "orgStrucId" => $orgStrucId, "orgSubUnitId" => $orgSubUnitId, "orgLevelName" => $orgLevelName, "orgPartName" => $orgPartName, "orgGroupTypeName" => $orgGroupTypeName, "orgTypeName" => $orgTypeName,
+//     "array0" => $array0, "array1" => $array1, "array2" => $array2, "array3" => $array3, "val" => $val,
+//     "orgSubUnitName" => $orgSubUnitName, "orgStrucMain" => $orgStrucMain, "orgStrucSubMain" => $orgStrucSubMain, "orgStrucSubMain" => $orgStrucSubMain,
+//     "orgStrucPath" => $orgStrucPath, "orgStrucName" => $orgStrucName, "orgStrucActive" => $orgStrucActive
+// );
 
 
 // $r = array("array0"=>$array0,"array1"=>$array1,"array2"=>$array2,"array3"=>$array3);
 
 
 
-echo '<pre>';
-print_r($r);
-echo '</pre>';
+// echo '<pre>';
+// print_r($r);
+// echo '</pre>';
 
 
 

@@ -17,6 +17,10 @@
           border-radius: 20rem;
       }
   </style>
+
+<script src="../../Controllers/organizationSubUnitController.js"></script>
+
+
   <div class="app-content content">
       <div class="content-wrapper">
           <div class="content-header row">
@@ -60,20 +64,20 @@
                                       <form class="form form-horizontal">
                                           <div class="form-body">
                                               <div class="row">
-                                                  <div class="col-md-12 ">
+                                                  <div class="col-md-6 ">
                                                       <label class="col-md-6 label-control" for="OrgSubUnitName">ชื่อเต็มหน่วยงาน</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
-                                                              <input type="text" id="OrgSubUnitName" class="form-control border-primary" placeholder="ชื่อเต็มโครงสร้างอัตราส่วนราชการ" name="OrgSubUnitName">
+                                                              <input type="text" id="OrgSubUnitName" class="form-control border-primary" placeholder="ชื่อเต็มหน่วยงาน" name="OrgSubUnitName">
 
                                                           </div>
                                                       </div>
                                                   </div>
-                                                  <div class="col-md-6 mt-1">
+                                                  <div class="col-md-6">
                                                       <label class="col-md-6 label-control" for="OrgSubUnitAbbr">ชื่อย่อหน่วยงาน</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="OrgSubUnitAbbr" class="form-control border-primary" placeholder="ชื่อย่อหัวหน้าสายวิชาการ" name="OrgSubUnitAbbr">
+                                                              <input type="text" id="OrgSubUnitAbbr" class="form-control border-primary" placeholder="ชื่อย่อหน่วยงาน" name="OrgSubUnitAbbr">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -81,7 +85,7 @@
                                                       <label class="col-md-6 label-control" for="OrgSubUnitSemiAbbr">ชื่อกึ่งหน่วยงาน</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
-                                                              <input type="text" id="OrgSubUnitSemiAbbr" class="form-control border-primary" placeholder="ชื่อย่อหัวหน้าสายวิชาการ" name="OrgSubUnitSemiAbbr">
+                                                              <input type="text" id="OrgSubUnitSemiAbbr" class="form-control border-primary" placeholder="ชื่อกึ่งหน่วยงาน" name="OrgSubUnitSemiAbbr">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -111,8 +115,7 @@
           </div>
       </div>
   </div>
-  
-  <script src="../../Controllers/organizationSubUnitController.js"></script>
+ 
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
@@ -121,6 +124,8 @@
   <!-- END PAGE VENDOR JS-->
   <!-- BEGIN PAGE LEVEL JS-->
   <script src="../../app-assets/js/scripts/extensions/sweet-alerts.js" type="text/javascript"></script>
+  <script src="../../app-assets/vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>
+  <script src="../../app-assets/js/scripts/forms/select/form-select2.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
   <!-- footer -->
   <?php include '../include/footer.php'; ?>

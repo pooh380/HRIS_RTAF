@@ -1,5 +1,19 @@
 function getOrganizationSubUnit() {
     $('#OrganizationLevels').DataTable({
+        "language": {
+            "lengthMenu": "เลือกจำนวน _MENU_ จำนวน",
+            "zeroRecords": "ไม่มีข้อมูลนี้ในตาราง",
+            "info": "กำลังแสดงข้อมูลหน้าที่ _START_ จากทั้งหมด _END_ หน้า ",
+
+            "infoEmpty": "ไม่มีข้อมูลนี้ในตาราง",
+            // "infoFiltered": "(กกกกกก from _MAX_ total records)"
+            "paginate": {
+                "previous": "ก่อนหน้า",
+                "next": "ถัดไป"
+            },
+            "search": "ค้นหา: ",
+            "searchPlaceholder": "ค้นหา"
+        },
         "ajax": {
             url: "../../Model/OrganizationSubUnit/GetOrganizationsSubUnit.php", // json datasource
             dataType: "json",
@@ -86,8 +100,8 @@ function getIdForEdit() {
         dataType: "json",
         url: "../../Model/OrganizationSubUnit/GetDataEdit.php",
         data: {
-            OrgSubUnitId:OrgSubUnitId,
-         
+            OrgSubUnitId: OrgSubUnitId,
+
         },
         success: function(data) {
             $("#id").val(data.id);
@@ -121,8 +135,8 @@ function UpdateOrganizationSubUnit() {
     var OrgSubUnitAbbr = $("#OrgSubUnitAbbr").val();
     var OrgSubUnitSemiAbbr = $("#OrgSubUnitSemiAbbr").val();
     var isActive = $("#isActive").val();
-  
-    
+
+
 
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
@@ -137,7 +151,7 @@ function UpdateOrganizationSubUnit() {
         url: "../../Model/OrganizationSubUnit/UpdateOrganizationSubUnit.php",
         data: {
             id: id,
-            OrgSubUnitName : OrgSubUnitName,
+            OrgSubUnitName: OrgSubUnitName,
             OrgSubUnitAbbr: OrgSubUnitAbbr,
             OrgSubUnitSemiAbbr: OrgSubUnitSemiAbbr,
             isActive: isActive
