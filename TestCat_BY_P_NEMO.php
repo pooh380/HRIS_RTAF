@@ -199,7 +199,7 @@
 				revert: 250,
 				tabSize: 25,
 				tolerance: 'pointer',
-				toleranceElement: '> div',
+				toleranceElement: 'div',
 				//maxLevels: 4,
 				isTree: true,
 				expandOnHover: 700,
@@ -376,13 +376,13 @@
 					$html .= "<ol>\n";
 					foreach ($category['parent_cats'][$parent] as $cat_id) {
 							if (!isset($category['parent_cats'][$cat_id])) {
-									$html .= "<div>";
-									$html .= "<li style='display: list-item;' class='mjs-nestedSortable-leaf' id='menuItem_".$cat_id."'>";
+									$html .= " <li style='display: list-item;' class='mjs-nestedSortable-leaf' id='menuItem_".$cat_id."'>";
+									$html .= "<div class='menuDiv'>";
 									$html .= "<a href='".$cat_id."'>" . $category['categories'][$cat_id]['OrgStrucName'] . "</a></div></li> \n";
 								}
 							if (isset($category['parent_cats'][$cat_id])) {
-									$html .= "<li style='display: list-item;' class='mjs-nestedSortable-leaf' id='menuItem_".$cat_id."'>";
-									$html .= " <div class='menuDiv'>" . $category['categories'][$cat_id]['OrgStrucName'] . "</div> \n";
+									$html .= "<li style='display: list-item;' class='mjs-nestedSortable-leaf' id='menuItem_".$cat_id."'><div class='menuDiv'>";
+									$html .= " " . $category['categories'][$cat_id]['OrgStrucName'] . " \n";
 									$html .= getCategories($cat_id, $category);
 									$html .= "</li> \n";
 								}
@@ -391,6 +391,33 @@
 				}
 			return $html;
 		}
+
+
+// -------ถูกต้อง--------
+		// function getCategories($parent, $category)
+		// {
+		// 	$html = "";
+		// 	if (isset($category['parent_cats'][$parent])) {
+		// 			$html .= "<ol>\n";
+		// 			foreach ($category['parent_cats'][$parent] as $cat_id) {
+		// 					if (!isset($category['parent_cats'][$cat_id])) {
+		// 							$html .= " <li style='display: list-item;' class='mjs-nestedSortable-leaf' id='menuItem_".$cat_id."'>";
+		// 							$html .= "<div class='menuDiv'>";
+		// 							$html .= "<a href='".$cat_id."'>" . $category['categories'][$cat_id]['OrgStrucName'] . "</a></div></li> \n";
+		// 						}
+		// 					if (isset($category['parent_cats'][$cat_id])) {
+		// 							$html .= "<li style='display: list-item;' class='mjs-nestedSortable-leaf' id='menuItem_".$cat_id."'>";
+		// 							$html .= " <div class='menuDiv'>" . $category['categories'][$cat_id]['OrgStrucName'] . " </div>\n";
+		// 							$html .= getCategories($cat_id, $category);
+		// 							$html .= "</li> \n";
+		// 						}
+		// 				}
+		// 			$html .= "</ol> \n";
+		// 		}
+		// 	return $html;
+		// }
+		
+// -------ถูกต้อง--------
 		?>
 
 
