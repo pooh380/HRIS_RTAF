@@ -1,5 +1,4 @@
 <style type="text/css">
-
 	a,
 	a:visited {
 		color: #4183C4;
@@ -43,7 +42,7 @@
 	}
 
 	ol {
-		max-width: 450px;
+		/* max-width: 450px; */
 		padding-left: 25px;
 	}
 
@@ -106,7 +105,7 @@
 		cursor: pointer;
 	}
 
-	h1 {
+	/* h1 {
 		font-size: 2em;
 		margin-bottom: 0;
 	}
@@ -117,21 +116,21 @@
 		font-style: italic;
 		margin-top: .2em;
 		margin-bottom: 1.5em;
-	}
-
+	} */
+/* 
 	h3 {
 		font-size: 1em;
 		margin: 1em 0 .3em;
-	}
+	} */
 
-	p,
+	/* p,
 	ol,
 	ul,
 	pre,
 	form {
 		margin-top: 0;
 		margin-bottom: 1em;
-	}
+	} */
 
 	dl {
 		margin: 0;
@@ -158,7 +157,7 @@
 <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
-<script type="text/javascript" src="../../Asset/js/jquery.mjs.nestedSortable.js"></script> 
+<script type="text/javascript" src="../../Asset/js/jquery.mjs.nestedSortable.js"></script>
 <script>
 	$(document).ready(function() {
 		var ns = $('ol.sortable').nestedSortable({
@@ -317,14 +316,13 @@ if ($rows > 0) {
 		?>
 
 	<?php	}
-
 }
 function getCategories($parent, $category, $csui = true)
 { //
 	$html = "";
 	if (isset($category['parent_cats'][$parent])) {
 		if ($csui == true) {
-			$html .= '<ol class="sortable ui-sortable mjs-nestedSortable-branch mjs-nestedSortable-expanded">';
+			$html .= '<ol class="sortable ui-sortable mjs-nestedSortable-branch mjs-nestedSortable-expanded" style="padding-left:0px;">';
 		} else {
 			$html .= '<ol>';
 		}
@@ -333,22 +331,22 @@ function getCategories($parent, $category, $csui = true)
 			if (!isset($category['parent_cats'][$cat_id])) {
 				$html .= " <li class='mjs-nestedSortable-leaf' id='menuItem_" . $cat_id . "'>";
 				$html .= "<div class='menuDiv'>";
-				$html .= '<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick"></span>';
-				$html .= '<span title="Click to show/hide item editor" data-id="' . $cat_id . '" class="expandEditor ui-icon ui-icon-triangle-1-n valueHirarchy"name="valueHirarchy"></span>';
-                $html .= '<input type="checkbox" name="valueHirarchy" value="'. $cat_id . '">';
-                $html .= '<span data-id="' . $cat_id . '" class="itemTitle"></span>';
-				$html .= '<span title="Click to delete item." data-id="' . $cat_id . '" class="deleteMenu ui-icon ui-icon-closethick"></span>';
-				$html .= "<a href='" . $cat_id . "'>" . $category['categories'][$cat_id]['OrgStrucName'] . $cat_id . "----</a>  ";
+				// $html .= '<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick"></span>';
+				// $html .= '<span title="Click to show/hide item editor" data-id="' . $cat_id . '" class="expandEditor ui-icon ui-icon-triangle-1-n valueHirarchy"name="valueHirarchy"></span>';
+				$html .= '<input type="checkbox" name="valueHirarchy' . $cat_id . '" value="' . $cat_id . '">';
+				$html .= '<span data-id="' . $cat_id . '" class="itemTitle"></span>';
+				// $html .= '<span title="Click to delete item." data-id="' . $cat_id . '" class="deleteMenu ui-icon ui-icon-closethick"></span>';
+				$html .= "<a onclick='getData(" . $cat_id . ")'>". $category['categories'][$cat_id]['OrgStrucName'] . $cat_id . "</a>  ";
 				$html .= "</div>";
 				$html .= "</li> ";
 			}
 			if (isset($category['parent_cats'][$cat_id])) {
 				$html .= "<li style='display: list-item;' class='mjs-nestedSortable-branch mjs-nestedSortable-expanded' id='menuItem_" . $cat_id . "'>";
-                $html .= "<div class='menuDiv'> <input type='checkbox'  class='valueHirarchy' name='valueHirarchy' value='". $cat_id . "'>" . $category['categories'][$cat_id]['OrgStrucName'];
-				$html .= '<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick"></span>';
-				$html .= '<span title="Click to show/hide item editor" data-id="' . $cat_id . '" class="expandEditor ui-icon ui-icon-triangle-1-n"></span>';
+				$html .= "<div class='menuDiv'> <input type='checkbox'  class='valueHirarchy' name='valueHirarchy' value='" . $cat_id . "'> <a onclick='getData(" . $cat_id . ")'>" . $category['categories'][$cat_id]['OrgStrucName']."</a>";
+				// $html .= '<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick"></span>';
+				// $html .= '<span title="Click to show/hide item editor" data-id="' . $cat_id . '" class="expandEditor ui-icon ui-icon-triangle-1-n"></span>';
 				$html .= '<span data-id="' . $cat_id . '" class="itemTitle"></span>';
-				$html .= '<span title="Click to delete item." data-id="' . $cat_id . '" class="deleteMenu ui-icon ui-icon-closethick"></span>';
+				// $html .= '<span title="Click to delete item." data-id="' . $cat_id . '" class="deleteMenu ui-icon ui-icon-closethick"></span>';
 				$html .= "</div>";
 				$html .= getCategories($cat_id, $category, $csui = false);
 				$html .= "</li> ";
@@ -360,30 +358,31 @@ function getCategories($parent, $category, $csui = true)
 }
 
 ?>
-<section id="demo">
+<section id="demo" class="text-left">
 
 	<?php echo getCategories(0, $category);
 	//echo  getCategories(0, 1);
 	?>
 </section>
 
-
-<button id="test" onclick="hirarchyValue()">test</button>
-
 <script>
 
 
-$( document ).ready(function() {
-    console.log( "ready!" );
-});
+	var valueHi = [];
+	$.each($("input[name='valueHirarchy']:checked"), function() {
+		valueHi.push($(this).val());
+	});
 
-		var valueHi = [];
-					$.each($("input[name='valueHirarchy']:checked"), function() {
-							valueHi.push($(this).val());
-					});
-					
-	function hirarchyValue(valueHi){
-		
-		alert("valueHirarchy"+valueHi);
+		$(document).ready(function() {
+		console.log("ready!");
+	});
+
+	function hirarchyValue(valueHi) {
+
+		alert("valueHirarchy" + valueHi);
+	}
+
+	function getData(id){
+		alert(id);
 	}
 </script>
