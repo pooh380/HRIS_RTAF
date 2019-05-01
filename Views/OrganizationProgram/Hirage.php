@@ -111,7 +111,7 @@
 		margin-bottom: 0;
 	}
 
-	h2 {
+	/* h2 {
 		font-size: 1.2em;
 		font-weight: 400;
 		font-style: italic;
@@ -122,7 +122,7 @@
 	h3 {
 		font-size: 1em;
 		margin: 1em 0 .3em;
-	}
+	} */
 
 	p,
 	ol,
@@ -159,7 +159,7 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
 <script type="text/javascript" src="../../Asset/js/jquery.mjs.nestedSortable.js"></script> 
-<script>
+<!-- <script>
 	$(document).ready(function() {
 		var ns = $('ol.sortable').nestedSortable({
 			forcePlaceholderSize: true,
@@ -284,7 +284,7 @@
 			}
 		})
 	});
-</script>
+</script> -->
 
 
 

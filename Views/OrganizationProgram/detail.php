@@ -119,9 +119,9 @@
               <div class="content-header row">
                   <div class="content-header-left col-12 mb-2">
 
-                      <input type="text" id="orgTypeId" name="orgTypeId">
+                      <input type="hidden" id="orgTypeId" name="orgTypeId">
 
-                      <input type="text" id="orgStrucId" name="orgStrucId">
+                      <input type="hidden" id="orgStrucId" name="orgStrucId">
 
                       <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                           <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
