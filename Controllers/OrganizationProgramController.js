@@ -30,7 +30,7 @@
         // alert(orgTypeId + " " + orgListId);
     }
 
-    function getSubUnit(orgStrucId){
+    function getSubUnit(orgStrucId) {
         var orgStrucId = $('#orgListList :selected').val();
 
         $.post("../../Model/OrganizationProgram/getSubUnit.php", {
@@ -39,7 +39,7 @@
         }).done(function(data) {
             // console.log(data);
             $("#orgSubUnitNameList").html(data);
-           
+
 
         }).fail(function(err) {
             // console.log(error);
@@ -128,7 +128,7 @@
 
         }).done(function(data) {
             // console.log(data);
-            window.location.href = "./create.php?orgTypeId=" + orgTypeId + "&orgStrucId=" + orgStrucId + "&OrgStrucMain="+valueHi ;
+            window.location.href = "./create.php?orgTypeId=" + orgTypeId + "&orgStrucId=" + orgStrucId + "&OrgStrucMain=" + valueHi;
             // window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgId=" + orgId;
 
         }).fail(function(err) {
@@ -159,6 +159,10 @@
             var isActive = "0";
         }
 
+        // ใช้ย้อนกลับ
+        var orgTypeId = $("#orgTypeId").val();
+        var orgStrucId = $("#orgStrucId").val();
+
 
         // alert("orgTypeList" + orgTypeList + "orgPartName" + orgPartName + "orgSubUnitNameList" + orgSubUnitNameList +
         //      "orgListName" + orgListName + "orgListAbbr" + orgListAbbr + "orgListLong" + orgListLong +
@@ -169,16 +173,16 @@
             url: "../../Model/OrgHierarchy/insertOrgHierachy.php",
             data: {
                 orgTypeList: orgTypeList,
-                orgPartName : orgPartName,
-                orgSubUnitNameList :orgSubUnitNameList,
-                orgaLevelName : orgaLevelName,
-                orgListName : orgListName,
-                orgListAbbr : orgListAbbr,
-                orgListLong : orgListLong,
-                orgListAbbrLong : orgListAbbrLong,
-                orgListAbbrLongAbbr : orgListAbbrLongAbbr,
-                orgStrucMain : orgStrucMain,
-                isActive : isActive,
+                orgPartName: orgPartName,
+                orgSubUnitNameList: orgSubUnitNameList,
+                orgaLevelName: orgaLevelName,
+                orgListName: orgListName,
+                orgListAbbr: orgListAbbr,
+                orgListLong: orgListLong,
+                orgListAbbrLong: orgListAbbrLong,
+                orgListAbbrLongAbbr: orgListAbbrLongAbbr,
+                orgStrucMain: orgStrucMain,
+                isActive: isActive,
 
             },
             success: function(data) {
@@ -189,7 +193,8 @@
                     showConfirmButton: false,
                     timer: 2000
                 });
-                setTimeout("window.open('../organizationProgram/index.php', '_self');", 2000);
+                // setTimeout("window.open('../organizationProgram/index.php', '_self');", 2000);
+                window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgStrucId=" + orgStrucId;
             },
             error: function(error) {
                 // console.log(error);
