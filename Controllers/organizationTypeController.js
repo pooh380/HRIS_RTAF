@@ -138,7 +138,19 @@ function getIdForEdit() {
             $('#orgGroupTypeId').append('<option value="' + data.orgGroupTypeId + '" selected="selected">' + data.orgGroupTypeName + '</option>');
             $("#orgTypeName").val(data.orgTypeName);
             $("#startDate").val(data.orgTypeStartDate);
-            $("#endDate").val(data.orgTypeEndDate);
+            // $("#endDate").val(data.orgTypeEndDate);
+
+            if (data.orgTypeEndDate =="") {
+                // $("#isActive").removeAttr('checked');
+                $("#endDate").val(data.orgTypeEndDate);
+            } else {
+                // $('#isActive').prop("checked", true);
+                $("#endDate").val(ไม่มีค่า);
+            }
+
+
+
+          
 
             if (data.orgTypeAirforce == 1) {
                 // $("#isActive").removeAttr('checked');
@@ -223,14 +235,14 @@ function UpdateOrgType() {
         orgTypeId: orgTypeId,
         orgGroupTypeId: orgGroupTypeId,
         orgTypeName: orgTypeName,
-        // startDate: startDate,
-        // endDate: endDate,
+        startDate: startDate,
+        endDate: endDate,
         isActive: isActive,
         airForce: airForce,
         multiplesDay: multiplesDay,
         currentOrg: currentOrg
     }).done(function(data) {
-        window.location.replace("../page/listUser.php");
+        window.location.replace("./index.php");
         console.log(data);
         Swal.fire({
             type: 'success',

@@ -78,7 +78,7 @@
                                     <!-- <div class="card-text">
                                           <p>คำโปรย</p>
                                       </div> -->
-                                    <form class="form form-horizontal">
+                                    <form 1rm-horizontal">
                                         <div class="form-body">
                                             <div class="row">
                                                 <div class="col-md-6">

@@ -333,7 +333,11 @@ function getCategories($parent, $category, $csui = true)
 				$html .= "<div class='menuDiv'>";
 				// $html .= '<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick"></span>';
 				// $html .= '<span title="Click to show/hide item editor" data-id="' . $cat_id . '" class="expandEditor ui-icon ui-icon-triangle-1-n valueHirarchy"name="valueHirarchy"></span>';
-				$html .= '<input type="checkbox" name="valueHirarchy' . $cat_id . '" value="' . $cat_id . '">';
+				$html .= '<input type="checkbox" name="valueHirarchy" value="' . $cat_id . '"' ;
+					if(isset($_GET['OrgStrucMain'])&&($_GET['OrgStrucMain']==$cat_id)){
+						$html .= 'checked';
+					}
+				$html .= '>';
 				$html .= '<span data-id="' . $cat_id . '" class="itemTitle"></span>';
 				// $html .= '<span title="Click to delete item." data-id="' . $cat_id . '" class="deleteMenu ui-icon ui-icon-closethick"></span>';
 				$html .= "<a onclick='getData(" . $cat_id . ")'>". $category['categories'][$cat_id]['OrgStrucName'] . $cat_id . "</a>  ";
@@ -342,7 +346,12 @@ function getCategories($parent, $category, $csui = true)
 			}
 			if (isset($category['parent_cats'][$cat_id])) {
 				$html .= "<li style='display: list-item;' class='mjs-nestedSortable-branch mjs-nestedSortable-expanded' id='menuItem_" . $cat_id . "'>";
-				$html .= "<div class='menuDiv'> <input type='checkbox'  class='valueHirarchy' name='valueHirarchy' value='" . $cat_id . "'> <a onclick='getData(" . $cat_id . ")'>" . $category['categories'][$cat_id]['OrgStrucName']."</a>";
+				$html .= "<div class='menuDiv'> <input type='checkbox'  class='valueHirarchy' name='valueHirarchy' value='" . $cat_id . "'";
+							if(isset($_GET['OrgStrucMain'])&&($_GET['OrgStrucMain']==$cat_id)){
+								$html .= 'checked';
+							}
+				$html .= '>';
+				$html .= "<a onclick='getData(" . $cat_id . ")'>" . $category['categories'][$cat_id]['OrgStrucName']."</a>";
 				// $html .= '<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick"></span>';
 				// $html .= '<span title="Click to show/hide item editor" data-id="' . $cat_id . '" class="expandEditor ui-icon ui-icon-triangle-1-n"></span>';
 				$html .= '<span data-id="' . $cat_id . '" class="itemTitle"></span>';
