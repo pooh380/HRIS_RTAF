@@ -86,10 +86,10 @@
             
                                   <div class="card-content collapse show">
 
-                                  <div id="background">
+                                  <!-- <div id="background">
   <p id="bg-text">13580062 </p>
   </div>
-                                      
+                                       -->
                                       <div class="card-body card-dashboard">
                                 <nav aria-label="breadcrumb">
                                               <ol class="breadcrumb">
@@ -201,6 +201,7 @@
 
 
                                                   <div class="container">
+                                                      
 
                                                       <div class="card-content">
                                                           <div class="card-body">
@@ -3136,6 +3137,14 @@
                                                                                               </div>
                                                                                           </div>
 
+                                                                                          <div class="form-actions center" align="center">
+                                <!-- <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="insertOrganizationParts()">บันทึก</button> -->
+
+                                <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" name="submit" onclick="insertOrganizationGroupType()">บันทึก</button>
+
+                            </div>
 
 
 
