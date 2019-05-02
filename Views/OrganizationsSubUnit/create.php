@@ -126,7 +126,13 @@
                                                       </div>
                                                   </div>
                                               </div>
-                                              <br>
+                                              <div class="row">
+                                                  <div class="col-md-12">
+                                                      <br>
+                                                      <label class="col-md-3 label-control" for="upToAirforce" style="padding-right:0px;">หน่วยขึ้นตรงกองทัพอากาศ</label>
+                                                      <input id="upToAirforce" type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ขึ้นตรง" data-off="ไม่ขึ้นตรง" data-onstyle="success" data-offstyle="danger" data-size="sm">
+                                                  </div>
+                                              </div>
                                               <div class="row">
                                                   <div class="col-md-12">
                                                       <br>
@@ -173,6 +179,7 @@
   <!-- BEGIN PAGE LEVEL JS-->
   <script src="../../app-assets/js/scripts/forms/select/form-select2.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
+  <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
   </body>
 
   </html>
