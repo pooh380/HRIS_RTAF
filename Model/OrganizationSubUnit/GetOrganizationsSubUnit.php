@@ -17,7 +17,7 @@ $col =array(
 
 
 $sql = " SELECT OrgSubUnitId, OrgSubUnitName, OrgSubUnitAbbr, OrgSubUnitSemiAbbr, OrgSubUnitActive
-FROM OrgSubUnit ORDER BY OrgSubUnitId OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY; "; 
+FROM OrgSubUnit; "; 
 // echo $sql;
 
 $params = array();
