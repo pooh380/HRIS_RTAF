@@ -41,13 +41,17 @@
                                           <nav aria-label="breadcrumb">
                                               <ol class="breadcrumb">
                                                   <li class="breadcrumb-item"><a
-                                                          href="../home/index.php">ประวัติค่าราชการ</a></li>
+                                                          href="../home/index.php">งานประวัติข้าราชการ</a></li>
                                                   <li class="breadcrumb-item active" aria-current="page">
-                                                      เสนอขอบรรจุกำลังพล/บันทึกผลการอนุมัติ</li>
+                                                      ข้อมูลบุคคล</li>
                                               </ol>
                                           </nav>
-                                          ยศ :
-                                          <select class="select2 form-control" style="width: 100%;">
+
+
+                                     
+                                              <div class="row">
+                                         
+                                          <select class="select2 form-control" style="width: 20%;">
                                               <optgroup label="สัญญาบัตร">
                                                   <option value="AK">
                                                       จอมพลอากาศ
@@ -83,36 +87,61 @@
                                                       เรืออากาศตรี/ร.ต.
                                                   </option>
                                               </optgroup>
-                                              <optgroup label="ชั้นประทวน">
-                                                  <option value="CA">
-                                                      พันจ่าอากาศเอก
-                                                      พิเศษ/พ.อ.อ.(พ.)
+
+
+                                              
+                                           
+
+
+                                          </select>
+
+
+                                      
+                                          <select class="select2 form-control" style="width: 20%;">
+                                              <optgroup label="สัญญาบัตร">
+                                                  <option value="AK">
+                                                      จอมพลอากาศ
                                                   </option>
-                                                  <option value="NV">
-                                                      พันจ่าอากาศเอก/พ.อ.อ.
+                                                  <option value="HI">
+                                                      พลอากาศเอก/พล.อ.อ.
                                                   </option>
-                                                  <option value="OR">
-                                                      พันจ่าอากาศโท/พ.อ.ท
+                                                  <option value="HI">
+                                                      พลอากาศโท/พล.อ.ท.
                                                   </option>
-                                                  <option value="WA">
-                                                      พันจ่าอากาศตรี/พ.อ.ต
+                                                  <option value="HI">
+                                                      พลอากาศตรี/พล.อ.ต.
                                                   </option>
-                                                  <option value="NV">
-                                                      จ่าอากาศเอก/จ.อ.
+                                                  <option value="HI">
+                                                      พลอากาศจัตวา/พล.อ.จ.(ยกเลิกแล้ว)
                                                   </option>
-                                                  <option value="OR">
-                                                      จ่าอากาศโท/จ.ท.
+                                                  <option value="HI">
+                                                      นาวาอากาศเอก/น.อ.
                                                   </option>
-                                                  <option value="WA">
-                                                      จ่าอากาศตรี/จ.ต.
+                                                  <option value="HI">
+                                                      นาวาอากาศโท/น.ท.
                                                   </option>
-                                                  <option value="WA">
-                                                      พลทหาร/พลฯ
+                                                  <option value="HI">
+                                                      นาวาอากาศตรี/น.ต.
+                                                  </option>
+                                                  <option value="HI">
+                                                      เรืออากาศเอก/ร.อ.
+                                                  </option>
+                                                  <option value="HI">
+                                                      เรืออากาศโท/ร.ท.
+                                                  </option>
+                                                  <option value="HI">
+                                                      เรืออากาศตรี/ร.ต.
                                                   </option>
                                               </optgroup>
 
 
+                                              
+                                           
+
+
                                           </select>
+                                          </div>
+                                     
 
 
                                           <br>
