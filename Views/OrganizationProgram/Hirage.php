@@ -306,7 +306,11 @@ if ($rows > 0) {
 		$category['parent_cats'][$result['OrgStrucMain']][] = $result['OrgStrucId'];
 		?>
 
-	<?php	}
+	<?php	
+	// echo "<pre>";
+	// print_r($category);
+	// echo "<pre>";
+}
 }
 
 

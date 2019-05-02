@@ -3,6 +3,7 @@ require_once "../../config.php";
 require_once "../../Controllers/API/dateformat.php";
 
 $orgStucId = isset($_POST['orgStucId']) ? $_POST['orgStucId'] : "";
+$orgUnder = isset($_POST['orgUnder']) ? $_POST['orgUnder'] : "";
 
 // $orgLevelId = isset($_POST['orgLevelId']) ? $_POST['orgLevelId'] : "";
 // $orgStucId = 16;
@@ -71,7 +72,7 @@ $orgStucId = isset($_POST['orgStucId']) ? $_POST['orgStucId'] : "";
 // JOIN OrgSubUnit ON OrgStruc.OrgSubUnitId = OrgSubUnit.OrgSubUnitId
 // WHERE OrgStrucId = $orgStucId AND OrgStruc.OrgLevelId = $orgLevelId OR OrgSubUnit.OrgSubUnitId IN (" . implode(',', $resultArray) . ");";
 
-$sql1 = " SELECT OrgStruc.OrgStrucId, OrgType.OrgTypeName, OrgSubUnit.OrgSubUnitId, OrgPart.OrgPartName, OrgLevel.OrgLevelName, OrgGroupType.OrgGroupTypeName, OrgSubUnit.OrgSubUnitName,   OrgStrucMain, OrgStrucName 
+$sql = " SELECT OrgStruc.OrgStrucId, OrgType.OrgTypeName, OrgSubUnit.OrgSubUnitId, OrgPart.OrgPartName, OrgLevel.OrgLevelName, OrgGroupType.OrgGroupTypeName, OrgSubUnit.OrgSubUnitName,   OrgStrucMain, OrgStrucName 
 FROM OrgStruc
 JOIN OrgLevel ON OrgStruc.OrgLevelId = OrgLevel.OrgLevelId
 JOIN OrgPart ON OrgStruc.OrgPartId = OrgPart.OrgPartId
@@ -84,11 +85,42 @@ WHERE OrgStrucId = $orgStucId;";
 
 // echo $sql1;
 
-$query1 = sqlsrv_query($conn, $sql1);
+$query = sqlsrv_query($conn, $sql);
 
 // $array = array();
 
-while ($row = sqlsrv_fetch_array($query1)) {
+while ($row = sqlsrv_fetch_array($query)) {
+    $orgStrucNum = $row['OrgStrucId'];
+    $orgTypeName = $row['OrgTypeName'];
+    $orgSubUnitId = $row['OrgSubUnitId'];
+    $orgPartName = $row['OrgPartName'];
+    $orgLevelName = $row['OrgLevelName'];
+    // $orgGroupTypeName = $row['OrgGroupTypeName'];
+
+    
+    // $orgSubUnitName = $row['OrgSubUnitName'];
+    // $orgStrucMain = $row['OrgStrucMain'];
+    // $orgStrucSubMain = $row['OrgStrucSubMain'];
+    // $orgStrucPath = $row['OrgStrucPath'];
+    // $orgStrucName = $row['OrgStrucName'];
+    // $orgStrucActive = $row['OrgStrucActive'];
+    
+    // array_push($array, $orgSubUnitName);
+}
+
+$sql = " SELECT OrgSubUnitId, OrgSubUnitName, OrgSubUnitAbbr, OrgSubUnitSemiAbbr, OrgSubUnitActive, OrgSubUnitCreateBy, OrgSubUnitCreateDate, OrgSubUnitUpdateBy, OrgSubUnitUpdateDate
+FROM OrgSubUnit
+WHERE OrgSubUnitId = $orgStucId ";
+
+// echo "<Br>";
+
+// echo $sql1;
+
+$query = sqlsrv_query($conn, $sql);
+
+// $array = array();
+
+while ($row = sqlsrv_fetch_array($query)) {
     $orgStrucNum = $row['OrgStrucId'];
     $orgTypeName = $row['OrgTypeName'];
     $orgSubUnitId = $row['OrgSubUnitId'];
