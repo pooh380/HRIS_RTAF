@@ -170,7 +170,7 @@ while ($row = sqlsrv_fetch_array($query)) {
 // "orgSubUnitName"=>$orgSubUnitName,"orgStrucMain"=>$orgStrucMain,"orgStrucSubMain"=>$orgStrucSubMain, "orgStrucSubMain"=>$orgStrucSubMain,
 // "orgStrucPath"=>$orgStrucPath,"orgStrucName"=>$orgStrucName,"orgStrucActive"=>$orgStrucActive);
 
-$r=array("orgStrucNum"=>$orgStrucNum,"orgTypeName"=>$orgTypeName,"orgSubUnitId"=>$orgSubUnitId,"orgPartName"=>$orgPartName,"orgLevelName"=>$orgLevelName);
+$r=array("orgStrucNum"=>$orgStrucNum,"orgTypeName"=>$orgTypeName,"orgSubUnitId"=>$orgSubUnitId,"orgPartName"=>$orgPartName,"orgLevelName"=>$orgLevelName,"OrgSubUnitAbbr"=>$OrgSubUnitAbbr);
 
 // $r=array("orgStrucId"=>$orgStrucId,"orgTypeName"=>$orgTypeName,"orgSubUnitId"=>$orgSubUnitId,"orgLevelName"=>$orgLevelName,"orgPartName"=>$orgPartName,"orgGroupTypeName"=>$orgGroupTypeName,"orgStrucLong"=>$orgStrucLong,
 // "orgSubUnitName"=>$orgSubUnitName,"orgStrucMain"=>$orgStrucMain,"orgStrucSubMain"=>$orgStrucSubMain, "orgStrucSubMain"=>$orgStrucSubMain,
