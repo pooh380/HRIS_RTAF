@@ -15,27 +15,27 @@
 .toggle.ios .toggle-handle {
     border-radius: 20rem;
 }
-#background{
-    position:absolute;
-    z-index:0;
-    background:white;
-    display:block;
-    min-height:50%; 
-    min-width:50%;
-    color:yellow;
+
+#background {
+    position: absolute;
+    z-index: 0;
+    background: white;
+    display: block;
+    min-height: 50%;
+    min-width: 50%;
+    color: yellow;
 }
 
-#content{
-    position:absolute;
-    z-index:1;
+#content {
+    position: absolute;
+    z-index: 1;
 }
 
-#bg-text
-{
-    color:lightgrey;
-    font-size:120px;
-    transform:rotate(300deg);
-    -webkit-transform:rotate(300deg);
+#bg-text {
+    color: lightgrey;
+    font-size: 120px;
+    transform: rotate(300deg);
+    -webkit-transform: rotate(300deg);
 }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -56,7 +56,7 @@
   <section>
 
 
-    
+
 
       <div class="app-content content">
           <div class="content-wrapper">
@@ -79,16 +79,16 @@
                   <section id="bootstrap3">
                       <div class="row">
                           <div class="col-12">
-                  
-            
+
+
                               <div class="card">
-                                  
-            
+
+
                                   <div class="card-content collapse show">
 
-                               
+
                                       <div class="card-body card-dashboard">
-                                <nav aria-label="breadcrumb">
+                                          <nav aria-label="breadcrumb">
                                               <ol class="breadcrumb">
                                                   <li class="breadcrumb-item"><a
                                                           href="../home/index.php">งานประวัติรับราชการ</a></li>
@@ -198,7 +198,7 @@
 
 
                                                   <div class="container">
-                                                      
+
 
                                                       <div class="card-content">
                                                           <div class="card-body">
@@ -231,11 +231,9 @@
                                                                                       <div class="row match-height">
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
-
-
                                                                                               <div class="card-block">
                                                                                                   <div
-                                                                                                      class="card-body ">
+                                                                                                      class="card-body" id="Personnel_type">
                                                                                                       ประเภทกำลังพล :
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -323,17 +321,14 @@
                                                                                                                   พลทหาร/พลฯ
                                                                                                               </option>
                                                                                                           </optgroup>
-
-
                                                                                                       </select>
                                                                                                       <a
                                                                                                           href="../Organizations/create.php">
                                                                                                           <i class="la la-plus-circle"
                                                                                                               style="font-size:36px;color:#0f1733;"></i></a>
-
                                                                                                   </div>
                                                                                                   <div
-                                                                                                      class="card-body ">
+                                                                                                      class="card-body" id="rank">
                                                                                                       ยศ :
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -384,52 +379,11 @@
                                                                                                                   value="HI">
                                                                                                                   เรืออากาศตรี/ร.ต.
                                                                                                               </option>
-                                                                                                          </optgroup>
-                                                                                                          <optgroup
-                                                                                                              label="ชั้นประทวน">
-                                                                                                              <option
-                                                                                                                  value="CA">
-                                                                                                                  พันจ่าอากาศเอก
-                                                                                                                  พิเศษ/พ.อ.อ.(พ.)
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="NV">
-                                                                                                                  พันจ่าอากาศเอก/พ.อ.อ.
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="OR">
-                                                                                                                  พันจ่าอากาศโท/พ.อ.ท
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="WA">
-                                                                                                                  พันจ่าอากาศตรี/พ.อ.ต
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="NV">
-                                                                                                                  จ่าอากาศเอก/จ.อ.
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="OR">
-                                                                                                                  จ่าอากาศโท/จ.ท.
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="WA">
-                                                                                                                  จ่าอากาศตรี/จ.ต.
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="WA">
-                                                                                                                  พลทหาร/พลฯ
-                                                                                                              </option>
-                                                                                                          </optgroup>
-
-
+                                                                                                          </optgroup>                                                                                                  
                                                                                                       </select>
-
                                                                                                   </div>
-
-
                                                                                                   <div
-                                                                                                      class="card-body ">
+                                                                                                      class="card-body" id="gender">
                                                                                                       เพศ :
                                                                                                       <div
                                                                                                           class="card-content">
@@ -459,16 +413,11 @@
                                                                                                                       for="radio2"
                                                                                                                       checked>เพศหญิง</label>
                                                                                                               </div>
-
                                                                                                           </div>
                                                                                                       </div>
-
-
                                                                                                   </div>
-
-
                                                                                                   <div
-                                                                                                      class="card-body ">
+                                                                                                      class="card-body" id="name_thai" >
                                                                                                       ชื่อ(ภาษาไทย) :
                                                                                                       <input
                                                                                                           class="input form-control"
@@ -476,7 +425,7 @@
                                                                                                           placeholder="เลย์ ">
                                                                                                   </div>
                                                                                                   <div
-                                                                                                      class="card-body ">
+                                                                                                      class="card-body"  id="name_eng">
                                                                                                       ชื่อ(ภาษาอังกฤษ) :
                                                                                                       <input
                                                                                                           class="input form-control"
@@ -484,26 +433,20 @@
                                                                                                           placeholder="Lays  ">
                                                                                                   </div>
                                                                                               </div>
-
-
                                                                                           </div>
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
-
-
                                                                                               <div class="card-block">
                                                                                                   <div
-                                                                                                      class="card-body ">
-                                                                                                      หมายเลขประจำตัวราชการ
-                                                                                                      :
+                                                                                                      class="card-body"  id="Government_Number">
+                                                                                                      หมายเลขประจำตัวราชการ:
                                                                                                       <input
                                                                                                           class="input form-control"
                                                                                                           style="width: 100%;"
                                                                                                           placeholder="1111111111">
                                                                                                   </div>
                                                                                                   <div
-                                                                                                      class="card-body ">
-                                                                                                      ยศก่อนสูญเสีย :
+                                                                                                      class="card-body" id="Rank_losing">ยศก่อนสูญเสีย :
                                                                                                       <select
                                                                                                           class="select2 form-control"
                                                                                                           style="width: 100%;">
@@ -594,7 +537,7 @@
 
                                                                                                   </div>
                                                                                                   <div
-                                                                                                      class="card-body ">
+                                                                                                      class="card-body" id="title_name">
                                                                                                       คำนำหน้าชื่อ :
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -681,12 +624,10 @@
                                                                                                                   value="WA">
                                                                                                                   พลทหาร/พลฯ
                                                                                                               </option>
-
                                                                                                       </select>
-
                                                                                                   </div>
                                                                                                   <div
-                                                                                                      class="card-body ">
+                                                                                                      class="card-body" id="lastnames_thai">
                                                                                                       นามสกุล(ภาษาไทย) :
                                                                                                       <input
                                                                                                           class="input form-control"
@@ -694,7 +635,7 @@
                                                                                                           placeholder="เลย์รสสาหร่าย ">
                                                                                                   </div>
                                                                                                   <div
-                                                                                                      class="card-body ">
+                                                                                                      class="card-body" id="lastnames_eng">
                                                                                                       นามสกุล(อังกฤษ) :
                                                                                                       <input
                                                                                                           class="input form-control"
@@ -702,138 +643,119 @@
                                                                                                           placeholder="Nori Seaweed ">
                                                                                                   </div>
                                                                                               </div>
-
                                                                                           </div>
-
-
-
-
-
                                                                                       </div>
-
-
-
                                                                                   </div>
                                                                               </div>
                                                                           </div>
-
-
-
-
-
-
                                                                       </div>
                                                                   </div>
-
-                                                                  <div class="tab-pane" id="tab13"
-                                                                      aria-labelledby="base-tab13">
-                                                                      <p>Biscuit ice cream halvah candy canes bear claw
-                                                                          ice cream
-                                                                          cake chocolate bar donut. Toffee cotton candy
-                                                                          liquorice.
-                                                                          Oat cake lemon drops gingerbread dessert
-                                                                          caramels. Sweet
-                                                                          dessert jujubes powder sweet sesame snaps.</p>
-                                                                  </div>
                                                               </div>
+                                                              <!-- ------------ส่วนที่1-- END----------- -->
+
 
                                                               <div class="tab-content px-1 pt-1">
-                                                                  <div role="tabpanel" class="tab-pane active"
-                                                                      id="tab11" aria-expanded="true"
-                                                                      aria-labelledby="base-tab11">
+                                                                  <div role="tabpanel55" class="tab-pane active"
+                                                                      id="tab1155" aria-expanded="true"
+                                                                      aria-labelledby="base-tab1155">
 
                                                                       <div
                                                                           class="card collapse-icon accordion-icon-rotate active">
-                                                                          <div id="headingCollapse32"
+                                                                          <div id="headingCollapse31"
                                                                               class="card-header bg-success">
                                                                               <a data-toggle="collapse"
-                                                                                  href="#collapse32"
+                                                                                  href="#collapse55"
                                                                                   aria-expanded="true"
-                                                                                  aria-controls="collapse32"
+                                                                                  aria-controls="collapse55"
                                                                                   class="card-title lead white">
                                                                                   <h6><U>ส่วนที่ 2</U>
                                                                                       ข้อมูลบุคคล(ประวัติข้าราชการ)</h6>
                                                                               </a>
                                                                           </div>
-                                                                          <div class="col-md-12 col-sm-12">
-                                                                              <div class="card-body ">
-                                                                                  ประเภทแฟ้ม :
-                                                                                  <div class="card-content">
-                                                                                      <div class="card-body">
-                                                                                          <div
-                                                                                              class="d-inline-block custom-control custom-radio mr-1">
-                                                                                              <input type="radio"
-                                                                                                  class="custom-control-input"
-                                                                                                  name="colorRadio"
-                                                                                                  id="radio3">
-                                                                                              <label
-                                                                                                  class="custom-control-label"
-                                                                                                  for="radio3">แผ่น</label>
-                                                                                          </div>
-                                                                                          <div
-                                                                                              class="d-inline-block custom-control custom-radio mr-1">
-                                                                                              <input type="radio"
-                                                                                                  class="custom-control-input"
-                                                                                                  name="colorRadio"
-                                                                                                  id="radio4" checked>
-                                                                                              <label
-                                                                                                  class="custom-control-label"
-                                                                                                  for="radio4"
-                                                                                                  checked>เล่ม</label>
-                                                                                          </div>
-                                                                                          <div
-                                                                                              class="d-inline-block custom-control custom-radio mr-1">
-                                                                                              <input type="radio"
-                                                                                                  class="custom-control-input"
-                                                                                                  name="colorRadio"
-                                                                                                  id="radio5" checked>
-                                                                                              <label
-                                                                                                  class="custom-control-label"
-                                                                                                  for="radio5"
-                                                                                                  checked>ชุดบรรจุกล่อง</label>
-                                                                                          </div>
-                                                                                          <div
-                                                                                              class="d-inline-block custom-control custom-radio mr-1">
-                                                                                              <input type="radio"
-                                                                                                  class="custom-control-input"
-                                                                                                  name="colorRadio"
-                                                                                                  id="radio6" checked>
-                                                                                              <label
-                                                                                                  class="custom-control-label"
-                                                                                                  for="radio6"
-                                                                                                  checked>เล่ม(ปกสีฟ้า)</label>
-                                                                                          </div>
-                                                                                          <div
-                                                                                              class="d-inline-block custom-control custom-radio mr-1">
-                                                                                              <input type="radio"
-                                                                                                  class="custom-control-input"
-                                                                                                  name="colorRadio"
-                                                                                                  id="radio7" checked>
-                                                                                              <label
-                                                                                                  class="custom-control-label"
-                                                                                                  for="radio7"
-                                                                                                  checked>ไม่ระบุ</label>
-                                                                                          </div>
-
-                                                                                      </div>
-                                                                                  </div>
-
-
-                                                                              </div>
-
-                                                                          </div>
-                                                                          <div id="collapse31" role="tabpanel"
-                                                                              aria-labelledby="headingCollapse31"
+                                                                          <div id="collapse55" role="tabpanel55"
+                                                                              aria-labelledby="headingCollapse55"
                                                                               class="card-collapse collapse show"
                                                                               aria-expanded="true">
                                                                               <div class="card-content">
                                                                                   <div class="card-body">
                                                                                       <div class="row match-height">
-
-
-
+                                                                                          <div
+                                                                                              class="col-md-12 col-sm-12">
+                                                                                              <div class="card-body" id="File_type">
+                                                                                                  ประเภทแฟ้ม :
+                                                                                                  <div
+                                                                                                      class="card-content">
+                                                                                                      <div
+                                                                                                          class="card-body">
+                                                                                                          <div
+                                                                                                              class="d-inline-block custom-control custom-radio mr-1">
+                                                                                                              <input
+                                                                                                                  type="radio"
+                                                                                                                  class="custom-control-input"
+                                                                                                                  name="colorRadio"
+                                                                                                                  id="radio3">
+                                                                                                              <label
+                                                                                                                  class="custom-control-label"
+                                                                                                                  for="radio3">แผ่น</label>
+                                                                                                          </div>
+                                                                                                          <div
+                                                                                                              class="d-inline-block custom-control custom-radio mr-1">
+                                                                                                              <input
+                                                                                                                  type="radio"
+                                                                                                                  class="custom-control-input"
+                                                                                                                  name="colorRadio"
+                                                                                                                  id="radio4"
+                                                                                                                  checked>
+                                                                                                              <label
+                                                                                                                  class="custom-control-label"
+                                                                                                                  for="radio4"
+                                                                                                                  checked>เล่ม</label>
+                                                                                                          </div>
+                                                                                                          <div
+                                                                                                              class="d-inline-block custom-control custom-radio mr-1">
+                                                                                                              <input
+                                                                                                                  type="radio"
+                                                                                                                  class="custom-control-input"
+                                                                                                                  name="colorRadio"
+                                                                                                                  id="radio5"
+                                                                                                                  checked>
+                                                                                                              <label
+                                                                                                                  class="custom-control-label"
+                                                                                                                  for="radio5"
+                                                                                                                  checked>ชุดบรรจุกล่อง</label>
+                                                                                                          </div>
+                                                                                                          <div
+                                                                                                              class="d-inline-block custom-control custom-radio mr-1">
+                                                                                                              <input
+                                                                                                                  type="radio"
+                                                                                                                  class="custom-control-input"
+                                                                                                                  name="colorRadio"
+                                                                                                                  id="radio6"
+                                                                                                                  checked>
+                                                                                                              <label
+                                                                                                                  class="custom-control-label"
+                                                                                                                  for="radio6"
+                                                                                                                  checked>เล่ม(ปกสีฟ้า)</label>
+                                                                                                          </div>
+                                                                                                          <div
+                                                                                                              class="d-inline-block custom-control custom-radio mr-1">
+                                                                                                              <input
+                                                                                                                  type="radio"
+                                                                                                                  class="custom-control-input"
+                                                                                                                  name="colorRadio"
+                                                                                                                  id="radio7"
+                                                                                                                  checked>
+                                                                                                              <label
+                                                                                                                  class="custom-control-label"
+                                                                                                                  for="radio7"
+                                                                                                                  checked>ไม่ระบุ</label>
+                                                                                                          </div>
+                                                                                                      </div>
+                                                                                                  </div>
+                                                                                              </div>
+                                                                                          </div>
                                                                                           <div class="col-md-3">
-                                                                                              <div class="card-body ">
+                                                                                              <div class="card-body"  id="File_number">
                                                                                                   หมายเลขแฟ้มประวัติ :
                                                                                                   <input
                                                                                                       class="input form-control"
@@ -843,7 +765,7 @@
 
                                                                                           </div>
                                                                                           <div class="col-md-3">
-                                                                                              <div class="card-body ">
+                                                                                              <div class="card-body" id="File_new">
                                                                                                   <a>หมายเลขแฟ้มประวัติใหม่
                                                                                                       : </a>
                                                                                                   <input
@@ -851,15 +773,12 @@
                                                                                                       style="width: 100%;"
                                                                                                       placeholder="123456789 ">
                                                                                               </div>
-
                                                                                           </div>
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
-
-
                                                                                               <div class="card-block">
                                                                                                   <div
-                                                                                                      class="card-body ">
+                                                                                                      class="card-body"  id="Identification_number">
                                                                                                       เลขที่ประจำตัว :
                                                                                                       <input
                                                                                                           class="input form-control"
@@ -868,11 +787,9 @@
                                                                                                   </div>
                                                                                               </div>
                                                                                           </div>
-
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
-
                                                                                                   <div
                                                                                                       class="input-group">
                                                                                                       วันที่ออกบัตร
@@ -889,16 +806,14 @@
                                                                                                                   class="la la-calendar-o"></i></button>
                                                                                                       </div>
                                                                                                   </div>
-
                                                                                               </div>
                                                                                           </div>
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
                                                                                                   <div
-                                                                                                      class="card-body ">
-                                                                                                      หลักสูตรที่ใช้ในการบรรจุเข้ารับราชการสัญญาบัตร/ประทวน
-                                                                                                      :
+                                                                                                      class="card-body" id="noncomm_and_comm">
+                                                                                                      หลักสูตรที่ใช้ในการบรรจุเข้ารับราชการสัญญาบัตร/ประทวน :
                                                                                                       <select
                                                                                                           class="select2 form-control"
                                                                                                           style="width: 90%;">
@@ -906,7 +821,7 @@
                                                                                                               label="สัญญาบัตร">
                                                                                                               <option
                                                                                                                   value="AK">
-                                                                                                                  จอมพลอากาศ
+                                                                                                                  เลือก
                                                                                                               </option>
                                                                                                               <option
                                                                                                                   value="HI">
@@ -984,33 +899,21 @@
                                                                                                                   value="WA">
                                                                                                                   พลทหาร/พลฯ
                                                                                                               </option>
-
                                                                                                       </select>
                                                                                                       <a
                                                                                                           href="../Organizations/create.php">
                                                                                                           <i class="la la-plus-circle"
                                                                                                               style="font-size:36px;color:#0f1733;"></i></a>
                                                                                                       <div>
-
                                                                                                       </div>
-
                                                                                                   </div>
-
-
-
                                                                                               </div>
-
-
                                                                                           </div>
-
-
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
-
-
                                                                                               <div class="card-block">
                                                                                                   <div
-                                                                                                      class="card-body first birth ">
+                                                                                                      class="card-body" id="first_birth">
                                                                                                       กำเนิดแรกบรรจุ :
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -1019,7 +922,7 @@
                                                                                                               label="สัญญาบัตร">
                                                                                                               <option
                                                                                                                   value="AK">
-                                                                                                                  จอมพลอากาศ
+                                                                                                                  เลือก
                                                                                                               </option>
                                                                                                               <option
                                                                                                                   value="HI">
@@ -1097,7 +1000,6 @@
                                                                                                                   value="WA">
                                                                                                                   พลทหาร/พลฯ
                                                                                                               </option>
-
                                                                                                       </select>
                                                                                                       <a
                                                                                                           href="../Organizations/create.php">
@@ -1106,22 +1008,17 @@
                                                                                                   </div>
                                                                                               </div>
                                                                                           </div>
-                                                                                          <div
-                                                                                              class="col-lg-6 col-md-12">
-
-
+                                                                                          <div class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
-                                                                                                  <div
-                                                                                                      class="card-body">
+                                                                                                  <div class="card-body">
                                                                                                       กำหนดปรับสภาพ :
-                                                                                                      <select
-                                                                                                          class="select2 form-control"
+                                                                                                      <select class="select2 form-control"
                                                                                                           style="width: 90%;">
                                                                                                           <optgroup
                                                                                                               label="สัญญาบัตร">
                                                                                                               <option
                                                                                                                   value="AK">
-                                                                                                                  จอมพลอากาศ
+                                                                                                                  เลือก
                                                                                                               </option>
                                                                                                               <option
                                                                                                                   value="HI">
@@ -1205,25 +1102,13 @@
                                                                                                           href="../Organizations/create.php">
                                                                                                           <i class="la la-plus-circle"
                                                                                                               style="font-size:36px;color:#0f1733;"></i></a>
-
                                                                                                   </div>
-
-
-
                                                                                               </div>
-
-
                                                                                           </div>
-
-
-
-                                                                                          <div
-                                                                                              class="col-lg-6 col-md-12">
-
-
+                                                                                          <div class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
                                                                                                   <div
-                                                                                                      class="card-body ">
+                                                                                                      class="card-body" id="qualification_contain">
                                                                                                       คุณวุฒิแรกบรรจุ :
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -1232,7 +1117,7 @@
                                                                                                               label="สัญญาบัตร">
                                                                                                               <option
                                                                                                                   value="AK">
-                                                                                                                  จอมพลอากาศ
+                                                                                                                  เลือก
                                                                                                               </option>
                                                                                                               <option
                                                                                                                   value="HI">
@@ -1318,21 +1203,13 @@
                                                                                                               style="font-size:36px;color:#0f1733;"></i></a>
 
                                                                                                   </div>
-
-
-
                                                                                               </div>
-
-
                                                                                           </div>
-
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
-
-
                                                                                               <div class="card-block">
                                                                                                   <div
-                                                                                                      class="card-body ">
+                                                                                                      class="card-body"id="qualification_adapt">
                                                                                                       คุณวุฒิปรับสภาพ :
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -1341,7 +1218,7 @@
                                                                                                               label="สัญญาบัตร">
                                                                                                               <option
                                                                                                                   value="AK">
-                                                                                                                  จอมพลอากาศ
+                                                                                                                  เลือก
                                                                                                               </option>
                                                                                                               <option
                                                                                                                   value="HI">
@@ -1419,27 +1296,19 @@
                                                                                                                   value="WA">
                                                                                                                   พลทหาร/พลฯ
                                                                                                               </option>
-
                                                                                                       </select>
                                                                                                       <a
                                                                                                           href="../Organizations/create.php">
                                                                                                           <i class="la la-plus-circle"
                                                                                                               style="font-size:36px;color:#0f1733;"></i></a>
                                                                                                   </div>
-
-
-
                                                                                               </div>
-
-
                                                                                           </div>
-
-
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
                                                                                                   <div
-                                                                                                      class="card-body ">
+                                                                                                      class="card-body" id="Study_period">
                                                                                                       ระยะเวลาการศึกษา :
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -1448,7 +1317,7 @@
                                                                                                               label="สัญญาบัตร">
                                                                                                               <option
                                                                                                                   value="AK">
-                                                                                                                  จอมพลอากาศ
+                                                                                                                  เลือก
                                                                                                               </option>
                                                                                                               <option
                                                                                                                   value="HI">
@@ -1526,7 +1395,6 @@
                                                                                                                   value="WA">
                                                                                                                   พลทหาร/พลฯ
                                                                                                               </option>
-
                                                                                                       </select>
                                                                                                       <a
                                                                                                           href="../Organizations/create.php">
@@ -1539,7 +1407,7 @@
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
                                                                                                   <div
-                                                                                                      class="card-body ">
+                                                                                                      class="card-body" id="Study_period">
                                                                                                       ระยะเวลาการศึกษา :
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -1548,7 +1416,7 @@
                                                                                                               label="สัญญาบัตร">
                                                                                                               <option
                                                                                                                   value="AK">
-                                                                                                                  จอมพลอากาศ
+                                                                                                                  เลือก
                                                                                                               </option>
                                                                                                               <option
                                                                                                                   value="HI">
@@ -1635,13 +1503,11 @@
                                                                                                   </div>
                                                                                               </div>
                                                                                           </div>
-
-
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
                                                                                                   <div
-                                                                                                      class="card-body ">
+                                                                                                      class="card-body" id="corps">
                                                                                                       เหล่า : <br>
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -1650,7 +1516,7 @@
                                                                                                               label="สัญญาบัตร">
                                                                                                               <option
                                                                                                                   value="AK">
-                                                                                                                  จอมพลอากาศ
+                                                                                                                  เลือก
                                                                                                               </option>
                                                                                                               <option
                                                                                                                   value="HI">
@@ -1728,7 +1594,6 @@
                                                                                                                   value="WA">
                                                                                                                   พลทหาร/พลฯ
                                                                                                               </option>
-
                                                                                                       </select>
                                                                                                       <a
                                                                                                           href="../Organizations/create.php">
@@ -1737,12 +1602,11 @@
                                                                                                   </div>
                                                                                               </div>
                                                                                           </div>
-
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
                                                                                                   <div
-                                                                                                      class="card-body ">
+                                                                                                      class="card-body" id="genera">
                                                                                                       จำพวก :
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -1751,7 +1615,7 @@
                                                                                                               label="สัญญาบัตร">
                                                                                                               <option
                                                                                                                   value="AK">
-                                                                                                                  จอมพลอากาศ
+                                                                                                                  เลือก
                                                                                                               </option>
                                                                                                               <option
                                                                                                                   value="HI">
@@ -1829,7 +1693,6 @@
                                                                                                                   value="WA">
                                                                                                                   พลทหาร/พลฯ
                                                                                                               </option>
-
                                                                                                       </select>
                                                                                                       <a
                                                                                                           href="../Organizations/create.php">
@@ -1838,21 +1701,17 @@
                                                                                                   </div>
                                                                                               </div>
                                                                                           </div>
-
-
-
                                                                                           <div class="col-md-3">
-                                                                                              <div class="card-body ">
+                                                                                              <div class="card-body" id="NTT">
                                                                                                   รุ่น นตท. :
                                                                                                   <input
                                                                                                       class="input form-control"
                                                                                                       style="width: 100%;"
                                                                                                       placeholder=" ">
                                                                                               </div>
-
                                                                                           </div>
                                                                                           <div class="col-md-3">
-                                                                                              <div class="card-body ">
+                                                                                              <div class="card-body" id="NTT_repetitive">
                                                                                                   <a>รุ่น นตท.ซ้ำชั้น :
                                                                                                   </a>
                                                                                                   <input
@@ -1864,17 +1723,16 @@
                                                                                           </div>
 
                                                                                           <div class="col-md-3">
-                                                                                              <div class="card-body ">
+                                                                                              <div class="card-body" id="NNO" >
                                                                                                   รุ่น นนอ. :
                                                                                                   <input
                                                                                                       class="input form-control"
                                                                                                       style="width: 100%;"
                                                                                                       placeholder=" ">
                                                                                               </div>
-
                                                                                           </div>
                                                                                           <div class="col-md-3">
-                                                                                              <div class="card-body ">
+                                                                                              <div class="card-body" id="NNO_repetitive" >
                                                                                                   <a>รุ่น นนอ.ซ้ำชั้น :
                                                                                                   </a>
                                                                                                   <input
@@ -1882,15 +1740,12 @@
                                                                                                       style="width: 100%;"
                                                                                                       placeholder=" ">
                                                                                               </div>
-
                                                                                           </div>
-
-
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
                                                                                                   <div
-                                                                                                      class="card-body ">
+                                                                                                      class="card-body" id="Flying_student">
                                                                                                       รุ่นศิษย์การบิน :
                                                                                                       <input
                                                                                                           class="input form-control"
@@ -2303,37 +2158,44 @@
 
 
 
-
                                                                       </div>
-                                                                  </div>
 
+
+
+                                                                  </div>
                                                               </div>
 
+                                                              <!-- -------------ส่วนที่2-END--------------------- -->
+
+
+
                                                               <div class="tab-content px-1 pt-1">
-                                                                  <div role="tabpanel" class="tab-pane active"
-                                                                      id="tab11" aria-expanded="true"
-                                                                      aria-labelledby="base-tab11">
+                                                                  <div role="tabpanel33" class="tab-pane active"
+                                                                      id="tab133" aria-expanded="true"
+                                                                      aria-labelledby="base-tab133">
 
                                                                       <div
                                                                           class="card collapse-icon accordion-icon-rotate active">
                                                                           <div id="headingCollapse31"
                                                                               class="card-header bg-success">
                                                                               <a data-toggle="collapse"
-                                                                                  href="#collapse31"
+                                                                                  href="#collapse33"
                                                                                   aria-expanded="true"
-                                                                                  aria-controls="collapse31"
+                                                                                  aria-controls="collapse33"
                                                                                   class="card-title lead white">
                                                                                   <h6><U>ส่วนที่ 3</U>
                                                                                       ข้อมูลบุคคล(ประวัติข้าราชการ)</h6>
                                                                               </a>
                                                                           </div>
-                                                                          <div id="collapse31" role="tabpanel"
+                                                                          <div id="collapse33" role="tabpanel33"
                                                                               aria-labelledby="headingCollapse31"
                                                                               class="card-collapse collapse show"
                                                                               aria-expanded="true">
                                                                               <div class="card-content">
                                                                                   <div class="card-body">
                                                                                       <div class="row match-height">
+
+
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
 
@@ -2360,6 +2222,7 @@
 
 
                                                                                           </div>
+
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
 
@@ -2378,7 +2241,6 @@
                                                                                               </div>
 
                                                                                           </div>
-
 
                                                                                           <div
                                                                                               class="col-md-12 col-sm-12">
@@ -2485,8 +2347,6 @@
 
                                                                                               </div>
                                                                                           </div>
-
-
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
@@ -2512,7 +2372,6 @@
                                                                                               </div>
                                                                                           </div>
 
-
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
@@ -2526,7 +2385,7 @@
                                                                                                               label="สัญญาบัตร">
                                                                                                               <option
                                                                                                                   value="AK">
-                                                                                                                  จอมพลอากาศ
+                                                                                                                  เลือก
                                                                                                               </option>
                                                                                                               <option
                                                                                                                   value="HI">
@@ -2618,6 +2477,8 @@
 
 
                                                                                           </div>
+
+
 
 
                                                                                           <div
@@ -2633,7 +2494,7 @@
                                                                                                               label="สัญญาบัตร">
                                                                                                               <option
                                                                                                                   value="AK">
-                                                                                                                  จอมพลอากาศ
+                                                                                                                  เลือก
                                                                                                               </option>
                                                                                                               <option
                                                                                                                   value="HI">
@@ -2725,6 +2586,8 @@
 
 
                                                                                           </div>
+
+
 
 
 
@@ -2741,7 +2604,7 @@
                                                                                                               label="สัญญาบัตร">
                                                                                                               <option
                                                                                                                   value="AK">
-                                                                                                                  จอมพลอากาศ
+                                                                                                                  เลือก
                                                                                                               </option>
                                                                                                               <option
                                                                                                                   value="HI">
@@ -2833,7 +2696,6 @@
 
 
                                                                                           </div>
-
 
 
 
@@ -2852,7 +2714,7 @@
                                                                                                               label="สัญญาบัตร">
                                                                                                               <option
                                                                                                                   value="AK">
-                                                                                                                  จอมพลอากาศ
+                                                                                                                  เลือก
                                                                                                               </option>
                                                                                                               <option
                                                                                                                   value="HI">
@@ -2946,6 +2808,7 @@
                                                                                           </div>
 
 
+
                                                                                           <div
                                                                                               class="col-md-6 col-sm-12">
                                                                                               <div class="card-body ">
@@ -2960,23 +2823,10 @@
                                                                                                                   type="radio"
                                                                                                                   class="custom-control-input"
                                                                                                                   name="colorRadio"
-                                                                                                                  id="radio13">
+                                                                                                                  id="radio14">
                                                                                                               <label
                                                                                                                   class="custom-control-label"
-                                                                                                                  for="radio13">ไม่ระบุ</label>
-                                                                                                          </div>
-                                                                                                          <div
-                                                                                                              class="d-inline-block custom-control custom-radio mr-1">
-                                                                                                              <input
-                                                                                                                  type="radio"
-                                                                                                                  class="custom-control-input"
-                                                                                                                  name="colorRadio"
-                                                                                                                  id="radio14"
-                                                                                                                  checked>
-                                                                                                              <label
-                                                                                                                  class="custom-control-label"
-                                                                                                                  for="radio14"
-                                                                                                                  checked>เป็นสมาชิก</label>
+                                                                                                                  for="radio14">ไม่ระบุ</label>
                                                                                                           </div>
                                                                                                           <div
                                                                                                               class="d-inline-block custom-control custom-radio mr-1">
@@ -2989,6 +2839,19 @@
                                                                                                               <label
                                                                                                                   class="custom-control-label"
                                                                                                                   for="radio15"
+                                                                                                                  checked>เป็นสมาชิก</label>
+                                                                                                          </div>
+                                                                                                          <div
+                                                                                                              class="d-inline-block custom-control custom-radio mr-1">
+                                                                                                              <input
+                                                                                                                  type="radio"
+                                                                                                                  class="custom-control-input"
+                                                                                                                  name="colorRadio"
+                                                                                                                  id="radio16"
+                                                                                                                  checked>
+                                                                                                              <label
+                                                                                                                  class="custom-control-label"
+                                                                                                                  for="radio16"
                                                                                                                   checked>ไม่เป็นสมาชิก</label>
                                                                                                           </div>
 
@@ -3000,6 +2863,7 @@
                                                                                               </div>
 
                                                                                           </div>
+
 
 
                                                                                           <div
@@ -3043,12 +2907,8 @@
                                                                                               </div>
 
 
-
-
-
-
-
                                                                                           </div>
+
 
 
                                                                                           <div
@@ -3109,6 +2969,10 @@
 
 
 
+
+
+
+
                                                                                           <div
                                                                                               class="col-lg-12 col-md-12">
 
@@ -3124,68 +2988,67 @@
                                                                                               </div>
                                                                                           </div>
 
-                                                                                          <div class="form-actions center" align="center">
-                                <!-- <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                                <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="insertOrganizationParts()">บันทึก</button> -->
-
-                                <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                                <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" name="submit" onclick="insertOrganizationGroupType()">บันทึก</button>
-
-                            </div>
-
-
-
-
-
-
-
-
 
 
 
 
                                                                                       </div>
-
-
-
                                                                                   </div>
                                                                               </div>
                                                                           </div>
 
-
-
-
-
-
                                                                       </div>
                                                                   </div>
-
-                                                                  <div class="tab-pane" id="tab13"
-                                                                      aria-labelledby="base-tab13">
-                                                                      <p>Biscuit ice cream halvah candy canes bear claw
-                                                                          ice cream
-                                                                          cake chocolate bar donut. Toffee cotton candy
-                                                                          liquorice.
-                                                                          Oat cake lemon drops gingerbread dessert
-                                                                          caramels. Sweet
-                                                                          dessert jujubes powder sweet sesame snaps.</p>
-                                                                  </div>
                                                               </div>
+                                                              <!-- ----------ส่วนที่3------------- -->
+
                                                           </div>
                                                       </div>
+                                                  </div>
+                                              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              <div class="tab-content px-1 pt-1">
+                                                  <div class="form-actions center" align="center">
+                                                      <!-- <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="insertOrganizationParts()">บันทึก</button> -->
+
+                                                      <button type="button"
+                                                          class="btn btn-danger  round btn-min-width mr-1 mb-1"
+                                                          id="type-error">ยกเลิก</button>
+                                                      <button type="button"
+                                                          class="btn btn-success  round btn-min-width mr-1 mb-1"
+                                                          id="submit" name="submit"
+                                                          onclick="insertOrganizationGroupType()">บันทึก</button>
+
                                                   </div>
 
 
 
-
-
-                                                  <br>
-
                                               </div>
-
-
+                                              <!-- ------------------------------------ส่วนที่3 -->
                                           </div>
                                       </div>
+                                  </div>
+
+                                  <br>
+
+                              </div>
+
+
+                          </div>
+                      </div>
                   </section>
                   <!--/ Bootstrap 3 table -->
               </div>
