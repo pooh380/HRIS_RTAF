@@ -119,9 +119,9 @@
               <div class="content-header row">
                   <div class="content-header-left col-12 mb-2">
 
-                      <input type="text" id="orgTypeId" name="orgTypeId">
+                      <input type="hidden" id="orgTypeId" name="orgTypeId">
 
-                      <input type="text" id="orgStrucId" name="orgStrucId">
+                      <input type="hidden" id="orgStrucId" name="orgStrucId">
 
                       <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                           <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -264,9 +264,9 @@
                                                               </div> -->
                                                           </div>
                                                           <div class="col-md-6 mt-1">
-                                                              <label class="col-md-12 label-control" for="divisionAbbrName">ชื่อสังกัด</label>
+                                                              <label class="col-md-12 label-control" for="orgSubUnitAbbr">ชื่อสังกัด</label>
                                                               <div class="col-md-12" style="float:left;">
-                                                                  <select class="select2 form-control block" disabled id="divisionAbbrName" style="width: 100%;"></select>
+                                                                  <select class="select2 form-control block" disabled id="orgSubUnitAbbr" style="width: 100%;"></select>
                                                               </div>
                                                               <!-- <div class="col-md-1">
                                                                   <a href="../Organizations/create.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>

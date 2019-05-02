@@ -102,41 +102,31 @@ while ($row = sqlsrv_fetch_array($query)) {
     // $orgStrucMain = $row['OrgStrucMain'];
     // $orgStrucSubMain = $row['OrgStrucSubMain'];
     // $orgStrucPath = $row['OrgStrucPath'];
-    // $orgStrucName = $row['OrgStrucName'];
+
+    // fake
+    $orgStrucName = $row['OrgStrucName'];
+    // fake
+
     // $orgStrucActive = $row['OrgStrucActive'];
     
     // array_push($array, $orgSubUnitName);
 }
 
-$sql = " SELECT OrgSubUnitId, OrgSubUnitName, OrgSubUnitAbbr, OrgSubUnitSemiAbbr, OrgSubUnitActive, OrgSubUnitCreateBy, OrgSubUnitCreateDate, OrgSubUnitUpdateBy, OrgSubUnitUpdateDate
+$sql1 = " SELECT OrgSubUnitId, OrgSubUnitName, OrgSubUnitAbbr, OrgSubUnitSemiAbbr, OrgSubUnitActive, OrgSubUnitCreateBy, OrgSubUnitCreateDate, OrgSubUnitUpdateBy, OrgSubUnitUpdateDate
 FROM OrgSubUnit
-WHERE OrgSubUnitId = $orgStucId ";
+WHERE OrgSubUnitId = $orgUnder ";
 
 // echo "<Br>";
 
 // echo $sql1;
 
-$query = sqlsrv_query($conn, $sql);
+$query1 = sqlsrv_query($conn, $sql1);
 
 // $array = array();
 
-while ($row = sqlsrv_fetch_array($query)) {
-    $orgStrucNum = $row['OrgStrucId'];
-    $orgTypeName = $row['OrgTypeName'];
-    $orgSubUnitId = $row['OrgSubUnitId'];
-    $orgPartName = $row['OrgPartName'];
-    $orgLevelName = $row['OrgLevelName'];
-    // $orgGroupTypeName = $row['OrgGroupTypeName'];
+while ($row = sqlsrv_fetch_array($query1)) {
+    $orgSubUnitAbbr = $row['OrgSubUnitAbbr'];
 
-    
-    // $orgSubUnitName = $row['OrgSubUnitName'];
-    // $orgStrucMain = $row['OrgStrucMain'];
-    // $orgStrucSubMain = $row['OrgStrucSubMain'];
-    // $orgStrucPath = $row['OrgStrucPath'];
-    // $orgStrucName = $row['OrgStrucName'];
-    // $orgStrucActive = $row['OrgStrucActive'];
-    
-    // array_push($array, $orgSubUnitName);
 }
 
 
@@ -170,7 +160,9 @@ while ($row = sqlsrv_fetch_array($query)) {
 // "orgSubUnitName"=>$orgSubUnitName,"orgStrucMain"=>$orgStrucMain,"orgStrucSubMain"=>$orgStrucSubMain, "orgStrucSubMain"=>$orgStrucSubMain,
 // "orgStrucPath"=>$orgStrucPath,"orgStrucName"=>$orgStrucName,"orgStrucActive"=>$orgStrucActive);
 
-$r=array("orgStrucNum"=>$orgStrucNum,"orgTypeName"=>$orgTypeName,"orgSubUnitId"=>$orgSubUnitId,"orgPartName"=>$orgPartName,"orgLevelName"=>$orgLevelName,"OrgSubUnitAbbr"=>$OrgSubUnitAbbr);
+$r=array("orgStrucNum"=>$orgStrucNum,"orgTypeName"=>$orgTypeName,"orgSubUnitId"=>$orgSubUnitId,
+"orgPartName"=>$orgPartName,"orgLevelName"=>$orgLevelName,"orgSubUnitAbbr"=>$orgSubUnitAbbr,
+"orgStrucName"=>$orgStrucName);
 
 // $r=array("orgStrucId"=>$orgStrucId,"orgTypeName"=>$orgTypeName,"orgSubUnitId"=>$orgSubUnitId,"orgLevelName"=>$orgLevelName,"orgPartName"=>$orgPartName,"orgGroupTypeName"=>$orgGroupTypeName,"orgStrucLong"=>$orgStrucLong,
 // "orgSubUnitName"=>$orgSubUnitName,"orgStrucMain"=>$orgStrucMain,"orgStrucSubMain"=>$orgStrucSubMain, "orgStrucSubMain"=>$orgStrucSubMain,

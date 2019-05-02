@@ -205,10 +205,12 @@
                 $('#orgSubUnitId').val(data.orgSubUnitId);
                 // $('#orgSubUnitId').val(data.orgSubUnitId); ลำดับใน tree
                 $('#orgPartName').append('<option value="' + data.orgPartId + '" selected="selected">' + data.orgPartName + '</option>');
+                $('#orgSubUnitAbbr').append('<option value="' + data.orgSubUnitId + '" selected="selected">' + data.orgSubUnitAbbr + '</option>');
 
                 //แม่ใหญ่
 
                 $('#orgLevelName').append('<option value="' + data.orgLevelId + '" selected="selected">' + data.orgLevelName + '</option>');
+                $('#orgSubUnitName').val(data.orgStrucName);
 
                 // // $("#orgPartName").val(data.orgPartName);
                 // // 

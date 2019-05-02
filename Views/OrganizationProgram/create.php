@@ -383,15 +383,17 @@
                                                             </div>
                                                         </div>
 
+                                                        <input type="hidden" id="orgStrucMain" class="form-control " placeholder="แม่" name="orgStrucMain">
+
                                                         <!-- ลบ -->
-                                                        <div class="col-md-6 mt-1">
+                                                        <!-- <div class="col-md-6 mt-1">
                                                             <label class="col-md-12 label-control" for="orgStrucMain">แม่</label>
                                                             <div class="col-md-12">
                                                                 <div class="position-relative">
                                                                     <input type="text" id="orgStrucMain" class="form-control " placeholder="แม่" name="orgStrucMain">
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        </div> -->
                                                         <!-- ลบ -->
 
                                                         <div class="col-md-6 mt-1">
