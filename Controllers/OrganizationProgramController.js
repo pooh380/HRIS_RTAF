@@ -187,10 +187,14 @@
                 // $('#orgSubUnitId').val(data.orgSubUnitId); ลำดับใน tree
                 $('#orgPartName').append('<option value="' + data.orgPartId + '" selected="selected">' + data.orgPartName + '</option>');
 
+                //แม่ใหญ่
+
+                $('#orgLevelName').append('<option value="' + data.orgLevelId + '" selected="selected">' + data.orgLevelName + '</option>');
+
                 // // $("#orgPartName").val(data.orgPartName);
                 // // 
                 // $('#divisionAbbrName').append('<option value="" selected="selected">' + data.array0 + '</option>');
-                // $('#orgLevelName').append('<option value="' + data.orgLevelId + '" selected="selected">' + data.orgLevelName + '</option>');
+
                 // $("#orgSubUnitName").val(data.orgSubUnitName);
                 // $("#orgStrucLong").val(data.orgStrucLong);
 

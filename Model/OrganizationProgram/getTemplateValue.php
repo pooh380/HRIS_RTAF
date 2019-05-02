@@ -71,7 +71,7 @@ $orgStucId = isset($_POST['orgStucId']) ? $_POST['orgStucId'] : "";
 // JOIN OrgSubUnit ON OrgStruc.OrgSubUnitId = OrgSubUnit.OrgSubUnitId
 // WHERE OrgStrucId = $orgStucId AND OrgStruc.OrgLevelId = $orgLevelId OR OrgSubUnit.OrgSubUnitId IN (" . implode(',', $resultArray) . ");";
 
-$sql1 = " SELECT OrgStruc.OrgStrucId, OrgType.OrgTypeName, OrgSubUnit.OrgSubUnitId, OrgPart.OrgPartName, OrgGroupType.OrgGroupTypeName, OrgSubUnit.OrgSubUnitName, OrgLevel.OrgLevelName,  OrgStrucMain, OrgStrucName 
+$sql1 = " SELECT OrgStruc.OrgStrucId, OrgType.OrgTypeName, OrgSubUnit.OrgSubUnitId, OrgPart.OrgPartName, OrgLevel.OrgLevelName, OrgGroupType.OrgGroupTypeName, OrgSubUnit.OrgSubUnitName,   OrgStrucMain, OrgStrucName 
 FROM OrgStruc
 JOIN OrgLevel ON OrgStruc.OrgLevelId = OrgLevel.OrgLevelId
 JOIN OrgPart ON OrgStruc.OrgPartId = OrgPart.OrgPartId
@@ -93,9 +93,9 @@ while ($row = sqlsrv_fetch_array($query1)) {
     $orgTypeName = $row['OrgTypeName'];
     $orgSubUnitId = $row['OrgSubUnitId'];
     $orgPartName = $row['OrgPartName'];
+    $orgLevelName = $row['OrgLevelName'];
     // $orgGroupTypeName = $row['OrgGroupTypeName'];
-    // $orgLevelName = $row['OrgLevelName'];
-    // $orgPartName = $row['OrgPartName'];
+
     
     // $orgSubUnitName = $row['OrgSubUnitName'];
     // $orgStrucMain = $row['OrgStrucMain'];
@@ -138,7 +138,7 @@ while ($row = sqlsrv_fetch_array($query1)) {
 // "orgSubUnitName"=>$orgSubUnitName,"orgStrucMain"=>$orgStrucMain,"orgStrucSubMain"=>$orgStrucSubMain, "orgStrucSubMain"=>$orgStrucSubMain,
 // "orgStrucPath"=>$orgStrucPath,"orgStrucName"=>$orgStrucName,"orgStrucActive"=>$orgStrucActive);
 
-$r=array("orgStrucNum"=>$orgStrucNum,"orgTypeName"=>$orgTypeName,"orgSubUnitId"=>$orgSubUnitId,"orgPartName"=>$orgPartName);
+$r=array("orgStrucNum"=>$orgStrucNum,"orgTypeName"=>$orgTypeName,"orgSubUnitId"=>$orgSubUnitId,"orgPartName"=>$orgPartName,"orgLevelName"=>$orgLevelName);
 
 // $r=array("orgStrucId"=>$orgStrucId,"orgTypeName"=>$orgTypeName,"orgSubUnitId"=>$orgSubUnitId,"orgLevelName"=>$orgLevelName,"orgPartName"=>$orgPartName,"orgGroupTypeName"=>$orgGroupTypeName,"orgStrucLong"=>$orgStrucLong,
 // "orgSubUnitName"=>$orgSubUnitName,"orgStrucMain"=>$orgStrucMain,"orgStrucSubMain"=>$orgStrucSubMain, "orgStrucSubMain"=>$orgStrucSubMain,

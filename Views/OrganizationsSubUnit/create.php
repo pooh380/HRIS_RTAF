@@ -4,6 +4,21 @@
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
   <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/extensions/sweetalert.css">
+  <!-- BEGIN VENDOR CSS-->
+  <link rel="stylesheet" type="text/css" href="../../app-assets/css/vendors.css">
+  <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/selects/select2.min.css">
+  <!-- END VENDOR CSS-->
+  <!-- BEGIN MODERN CSS-->
+  <link rel="stylesheet" type="text/css" href="../../app-assets/css/app.css">
+  <!-- END MODERN CSS-->
+  <!-- BEGIN Page Level CSS-->
+  <link rel="stylesheet" type="text/css" href="../../app-assets/css/core/menu/menu-types/vertical-menu.css">
+  <link rel="stylesheet" type="text/css" href="../../app-assets/css/core/colors/palette-gradient.css">
+  <!-- END Page Level CSS-->
+  <!-- BEGIN Custom CSS-->
+  <link rel="stylesheet" type="text/css" href="../../asset/css/style.css">
+  <!-- END Custom CSS-->
+
 
   <style>
       /* ol > li > a {color:#222233;} */
@@ -18,7 +33,7 @@
       }
   </style>
 
-<script src="../../Controllers/organizationSubUnitController.js"></script>
+  <script src="../../Controllers/organizationSubUnitController.js"></script>
 
 
   <div class="app-content content">
@@ -64,7 +79,28 @@
                                       <form class="form form-horizontal">
                                           <div class="form-body">
                                               <div class="row">
+
                                                   <div class="col-md-6 ">
+                                                      <label class="col-md-6 label-control" for="OrgLevelId">ฐานะหน่วย</label>
+                                                      <div class="col-md-12">
+                                                          <div class="position-relative ">
+                                                              <select name="OrgLevelId" id="OrgLevelId" class="select2 form-control " style="width:100%;">
+                                                                  <?php
+                                                                    require_once "../../config.php";
+                                                                    $sql = " SELECT OrgLevelId, OrgLevelName, OrgLevelActive FROM OrgLevel WHERE OrgLevelActive = 1; ";
+                                                                    $result = sqlsrv_query($conn, $sql);
+                                                                    while ($row = sqlsrv_fetch_array($result)) {
+                                                                        ?>
+                                                                      <option value="<?php echo $row['OrgLevelId'] ?>"><?php echo $row['OrgLevelName'] ?></option>
+                                                                  <?php
+                                                                }
+                                                                ?>
+                                                              </select>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+
+                                                  <div class="col-md-6">
                                                       <label class="col-md-6 label-control" for="OrgSubUnitName">ชื่อเต็มหน่วยงาน</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative ">
@@ -73,7 +109,7 @@
                                                           </div>
                                                       </div>
                                                   </div>
-                                                  <div class="col-md-6">
+                                                  <div class="col-md-6 mt-1">
                                                       <label class="col-md-6 label-control" for="OrgSubUnitAbbr">ชื่อย่อหน่วยงาน</label>
                                                       <div class="col-md-12">
                                                           <div class="position-relative">
@@ -108,24 +144,35 @@
                   </div>
                   <div class="form-actions center" align="center">
                       <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
-                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text"  onclick="insertOrganizationSubUnit()">บันทึก</button>
+                      <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="insertOrganizationSubUnit()">บันทึก</button>
                   </div>
               </section>
               <!-- // Basic form layout section end -->
           </div>
       </div>
   </div>
- 
+
+  <footer class="footer footer-static footer-light navbar-border navbar-shadow">
+      <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
+          <span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2018 <a class="text-bold-800 grey darken-2" href="https://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" target="_blank">PIXINVENT </a>, All rights reserved. </span>
+          <span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span>
+      </p>
+  </footer>
   <!-- BEGIN VENDOR JS-->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+  <script src="../../Asset/js/sweetalert2.min.js"></script>
   <!-- BEGIN VENDOR JS-->
   <!-- BEGIN PAGE VENDOR JS-->
-  <script src="../../app-assets/vendors/js/extensions/sweetalert.min.js" type="text/javascript"></script>
-  <!-- END PAGE VENDOR JS-->
-  <!-- BEGIN PAGE LEVEL JS-->
-  <script src="../../app-assets/js/scripts/extensions/sweet-alerts.js" type="text/javascript"></script>
   <script src="../../app-assets/vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>
+  <!-- END PAGE VENDOR JS-->
+  <!-- BEGIN MODERN JS-->
+  <script src="../../app-assets/js/core/app-menu.js" type="text/javascript"></script>
+  <script src="../../app-assets/js/core/app.js" type="text/javascript"></script>
+  <script src="../../app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+  <!-- END MODERN JS-->
+  <!-- BEGIN PAGE LEVEL JS-->
   <script src="../../app-assets/js/scripts/forms/select/form-select2.js" type="text/javascript"></script>
   <!-- END PAGE LEVEL JS-->
-  <!-- footer -->
-  <?php include '../include/footer.php'; ?>
+  </body>
+
+  </html>
