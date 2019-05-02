@@ -4,6 +4,9 @@
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
 
+
+
+
   <style>
 /* ol > li > a {color:#222233;} */
 .toggle.ios,
@@ -140,70 +143,31 @@
                                                       </div>
                                                   </div>
                                               </div>
-                                              <!--/ profile -->
+
+</div>
                                               <div class="profile_head"
                                                   style="background-color:#f5f5f5;height: auto;width: 100%;margin-left:0px;padding:1%;">
-                                                  <h3>ประวัติข้าราชการ</h3>
+                                                  <h3></h3>
 
                                                   <br>
-                                                  <div class="card-body">
-
-                                                      <ul class="nav nav-tabs nav-top-border no-hover-bg">
-                                                          <li class="nav-item">
-                                                              <a class="nav-link active" id="base-tab11"
-                                                                  data-toggle="tab" aria-controls="tab11" href="#tab11"
-                                                                  aria-expanded="true">ข้อมูลบุคคล</a>
-                                                          </li>
-                                                          <li class="nav-item">
-                                                              <a class="nav-link" id="base-tab12" data-toggle="tab"
-                                                                  aria-controls="tab12" href="#tab12"
-                                                                  aria-expanded="false">รูปภาพ</a>
-                                                          </li>
-                                                          <li class="nav-item">
-                                                              <a class="nav-link" id="base-tab13" data-toggle="tab"
-                                                                  aria-controls="tab13" href="#tab13"
-                                                                  aria-expanded="false">การเปลี่ยนชื่อ</a>
-                                                          </li>
-                                                          <li class="nav-item">
-                                                              <a class="nav-link" id="base-tab12" data-toggle="tab"
-                                                                  aria-controls="tab12" href="#tab12"
-                                                                  aria-expanded="false">ขึ้นทะเบียนอาหาร/ลักษณะร่างกาย</a>
-                                                          </li>
-                                                          <li class="nav-item">
-                                                              <a class="nav-link" id="base-tab12" data-toggle="tab"
-                                                                  aria-controls="tab12" href="#tab12"
-                                                                  aria-expanded="false">เหล่าทหาร</a>
-                                                          </li>
-                                                          <li class="nav-item">
-                                                              <a class="nav-link" id="base-tab12" data-toggle="tab"
-                                                                  aria-controls="tab12" href="#tab12"
-                                                                  aria-expanded="false">บิดามารดา,บรรพบุรุษ</a>
-                                                          </li>
-                                                          <li class="nav-item">
-                                                              <a class="nav-link" id="base-tab12" data-toggle="tab"
-                                                                  aria-controls="tab12" href="#tab12"
-                                                                  aria-expanded="false">คู่สมรส</a>
-                                                          </li>
-                                                          <li class="nav-item">
-                                                              <a class="nav-link" id="base-tab12" data-toggle="tab"
-                                                                  aria-controls="tab12" href="#tab12"
-                                                                  aria-expanded="false">บุตร-ธิดา</a>
-                                                          </li>
-
-                                                      </ul>
 
 
-                                                  </div>
+<!-- -----------test------------ -->
 
 
+              <div class="card">
+                <div class="card-header"><h5 class="card-title">ประวัติข้าราชการ</h5></div>
+                <div class="card-content">
+                  <div class="card-body">
 
-                                                  <div class="container">
+                    <?php require_once '../include/profileTable.php'; ?>
 
 
+                    <div class="tab-content px-1 pt-1">
+                      <div role="tabpanel" class="tab-pane active" id="tab11" aria-expanded="true" aria-labelledby="base-tab11">
+                        <div class="container">
                                                       <div class="card-content">
                                                           <div class="card-body">
-
-
                                                               <div class="tab-content px-1 pt-1">
                                                                   <div role="tabpanel" class="tab-pane active"
                                                                       id="tab11" aria-expanded="true"
@@ -232,8 +196,8 @@
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
-                                                                                                  <div
-                                                                                                      class="card-body" id="Personnel_type">
+                                                                                                  <div class="card-body"
+                                                                                                      id="Personnel_type">
                                                                                                       ประเภทกำลังพล :
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -327,63 +291,9 @@
                                                                                                           <i class="la la-plus-circle"
                                                                                                               style="font-size:36px;color:#0f1733;"></i></a>
                                                                                                   </div>
-                                                                                                  <div
-                                                                                                      class="card-body" id="rank">
-                                                                                                      ยศ :
-                                                                                                      <select
-                                                                                                          class="select2 form-control"
-                                                                                                          style="width: 100%;">
-                                                                                                          <optgroup
-                                                                                                              label="สัญญาบัตร">
-                                                                                                              <option
-                                                                                                                  value="AK">
-                                                                                                                  จอมพลอากาศ
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="HI">
-                                                                                                                  พลอากาศเอก/พล.อ.อ.
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="HI">
-                                                                                                                  พลอากาศโท/พล.อ.ท.
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="HI">
-                                                                                                                  พลอากาศตรี/พล.อ.ต.
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="HI">
-                                                                                                                  พลอากาศจัตวา/พล.อ.จ.(ยกเลิกแล้ว)
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="HI">
-                                                                                                                  นาวาอากาศเอก/น.อ.
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="HI">
-                                                                                                                  นาวาอากาศโท/น.ท.
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="HI">
-                                                                                                                  นาวาอากาศตรี/น.ต.
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="HI">
-                                                                                                                  เรืออากาศเอก/ร.อ.
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="HI">
-                                                                                                                  เรืออากาศโท/ร.ท.
-                                                                                                              </option>
-                                                                                                              <option
-                                                                                                                  value="HI">
-                                                                                                                  เรืออากาศตรี/ร.ต.
-                                                                                                              </option>
-                                                                                                          </optgroup>                                                                                                  
-                                                                                                      </select>
-                                                                                                  </div>
-                                                                                                  <div
-                                                                                                      class="card-body" id="gender">
+                                                                                                 
+                                                                                                  <div class="card-body"
+                                                                                                      id="gender">
                                                                                                       เพศ :
                                                                                                       <div
                                                                                                           class="card-content">
@@ -416,37 +326,10 @@
                                                                                                           </div>
                                                                                                       </div>
                                                                                                   </div>
-                                                                                                  <div
-                                                                                                      class="card-body" id="name_thai" >
-                                                                                                      ชื่อ(ภาษาไทย) :
-                                                                                                      <input
-                                                                                                          class="input form-control"
-                                                                                                          style="width: 100%;"
-                                                                                                          placeholder="เลย์ ">
-                                                                                                  </div>
-                                                                                                  <div
-                                                                                                      class="card-body"  id="name_eng">
-                                                                                                      ชื่อ(ภาษาอังกฤษ) :
-                                                                                                      <input
-                                                                                                          class="input form-control"
-                                                                                                          style="width: 100%;"
-                                                                                                          placeholder="Lays  ">
-                                                                                                  </div>
-                                                                                              </div>
-                                                                                          </div>
-                                                                                          <div
-                                                                                              class="col-lg-6 col-md-12">
-                                                                                              <div class="card-block">
-                                                                                                  <div
-                                                                                                      class="card-body"  id="Government_Number">
-                                                                                                      หมายเลขประจำตัวราชการ:
-                                                                                                      <input
-                                                                                                          class="input form-control"
-                                                                                                          style="width: 100%;"
-                                                                                                          placeholder="1111111111">
-                                                                                                  </div>
-                                                                                                  <div
-                                                                                                      class="card-body" id="Rank_losing">ยศก่อนสูญเสีย :
+
+                                                                                                     <div class="card-body"
+                                                                                                      id="Rank_losing">
+                                                                                                      ยศก่อนสูญเสีย :
                                                                                                       <select
                                                                                                           class="select2 form-control"
                                                                                                           style="width: 100%;">
@@ -536,8 +419,94 @@
                                                                                                       </select>
 
                                                                                                   </div>
-                                                                                                  <div
-                                                                                                      class="card-body" id="title_name">
+                                                                                                  <div class="card-body"
+                                                                                                      id="name_thai">
+                                                                                                      ชื่อ(ภาษาไทย) :
+                                                                                                      <input
+                                                                                                          class="input form-control"
+                                                                                                          style="width: 100%;"
+                                                                                                          placeholder="เลย์ ">
+                                                                                                  </div>
+                                                                                                  <div class="card-body"
+                                                                                                      id="name_eng">
+                                                                                                      ชื่อ(ภาษาอังกฤษ) :
+                                                                                                      <input
+                                                                                                          class="input form-control"
+                                                                                                          style="width: 100%;"
+                                                                                                          placeholder="Lays  ">
+                                                                                                  </div>
+                                                                                              </div>
+                                                                                          </div>
+                                                                                          <div
+                                                                                              class="col-lg-6 col-md-12">
+                                                                                              <div class="card-block">
+                                                                                                  <div class="card-body"
+                                                                                                      id="Government_Number">
+                                                                                                      หมายเลขประจำตัวราชการ:
+                                                                                                      <input
+                                                                                                          class="input form-control"
+                                                                                                          style="width: 100%;"
+                                                                                                          placeholder="1111111111">
+                                                                                                  </div>
+                                                                                                  
+                                                                                                  <div class="card-body"
+                                                                                                      id="rank">
+                                                                                                      ยศ :
+                                                                                                      <select
+                                                                                                          class="select2 form-control"
+                                                                                                          style="width: 100%;">
+                                                                                                          <optgroup
+                                                                                                              label="สัญญาบัตร">
+                                                                                                              <option
+                                                                                                                  value="AK">
+                                                                                                                  จอมพลอากาศ
+                                                                                                              </option>
+                                                                                                              <option
+                                                                                                                  value="HI">
+                                                                                                                  พลอากาศเอก/พล.อ.อ.
+                                                                                                              </option>
+                                                                                                              <option
+                                                                                                                  value="HI">
+                                                                                                                  พลอากาศโท/พล.อ.ท.
+                                                                                                              </option>
+                                                                                                              <option
+                                                                                                                  value="HI">
+                                                                                                                  พลอากาศตรี/พล.อ.ต.
+                                                                                                              </option>
+                                                                                                              <option
+                                                                                                                  value="HI">
+                                                                                                                  พลอากาศจัตวา/พล.อ.จ.(ยกเลิกแล้ว)
+                                                                                                              </option>
+                                                                                                              <option
+                                                                                                                  value="HI">
+                                                                                                                  นาวาอากาศเอก/น.อ.
+                                                                                                              </option>
+                                                                                                              <option
+                                                                                                                  value="HI">
+                                                                                                                  นาวาอากาศโท/น.ท.
+                                                                                                              </option>
+                                                                                                              <option
+                                                                                                                  value="HI">
+                                                                                                                  นาวาอากาศตรี/น.ต.
+                                                                                                              </option>
+                                                                                                              <option
+                                                                                                                  value="HI">
+                                                                                                                  เรืออากาศเอก/ร.อ.
+                                                                                                              </option>
+                                                                                                              <option
+                                                                                                                  value="HI">
+                                                                                                                  เรืออากาศโท/ร.ท.
+                                                                                                              </option>
+                                                                                                              <option
+                                                                                                                  value="HI">
+                                                                                                                  เรืออากาศตรี/ร.ต.
+                                                                                                              </option>
+                                                                                                          </optgroup>
+                                                                                                      </select>
+                                                                                                  </div>
+                                                                                               
+                                                                                                  <div class="card-body"
+                                                                                                      id="title_name">
                                                                                                       คำนำหน้าชื่อ :
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -626,16 +595,16 @@
                                                                                                               </option>
                                                                                                       </select>
                                                                                                   </div>
-                                                                                                  <div
-                                                                                                      class="card-body" id="lastnames_thai">
+                                                                                                  <div class="card-body"
+                                                                                                      id="lastnames_thai">
                                                                                                       นามสกุล(ภาษาไทย) :
                                                                                                       <input
                                                                                                           class="input form-control"
                                                                                                           style="width: 100%;"
                                                                                                           placeholder="เลย์รสสาหร่าย ">
                                                                                                   </div>
-                                                                                                  <div
-                                                                                                      class="card-body" id="lastnames_eng">
+                                                                                                  <div class="card-body"
+                                                                                                      id="lastnames_eng">
                                                                                                       นามสกุล(อังกฤษ) :
                                                                                                       <input
                                                                                                           class="input form-control"
@@ -644,44 +613,10 @@
                                                                                                   </div>
                                                                                               </div>
                                                                                           </div>
-                                                                                      </div>
-                                                                                  </div>
-                                                                              </div>
-                                                                          </div>
-                                                                      </div>
-                                                                  </div>
-                                                              </div>
-                                                              <!-- ------------ส่วนที่1-- END----------- -->
-
-
-                                                              <div class="tab-content px-1 pt-1">
-                                                                  <div role="tabpanel55" class="tab-pane active"
-                                                                      id="tab1155" aria-expanded="true"
-                                                                      aria-labelledby="base-tab1155">
-
-                                                                      <div
-                                                                          class="card collapse-icon accordion-icon-rotate active">
-                                                                          <div id="headingCollapse31"
-                                                                              class="card-header bg-success">
-                                                                              <a data-toggle="collapse"
-                                                                                  href="#collapse55"
-                                                                                  aria-expanded="true"
-                                                                                  aria-controls="collapse55"
-                                                                                  class="card-title lead white">
-                                                                                  <h6><U>ส่วนที่ 2</U>
-                                                                                      ข้อมูลบุคคล(ประวัติข้าราชการ)</h6>
-                                                                              </a>
-                                                                          </div>
-                                                                          <div id="collapse55" role="tabpanel55"
-                                                                              aria-labelledby="headingCollapse55"
-                                                                              class="card-collapse collapse show"
-                                                                              aria-expanded="true">
-                                                                              <div class="card-content">
-                                                                                  <div class="card-body">
-                                                                                      <div class="row match-height">
                                                                                           <div
-                                                                                              class="col-md-12 col-sm-12">
-                                                                                              <div class="card-body" id="File_type">
+                                                                                              class="col-md-6 col-sm-12">
+                                                                                              <div class="card-body"
+                                                                                                  id="File_type">
                                                                                                   ประเภทแฟ้ม :
                                                                                                   <div
                                                                                                       class="card-content">
@@ -754,18 +689,20 @@
                                                                                                   </div>
                                                                                               </div>
                                                                                           </div>
+
                                                                                           <div class="col-md-3">
-                                                                                              <div class="card-body"  id="File_number">
+                                                                                              <div class="card-body"
+                                                                                                  id="File_number">
                                                                                                   หมายเลขแฟ้มประวัติ :
                                                                                                   <input
                                                                                                       class="input form-control"
                                                                                                       style="width: 100%;"
                                                                                                       placeholder="123456798 ">
                                                                                               </div>
-
                                                                                           </div>
                                                                                           <div class="col-md-3">
-                                                                                              <div class="card-body" id="File_new">
+                                                                                              <div class="card-body"
+                                                                                                  id="File_new">
                                                                                                   <a>หมายเลขแฟ้มประวัติใหม่
                                                                                                       : </a>
                                                                                                   <input
@@ -774,11 +711,12 @@
                                                                                                       placeholder="123456789 ">
                                                                                               </div>
                                                                                           </div>
+
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
-                                                                                                  <div
-                                                                                                      class="card-body"  id="Identification_number">
+                                                                                                  <div class="card-body"
+                                                                                                      id="Identification_number">
                                                                                                       เลขที่ประจำตัว :
                                                                                                       <input
                                                                                                           class="input form-control"
@@ -787,6 +725,8 @@
                                                                                                   </div>
                                                                                               </div>
                                                                                           </div>
+
+
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
@@ -808,12 +748,54 @@
                                                                                                   </div>
                                                                                               </div>
                                                                                           </div>
+
+                                                                                          
+                                                                                      </div>
+                                                                                  </div>
+                                                                              </div>
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                                                              <!-- ------------ส่วนที่1-- END----------- -->
+
+
+                                                              <div class="tab-content px-1 pt-1">
+                                                                  <div role="tabpanel55" class="tab-pane active"
+                                                                      id="tab1155" aria-expanded="true"
+                                                                      aria-labelledby="base-tab1155">
+
+                                                                      <div
+                                                                          class="card collapse-icon accordion-icon-rotate active">
+                                                                          <div id="headingCollapse31"
+                                                                              class="card-header bg-success">
+                                                                              <a data-toggle="collapse"
+                                                                                  href="#collapse55"
+                                                                                  aria-expanded="true"
+                                                                                  aria-controls="collapse55"
+                                                                                  class="card-title lead white">
+                                                                                  <h6><U>ส่วนที่ 2</U>
+                                                                                      ข้อมูลบุคคล(ประวัติข้าราชการ)</h6>
+                                                                              </a>
+                                                                          </div>
+                                                                          <div id="collapse55" role="tabpanel55"
+                                                                              aria-labelledby="headingCollapse55"
+                                                                              class="card-collapse collapse show"
+                                                                              aria-expanded="true">
+                                                                              <div class="card-content">
+                                                                                  <div class="card-body">
+                                                                                      <div class="row match-height">
+                                                                                          
+                                                                                       
+                                                                                        
+                                                                                         
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
-                                                                                                  <div
-                                                                                                      class="card-body" id="noncomm_and_comm">
-                                                                                                      หลักสูตรที่ใช้ในการบรรจุเข้ารับราชการสัญญาบัตร/ประทวน :
+                                                                                                  <div class="card-body"
+                                                                                                      id="noncomm_and_comm">
+                                                                                                      หลักสูตรที่ใช้ในการบรรจุเข้ารับราชการสัญญาบัตร/ประทวน
+                                                                                                      :
                                                                                                       <select
                                                                                                           class="select2 form-control"
                                                                                                           style="width: 90%;">
@@ -910,10 +892,12 @@
                                                                                               </div>
                                                                                           </div>
                                                                                           <div
+                                                                                              class="col-lg-6 col-md-12"></div>
+                                                                                          <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
-                                                                                                  <div
-                                                                                                      class="card-body" id="first_birth">
+                                                                                                  <div class="card-body"
+                                                                                                      id="first_birth">
                                                                                                       กำเนิดแรกบรรจุ :
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -1008,11 +992,14 @@
                                                                                                   </div>
                                                                                               </div>
                                                                                           </div>
-                                                                                          <div class="col-lg-6 col-md-12">
+                                                                                          <div
+                                                                                              class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
-                                                                                                  <div class="card-body">
+                                                                                                  <div
+                                                                                                      class="card-body">
                                                                                                       กำหนดปรับสภาพ :
-                                                                                                      <select class="select2 form-control"
+                                                                                                      <select
+                                                                                                          class="select2 form-control"
                                                                                                           style="width: 90%;">
                                                                                                           <optgroup
                                                                                                               label="สัญญาบัตร">
@@ -1105,10 +1092,11 @@
                                                                                                   </div>
                                                                                               </div>
                                                                                           </div>
-                                                                                          <div class="col-lg-6 col-md-12">
+                                                                                          <div
+                                                                                              class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
-                                                                                                  <div
-                                                                                                      class="card-body" id="qualification_contain">
+                                                                                                  <div class="card-body"
+                                                                                                      id="qualification_contain">
                                                                                                       คุณวุฒิแรกบรรจุ :
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -1208,8 +1196,8 @@
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
-                                                                                                  <div
-                                                                                                      class="card-body"id="qualification_adapt">
+                                                                                                  <div class="card-body"
+                                                                                                      id="qualification_adapt">
                                                                                                       คุณวุฒิปรับสภาพ :
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -1307,8 +1295,8 @@
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
-                                                                                                  <div
-                                                                                                      class="card-body" id="Study_period">
+                                                                                                  <div class="card-body"
+                                                                                                      id="Study_period">
                                                                                                       ระยะเวลาการศึกษา :
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -1406,8 +1394,8 @@
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
-                                                                                                  <div
-                                                                                                      class="card-body" id="Study_period">
+                                                                                                  <div class="card-body"
+                                                                                                      id="Study_period">
                                                                                                       ระยะเวลาการศึกษา :
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -1506,8 +1494,8 @@
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
-                                                                                                  <div
-                                                                                                      class="card-body" id="corps">
+                                                                                                  <div class="card-body"
+                                                                                                      id="corps">
                                                                                                       เหล่า : <br>
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -1605,8 +1593,8 @@
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
-                                                                                                  <div
-                                                                                                      class="card-body" id="genera">
+                                                                                                  <div class="card-body"
+                                                                                                      id="genera">
                                                                                                       จำพวก :
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -1702,7 +1690,8 @@
                                                                                               </div>
                                                                                           </div>
                                                                                           <div class="col-md-3">
-                                                                                              <div class="card-body" id="NTT">
+                                                                                              <div class="card-body"
+                                                                                                  id="NTT">
                                                                                                   รุ่น นตท. :
                                                                                                   <input
                                                                                                       class="input form-control"
@@ -1711,7 +1700,8 @@
                                                                                               </div>
                                                                                           </div>
                                                                                           <div class="col-md-3">
-                                                                                              <div class="card-body" id="NTT_repetitive">
+                                                                                              <div class="card-body"
+                                                                                                  id="NTT_repetitive">
                                                                                                   <a>รุ่น นตท.ซ้ำชั้น :
                                                                                                   </a>
                                                                                                   <input
@@ -1723,7 +1713,8 @@
                                                                                           </div>
 
                                                                                           <div class="col-md-3">
-                                                                                              <div class="card-body" id="NNO" >
+                                                                                              <div class="card-body"
+                                                                                                  id="NNO">
                                                                                                   รุ่น นนอ. :
                                                                                                   <input
                                                                                                       class="input form-control"
@@ -1732,7 +1723,8 @@
                                                                                               </div>
                                                                                           </div>
                                                                                           <div class="col-md-3">
-                                                                                              <div class="card-body" id="NNO_repetitive" >
+                                                                                              <div class="card-body"
+                                                                                                  id="NNO_repetitive">
                                                                                                   <a>รุ่น นนอ.ซ้ำชั้น :
                                                                                                   </a>
                                                                                                   <input
@@ -1744,8 +1736,8 @@
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
                                                                                               <div class="card-block">
-                                                                                                  <div
-                                                                                                      class="card-body" id="Flying_student">
+                                                                                                  <div class="card-body"
+                                                                                                      id="Flying_student">
                                                                                                       รุ่นศิษย์การบิน :
                                                                                                       <input
                                                                                                           class="input form-control"
@@ -1767,11 +1759,25 @@
                                                                                           </div>
 
                                                                                           <div
-                                                                                              class="col-lg-6 col-md-12">
+                                                                                              class="col-md-3">
                                                                                               <div class="card-block">
                                                                                                   <div
                                                                                                       class="card-body ">
                                                                                                       เลขหมายรายงาน :
+                                                                                                      <input
+                                                                                                          class="input form-control"
+                                                                                                          style="width: 100%;"
+                                                                                                          placeholder=" ">
+
+                                                                                                  </div>
+                                                                                              </div>
+                                                                                          </div>
+                                                                                          <div
+                                                                                              class=" col-md-3">
+                                                                                              <div class="card-block">
+                                                                                                  <div
+                                                                                                      class="card-body ">
+                                                                                                      ลชทอ.หลัก :
                                                                                                       <input
                                                                                                           class="input form-control"
                                                                                                           style="width: 100%;"
@@ -1819,20 +1825,7 @@
                                                                                                   </div>
                                                                                               </div>
                                                                                           </div>
-                                                                                          <div
-                                                                                              class="col-lg-6 col-md-12">
-                                                                                              <div class="card-block">
-                                                                                                  <div
-                                                                                                      class="card-body ">
-                                                                                                      ลชทอ.หลัก :
-                                                                                                      <input
-                                                                                                          class="input form-control"
-                                                                                                          style="width: 100%;"
-                                                                                                          placeholder=" ">
-
-                                                                                                  </div>
-                                                                                              </div>
-                                                                                          </div>
+                                                                                        
 
                                                                                           <div
                                                                                               class="col-lg-12 col-md-12">
@@ -1879,6 +1872,27 @@
                                                                                                   </div>
                                                                                               </div>
                                                                                           </div>
+                                                                                          <div class="col-md-3">
+                                                                                              <div class="card-body ">
+                                                                                                  ชั้นเงินเดือน :
+                                                                                                  <input
+                                                                                                      class="input form-control"
+                                                                                                      style="width: 100%;"
+                                                                                                      placeholder=" ">
+                                                                                              </div>
+
+                                                                                          </div>
+                                                                                          <div class="col-md-3">
+                                                                                              <div class="card-body ">
+                                                                                                  <a>เงินเดือน : </a>
+                                                                                                  <input
+                                                                                                      class="input form-control"
+                                                                                                      style="width: 100%;"
+                                                                                                      placeholder=" ">
+                                                                                              </div>
+
+                                                                                          </div>
+                                                                                          <div class="col-md-6"></div>
 
 
                                                                                           <div
@@ -1985,26 +1999,7 @@
                                                                                           </div>
 
 
-                                                                                          <div class="col-md-3">
-                                                                                              <div class="card-body ">
-                                                                                                  ชั้นเงินเดือน :
-                                                                                                  <input
-                                                                                                      class="input form-control"
-                                                                                                      style="width: 100%;"
-                                                                                                      placeholder=" ">
-                                                                                              </div>
-
-                                                                                          </div>
-                                                                                          <div class="col-md-3">
-                                                                                              <div class="card-body ">
-                                                                                                  <a>เงินเดือน : </a>
-                                                                                                  <input
-                                                                                                      class="input form-control"
-                                                                                                      style="width: 100%;"
-                                                                                                      placeholder=" ">
-                                                                                              </div>
-
-                                                                                          </div>
+                                                                                        
                                                                                           <div
                                                                                               class="col-lg-6 col-md-12">
 
@@ -3001,23 +2996,27 @@
                                                                   </div>
                                                               </div>
                                                               <!-- ----------ส่วนที่3------------- -->
-
+</div>
                                                           </div>
                                                       </div>
-                                                  </div>
+                      </div>
+                      <div class="tab-pane" id="tab12" aria-labelledby="base-tab12">
+                        <p>Sugar plum tootsie roll biscuit caramels. Liquorice brownie
+                          pastry cotton candy oat cake fruitcake jelly chupa chups.
+                          Pudding caramels pastry powder cake soufflé wafer caramels.
+                          Jelly-o pie cupcake.</p>
+                      </div>
+                      <div class="tab-pane" id="tab13" aria-labelledby="base-tab13">
+                        <p>Biscuit ice cream halvah candy canes bear claw ice cream
+                          cake chocolate bar donut. Toffee cotton candy liquorice.
+                          Oat cake lemon drops gingerbread dessert caramels. Sweet
+                          dessert jujubes powder sweet sesame snaps.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>                       
                                               </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
                                               <div class="tab-content px-1 pt-1">
                                                   <div class="form-actions center" align="center">
@@ -3025,36 +3024,27 @@
                                 <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="insertOrganizationParts()">บันทึก</button> -->
 
                                                       <button type="button"
-                                                          class="btn btn-danger  round btn-min-width mr-1 mb-1"
-                                                          id="type-error">ยกเลิก</button>
-                                                      <button type="button"
                                                           class="btn btn-success  round btn-min-width mr-1 mb-1"
                                                           id="submit" name="submit"
                                                           onclick="insertOrganizationGroupType()">บันทึก</button>
-
+                                                      <button type="button"
+                                                          class="btn btn-danger  round btn-min-width mr-1 mb-1"
+                                                          id="type-error">ยกเลิก</button>
                                                   </div>
-
-
-
                                               </div>
                                               <!-- ------------------------------------ส่วนที่3 -->
                                           </div>
-                                      </div>
                                   </div>
-
                                   <br>
-
                               </div>
-
-
                           </div>
                       </div>
                   </section>
-                  <!--/ Bootstrap 3 table -->
-              </div>
+                  <!--/ Bootstrap 3 table -->        
           </div>
       </div>
   </section>
+  </div>
 
   <script src=" http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous">
