@@ -64,7 +64,7 @@ function insertOrganizationSubUnit() {
             showConfirmButton: false,
             timer: 2000
         });
-        // setTimeout("window.open('../OrganizationsSubUnit/index.php', '_self');", 2000);
+        setTimeout("window.open('../OrganizationsSubUnit/index.php', '_self');", 2000);
     }).fail(function(err) {
         // console.log(err);
         Swal.fire({
@@ -100,26 +100,31 @@ function getIdForEdit() {
         dataType: "json",
         url: "../../Model/OrganizationSubUnit/GetDataEdit.php",
         data: {
-            OrgSubUnitId: OrgSubUnitId,
-
+            OrgSubUnitId: OrgSubUnitId
         },
         success: function(data) {
             $("#id").val(data.id);
+            $("#OrgLevelId").append('<option value="' + data.OrgLevelId + '" selected="selected">' + data.OrgLevelName + '</option>');
+            // $("#OrgLevelId").val(data.OrgLevelId);
             $("#OrgSubUnitName").val(data.OrgSubUnitName);
             $("#OrgSubUnitAbbr").val(data.OrgSubUnitAbbr);
             $("#OrgSubUnitSemiAbbr").val(data.OrgSubUnitSemiAbbr);
-            $("#isActive").val(data.OrgSubUnitActive);
+           
 
             // console.log(data.IsActive);
-            if (data.IsActive == 0) {
+            if (data.OrgSubUnitActive == 0) {
                 // $("#isActive").removeAttr('checked');
                 $("#isActive").bootstrapToggle('disable');
             } else {
                 // $('#isActive').prop("checked", true);
                 $("#isActive").bootstrapToggle('on');
             }
-
-            // console.log(data);
+            if (data.OrgSubUnitUpToAirforce == 0) {
+                $("#upToAirforce").bootstrapToggle('disable');
+            } else {
+                $("#upToAirforce").bootstrapToggle('on');
+            }
+            console.log(data);
         },
         error: function(error) {
             // alert(error);
@@ -135,7 +140,7 @@ function UpdateOrganizationSubUnit() {
     var OrgSubUnitAbbr = $("#OrgSubUnitAbbr").val();
     var OrgSubUnitSemiAbbr = $("#OrgSubUnitSemiAbbr").val();
     var isActive = $("#isActive").val();
-
+    var OrgSubUnitUpToAirforce = $("#upToAirforce").val();
 
 
     var checkBox = document.getElementById("isActive");
@@ -154,7 +159,10 @@ function UpdateOrganizationSubUnit() {
             OrgSubUnitName: OrgSubUnitName,
             OrgSubUnitAbbr: OrgSubUnitAbbr,
             OrgSubUnitSemiAbbr: OrgSubUnitSemiAbbr,
-            isActive: isActive
+            isActive: isActive,
+            OrgSubUnitUpToAirforce : OrgSubUnitUpToAirforce,
+            OrgLevelId : OrgLevelId
+
         },
         success: function(data) {
             console.log(data);

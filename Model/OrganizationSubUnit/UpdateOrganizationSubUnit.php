@@ -21,8 +21,7 @@ if (!empty($_POST)) {
     SET  OrgSubUnitName='$OrgSubUnitName', OrgSubUnitAbbr='$OrgSubUnitAbbr', OrgSubUnitSemiAbbr='$OrgSubUnitSemiAbbr', OrgSubUnitActive=$isActive
     where OrgSubUnitId = $id;
     ";
-
-    
+  
     // echo $sql;
 
    

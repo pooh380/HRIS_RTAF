@@ -6,15 +6,19 @@ require_once "../../config.php";
 $OrgSubUnitId = $_POST["OrgSubUnitId"];
 
 $id = "";
+$OrgLevelId = "";
 $OrgSubUnitName = "";
 $OrgSubUnitAbbr = "";
 $OrgSubUnitSemiAbbr = "";
+$OrgSubUnitUpToAirforce = "";
 $OrgSubUnitActive = "";
-// echo $originsId ;
+$OrgLevelName="";
+// echo $id ;
 
 if(isset($OrgSubUnitId)){
-    $sql = "SELECT OrgSubUnitId, OrgSubUnitName, OrgSubUnitAbbr, OrgSubUnitSemiAbbr, OrgSubUnitActive, OrgSubUnitCreateBy, OrgSubUnitCreateDate, OrgSubUnitUpdateBy, OrgSubUnitUpdateDate
+    $sql = "SELECT  OrgSubUnitId,OrgLevel.OrgLevelId,OrgLevel.OrgLevelName, OrgSubUnitName, OrgSubUnitAbbr, OrgSubUnitSemiAbbr, OrgSubUnitActive, OrgSubUnitUpToAirforce, OrgSubUnitCreateBy, OrgSubUnitCreateDate, OrgSubUnitUpdateBy, OrgSubUnitUpdateDate
     FROM OrgSubUnit
+    JOIN OrgLevel ON OrgSubUnit.OrgLevelId = OrgLevel.OrgLevelId
     where OrgSubUnitId = $OrgSubUnitId ; ";
 
     // echo $sql;
@@ -25,18 +29,21 @@ if(isset($OrgSubUnitId)){
 
     while ($row = sqlsrv_fetch_array($query)) {
         $id = $row['OrgSubUnitId'];
+        $OrgLevelId = $row['OrgLevelId'];
         $OrgSubUnitName = $row['OrgSubUnitName'];
         $OrgSubUnitAbbr = $row['OrgSubUnitAbbr'];
         $OrgSubUnitSemiAbbr = $row['OrgSubUnitSemiAbbr'];
+        $OrgSubUnitUpToAirforce = $row['OrgSubUnitUpToAirforce'];
         $OrgSubUnitActive = $row['OrgSubUnitActive'];
+        $OrgLevelName = $row['OrgLevelName'];
         // echo $id;
         // echo $originName;
         // echo $originAbbrName;
         // echo $IsActive;
     }
 
-    $r=array("id"=>$id,"OrgSubUnitName"=>$OrgSubUnitName,"OrgSubUnitAbbr"=>$OrgSubUnitAbbr,"OrgSubUnitSemiAbbr"=>$OrgSubUnitSemiAbbr,
-    "OrgSubUnitActive"=>$OrgSubUnitActive);
+    $r=array("id"=>$id,"OrgLevelId"=>$OrgLevelId,"OrgSubUnitName"=>$OrgSubUnitName,"OrgSubUnitAbbr"=>$OrgSubUnitAbbr,"OrgSubUnitSemiAbbr"=>$OrgSubUnitSemiAbbr,
+    "OrgSubUnitUpToAirforce"=>$OrgSubUnitUpToAirforce,"OrgSubUnitActive"=>$OrgSubUnitActive,"OrgLevelName"=>$OrgLevelName);
     //"ค่า$ในนี้"=>ค่า$ในController,
     print(json_encode($r));
 }
