@@ -191,7 +191,7 @@
 					startDepthCount: 0
 				});
 				$.post(
-					'./Model/OrgHierarchy/updateOrgHierarchy.php', {
+					'../../Model/OrgHierarchy/updateOrgHierarchy.php', {
 						update_sql: 'ok',
 						list: list
 					},
