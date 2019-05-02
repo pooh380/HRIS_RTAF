@@ -51,7 +51,7 @@
 
   </style>
 
-  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <script src="../../Controllers/OrganizationProgramController.js"></script>
 
   <script>
@@ -119,9 +119,9 @@
               <div class="content-header row">
                   <div class="content-header-left col-12 mb-2">
 
-                      <input type="hidden" id="orgTypeId" name="orgTypeId">
+                      <input type="text" id="orgTypeId" name="orgTypeId">
 
-                      <input type="hidden" id="orgStrucId" name="orgStrucId">
+                      <input type="text" id="orgStrucId" name="orgStrucId">
 
                       <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                           <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -222,10 +222,10 @@
                                                   <div class="form-body">
                                                       <div class="row">
                                                           <div class="col-md-6">
-                                                              <label class="col-md-12 label-control" for="orgSubUnitId">รหัสโครงการส่วนราชการ</label>
+                                                              <label class="col-md-12 label-control" for="orgStrucNum">รหัสโครงการส่วนราชการ</label>
                                                               <div class="col-md-12">
                                                                   <div class="position-relative">
-                                                                      <input type="text" disabled id="orgSubUnitId" class="form-control" placeholder="รหัสโครงการส่วนราชการ" name="orgSubUnitId">
+                                                                      <input type="text" disabled id="orgStrucNum" class="form-control" placeholder="รหัสโครงการส่วนราชการ" name="orgStrucNum">
                                                                   </div>
                                                               </div>
                                                           </div>
@@ -239,10 +239,10 @@
                                                               </div> -->
                                                           </div>
                                                           <div class="col-md-6 mt-1">
-                                                              <label class="col-md-12 label-control" for="">รหัสสังกัดและหน่วย</label>
+                                                              <label class="col-md-12 label-control" for="orgSubUnitId">รหัสหน่วย</label>
                                                               <div class="col-md-12">
                                                                   <div class="position-relative">
-                                                                      <input type="text" disabled id="" class="form-control " placeholder="รหัสสังกัดและหน่วย" name="">
+                                                                      <input type="text" disabled id="orgSubUnitId" class="form-control " placeholder="รหัสหน่วย" name="orgSubUnitId">
                                                                   </div>
                                                               </div>
                                                           </div>
@@ -545,6 +545,7 @@
   </footer>
 
 
+
     <!-- BEGIN VENDOR JS -->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
@@ -556,7 +557,11 @@
               e.stopPropagation();
               e.preventDefault();
           });
+            
+          
       });
+ 
+
   </script>
   <!-- BEGIN PAGE VENDOR JS-->
   <script src="../../app-assets/vendors/js/forms/toggle/switchery.min.js" type="text/javascript"></script>

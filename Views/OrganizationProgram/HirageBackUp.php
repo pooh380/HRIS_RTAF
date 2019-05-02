@@ -154,12 +154,10 @@
 	}
 </style>
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
 <script type="text/javascript" src="../../Asset/js/jquery.mjs.nestedSortable.js"></script>
-
 <script>
 	$(document).ready(function() {
 		var ns = $('ol.sortable').nestedSortable({
@@ -172,7 +170,7 @@
 			revert: 250,
 			tabSize: 25,
 			tolerance: 'pointer',
-			toleranceElement: 'div',
+			toleranceElement: '> div',
 			//maxLevels: 4,
 			isTree: true,
 			expandOnHover: 700,
@@ -187,11 +185,11 @@
 				//Boy = $('ol.sortable').nestedSortable('Boy');
 				//$('#serializeOutput').text(Boy + '\n\n');
 
-				list = $(this).nestedSortable('toArray', {
+				list = $(this).nestedSortable('toHierarchy', {
 					startDepthCount: 0
 				});
 				$.post(
-					'./Model/OrgHierarchy/updateOrgHierarchy.php', {
+					'test2.php', {
 						update_sql: 'ok',
 						list: list
 					},
@@ -289,8 +287,19 @@
 
 
 
+<!-- <section>
+        <p>
+          <label for="unitname">Text Field:</label>
+          <input type="text" name="unitname" id="unitname">
+          <input type="button" name="add" id="add" value="เพิ่มข้อมูล">
+        </p>
+	</section> -->
+<!-- END section -->
+
 <?php
 require_once '../../config.php';
+?>
+<?php
 $sql = " SELECT OrgStrucId, OrgLevelId, OrgPartId, OrgGroupTypeId, OrgTypeId, OrgStrucMain, OrgStrucSubMain, OrgStrucName, OrgStrucActive FROM OrgStruc; ";
 
 $params = array();
@@ -308,9 +317,6 @@ if ($rows > 0) {
 
 	<?php	}
 }
-
-
-// -------ถูกต้อง--------
 function getCategories($parent, $category, $csui = true)
 { //
 	$html = "";
@@ -325,13 +331,16 @@ function getCategories($parent, $category, $csui = true)
 			if (!isset($category['parent_cats'][$cat_id])) {
 				$html .= " <li class='mjs-nestedSortable-leaf' id='menuItem_" . $cat_id . "'>";
 				$html .= "<div class='menuDiv'>";
+				// $html .= '<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick"></span>';
+				// $html .= '<span title="Click to show/hide item editor" data-id="' . $cat_id . '" class="expandEditor ui-icon ui-icon-triangle-1-n valueHirarchy"name="valueHirarchy"></span>';
 				$html .= '<input type="checkbox" name="valueHirarchy" value="' . $cat_id . '"' ;
 					if(isset($_GET['OrgStrucMain'])&&($_GET['OrgStrucMain']==$cat_id)){
 						$html .= 'checked';
 					}
 				$html .= '>';
 				$html .= '<span data-id="' . $cat_id . '" class="itemTitle"></span>';
-				$html .= "<a onclick='showDetail(" . $cat_id . ")'>". $category['categories'][$cat_id]['OrgStrucName'] ."</a>  ";
+				// $html .= '<span title="Click to delete item." data-id="' . $cat_id . '" class="deleteMenu ui-icon ui-icon-closethick"></span>';
+				$html .= "<a onclick='getData(" . $cat_id . ")'>". $category['categories'][$cat_id]['OrgStrucName'] . $cat_id . "</a>  ";
 				$html .= "</div>";
 				$html .= "</li> ";
 			}
@@ -342,8 +351,11 @@ function getCategories($parent, $category, $csui = true)
 								$html .= 'checked';
 							}
 				$html .= '>';
-				$html .= "<a onclick='showDetail(" . $cat_id . ")'>" . $category['categories'][$cat_id]['OrgStrucName']."</a>";
+				$html .= "<a onclick='getData(" . $cat_id . ")'>" . $category['categories'][$cat_id]['OrgStrucName']."</a>";
+				// $html .= '<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick"></span>';
+				// $html .= '<span title="Click to show/hide item editor" data-id="' . $cat_id . '" class="expandEditor ui-icon ui-icon-triangle-1-n"></span>';
 				$html .= '<span data-id="' . $cat_id . '" class="itemTitle"></span>';
+				// $html .= '<span title="Click to delete item." data-id="' . $cat_id . '" class="deleteMenu ui-icon ui-icon-closethick"></span>';
 				$html .= "</div>";
 				$html .= getCategories($cat_id, $category, $csui = false);
 				$html .= "</li> ";
@@ -353,7 +365,7 @@ function getCategories($parent, $category, $csui = true)
 	}
 	return $html;
 }
-// -------ถูกต้อง--------
+
 ?>
 <section id="demo" class="text-left">
 
@@ -379,4 +391,7 @@ function getCategories($parent, $category, $csui = true)
 		alert("valueHirarchy" + valueHi);
 	}
 
+	function getData(id){
+		alert(id);
+	}
 </script>
