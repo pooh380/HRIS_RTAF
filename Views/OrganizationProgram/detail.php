@@ -186,7 +186,7 @@
 
                                       <div class="card-content">
                                           <div class="card-body skin-flat">
-                                              <?php require_once './Hirage.php'; ?>
+                                              <?php require_once './Hirage1.php'; ?>
                                           </div>
                                       </div>
                                   </div>

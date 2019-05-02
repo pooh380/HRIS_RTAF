@@ -117,7 +117,7 @@
 		margin-top: .2em;
 		margin-bottom: 1.5em;
 	} */
-/* 
+	/* 
 	h3 {
 		font-size: 1em;
 		margin: 1em 0 .3em;
@@ -338,9 +338,9 @@ function getCategories($parent, $category, $csui = true)
 			if (isset($category['parent_cats'][$cat_id])) {
 				$html .= "<li style='display: list-item;' class='mjs-nestedSortable-branch mjs-nestedSortable-expanded' id='menuItem_" . $cat_id . "'>";
 				$html .= "<div class='menuDiv'> <input type='checkbox'  class='valueHirarchy' name='valueHirarchy' value='" . $cat_id . "'";
-							if(isset($_GET['OrgStrucMain'])&&($_GET['OrgStrucMain']==$cat_id)){
-								$html .= 'checked';
-							}
+				if (isset($_GET['OrgStrucMain']) && ($_GET['OrgStrucMain'] == $cat_id)) {
+					$html .= 'checked';
+				}
 				$html .= '>';
 				$html .= "<a onclick='showDetail(" . $cat_id . ")'>" . $category['categories'][$cat_id]['OrgStrucName']."</a>";
 				$html .= '<span data-id="' . $cat_id . '" class="itemTitle"></span>';
@@ -363,14 +363,12 @@ function getCategories($parent, $category, $csui = true)
 </section>
 
 <script>
-
-
 	var valueHi = [];
 	$.each($("input[name='valueHirarchy']:checked"), function() {
 		valueHi.push($(this).val());
 	});
 
-		$(document).ready(function() {
+	$(document).ready(function() {
 		console.log("ready!");
 	});
 

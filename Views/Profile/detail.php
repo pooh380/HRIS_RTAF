@@ -86,10 +86,7 @@
             
                                   <div class="card-content collapse show">
 
-                                  <div id="background">
-  <p id="bg-text">13580062 </p>
-  </div>
-                                      
+                               
                                       <div class="card-body card-dashboard">
                                 <nav aria-label="breadcrumb">
                                               <ol class="breadcrumb">
@@ -201,6 +198,7 @@
 
 
                                                   <div class="container">
+                                                      
 
                                                       <div class="card-content">
                                                           <div class="card-body">
@@ -746,12 +744,12 @@
 
                                                                       <div
                                                                           class="card collapse-icon accordion-icon-rotate active">
-                                                                          <div id="headingCollapse31"
+                                                                          <div id="headingCollapse32"
                                                                               class="card-header bg-success">
                                                                               <a data-toggle="collapse"
-                                                                                  href="#collapse31"
+                                                                                  href="#collapse32"
                                                                                   aria-expanded="true"
-                                                                                  aria-controls="collapse31"
+                                                                                  aria-controls="collapse32"
                                                                                   class="card-title lead white">
                                                                                   <h6><U>ส่วนที่ 2</U>
                                                                                       ข้อมูลบุคคล(ประวัติข้าราชการ)</h6>
@@ -2309,16 +2307,6 @@
                                                                       </div>
                                                                   </div>
 
-                                                                  <!-- <div class="tab-pane" id="tab13"
-                aria-labelledby="base-tab13">
-                <p>Biscuit ice cream halvah candy canes bear claw
-                    ice cream
-                    cake chocolate bar donut. Toffee cotton candy
-                    liquorice.
-                    Oat cake lemon drops gingerbread dessert
-                    caramels. Sweet
-                    dessert jujubes powder sweet sesame snaps.</p>
-            </div> -->
                                                               </div>
 
                                                               <div class="tab-content px-1 pt-1">
@@ -3136,6 +3124,14 @@
                                                                                               </div>
                                                                                           </div>
 
+                                                                                          <div class="form-actions center" align="center">
+                                <!-- <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="insertOrganizationParts()">บันทึก</button> -->
+
+                                <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="submit" name="submit" onclick="insertOrganizationGroupType()">บันทึก</button>
+
+                            </div>
 
 
 
