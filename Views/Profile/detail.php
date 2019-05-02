@@ -204,7 +204,7 @@
                                                           <div class="card-body">
 
 
-                                                              <div class="tab-content px-1 pt-1" >
+                                                              <div class="tab-content px-1 pt-1">
                                                                   <div role="tabpanel" class="tab-pane active"
                                                                       id="tab11" aria-expanded="true"
                                                                       aria-labelledby="base-tab11">
