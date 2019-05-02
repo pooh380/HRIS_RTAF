@@ -117,7 +117,7 @@
 		margin-top: .2em;
 		margin-bottom: 1.5em;
 	} */
-/* 
+	/* 
 	h3 {
 		font-size: 1em;
 		margin: 1em 0 .3em;
@@ -333,25 +333,25 @@ function getCategories($parent, $category, $csui = true)
 				$html .= "<div class='menuDiv'>";
 				// $html .= '<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick"></span>';
 				// $html .= '<span title="Click to show/hide item editor" data-id="' . $cat_id . '" class="expandEditor ui-icon ui-icon-triangle-1-n valueHirarchy"name="valueHirarchy"></span>';
-				$html .= '<input type="checkbox" name="valueHirarchy" value="' . $cat_id . '"' ;
-					if(isset($_GET['OrgStrucMain'])&&($_GET['OrgStrucMain']==$cat_id)){
-						$html .= 'checked';
-					}
+				$html .= '<input type="checkbox" name="valueHirarchy" value="' . $cat_id . '"';
+				if (isset($_GET['OrgStrucMain']) && ($_GET['OrgStrucMain'] == $cat_id)) {
+					$html .= 'checked';
+				}
 				$html .= '>';
 				$html .= '<span data-id="' . $cat_id . '" class="itemTitle"></span>';
 				// $html .= '<span title="Click to delete item." data-id="' . $cat_id . '" class="deleteMenu ui-icon ui-icon-closethick"></span>';
-				$html .= "<a onclick='getData(" . $cat_id . ")'>". $category['categories'][$cat_id]['OrgStrucName'] . $cat_id . "</a>  ";
+				$html .= "<a onclick='getData(" . $cat_id . ")'>" . $category['categories'][$cat_id]['OrgStrucName'] . $cat_id . "</a>  ";
 				$html .= "</div>";
 				$html .= "</li> ";
 			}
 			if (isset($category['parent_cats'][$cat_id])) {
 				$html .= "<li style='display: list-item;' class='mjs-nestedSortable-branch mjs-nestedSortable-expanded' id='menuItem_" . $cat_id . "'>";
 				$html .= "<div class='menuDiv'> <input type='checkbox'  class='valueHirarchy' name='valueHirarchy' value='" . $cat_id . "'";
-							if(isset($_GET['OrgStrucMain'])&&($_GET['OrgStrucMain']==$cat_id)){
-								$html .= 'checked';
-							}
+				if (isset($_GET['OrgStrucMain']) && ($_GET['OrgStrucMain'] == $cat_id)) {
+					$html .= 'checked';
+				}
 				$html .= '>';
-				$html .= "<a onclick='getData(" . $cat_id . ")'>" . $category['categories'][$cat_id]['OrgStrucName']."</a>";
+				$html .= "<a onclick='getData(" . $cat_id . ")'>" . $category['categories'][$cat_id]['OrgStrucName'] . "</a>";
 				// $html .= '<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick"></span>';
 				// $html .= '<span title="Click to show/hide item editor" data-id="' . $cat_id . '" class="expandEditor ui-icon ui-icon-triangle-1-n"></span>';
 				$html .= '<span data-id="' . $cat_id . '" class="itemTitle"></span>';
@@ -375,14 +375,12 @@ function getCategories($parent, $category, $csui = true)
 </section>
 
 <script>
-
-
 	var valueHi = [];
 	$.each($("input[name='valueHirarchy']:checked"), function() {
 		valueHi.push($(this).val());
 	});
 
-		$(document).ready(function() {
+	$(document).ready(function() {
 		console.log("ready!");
 	});
 
@@ -391,7 +389,53 @@ function getCategories($parent, $category, $csui = true)
 		alert("valueHirarchy" + valueHi);
 	}
 
-	function getData(id){
-		alert(id);
+	function getData(orgStucId) {
+
+		$.ajax({
+			type: "POST",
+			dataType: "json",
+			url: "../../Model/OrganizationProgram/getTemplateValue.php",
+			data: {
+				orgStucId: orgStucId
+				// orgLevelId: orgLevelId
+			},
+			success: function(data) {
+
+				console.log(data);
+
+				$("#orgStrucId").val(data.orgStrucId);
+				$('#orgTypeName').append('<option value="' + data.orgTypeId + '" selected="selected">' + data.orgTypeName + '</option>');
+				$("#orgSubUnitId").val(data.orgSubUnitId);
+				$('#orgPartName').append('<option value="' + data.orgPartId + '" selected="selected">' + data.orgPartName + '</option>');
+				// $("#orgPartName").val(data.orgPartName);
+				// 
+				$('#divisionAbbrName').append('<option value="" selected="selected">' + data.array0 + '</option>');
+				$('#orgLevelName').append('<option value="' + data.orgLevelId + '" selected="selected">' + data.orgLevelName + '</option>');
+				$("#orgSubUnitName").val(data.orgSubUnitName);
+				$("#orgStrucLong").val(data.orgStrucLong);
+
+
+
+
+				// $("#orglistCode").val(data.orgLevelName);
+				// $("#divisionID").val(data.orgPartName);
+				// $("#orgListAbbr").val(data.orgGroupTypeName);
+				// $("#orgListLong").val(data.orgTypeName);
+				// $("#orgListAbbrLong").val(data.orgSubUnitName);
+				// $("#orgListAbbrLongAbbr").val(data.orgStrucMain);
+				// $("#startDate").val(data.orgStrucSubMain);
+				// $('#orgTypeList').append('<option value="' + data.orgStrucPath + '" selected="selected">' + data.orgStrucPath + '</option>');
+				// $('#orgListName').append('<option value="' + data.orgStrucName + '" selected="selected">' + data.orgStrucName + '</option>');
+				// $('#orgPartName').append('<option value="' + data.orgPartName + '" selected="selected">' + data.orgPartName + '</option>');
+				// $('#orgaLevelName').append('<option value="' + data.orgStrucActive + '" selected="selected">' + data.orgStrucActive + '</option>');
+
+				// console.log(data);
+			},
+			error: function(error) {
+				// alert(error);
+				console.log(error);
+			}
+		});
+
 	}
 </script>

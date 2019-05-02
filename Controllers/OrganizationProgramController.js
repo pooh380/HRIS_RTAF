@@ -50,68 +50,68 @@
 
 
 
-    function showDetail(orgStucId, orgLevelId) {
+    // function showDetail(orgStucId, orgLevelId) {
 
-        alert("orgStucId:" + orgStucId + " orgLevelId:" + orgLevelId);
-        // var orgTypeId = $("#orgTypeId").val();
-        // var orgListId = $("#orgListId").val();
+    //     alert("orgStucId:" + orgStucId + " orgLevelId:" + orgLevelId);
+    //     // var orgTypeId = $("#orgTypeId").val();
+    //     // var orgListId = $("#orgListId").val();
 
-        // alert("นำค่า divisionId: " + divisionId + " OrganizationLevelId: " + orgLevelId + " OrganizationStucId: " + orgStucId + " นำไปค้นหาใน OrganizationList เพื่อที่จะนำไปโชว์ค่าขวา");
-        // alert(" SQL ที่นำค่าไปค้นหา: SELECT * , organization_type.organization_type_name,organization_part.organization_part_name,organization_level.organization_level_name , organization_id , division.division_abbr_name" +
-        //     " FROM  organization_list" +
-        //     " JOIN  organization_type ON organization_list.organization_type_id = organization_type.id" +
-        //     " JOIN  organization_part on organization_list.organization_part_id = organization_part.id" +
-        //     " JOIN  organization_level on organization_list.organization_level_id = organization_level.id" +
-        //     " JOIN  division on organization_list.organization_id = division.id" +
-        //     " WHERE organization_list.division_id = divisionId AND organization_list.id = OrganizationStucId;");
-
-
-        $.ajax({
-            type: "POST",
-            dataType: "json",
-            url: "../../Model/OrganizationProgram/getTemplateValue.php",
-            data: {
-                orgStucId: orgStucId,
-                orgLevelId: orgLevelId
-            },
-            success: function(data) {
-
-                console.log(data);
-
-                $("#orgStrucId").val(data.orgStrucId);
-                $('#orgTypeName').append('<option value="' + data.orgTypeId + '" selected="selected">' + data.orgTypeName + '</option>');
-                $("#orgSubUnitId").val(data.orgSubUnitId);
-                $('#orgPartName').append('<option value="' + data.orgPartId + '" selected="selected">' + data.orgPartName + '</option>');
-                // $("#orgPartName").val(data.orgPartName);
-                // 
-                $('#divisionAbbrName').append('<option value="" selected="selected">' + data.array0 + '</option>');
-                $('#orgLevelName').append('<option value="' + data.orgLevelId + '" selected="selected">' + data.orgLevelName + '</option>');
-                $("#orgSubUnitName").val(data.orgSubUnitName);
-                $("#orgStrucLong").val(data.orgStrucLong);
+    //     // alert("นำค่า divisionId: " + divisionId + " OrganizationLevelId: " + orgLevelId + " OrganizationStucId: " + orgStucId + " นำไปค้นหาใน OrganizationList เพื่อที่จะนำไปโชว์ค่าขวา");
+    //     // alert(" SQL ที่นำค่าไปค้นหา: SELECT * , organization_type.organization_type_name,organization_part.organization_part_name,organization_level.organization_level_name , organization_id , division.division_abbr_name" +
+    //     //     " FROM  organization_list" +
+    //     //     " JOIN  organization_type ON organization_list.organization_type_id = organization_type.id" +
+    //     //     " JOIN  organization_part on organization_list.organization_part_id = organization_part.id" +
+    //     //     " JOIN  organization_level on organization_list.organization_level_id = organization_level.id" +
+    //     //     " JOIN  division on organization_list.organization_id = division.id" +
+    //     //     " WHERE organization_list.division_id = divisionId AND organization_list.id = OrganizationStucId;");
 
 
+    //     $.ajax({
+    //         type: "POST",
+    //         dataType: "json",
+    //         url: "../../Model/OrganizationProgram/getTemplateValue.php",
+    //         data: {
+    //             orgStucId: orgStucId,
+    //             orgLevelId: orgLevelId
+    //         },
+    //         success: function(data) {
+
+    //             console.log(data);
+
+    //             $("#orgStrucId").val(data.orgStrucId);
+    //             $('#orgTypeName').append('<option value="' + data.orgTypeId + '" selected="selected">' + data.orgTypeName + '</option>');
+    //             $("#orgSubUnitId").val(data.orgSubUnitId);
+    //             $('#orgPartName').append('<option value="' + data.orgPartId + '" selected="selected">' + data.orgPartName + '</option>');
+    //             // $("#orgPartName").val(data.orgPartName);
+    //             // 
+    //             $('#divisionAbbrName').append('<option value="" selected="selected">' + data.array0 + '</option>');
+    //             $('#orgLevelName').append('<option value="' + data.orgLevelId + '" selected="selected">' + data.orgLevelName + '</option>');
+    //             $("#orgSubUnitName").val(data.orgSubUnitName);
+    //             $("#orgStrucLong").val(data.orgStrucLong);
 
 
-                // $("#orglistCode").val(data.orgLevelName);
-                // $("#divisionID").val(data.orgPartName);
-                // $("#orgListAbbr").val(data.orgGroupTypeName);
-                // $("#orgListLong").val(data.orgTypeName);
-                // $("#orgListAbbrLong").val(data.orgSubUnitName);
-                // $("#orgListAbbrLongAbbr").val(data.orgStrucMain);
-                // $("#startDate").val(data.orgStrucSubMain);
-                // $('#orgTypeList').append('<option value="' + data.orgStrucPath + '" selected="selected">' + data.orgStrucPath + '</option>');
-                // $('#orgListName').append('<option value="' + data.orgStrucName + '" selected="selected">' + data.orgStrucName + '</option>');
-                // $('#orgPartName').append('<option value="' + data.orgPartName + '" selected="selected">' + data.orgPartName + '</option>');
-                // $('#orgaLevelName').append('<option value="' + data.orgStrucActive + '" selected="selected">' + data.orgStrucActive + '</option>');
 
-                // console.log(data);
-            },
-            error: function(error) {
-                // alert(error);
-                console.log(error);
-            }
-        });
-    }
+
+    //             // $("#orglistCode").val(data.orgLevelName);
+    //             // $("#divisionID").val(data.orgPartName);
+    //             // $("#orgListAbbr").val(data.orgGroupTypeName);
+    //             // $("#orgListLong").val(data.orgTypeName);
+    //             // $("#orgListAbbrLong").val(data.orgSubUnitName);
+    //             // $("#orgListAbbrLongAbbr").val(data.orgStrucMain);
+    //             // $("#startDate").val(data.orgStrucSubMain);
+    //             // $('#orgTypeList').append('<option value="' + data.orgStrucPath + '" selected="selected">' + data.orgStrucPath + '</option>');
+    //             // $('#orgListName').append('<option value="' + data.orgStrucName + '" selected="selected">' + data.orgStrucName + '</option>');
+    //             // $('#orgPartName').append('<option value="' + data.orgPartName + '" selected="selected">' + data.orgPartName + '</option>');
+    //             // $('#orgaLevelName').append('<option value="' + data.orgStrucActive + '" selected="selected">' + data.orgStrucActive + '</option>');
+
+    //             // console.log(data);
+    //         },
+    //         error: function(error) {
+    //             // alert(error);
+    //             console.log(error);
+    //         }
+    //     });
+    // }
 
     function create() {
         var orgTypeId = $("#orgTypeId").val();

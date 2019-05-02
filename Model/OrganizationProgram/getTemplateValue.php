@@ -1,14 +1,14 @@
 <?php
-
 require_once "../../config.php";
 require_once "../../Controllers/API/dateformat.php";
 
-$orgStucId = isset($_POST['orgStucId']) ? $_POST['orgStucId'] : "";
-$orgLevelId = isset($_POST['orgLevelId']) ? $_POST['orgLevelId'] : "";
-// $orgStucId = 6;
+// $orgStucId = isset($_POST['orgStucId']) ? $_POST['orgStucId'] : "";
+// $orgLevelId = isset($_POST['orgLevelId']) ? $_POST['orgLevelId'] : "";
+$orgStucId = 6;
 // $orgLevelId  = 5;
+//  $orgStucId = isset($_POST['orgStucId']) ? $_POST['orgStucId'] : "";
 
-$sql = " select OrgStrucPath FROM OrgStruc WHERE OrgStrucId = $orgStucId AND orgLevelId = $orgLevelId; ";
+$sql = " select * FROM OrgStruc WHERE OrgStrucId = $orgStucId ";
 $query = sqlsrv_query($conn, $sql);
 
 // echo $sql;
@@ -22,18 +22,18 @@ while ($row = sqlsrv_fetch_array($query)) {
     //   $a = $row['OrgStrucPath'];
     //   $c = $row['OrgStrucName'];
 
-    // $orgStrucId = $row['OrgStrucId'];
-    // $orgSubUnitId = $row['OrgSubUnitId'];
-    // $orgLevelName = $row['OrgLevelName'];
-    // $orgPartName = $row['OrgPartName'];
-    // $orgGroupTypeName = $row['OrgGroupTypeName'];
-    // $orgTypeName = $row['OrgTypeName'];
-    // $orgSubUnitName = $row['OrgSubUnitName'];
-    // $orgStrucMain = $row['OrgStrucMain'];
-    // $orgStrucSubMain = $row['OrgStrucSubMain'];
+    $orgStrucId = $row['OrgStrucId'];
+    $orgSubUnitId = $row['OrgSubUnitId'];
+    $orgLevelName = $row['OrgLevelName'];
+    $orgPartName = $row['OrgPartName'];
+    $orgGroupTypeName = $row['OrgGroupTypeName'];
+    $orgTypeName = $row['OrgTypeName'];
+    $orgSubUnitName = $row['OrgSubUnitName'];
+    $orgStrucMain = $row['OrgStrucMain'];
+    $orgStrucSubMain = $row['OrgStrucSubMain'];
     $orgStrucPath = $row['OrgStrucPath'];
-    // $orgStrucName = $row['OrgStrucName'];
-    // $orgStrucActive = $row['OrgStrucActive'];
+    $orgStrucName = $row['OrgStrucName'];
+    $orgStrucActive = $row['OrgStrucActive'];
 }
 // echo "<Br>";
 // echo "orgPath: " . $orgStrucPath;
@@ -69,7 +69,7 @@ JOIN OrgPart ON OrgStruc.OrgPartId = OrgPart.OrgPartId
 JOIN OrgGroupType ON OrgStruc.OrgGroupTypeId = OrgGroupType.OrgGroupTypeId
 JOIN OrgType ON OrgStruc.OrgTypeId = OrgType.OrgTypeId
 JOIN OrgSubUnit ON OrgStruc.OrgSubUnitId = OrgSubUnit.OrgSubUnitId
-WHERE OrgStrucId = $orgStucId AND OrgStruc.OrgLevelId = $orgLevelId OR OrgSubUnit.OrgSubUnitId IN (" . implode(',', $resultArray) . ");";
+WHERE OrgStrucId = $orgStucId OR OrgSubUnit.OrgSubUnitId IN (" . implode(',', $resultArray) . ");";
 
 // echo "<Br>";
 
