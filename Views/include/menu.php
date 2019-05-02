@@ -160,7 +160,7 @@
         <!-- งานประวัติรับราชการ -->
         <li class=" nav-item"><a href="#"><i class="ft-users"></i><span class="menu-title" data-i18n="nav.horz_nav.main">งานประวัติข้าราชการ</span></a>
             <ul class="menu-content">
-                <li><a class="menu-item" href="/Hris/Views/Profile/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ประวัติข้าราชการ</a>
+                <li><a class="menu-item" href="/Hris/Views/Profile/index.php" >ประวัติข้าราชการ</a>
                 </li>
                 <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">ภูมิลำเนา</a>
                 </li>
