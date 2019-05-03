@@ -123,7 +123,8 @@
                                                                 $sql = " SELECT OrgTypeId, OrgGroupTypeId, OrgTypeName, OrgTypeActive FROM OrgType WHERE OrgTypeActive = 1; ";
                                                                 $result = sqlsrv_query($conn, $sql);
                                                                 while ($row = sqlsrv_fetch_array($result)) {
-                                                                    echo "<option value='" . $row['OrgTypeId'] . "'>" . $row['OrgTypeName'] ." ".$row['OrgTypeId'] . "</option>";
+                                                                    // echo "<option value='" . $row['OrgTypeId'] . "'>" . $row['OrgTypeName'] ." ".$row['OrgTypeId'] . "</option>";
+                                                                    echo "<option value='" . $row['OrgTypeId'] . "'>" . $row['OrgTypeName'] . "</option>";
                                                                 }
                                                                 ?>
                                                             </select>

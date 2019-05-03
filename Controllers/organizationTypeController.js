@@ -140,17 +140,17 @@ function getIdForEdit() {
             $("#startDate").val(data.orgTypeStartDate);
             // $("#endDate").val(data.orgTypeEndDate);
 
-            if (data.orgTypeEndDate =="") {
+            if (data.orgTypeEndDate == "") {
                 // $("#isActive").removeAttr('checked');
                 $("#endDate").val(data.orgTypeEndDate);
             } else {
                 // $('#isActive').prop("checked", true);
-                $("#endDate").val(ไม่มีค่า);
+                $("#endDate").val(ไม่ มีค่ า);
             }
 
 
 
-          
+
 
             if (data.orgTypeAirforce == 1) {
                 // $("#isActive").removeAttr('checked');

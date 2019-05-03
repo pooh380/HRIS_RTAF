@@ -41,6 +41,13 @@ function insertOrganizationSubUnit() {
     var OrgSubUnitName = $("#OrgSubUnitName").val();
     var OrgSubUnitAbbr = $("#OrgSubUnitAbbr").val();
     var OrgSubUnitSemiAbbr = $("#OrgSubUnitSemiAbbr").val();
+
+
+    var OrgTypeId = $('#OrgTypeId :selected').val(); //ชื่อหน่วยส่วนบัญชาการ
+    var OrgLevelId = $('#OrgLevelId :selected').val(); //ชื่อหน่วยส่วนบัญชาการ
+
+
+
     var isActive = $("#isActive").val();
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
@@ -48,13 +55,25 @@ function insertOrganizationSubUnit() {
     } else {
         var isActive = "0";
     }
+
+
+    var checkBox = document.getElementById("upToAirforce");
+    if (checkBox.checked == true) {
+        var upToAirforce = "1";
+    } else {
+        var upToAirforce = "0";
+    }
+
     // console.log(OrgSubUnitName + " " + OrgSubUnitAbbr + " " + OrgSubUnitSemiAbbr + " " + isActive);
     // e.preventDefault();
 
     $.post("../../Model/OrganizationSubUnit/InsertOrganizationSubUnit.php", {
+        OrgLevelId: OrgLevelId,
+        OrgTypeId: OrgTypeId,
         OrgSubUnitName: OrgSubUnitName,
         OrgSubUnitAbbr: OrgSubUnitAbbr,
         OrgSubUnitSemiAbbr: OrgSubUnitSemiAbbr,
+        upToAirforce: upToAirforce,
         isActive: isActive
     }).done(function(data) {
         // console.log(data);
@@ -64,7 +83,7 @@ function insertOrganizationSubUnit() {
             showConfirmButton: false,
             timer: 2000
         });
-        setTimeout("window.open('../OrganizationsSubUnit/index.php', '_self');", 2000);
+        // setTimeout("window.open('../OrganizationsSubUnit/index.php', '_self');", 2000);
     }).fail(function(err) {
         // console.log(err);
         Swal.fire({
@@ -109,7 +128,7 @@ function getIdForEdit() {
             $("#OrgSubUnitName").val(data.OrgSubUnitName);
             $("#OrgSubUnitAbbr").val(data.OrgSubUnitAbbr);
             $("#OrgSubUnitSemiAbbr").val(data.OrgSubUnitSemiAbbr);
-           
+
 
             // console.log(data.IsActive);
             if (data.OrgSubUnitActive == 0) {
@@ -160,8 +179,8 @@ function UpdateOrganizationSubUnit() {
             OrgSubUnitAbbr: OrgSubUnitAbbr,
             OrgSubUnitSemiAbbr: OrgSubUnitSemiAbbr,
             isActive: isActive,
-            OrgSubUnitUpToAirforce : OrgSubUnitUpToAirforce,
-            OrgLevelId : OrgLevelId
+            OrgSubUnitUpToAirforce: OrgSubUnitUpToAirforce,
+            OrgLevelId: OrgLevelId
 
         },
         success: function(data) {
