@@ -100,6 +100,27 @@
                                                       </div>
                                                   </div>
 
+
+                                                  <div class="col-md-6 ">
+                                                      <label class="col-md-6 label-control" for="OrgTypeId">โครงสร้าง</label>
+                                                      <div class="col-md-12">
+                                                          <div class="position-relative ">
+                                                              <select name="OrgTypeId" id="OrgTypeId" class="select2 form-control " style="width:100%;">
+                                                                  <?php
+                                                                    require_once "../../config.php";
+                                                                    $sql = " SELECT OrgTypeId, OrgTypeName FROM OrgType WHERE OrgTypeActive = 1; ";
+                                                                    $result = sqlsrv_query($conn, $sql);
+                                                                    while ($row = sqlsrv_fetch_array($result)) {
+                                                                        ?>
+                                                                      <option value="<?php echo $row['OrgTypeId'] ?>"><?php echo $row['OrgTypeName'] ?></option>
+                                                                  <?php
+                                                                }
+                                                                ?>
+                                                              </select>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+
                                                   <div class="col-md-6">
                                                       <label class="col-md-6 label-control" for="OrgSubUnitName">ชื่อเต็มหน่วยงาน</label>
                                                       <div class="col-md-12">
