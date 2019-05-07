@@ -1112,7 +1112,7 @@ input:focus ~ .bg-success {
   color: #28D094 !important; }
 
 .bg-success {
-  background-color: #F2F5FB !important; }
+  background-color: #bfc8d0 !important; }
   .bg-success .card-header, .bg-success .card-footer {
     background-color: transparent; }
   .bg-success.bg-glow {

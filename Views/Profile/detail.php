@@ -187,6 +187,7 @@
                                                           <?php require_once '../include/profileTable.php'; ?>
 
 
+                                              <!-- -----------กล่องที่1------------ -->
                                                           <div class="tab-content px-1 pt-1">
                                                               <div role="tabpanel" class="tab-pane active" id="tab11"
                                                                   aria-expanded="true" aria-labelledby="base-tab11">
@@ -808,6 +809,10 @@
                                                                                   </div>
                                                                               </div>
                                                                               <!-- ------------ส่วนที่1-- END----------- -->
+
+
+                                                                              
+                                                                               <!-- ------------ส่วนที่2-- เริ่ม----------- -->
 
 
                                                                               <div class="tab-content px-1 pt-1">
@@ -2311,7 +2316,7 @@
 
                                                                               <!-- -------------ส่วนที่2-END--------------------- -->
 
-
+<!-- -------------ส่วนที่3-เริ่ม--------------------- -->
 
                                                                               <div class="tab-content px-1 pt-1">
                                                                                   <div role="tabpanel33"
@@ -3196,6 +3201,8 @@
                                                                       </div>
                                                                   </div>
                                                               </div>
+
+
                                                               <div class="tab-pane" id="tab12"
                                                                   aria-labelledby="base-tab12">
                                                                   <div class="tab-content px-1 pt-1">
@@ -3217,53 +3224,6 @@
                                                                                               aria-expanded="true"
                                                                                               aria-labelledby="base-tab1155">
 
-                                                                                              <!-- <div class="container">
-  <div class="row">
-      
-    <div class="col-sm-4"style="border: 2px solid red; border-radius: 5px; right:2px;"
-  border-radius: 12px;>
-      <h3>Column 1</h3>
-      <p>111</p>
-      <p>111111</p>
-    </div>
-    <div class="col-sm-4" style="border: 2px solid red; border-radius: 5px; right:2px;" >
-      <h3>Column 2</h3>
-      <p>22222</p>
-      <p>2222</p>
-    </div>
-    <div class="col-sm-4" style="border: 2px solid red; border-radius: 5px; right:7px;" >
-      <h3>Column 3</h3>        
-      <p>3333</p>
-      <p>3333</p>
-    </div>
-  </div>
-</div>                          -->
-                                                                                              <!-- Second Photo Grid-->
-
-
-                                                                                              <!-- <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/w3images/p1.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/w3images/p2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <img src="/w3images/p3.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-  </div> -->
 
                                                                                               <div class="row"
                                                                                                   style="margin-right:15px;">
@@ -3271,9 +3231,12 @@
                                                                                                       style="position:relative; min-height:1px; padding-right:15px;padding-left:15px;">
                                                                                                       <div class="well"
                                                                                                           style="min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;">
+                                                                                                          <!-- <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:50%" alt="Image"position > -->
+                                                                                                          <!-- <p style="position:absolute;">Text</p> -->
                                                                                                           <p>Text</p>
                                                                                                           <p>Text</p>
-                                                                                                          <p>Text</p>
+                                                                                                          <a href="/HRIS/Views/ProfileImage/index.php"><i class="la la-pencil-square-o"
+                                                                  style="color:#0f1733;"></i></a>
                                                                                                       </div>
                                                                                                   </div>
                                                                                                   <div class="col-sm-4"
@@ -3282,7 +3245,8 @@
                                                                                                           style="min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;">
                                                                                                           <p>Text</p>
                                                                                                           <p>Text</p>
-                                                                                                          <p>Text</p>
+                                                                                                          <a href="/HRIS/Views/ProfileImage/index.php"><i class="la la-pencil-square-o"
+                                                                  style="color:#0f1733;"></i></a>
                                                                                                       </div>
                                                                                                   </div>
                                                                                                   <div class="col-sm-4"
@@ -3291,7 +3255,84 @@
                                                                                                           style="min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;">
                                                                                                           <p>Text</p>
                                                                                                           <p>Text</p>
+                                                                                                          <a href=/HRIS/Views/ProfileImage/index.php"><i class="la la-pencil-square-o"
+                                                                  style="color:#0f1733;"></i></a>
+                                                                                                      </div>
+                                                                                                  </div>
+                                                                                              </div>
+
+
+                                                                                              <div class="row"
+                                                                                                  style="margin-right:15px;">
+                                                                                                  <div class="col-sm-4"
+                                                                                                      style="position:relative; min-height:1px; padding-right:15px;padding-left:15px;">
+                                                                                                      <div class="well"
+                                                                                                          style="min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;">
+                                                                                                          <!-- <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:50%" alt="Image"position > -->
+                                                                                                          <!-- <p style="position:absolute;">Text</p> -->
                                                                                                           <p>Text</p>
+                                                                                                          <p>Text</p>
+                                                                                                          <a href="./detail.php"><i class="la la-pencil-square-o"
+                                                                  style="color:#0f1733;"></i></a>
+                                                                                                      </div>
+                                                                                                  </div>
+                                                                                                  <div class="col-sm-4"
+                                                                                                      style="position:relative; min-height:1px; padding-right:15px;padding-left:15px;">
+                                                                                                      <div class="well"
+                                                                                                          style="min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;">
+                                                                                                          <p>Text</p>
+                                                                                                          <p>Text</p>
+                                                                                                          <a href="./detail.php"><i class="la la-pencil-square-o"
+                                                                  style="color:#0f1733;"></i></a>
+                                                                                                      </div>
+                                                                                                  </div>
+                                                                                                  <div class="col-sm-4"
+                                                                                                      style="position:relative; min-height:1px; padding-right:15px;padding-left:15px;">
+                                                                                                      <div class="well"
+                                                                                                          style="min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;">
+                                                                                                          <p>Text</p>
+                                                                                                          <p>Text</p>
+                                                                                                          <a href="./detail.php"><i class="la la-pencil-square-o"
+                                                                  style="color:#0f1733;"></i></a>
+                                                                                                      </div>
+                                                                                                  </div>
+                                                                                              </div>
+
+
+
+
+                                                                                              <div class="row"
+                                                                                                  style="margin-right:15px;">
+                                                                                                  <div class="col-sm-4"
+                                                                                                      style="position:relative; min-height:1px; padding-right:15px;padding-left:15px;">
+                                                                                                      <div class="well"
+                                                                                                          style="min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;">
+                                                                                                          <!-- <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:50%" alt="Image"position > -->
+                                                                                                          <!-- <p style="position:absolute;">Text</p> -->
+                                                                                                          <p>Text</p>
+                                                                                                          <p>Text</p>
+                                                                                                          <a href="./detail.php"><i class="la la-pencil-square-o"
+                                                                  style="color:#0f1733;"></i></a>
+                                                                                                      </div>
+                                                                                                  </div>
+                                                                                                  <div class="col-sm-4"
+                                                                                                      style="position:relative; min-height:1px; padding-right:15px;padding-left:15px;">
+                                                                                                      <div class="well"
+                                                                                                          style="min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;">
+                                                                                                          <p>Text</p>
+                                                                                                          <p>Text</p>
+                                                                                                          <a href="./detail.php"><i class="la la-pencil-square-o"
+                                                                  style="color:#0f1733;"></i></a>
+                                                                                                      </div>
+                                                                                                  </div>
+                                                                                                  <div class="col-sm-4"
+                                                                                                      style="position:relative; min-height:1px; padding-right:15px;padding-left:15px;">
+                                                                                                      <div class="well"
+                                                                                                          style="min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;">
+                                                                                                          <p>Text</p>
+                                                                                                          <p>Text</p>
+                                                                                                          <a href="./detail.php"><i class="la la-pencil-square-o"
+                                                                  style="color:#0f1733;"></i></a>
                                                                                                       </div>
                                                                                                   </div>
                                                                                               </div>
@@ -3305,21 +3346,85 @@
 
                                                                   </div>
                                                               </div>
+
+
+
+
+
+                                                              <!-- --------------------การเปลี่ยนชื่อ-------------------------- -->
                                                               <div class="tab-pane" id="tab13"
                                                                   aria-labelledby="base-tab13">
-                                                                  <p>Biscuit ice cream halvah candy canes bear claw ice
-                                                                      cream
-                                                                      cake chocolate bar donut. Toffee cotton candy
-                                                                      liquorice.
-                                                                      Oat cake lemon drops gingerbread dessert caramels.
-                                                                      Sweet
-                                                                      dessert jujubes powder sweet sesame snaps.</p>
+
                                                               </div>
+                                                             
+                                          <a href="./create.php" class="btn btn-social btn-min-width mb-1"
+                                              style="background-color:#0f1733; color:white;">
+                                              <span class="la la-plus-circle"
+                                                  style="color:white; font-weight: bold;font-size: 18px"></span> เพิ่ม
+                                          </a>
+                                          <a href="./delete.php" class="btn btn-social btn-min-width mb-1"
+                                              style="background-color:#0f1733; color:white;">
+                                              <span class="la la-trash-o"
+                                                  style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
+                                          </a>
+                                          <table class="table table-striped table-borderless table-hover bootstrap-3 ">
+                                              <thead>
+                                                  <tr align="center"
+                                                      style="background-color:#0f1733; color:whitesmoke;">
+                                                      <th><input type="checkbox" class="checkAll"
+                                                              onclick="toggle(this);" /></th>
+                                                      <th></th>
+                                                      <th>ลำดับที่</th>
+                                                      <th>ชื่อใหม่</th>
+                                                      <th>นามสกุลใหม่</th>
+                                                      <th>วันที่มีผล</th>
+                                                      
+                                                  </tr>
+                                              </thead>
+                                              <tbody align="center">
+                                                  <tr>
+                                                      <td><input type="checkbox" class="checkAll" /></td>
+                                                      <td>
+                                                          <a href="/hris/Views/Profile_changename/index.php"><i class="la la-pencil-square-o"
+                                                                  style="color:#0f1733;"></i></a>
+                                                          <a href="./delete.php"><i class="la la-trash-o"
+                                                                  style="color:#0f1733;"></i></a>
+                                                      </td>
+                                                      <td>1</td>
+                                                      <td>กิตติศักดิ์</td>
+                                                      <td>สวนสอน</td>
+                                                      <td>18 ก.ค. 2560</td>
+                                                      
+                                                  </tr>
+                                                  <tr>
+                                                      <td><input type="checkbox" class="checkAll" /></td>
+                                                      <td>
+                                                      <a href="/hris/Views/Profile_changename/index.php"><i class="la la-pencil-square-o" style="color:#0f1733;"></i>
+                                                      <a href="./detail.php"><i class="la la-trash-o" style="color:#0f1733;"></i>
+                                                      </td>
+                                                      <td>2</td>
+                                                      <td>กิตตินันท์</td>
+                                                      <td>อารมณ์</td>
+                                                      <td>20 ก.ค. 2560</td>
+                                                      
+                                                  </tr>
+                                              </tbody>
+                                              <!-- <tfoot>
+                        <tr>
+                          <th>Name</th>
+                          <th>Position</th>
+                          <th>Office</th>
+                          <th>Age</th>
+                          <th>Start date</th>
+                          <th>Salary</th>
+                        </tr>
+                      </tfoot> -->
+                                          </table>
                                                           </div>
 
 
 
-                                                          <!-- --------------------------------------------------รูปภาพ------------------------------------------------- -->
+                                                         
 
 
 

@@ -70,8 +70,7 @@
                                                                                           <div
                                                                                               class="col-lg-3 col-md-12">
                                                                                               <div class="card-block">
-                                                                                                  <div class="card-body"
-                                                                                                      id="Personnel_type">
+                                                                                                  <div class="card-body">
                                                                                                       ประเภทสัญบัตร :
                                                                                                       <select
                                                                                                           class="select2 form-control"
@@ -166,7 +165,7 @@
                                                                                                  
 
                                                                                                      <div class="card-body"
-                                                                                                      id="Rank_losing">
+                                                                                                    >
                                                                                                       ตำแหน่ง :
                                                                                                       <select
                                                                                                           class="select2 form-control"

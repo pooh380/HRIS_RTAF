@@ -67,6 +67,27 @@
                                           </div> <!-- card -->
 
 
+                                          <div class="container text-center">    
+  <h3></h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+     
+  
+    </div>
+    <div class="col-sm-4"> 
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+     
+    </div>
+    <div class="col-sm-4">
+      <div class="well">
+      
+      </div>
+      <div class="well">
+      
+      </div>
+    </div>
+  </div>
+</div><br>
                                           <div class="container">
 
                                               <div class="card-content">
@@ -152,6 +173,21 @@
                                                   </div>
                                               </div>
                                           </div>
+
+                                          <div class="tab-content px-1 pt-1">
+                                                                      <div class="form-actions center" align="center">
+                                                                          <!-- <button type="button" class="btn btn-danger  round btn-min-width mr-1 mb-1" id="type-error">ยกเลิก</button>
+                                <button type="button" class="btn btn-success  round btn-min-width mr-1 mb-1" id="confirm-text" onclick="insertOrganizationParts()">บันทึก</button> -->
+
+                                                                          <button type="button"
+                                                                              class="btn btn-success  round btn-min-width mr-1 mb-1"
+                                                                              id="submit" name="submit"
+                                                                              onclick="insertOrganizationGroupType()">บันทึก</button>
+                                                                          <button type="button"
+                                                                              class="btn btn-danger  round btn-min-width mr-1 mb-1"
+                                                                              id="type-error">ยกเลิก</button>
+                                                                      </div>
+                                                                  </div>
                                       </div>
                                   </div>
                               </div>
