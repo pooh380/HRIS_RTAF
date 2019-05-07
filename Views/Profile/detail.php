@@ -811,7 +811,7 @@
                                                                               <!-- ------------ส่วนที่1-- END----------- -->
 
 
-                                                                              
+
                                                                                <!-- ------------ส่วนที่2-- เริ่ม----------- -->
 
 
@@ -3423,6 +3423,76 @@
                                                           </div>
 
 
+                 <!-- --------------------ขึ้นทะเบียนราษฏร์/ลักษณะร่างกาย-------------------------- -->
+                                                              <div class="tab-pane" id="tab15"
+                                                                  aria-labelledby="base-tab15">
+
+                                                              </div>
+                                                             
+                                          <a href="./create.php" class="btn btn-social btn-min-width mb-1"
+                                              style="background-color:#0f1733; color:white;">
+                                              <span class="la la-plus-circle"
+                                                  style="color:white; font-weight: bold;font-size: 18px"></span> เพิ่ม
+                                          </a>
+                                          <a href="./delete.php" class="btn btn-social btn-min-width mb-1"
+                                              style="background-color:#0f1733; color:white;">
+                                              <span class="la la-trash-o"
+                                                  style="color:white; font-weight: bold;font-size: 18px"></span> ลบ
+                                          </a>
+                                          <table class="table table-striped table-borderless table-hover bootstrap-3 ">
+                                              <thead>
+                                                  <tr align="center"
+                                                      style="background-color:#0f1733; color:whitesmoke;">
+                                                      <th><input type="checkbox" class="checkAll"
+                                                              onclick="toggle(this);" /></th>
+                                                      <th></th>
+                                                      <th>555555555555555555555555</th>
+                                                      <th>ชื่อใหม่</th>
+                                                      <th>นามสกุลใหม่</th>
+                                                      <th>วันที่มีผล</th>
+                                                      
+                                                  </tr>
+                                              </thead>
+                                              <tbody align="center">
+                                                  <tr>
+                                                      <td><input type="checkbox" class="checkAll" /></td>
+                                                      <td>
+                                                          <a href="/hris/Views/Profile_changename/index.php"><i class="la la-pencil-square-o"
+                                                                  style="color:#0f1733;"></i></a>
+                                                          <a href="./delete.php"><i class="la la-trash-o"
+                                                                  style="color:#0f1733;"></i></a>
+                                                      </td>
+                                                      <td>1</td>
+                                                      <td>กิตติศักดิ์</td>
+                                                      <td>สวนสอน</td>
+                                                      <td>18 ก.ค. 2560</td>
+                                                      
+                                                  </tr>
+                                                  <tr>
+                                                      <td><input type="checkbox" class="checkAll" /></td>
+                                                      <td>
+                                                      <a href="/hris/Views/Profile_changename/index.php"><i class="la la-pencil-square-o" style="color:#0f1733;"></i>
+                                                      <a href="./detail.php"><i class="la la-trash-o" style="color:#0f1733;"></i>
+                                                      </td>
+                                                      <td>2</td>
+                                                      <td>กิตตินันท์</td>
+                                                      <td>อารมณ์</td>
+                                                      <td>20 ก.ค. 2560</td>
+                                                      
+                                                  </tr>
+                                              </tbody>
+                                              <!-- <tfoot>
+                        <tr>
+                          <th>Name</th>
+                          <th>Position</th>
+                          <th>Office</th>
+                          <th>Age</th>
+                          <th>Start date</th>
+                          <th>Salary</th>
+                        </tr>
+                      </tfoot> -->
+                                          </table>
+                                                          </div>
 
                                                          
 
