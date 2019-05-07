@@ -63,7 +63,7 @@
                                                                           <div id="collapse31" role="tabpanel"
                                                                               aria-labelledby="headingCollapse31"
                                                                               class="card-collapse collapse show"
-                                                                              aria-expanded="true">
+                                                                              aria-expanded="true" style="padding-left:300px;background-color:slategray;">
                                                                               <div class="card-content">
                                                                                   <div class="card-body">
                                                                                       <div class="row match-height">
@@ -257,62 +257,80 @@
                                                                                                       </select>
 
                                                                                                   </div>
-                                                                                               
-                                                                                              </div>
-                                                                                          </div>
-                                                                                          <div
-                                                                                              class="col-lg-3 col-md-12">
-                                                                                              <div class="card-block">
-                                                                                                  <div class="card-body"
-                                                                                                      id="Government_Number">
-                                                                                                      หมายเลขประจำตัวราชการ:
-                                                                                                      <input
-                                                                                                          class="input form-control"
-                                                                                                          style="width: 100%;"
-                                                                                                          placeholder="1111111111">
-                                                                                                  </div>
-                                                                                                
-                                                                                               
-                                                                                                  <div class="card-body"
-                                                                                                      id="Government_Number">
-                                                                                                      หมายเลขประจำตัวราชการ:
-                                                                                                      <input
-                                                                                                          class="input form-control"
-                                                                                                          style="width: 100%;"
-                                                                                                          placeholder="1111111111">
-                                                                                                  </div>
-                                                                                             
-                                                                                              </div>
-                                                                                          </div>
-                                                                                          <div
-                                                                                              class="col-lg-3 col-md-12">
-                                                                                              <div class="card-block">
-                                                                                                  <div class="card-body"
-                                                                                                      id="Government_Number">
-                                                                                                      หมายเลขประจำตัวราชการ:
-                                                                                                      <input
-                                                                                                          class="input form-control"
-                                                                                                          style="width: 100%;"
-                                                                                                          placeholder="1111111111">
-                                                                                                  </div>
-                                                                                                
-                                                                                               
-                                                                                                  <div class="card-body"
-                                                                                                      id="Government_Number">
-                                                                                                      หมายเลขประจำตัวราชการ:
-                                                                                                      <input
-                                                                                                          class="input form-control"
-                                                                                                          style="width: 100%;"
-                                                                                                          placeholder="1111111111">
-                                                                                                  </div>
-                                                                                             
-                                                                                              </div>
-                                                                                          </div>
-                                                                                   
-                                                                                    
-                                                                                     
-                                                                                         
 
+
+                                                                                                  <div
+                                                                                              class="col-lg-3 col-md-12">
+                                                                                              <div class="card-block">
+                                                                                                  <div class="card-body"
+                                                                                                      id="Government_Number">
+                                                                                                      1:
+                                                                                                      <input
+                                                                                                          class="input form-control"
+                                                                                                          style="width: 100%;"
+                                                                                                          placeholder="">
+                                                                                                  </div>
+                                                                                                
+                                                                                               
+                                                                                                
+                                                                                             
+                                                                                              </div>
+                                                                                          </div>
+                                                                                               
+                                                                                              </div>
+                                                                                          </div>
+                                                                                          
+                                                                                          <div
+                                                                                              class="col-lg-3 col-md-12">
+                                                                                              <div class="card-block">
+                                                                                                  <div class="card-body"
+                                                                                                      id="Government_Number">
+                                                                                                      หมายเลขประจำตัวราชการ:
+                                                                                                      <input
+                                                                                                          class="input form-control"
+                                                                                                          style="width: 100%;"
+                                                                                                          placeholder="">
+                                                                                                  </div>
+                                                                                                
+                                                                                               
+                                                                                                  <div class="card-body"
+                                                                                                      id="Government_Number">
+                                                                                                      หมายเลขประจำตัวราชการ:
+                                                                                                      <input
+                                                                                                          class="input form-control"
+                                                                                                          style="width: 100%;"
+                                                                                                          placeholder="">
+                                                                                                  </div>
+                                                                                             
+                                                                                              </div>
+                                                                                          </div>
+                                                                                          <div
+                                                                                              class="col-lg-3 col-md-12">
+                                                                                              <div class="card-block">
+                                                                                                  <div class="card-body"
+                                                                                                      id="Government_Number">
+                                                                                                      หมายเลขแฟ้มประวัติ :
+                                                                                                      <input
+                                                                                                          class="input form-control"
+                                                                                                          style="width: 100%;"
+                                                                                                          placeholder="หมายเลขแฟ้มประวัติ">
+                                                                                                  </div>
+                                                                                                
+                                                                                               
+                                                                                                  <div class="card-body"
+                                                                                                      id="Government_Number">
+                                                                                                      หมายเลขประจำตัวราชการ :
+                                                                                                      <input
+                                                                                                          class="input form-control"
+                                                                                                          style="width: 100%;"
+                                                                                                          placeholder="หมายเลขประจำตัวราชการ">
+                                                                                                  </div>                                                                                         
+                                                                                              </div>
+                                                                                          </div>
+
+
+                                                                                        
+                                                                                   
                                                                                      
 
                                                                                           
