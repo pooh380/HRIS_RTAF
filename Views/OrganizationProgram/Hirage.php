@@ -155,10 +155,10 @@
 </style>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
 <script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
-<script type="text/javascript" src="../../Asset/js/jquery.mjs.nestedSortable.js"></script>
+<script type="text/javascript" src="../../Asset/js/jquery.mjs.nestedSortable.js"></script> -->
 
 <script>
 	$(document).ready(function() {
@@ -292,7 +292,7 @@
 <?php
 require_once '../../config.php';
 $sql = " SELECT OrgStrucId, OrgLevelId, OrgPartId, OrgGroupTypeId, OrgTypeId, OrgStrucMain, OrgStrucSubMain, OrgStrucName, OrgStrucActive 
-FROM OrgStruc WHERE orgTypeId = 3 AND orgStrucId = 2; ";
+FROM OrgStruc; ";
 
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
@@ -308,10 +308,7 @@ if ($rows > 0) {
 		?>
 
 	<?php	
-	echo "<pre>";
-	print_r($category);
-	echo "<pre>";
-}
+	}
 }
 
 
