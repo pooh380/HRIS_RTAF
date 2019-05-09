@@ -291,7 +291,8 @@
 
 <?php
 require_once '../../config.php';
-$sql = " SELECT OrgStrucId, OrgLevelId, OrgPartId, OrgGroupTypeId, OrgTypeId, OrgStrucMain, OrgStrucSubMain, OrgStrucName, OrgStrucActive FROM OrgStruc; ";
+$sql = " SELECT OrgStrucId, OrgLevelId, OrgPartId, OrgGroupTypeId, OrgTypeId, OrgStrucMain, OrgStrucSubMain, OrgStrucName, OrgStrucActive 
+FROM OrgStruc WHERE orgTypeId = 3 AND orgStrucId = 2; ";
 
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
@@ -307,9 +308,9 @@ if ($rows > 0) {
 		?>
 
 	<?php	
-	// echo "<pre>";
-	// print_r($category);
-	// echo "<pre>";
+	echo "<pre>";
+	print_r($category);
+	echo "<pre>";
 }
 }
 
@@ -361,7 +362,7 @@ function getCategories($parent, $category, $csui = true)
 ?>
 <section id="demo" class="text-left">
 
-	<?php echo getCategories(0, $category);
+	<?php echo getCategories(1, $category);
 	//echo  getCategories(0, 1);
 	?>
 </section>

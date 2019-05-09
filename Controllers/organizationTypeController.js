@@ -145,7 +145,7 @@ function getIdForEdit() {
                 $("#endDate").val(data.orgTypeEndDate);
             } else {
                 // $('#isActive').prop("checked", true);
-                $("#endDate").val(ไม่ มีค่ า);
+                $("#endDate").val(data.orgTypeEndDate);
             }
 
 
