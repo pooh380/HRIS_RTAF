@@ -83,7 +83,7 @@ function insertOrganizationSubUnit() {
             showConfirmButton: false,
             timer: 2000
         });
-        // setTimeout("window.open('../OrganizationsSubUnit/index.php', '_self');", 2000);
+       setTimeout("window.open('../OrganizationsSubUnit/index.php', '_self');", 2000);
     }).fail(function(err) {
         // console.log(err);
         Swal.fire({
