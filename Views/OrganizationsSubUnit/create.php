@@ -161,7 +161,6 @@
                                                       <input id="isActive" type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="ใช้งาน" data-off="ยกเลิก" data-onstyle="success" data-offstyle="danger" data-size="sm">
                                                   </div>
                                               </div>
-
                                           </div>
                                       </form>
                                   </div>

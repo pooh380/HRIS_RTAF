@@ -120,7 +120,7 @@
 
                                                             <select name="orgTypeList" id="orgTypeList" class="select2 form-control">
                                                                 <?php
-                                                                $sql = " SELECT OrgTypeId, OrgGroupTypeId, OrgTypeName, OrgTypeActive FROM OrgType WHERE OrgTypeActive = 1; ";
+                                                                $sql = " SELECT OrgTypeId, OrgGroupTypeId, OrgTypeName, OrgTypeActive FROM OrgType WHERE OrgTypeActive = 1 and OrgTypeId = 3; ";
                                                                 $result = sqlsrv_query($conn, $sql);
                                                                 while ($row = sqlsrv_fetch_array($result)) {
                                                                     // echo "<option value='" . $row['OrgTypeId'] . "'>" . $row['OrgTypeName'] ." ".$row['OrgTypeId'] . "</option>";
