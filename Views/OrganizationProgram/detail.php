@@ -48,21 +48,20 @@
       .table td {
           padding: -0.75rem 2rem;
       }
-
   </style>
 
-<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <script src="../../Controllers/OrganizationProgramController.js"></script>
 
   <script>
       $(document).ready(function() {
 
-        $(document).ajaxStart(function() {
-            $(".modal").show();
-        });
-        $(document).ajaxComplete(function() {
-            $(".modal").hide();
-        });
+          $(document).ajaxStart(function() {
+              $(".modal").show();
+          });
+          $(document).ajaxComplete(function() {
+              $(".modal").hide();
+          });
 
           var getUrlParameter = function getUrlParameter(sParam) {
               var sPageURL = window.location.search.substring(1),
@@ -155,7 +154,7 @@
                       <div class="col-lg-4">
                           <div class="content-body">
 
-                          <?php include_once '../include/modelOnload.php' ?>
+                              <?php include_once '../include/modelOnload.php' ?>
                               <!-- Description -->
                               <div class="sidebar-content card d-none d-lg-block">
                                   <div class="card-header" style="background-color:#0f1733; color:white; font-weight: bold;font-size: 18px">
@@ -163,7 +162,7 @@
                                       <a style="float:right;"><i class="la la-sitemap"></i> </a>
                                   </div>
                                   <div class="card-body" align="center">
-                                      <button class="btn btn-sm" style="background-color:#0f1733;color:white;border:white;" onclick="create()" >
+                                      <button class="btn btn-sm" style="background-color:#0f1733;color:white;border:white;" onclick="create()">
                                           <span class="la la-plus-circle" style="color:white; font-weight: bold;font-size: 13px;margin-top:3px;"> เพิ่ม</span>
                                       </button>
                                       <a href="#" class="btn btn-sm" style="background-color:#0f1733;color:white;border:white" ;>
@@ -196,7 +195,7 @@
                       <!-- ---------------------- -->
                       <!-- /Ratings sample -->
 
-                     
+
 
                       <!-- 1 -->
                       <div class="col-lg-8">
@@ -281,7 +280,7 @@
                                                           <div class="col-md-6 mt-1">
                                                               <label class="col-md-12 label-control" for="orgSubUnitName">ชื่อหน่วย</label>
                                                               <div class="col-md-12" style="float:left;">
-                                                                <input type="text" disabled id="orgSubUnitName" class="form-control " placeholder="ชื่อหน่วย" name="orgSubUnitName">
+                                                                  <input type="text" disabled id="orgSubUnitName" class="form-control " placeholder="ชื่อหน่วย" name="orgSubUnitName">
                                                               </div>
                                                               <!-- <div class="col-md-1">
                                                                   <a href="../Organizations/create.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
@@ -546,7 +545,7 @@
 
 
 
-    <!-- BEGIN VENDOR JS -->
+  <!-- BEGIN VENDOR JS -->
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
 
@@ -557,11 +556,9 @@
               e.stopPropagation();
               e.preventDefault();
           });
-            
-          
-      });
- 
 
+
+      });
   </script>
   <!-- BEGIN PAGE VENDOR JS-->
   <script src="../../app-assets/vendors/js/forms/toggle/switchery.min.js" type="text/javascript"></script>
@@ -605,6 +602,11 @@
   <script src="../../app-assets/vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>
   <script src="../../app-assets/js/scripts/forms/select/form-select2.js" type="text/javascript"></script>
 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../Asset/js/jquery.mjs.nestedSortable.js"></script>
   <!-- END PAGE LEVEL JS-->
   </body>
 
