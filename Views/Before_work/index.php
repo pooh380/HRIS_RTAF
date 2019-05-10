@@ -78,24 +78,24 @@
                                                               <div class="card collapse-icon accordion-icon-rotate active">
                                                                   <div id="headingCollapse31" class="card-header bg-success">
                                                                       <a data-toggle="collapse" href="#collapse31" aria-expanded="true" aria-controls="collapse31" class="card-title lead white">
-                                                                          <h6 style="margin-left:5px;">บันทึก/แก้ไข การเปลี่ยนชื่อ/สกุล</h6>
+                                                                          <h6 style="margin-left:5px;">บันทึก/แก้ไข เหล่าทหาร</h6>
                                                                       </a>
                                                                   </div>
 
 
 
                                                                   <div class="tab-content px-1 pt-1">
-                                                                                  <div role="tabpanel55"
+                                                                                  <div role="tabpanel70"
                                                                                       class="tab-pane active"
-                                                                                      id="tab1155" aria-expanded="true"
+                                                                                      id="tab1170" aria-expanded="true"
                                                                                       aria-labelledby="base-tab1155">
 
                                                                                       <div
                                                                                           class="card collapse-icon accordion-icon-rotate active">
                                                                                           
-                                                                                          <div id="collapse55"
-                                                                                              role="tabpanel55"
-                                                                                              aria-labelledby="headingCollapse55"
+                                                                                          <div id="collapse70"
+                                                                                              role="tabpanel70"
+                                                                                              aria-labelledby="headingCollapse70"
                                                                                               class="card-collapse collapse show"
                                                                                               aria-expanded="true">
                                                                                               <div class="card-content">
@@ -389,6 +389,9 @@
                                                                                                                   </div>
                                                                                                               </div>
                                                                                                           </div>
+
+
+
                                                                                                           <div
                                                                                                               class="col-lg-6 col-md-12">
                                                                                                               <div
@@ -415,10 +418,18 @@
 
                                                                                                               </div>
                                                                                                           </div>
+
+
+
+
                                                                                                       </div>
                                                                                                   </div>
                                                                                               </div>
                                                                                           </div>
+
+
+
+
 
                                                                                       </div>
 
