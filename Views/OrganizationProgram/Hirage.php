@@ -308,9 +308,9 @@ if ($rows > 0) {
 		?>
 
 	<?php	
-	echo "<pre>";
-	print_r($category);
-	echo "<pre>";
+	// echo "<pre>";
+	// print_r($category);
+	// echo "<pre>";
 }
 }
 
