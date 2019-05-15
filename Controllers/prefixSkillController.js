@@ -25,7 +25,7 @@ function getPosition() {
     // var url = "./detail.php?orgTypeId=" + orgTypeIdEn;
     // console.log(url);
     // $(location).attr('href', url);
-
+   
 
     // alert(orgTypeId + " " + orgListId);
 }
