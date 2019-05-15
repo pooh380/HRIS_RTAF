@@ -9,13 +9,12 @@ require_once "../../config.php";
 $personTypesId = $_POST["personTypesId"];
 $id = "";
 $personTypeName = "";
-$personTypeCond = "";
-$reservesGroup = "";
 $IsActive = "";
 // echo $originsId ;
 
 if(isset($personTypesId)){
-    $sql = " SELECT id, PersonTypeName, PersonTypeCond, ReservesGroup, IsActive FROM person_type where id = $personTypesId ";
+    $sql = "SELECT  HrtPersonTypeId, HrtPersonTypeName,HrtPersonTypeActive
+    FROM PersonType where HrtPersonTypeId = $personTypesId ";
 
     // echo $sql;
 
@@ -24,14 +23,12 @@ if(isset($personTypesId)){
     // if($query){ echo "query";}else{echo "not query";}
 
     while ($row = sqlsrv_fetch_array($query)) {
-        $id = $row['id'];
-        $personTypeName = $row['PersonTypeName'];
-        $personTypeCond = $row['PersonTypeCond'];
-        $reservesGroup = $row['ReservesGroup'];
-        $IsActive = $row['IsActive'];
+        $id = $row['HrtPersonTypeId'];
+        $personTypeName = $row['HrtPersonTypeName'];
+        $IsActive = $row['HrtPersonTypeActive'];
     }
 
-    $r=array("id"=>$id,"personTypeName"=>$personTypeName,"personTypeCond"=>$personTypeCond,"reservesGroup"=>$reservesGroup,"IsActive"=>$IsActive);
+    $r=array("id"=>$id,"personTypeName"=>$personTypeName,"IsActive"=>$IsActive);
     print(json_encode($r));
 }
 

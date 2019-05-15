@@ -28,17 +28,15 @@ if (!empty($_POST)) {
     // }
 
     $personTypeName = $_POST['personTypeName'];
-    $personTypeCond = $_POST['personTypeCond'];
-    $reservesGroup = $_POST['reservesGroup'];
     $isActive = $_POST['isActive'];
 
     // date_default_timezone_set('Asia/Bangkok');
     // echo date("Y-m-d h:i:sa");
 
 
-    $sql = " INSERT INTO person_type
-    (PersonTypeCode, PersonTypeName, PersonTypeCond, ReservesGroup, IsActive)
-    VALUES($idNew, '$personTypeName', '$personTypeCond', '$reservesGroup', $isActive);
+    $sql = " INSERT INTO PersonType
+    (HrtPersonTypeName, HrtPersonTypeCond, HrtPersonTypeReservesGroup, HrtPersonTypeActive, HrtPersonTypeRemark, HrtPersonTypeForAdd, HrtPersonTypeCreateBy, HrtPersonTypeCreateDate, HrtPersonTypeUpdateBy, HrtPersonTypeUpdateDate)
+    VALUES('$personTypeName', '', '', $isActive, '', '', 0, '', 0, '');
     
     ";
     // echo $sql;

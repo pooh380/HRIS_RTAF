@@ -26,8 +26,6 @@ function getPersonTypes() {
 function insertPersonTypes() {
 
     var personTypeName = $('#personTypeName').val();
-    var personTypeCond = $('#personTypeCond').val();
-    var reservesGroup = $("#reservesGroup").val();
 
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
@@ -80,7 +78,7 @@ function getUrlVars() {
 
 // getData จาก db เพื่อนำมาใช้มา input value
 function getIdForEdit() {
-    var personTypesId = getUrlVars()["id"];
+    var personTypesId = getUrlVars()["idHrtPersonTypeId"];
     // console.log(PrefixsId);
 
     $.ajax({
@@ -93,8 +91,6 @@ function getIdForEdit() {
         success: function(data) {
             $("#personTypesId").val(data.id);
             $("#personTypeName").val(data.personTypeName);
-            $("#personTypeCond").val(data.personTypeCond);
-            $("#reservesGroup").val(data.reservesGroup);
             // console.log(data);
             if (data.IsActive == 0) {
                 // $("#isActive").removeAttr('checked');
@@ -104,7 +100,6 @@ function getIdForEdit() {
                 $("#isActive").bootstrapToggle('on');
             }
 
-            // console.log(data);
         },
         error: function(error) {
             // alert(error);
@@ -117,8 +112,6 @@ function getIdForEdit() {
 function UpdatePersonTypes() {
     var personTypesId = $("#personTypesId").val();
     var personTypeName = $("#personTypeName").val();
-    var personTypeCond = $("#personTypeCond").val();
-    var reservesGroup = $("#reservesGroup").val();
     var checkBox = document.getElementById("isActive");
     if (checkBox.checked == true) {
         var isActive = "1";
@@ -129,8 +122,6 @@ function UpdatePersonTypes() {
     $.post("../../Model/PersonTypes/UpdatePersonTypes.php", {
         personTypesId: personTypesId,
         personTypeName: personTypeName,
-        personTypeCond: personTypeCond,
-        reservesGroup: reservesGroup,
         isActive: isActive
     }).done(function(data) {
         // window.location.replace("../page/listUser.php");
