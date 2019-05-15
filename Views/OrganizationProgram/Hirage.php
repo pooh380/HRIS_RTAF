@@ -359,7 +359,7 @@ function getCategories($parent, $category, $csui = true)
 ?>
 <section id="demo" class="text-left">
 
-	<?php echo getCategories(1, $category);
+	<?php echo getCategories(0, $category);
 	//echo  getCategories(0, 1);
 	?>
 </section>
