@@ -162,17 +162,17 @@
             <ul class="menu-content">
                 <li><a class="menu-item" href="../Profile/index.php" >ประวัติข้าราชการ</a>
                 </li>
-                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">ภูมิลำเนา</a>
+                <li><a class="menu-item" href="/Hris/Views/Homeland/index.php">ภูมิลำเนา</a>
                 </li>
-                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">การศึกษา/ความรู้/ความชำนาญ</a>
+                <li><a class="menu-item" href="/Hris/Views/Education_knowledge_skills/index.php">การศึกษา/ความรู้/ความชำนาญ</a>
                 </li>
-                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">ตำแหน่ง/เครื่องราชอิสริยาภรณ์</a>
+                <li><a class="menu-item" href="/Hris/Views/Position_insignia/index.php">ตำแหน่ง/เครื่องราชอิสริยาภรณ์</a>
                 </li>
-                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">ค่าตอบแทนและเงินเดือน</a>
+                <li><a class="menu-item" href="/Hris/Views/Compensation_salary/index.php">ค่าตอบแทนและเงินเดือน</a>
                 </li>
-                <li><a class="menu-item" href="/Hris/Views/Profile/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">ความประพฤติ</a>
+                <li><a class="menu-item" href="/Hris/Views/Behaviour/index.php" >ความประพฤติ</a>
                 </li>
-                <li><a class="menu-item" href="layout-content-left-sidebar.html" data-i18n="nav.page_layouts.3_columns.left_sidebar">สูญเสีย</a>
+                <li><a class="menu-item" href="/Hris/Views/Lose/index.php" >สูญเสีย</a>
                 </li>
 
             </ul>

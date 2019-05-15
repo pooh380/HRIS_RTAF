@@ -13,7 +13,7 @@
                       </li>
                       <li class="nav-item">
                         <a class="nav-link " id="base-tab14" data-toggle="tab" aria-controls="tab14"
-                        href="#tab14" aria-expanded="true">ขึ้นทะเบียนอาหาร/ลักษณะร่างกาย </a>
+                        href="#tab14" aria-expanded="true">ขึ้นทะเบียนทหาร/ลักษณะร่างกาย </a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" id="base-tab15" data-toggle="tab" aria-controls="tab15" href="#tab15"
