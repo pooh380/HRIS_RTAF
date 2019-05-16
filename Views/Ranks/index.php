@@ -45,10 +45,10 @@
                       <thead>
                         <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                           <th><input type="checkbox" class="checkAll" onclick="toggle(this);" /></th>
-                          <th>ลำดับที่</th>
-                          <th>รหัส</th>
                           <th>ชื่อ</th>
                           <th>ชื่อย่อ</th>
+                          <th>ชื่อภาษาอังกฤษ</th>
+                          <th>ชื่อย่อภาษาอังกฤษ</th>
                           <th>ใช้งาน</th>
                         </tr>
                       </thead>
