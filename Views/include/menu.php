@@ -73,7 +73,7 @@
                             </li>
                             <li><a class="menu-item" href="../armys/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">เหล่า</a>
                             </li>
-                            <li><a class="menu-item" href="../militaries/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">จำพวกทหาร</a>
+                            <li><a class="menu-item" href="../HrtSpc/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">จำพวกทหาร</a>
                             </li>
 
                             <li><a class="menu-item" href="../pass_status/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">สาเหตุการปลด/สูญเสีย</a>

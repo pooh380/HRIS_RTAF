@@ -9,7 +9,7 @@
       <div class="content-header row">
         <div class="content-header-left col-md-6 col-12 mb-2">
           <div style="width:7px;height:30px;background-color:#1a1d52; float:left; margin-right:10px;"></div>
-          <h3 class="content-header-title">Pass_Status</h3>
+          <h3 class="content-header-title">สาเหตุปลด/สูญเสีย</h3>
         </div>
       </div>
       <div class="content-body">
@@ -25,7 +25,7 @@
                       <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="../home/index.php">ระบบงานโครงสร้างอัตรากำลังพล</a></li>
                         <li class="breadcrumb-item"><a href="../home/index.php">ข้อมูลทั่วไป</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Pass_Status</li>
+                        <li class="breadcrumb-item active" aria-current="page">สาเหตุปลด/สูญเสีย</li>
                       </ol>
                     </nav>
                     <a href="./create.php" class="btn btn-social btn-min-width mb-1" style="background-color:#0f1733; color:white;">
@@ -38,13 +38,8 @@
                       <thead>
                         <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                           <th><input type="checkbox" class="checkAll" onclick="toggle(this);" /></th>
-                          <th>ลำดับที่</th>
-                          <th>PassCode</th>
-                          <th>PassName</th>
-                          <th>PassAbbrName</th>
-                          <th>IsBelongToRtaf</th>
-                          <th >FlagSenior</th>
-                          <th >ใช้งาน</th>
+                          <th>สาเหตุปลด</th>
+                          <th>สถานะ</th>
                         </tr>
                       </thead>
                       <tbody align="center"></tbody>

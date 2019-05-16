@@ -40,8 +40,6 @@
                                               <thead>
                                                   <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                                                       <th></th>
-                                                      <th>ลำดับที่</th>
-                                                      <th>รหัสประเทศ</th>
                                                       <th>ชือประเทศ</th>
                                                       <th>ภาษาอังกฤษ</th>
                                                       <th>สถานะ</th>

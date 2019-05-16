@@ -1,16 +1,19 @@
 <?php
+
 error_reporting(0);
+
 require_once "../../config.php";
 
 $request=$_REQUEST;
 $col =array(
-    0   =>  'CountryId',
-    1   =>  'CountryNameTh',
-    2   =>  'CountryNameEn',
-    3   =>  'CountryActive',
+    0   =>  'HrtSpcId',
+    1   =>  'HrtSpcName',
+    2   =>  'HrtSpcAbbr',
+    3   =>  'HrtSpcActive',
 ); 
 
-$sql =" SELECT CountryId, CountryNameTh, CountryNameEn,CountryActive FROM HrtCountry ";
+$sql ="SELECT HrtSpcId, HrtSpcName,HrtSpcAbbr, HrtSpcActive FROM HrtSpc";
+
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
@@ -22,10 +25,10 @@ $totalFilter = $totalData;
 
 
 
-$sql = " SELECT CountryId, CountryNameTh, CountryNameEn,CountryActive FROM HrtCountry WHERE 1=1 ";
+$sql = "SELECT HrtSpcId, HrtSpcName,HrtSpcAbbr, HrtSpcActive FROM HrtSpc WHERE 1=1 ";
 if (!empty($request['search']['value'])) {
-    $sql .= " AND (CountryNameTh Like N'%" . $request['search']['value'] . "%' ";
-    $sql .= " OR CountryNameEn Like N'%" . $request['search']['value'] . "%') ";
+    $sql .= " AND (HrtSpcName Like N'%" . $request['search']['value'] . "%' ";
+    $sql .= " OR HrtSpcAbbr Like N'%" . $request['search']['value'] . "%') ";
     $query = sqlsrv_query($conn, $sql, $params, $options);
     $totalData = sqlsrv_num_rows($query);
 }
@@ -34,11 +37,12 @@ $data=array();
 while($row=sqlsrv_fetch_array($query)){
     $subdata=array();
     $subdata[] = '
-    <a href="../../Views/ctltcntry/edit.php?id='.$row[0].'"><i class="la la-pencil-square-o" style="color:#0f1733"; font-size:30px;" id="'.$row[0].'"></i></a>
-    <a href=""><i class="la la-trash-o" style="color:#0f1733"; font-size:30px;" onclick="deletectltcntry('.$row[0].')" id="'.$row[0].'"></i></a>
+    <a href="../../Views/Ranks/edit.php?id='.$row[0].'"><i class="la la-pencil-square-o" style="color:#0f1733"; font-size:30px;" id="'.$row[0].'"></i></a>
+    <a href=""><i class="la la-trash-o" style="color:#0f1733"; font-size:30px;" onclick="deleteRank('.$row[0].')" id="'.$row[0].'"></i></a>
     ';//id
-    $subdata[] = $row[1]; //CntryCode
-    $subdata[]= $row[2]; //CntryName
+    // $subdata[] = $row[1]; //id
+    $subdata[] = $row[1]; //origin_code
+    $subdata[]= $row[2]; //origin_name
     if($row[3] !== 1){
         $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
     }else{
@@ -59,3 +63,5 @@ $json_data=array(
 echo json_encode($json_data);
 
 sqlsrv_close($conn);
+
+?>
