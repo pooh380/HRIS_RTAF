@@ -33,6 +33,7 @@
     function getSubUnit(orgStrucId) {
         var orgStrucId = $('#orgListList :selected').val();
 
+
         $.post("../../Model/OrganizationProgram/getSubUnit.php", {
             orgStrucId: orgStrucId
 
@@ -51,19 +52,23 @@
     function create() {
         var orgTypeId = $("#orgTypeId").val();
         var orgStrucId = $("#orgStrucId").val();
+
         var valueHi = [];
         $.each($("input[name='valueHirarchy']:checked"), function() {
             valueHi.push($(this).val());
         });
 
+        var orgLevelId = $('#' + valueHi).val();
+
         $.post("../OrganizationProgram/create.php", {
             orgTypeId: orgTypeId,
             orgStrucId: orgStrucId,
-            valueHi: valueHi
+            valueHi: valueHi,
+            orgLevelId: orgLevelId
 
         }).done(function(data) {
             // console.log(data);
-            window.location.href = "./create.php?orgTypeId=" + orgTypeId + "&orgStrucId=" + orgStrucId + "&OrgStrucMain=" + valueHi;
+            window.location.href = "./create.php?orgTypeId=" + orgTypeId + "&orgStrucId=" + orgStrucId + "&OrgSubUnitId=" + valueHi + "&orgLevelId=" + orgLevelId;
             // window.location.href = "./detail.php?orgTypeId=" + orgTypeId + "&orgId=" + orgId;
 
         }).fail(function(err) {
@@ -74,9 +79,6 @@
     }
 
     function insertProgram() {
-
-
-
         var orgTypeList = $('#orgTypeList :selected').val(); //ชื่อหน่วย
         var orgPartName = $('#orgPartName :selected').val(); //ชื่อหน่วยส่วนบัญชาการ
         var orgSubUnitNameList = $('#orgSubUnitNameList :selected').val(); //ฐานะหน่วยสังกัด

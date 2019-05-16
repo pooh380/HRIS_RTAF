@@ -5,7 +5,7 @@ require_once "../../config.php";
 
 
 // $orgStrucId = isset($_POST['orgStrucId']) ? $_POST['orgStrucId'] : "";
-$orgStrucId = 2;
+$orgStrucId = 21;
 
 $sql =" SELECT OrgSubUnitId, OrgSubUnitName, OrgSubUnitAbbr, OrgSubUnitSemiAbbr
 FROM OrgSubUnit WHERE OrgSubUnitActive  = 1 AND OrgSubUnitId = $orgStrucId;" ;

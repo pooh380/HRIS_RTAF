@@ -291,8 +291,8 @@
 
 <?php
 require_once '../../config.php';
-$sql = " SELECT OrgStrucId, OrgLevelId, OrgPartId, OrgGroupTypeId, OrgTypeId, OrgStrucMain, OrgStrucSubMain, OrgStrucName, OrgStrucActive FROM OrgStruc; ";
-// echo $sql;
+$sql = " SELECT OrgStrucId, OrgLevelId, OrgPartId, OrgGroupTypeId, OrgTypeId, OrgStrucMain, OrgStrucSubMain, OrgStrucName, OrgSubUnitId, OrgStrucActive FROM OrgStruc WHERE OrgStrucId = '".$_GET['orgStrucId']."' or OrgStrucId = 1; ";
+echo $sql;
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
@@ -309,8 +309,12 @@ if ($rows > 0) {
 		?>
 	<?php
 }
+	// echo "<pre>";
+	// print_r($category);
+	// echo "<pre>";
 }
 
+// exit();
 
 // -------ถูกต้อง--------
 function getCategories($parent, $category, $csui = true)
@@ -327,24 +331,26 @@ function getCategories($parent, $category, $csui = true)
 			if (!isset($category['parent_cats'][$cat_id])) {
 				$html .= " <li class='mjs-nestedSortable-leaf' id='menuItem_" . $cat_id . "'>";
 				$html .= "<div class='menuDiv'>";
-				$html .= '<input type="checkbox" name="valueHirarchy" value="' . $cat_id . '"';
-				if (isset($_GET['OrgStrucMain']) && ($_GET['OrgStrucMain'] == $cat_id)) {
+				$html .= '<input type="checkbox" id="valueHirarchy" name="valueHirarchy" value="' . $category['categories'][$cat_id]['OrgSubUnitId']  . '"';
+				if (isset($_GET['OrgSubUnitId']) && ($_GET['OrgSubUnitId'] == $category['categories'][$cat_id]['OrgSubUnitId'])) {
 					$html .= 'checked';
 				}
 				$html .= '>';
+
+				$html .= '<input type="text" id="'.$category['categories'][$cat_id]['OrgSubUnitId'] .'"  value="' . $category['categories'][$cat_id]['OrgLevelId']  . '">';
 				$html .= '<span data-id="' . $cat_id . '" class="itemTitle"></span>';
-				$html .= "<a onclick='showDetail(" . $cat_id . ")'>" . $category['categories'][$cat_id]['OrgStrucName'] . "</a>  ";
+				$html .= "<a onclick='showDetail(" . $cat_id . ")'>" . $category['categories'][$cat_id]['OrgStrucName'] . " " . $category['categories'][$cat_id]['OrgSubUnitId'] . " " . $category['categories'][$cat_id]['OrgLevelId'] . "</a>  ";
 				$html .= "</div>";
 				$html .= "</li> ";
 			}
 			if (isset($category['parent_cats'][$cat_id])) {
 				$html .= "<li style='display: list-item;' class='mjs-nestedSortable-branch mjs-nestedSortable-expanded' id='menuItem_" . $cat_id . "'>";
-				$html .= "<div class='menuDiv'> <input type='checkbox'  class='valueHirarchy' name='valueHirarchy' value='" . $cat_id . "'";
-				if (isset($_GET['OrgStrucMain']) && ($_GET['OrgStrucMain'] == $cat_id)) {
+				$html .= "<div class='menuDiv'> <input type='checkbox'  class='valueHirarchy' id='valueHirarchy' name='valueHirarchy' value='" . $category['categories'][$cat_id]['OrgSubUnitId']  . "'";
+				if (isset($_GET['OrgSubUnitId']) && ($_GET['OrgSubUnitId'] == $category['categories'][$cat_id]['OrgSubUnitId'])) {
 					$html .= 'checked';
 				}
 				$html .= '>';
-				$html .= "<a onclick='showDetail(" . $cat_id . ")'>" . $category['categories'][$cat_id]['OrgStrucName'] . "</a>";
+				$html .= "<a onclick='showDetail(" . $cat_id . ")'>" . $category['categories'][$cat_id]['OrgStrucName'] . " " . $category['categories'][$cat_id]['OrgSubUnitId'] . " " . $category['categories'][$cat_id]['OrgLevelId'] . "</a>";
 				$html .= '<span data-id="' . $cat_id . '" class="itemTitle"></span>';
 				$html .= "</div>";
 				$html .= getCategories($cat_id, $category, $csui = false);
@@ -359,23 +365,17 @@ function getCategories($parent, $category, $csui = true)
 ?>
 
 <section id="demo" class="text-left">
-	<?php echo getCategories(0, $category);
+	<?php 
+	// echo getCategories($_GET['orgStrucId'], $category);
+	echo getCategories(0, $category);
 	//echo  getCategories(0, 1);
 	// echo "pneo";
 	?>
 </section>
 
-<script>
+<!-- <script>
 	var valueHi = [];
 	$.each($("input[name='valueHirarchy']:checked"), function() {
 		valueHi.push($(this).val());
 	});
-
-	$(document).ready(function() {
-		console.log("ready!");
-	});
-
-	function hirarchyValue(valueHi) {
-		alert("valueHirarchy" + valueHi);
-	}
-</script>
+</script> -->

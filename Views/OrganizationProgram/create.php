@@ -105,9 +105,9 @@
         };
         var orgTypeId = getUrlParameter('orgTypeId');
         var orgStrucId = getUrlParameter('orgStrucId');
-        var orgStrucMain = getUrlParameter('OrgStrucMain');
+        var OrgSubUnitId = getUrlParameter('OrgSubUnitId');
 
-        $("#orgStrucMain").val(orgStrucMain);
+        $("#orgStrucMain").val(orgStrucId);
 
 
         $(document).ajaxStart(function() {
@@ -276,7 +276,7 @@
                                                         <div class="col-md-6">
                                                             <label class="col-md-12 label-control" for="orgTypeList">โครงสร้าง</label> <!-- ดึงมาจากการ search หน้า index -->
                                                             <div class="col-md-12" style="float:left;">
-                                                                <select class="select2 form-control block" id="orgTypeList" style="width: 100%;"> </select>
+                                                                <select class="select2 form-control block disabled" id="orgTypeList" style="width: 100%;" disabled> </select>
                                                             </div>
                                                             <!-- <div class="col-md-1">
                                                                   <a href="../organizationProgram/createOrganizationCategory.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
@@ -301,7 +301,7 @@
                                                         <div class="col-md-6">
                                                             <label class="col-md-12 label-control" for="orgPartName">ชื่อส่วนราชการ</label>
                                                             <div class="col-md-12" style="float:left;">
-                                                                <select class="select2 form-control block" id="orgPartName" style="width: 100%;">
+                                                                <select class="select2 form-control block disabled" id="orgPartName" style="width: 100%;" disabled>
                                                                     <?php
                                                                     $sql = " SELECT OrgPartId, OrgPartName FROM OrgPart WHERE OrgPartActive = 1;";
                                                                     $result = sqlsrv_query($conn, $sql);
@@ -318,7 +318,7 @@
                                                         <div class="col-md-6 mt-1">
                                                             <label class="col-md-12 label-control" for="orgSubUnitNameList">ชื่อสังกัด</label>
                                                             <div class="col-md-12" style="float:left;">
-                                                                <select class="select2 form-control block" id="orgSubUnitNameList" style="width: 100%;"></select>
+                                                                <select class="select2 form-control block disabled" id="orgSubUnitNameList" style="width: 100%;" disabled></select>
                                                             </div>
                                                             <!-- <div class="col-md-1">
                                                                   <a href="../Organizations/create.php"><i class="la la-plus-circle" style="font-size:36px;"></i></a>
@@ -327,16 +327,17 @@
                                                         <div class="col-md-6 mt-1">
                                                             <label class="col-md-12 label-control" for="orgaLevelName">ฐานะของหน่วย/สังกัด</label>
                                                             <div class="col-md-12" style="float:left;">
-                                                                <select class="select2 form-control block" id="orgaLevelName" style="width: 100%;">
+                                                                <select class="select2 form-control block " id="orgaLevelName" style="width: 100%;" disabled>
                                                                     <?php
                                                                     $sql = " SELECT OrgLevelId, OrgLevelName, OrgLevelActive
-                                                                        FROM HRIS_NEW.dbo.OrgLevel WHERE OrgLevelActive = 1; ";
+                                                                        FROM HRIS_NEW.dbo.OrgLevel WHERE OrgLevelActive = 1 AND OrgLevelId > ".$_GET['orgLevelId']."; ";
                                                                     $result = sqlsrv_query($conn, $sql);
                                                                     while ($row = sqlsrv_fetch_array($result)) {
                                                                         echo "<option value='" . $row['OrgLevelId'] . "'>" . $row['OrgLevelName'] . "</option>";
                                                                     }
                                                                     ?>
                                                                 </select>
+                                                                
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6 mt-1">
@@ -383,18 +384,8 @@
                                                             </div>
                                                         </div>
 
-                                                        <input type="hidden" id="orgStrucMain" class="form-control " placeholder="แม่" name="orgStrucMain">
+                                                        <input type="text" id="orgStrucMain" class="form-control " placeholder="แม่" name="orgStrucMain">
 
-                                                        <!-- ลบ -->
-                                                        <!-- <div class="col-md-6 mt-1">
-                                                            <label class="col-md-12 label-control" for="orgStrucMain">แม่</label>
-                                                            <div class="col-md-12">
-                                                                <div class="position-relative">
-                                                                    <input type="text" id="orgStrucMain" class="form-control " placeholder="แม่" name="orgStrucMain">
-                                                                </div>
-                                                            </div>
-                                                        </div> -->
-                                                        <!-- ลบ -->
 
                                                         <div class="col-md-6 mt-1">
                                                             <label class="col-md-12 label-control" for="provincesName">จังหวัด</label>
