@@ -1,6 +1,5 @@
   <!-- header -->
   <?php include '../include/header.php'; ?>
-
   <!-- menu -->
   <?php include '../include/menu.php'; ?>
   <section>
@@ -39,11 +38,8 @@
                         <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                           <th><input type="checkbox" class="checkAll" onclick="toggle(this);" /></th>
                           <th>ลำดับที่</th>
-                          <th>รหัส</th>
-                          <th>ชื่อประเภทกำลังพล</th>
-                          <th>PersonTypeCond</th>
-                          <th>ReservesGroup</th>
-                          <th >ใช้งาน</th>
+                          <th>ชื่อ</th>
+                          <th>ใช้งาน</th>
                         </tr>
                       </thead>
                       <tbody align="center"></tbody>

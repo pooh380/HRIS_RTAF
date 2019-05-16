@@ -35,10 +35,10 @@ if (!empty($_POST)) {
     // echo date("Y-m-d h:i:sa");
 
 
-    $sql = " INSERT INTO armys
-    (ArmCode, ArmName, ArmAbbrName, IsActive)
-    VALUES($idNew, '$armyName', '$armyAbbrName', $isActive)
-    ";
+    $sql = "INSERT INTO HrtArm
+    (HrtArmId, HrtArmName, HrtArmAbbr, HrtArmActive, HrtArmCreateBy, HrtArmCreateDate, HrtArmUpdateBy, HrtArmUpdateDate)
+    VALUES(0, '$armyName', ' $armyAbbrName',  $isActive, 0, '', 0, '');";
+    
     // echo $sql;
 
     $queryInsert = sqlsrv_query($conn, $sql);

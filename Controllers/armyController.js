@@ -1,27 +1,41 @@
-// getData
-function getArmy() {
-    $('#armyTable').DataTable({
-        "ajax": {
-            url: "../../Model/Army/GetArmy.php", // json datasource
-            dataType: "json",
-            type: "post",
-            "start": 0,
-            "length": 3,
-            "serverSide": true,
-            "processing": true,
-            "paging": true,
-            "searching": { "regex": true },
-            "lengthMenu": [
-                [10, 25, 50, 100, -1],
-                [10, 25, 50, 100, "All"]
-            ],
-            "pageLength": 10,
-            order: [
-                [0, "desc"]
-            ]
-        }
-    });
-}
+
+    function getArmy() {
+        $('#armyTable').DataTable({
+            "language": {
+                "lengthMenu": "เลือกจำนวน _MENU_ จำนวน",
+                "zeroRecords": "ไม่มีข้อมูลนี้ในตาราง",
+                "info": "กำลังแสดงข้อมูลหน้าที่ _START_ จากทั้งหมด _END_ หน้า ",
+    
+                "infoEmpty": "ไม่มีข้อมูลนี้ในตาราง",
+                // "infoFiltered": "(กกกกกก from _MAX_ total records)"
+                "paginate": {
+                    "previous": "ก่อนหน้า",
+                    "next": "ถัดไป"
+                },
+                "search": "ค้นหา: ",
+                "searchPlaceholder": "ค้นหา"
+            },
+            "ajax": {
+                url: "../../Model/Army/GetArmy.php", // json datasource
+                dataType: "json",
+                type: "post",
+                "start": 0,
+                "length": 3,
+                "serverSide": true,
+                "processing": true,
+                "paging": true,
+                "searching": { "regex": true },
+                "lengthMenu": [
+                    [10, 25, 50, 100, -1],
+                    [10, 25, 50, 100, "All"]
+                ],
+                "pageLength": 10,
+                order: [
+                    [0, "desc"]
+                ]
+            }
+        });
+    }
 // getData
 
 // insertData

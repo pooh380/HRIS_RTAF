@@ -26,6 +26,7 @@
 <!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script> -->
 
 
+<script src="../../Controllers/OrganizationProgramController.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
@@ -49,9 +50,6 @@
         $("#personTypeList").val(personTypeList);
 
         // alert(orgTypeId+orgList+personTypeList);
-
-
-
         $.ajax({
             type: "POST",
             url: "../../Model/OrganizationProgram/getOrgList.php",
@@ -198,11 +196,11 @@
                                                                 </select>
                                                             </div>
 
-                                                            <div class="form-group col-md-12">
-                                                                <label id="orgList" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ฐานะหน่วย:</label>
+                                                            <div class="form-group col-md-12 mt-1">
+                                                                <label id="orgList" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ชื่อหน่วยงาน:</label>
+                                                                <input type="text" id="orgTypeId" name="orgTypeId">
                                                                 <select id="orgListList" name="orgListList" class="select2 form-control"></select>
                                                             </div>
-
 
                                                             <div class="form-group col-md-12 mt-1">
                                                                 <label id="personType" style=" font-weight:bold; font-size: 15px; color:#0f1733;">ประเภทกำลังพล:</label>
