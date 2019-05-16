@@ -4,13 +4,13 @@ require_once "../../config.php";
 
 $request=$_REQUEST;
 $col =array(
-    0   =>  'id',
-    1   =>  'CntryName',
-    2   =>  'CntryEngName',
-    3   =>  'IsActive',
+    0   =>  'CountryId',
+    1   =>  'CountryNameTh',
+    2   =>  'CountryNameEn',
+    3   =>  'CountryActive',
 ); 
 
-$sql =" SELECT id, CntryCode, CntryName, CntryEngName, IsActive FROM ctltcntry ";
+$sql =" SELECT CountryId, CountryNameTh, CountryNameEn,CountryActive FROM HrtCountry ";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
@@ -22,10 +22,10 @@ $totalFilter = $totalData;
 
 
 
-$sql = " SELECT id, CntryCode, CntryName, CntryEngName, IsActive FROM ctltcntry WHERE 1=1 ";
+$sql = " SELECT CountryId, CountryNameTh, CountryNameEn,CountryActive FROM HrtCountry WHERE 1=1 ";
 if (!empty($request['search']['value'])) {
-    $sql .= " AND (CntryName Like N'%" . $request['search']['value'] . "%' ";
-    $sql .= " OR CntryEngName Like N'%" . $request['search']['value'] . "%') ";
+    $sql .= " AND (CountryNameTh Like N'%" . $request['search']['value'] . "%' ";
+    $sql .= " OR CountryNameEn Like N'%" . $request['search']['value'] . "%') ";
     $query = sqlsrv_query($conn, $sql, $params, $options);
     $totalData = sqlsrv_num_rows($query);
 }
