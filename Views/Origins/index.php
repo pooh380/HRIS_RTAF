@@ -51,10 +51,7 @@
                                               <thead>
                                                   <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                                                       <th></th>
-                                                      <th>ลำดับที่</th>
-                                                      <th>รหัสสัญชาติ</th>
                                                       <th>ชื่อสัญชาติ</th>
-                                                      <th>ชื่อย่อสัญชาติ</th>
                                                       <th>สถานะ</th>
                                                   </tr>
                                               </thead>

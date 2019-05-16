@@ -13,8 +13,7 @@ $col = array(
 );
 
 //create column like table in database
-$sql = "SELECT HrtNationId, HrtNationNameTh, HrtNationActive FROM HrtNation ;
-";
+$sql = "SELECT HrtNationId, HrtNationNameTh, HrtNationActive FROM HrtNation ;";
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
 $query = sqlsrv_query($conn, $sql, $params, $options);
