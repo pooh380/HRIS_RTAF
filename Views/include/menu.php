@@ -73,7 +73,7 @@
                             </li>
                             <li><a class="menu-item" href="../armys/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">เหล่า</a>
                             </li>
-                            <li><a class="menu-item" href="../HrtSpc/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">จำพวกทหาร</a>
+                            <li><a class="menu-item" href="../militaries/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">จำพวกทหาร</a>
                             </li>
 
                             <li><a class="menu-item" href="../pass_status/index.php" data-i18n="nav.page_layouts.3_columns.left_sidebar">สาเหตุการปลด/สูญเสีย</a>
@@ -149,6 +149,15 @@
                 </li>
             </ul>
         </li>
+         <!-- ระบบงานสรรหาและบรรจุกำลังพล la-odnoklassniki -->
+         
+         <li class=" nav-item <?php if($menu1 =="RECRNAPPOINT"){ echo "open";} ?>"><a href="#"><i class="la la-street-view"></i><span class="menu-title" data-i18n="nav.navbars.main">ระบบงานสรรหาและบรรจุกำลังพล</span></a>
+            <ul class="menu-content">
+                <li class=""><a class="menu-item <?php if($menu2 =="PlanManpower"){ echo "active";} ?>" href="../PlanManpower/index.php"> แผนการบรรจุกำลังพล</a> 
+                </li>
+            </ul>
+        </li>
+
         <!-- ระบบงานโอนย้าย -->
         <li class=" nav-item"><a href="#"><i class="la la-random"></i><span class="menu-title" data-i18n="nav.vertical_nav.main">ระบบงานย้ายโอน</span></a>
             <ul class="menu-content">
