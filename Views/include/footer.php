@@ -14,6 +14,7 @@
   <script src="../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
   <!-- BEGIN PAGE VENDOR JS-->
+  <script src="../../app-assets/vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>
   <script src="../../app-assets/vendors/js/tables/datatable/datatables.min.js" type="text/javascript"></script>
   <!-- END PAGE VENDOR JS-->
   <!-- BEGIN MODERN JS-->
@@ -22,11 +23,12 @@
   <script src="../../app-assets/js/scripts/customizer.js" type="text/javascript"></script>
   <!-- END MODERN JS-->
   <!-- BEGIN PAGE LEVEL JS-->
-  <script src="../../app-assets/js/scripts/tables/datatables/datatable-styling.js"
-  type="text/javascript"></script>
-
-  <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+  <script src="../../app-assets/js/scripts/forms/select/form-select2.js" type="text/javascript"></script>
+  <script src="../../app-assets/js/scripts/tables/datatables/datatable-styling.js" type="text/javascript"></script>
+  <script src="../../Asset/custom/js/bootstrap4-toggle.min.js"></script> 
+  <!-- END PAGE LEVEL JS--> 
   
-  <!-- END PAGE LEVEL JS-->
+  <script src="../../Controllers/Ducklab/duck.script.js"></script>
+
 </body>
 </html>

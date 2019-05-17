@@ -12,8 +12,11 @@
     <link rel="shortcut icon" type="image/x-icon" href="../../Asset/Images/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700" rel="stylesheet">
     <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../Asset/custom/font-awesome-4.7.0/css/font-awesome.css" >
+    
     <!-- BEGIN VENDOR CSS-->
     <link rel="stylesheet" type="text/css" href="../../app-assets/css/vendors.css">
+    <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/forms/selects/select2.css">
     <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/tables/datatable/datatables.min.css">
     <!-- END VENDOR CSS-->
     <!-- BEGIN MODERN CSS-->
@@ -27,13 +30,14 @@
     <!-- BEGIN Custom CSS-->
     <link rel="stylesheet" type="text/css" href="../../Asset/css/style.css">
 
-    <link rel="stylesheet" href="../../Asset/Css/indexLeftCSS.css">
-
-    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../Asset/Css/indexLeftCSS.css"> 
+    <link rel="stylesheet" href="../../Asset/custom/css/bootstrap4-toggle.min.css" >
 
     <link rel="stylesheet" href="../../Asset/Css/custom.css">
+    <link rel="stylesheet" href="../../Asset/Css/custom_plan.css">
 
     <link rel="stylesheet" href="../../Asset/Css/sweetalert2.min.css">
+
     <script src="../../Asset/js/sweetalert2.min.js"></script>
   
 
