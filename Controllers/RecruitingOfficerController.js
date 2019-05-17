@@ -53,7 +53,7 @@ function reqChange() {
 
     $('#').DataTable({
         ajax: {
-            url: "", // json datasource
+            url: "../Model/RecruitingOfficer/ReqChange.php", // json datasource
             dataType: "json",
             type: "post",
             start: 0,
@@ -82,7 +82,7 @@ function saveOnHistory() {
     $$.ajax({
         type: "POST",
         dataType: "json",
-        url: "",
+        url: "../Model/RecruitingOfficer/SaveOnHistory.php",
         data: {},
         success: function(data) {
             console.log(data);
@@ -100,7 +100,7 @@ function saveHistoryPerson() {
     $.ajax({
         type: "POST",
         dataType: "json",
-        url: "",
+        url: "../Model/RecruitingOfficer/SaveHistoryPerson.php",
         data: {},
         success: function(data) {
             console.log(data);
@@ -117,7 +117,7 @@ function getHistoryPerson() {
 
     $('#').DataTable({
         ajax: {
-            url: "", // json datasource
+            url: "../Model/RecruitingOfficer/GetHistoryPerson.php", // json datasource
             dataType: "json",
             type: "post",
             start: 0,
@@ -147,7 +147,7 @@ function searchPersonNotArmy() {
     $.ajax({
         type: "POST",
         dataType: "json",
-        url: "",
+        url: "../Model/RecruitingOfficer/SearchPersonNotArmy.php",
         data: {},
         success: function(data) {
             console.log(data);
@@ -165,7 +165,7 @@ function saveArmy() {
     $.ajax({
         type: "POST",
         dataType: "json",
-        url: "",
+        url: "../Model/RecruitingOfficer/SaveArmy.php",
         data: {},
         success: function(data) {
             console.log(data);
