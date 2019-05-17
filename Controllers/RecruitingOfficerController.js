@@ -51,17 +51,27 @@ function search() {
 
 function reqChange() {
 
-    $.ajax({
-        type: "POST",
-        dataType: "json",
-        url: "",
-        data: {},
-        success: function(data) {
-            console.log(data);
+    $('#').DataTable({
+        ajax: {
+            url: "", // json datasource
+            dataType: "json",
+            type: "post",
+            start: 0,
+            length: 3,
+            serverSide: true,
+            processing: true,
+            paging: true,
+            searching: { "regex": true },
+            lengthMenu: [
+                [10, 25, 50, 100, -1],
+                [10, 25, 50, 100, "All"]
+            ],
+            pageLength: 10,
+            order: [
+                [0, "desc"]
+            ]
         },
-        error: function(error) {
-            console.log(error);
-        }
+        destroy: true
     });
 
 } //คำข้อต่างๆ ในส่วนของคนข้อ function getReqChange //ดึงคำข้อมาให้สัสดี 
@@ -105,17 +115,27 @@ function saveHistoryPerson() {
 
 function getHistoryPerson() {
 
-    $.ajax({
-        type: "POST",
-        dataType: "json",
-        url: "",
-        data: {},
-        success: function(data) {
-            console.log(data);
+    $('#').DataTable({
+        ajax: {
+            url: "", // json datasource
+            dataType: "json",
+            type: "post",
+            start: 0,
+            length: 3,
+            serverSide: true,
+            processing: true,
+            paging: true,
+            searching: { "regex": true },
+            lengthMenu: [
+                [10, 25, 50, 100, -1],
+                [10, 25, 50, 100, "All"]
+            ],
+            pageLength: 10,
+            order: [
+                [0, "desc"]
+            ]
         },
-        error: function(error) {
-            console.log(error);
-        }
+        destroy: true
     });
 
 } // แก้ไขสิ่งต่างๆๆ ในส่วนของสัสดี 
@@ -158,7 +178,7 @@ function saveArmy() {
 } // 
 
 
-function reportDocument() {
+function reportDocument() { //ใช้ function php แทนได้
 
     $.ajax({
         type: "POST",
