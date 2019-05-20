@@ -120,22 +120,22 @@
         <!-- ระบบงานวิเคราะห์ความต้องการกำลังพลประจำปี -->
         <li class=" nav-item"><a href="#"><i class="la la-pie-chart"></i><span class="menu-title" data-i18n="nav.page_layouts.main">ระบบงานวิเคราะห์ความต้องการกำลังพลประจำปี</span></a>
             <ul class="menu-content">
-                <li><a class="menu-item" href="../ProposeRequirements/index.php" data-i18n="nav.navbars.nav_light">งานเสนอความต้องการบรรจุกำลังพลครับ</a>
+                <li><a class="menu-item" href="../ProposeRequirements/index.php" data-i18n="nav.navbars.nav_light">บันทึกข้อมูลเสนอขอบรรจุกำลังพลของนขต.ทอ.</a>
                 </li>
-                <li><a class="menu-item" href="../Degrees/index.php" data-i18n="nav.navbars.nav_light">ระดับการศึกษา</a>
+                <li><a class="menu-item" href="../Degrees/index.php" data-i18n="nav.navbars.nav_light">บันทึกผลการพิจารณาของสายวิทยาการ</a>
                 </li>
-                <li><a class="menu-item" href="../Branches/index.php" data-i18n="nav.navbars.nav_dark">สาขาวิชา</a>
+                <li><a class="menu-item" href="../Branches/index.php" data-i18n="nav.navbars.nav_dark">ข้อมูลการวิเคราะห์ของงานวิเคราะห์</a>
                 </li>
-                <li><a class="menu-item" href="../sections/index.php" data-i18n="nav.navbars.nav_semi">ทาง</a>
+                <li><a class="menu-item" href="../sections/index.php" data-i18n="nav.navbars.nav_semi">ข้อมูลพิจารณาของงานแผน</a>
                 </li>
-                <li><a class="menu-item" href="../type_of_request/index.php" data-i18n="nav.navbars.nav_brand_center">ประเภทที่ขอบรรจุ</a>
+                <li><a class="menu-item" href="../type_of_request/index.php" data-i18n="nav.navbars.nav_brand_center">อนุมัติตำแหน่งตามแผนการบรรจุกำลังพล</a>
                 </li>
-                <li><a class="menu-item" href="../Reason_for_request/index.php" data-i18n="nav.navbars.nav_dark">สาเหตุในการขอบรรจุ</a>
+                <!-- <li><a class="menu-item" href="../Reason_for_request/index.php" data-i18n="nav.navbars.nav_dark">สาเหตุในการขอบรรจุ</a>
                 </li>
                 <li><a class="menu-item" href="../analysis_result/index.php" data-i18n="nav.navbars.nav_semi">ผลการพิจารณาวิเคราะห์</a>
                 </li>
                 <li><a class="menu-item" href="../Propose_manpower/index.php" data-i18n="nav.navbars.nav_brand_center">เสนอขอบรรจุกำลังพล</a>
-                </li>
+                </li> -->
             </ul>
         </li>
         <!-- ระบบงานแผนบรรจุกำลังพลประจำปี -->
@@ -160,7 +160,7 @@
         <!-- งานประวัติรับราชการ -->
         <li class=" nav-item"><a href="#"><i class="ft-users"></i><span class="menu-title" data-i18n="nav.horz_nav.main">งานประวัติข้าราชการ</span></a>
             <ul class="menu-content">
-                <li><a class="menu-item" href="../Profile/index.php" >ประวัติข้าราชการ</a>
+                <li><a class="menu-item" href="../Profile/index.php"ประวัติข้าราชการ</a>
                 </li>
                 <li><a class="menu-item" href="/Hris/Views/Homeland/index.php">ภูมิลำเนา</a>
                 </li>
@@ -170,9 +170,9 @@
                 </li>
                 <li><a class="menu-item" href="/Hris/Views/Compensation_salary/index.php">ค่าตอบแทนและเงินเดือน</a>
                 </li>
-                <li><a class="menu-item" href="/Hris/Views/Behaviour/index.php" >ความประพฤติ</a>
+                <li><a class="menu-item" href="/Hris/Views/Behaviour/index.php">ความประพฤติ</a>
                 </li>
-                <li><a class="menu-item" href="/Hris/Views/Lose/index.php" >สูญเสีย</a>
+                <li><a class="menu-item" href="/Hris/Views/Lose/index.php">สูญเสีย</a>
                 </li>
 
             </ul>
