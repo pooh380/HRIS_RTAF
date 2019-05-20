@@ -16,10 +16,9 @@ if (!empty($_POST)) {
     // echo date("Y-m-d h:i:sa");
 
 
-    $sql = "UPDATE ctltcntry
-    SET CntryName='$ctltcntryThName', CntryEngName='$ctltcntryEngName', IsActive=$isActive
-    WHERE id=$ctltcntryId;
-     ";
+    $sql = "UPDATE HrtCountry
+    SET CountryNameTh='$ctltcntryThName', CountryNameEn='$ctltcntryEngName', CountryActive=$isActive
+    WHERE CountryId=$ctltcntryId; ";
     // echo $sql;
 
     $query = sqlsrv_query($conn, $sql);

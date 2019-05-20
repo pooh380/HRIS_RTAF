@@ -67,22 +67,6 @@
                                                           </div>
                                                       </div>
                                                   </div>
-                                                  <div class="col-md-6">
-                                                      <label class="col-md-12 label-control" for="personTypeCond">PersonTypeCond</label>
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative">
-                                                              <input type="text" id="personTypeCond" class="form-control border-primary" placeholder="PersonTypeCond" name="personTypeCond">
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                                  <div class="col-md-6">
-                                                      <label class="col-md-12 label-control" for="reservesGroup">ReservesGroup</label>
-                                                      <div class="col-md-12">
-                                                          <div class="position-relative">
-                                                              <input type="text" id="reservesGroup" class="form-control border-primary" placeholder="ReservesGroup" name="reservesGroup">
-                                                          </div>
-                                                      </div>
-                                                  </div>
                                               </div>
                                               <br>
                                               <div class="row">

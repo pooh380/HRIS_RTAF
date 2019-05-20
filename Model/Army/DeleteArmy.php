@@ -12,9 +12,8 @@ if (!empty($_POST)) {
     // date_default_timezone_set('Asia/Bangkok');
     // echo date("Y-m-d h:i:sa");
 
-
-    $sql = " DELETE FROM armys WHERE id=$armyId ";
-    // echo $sql;
+    $sql = " DELETE FROM HrtArm WHERE HrtArmId=$armyId ";
+    echo $sql;
 
     $query = sqlsrv_query($conn, $sql);
 

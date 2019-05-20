@@ -14,7 +14,7 @@ if (!empty($_POST)) {
     // echo date("Y-m-d h:i:sa");
 
 
-    $sql = " DELETE FROM person_type WHERE id=$personTypesId; ";
+    $sql = " DELETE FROM PersonType WHERE HrtPersonTypeId=$personTypesId; ";
     // echo $sql;
 
     $query = sqlsrv_query($conn, $sql);

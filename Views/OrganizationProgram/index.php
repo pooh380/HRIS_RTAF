@@ -31,7 +31,6 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-
         $(document).ajaxStart(function() {
             $(".modal").show();
         });
@@ -39,12 +38,8 @@
             $(".modal").hide();
         });
 
-        // console.log("ready");
         var orgTypeId = $('#orgTypeList :selected').val();
         $("#orgTypeId").val(orgTypeId);
-
-        // alert("(ALERT: input 1) ช่องโครงสร้าง -> OrganizationTypeId: "+orgTypeId+" เอา "+orgTypeId+ " ไปหาใน Organization List เพื่อให้ได้ dropdown ช่องสังกัด");
-        // alert(" SQL ในการนำไปค้นหาช่องโครงสร้าง: SELECT id,organization_list_abbr_name,organization_type_id,IsActive FROM organization_list WHERE organization_type_id = Idของorganization_type_id and IsActive = 1;");
 
         $.ajax({
             type: "POST",
@@ -83,7 +78,6 @@
 
             });
         });
-
     });
 </script>
 

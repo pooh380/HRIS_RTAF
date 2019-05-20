@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(0);
+// error_reporting(0);
 
 require_once "../../config.php";
 
@@ -11,10 +11,10 @@ $id = "";
 $armyName = "";
 $armyAbbrName = "";
 $IsActive = "";
-// echo $originsId ;
+// echo $armyId  ;
 
 if(isset($armyId)){
-    $sql = " SELECT id, ArmCode, ArmName, ArmAbbrName, IsActive FROM armys where id = $armyId ";
+    $sql = " SELECT HrtArmId, HrtArmName, HrtArmAbbr, HrtArmActive FROM HrtArm  where HrtArmId = $armyId ";
 
     // echo $sql;
 
@@ -23,10 +23,10 @@ if(isset($armyId)){
     // if($query){ echo "query";}else{echo "not query";}
 
     while ($row = sqlsrv_fetch_array($query)) {
-        $id = $row['id'];
-        $armyName = $row['ArmName'];
-        $armyAbbrName = $row['ArmAbbrName'];
-        $IsActive = $row['IsActive'];
+        $id = $row['HrtArmId'];
+        $armyName = $row['HrtArmName'];
+        $armyAbbrName = $row['HrtArmAbbr'];
+        $IsActive = $row['HrtArmActive'];
         // echo $id;
         // echo $originName;
         // echo $originAbbrName;

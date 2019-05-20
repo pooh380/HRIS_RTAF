@@ -7,17 +7,15 @@ require_once "../../config.php";
 
 $request = $_REQUEST;
 $col = array(
-    0   =>  'id',
-    1   =>  'perfix_name',
-    2   =>  'perfix_abbr_name',
-    3   =>  'IsActive'
+    0   =>  'HrtPrefixId',
+    1   =>  'HrtPrefixNameTh',
+    2   =>  'HrtPrefixAbbrTh',
+    3   =>  'HrtPrefixActive'
 );
 
 //create column like table in database
-$sql = "SELECT id, perfix_name, perfix_abbr_name,IsActive
-FROM general_perfix;
+$sql = "SELECT HrtPrefixId, HrtPrefixNameTh,HrtPrefixAbbrTh, HrtPrefixActive FROM HrtPrefix
 ";
-
 
 $params = array();
 $options = array("Scrollable" => SQLSRV_CURSOR_KEYSET);
@@ -29,11 +27,11 @@ $totalFilter = $totalData;
 
 
 
-$sql = "SELECT id, perfix_name, perfix_abbr_name, IsActive
-FROM general_perfix WHERE 1=1 ";
+$sql = "SELECT HrtPrefixId, HrtPrefixNameTh,HrtPrefixAbbrTh, HrtPrefixActive FROM HrtPrefix
+WHERE 1=1 ";
 if (!empty($request['search']['value'])) {
-    $sql .= " AND (perfix_name Like N'%" . $request['search']['value'] . "%' ";
-    $sql .= " OR perfix_abbr_name Like N'%" . $request['search']['value'] . "%') ";
+    $sql .= " AND (HrtPrefixNameTh Like N'%" . $request['search']['value'] . "%' ";
+    $sql .= " OR HrtPrefixAbbrTh Like N'%" . $request['search']['value'] . "%') ";
     $query = sqlsrv_query($conn, $sql, $params, $options);
     $totalData = sqlsrv_num_rows($query);
 }
@@ -46,10 +44,9 @@ while ($row = sqlsrv_fetch_array($query)) {
     <a href="../../Views/Prefixs/edit.php?id='.$row[0].'"><i class="la la-pencil-square-o" style="color:#0f1733"; font-size:30px;" id="'.$row[0].'"></i></a>
     <a href=""><i class="la la-trash-o" style="color:#0f1733"; font-size:30px;" onclick="deletePrefixs('.$row[0].')" id="'.$row[0].'"></i></a>
     ';//id
-    $subdata[] = $row[0];
     $subdata[] = $row[1];
     $subdata[] = $row[2];
-    if($row[3] != "1" ){ 
+    if($row[3] !== 1 ){ 
         $subdata[] = '<i class="la la-toggle-off" style="color: red;font-size:30px;"></i>';
     }else{
         

@@ -9,7 +9,7 @@ if (!empty($_POST)) {
 
     //     // $originName = "ไทย";
 
-    $sqlInsertSeqNoAndCode = " SELECT MAX(id) AS maxid FROM ctltcntry; ";
+    $sqlInsertSeqNoAndCode = "SELECT MAX(CountryId) AS maxCountryId FROM HrtCountry; ";
 
     echo $sqlInsertSeqNoAndCode;
 
@@ -17,7 +17,7 @@ if (!empty($_POST)) {
 
     $idNew = "";
     while ($row = sqlsrv_fetch_array($querySelect)) {
-        $id = $row['maxid'];
+        $id = $row['maxCountryId'];
         $idNew = $id+1;
     }
 
@@ -33,10 +33,10 @@ if (!empty($_POST)) {
 
     // date_default_timezone_set('Asia/Bangkok');
     // echo date("Y-m-d h:i:sa");
+    
 
-
-    $sql = " INSERT INTO ctltcntry
-    (CntryCode, CntryName, CntryEngName, IsActive)
+    $sql = " INSERT INTO HrtCountry
+    (CountryId, CountryNameTh, CountryNameEn, CountryActive)
     VALUES($idNew, '$ctltcntryThName', '$ctltcntryEngName', $isActive);
     ";
     // echo $sql;

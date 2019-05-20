@@ -15,10 +15,9 @@ if (!empty($_POST)) {
     // date_default_timezone_set('Asia/Bangkok');
     // echo date("Y-m-d h:i:sa");
 
-
-    $sql = " UPDATE armys
-    SET ArmName='$armyName', ArmAbbrName='$armyAbbrName', IsActive=$isActive
-    WHERE id=$armyId
+    $sql = " UPDATE HrtArm
+    SET HrtArmName='$armyName', HrtArmAbbr='$armyAbbrName', HrtArmActive=$isActive
+    WHERE HrtArmId =$armyId
      ";
     // echo $sql;
 

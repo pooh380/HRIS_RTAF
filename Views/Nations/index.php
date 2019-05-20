@@ -5,10 +5,18 @@
   <?php include '../include/menu.php'; ?>
 
   <style>
-    /* ol > li > a {color:#222233;} */
-    .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
-    .toggle.ios .toggle-handle { border-radius: 20rem; }
-  </style>
+      /* ol > li > a {color:#222233;} */
+      .toggle.ios,
+      .toggle-on.ios,
+      .toggle-off.ios {
+          border-radius: 20rem;
+      }
+
+      .toggle.ios .toggle-handle {
+          border-radius: 20rem;
+      }
+    
+</style>
  <?php include_once '../include/modelOnload.php' ?>
 
   <section>
@@ -45,9 +53,7 @@
                     <table id="GeneralNation" class="table table-striped table-borderless table-hover bootstrap-3 " style="width:100%">
                       <thead>
                         <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
-                        <th></th>
-                          <th>ลำดับที่</th>
-                          <th>รหัสหน่วยงาน</th>
+                          <th></th>
                           <th>ชื่อ</th>
                           <th>สถานะ</th>
                         </tr>

@@ -91,7 +91,6 @@
                                               <thead>
                                                   <tr align="center" style="background-color:#0f1733; color:whitesmoke;">
                                                       <th></th>
-                                                      <th>ลำดับที่</th>
                                                       <th>คำนำหน้า</th>
                                                       <th>ตัวย่อ</th>
                                                       <th>สถานะ</th>

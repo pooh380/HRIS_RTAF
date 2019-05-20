@@ -110,6 +110,16 @@
               }
           });
       });
+
+	var valueHi = [];
+	$.each($("input[name='valueHirarchy']:checked"), function() {
+		valueHi.push($(this).val());
+	});
+
+	function hirarchyValue(valueHi) {
+		alert("valueHirarchy" + valueHi);
+	}
+
   </script>
 
   <section>

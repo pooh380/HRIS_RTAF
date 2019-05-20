@@ -14,7 +14,7 @@ $IsActive = "";
 // echo $originsId ;
 
 if(isset($ctltcntryId)){
-    $sql = " SELECT id, CntryCode, CntryName, CntryEngName, IsActive FROM ctltcntry where id = $ctltcntryId ";
+    $sql = "  SELECT CountryId, CountryNameTh, CountryNameEn,CountryActive FROM HrtCountry where CountryId = $ctltcntryId ";
 
     // echo $sql;
 
@@ -23,10 +23,10 @@ if(isset($ctltcntryId)){
     // if($query){ echo "query";}else{echo "not query";}
 
     while ($row = sqlsrv_fetch_array($query)) {
-        $id = $row['id'];
-        $ctltcntryThName = $row['CntryName'];
-        $ctltcntryEngName = $row['CntryEngName'];
-        $IsActive = $row['IsActive'];
+        $id = $row['CountryId'];
+        $ctltcntryThName = $row['CountryNameTh'];
+        $ctltcntryEngName = $row['CountryNameEn'];
+        $IsActive = $row['CountryActive'];
         // echo $id;
         // echo $originName;
         // echo $originAbbrName;

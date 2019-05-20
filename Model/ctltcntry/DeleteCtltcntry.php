@@ -14,7 +14,7 @@ if (!empty($_POST)) {
     // echo date("Y-m-d h:i:sa");
 
 
-    $sql = " DELETE FROM ctltcntry WHERE id=$ctltcntryId ";
+    $sql = " DELETE FROM HrtCountry WHERE CountryId=$ctltcntryId ";
     // echo $sql;
 
     $query = sqlsrv_query($conn, $sql);
